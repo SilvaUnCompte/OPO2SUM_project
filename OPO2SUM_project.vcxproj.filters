@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\databaseManager">
+      <UniqueIdentifier>{02f6b5c0-4338-4528-bada-2f73d91ef30f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\databaseManager">
+      <UniqueIdentifier>{8747a24e-474a-48d6-b656-dbf387a62868}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -21,10 +27,22 @@
     <ClInclude Include="MyForm.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="AccessData.h">
+      <Filter>Fichiers d%27en-tête\databaseManager</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AccessData.cpp">
+      <Filter>Fichiers sources\databaseManager</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>Fichiers sources\databaseManager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
