@@ -68,6 +68,7 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TextBox^ clientMCityTextBox;
 	private: System::Windows::Forms::TextBox^ clientMLNameTextBox;
 	private: System::Windows::Forms::TextBox^ clientMFNameTextBox;
+	private: System::Windows::Forms::Panel^ clientMPanel;
 
 
 
@@ -116,15 +117,16 @@ namespace OPO2SUMproject {
 			this->managerTablePanel = (gcnew System::Windows::Forms::Panel());
 			this->managerTabControl = (gcnew System::Windows::Forms::TabControl());
 			this->clientMTabPage = (gcnew System::Windows::Forms::TabPage());
-			this->clientMCityTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->clientMLNameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->clientMPanel = (gcnew System::Windows::Forms::Panel());
 			this->clientMFNameTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->clientMCityLabel = (gcnew System::Windows::Forms::Label());
-			this->clientMLNameLabel = (gcnew System::Windows::Forms::Label());
-			this->clientMFNameLabel = (gcnew System::Windows::Forms::Label());
+			this->clientMLNameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->clientMCityTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->clientMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->clientMAddButton = (gcnew System::Windows::Forms::Button());
 			this->clientMResearchButton = (gcnew System::Windows::Forms::Button());
-			this->clientMDGV = (gcnew System::Windows::Forms::DataGridView());
+			this->clientMCityLabel = (gcnew System::Windows::Forms::Label());
+			this->clientMFNameLabel = (gcnew System::Windows::Forms::Label());
+			this->clientMLNameLabel = (gcnew System::Windows::Forms::Label());
 			this->orderMTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->stockMTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->statisticMTabPage = (gcnew System::Windows::Forms::TabPage());
@@ -133,6 +135,7 @@ namespace OPO2SUMproject {
 			this->managerTablePanel->SuspendLayout();
 			this->managerTabControl->SuspendLayout();
 			this->clientMTabPage->SuspendLayout();
+			this->clientMPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientMDGV))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -158,6 +161,7 @@ namespace OPO2SUMproject {
 			this->loginRegisterButton->TabIndex = 5;
 			this->loginRegisterButton->Text = L"Register";
 			this->loginRegisterButton->UseVisualStyleBackColor = true;
+			this->loginRegisterButton->Click += gcnew System::EventHandler(this, &MyForm::loginRegisterButton_Click);
 			// 
 			// loginPasswordLabel
 			// 
@@ -225,7 +229,6 @@ namespace OPO2SUMproject {
 			this->addClientPanel->Name = L"addClientPanel";
 			this->addClientPanel->Size = System::Drawing::Size(452, 387);
 			this->addClientPanel->TabIndex = 3;
-			this->addClientPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::addClientPanel_Paint);
 			// 
 			// addClient
 			// 
@@ -339,16 +342,8 @@ namespace OPO2SUMproject {
 			// 
 			// clientMTabPage
 			// 
-			this->clientMTabPage->Controls->Add(this->clientMCityTextBox);
-			this->clientMTabPage->Controls->Add(this->clientMLNameTextBox);
-			this->clientMTabPage->Controls->Add(this->clientMFNameTextBox);
+			this->clientMTabPage->Controls->Add(this->clientMPanel);
 			this->clientMTabPage->Controls->Add(this->addClientPanel);
-			this->clientMTabPage->Controls->Add(this->clientMCityLabel);
-			this->clientMTabPage->Controls->Add(this->clientMLNameLabel);
-			this->clientMTabPage->Controls->Add(this->clientMFNameLabel);
-			this->clientMTabPage->Controls->Add(this->clientMAddButton);
-			this->clientMTabPage->Controls->Add(this->clientMResearchButton);
-			this->clientMTabPage->Controls->Add(this->clientMDGV);
 			this->clientMTabPage->Location = System::Drawing::Point(4, 25);
 			this->clientMTabPage->Name = L"clientMTabPage";
 			this->clientMTabPage->Padding = System::Windows::Forms::Padding(3);
@@ -357,59 +352,59 @@ namespace OPO2SUMproject {
 			this->clientMTabPage->Text = L"Client";
 			this->clientMTabPage->UseVisualStyleBackColor = true;
 			// 
-			// clientMCityTextBox
+			// clientMPanel
 			// 
-			this->clientMCityTextBox->Location = System::Drawing::Point(91, 77);
-			this->clientMCityTextBox->Name = L"clientMCityTextBox";
-			this->clientMCityTextBox->Size = System::Drawing::Size(131, 22);
-			this->clientMCityTextBox->TabIndex = 8;
+			this->clientMPanel->Controls->Add(this->clientMFNameTextBox);
+			this->clientMPanel->Controls->Add(this->clientMLNameTextBox);
+			this->clientMPanel->Controls->Add(this->clientMCityTextBox);
+			this->clientMPanel->Controls->Add(this->clientMDGV);
+			this->clientMPanel->Controls->Add(this->clientMAddButton);
+			this->clientMPanel->Controls->Add(this->clientMResearchButton);
+			this->clientMPanel->Controls->Add(this->clientMCityLabel);
+			this->clientMPanel->Controls->Add(this->clientMFNameLabel);
+			this->clientMPanel->Controls->Add(this->clientMLNameLabel);
+			this->clientMPanel->Location = System::Drawing::Point(6, 6);
+			this->clientMPanel->Name = L"clientMPanel";
+			this->clientMPanel->Size = System::Drawing::Size(452, 387);
+			this->clientMPanel->TabIndex = 4;
+			// 
+			// clientMFNameTextBox
+			// 
+			this->clientMFNameTextBox->Location = System::Drawing::Point(91, 37);
+			this->clientMFNameTextBox->Name = L"clientMFNameTextBox";
+			this->clientMFNameTextBox->Size = System::Drawing::Size(131, 22);
+			this->clientMFNameTextBox->TabIndex = 6;
 			// 
 			// clientMLNameTextBox
 			// 
-			this->clientMLNameTextBox->Location = System::Drawing::Point(91, 51);
+			this->clientMLNameTextBox->Location = System::Drawing::Point(91, 65);
 			this->clientMLNameTextBox->Name = L"clientMLNameTextBox";
 			this->clientMLNameTextBox->Size = System::Drawing::Size(131, 22);
 			this->clientMLNameTextBox->TabIndex = 7;
 			// 
-			// clientMFNameTextBox
+			// clientMCityTextBox
 			// 
-			this->clientMFNameTextBox->Location = System::Drawing::Point(91, 27);
-			this->clientMFNameTextBox->Name = L"clientMFNameTextBox";
-			this->clientMFNameTextBox->Size = System::Drawing::Size(132, 22);
-			this->clientMFNameTextBox->TabIndex = 6;
+			this->clientMCityTextBox->Location = System::Drawing::Point(91, 95);
+			this->clientMCityTextBox->Name = L"clientMCityTextBox";
+			this->clientMCityTextBox->Size = System::Drawing::Size(131, 22);
+			this->clientMCityTextBox->TabIndex = 8;
 			// 
-			// clientMCityLabel
+			// clientMDGV
 			// 
-			this->clientMCityLabel->AutoSize = true;
-			this->clientMCityLabel->Location = System::Drawing::Point(3, 80);
-			this->clientMCityLabel->Name = L"clientMCityLabel";
-			this->clientMCityLabel->Size = System::Drawing::Size(39, 17);
-			this->clientMCityLabel->TabIndex = 5;
-			this->clientMCityLabel->Text = L"City :";
-			this->clientMCityLabel->Click += gcnew System::EventHandler(this, &MyForm::clientMCityLabel_Click);
-			// 
-			// clientMLNameLabel
-			// 
-			this->clientMLNameLabel->AutoSize = true;
-			this->clientMLNameLabel->Location = System::Drawing::Point(3, 54);
-			this->clientMLNameLabel->Name = L"clientMLNameLabel";
-			this->clientMLNameLabel->Size = System::Drawing::Size(82, 17);
-			this->clientMLNameLabel->TabIndex = 4;
-			this->clientMLNameLabel->Text = L"Last name :";
-			// 
-			// clientMFNameLabel
-			// 
-			this->clientMFNameLabel->AutoSize = true;
-			this->clientMFNameLabel->Location = System::Drawing::Point(3, 27);
-			this->clientMFNameLabel->Name = L"clientMFNameLabel";
-			this->clientMFNameLabel->Size = System::Drawing::Size(82, 17);
-			this->clientMFNameLabel->TabIndex = 3;
-			this->clientMFNameLabel->Text = L"First name :";
+			this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->clientMDGV->Location = System::Drawing::Point(3, 204);
+			this->clientMDGV->Name = L"clientMDGV";
+			this->clientMDGV->RowHeadersWidth = 51;
+			this->clientMDGV->RowTemplate->Height = 24;
+			this->clientMDGV->Size = System::Drawing::Size(446, 151);
+			this->clientMDGV->TabIndex = 0;
 			// 
 			// clientMAddButton
 			// 
 			this->clientMAddButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMAddButton->Location = System::Drawing::Point(383, 368);
+			this->clientMAddButton->Location = System::Drawing::Point(374, 361);
 			this->clientMAddButton->Name = L"clientMAddButton";
 			this->clientMAddButton->Size = System::Drawing::Size(75, 23);
 			this->clientMAddButton->TabIndex = 2;
@@ -420,24 +415,39 @@ namespace OPO2SUMproject {
 			// clientMResearchButton
 			// 
 			this->clientMResearchButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMResearchButton->Location = System::Drawing::Point(383, 185);
+			this->clientMResearchButton->Location = System::Drawing::Point(374, 175);
 			this->clientMResearchButton->Name = L"clientMResearchButton";
 			this->clientMResearchButton->Size = System::Drawing::Size(75, 23);
 			this->clientMResearchButton->TabIndex = 1;
 			this->clientMResearchButton->Text = L"Search";
 			this->clientMResearchButton->UseVisualStyleBackColor = true;
 			// 
-			// clientMDGV
+			// clientMCityLabel
 			// 
-			this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->clientMDGV->Location = System::Drawing::Point(6, 211);
-			this->clientMDGV->Name = L"clientMDGV";
-			this->clientMDGV->RowHeadersWidth = 51;
-			this->clientMDGV->RowTemplate->Height = 24;
-			this->clientMDGV->Size = System::Drawing::Size(452, 151);
-			this->clientMDGV->TabIndex = 0;
+			this->clientMCityLabel->AutoSize = true;
+			this->clientMCityLabel->Location = System::Drawing::Point(3, 98);
+			this->clientMCityLabel->Name = L"clientMCityLabel";
+			this->clientMCityLabel->Size = System::Drawing::Size(39, 17);
+			this->clientMCityLabel->TabIndex = 5;
+			this->clientMCityLabel->Text = L"City :";
+			// 
+			// clientMFNameLabel
+			// 
+			this->clientMFNameLabel->AutoSize = true;
+			this->clientMFNameLabel->Location = System::Drawing::Point(3, 40);
+			this->clientMFNameLabel->Name = L"clientMFNameLabel";
+			this->clientMFNameLabel->Size = System::Drawing::Size(82, 17);
+			this->clientMFNameLabel->TabIndex = 3;
+			this->clientMFNameLabel->Text = L"First name :";
+			// 
+			// clientMLNameLabel
+			// 
+			this->clientMLNameLabel->AutoSize = true;
+			this->clientMLNameLabel->Location = System::Drawing::Point(3, 68);
+			this->clientMLNameLabel->Name = L"clientMLNameLabel";
+			this->clientMLNameLabel->Size = System::Drawing::Size(82, 17);
+			this->clientMLNameLabel->TabIndex = 4;
+			this->clientMLNameLabel->Text = L"Last name :";
 			// 
 			// orderMTabPage
 			// 
@@ -487,23 +497,33 @@ namespace OPO2SUMproject {
 			this->managerTablePanel->ResumeLayout(false);
 			this->managerTabControl->ResumeLayout(false);
 			this->clientMTabPage->ResumeLayout(false);
-			this->clientMTabPage->PerformLayout();
+			this->clientMPanel->ResumeLayout(false);
+			this->clientMPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientMDGV))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		addClientPanel->Hide();
-	}
-private: System::Void addClientPanel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-	
+private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	addClientPanel->Visible = false;
+	clientMPanel->Visible = true;
 }
 private: System::Void addClientExitButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	addClientPanel->Hide();
+	clientMPanel->Visible = true;
+	addClientPanel->Visible = false;
 }
 private: System::Void clientMAddButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	addClientPanel->Show();
+	addClientPanel->Visible = true;
+	clientMPanel->Visible = false;
+}
+private: System::Void loginRegisterButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (managerTablePanel->Visible) {
+		managerTablePanel->Visible = false;
+	}
+	else
+	{
+		managerTablePanel->Visible = true;
+	}
 }
 };
 }
