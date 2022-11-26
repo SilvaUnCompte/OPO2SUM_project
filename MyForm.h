@@ -69,6 +69,8 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TextBox^ clientMLNameTextBox;
 	private: System::Windows::Forms::TextBox^ clientMFNameTextBox;
 	private: System::Windows::Forms::Panel^ clientMPanel;
+	private: System::Windows::Forms::Button^ clientMModifyButton;
+	private: System::Windows::Forms::Button^ clientMDeleteButton;
 
 
 
@@ -130,6 +132,8 @@ namespace OPO2SUMproject {
 			this->orderMTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->stockMTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->statisticMTabPage = (gcnew System::Windows::Forms::TabPage());
+			this->clientMDeleteButton = (gcnew System::Windows::Forms::Button());
+			this->clientMModifyButton = (gcnew System::Windows::Forms::Button());
 			this->loginPanel->SuspendLayout();
 			this->addClientPanel->SuspendLayout();
 			this->managerTablePanel->SuspendLayout();
@@ -149,15 +153,15 @@ namespace OPO2SUMproject {
 			this->loginPanel->Controls->Add(this->loginLoginLabel);
 			this->loginPanel->Location = System::Drawing::Point(12, 12);
 			this->loginPanel->Name = L"loginPanel";
-			this->loginPanel->Size = System::Drawing::Size(405, 355);
+			this->loginPanel->Size = System::Drawing::Size(478, 435);
 			this->loginPanel->TabIndex = 0;
 			// 
 			// loginRegisterButton
 			// 
 			this->loginRegisterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->loginRegisterButton->Location = System::Drawing::Point(327, 4);
+			this->loginRegisterButton->Location = System::Drawing::Point(400, 3);
 			this->loginRegisterButton->Name = L"loginRegisterButton";
-			this->loginRegisterButton->Size = System::Drawing::Size(75, 30);
+			this->loginRegisterButton->Size = System::Drawing::Size(75, 32);
 			this->loginRegisterButton->TabIndex = 5;
 			this->loginRegisterButton->Text = L"Register";
 			this->loginRegisterButton->UseVisualStyleBackColor = true;
@@ -167,7 +171,7 @@ namespace OPO2SUMproject {
 			// 
 			this->loginPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->loginPasswordLabel->AutoSize = true;
-			this->loginPasswordLabel->Location = System::Drawing::Point(164, 219);
+			this->loginPasswordLabel->Location = System::Drawing::Point(201, 219);
 			this->loginPasswordLabel->Name = L"loginPasswordLabel";
 			this->loginPasswordLabel->Size = System::Drawing::Size(69, 17);
 			this->loginPasswordLabel->TabIndex = 4;
@@ -176,7 +180,7 @@ namespace OPO2SUMproject {
 			// loginPasswordTextBox
 			// 
 			this->loginPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginPasswordTextBox->Location = System::Drawing::Point(152, 239);
+			this->loginPasswordTextBox->Location = System::Drawing::Point(189, 239);
 			this->loginPasswordTextBox->Name = L"loginPasswordTextBox";
 			this->loginPasswordTextBox->Size = System::Drawing::Size(101, 22);
 			this->loginPasswordTextBox->TabIndex = 3;
@@ -184,7 +188,7 @@ namespace OPO2SUMproject {
 			// loginUsernameTextBox
 			// 
 			this->loginUsernameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginUsernameTextBox->Location = System::Drawing::Point(152, 162);
+			this->loginUsernameTextBox->Location = System::Drawing::Point(189, 162);
 			this->loginUsernameTextBox->Name = L"loginUsernameTextBox";
 			this->loginUsernameTextBox->Size = System::Drawing::Size(101, 22);
 			this->loginUsernameTextBox->TabIndex = 2;
@@ -193,7 +197,7 @@ namespace OPO2SUMproject {
 			// 
 			this->loginUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->loginUsernameLabel->AutoSize = true;
-			this->loginUsernameLabel->Location = System::Drawing::Point(164, 142);
+			this->loginUsernameLabel->Location = System::Drawing::Point(201, 142);
 			this->loginUsernameLabel->Name = L"loginUsernameLabel";
 			this->loginUsernameLabel->Size = System::Drawing::Size(73, 17);
 			this->loginUsernameLabel->TabIndex = 1;
@@ -205,7 +209,7 @@ namespace OPO2SUMproject {
 			this->loginLoginLabel->AutoSize = true;
 			this->loginLoginLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->loginLoginLabel->Location = System::Drawing::Point(152, 51);
+			this->loginLoginLabel->Location = System::Drawing::Point(189, 51);
 			this->loginLoginLabel->Name = L"loginLoginLabel";
 			this->loginLoginLabel->Size = System::Drawing::Size(96, 38);
 			this->loginLoginLabel->TabIndex = 0;
@@ -227,7 +231,7 @@ namespace OPO2SUMproject {
 			this->addClientPanel->Controls->Add(this->addClientExitButton);
 			this->addClientPanel->Location = System::Drawing::Point(6, 6);
 			this->addClientPanel->Name = L"addClientPanel";
-			this->addClientPanel->Size = System::Drawing::Size(452, 387);
+			this->addClientPanel->Size = System::Drawing::Size(460, 387);
 			this->addClientPanel->TabIndex = 3;
 			// 
 			// addClient
@@ -303,7 +307,7 @@ namespace OPO2SUMproject {
 			// addClientExitButton
 			// 
 			this->addClientExitButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->addClientExitButton->Location = System::Drawing::Point(424, 3);
+			this->addClientExitButton->Location = System::Drawing::Point(432, 3);
 			this->addClientExitButton->Name = L"addClientExitButton";
 			this->addClientExitButton->Size = System::Drawing::Size(25, 23);
 			this->addClientExitButton->TabIndex = 0;
@@ -320,9 +324,9 @@ namespace OPO2SUMproject {
 			// managerTablePanel
 			// 
 			this->managerTablePanel->Controls->Add(this->managerTabControl);
-			this->managerTablePanel->Location = System::Drawing::Point(448, 12);
+			this->managerTablePanel->Location = System::Drawing::Point(496, 12);
 			this->managerTablePanel->Name = L"managerTablePanel";
-			this->managerTablePanel->Size = System::Drawing::Size(478, 435);
+			this->managerTablePanel->Size = System::Drawing::Size(486, 435);
 			this->managerTablePanel->TabIndex = 2;
 			// 
 			// managerTabControl
@@ -337,7 +341,7 @@ namespace OPO2SUMproject {
 			this->managerTabControl->Location = System::Drawing::Point(3, 3);
 			this->managerTabControl->Name = L"managerTabControl";
 			this->managerTabControl->SelectedIndex = 0;
-			this->managerTabControl->Size = System::Drawing::Size(472, 428);
+			this->managerTabControl->Size = System::Drawing::Size(480, 428);
 			this->managerTabControl->TabIndex = 0;
 			// 
 			// clientMTabPage
@@ -347,13 +351,18 @@ namespace OPO2SUMproject {
 			this->clientMTabPage->Location = System::Drawing::Point(4, 25);
 			this->clientMTabPage->Name = L"clientMTabPage";
 			this->clientMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->clientMTabPage->Size = System::Drawing::Size(464, 399);
+			this->clientMTabPage->Size = System::Drawing::Size(472, 399);
 			this->clientMTabPage->TabIndex = 0;
 			this->clientMTabPage->Text = L"Client";
 			this->clientMTabPage->UseVisualStyleBackColor = true;
 			// 
 			// clientMPanel
 			// 
+			this->clientMPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->clientMPanel->Controls->Add(this->clientMModifyButton);
+			this->clientMPanel->Controls->Add(this->clientMDeleteButton);
 			this->clientMPanel->Controls->Add(this->clientMFNameTextBox);
 			this->clientMPanel->Controls->Add(this->clientMLNameTextBox);
 			this->clientMPanel->Controls->Add(this->clientMCityTextBox);
@@ -365,7 +374,7 @@ namespace OPO2SUMproject {
 			this->clientMPanel->Controls->Add(this->clientMLNameLabel);
 			this->clientMPanel->Location = System::Drawing::Point(6, 6);
 			this->clientMPanel->Name = L"clientMPanel";
-			this->clientMPanel->Size = System::Drawing::Size(452, 387);
+			this->clientMPanel->Size = System::Drawing::Size(460, 387);
 			this->clientMPanel->TabIndex = 4;
 			// 
 			// clientMFNameTextBox
@@ -394,19 +403,19 @@ namespace OPO2SUMproject {
 			this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->clientMDGV->Location = System::Drawing::Point(3, 204);
+			this->clientMDGV->Location = System::Drawing::Point(3, 195);
 			this->clientMDGV->Name = L"clientMDGV";
 			this->clientMDGV->RowHeadersWidth = 51;
 			this->clientMDGV->RowTemplate->Height = 24;
-			this->clientMDGV->Size = System::Drawing::Size(446, 151);
+			this->clientMDGV->Size = System::Drawing::Size(454, 151);
 			this->clientMDGV->TabIndex = 0;
 			// 
 			// clientMAddButton
 			// 
 			this->clientMAddButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMAddButton->Location = System::Drawing::Point(374, 361);
+			this->clientMAddButton->Location = System::Drawing::Point(220, 352);
 			this->clientMAddButton->Name = L"clientMAddButton";
-			this->clientMAddButton->Size = System::Drawing::Size(75, 23);
+			this->clientMAddButton->Size = System::Drawing::Size(75, 32);
 			this->clientMAddButton->TabIndex = 2;
 			this->clientMAddButton->Text = L"Add";
 			this->clientMAddButton->UseVisualStyleBackColor = true;
@@ -415,9 +424,9 @@ namespace OPO2SUMproject {
 			// clientMResearchButton
 			// 
 			this->clientMResearchButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMResearchButton->Location = System::Drawing::Point(374, 175);
+			this->clientMResearchButton->Location = System::Drawing::Point(382, 157);
 			this->clientMResearchButton->Name = L"clientMResearchButton";
-			this->clientMResearchButton->Size = System::Drawing::Size(75, 23);
+			this->clientMResearchButton->Size = System::Drawing::Size(75, 32);
 			this->clientMResearchButton->TabIndex = 1;
 			this->clientMResearchButton->Text = L"Search";
 			this->clientMResearchButton->UseVisualStyleBackColor = true;
@@ -478,6 +487,26 @@ namespace OPO2SUMproject {
 			this->statisticMTabPage->TabIndex = 3;
 			this->statisticMTabPage->Text = L"Statistic";
 			this->statisticMTabPage->UseVisualStyleBackColor = true;
+			// 
+			// clientMDeleteButton
+			// 
+			this->clientMDeleteButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->clientMDeleteButton->Location = System::Drawing::Point(382, 352);
+			this->clientMDeleteButton->Name = L"clientMDeleteButton";
+			this->clientMDeleteButton->Size = System::Drawing::Size(75, 32);
+			this->clientMDeleteButton->TabIndex = 9;
+			this->clientMDeleteButton->Text = L"Delete";
+			this->clientMDeleteButton->UseVisualStyleBackColor = true;
+			// 
+			// clientMModifyButton
+			// 
+			this->clientMModifyButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->clientMModifyButton->Location = System::Drawing::Point(301, 352);
+			this->clientMModifyButton->Name = L"clientMModifyButton";
+			this->clientMModifyButton->Size = System::Drawing::Size(75, 32);
+			this->clientMModifyButton->TabIndex = 10;
+			this->clientMModifyButton->Text = L"Modify";
+			this->clientMModifyButton->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
