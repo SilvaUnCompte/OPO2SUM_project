@@ -221,10 +221,11 @@ namespace OPO2SUMproject {
 			this->addClientPanel->Controls->Add(this->addClientFNameLabel);
 			this->addClientPanel->Controls->Add(this->addClientTitleLabel);
 			this->addClientPanel->Controls->Add(this->addClientExitButton);
-			this->addClientPanel->Location = System::Drawing::Point(916, 12);
+			this->addClientPanel->Location = System::Drawing::Point(6, 6);
 			this->addClientPanel->Name = L"addClientPanel";
-			this->addClientPanel->Size = System::Drawing::Size(419, 400);
+			this->addClientPanel->Size = System::Drawing::Size(452, 387);
 			this->addClientPanel->TabIndex = 3;
+			this->addClientPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::addClientPanel_Paint);
 			// 
 			// addClient
 			// 
@@ -299,12 +300,13 @@ namespace OPO2SUMproject {
 			// addClientExitButton
 			// 
 			this->addClientExitButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->addClientExitButton->Location = System::Drawing::Point(391, 3);
+			this->addClientExitButton->Location = System::Drawing::Point(424, 3);
 			this->addClientExitButton->Name = L"addClientExitButton";
 			this->addClientExitButton->Size = System::Drawing::Size(25, 23);
 			this->addClientExitButton->TabIndex = 0;
 			this->addClientExitButton->Text = L"X";
 			this->addClientExitButton->UseVisualStyleBackColor = true;
+			this->addClientExitButton->Click += gcnew System::EventHandler(this, &MyForm::addClientExitButton_Click);
 			// 
 			// contextMenuStrip1
 			// 
@@ -317,7 +319,7 @@ namespace OPO2SUMproject {
 			this->managerTablePanel->Controls->Add(this->managerTabControl);
 			this->managerTablePanel->Location = System::Drawing::Point(448, 12);
 			this->managerTablePanel->Name = L"managerTablePanel";
-			this->managerTablePanel->Size = System::Drawing::Size(449, 403);
+			this->managerTablePanel->Size = System::Drawing::Size(478, 435);
 			this->managerTablePanel->TabIndex = 2;
 			// 
 			// managerTabControl
@@ -332,7 +334,7 @@ namespace OPO2SUMproject {
 			this->managerTabControl->Location = System::Drawing::Point(3, 3);
 			this->managerTabControl->Name = L"managerTabControl";
 			this->managerTabControl->SelectedIndex = 0;
-			this->managerTabControl->Size = System::Drawing::Size(443, 396);
+			this->managerTabControl->Size = System::Drawing::Size(472, 428);
 			this->managerTabControl->TabIndex = 0;
 			// 
 			// clientMTabPage
@@ -340,6 +342,7 @@ namespace OPO2SUMproject {
 			this->clientMTabPage->Controls->Add(this->clientMCityTextBox);
 			this->clientMTabPage->Controls->Add(this->clientMLNameTextBox);
 			this->clientMTabPage->Controls->Add(this->clientMFNameTextBox);
+			this->clientMTabPage->Controls->Add(this->addClientPanel);
 			this->clientMTabPage->Controls->Add(this->clientMCityLabel);
 			this->clientMTabPage->Controls->Add(this->clientMLNameLabel);
 			this->clientMTabPage->Controls->Add(this->clientMFNameLabel);
@@ -349,7 +352,7 @@ namespace OPO2SUMproject {
 			this->clientMTabPage->Location = System::Drawing::Point(4, 25);
 			this->clientMTabPage->Name = L"clientMTabPage";
 			this->clientMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->clientMTabPage->Size = System::Drawing::Size(435, 367);
+			this->clientMTabPage->Size = System::Drawing::Size(464, 399);
 			this->clientMTabPage->TabIndex = 0;
 			this->clientMTabPage->Text = L"Client";
 			this->clientMTabPage->UseVisualStyleBackColor = true;
@@ -406,17 +409,18 @@ namespace OPO2SUMproject {
 			// clientMAddButton
 			// 
 			this->clientMAddButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMAddButton->Location = System::Drawing::Point(354, 336);
+			this->clientMAddButton->Location = System::Drawing::Point(383, 368);
 			this->clientMAddButton->Name = L"clientMAddButton";
 			this->clientMAddButton->Size = System::Drawing::Size(75, 23);
 			this->clientMAddButton->TabIndex = 2;
 			this->clientMAddButton->Text = L"Add";
 			this->clientMAddButton->UseVisualStyleBackColor = true;
+			this->clientMAddButton->Click += gcnew System::EventHandler(this, &MyForm::clientMAddButton_Click);
 			// 
 			// clientMResearchButton
 			// 
 			this->clientMResearchButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMResearchButton->Location = System::Drawing::Point(354, 150);
+			this->clientMResearchButton->Location = System::Drawing::Point(383, 185);
 			this->clientMResearchButton->Name = L"clientMResearchButton";
 			this->clientMResearchButton->Size = System::Drawing::Size(75, 23);
 			this->clientMResearchButton->TabIndex = 1;
@@ -428,11 +432,11 @@ namespace OPO2SUMproject {
 			this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->clientMDGV->Location = System::Drawing::Point(6, 179);
+			this->clientMDGV->Location = System::Drawing::Point(6, 211);
 			this->clientMDGV->Name = L"clientMDGV";
 			this->clientMDGV->RowHeadersWidth = 51;
 			this->clientMDGV->RowTemplate->Height = 24;
-			this->clientMDGV->Size = System::Drawing::Size(423, 151);
+			this->clientMDGV->Size = System::Drawing::Size(452, 151);
 			this->clientMDGV->TabIndex = 0;
 			// 
 			// orderMTabPage
@@ -440,7 +444,7 @@ namespace OPO2SUMproject {
 			this->orderMTabPage->Location = System::Drawing::Point(4, 25);
 			this->orderMTabPage->Name = L"orderMTabPage";
 			this->orderMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->orderMTabPage->Size = System::Drawing::Size(435, 367);
+			this->orderMTabPage->Size = System::Drawing::Size(464, 399);
 			this->orderMTabPage->TabIndex = 1;
 			this->orderMTabPage->Text = L"Order";
 			this->orderMTabPage->UseVisualStyleBackColor = true;
@@ -450,7 +454,7 @@ namespace OPO2SUMproject {
 			this->stockMTabPage->Location = System::Drawing::Point(4, 25);
 			this->stockMTabPage->Name = L"stockMTabPage";
 			this->stockMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->stockMTabPage->Size = System::Drawing::Size(435, 367);
+			this->stockMTabPage->Size = System::Drawing::Size(464, 399);
 			this->stockMTabPage->TabIndex = 2;
 			this->stockMTabPage->Text = L"Stock";
 			this->stockMTabPage->UseVisualStyleBackColor = true;
@@ -460,7 +464,7 @@ namespace OPO2SUMproject {
 			this->statisticMTabPage->Location = System::Drawing::Point(4, 25);
 			this->statisticMTabPage->Name = L"statisticMTabPage";
 			this->statisticMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->statisticMTabPage->Size = System::Drawing::Size(435, 367);
+			this->statisticMTabPage->Size = System::Drawing::Size(464, 399);
 			this->statisticMTabPage->TabIndex = 3;
 			this->statisticMTabPage->Text = L"Statistic";
 			this->statisticMTabPage->UseVisualStyleBackColor = true;
@@ -472,7 +476,6 @@ namespace OPO2SUMproject {
 			this->ClientSize = System::Drawing::Size(1920, 1055);
 			this->Controls->Add(this->managerTablePanel);
 			this->Controls->Add(this->loginPanel);
-			this->Controls->Add(this->addClientPanel);
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -491,6 +494,16 @@ namespace OPO2SUMproject {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		addClientPanel->Hide();
 	}
+private: System::Void addClientPanel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	
+}
+private: System::Void addClientExitButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	addClientPanel->Hide();
+}
+private: System::Void clientMAddButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	addClientPanel->Show();
+}
 };
 }
