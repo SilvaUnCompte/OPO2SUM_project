@@ -6,23 +6,113 @@ namespace OPO2SUMproject
 	{
 	private:
 		System::Data::DataSet data;
-
+		
 	public:
-		virtual System::String^ Select(void);
-		virtual System::String^ Select(int);
-		virtual System::String^ Insert(void);
-		virtual System::String^ Delete(void);
-		virtual System::String^ Update(void);
+		virtual System::Data::DataSet select() = 0;
+		virtual System::Data::DataSet select() = 0;
+		virtual void insert() = 0;
+		virtual void deleteElement() = 0;
+		virtual void update() = 0;
 	};
 
-	ref class personnelManager : DataManager
+	ref class PersonnelManager : DataManager
 	{
 	public:
-		System::String^ Select(void) override;
-		System::String^ Select(int id) override;
-		System::String^ Insert(void) override;
-		System::String^ Delete(void) override;
-		System::String^ Update(void) override;
+		System::Data::DataSet select(void) override;
+		System::Data::DataSet select(int) override;
+		void insert(System::Data::DataSet dataInsert) override;
+		void deleteElement(int id) override;
+		void update(int id) override;
+	};
+
+	ref class OrderManager : DataManager
+	{
+	public:
+		System::Data::DataSet select(void) override;
+		System::Data::DataSet select(int) override;
+		void insert(System::Data::DataSet dataInsert) override;
+		void deleteElement(int id) override;
+		void update(int id) override;
+	};
+
+	ref class AddressManager : DataManager
+	{
+	public:
+		System::Data::DataSet select(void) override;
+		System::Data::DataSet select(int) override;
+		void insert(System::Data::DataSet dataInsert) override;
+		void deleteElement(int id) override;
+		void update(int id) override;
+	};
+
+	ref class AccountManager : DataManager
+	{
+	public:
+		System::Data::DataSet select(void) override;
+		System::Data::DataSet select(int) override;
+		void insert(System::Data::DataSet dataInsert) override;
+		void deleteElement(int id) override;
+		void update(int id) override;
+	};
+
+	ref class ProductManager : DataManager
+	{
+	public:
+		System::Data::DataSet select(void) override;
+		System::Data::DataSet select(int) override;
+		void insert(System::Data::DataSet dataInsert) override;
+		void deleteElement(int id) override;
+		void update(int id) override;
+	};
+
+	ref class PaymentManager : DataManager
+	{
+	public:
+		System::Data::DataSet select(void) override;
+		System::Data::DataSet select(int) override;
+		void insert(System::Data::DataSet dataInsert) override;
+		void deleteElement(int id) override;
+		void update(int id) override;
+	};
+
+	ref class BillManager : DataManager
+	{
+	public:
+		System::Data::DataSet select(void) override;
+		System::Data::DataSet select(int) override;
+		void insert(System::Data::DataSet dataInsert) override;
+		void deleteElement(int id) override;
+		void update(int id) override;
+	};
+
+	ref class LivingManager : DataManager
+	{
+	public:
+		System::Data::DataSet select(void) override;
+		System::Data::DataSet select(int) override;
+		void insert(System::Data::DataSet dataInsert) override;
+		void deleteElement(int id) override;
+		void update(int id) override;
+	};
+
+	ref class BillingManager : DataManager
+	{
+	public:
+		System::Data::DataSet select(void) override;
+		System::Data::DataSet select(int) override;
+		void insert(System::Data::DataSet dataInsert) override;
+		void deleteElement(int id) override;
+		void update(int id) override;
+	};
+
+	ref class ContainManager : DataManager
+	{
+	public:
+		System::Data::DataSet select(void) override;
+		System::Data::DataSet select(int) override;
+		void insert(System::Data::DataSet dataInsert) override;
+		void deleteElement(int id) override;
+		void update(int id) override;
 	};
 }
 

@@ -1,29 +1,26 @@
 #include "pch.h"
 #include "DataManager.h"
+#include "AccessData.h"
 
-System::String^ OPO2SUMproject::DataManager::Select(void) { return ""; }
-System::String^ OPO2SUMproject::DataManager::Select(int id) { return ""; }
-System::String^ OPO2SUMproject::DataManager::Insert(void) { return ""; }
-System::String^ OPO2SUMproject::DataManager::Delete(void) { return ""; }
-System::String^ OPO2SUMproject::DataManager::Update(void) { return ""; }
 
-System::String^ OPO2SUMproject::personnelManager::Select(void)
+System::String^ OPO2SUMproject::personnelManager::select(void)
 {
-	return "SELECT * FROM DB_prosit6.dbo.Clients";
+	AccessData::getRows(System::String ^ sSql, System::String ^ sDataTableName)
+	return "SELECT * FROM opo2sum.dbo.personnel";
 }
-System::String^ OPO2SUMproject::personnelManager::Select(int id)
+System::String^ OPO2SUMproject::personnelManager::select(int id)
 {
-	return "SELECT * FROM DB_prosit6.dbo.Clients";
+	return "SELECT * FROM opo2sum.dbo.personnel where id = '"+id+"'";
 }
-System::String^ OPO2SUMproject::personnelManager::Insert(void)
+System::String^ OPO2SUMproject::personnelManager::insert(System::Data::DataSet dataInsert)
 {
-	return "INSERT INTO Clients (nom, prenom) VALUES('');";
+	return "INSERT INTO personnel (nom, prenom) VALUES('');";
 }
-System::String^ OPO2SUMproject::personnelManager::Delete(void)
+System::String^ OPO2SUMproject::personnelManager::deleteElement(int id)
 {
 	return "";
 }
-System::String^ OPO2SUMproject::personnelManager::Update(void)
+System::String^ OPO2SUMproject::personnelManager::update(int id)
 {
 	return "";
 }

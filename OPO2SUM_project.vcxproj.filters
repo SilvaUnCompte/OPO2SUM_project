@@ -31,7 +31,10 @@
       <Filter>Fichiers d%27en-tête\databaseManager</Filter>
     </ClInclude>
     <ClInclude Include="DataManager.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\databaseManager</Filter>
+    </ClInclude>
+    <ClInclude Include="DataQuery.h">
+      <Filter>Fichiers d%27en-tête\databaseManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +45,9 @@
       <Filter>Fichiers sources\databaseManager</Filter>
     </ClCompile>
     <ClCompile Include="DataManager.cpp">
+      <Filter>Fichiers sources\databaseManager</Filter>
+    </ClCompile>
+    <ClCompile Include="DataQuery.cpp">
       <Filter>Fichiers sources\databaseManager</Filter>
     </ClCompile>
   </ItemGroup>
