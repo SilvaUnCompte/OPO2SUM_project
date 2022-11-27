@@ -120,7 +120,6 @@
   <ItemGroup>
     <ClInclude Include="AccessData.h" />
     <ClInclude Include="DataManager.h" />
-    <ClInclude Include="DataQuery.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -136,7 +135,6 @@
   <ItemGroup>
     <ClCompile Include="AccessData.cpp" />
     <ClCompile Include="DataManager.cpp" />
-    <ClCompile Include="DataQuery.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>

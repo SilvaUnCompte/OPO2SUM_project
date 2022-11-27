@@ -2,126 +2,155 @@
 
 namespace OPO2SUMproject
 {
-	ref class DataManager
+	ref class ClassTable
 	{
+	protected:
+		int id;
+		AccessData^ Adata = gcnew AccessData;
+
 	public:
-		DataManager();
-		/*virtual void insert(System::Data::DataSet dataInsert) = 0;
-		virtual void deleteElement(int id) = 0;
-		virtual void update(int id) = 0;*/
+		ClassTable();
+
+		int get_id() { return this->id; };
+		//void setId(int newId) { this->id = newId; };
 	};
 
-	ref class Account
+	ref class ClassTableManager
+	{
+	protected:
+		AccessData^ Adata = gcnew AccessData;
+	};
+
+	ref class Account : ClassTable
 	{
 	private:
-		int id_account;
 		System::String^ account_name;
 		System::String^ password_account;
 		System::String^ firstname_account;
 		System::String^ lastname_account;
 		System::String^ birthday_account;
 		int permission_lv_account;
+
 	public:
 		Account(int id);
-		// add les getters et setters
+
+		System::String^ get_account_name() { return account_name; };
+		System::String^ get_password_account() { return password_account; };
+		System::String^ get_firstname_account() { return firstname_account; };
+		System::String^ get_lastname_account() { return lastname_account; };
+		System::String^ get_birthday_account() { return birthday_account; };
+		int get_permission_lv_account() { return permission_lv_account; };
+
+		void set_account_name(System::String^ new_account_name) { account_name = new_account_name; };
+		void set_password_account(System::String^ new_password_account) { password_account = new_password_account; };
+		void set_firstname_account(System::String^ new_firstname_account) { firstname_account = new_firstname_account; };
+		void set_lastname_account(System::String^ new_lastname_account) { lastname_account = new_lastname_account; };
+		void set_birthday_account(System::String^ new_birthday_account) { birthday_account = new_birthday_account; };
+		void set_permission_lv_account(int new_permission_lv_account) { permission_lv_account = new_permission_lv_account; };
 	};
 
-	ref class AccountManager : DataManager
+	ref class AccountManager : ClassTableManager
 	{
 	public:
 		Account^ select(int id);
-		void insert(Account^);
+		void insert(System::String^ account_name, System::String^ password_account, System::String^ firstname_account, System::String^ lastname_account, System::String^ birthday_account, int permission_lv_account);
+		void deleteElement(int id);
 		void deleteElement(Account^);
 		void update(Account^);
 	};
 
-	ref class Personnel
+	ref class Personnel : ClassTable
 	{
 	private:
-		int id_personnel;
 		System::String^ hire_date;
 		bool is_manager;
 		Account^ account;
 
 	public:
 		Personnel(int id);
-		int get_id_personnel() { return id_personnel; }
+
 		System::String^ get_hire_date() { return hire_date; }
 		bool get_is_manager() { return is_manager; }
 		Account^ get_account() { return account; }
-		int set_id_personnel() { return id_personnel; }
-		System::String^ set_hire_date() { return hire_date; }
-		bool set_is_manager() { return is_manager; }
-		Account^ set_account() { return account; }
+
+		void set_hire_date(System::String^ date) { hire_date = date; }
+		void set_is_manager(bool b) { is_manager = b; }
+		void set_account(Account^ currentAccount) { account = currentAccount; }
 	};
 
-	ref class PersonnelManager : DataManager
+	ref class PersonnelManager : ClassTableManager
 	{
 	public:
 		Personnel^ select(int id);
-		void insert(Personnel^);
+		void insert(System::String^ hire_date, bool is_manager, int id_account);
+		void deleteElement(int id);
 		void deleteElement(Personnel^);
 		void update(Personnel^);
 	};
 
-	/*ref class Order {};
+	/*ref class Order : ClassTable {};
 
-	ref class OrderManager : DataManager
+	ref class OrderManager : ClassTableManager
 	{
 	public:
 		Order^ select(int id);
 		void insert(Order^);
+		void deleteElement(int id);
 		void deleteElement(Order^);
 		void update(Order^);
 	};
 
-	ref class Address {};
+	ref class Address : ClassTable {};
 
-	ref class AddressManager : DataManager
+	ref class AddressManager : ClassTableManager
 	{
 	public:
 		Address^ select(int id);
 		void insert(Address^);
+		void deleteElement(int id);
 		void deleteElement(Address^);
 		void update(Address^);
 	};
 
-	ref class Product {};
+	ref class Product : ClassTable {};
 
-	ref class ProductManager : DataManager
+	ref class ProductManager : ClassTableManager
 	{
 	public:
 		Product^ select(int id);
 		void insert(Product^);
+		void deleteElement(int id);
 		void deleteElement(Product^);
 		void update(Product^);
 	};
 
-	ref class Payment {};
+	ref class Payment : ClassTable {};
 
-	ref class PaymentManager : DataManager
+	ref class PaymentManager : ClassTableManager
 	{
 	public:
 		Payment^ select(int id);
 		void insert(Payment^);
+		void deleteElement(int id);
 		void deleteElement(Payment^);
 		void update(Payment^);
 	};
 
-	ref class Bill {};
+	ref class Bill : ClassTable {};
 
-	ref class BillManager : DataManager
+	ref class BillManager : ClassTableManager
 	{
 	public:
 		Bill^ select(int id);
 		void insert(Bill^);
+		void deleteElement(int id);
 		void deleteElement(Bill^);
 		void update(Bill^);
 	};
 
-	ref class Living {};
+	ref class Living : ClassTable {};
 
-	ref class LivingManager : DataManager
+	ref class LivingManager : ClassTableManager
 	{
 	public:
 		Living^ select(int id);
@@ -130,9 +159,9 @@ namespace OPO2SUMproject
 		void update(Living^);
 	};
 
-	ref class Billing {};
+	ref class Billing : ClassTable {};
 
-	ref class BillingManager : DataManager
+	ref class BillingManager : ClassTableManager
 	{
 	public:
 		Billing^ select(int id);
@@ -141,9 +170,9 @@ namespace OPO2SUMproject
 		void update(Billing^);
 	};
 
-	ref class Contain {};
+	ref class Contain : ClassTable {};
 
-	ref class ContainManager : DataManager
+	ref class ContainManager : ClassTableManager
 	{
 	public:
 		Contain^ select(int id);
