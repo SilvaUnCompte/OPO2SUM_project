@@ -13,7 +13,7 @@ namespace OPO2SUMproject
 
 	public:
 		DataQuery::DataQuery(void);
-		System::Data::DataSet DataQuery::selectAllManager(System::String^);
+		System::Data::DataSet^ DataQuery::selectAllAccount();
 		// toute les fonctions bouton
 	};
 }

@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
 #include "AccessData.h"
 
+
 OPO2SUMproject::AccessData::AccessData(void)
 {
 	this->sCnx = "Data Source=BOBLÉPONGE;Initial Catalog=opo2sum;Integrated Security=True";

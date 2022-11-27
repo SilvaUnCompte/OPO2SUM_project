@@ -1,26 +1,34 @@
 #include "pch.h"
-#include "DataManager.h"
 #include "AccessData.h"
+#include "DataManager.h"
 
 
-System::String^ OPO2SUMproject::personnelManager::select(void)
-{
-	AccessData::getRows(System::String ^ sSql, System::String ^ sDataTableName)
-	return "SELECT * FROM opo2sum.dbo.personnel";
+OPO2SUMproject::DataManager::DataManager() {}
+OPO2SUMproject::Account::Account(int id) {}
+OPO2SUMproject::Personnel::Personnel(int id) {}
+
+OPO2SUMproject::Account^ OPO2SUMproject::AccountManager::select(int id) {
+	return gcnew Account(id);
 }
-System::String^ OPO2SUMproject::personnelManager::select(int id)
-{
-	return "SELECT * FROM opo2sum.dbo.personnel where id = '"+id+"'";
+void OPO2SUMproject::AccountManager::insert(Account^ obj) {
+	return;
 }
-System::String^ OPO2SUMproject::personnelManager::insert(System::Data::DataSet dataInsert)
-{
-	return "INSERT INTO personnel (nom, prenom) VALUES('');";
+void OPO2SUMproject::AccountManager::deleteElement(Account^ obj) {
+	return;
 }
-System::String^ OPO2SUMproject::personnelManager::deleteElement(int id)
-{
-	return "";
+void OPO2SUMproject::AccountManager::update(Account^ obj) {
+	return;
 }
-System::String^ OPO2SUMproject::personnelManager::update(int id)
-{
-	return "";
+
+OPO2SUMproject::Personnel^ OPO2SUMproject::PersonnelManager::select(int id) {
+	return gcnew Personnel(id);
+}
+void OPO2SUMproject::PersonnelManager::insert(Personnel^ obj) {
+	return;
+}
+void OPO2SUMproject::PersonnelManager::deleteElement(Personnel^ obj) {
+	return;
+}
+void OPO2SUMproject::PersonnelManager::update(Personnel^ obj) {
+	return;
 }
