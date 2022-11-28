@@ -1159,19 +1159,15 @@ namespace OPO2SUMproject {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 
-		/*Address^ mn0 = gcnew Address(1);
-		OrderManager^ mn1 = gcnew OrderManager();
-		AccountManager^ mn2 = gcnew AccountManager();
-		PersonnelManager^ mn3 = gcnew PersonnelManager();
-		AddressManager^ mn4 = gcnew AddressManager();
+		/*PaymentManager^ mn = gcnew PaymentManager();
 
-		mn1->insert("2019-10-02", "2019-10-02", 2);
-		mn2->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 3);
-		mn3->insert("2019-10-02", 0, 3);
-		mn4->insert("Rue des clochards", 14000, "gotham", "3eme etage");
+		mn->insert("2019-10-02", 1, 200, 5);
 
-		mn1->deleteElement(2);
-		mn2->deleteElement(3);*/
+		Payment^ py = gcnew Payment(1);
+		py->set_date_payment("2019-10-12");
+		mn->update(py);
+
+		mn->deleteElement(2);*/
 
 		this->label1->Text = "No error";
 	}
