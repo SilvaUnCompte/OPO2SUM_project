@@ -35,12 +35,12 @@ OPO2SUMproject::Personnel::Personnel(int selectedId) {
 }
 
 OPO2SUMproject::Order::Order(int selectedId) {
-	System::Data::DataSet^ dataSetAccount = Adata->getRows("SELECT * FROM opo2sum.dbo.Order WHERE id_order = " + selectedId, "Temp");
+	System::Data::DataSet^ dataSetAccount = Adata->getRows("SELECT * FROM opo2sum.dbo.orderTab WHERE id_order = " + selectedId, "Temp");
 	System::Data::DataTableReader^ DataTableReaderAccount = dataSetAccount->CreateDataReader();
 	DataTableReaderAccount->Read();
 
 	this->id = DataTableReaderAccount->GetInt32(0);
-	this->delevery_date = DataTableReaderAccount[1]->ToString();
+	this->delivery_date = DataTableReaderAccount[1]->ToString();
 	this->issue_date = DataTableReaderAccount[2]->ToString();
 	this->account = gcnew Account(DataTableReaderAccount->GetInt32(3));
 
@@ -119,8 +119,28 @@ void OPO2SUMproject::PersonnelManager::deleteElement(Personnel^ obj) {
 	PersonnelManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::PersonnelManager::update(Personnel^ obj) {
-	Adata->actionRows("UPDATE Personnel SET hire_date = '" + obj->get_hire_date() + "', is_manager = " + obj->get_is_manager() + ", id_account = " + obj->get_account()->get_id() + ";");
-	
+	Adata->actionRows("UPDATE Personnel SET hire_date = '" + obj->get_hire_date() + "', is_manager = " + obj->get_is_manager() + ", id_account = " + obj->get_account()->get_id() + " WHERE id_personnel = " + obj->get_id() + ";");
+}
+
+// Order Manager ---------------------------------------------------------------------
+
+OPO2SUMproject::Order^ OPO2SUMproject::OrderManager::select(int id) {
+	return gcnew Order(id);
+}
+void OPO2SUMproject::OrderManager::insert(System::String^ delivery_date, System::String^ issue_date, int id_account) {
+	AccessData^ Adata = gcnew AccessData;
+	Adata->actionRows("INSERT INTO orderTab " +
+		"(delivery_date, issue_date, id_account) " +
+		"VALUES('" + delivery_date + "', '" + issue_date + "', " + id_account + ");");
+}
+void OPO2SUMproject::OrderManager::deleteElement(int selectedId) {
+	Adata->actionRows("DELETE FROM orderTab WHERE id_order = " + selectedId);
+}
+void OPO2SUMproject::OrderManager::deleteElement(Order^ obj) {
+	OrderManager::deleteElement(obj->get_id());
+}
+void OPO2SUMproject::OrderManager::update(Order^ obj) {
+	Adata->actionRows("UPDATE orderTab SET delivery_date = '" + obj->get_delivery_date() + "', issue_date = '" + obj->get_issue_date() + "', id_account = " + obj->get_account()->get_id() + " WHERE id_order = " + obj->get_id() + ";");
 }
 
 //Address Manager----------------------------------------------------------------------

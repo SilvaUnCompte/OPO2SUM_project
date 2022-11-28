@@ -1158,8 +1158,6 @@ namespace OPO2SUMproject {
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		/*Personnel^ test = gcnew Personnel(1);
-		String^ test2 = test->get_account()->get_account_name();*/
 
 
 		/*AccountManager^ mn = gcnew AccountManager();
@@ -1184,6 +1182,7 @@ namespace OPO2SUMproject {
 
 		//this->label1->Text = changer->get_element_per_unit_product().ToString();
 
+		this->label1->Text = "No error";
 	}
 	};
 }
