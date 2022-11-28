@@ -61,6 +61,25 @@ OPO2SUMproject::Address::Address(int selectedId) {
 	DataTableReaderAddress->Close();
 }
 
+OPO2SUMproject::Product::Product(int selectedId) {
+	System::Data::DataSet^ dataSetProduct = Adata->getRows("SELECT * FROM opo2sum.dbo.product WHERE id_product = " + selectedId, "Temp");
+	System::Data::DataTableReader^ DataTableReaderProduct = dataSetProduct->CreateDataReader();
+	DataTableReaderProduct->Read();
+
+	this->id = DataTableReaderProduct->GetInt32(0);
+	this->name_product = DataTableReaderProduct[1]->ToString();
+	this->element_per_unit_product = DataTableReaderProduct->GetInt32(2);
+	this->cost_product = (float) DataTableReaderProduct->GetDouble(3);
+	this->marge_product = (float) DataTableReaderProduct->GetDouble(4);
+	this->tva_product = (float) DataTableReaderProduct->GetDouble(5);
+	this->stock_product = DataTableReaderProduct->GetInt32(6);
+	this->restocking_threshold_product= DataTableReaderProduct->GetInt32(7);
+
+
+
+	DataTableReaderProduct->Close();
+}
+
 // Account Manager ----------------------------------------------------------------------
 
 OPO2SUMproject::Account^ OPO2SUMproject::AccountManager::select(int id) {
@@ -122,6 +141,28 @@ void OPO2SUMproject::AddressManager::deleteElement(Address^ obj) {
 	AddressManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::AddressManager::update(Address^ obj) {
-	Adata->actionRows("UPDATE Address SET street = '" + obj->get_street() + "', postal_code = '" + obj->get_postal_code() + "', city = '" + obj->get_city() + "', address_complement = '" + obj->get_address_complement() + "';");
+	Adata->actionRows("UPDATE Address SET street = '" + obj->get_street() + "', postal_code = '" + obj->get_postal_code() + "', city = '" + obj->get_city() + "', address_complement = '" + obj->get_address_complement() + "' WHERE id_address = " + obj->get_id() + ";");
+
+}
+
+//Product Manager--------------------------------------------------------------------------
+
+OPO2SUMproject::Product^ OPO2SUMproject::ProductManager::select(int id) {
+	return gcnew Product(id);
+}
+void OPO2SUMproject::ProductManager::insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product) {
+	AccessData^ Adata = gcnew AccessData;
+	Adata->actionRows("INSERT INTO Product " +
+		"(name_product, element_per_unit_product, cost_product, marge_product, tva_product, stock_product, restocking_threshold_product) " +
+		"VALUES('" + name_product + "', " + element_per_unit_product + ", " + cost_product + ", " + marge_product + ", " + tva_product + ", " + stock_product + ", " + restocking_threshold_product +");");
+}
+void OPO2SUMproject::ProductManager::deleteElement(int selectedId) {
+	Adata->actionRows("DELETE FROM Product WHERE id_product = " + selectedId);
+}
+void OPO2SUMproject::ProductManager::deleteElement(Product^ obj) {
+	ProductManager::deleteElement(obj->get_id());
+}
+void OPO2SUMproject::ProductManager::update(Product^ obj) {
+	Adata->actionRows("UPDATE Product SET name_product = '" + obj->get_name_product() + "', element_per_unit_product = " + obj->get_element_per_unit_product() + ", cost_product = " + obj->get_cost_product() + ", marge_product = " + obj->get_marge_product() + ", tva_product = " + obj->get_tva_product()+ ", stock_product = " + obj->get_stock_product() + ", restocking_threshold_product = " + obj->get_restocking_threshold_product() + " WHERE id_product = " + obj->get_id() +";");
 
 }

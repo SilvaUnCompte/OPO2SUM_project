@@ -148,19 +148,49 @@ namespace OPO2SUMproject
 		void update(Address^);
 	};
 
-	/*
-	ref class Product : ClassTable {};
+	
+	ref class Product : ClassTable {
+	private:
+		System::String^ name_product;
+		int element_per_unit_product;
+		float cost_product;
+		float marge_product;
+		float tva_product;
+		int stock_product;
+		int restocking_threshold_product;
 
+	public:
+		Product(int id);
+
+		System::String^ get_name_product() { return name_product; }
+		int get_element_per_unit_product() { return element_per_unit_product; }
+		float get_cost_product() { return cost_product; }
+		float get_marge_product() { return marge_product; }
+		float get_tva_product() { return tva_product; }
+		int get_stock_product() { return stock_product; }
+		int get_restocking_threshold_product() { return restocking_threshold_product; }
+
+		void set_name_product(System::String^ name) { this->name_product = name; }
+		void set_element_per_unit_product(int elementperunit) { this->element_per_unit_product = elementperunit; }
+		void set_cost_product(float cost) { this->cost_product = cost; }
+		void set_marge_product(float marge) { this->marge_product = marge; }
+		void set_tva_product(float tva) { this->tva_product = tva; }
+		void set_stock_product(int stock) { this->stock_product = stock; }
+		void set_restocking_threshold_product(int restocking) { this->restocking_threshold_product = restocking; }
+		
+	};
+	
 	ref class ProductManager : ClassTableManager
 	{
 	public:
 		Product^ select(int id);
-		void insert(Product^);
+		void insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product);
 		void deleteElement(int id);
 		void deleteElement(Product^);
 		void update(Product^);
 	};
 
+	/*
 	ref class Payment : ClassTable {};
 
 	ref class PaymentManager : ClassTableManager

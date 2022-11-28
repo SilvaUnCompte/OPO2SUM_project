@@ -1162,21 +1162,27 @@ namespace OPO2SUMproject {
 		String^ test2 = test->get_account()->get_account_name();*/
 
 
-		//AccountManager^ mn = gcnew AccountManager();
-		//mn->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 1);
+		/*AccountManager^ mn = gcnew AccountManager();
+		mn->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 1);
 
-		//PersonnelManager^ mn1 = gcnew PersonnelManager();
-		//mn1->insert("2019-10-02", 0, 1);
+		PersonnelManager^ mn1 = gcnew PersonnelManager();
+		mn1->insert("2019-10-02", 0, 1);*/
 
-		//Address^ changer = gcnew Address(1);
-		//AddressManager^ mn2 = gcnew AddressManager();
-		//mn2->insert("Rue des clochards", 14000, "gotham", "3eme etage");
-		//
-		////changer->set_postal_code(2000);
+		/*AddressManager^ mn2 = gcnew AddressManager();
+		mn2->insert("Rue des clochards", 14000, "gotham", "3eme etage");*/
+
+		//ProductManager^ mn3 = gcnew ProductManager();
+		//mn3->insert("doits robotiques", 10, 1, 40002, 0.2, 300, 100);
+
+		/*Product^ changer = gcnew Product(2);
+		*/
+		/*changer->set_restocking_threshold_product(150);
+		mn3->update(changer);*/
 		//Account^ test3 = gcnew Account(1);
-		//mn2->deleteElement(5);
+		// 
+		//mn3->deleteElement(5);
 
-		//this->label1->Text = changer->get_postal_code().ToString();
+		//this->label1->Text = changer->get_element_per_unit_product().ToString();
 
 	}
 	};
