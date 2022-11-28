@@ -250,11 +250,11 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->addStockTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockExitButton = (gcnew System::Windows::Forms::Button());
 			this->statisticMTabPage = (gcnew System::Windows::Forms::TabPage());
+			this->statisticMStatisticButton = (gcnew System::Windows::Forms::Button());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->testButton = (gcnew System::Windows::Forms::Button());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->statisticMStatisticButton = (gcnew System::Windows::Forms::Button());
 			this->loginPanel->SuspendLayout();
 			this->registerPanel->SuspendLayout();
 			this->clientMPanel->SuspendLayout();
@@ -302,9 +302,9 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			// loginRegisterButton
 			// 
 			this->loginRegisterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->loginRegisterButton->Location = System::Drawing::Point(350, 3);
+			this->loginRegisterButton->Location = System::Drawing::Point(332, 3);
 			this->loginRegisterButton->Name = L"loginRegisterButton";
-			this->loginRegisterButton->Size = System::Drawing::Size(66, 34);
+			this->loginRegisterButton->Size = System::Drawing::Size(84, 34);
 			this->loginRegisterButton->TabIndex = 5;
 			this->loginRegisterButton->Text = L"Register";
 			this->loginRegisterButton->UseVisualStyleBackColor = true;
@@ -1081,6 +1081,23 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->statisticMTabPage->Text = L"Statistic";
 			this->statisticMTabPage->UseVisualStyleBackColor = true;
 			// 
+			// statisticMStatisticButton
+			// 
+			this->statisticMStatisticButton->Location = System::Drawing::Point(234, 473);
+			this->statisticMStatisticButton->Name = L"statisticMStatisticButton";
+			this->statisticMStatisticButton->Size = System::Drawing::Size(117, 24);
+			this->statisticMStatisticButton->TabIndex = 16;
+			this->statisticMStatisticButton->Text = L"Statistique";
+			this->statisticMStatisticButton->UseVisualStyleBackColor = true;
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Location = System::Drawing::Point(357, 473);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(121, 24);
+			this->comboBox1->TabIndex = 15;
+			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
@@ -1110,29 +1127,12 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->testButton->UseVisualStyleBackColor = true;
 			this->testButton->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
-			// comboBox1
-			// 
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(357, 473);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 24);
-			this->comboBox1->TabIndex = 15;
-			// 
-			// statisticMStatisticButton
-			// 
-			this->statisticMStatisticButton->Location = System::Drawing::Point(234, 473);
-			this->statisticMStatisticButton->Name = L"statisticMStatisticButton";
-			this->statisticMStatisticButton->Size = System::Drawing::Size(117, 24);
-			this->statisticMStatisticButton->TabIndex = 16;
-			this->statisticMStatisticButton->Text = L"Statistique";
-			this->statisticMStatisticButton->UseVisualStyleBackColor = true;
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->ClientSize = System::Drawing::Size(1920, 1055);
+			this->ClientSize = System::Drawing::Size(1243, 619);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->testButton);
 			this->Controls->Add(this->registerPanel);
@@ -1143,7 +1143,7 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->ForeColor = System::Drawing::Color::Black;
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Opo2suM";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->loginPanel->ResumeLayout(false);
 			this->loginPanel->PerformLayout();
