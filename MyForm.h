@@ -1158,37 +1158,22 @@ namespace OPO2SUMproject {
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		/*Order^ test = gcnew Order(1);
-		String^ test2 = test->get_account()->get_account_name();*/
 
-		/*OrderManager^ mn = gcnew OrderManager();
-		mn->insert("2019-10-02", "2019-10-02", 2);
+		/*Address^ mn0 = gcnew Address(1);
+		OrderManager^ mn1 = gcnew OrderManager();
+		AccountManager^ mn2 = gcnew AccountManager();
+		PersonnelManager^ mn3 = gcnew PersonnelManager();
+		AddressManager^ mn4 = gcnew AddressManager();
 
-		Order^ test = gcnew Order(2);
-		test->set_delivery_date("2019-10-09");
+		mn1->insert("2019-10-02", "2019-10-02", 2);
+		mn2->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 3);
+		mn3->insert("2019-10-02", 0, 3);
+		mn4->insert("Rue des clochards", 14000, "gotham", "3eme etage");
 
-		mn->update(test);
-		mn->deleteElement(test);*/
-		//AccountManager^ mn = gcnew AccountManager();
-		//mn->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 1);
+		mn1->deleteElement(2);
+		mn2->deleteElement(3);*/
 
-		//PersonnelManager^ mn1 = gcnew PersonnelManager();
-		//mn1->insert("2019-10-02", 0, 1);
-
-		//Address^ changer = gcnew Address(1);
-		//AddressManager^ mn2 = gcnew AddressManager();
-		//mn2->insert("Rue des clochards", 14000, "gotham", "3eme etage");
-		//
-		////changer->set_postal_code(2000);
-		//Account^ test3 = gcnew Account(1);
-		//mn2->deleteElement(5);
-
-		Personnel^ changer = gcnew Personnel(2);
-		changer->set_is_manager(1);
-		Account^ test3 = gcnew Account(1);
-		mn1->update(changer);*/
-
-		this->label1->Text = changer->get_is_manager().ToString();*/
+		this->label1->Text = "No error";
 	}
 	};
 }

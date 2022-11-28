@@ -123,3 +123,25 @@ void OPO2SUMproject::OrderManager::deleteElement(Order^ obj) {
 void OPO2SUMproject::OrderManager::update(Order^ obj) {
 	Adata->actionRows("UPDATE orderTab SET delivery_date = '" + obj->get_delivery_date() + "', issue_date = '" + obj->get_issue_date() + "', id_account = " + obj->get_account()->get_id() + " WHERE id_order = " + obj->get_id() + ";");
 }
+
+//Address Manager----------------------------------------------------------------------
+
+OPO2SUMproject::Address^ OPO2SUMproject::AddressManager::select(int id) {
+	return gcnew Address(id);
+}
+void OPO2SUMproject::AddressManager::insert(System::String^ street, int postal_code, System::String^ city, System::String^ address_complement) {
+	AccessData^ Adata = gcnew AccessData;
+	Adata->actionRows("INSERT INTO Address " +
+		"(street, postal_code, city, address_complement) " +
+		"VALUES('" + street + "', " + postal_code + ", '" + city + "', '" + address_complement + "');");
+}
+void OPO2SUMproject::AddressManager::deleteElement(int selectedId) {
+	Adata->actionRows("DELETE FROM Address WHERE id_address = " + selectedId);
+}
+void OPO2SUMproject::AddressManager::deleteElement(Address^ obj) {
+	AddressManager::deleteElement(obj->get_id());
+}
+void OPO2SUMproject::AddressManager::update(Address^ obj) {
+	Adata->actionRows("UPDATE Address SET street = '" + obj->get_street() + "', postal_code = '" + obj->get_postal_code() + "', city = '" + obj->get_city() + "', address_complement = '" + obj->get_address_complement() + "';");
+
+}
