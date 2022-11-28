@@ -335,8 +335,7 @@ namespace OPO2SUMproject {
 			// 
 			// registerPanel
 			// 
-			this->registerPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
-				static_cast<System::Int32>(static_cast<System::Byte>(54)));
+			this->registerPanel->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->registerPanel->Controls->Add(this->registerValidateButton);
 			this->registerPanel->Controls->Add(this->registerLoginButton);
 			this->registerPanel->Controls->Add(this->registerPasswordLabel);
@@ -344,6 +343,7 @@ namespace OPO2SUMproject {
 			this->registerPanel->Controls->Add(this->registerUsernameTextBox);
 			this->registerPanel->Controls->Add(this->registerUsernameLabel);
 			this->registerPanel->Controls->Add(this->registerRegisterLabel);
+			this->registerPanel->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->registerPanel->Location = System::Drawing::Point(10, 13);
 			this->registerPanel->Name = L"registerPanel";
 			this->registerPanel->Size = System::Drawing::Size(419, 462);
@@ -672,7 +672,7 @@ namespace OPO2SUMproject {
 			this->clientMTabPage->Controls->Add(this->clientMPanel);
 			this->clientMTabPage->Location = System::Drawing::Point(4, 26);
 			this->clientMTabPage->Name = L"clientMTabPage";
-			this->clientMTabPage->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->clientMTabPage->Padding = System::Windows::Forms::Padding(3);
 			this->clientMTabPage->Size = System::Drawing::Size(412, 426);
 			this->clientMTabPage->TabIndex = 0;
 			this->clientMTabPage->Text = L"Client";
@@ -684,7 +684,7 @@ namespace OPO2SUMproject {
 			this->orderMTabPage->Controls->Add(this->addOrderPanel);
 			this->orderMTabPage->Location = System::Drawing::Point(4, 26);
 			this->orderMTabPage->Name = L"orderMTabPage";
-			this->orderMTabPage->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->orderMTabPage->Padding = System::Windows::Forms::Padding(3);
 			this->orderMTabPage->Size = System::Drawing::Size(412, 426);
 			this->orderMTabPage->TabIndex = 1;
 			this->orderMTabPage->Text = L"Order";
@@ -858,7 +858,7 @@ namespace OPO2SUMproject {
 			this->stockMTabPage->Controls->Add(this->addStockPanel);
 			this->stockMTabPage->Location = System::Drawing::Point(4, 26);
 			this->stockMTabPage->Name = L"stockMTabPage";
-			this->stockMTabPage->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->stockMTabPage->Padding = System::Windows::Forms::Padding(3);
 			this->stockMTabPage->Size = System::Drawing::Size(412, 426);
 			this->stockMTabPage->TabIndex = 2;
 			this->stockMTabPage->Text = L"Stock";
@@ -1031,7 +1031,7 @@ namespace OPO2SUMproject {
 			this->statisticMTabPage->Controls->Add(this->statisticMPanel);
 			this->statisticMTabPage->Location = System::Drawing::Point(4, 26);
 			this->statisticMTabPage->Name = L"statisticMTabPage";
-			this->statisticMTabPage->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->statisticMTabPage->Padding = System::Windows::Forms::Padding(3);
 			this->statisticMTabPage->Size = System::Drawing::Size(412, 426);
 			this->statisticMTabPage->TabIndex = 3;
 			this->statisticMTabPage->Text = L"Statistic";
@@ -1070,8 +1070,7 @@ namespace OPO2SUMproject {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 17);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-				static_cast<System::Int32>(static_cast<System::Byte>(73)));
+			this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->ClientSize = System::Drawing::Size(1239, 517);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->testButton);
@@ -1080,8 +1079,7 @@ namespace OPO2SUMproject {
 			this->Controls->Add(this->loginPanel);
 			this->Font = (gcnew System::Drawing::Font(L"Source Sans Pro", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(126)),
-				static_cast<System::Int32>(static_cast<System::Byte>(249)));
+			this->ForeColor = System::Drawing::Color::Black;
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -1160,20 +1158,20 @@ namespace OPO2SUMproject {
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		//Personnel^ test = gcnew Personnel(1);
-		//String^ test2 = test->get_account()->get_account_name();
+		Personnel^ test = gcnew Personnel(1);
+		String^ test2 = test->get_account()->get_account_name();
 
 
-		//AccountManager^ mn = gcnew AccountManager();
-		////mn->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 1);
+		AccountManager^ mn = gcnew AccountManager();
+		mn->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 1);
 
 
-		//test->set_is_manager(1);
-		//Account^ test3 = gcnew Account(1);
-		//test3->set_firstname_account("C mwa");
-		//mn->update(test3);
-		//mn->AccountManager::deleteElement(test3);
-		//this->label1->Text = test2;
+		test->set_is_manager(1);
+		Account^ test3 = gcnew Account(1);
+		test3->set_firstname_account("C mwa");
+		mn->update(test3);
+		mn->AccountManager::deleteElement(test3);
+		this->label1->Text = test2;
 	}
 	};
 }
