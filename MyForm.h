@@ -12,7 +12,7 @@ namespace OPO2SUMproject {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de MyForm
+	/// Description rÃ©sumÃ©e de MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -27,7 +27,7 @@ namespace OPO2SUMproject {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisÃ©es.
 		/// </summary>
 		~MyForm()
 		{
@@ -130,11 +130,13 @@ private: System::Windows::Forms::Button^ orderMFilterButton;
 private: System::Windows::Forms::Button^ stockMFilterButton;
 private: System::Windows::Forms::Label^ stockMLabel;
 private: System::Windows::Forms::Panel^ informationStockPanel;
-private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::Label^ informationStockNameLabel;
+
 private: System::Windows::Forms::Label^ addStockStockLabel;
 
 private: System::Windows::Forms::Label^ addStockTVALabel;
-private: System::Windows::Forms::Label^ addStockPriceLabel;
+private: System::Windows::Forms::Label^ addStockMargeLabel;
+
 private: System::Windows::Forms::Label^ addStockCostLabel;
 private: System::Windows::Forms::TextBox^ addStockCostTextBox;
 
@@ -162,14 +164,14 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nÃ©cessaire au concepteur.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// MÃ©thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mÃ©thode avec l'Ã©diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -240,7 +242,7 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->addStockRestockingLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockStockLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockTVALabel = (gcnew System::Windows::Forms::Label());
-			this->addStockPriceLabel = (gcnew System::Windows::Forms::Label());
+			this->addStockMargeLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockCostLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockValidateButton = (gcnew System::Windows::Forms::Button());
 			this->addStockQuantityTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -894,7 +896,7 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->addStockPanel->Controls->Add(this->addStockRestockingLabel);
 			this->addStockPanel->Controls->Add(this->addStockStockLabel);
 			this->addStockPanel->Controls->Add(this->addStockTVALabel);
-			this->addStockPanel->Controls->Add(this->addStockPriceLabel);
+			this->addStockPanel->Controls->Add(this->addStockMargeLabel);
 			this->addStockPanel->Controls->Add(this->addStockCostLabel);
 			this->addStockPanel->Controls->Add(this->addStockValidateButton);
 			this->addStockPanel->Controls->Add(this->addStockQuantityTextBox);
@@ -944,6 +946,42 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->textBox2->Size = System::Drawing::Size(466, 22);
 			this->textBox2->TabIndex = 15;
 			// 
+			// textBox5
+			// 
+			this->textBox5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->textBox5->Location = System::Drawing::Point(3, 368);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(447, 22);
+			this->textBox5->TabIndex = 16;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->textBox4->Location = System::Drawing::Point(3, 323);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(447, 22);
+			this->textBox4->TabIndex = 17;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->textBox3->Location = System::Drawing::Point(3, 278);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(447, 22);
+			this->textBox3->TabIndex = 16;
+			// 
+			// textBox2
+			// 
+			this->textBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->textBox2->Location = System::Drawing::Point(3, 233);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(447, 22);
+			this->textBox2->TabIndex = 15;
+			// 
 			// addStockCostTextBox
 			// 
 			this->addStockCostTextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
@@ -980,14 +1018,14 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->addStockTVALabel->TabIndex = 11;
 			this->addStockTVALabel->Text = L"TVA";
 			// 
-			// addStockPriceLabel
+			// addStockMargeLabel
 			// 
-			this->addStockPriceLabel->AutoSize = true;
-			this->addStockPriceLabel->Location = System::Drawing::Point(3, 213);
-			this->addStockPriceLabel->Name = L"addStockPriceLabel";
-			this->addStockPriceLabel->Size = System::Drawing::Size(45, 17);
-			this->addStockPriceLabel->TabIndex = 10;
-			this->addStockPriceLabel->Text = L"Price";
+			this->addStockMargeLabel->AutoSize = true;
+			this->addStockMargeLabel->Location = System::Drawing::Point(3, 213);
+			this->addStockMargeLabel->Name = L"addStockMargeLabel";
+			this->addStockMargeLabel->Size = System::Drawing::Size(53, 17);
+			this->addStockMargeLabel->TabIndex = 10;
+			this->addStockMargeLabel->Text = L"Marge";
 			// 
 			// addStockCostLabel
 			// 
@@ -1051,11 +1089,11 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->addStockTitleLabel->AutoSize = true;
 			this->addStockTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->addStockTitleLabel->Location = System::Drawing::Point(125, 21);
+			this->addStockTitleLabel->Location = System::Drawing::Point(97, 19);
 			this->addStockTitleLabel->Name = L"addStockTitleLabel";
-			this->addStockTitleLabel->Size = System::Drawing::Size(167, 38);
+			this->addStockTitleLabel->Size = System::Drawing::Size(262, 38);
 			this->addStockTitleLabel->TabIndex = 1;
-			this->addStockTitleLabel->Text = L"Add Stock";
+			this->addStockTitleLabel->Text = L"Add new product";
 			// 
 			// addStockExitButton
 			// 
