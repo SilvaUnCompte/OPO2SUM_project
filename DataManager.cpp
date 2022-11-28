@@ -22,16 +22,16 @@ OPO2SUMproject::Account::Account(int selectedId) {
 }
 
 OPO2SUMproject::Personnel::Personnel(int selectedId) {
-	System::Data::DataSet^ dataSetAccount = Adata->getRows("SELECT * FROM opo2sum.dbo.Personnel WHERE id_personnel = " + selectedId, "Temp");
-	System::Data::DataTableReader^ DataTableReaderAccount = dataSetAccount->CreateDataReader();
-	DataTableReaderAccount->Read();
+	System::Data::DataSet^ dataSetPersonnel = Adata->getRows("SELECT * FROM opo2sum.dbo.Personnel WHERE id_personnel = " + selectedId, "Temp");
+	System::Data::DataTableReader^ DataTableReaderPersonnel = dataSetPersonnel->CreateDataReader();
+	DataTableReaderPersonnel->Read();
 
-	this->id = DataTableReaderAccount->GetInt32(0);
-	this->hire_date = DataTableReaderAccount[1]->ToString();
-	this->is_manager = DataTableReaderAccount->GetInt32(2);
-	this->account = gcnew Account(DataTableReaderAccount->GetInt32(3));
+	this->id = DataTableReaderPersonnel->GetInt32(0);
+	this->hire_date = DataTableReaderPersonnel[1]->ToString();
+	this->is_manager = DataTableReaderPersonnel->GetInt32(2);
+	this->account = gcnew Account(DataTableReaderPersonnel->GetInt32(3));
 
-	DataTableReaderAccount->Close();
+	DataTableReaderPersonnel->Close();
 }
 
 OPO2SUMproject::Order::Order(int selectedId) {
@@ -73,11 +73,11 @@ void OPO2SUMproject::AccountManager::update(Account^ obj) {
 OPO2SUMproject::Personnel^ OPO2SUMproject::PersonnelManager::select(int id) {
 	return gcnew Personnel(id);
 }
-void OPO2SUMproject::PersonnelManager::insert(System::String^ hire_date, bool is_manager, int id_account) {
+void OPO2SUMproject::PersonnelManager::insert(System::String^ hire_date, int is_manager, int id_account) {
 	AccessData^ Adata = gcnew AccessData;
-	Adata->actionRows("INSERT INTO Account " +
-		"(account_name, password_account, firstname_account, lastname_account, birthday_account, permission_lv_account) " +
-		"VALUES('" + hire_date + "', '" + is_manager + "', '" + id_account + "');");
+	Adata->actionRows("INSERT INTO Personnel " +
+		"(hire_date, is_manager, id_account) " +
+		"VALUES('" + hire_date + "', " + is_manager + ", " + id_account + ");");
 }
 void OPO2SUMproject::PersonnelManager::deleteElement(int selectedId) {
 	Adata->actionRows("DELETE FROM Account WHERE id_personnel = " + selectedId);
@@ -86,6 +86,6 @@ void OPO2SUMproject::PersonnelManager::deleteElement(Personnel^ obj) {
 	PersonnelManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::PersonnelManager::update(Personnel^ obj) {
-	return; // ------------------------ ICI !!! Faut me faire oh oh ! Youuuuuuuuuuhouuuuuuuuuuuu tu m'as oublié !!
+	Adata->actionRows("UPDATE Personnel SET hire_date = '" + obj->get_hire_date() + "', is_manager = " + obj->get_is_manager() + ", id_account = " + obj->get_account()->get_id() + ";");
+	
 }
-
