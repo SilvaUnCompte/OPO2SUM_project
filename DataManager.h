@@ -63,18 +63,18 @@ namespace OPO2SUMproject
 	{
 	private:
 		System::String^ hire_date;
-		bool is_manager;
+		int is_manager;
 		Account^ account;
 
 	public:
 		Personnel(int id);
 
 		System::String^ get_hire_date() { return hire_date; }
-		bool get_is_manager() { return is_manager; }
+		int get_is_manager() { return is_manager; }
 		Account^ get_account() { return account; }
 
 		void set_hire_date(System::String^ date) { hire_date = date; }
-		void set_is_manager(bool b) { is_manager = b; }
+		void set_is_manager(int b) { is_manager = b; }
 		void set_account(Account^ currentAccount) { account = currentAccount; }
 	};
 
@@ -82,7 +82,7 @@ namespace OPO2SUMproject
 	{
 	public:
 		Personnel^ select(int id);
-		void insert(System::String^ hire_date, bool is_manager, int id_account);
+		void insert(System::String^ hire_date, int is_manager, int id_account);
 		void deleteElement(int id);
 		void deleteElement(Personnel^);
 		void update(Personnel^);

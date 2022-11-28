@@ -1159,19 +1159,21 @@ namespace OPO2SUMproject {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		/*Personnel^ test = gcnew Personnel(1);
-		String^ test2 = test->get_account()->get_account_name();
+		String^ test2 = test->get_account()->get_account_name();*/
 
 
-		AccountManager^ mn = gcnew AccountManager();
+		/*AccountManager^ mn = gcnew AccountManager();
 		mn->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 1);
 
+		PersonnelManager^ mn1 = gcnew PersonnelManager();
+		mn1->insert("2019-10-02", 0, 1);
 
-		test->set_is_manager(1);
+		Personnel^ changer = gcnew Personnel(2);
+		changer->set_is_manager(1);
 		Account^ test3 = gcnew Account(1);
-		test3->set_firstname_account("C mwa");
-		mn->update(test3);
-		mn->AccountManager::deleteElement(test3);
-		this->label1->Text = test2;*/
+		mn1->update(changer);
+
+		this->label1->Text = changer->get_is_manager().ToString();*/
 	}
 	};
 }
