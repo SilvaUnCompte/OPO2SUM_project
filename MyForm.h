@@ -1158,22 +1158,27 @@ namespace OPO2SUMproject {
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		/*Personnel^ test = gcnew Personnel(1);
+		/*Order^ test = gcnew Order(1);
 		String^ test2 = test->get_account()->get_account_name();*/
 
+		/*OrderManager^ mn = gcnew OrderManager();
+		mn->insert("2019-10-02", "2019-10-02", 2);
 
-		/*AccountManager^ mn = gcnew AccountManager();
-		mn->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 1);
+		Order^ test = gcnew Order(2);
+		test->set_delivery_date("2019-10-09");
 
-		PersonnelManager^ mn1 = gcnew PersonnelManager();
+		mn->update(test);
+		mn->deleteElement(test);*/
+
+		/*PersonnelManager^ mn1 = gcnew PersonnelManager();
 		mn1->insert("2019-10-02", 0, 1);
 
 		Personnel^ changer = gcnew Personnel(2);
 		changer->set_is_manager(1);
 		Account^ test3 = gcnew Account(1);
-		mn1->update(changer);
+		mn1->update(changer);*/
 
-		this->label1->Text = changer->get_is_manager().ToString();*/
+		//this->label1->Text = changer->get_is_manager().ToString();
 	}
 	};
 }

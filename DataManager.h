@@ -90,31 +90,31 @@ namespace OPO2SUMproject
 
 	ref class Order : ClassTable {
 	private:
-		System::String^ delevery_date;
+		System::String^ delivery_date;
 		System::String^ issue_date;
 		Account^ account;
 
 	public:
 		Order(int id);
 
-		System::String^ get_delevery_date() { return delevery_date; }
+		System::String^ get_delivery_date() { return delivery_date; }
 		System::String^ get_issue_date() { return issue_date; }
 		Account^ get_account() { return account; }
 
-		void set_delevery_date(System::String^ date) { delevery_date = date; }
+		void set_delivery_date(System::String^ date) { delivery_date = date; }
 		void set_issue_date(System::String^ date) { issue_date = date; }
 		void set_account(Account^ currentAccount) { account = currentAccount; }
 	};
 
-	/*ref class OrderManager : ClassTableManager
+	ref class OrderManager : ClassTableManager
 	{
 	public:
 		Order^ select(int id);
-		void insert(System::String^ delevery_date, System::String^ issue_date, int id_account);
+		void insert(System::String^ delivery_date, System::String^ issue_date, int id_account);
 		void deleteElement(int id);
 		void deleteElement(Order^);
 		void update(Order^);
-	};*/
+	};
 
 	/*ref class Address : ClassTable {};
 
