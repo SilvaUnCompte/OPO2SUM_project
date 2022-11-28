@@ -1158,7 +1158,7 @@ namespace OPO2SUMproject {
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		Personnel^ test = gcnew Personnel(1);
+		/*Personnel^ test = gcnew Personnel(1);
 		String^ test2 = test->get_account()->get_account_name();
 
 
@@ -1171,7 +1171,7 @@ namespace OPO2SUMproject {
 		test3->set_firstname_account("C mwa");
 		mn->update(test3);
 		mn->AccountManager::deleteElement(test3);
-		this->label1->Text = test2;
+		this->label1->Text = test2;*/
 	}
 	};
 }
