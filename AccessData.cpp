@@ -5,7 +5,7 @@
 OPO2SUMproject::AccessData::AccessData(void)
 {
 	this->sCnx = "Data Source=BOBLÉPONGE;Initial Catalog=opo2sum;Integrated Security=True";
-
+	// test 2
 	this->sSql = "";
 
 	this->oCnx = gcnew System::Data::SqlClient::SqlConnection(this->sCnx);
