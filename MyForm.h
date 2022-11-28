@@ -1168,6 +1168,7 @@ namespace OPO2SUMproject {
 		mn->update(py);
 
 		mn->deleteElement(2);*/
+		mn2->deleteElement(3);*/
 
 		this->label1->Text = "No error";
 	}
