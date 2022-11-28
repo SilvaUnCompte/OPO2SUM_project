@@ -1167,7 +1167,7 @@ namespace OPO2SUMproject {
 		py->set_date_payment("2019-10-12");
 		mn->update(py);
 
-		mn->deleteElement(2);*/
+		mn->deleteElement(2);
 		mn2->deleteElement(3);*/
 
 		this->label1->Text = "No error";

@@ -185,7 +185,7 @@ void OPO2SUMproject::ProductManager::insert(System::String^ name_product, int el
 	AccessData^ Adata = gcnew AccessData;
 	Adata->actionRows("INSERT INTO Product " +
 		"(name_product, element_per_unit_product, cost_product, marge_product, tva_product, stock_product, restocking_threshold_product) " +
-		"VALUES('" + name_product + "', " + element_per_unit_product + ", " + cost_product + ", " + marge_product + ", " + tva_product + ", " + stock_product + ", " + restocking_threshold_product +");");
+		"VALUES('" + name_product + "', " + element_per_unit_product + ", " + cost_product + ", " + marge_product + ", " + tva_product + ", " + stock_product + ", " + restocking_threshold_product + ");");
 }
 void OPO2SUMproject::ProductManager::deleteElement(int selectedId) {
 	Adata->actionRows("DELETE FROM Product WHERE id_product = " + selectedId);
@@ -194,8 +194,7 @@ void OPO2SUMproject::ProductManager::deleteElement(Product^ obj) {
 	ProductManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::ProductManager::update(Product^ obj) {
-	Adata->actionRows("UPDATE Product SET name_product = '" + obj->get_name_product() + "', element_per_unit_product = " + obj->get_element_per_unit_product() + ", cost_product = " + obj->get_cost_product() + ", marge_product = " + obj->get_marge_product() + ", tva_product = " + obj->get_tva_product()+ ", stock_product = " + obj->get_stock_product() + ", restocking_threshold_product = " + obj->get_restocking_threshold_product() + " WHERE id_product = " + obj->get_id() +";");
-	Adata->actionRows("UPDATE Address SET street = '" + obj->get_street() + "', postal_code = '" + obj->get_postal_code() + "', city = '" + obj->get_city() + "', address_complement = '" + obj->get_address_complement() + "' WHERE id_address = " + obj->get_id() + ";");
+	Adata->actionRows("UPDATE Product SET name_product = '" + obj->get_name_product() + "', element_per_unit_product = " + obj->get_element_per_unit_product() + ", cost_product = " + obj->get_cost_product() + ", marge_product = " + obj->get_marge_product() + ", tva_product = " + obj->get_tva_product() + ", stock_product = " + obj->get_stock_product() + ", restocking_threshold_product = " + obj->get_restocking_threshold_product() + " WHERE id_product = " + obj->get_id() + ";");
 }
 
 //Payment Manager----------------------------------------------------------------------

@@ -133,10 +133,9 @@ namespace OPO2SUMproject
 
 		void set_street(System::String^ st) { this->street = st; }
 		void set_postal_code(int zip) { this->postal_code = zip; }
-		void set_city(System::String^ city) { this->city= city; }
+		void set_city(System::String^ city) { this->city = city; }
 		void set_address_complement(System::String^ address) { this->address_complement = address; }
 	};
-
 
 	ref class AddressManager : ClassTableManager
 	{
@@ -148,7 +147,6 @@ namespace OPO2SUMproject
 		void update(Address^);
 	};
 
-	
 	ref class Product : ClassTable {
 	private:
 		System::String^ name_product;
@@ -177,12 +175,18 @@ namespace OPO2SUMproject
 		void set_tva_product(float tva) { this->tva_product = tva; }
 		void set_stock_product(int stock) { this->stock_product = stock; }
 		void set_restocking_threshold_product(int restocking) { this->restocking_threshold_product = restocking; }
-		
+
 	};
-	
+
 	ref class ProductManager : ClassTableManager
 	{
-
+	public:
+		Product^ select(int id);
+		void insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product);
+		void deleteElement(int id);
+		void deleteElement(Product^);
+		void update(Product^);
+	};
 
 	ref class Payment : ClassTable {
 	private:
@@ -204,8 +208,6 @@ namespace OPO2SUMproject
 		void set_balance_payment(int setBalance_payment) { this->balance_payment = setBalance_payment; }
 		void set_order(Order^ setOrder) { this->order = setOrder; }
 	};
-
-	ref class Payment : ClassTable {};
 
 	ref class PaymentManager : ClassTableManager
 	{
