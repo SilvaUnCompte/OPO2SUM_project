@@ -130,7 +130,8 @@ private: System::Windows::Forms::Button^ orderMFilterButton;
 private: System::Windows::Forms::Button^ stockMFilterButton;
 private: System::Windows::Forms::Label^ stockMLabel;
 private: System::Windows::Forms::Panel^ informationStockPanel;
-private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::Label^ informationStockNameLabel;
+
 private: System::Windows::Forms::Label^ addStockStockLabel;
 
 private: System::Windows::Forms::Label^ addStockTVALabel;
@@ -223,6 +224,10 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->statisticMTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
 			this->addStockPanel = (gcnew System::Windows::Forms::Panel());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->addStockCostTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->addStockRestockingLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockStockLabel = (gcnew System::Windows::Forms::Label());
@@ -246,11 +251,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->testButton = (gcnew System::Windows::Forms::Button());
 			this->informationStockPanel = (gcnew System::Windows::Forms::Panel());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->informationStockNameLabel = (gcnew System::Windows::Forms::Label());
 			this->loginPanel->SuspendLayout();
 			this->registerPanel->SuspendLayout();
 			this->clientMPanel->SuspendLayout();
@@ -262,6 +263,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->orderMPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->orderMDGV))->BeginInit();
 			this->addOrderPanel->SuspendLayout();
+			this->stockMTabPage->SuspendLayout();
 			this->statisticMTabPage->SuspendLayout();
 			this->addStockPanel->SuspendLayout();
 			this->stockMPanel->SuspendLayout();
@@ -460,7 +462,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// clientMModifyButton
 			// 
 			this->clientMModifyButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMModifyButton->Location = System::Drawing::Point(274, 437);
+			this->clientMModifyButton->Location = System::Drawing::Point(274, 438);
 			this->clientMModifyButton->Name = L"clientMModifyButton";
 			this->clientMModifyButton->Size = System::Drawing::Size(85, 34);
 			this->clientMModifyButton->TabIndex = 10;
@@ -503,7 +505,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->clientMDGV->Location = System::Drawing::Point(3, 271);
+			this->clientMDGV->Location = System::Drawing::Point(3, 272);
 			this->clientMDGV->Name = L"clientMDGV";
 			this->clientMDGV->RowHeadersWidth = 51;
 			this->clientMDGV->RowTemplate->Height = 24;
@@ -594,7 +596,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->orderMTabPage->Location = System::Drawing::Point(4, 25);
 			this->orderMTabPage->Name = L"orderMTabPage";
 			this->orderMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->orderMTabPage->Size = System::Drawing::Size(412, 427);
+			this->orderMTabPage->Size = System::Drawing::Size(465, 487);
 			this->orderMTabPage->TabIndex = 1;
 			this->orderMTabPage->Text = L"Order";
 			this->orderMTabPage->UseVisualStyleBackColor = true;
@@ -776,10 +778,12 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// 
 			// stockMTabPage
 			// 
+			this->stockMTabPage->Controls->Add(this->addStockPanel);
+			this->stockMTabPage->Controls->Add(this->stockMPanel);
 			this->stockMTabPage->Location = System::Drawing::Point(4, 25);
 			this->stockMTabPage->Name = L"stockMTabPage";
 			this->stockMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->stockMTabPage->Size = System::Drawing::Size(412, 427);
+			this->stockMTabPage->Size = System::Drawing::Size(465, 487);
 			this->stockMTabPage->TabIndex = 2;
 			this->stockMTabPage->Text = L"Stock";
 			this->stockMTabPage->UseVisualStyleBackColor = true;
@@ -790,7 +794,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->statisticMTabPage->Location = System::Drawing::Point(4, 25);
 			this->statisticMTabPage->Name = L"statisticMTabPage";
 			this->statisticMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->statisticMTabPage->Size = System::Drawing::Size(412, 427);
+			this->statisticMTabPage->Size = System::Drawing::Size(465, 487);
 			this->statisticMTabPage->TabIndex = 3;
 			this->statisticMTabPage->Text = L"Statistic";
 			this->statisticMTabPage->UseVisualStyleBackColor = true;
@@ -824,11 +828,48 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->addStockPanel->Controls->Add(this->addStockNameLabel);
 			this->addStockPanel->Controls->Add(this->addStockTitleLabel);
 			this->addStockPanel->Controls->Add(this->addStockExitButton);
-			this->addStockPanel->Location = System::Drawing::Point(1326, 552);
+			this->addStockPanel->Location = System::Drawing::Point(6, 6);
+			this->addStockPanel->MinimumSize = System::Drawing::Size(0, 448);
 			this->addStockPanel->Name = L"addStockPanel";
-			this->addStockPanel->Size = System::Drawing::Size(413, 472);
+			this->addStockPanel->Size = System::Drawing::Size(453, 475);
 			this->addStockPanel->TabIndex = 9;
 			this->addStockPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::addStockPanel_Paint);
+			// 
+			// textBox5
+			// 
+			this->textBox5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->textBox5->Location = System::Drawing::Point(3, 368);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(447, 22);
+			this->textBox5->TabIndex = 16;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->textBox4->Location = System::Drawing::Point(3, 323);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(447, 22);
+			this->textBox4->TabIndex = 17;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->textBox3->Location = System::Drawing::Point(3, 278);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(447, 22);
+			this->textBox3->TabIndex = 16;
+			// 
+			// textBox2
+			// 
+			this->textBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->textBox2->Location = System::Drawing::Point(3, 233);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(447, 22);
+			this->textBox2->TabIndex = 15;
 			// 
 			// addStockCostTextBox
 			// 
@@ -836,7 +877,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->addStockCostTextBox->Location = System::Drawing::Point(3, 188);
 			this->addStockCostTextBox->Name = L"addStockCostTextBox";
-			this->addStockCostTextBox->Size = System::Drawing::Size(407, 22);
+			this->addStockCostTextBox->Size = System::Drawing::Size(447, 22);
 			this->addStockCostTextBox->TabIndex = 14;
 			// 
 			// addStockRestockingLabel
@@ -887,7 +928,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// addStockValidateButton
 			// 
 			this->addStockValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->addStockValidateButton->Location = System::Drawing::Point(311, 429);
+			this->addStockValidateButton->Location = System::Drawing::Point(351, 432);
 			this->addStockValidateButton->Name = L"addStockValidateButton";
 			this->addStockValidateButton->Size = System::Drawing::Size(99, 37);
 			this->addStockValidateButton->TabIndex = 8;
@@ -900,7 +941,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->addStockQuantityTextBox->Location = System::Drawing::Point(3, 143);
 			this->addStockQuantityTextBox->Name = L"addStockQuantityTextBox";
-			this->addStockQuantityTextBox->Size = System::Drawing::Size(407, 22);
+			this->addStockQuantityTextBox->Size = System::Drawing::Size(447, 22);
 			this->addStockQuantityTextBox->TabIndex = 7;
 			// 
 			// addStockNameTextBox
@@ -909,7 +950,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->addStockNameTextBox->Location = System::Drawing::Point(3, 98);
 			this->addStockNameTextBox->Name = L"addStockNameTextBox";
-			this->addStockNameTextBox->Size = System::Drawing::Size(407, 22);
+			this->addStockNameTextBox->Size = System::Drawing::Size(447, 22);
 			this->addStockNameTextBox->TabIndex = 5;
 			this->addStockNameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::addStockNameTextBox_TextChanged);
 			// 
@@ -947,7 +988,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// addStockExitButton
 			// 
 			this->addStockExitButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->addStockExitButton->Location = System::Drawing::Point(389, 3);
+			this->addStockExitButton->Location = System::Drawing::Point(429, 3);
 			this->addStockExitButton->Name = L"addStockExitButton";
 			this->addStockExitButton->Size = System::Drawing::Size(22, 24);
 			this->addStockExitButton->TabIndex = 0;
@@ -964,9 +1005,9 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->stockMPanel->Controls->Add(this->stockMFilterButton);
 			this->stockMPanel->Controls->Add(this->stockMAddButton);
 			this->stockMPanel->Controls->Add(this->stockMDGV);
-			this->stockMPanel->Location = System::Drawing::Point(453, 594);
+			this->stockMPanel->Location = System::Drawing::Point(6, 6);
 			this->stockMPanel->Name = L"stockMPanel";
-			this->stockMPanel->Size = System::Drawing::Size(400, 415);
+			this->stockMPanel->Size = System::Drawing::Size(453, 475);
 			this->stockMPanel->TabIndex = 9;
 			// 
 			// stockMLabel
@@ -982,7 +1023,8 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// 
 			// stockMFilterButton
 			// 
-			this->stockMFilterButton->Location = System::Drawing::Point(3, 378);
+			this->stockMFilterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+			this->stockMFilterButton->Location = System::Drawing::Point(3, 438);
 			this->stockMFilterButton->Name = L"stockMFilterButton";
 			this->stockMFilterButton->Size = System::Drawing::Size(76, 34);
 			this->stockMFilterButton->TabIndex = 9;
@@ -992,7 +1034,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// stockMAddButton
 			// 
 			this->stockMAddButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->stockMAddButton->Location = System::Drawing::Point(321, 378);
+			this->stockMAddButton->Location = System::Drawing::Point(374, 438);
 			this->stockMAddButton->Name = L"stockMAddButton";
 			this->stockMAddButton->Size = System::Drawing::Size(76, 34);
 			this->stockMAddButton->TabIndex = 7;
@@ -1005,17 +1047,17 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->stockMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->stockMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->stockMDGV->Location = System::Drawing::Point(3, 45);
+			this->stockMDGV->Location = System::Drawing::Point(3, 44);
 			this->stockMDGV->Name = L"stockMDGV";
 			this->stockMDGV->RowHeadersWidth = 51;
 			this->stockMDGV->RowTemplate->Height = 24;
-			this->stockMDGV->Size = System::Drawing::Size(394, 327);
+			this->stockMDGV->Size = System::Drawing::Size(447, 388);
 			this->stockMDGV->TabIndex = 0;
 			// 
 			// informationStockModifyButton
 			// 
 			this->informationStockModifyButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->informationStockModifyButton->Location = System::Drawing::Point(246, 375);
+			this->informationStockModifyButton->Location = System::Drawing::Point(120, 167);
 			this->informationStockModifyButton->Name = L"informationStockModifyButton";
 			this->informationStockModifyButton->Size = System::Drawing::Size(76, 34);
 			this->informationStockModifyButton->TabIndex = 6;
@@ -1025,7 +1067,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// informationStockDeleteButton
 			// 
 			this->informationStockDeleteButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->informationStockDeleteButton->Location = System::Drawing::Point(328, 375);
+			this->informationStockDeleteButton->Location = System::Drawing::Point(202, 167);
 			this->informationStockDeleteButton->Name = L"informationStockDeleteButton";
 			this->informationStockDeleteButton->Size = System::Drawing::Size(76, 34);
 			this->informationStockDeleteButton->TabIndex = 1;
@@ -1053,67 +1095,29 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// 
 			// informationStockPanel
 			// 
-			this->informationStockPanel->Controls->Add(this->label2);
+			this->informationStockPanel->Controls->Add(this->informationStockNameLabel);
 			this->informationStockPanel->Controls->Add(this->informationStockModifyButton);
 			this->informationStockPanel->Controls->Add(this->informationStockDeleteButton);
-			this->informationStockPanel->Location = System::Drawing::Point(885, 594);
+			this->informationStockPanel->Location = System::Drawing::Point(981, 331);
 			this->informationStockPanel->Name = L"informationStockPanel";
-			this->informationStockPanel->Size = System::Drawing::Size(407, 412);
+			this->informationStockPanel->Size = System::Drawing::Size(281, 204);
 			this->informationStockPanel->TabIndex = 15;
 			// 
-			// label2
+			// informationStockNameLabel
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(23, 42);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(49, 17);
-			this->label2->TabIndex = 7;
-			this->label2->Text = L"Name";
-			// 
-			// textBox2
-			// 
-			this->textBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox2->Location = System::Drawing::Point(3, 233);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(407, 22);
-			this->textBox2->TabIndex = 15;
-			// 
-			// textBox3
-			// 
-			this->textBox3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox3->Location = System::Drawing::Point(3, 278);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(407, 22);
-			this->textBox3->TabIndex = 16;
-			// 
-			// textBox4
-			// 
-			this->textBox4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox4->Location = System::Drawing::Point(3, 323);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(407, 22);
-			this->textBox4->TabIndex = 17;
-			// 
-			// textBox5
-			// 
-			this->textBox5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox5->Location = System::Drawing::Point(3, 368);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(407, 22);
-			this->textBox5->TabIndex = 16;
+			this->informationStockNameLabel->AutoSize = true;
+			this->informationStockNameLabel->Location = System::Drawing::Point(23, 42);
+			this->informationStockNameLabel->Name = L"informationStockNameLabel";
+			this->informationStockNameLabel->Size = System::Drawing::Size(49, 17);
+			this->informationStockNameLabel->TabIndex = 7;
+			this->informationStockNameLabel->Text = L"Name";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->ClientSize = System::Drawing::Size(1920, 1055);
-			this->Controls->Add(this->addStockPanel);
-			this->Controls->Add(this->stockMPanel);
+			this->ClientSize = System::Drawing::Size(1684, 922);
 			this->Controls->Add(this->informationStockPanel);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->testButton);
@@ -1142,6 +1146,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->orderMDGV))->EndInit();
 			this->addOrderPanel->ResumeLayout(false);
 			this->addOrderPanel->PerformLayout();
+			this->stockMTabPage->ResumeLayout(false);
 			this->statisticMTabPage->ResumeLayout(false);
 			this->addStockPanel->ResumeLayout(false);
 			this->addStockPanel->PerformLayout();
