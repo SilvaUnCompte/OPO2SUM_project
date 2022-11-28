@@ -63,18 +63,18 @@ namespace OPO2SUMproject
 	{
 	private:
 		System::String^ hire_date;
-		bool is_manager;
+		int is_manager;
 		Account^ account;
 
 	public:
 		Personnel(int id);
 
 		System::String^ get_hire_date() { return hire_date; }
-		bool get_is_manager() { return is_manager; }
+		int get_is_manager() { return is_manager; }
 		Account^ get_account() { return account; }
 
 		void set_hire_date(System::String^ date) { hire_date = date; }
-		void set_is_manager(bool b) { is_manager = b; }
+		void set_is_manager(int b) { is_manager = b; }
 		void set_account(Account^ currentAccount) { account = currentAccount; }
 	};
 
@@ -82,60 +82,144 @@ namespace OPO2SUMproject
 	{
 	public:
 		Personnel^ select(int id);
-		void insert(System::String^ hire_date, bool is_manager, int id_account);
+		void insert(System::String^ hire_date, int is_manager, int id_account);
 		void deleteElement(int id);
 		void deleteElement(Personnel^);
 		void update(Personnel^);
 	};
 
-	/*ref class Order : ClassTable {};
+	ref class Order : ClassTable {
+	private:
+		System::String^ delivery_date;
+		System::String^ issue_date;
+		Account^ account;
+
+	public:
+		Order(int id);
+
+		System::String^ get_delivery_date() { return delivery_date; }
+		System::String^ get_issue_date() { return issue_date; }
+		Account^ get_account() { return account; }
+
+		void set_delivery_date(System::String^ date) { delivery_date = date; }
+		void set_issue_date(System::String^ date) { issue_date = date; }
+		void set_account(Account^ currentAccount) { account = currentAccount; }
+	};
 
 	ref class OrderManager : ClassTableManager
 	{
 	public:
 		Order^ select(int id);
-		void insert(Order^);
+		void insert(System::String^ delivery_date, System::String^ issue_date, int id_account);
 		void deleteElement(int id);
 		void deleteElement(Order^);
 		void update(Order^);
 	};
 
-	ref class Address : ClassTable {};
+	ref class Address : ClassTable {
+	private:
+		System::String^ street;
+		int postal_code;
+		System::String^ city;
+		System::String^ address_complement;
+
+	public:
+		Address(int id);
+
+		System::String^ get_street() { return street; }
+		int get_postal_code() { return postal_code; }
+		System::String^ get_city() { return city; }
+		System::String^ get_address_complement() { return address_complement; }
+
+		void set_street(System::String^ st) { this->street = st; }
+		void set_postal_code(int zip) { this->postal_code = zip; }
+		void set_city(System::String^ city) { this->city = city; }
+		void set_address_complement(System::String^ address) { this->address_complement = address; }
+	};
 
 	ref class AddressManager : ClassTableManager
 	{
 	public:
 		Address^ select(int id);
-		void insert(Address^);
+		void insert(System::String^ street, int postal_code, System::String^ city, System::String^ address_complement);
 		void deleteElement(int id);
 		void deleteElement(Address^);
 		void update(Address^);
 	};
 
-	ref class Product : ClassTable {};
+	ref class Product : ClassTable {
+	private:
+		System::String^ name_product;
+		int element_per_unit_product;
+		float cost_product;
+		float marge_product;
+		float tva_product;
+		int stock_product;
+		int restocking_threshold_product;
+
+	public:
+		Product(int id);
+
+		System::String^ get_name_product() { return name_product; }
+		int get_element_per_unit_product() { return element_per_unit_product; }
+		float get_cost_product() { return cost_product; }
+		float get_marge_product() { return marge_product; }
+		float get_tva_product() { return tva_product; }
+		int get_stock_product() { return stock_product; }
+		int get_restocking_threshold_product() { return restocking_threshold_product; }
+
+		void set_name_product(System::String^ name) { this->name_product = name; }
+		void set_element_per_unit_product(int elementperunit) { this->element_per_unit_product = elementperunit; }
+		void set_cost_product(float cost) { this->cost_product = cost; }
+		void set_marge_product(float marge) { this->marge_product = marge; }
+		void set_tva_product(float tva) { this->tva_product = tva; }
+		void set_stock_product(int stock) { this->stock_product = stock; }
+		void set_restocking_threshold_product(int restocking) { this->restocking_threshold_product = restocking; }
+
+	};
 
 	ref class ProductManager : ClassTableManager
 	{
 	public:
 		Product^ select(int id);
-		void insert(Product^);
+		void insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product);
 		void deleteElement(int id);
 		void deleteElement(Product^);
 		void update(Product^);
 	};
 
-	ref class Payment : ClassTable {};
+	ref class Payment : ClassTable {
+	private:
+		System::String^ date_payment;
+		int method_payment;
+		int balance_payment;
+		Order^ order;
+
+	public:
+		Payment(int id);
+
+		System::String^ get_date_payment() { return date_payment; }
+		int get_method_payment() { return method_payment; }
+		int get_balance_payment() { return balance_payment; }
+		Order^ get_order() { return order; }
+
+		void set_date_payment(System::String^ setDate_payment) { this->date_payment = setDate_payment; }
+		void set_method_payment(int setMethod_payment) { this->method_payment = setMethod_payment; }
+		void set_balance_payment(int setBalance_payment) { this->balance_payment = setBalance_payment; }
+		void set_order(Order^ setOrder) { this->order = setOrder; }
+	};
 
 	ref class PaymentManager : ClassTableManager
 	{
 	public:
 		Payment^ select(int id);
-		void insert(Payment^);
+		void insert(System::String^ date_payment, int method_payment, int balance_payment, int order);
 		void deleteElement(int id);
 		void deleteElement(Payment^);
 		void update(Payment^);
 	};
 
+	/*
 	ref class Bill : ClassTable {};
 
 	ref class BillManager : ClassTableManager

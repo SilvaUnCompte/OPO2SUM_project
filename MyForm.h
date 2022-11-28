@@ -1,6 +1,8 @@
 #pragma once
 #include "AccessData.h"
 #include "DataManager.h"
+#include <iostream>
+#include <ctime>
 
 namespace OPO2SUMproject {
 
@@ -122,47 +124,21 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ addStockNameLabel;
 	private: System::Windows::Forms::Label^ addStockTitleLabel;
 	private: System::Windows::Forms::Button^ addStockExitButton;
-
-
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ testButton;
-private: System::Windows::Forms::Button^ orderMFilterButton;
-private: System::Windows::Forms::Button^ stockMFilterButton;
-private: System::Windows::Forms::Label^ stockMLabel;
-private: System::Windows::Forms::Panel^ informationStockPanel;
-private: System::Windows::Forms::Label^ informationStockNameLabel;
-
-private: System::Windows::Forms::Label^ addStockStockLabel;
-
-private: System::Windows::Forms::Label^ addStockTVALabel;
-private: System::Windows::Forms::Label^ addStockMargeLabel;
-
-private: System::Windows::Forms::Label^ addStockCostLabel;
-private: System::Windows::Forms::TextBox^ addStockCostTextBox;
-
-private: System::Windows::Forms::Label^ addStockRestockingLabel;
-private: System::Windows::Forms::TextBox^ textBox4;
-private: System::Windows::Forms::TextBox^ textBox3;
-private: System::Windows::Forms::TextBox^ textBox2;
-private: System::Windows::Forms::TextBox^ textBox5;
-private: System::Windows::Forms::DataGridView^ dataGridView1;
-private: System::Windows::Forms::Button^ statisticMStatisticButton;
-private: System::Windows::Forms::ComboBox^ comboBox1;
-
-
-
-
-
-
-
-
-
+	private: System::Windows::Forms::Label^ registerErrorLabel;
+	private: System::Windows::Forms::Label^ registerLastnameLabel;
+	private: System::Windows::Forms::Label^ registerFirstnameLabel;
+	private: System::Windows::Forms::TextBox^ registerLastnameTextBox;
+	private: System::Windows::Forms::TextBox^ registerFirstnameTextBox;
+	private: System::Windows::Forms::DateTimePicker^ registerDateTimePicker;
+	private: System::Windows::Forms::Label^ registerBirthdayLabel;
+  private: System::Windows::Forms::Label^ loginErrorLabel;
 	private: System::ComponentModel::IContainer^ components;
 
 	protected:
 
 
 	private:
+		Account^ connectedAccount;
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
@@ -176,14 +152,14 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 		void InitializeComponent(void)
 		{
 			this->loginPanel = (gcnew System::Windows::Forms::Panel());
-			this->loginValidateButton = (gcnew System::Windows::Forms::Button());
-			this->loginRegisterButton = (gcnew System::Windows::Forms::Button());
-			this->loginPasswordLabel = (gcnew System::Windows::Forms::Label());
-			this->loginPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->loginUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->loginUsernameLabel = (gcnew System::Windows::Forms::Label());
-			this->loginLoginLabel = (gcnew System::Windows::Forms::Label());
 			this->registerPanel = (gcnew System::Windows::Forms::Panel());
+			this->registerBirthdayLabel = (gcnew System::Windows::Forms::Label());
+			this->registerDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			this->registerErrorLabel = (gcnew System::Windows::Forms::Label());
+			this->registerLastnameLabel = (gcnew System::Windows::Forms::Label());
+			this->registerFirstnameLabel = (gcnew System::Windows::Forms::Label());
+			this->registerLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->registerFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->registerValidateButton = (gcnew System::Windows::Forms::Button());
 			this->registerLoginButton = (gcnew System::Windows::Forms::Button());
 			this->registerPasswordLabel = (gcnew System::Windows::Forms::Label());
@@ -191,6 +167,24 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->registerUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->registerUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->registerRegisterLabel = (gcnew System::Windows::Forms::Label());
+			this->loginErrorLabel = (gcnew System::Windows::Forms::Label());
+			this->loginValidateButton = (gcnew System::Windows::Forms::Button());
+			this->loginRegisterButton = (gcnew System::Windows::Forms::Button());
+			this->loginPasswordLabel = (gcnew System::Windows::Forms::Label());
+			this->loginPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->loginUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->loginUsernameLabel = (gcnew System::Windows::Forms::Label());
+			this->loginLoginLabel = (gcnew System::Windows::Forms::Label());
+			this->addClientPanel = (gcnew System::Windows::Forms::Panel());
+			this->addClientValidateButton = (gcnew System::Windows::Forms::Button());
+			this->addClientBirthdateTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addClientLNameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addClientFNameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addClientBirthdateLabel = (gcnew System::Windows::Forms::Label());
+			this->addClientLNameLabel = (gcnew System::Windows::Forms::Label());
+			this->addClientFNameLabel = (gcnew System::Windows::Forms::Label());
+			this->addClientTitleLabel = (gcnew System::Windows::Forms::Label());
+			this->addClientExitButton = (gcnew System::Windows::Forms::Button());
 			this->clientMPanel = (gcnew System::Windows::Forms::Panel());
 			this->clientMModifyButton = (gcnew System::Windows::Forms::Button());
 			this->clientMDeleteButton = (gcnew System::Windows::Forms::Button());
@@ -251,11 +245,7 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->addStockTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockExitButton = (gcnew System::Windows::Forms::Button());
 			this->statisticMTabPage = (gcnew System::Windows::Forms::TabPage());
-			this->statisticMStatisticButton = (gcnew System::Windows::Forms::Button());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->testButton = (gcnew System::Windows::Forms::Button());
+			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
 			this->loginPanel->SuspendLayout();
 			this->registerPanel->SuspendLayout();
 			this->clientMPanel->SuspendLayout();
@@ -278,6 +268,7 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			// 
 			// loginPanel
 			// 
+			this->loginPanel->Controls->Add(this->loginErrorLabel);
 			this->loginPanel->Controls->Add(this->loginValidateButton);
 			this->loginPanel->Controls->Add(this->loginRegisterButton);
 			this->loginPanel->Controls->Add(this->loginPasswordLabel);
@@ -290,78 +281,16 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->loginPanel->Size = System::Drawing::Size(419, 462);
 			this->loginPanel->TabIndex = 0;
 			// 
-			// loginValidateButton
-			// 
-			this->loginValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->loginValidateButton->Location = System::Drawing::Point(164, 358);
-			this->loginValidateButton->Name = L"loginValidateButton";
-			this->loginValidateButton->Size = System::Drawing::Size(87, 34);
-			this->loginValidateButton->TabIndex = 11;
-			this->loginValidateButton->Text = L"Validate";
-			this->loginValidateButton->UseVisualStyleBackColor = true;
-			// 
-			// loginRegisterButton
-			// 
-			this->loginRegisterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->loginRegisterButton->Location = System::Drawing::Point(332, 3);
-			this->loginRegisterButton->Name = L"loginRegisterButton";
-			this->loginRegisterButton->Size = System::Drawing::Size(84, 34);
-			this->loginRegisterButton->TabIndex = 5;
-			this->loginRegisterButton->Text = L"Register";
-			this->loginRegisterButton->UseVisualStyleBackColor = true;
-			this->loginRegisterButton->Click += gcnew System::EventHandler(this, &MyForm::loginRegisterButton_Click);
-			// 
-			// loginPasswordLabel
-			// 
-			this->loginPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginPasswordLabel->AutoSize = true;
-			this->loginPasswordLabel->Location = System::Drawing::Point(176, 233);
-			this->loginPasswordLabel->Name = L"loginPasswordLabel";
-			this->loginPasswordLabel->Size = System::Drawing::Size(77, 17);
-			this->loginPasswordLabel->TabIndex = 4;
-			this->loginPasswordLabel->Text = L"Password";
-			// 
-			// loginPasswordTextBox
-			// 
-			this->loginPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginPasswordTextBox->Location = System::Drawing::Point(164, 254);
-			this->loginPasswordTextBox->Name = L"loginPasswordTextBox";
-			this->loginPasswordTextBox->Size = System::Drawing::Size(89, 22);
-			this->loginPasswordTextBox->TabIndex = 3;
-			// 
-			// loginUsernameTextBox
-			// 
-			this->loginUsernameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginUsernameTextBox->Location = System::Drawing::Point(164, 172);
-			this->loginUsernameTextBox->Name = L"loginUsernameTextBox";
-			this->loginUsernameTextBox->Size = System::Drawing::Size(89, 22);
-			this->loginUsernameTextBox->TabIndex = 2;
-			// 
-			// loginUsernameLabel
-			// 
-			this->loginUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginUsernameLabel->AutoSize = true;
-			this->loginUsernameLabel->Location = System::Drawing::Point(176, 151);
-			this->loginUsernameLabel->Name = L"loginUsernameLabel";
-			this->loginUsernameLabel->Size = System::Drawing::Size(81, 17);
-			this->loginUsernameLabel->TabIndex = 1;
-			this->loginUsernameLabel->Text = L"Username";
-			// 
-			// loginLoginLabel
-			// 
-			this->loginLoginLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginLoginLabel->AutoSize = true;
-			this->loginLoginLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->loginLoginLabel->Location = System::Drawing::Point(164, 54);
-			this->loginLoginLabel->Name = L"loginLoginLabel";
-			this->loginLoginLabel->Size = System::Drawing::Size(96, 38);
-			this->loginLoginLabel->TabIndex = 0;
-			this->loginLoginLabel->Text = L"Login";
-			// 
 			// registerPanel
 			// 
 			this->registerPanel->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->registerPanel->Controls->Add(this->registerBirthdayLabel);
+			this->registerPanel->Controls->Add(this->registerDateTimePicker);
+			this->registerPanel->Controls->Add(this->registerErrorLabel);
+			this->registerPanel->Controls->Add(this->registerLastnameLabel);
+			this->registerPanel->Controls->Add(this->registerFirstnameLabel);
+			this->registerPanel->Controls->Add(this->registerLastnameTextBox);
+			this->registerPanel->Controls->Add(this->registerFirstnameTextBox);
 			this->registerPanel->Controls->Add(this->registerValidateButton);
 			this->registerPanel->Controls->Add(this->registerLoginButton);
 			this->registerPanel->Controls->Add(this->registerPasswordLabel);
@@ -370,20 +299,87 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->registerPanel->Controls->Add(this->registerUsernameLabel);
 			this->registerPanel->Controls->Add(this->registerRegisterLabel);
 			this->registerPanel->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->registerPanel->Location = System::Drawing::Point(10, 13);
+			this->registerPanel->Location = System::Drawing::Point(9, 10);
 			this->registerPanel->Name = L"registerPanel";
 			this->registerPanel->Size = System::Drawing::Size(419, 462);
 			this->registerPanel->TabIndex = 12;
 			// 
+			// registerBirthdayLabel
+			// 
+			this->registerBirthdayLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerBirthdayLabel->AutoSize = true;
+			this->registerBirthdayLabel->Location = System::Drawing::Point(108, 242);
+			this->registerBirthdayLabel->Name = L"registerBirthdayLabel";
+			this->registerBirthdayLabel->Size = System::Drawing::Size(61, 18);
+			this->registerBirthdayLabel->TabIndex = 17;
+			this->registerBirthdayLabel->Text = L"Birthday";
+			// 
+			// registerDateTimePicker
+			// 
+			this->registerDateTimePicker->Location = System::Drawing::Point(86, 269);
+			this->registerDateTimePicker->Name = L"registerDateTimePicker";
+			this->registerDateTimePicker->Size = System::Drawing::Size(200, 24);
+			this->registerDateTimePicker->TabIndex = 9;
+			// 
+			// registerErrorLabel
+			// 
+			this->registerErrorLabel->AccessibleRole = System::Windows::Forms::AccessibleRole::Text;
+			this->registerErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerErrorLabel->AutoSize = true;
+			this->registerErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->registerErrorLabel->Location = System::Drawing::Point(161, 374);
+			this->registerErrorLabel->Name = L"registerErrorLabel";
+			this->registerErrorLabel->Size = System::Drawing::Size(67, 18);
+			this->registerErrorLabel->TabIndex = 16;
+			this->registerErrorLabel->Text = L"Lastname";
+			this->registerErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// registerLastnameLabel
+			// 
+			this->registerLastnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerLastnameLabel->AutoSize = true;
+			this->registerLastnameLabel->Location = System::Drawing::Point(208, 178);
+			this->registerLastnameLabel->Name = L"registerLastnameLabel";
+			this->registerLastnameLabel->Size = System::Drawing::Size(67, 18);
+			this->registerLastnameLabel->TabIndex = 15;
+			this->registerLastnameLabel->Text = L"Lastname";
+			// 
+			// registerFirstnameLabel
+			// 
+			this->registerFirstnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerFirstnameLabel->AutoSize = true;
+			this->registerFirstnameLabel->Location = System::Drawing::Point(21, 175);
+			this->registerFirstnameLabel->Name = L"registerFirstnameLabel";
+			this->registerFirstnameLabel->Size = System::Drawing::Size(70, 18);
+			this->registerFirstnameLabel->TabIndex = 14;
+			this->registerFirstnameLabel->Text = L"Firstname";
+			// 
+			// registerLastnameTextBox
+			// 
+			this->registerLastnameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerLastnameTextBox->Location = System::Drawing::Point(196, 196);
+			this->registerLastnameTextBox->Name = L"registerLastnameTextBox";
+			this->registerLastnameTextBox->Size = System::Drawing::Size(165, 24);
+			this->registerLastnameTextBox->TabIndex = 13;
+			// 
+			// registerFirstnameTextBox
+			// 
+			this->registerFirstnameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerFirstnameTextBox->Location = System::Drawing::Point(10, 196);
+			this->registerFirstnameTextBox->Name = L"registerFirstnameTextBox";
+			this->registerFirstnameTextBox->Size = System::Drawing::Size(165, 24);
+			this->registerFirstnameTextBox->TabIndex = 12;
+			// 
 			// registerValidateButton
 			// 
 			this->registerValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->registerValidateButton->Location = System::Drawing::Point(164, 358);
+			this->registerValidateButton->Location = System::Drawing::Point(164, 327);
 			this->registerValidateButton->Name = L"registerValidateButton";
 			this->registerValidateButton->Size = System::Drawing::Size(87, 34);
 			this->registerValidateButton->TabIndex = 11;
 			this->registerValidateButton->Text = L"Validate";
 			this->registerValidateButton->UseVisualStyleBackColor = true;
+			this->registerValidateButton->Click += gcnew System::EventHandler(this, &MyForm::registerValidateButton_Click);
 			// 
 			// registerLoginButton
 			// 
@@ -400,7 +396,7 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			// 
 			this->registerPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerPasswordLabel->AutoSize = true;
-			this->registerPasswordLabel->Location = System::Drawing::Point(6, 173);
+			this->registerPasswordLabel->Location = System::Drawing::Point(208, 111);
 			this->registerPasswordLabel->Name = L"registerPasswordLabel";
 			this->registerPasswordLabel->Size = System::Drawing::Size(77, 17);
 			this->registerPasswordLabel->TabIndex = 4;
@@ -409,15 +405,16 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			// registerPasswordTextBox
 			// 
 			this->registerPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->registerPasswordTextBox->Location = System::Drawing::Point(85, 170);
+			this->registerPasswordTextBox->Location = System::Drawing::Point(196, 132);
 			this->registerPasswordTextBox->Name = L"registerPasswordTextBox";
-			this->registerPasswordTextBox->Size = System::Drawing::Size(165, 22);
+			this->registerPasswordTextBox->PasswordChar = '*';
+			this->registerPasswordTextBox->Size = System::Drawing::Size(165, 24);
 			this->registerPasswordTextBox->TabIndex = 3;
 			// 
 			// registerUsernameTextBox
 			// 
 			this->registerUsernameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->registerUsernameTextBox->Location = System::Drawing::Point(85, 132);
+			this->registerUsernameTextBox->Location = System::Drawing::Point(10, 132);
 			this->registerUsernameTextBox->Name = L"registerUsernameTextBox";
 			this->registerUsernameTextBox->Size = System::Drawing::Size(165, 22);
 			this->registerUsernameTextBox->TabIndex = 2;
@@ -426,7 +423,7 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			// 
 			this->registerUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerUsernameLabel->AutoSize = true;
-			this->registerUsernameLabel->Location = System::Drawing::Point(3, 135);
+			this->registerUsernameLabel->Location = System::Drawing::Point(21, 111);
 			this->registerUsernameLabel->Name = L"registerUsernameLabel";
 			this->registerUsernameLabel->Size = System::Drawing::Size(81, 17);
 			this->registerUsernameLabel->TabIndex = 1;
@@ -443,6 +440,186 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->registerRegisterLabel->Size = System::Drawing::Size(147, 38);
 			this->registerRegisterLabel->TabIndex = 0;
 			this->registerRegisterLabel->Text = L"Register";
+			// 
+			// loginErrorLabel
+			// 
+			this->loginErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginErrorLabel->AutoSize = true;
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->loginErrorLabel->Location = System::Drawing::Point(176, 409);
+			this->loginErrorLabel->Name = L"loginErrorLabel";
+			this->loginErrorLabel->Size = System::Drawing::Size(67, 18);
+			this->loginErrorLabel->TabIndex = 18;
+			this->loginErrorLabel->Text = L"Lastname";
+			this->loginErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// loginValidateButton
+			// 
+			this->loginValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->loginValidateButton->Location = System::Drawing::Point(164, 358);
+			this->loginValidateButton->Name = L"loginValidateButton";
+			this->loginValidateButton->Size = System::Drawing::Size(87, 34);
+			this->loginValidateButton->TabIndex = 11;
+			this->loginValidateButton->Text = L"Validate";
+			this->loginValidateButton->UseVisualStyleBackColor = true;
+			this->loginValidateButton->Click += gcnew System::EventHandler(this, &MyForm::loginValidateButton_Click);
+			// 
+			// loginRegisterButton
+			// 
+			this->loginRegisterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->loginRegisterButton->Location = System::Drawing::Point(350, 3);
+			this->loginRegisterButton->Name = L"loginRegisterButton";
+			this->loginRegisterButton->Size = System::Drawing::Size(66, 34);
+			this->loginRegisterButton->TabIndex = 5;
+			this->loginRegisterButton->Text = L"Register";
+			this->loginRegisterButton->UseVisualStyleBackColor = true;
+			this->loginRegisterButton->Click += gcnew System::EventHandler(this, &MyForm::loginRegisterButton_Click);
+			// 
+			// loginPasswordLabel
+			// 
+			this->loginPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginPasswordLabel->AutoSize = true;
+			this->loginPasswordLabel->Location = System::Drawing::Point(176, 233);
+			this->loginPasswordLabel->Name = L"loginPasswordLabel";
+			this->loginPasswordLabel->Size = System::Drawing::Size(68, 18);
+			this->loginPasswordLabel->TabIndex = 4;
+			this->loginPasswordLabel->Text = L"Password";
+			// 
+			// loginPasswordTextBox
+			// 
+			this->loginPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginPasswordTextBox->Location = System::Drawing::Point(164, 254);
+			this->loginPasswordTextBox->Name = L"loginPasswordTextBox";
+			this->loginPasswordTextBox->PasswordChar = '*';
+			this->loginPasswordTextBox->Size = System::Drawing::Size(89, 24);
+			this->loginPasswordTextBox->TabIndex = 3;
+			// 
+			// loginUsernameTextBox
+			// 
+			this->loginUsernameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginUsernameTextBox->Location = System::Drawing::Point(164, 172);
+			this->loginUsernameTextBox->Name = L"loginUsernameTextBox";
+			this->loginUsernameTextBox->Size = System::Drawing::Size(89, 24);
+			this->loginUsernameTextBox->TabIndex = 2;
+			// 
+			// loginUsernameLabel
+			// 
+			this->loginUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginUsernameLabel->AutoSize = true;
+			this->loginUsernameLabel->Location = System::Drawing::Point(176, 151);
+			this->loginUsernameLabel->Name = L"loginUsernameLabel";
+			this->loginUsernameLabel->Size = System::Drawing::Size(70, 18);
+			this->loginUsernameLabel->TabIndex = 1;
+			this->loginUsernameLabel->Text = L"Username";
+			// 
+			// loginLoginLabel
+			// 
+			this->loginLoginLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginLoginLabel->AutoSize = true;
+			this->loginLoginLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->loginLoginLabel->Location = System::Drawing::Point(164, 54);
+			this->loginLoginLabel->Name = L"loginLoginLabel";
+			this->loginLoginLabel->Size = System::Drawing::Size(96, 38);
+			this->loginLoginLabel->TabIndex = 0;
+			this->loginLoginLabel->Text = L"Login";
+			// 
+			// addClientPanel
+			// 
+			this->addClientPanel->Controls->Add(this->addClientValidateButton);
+			this->addClientPanel->Controls->Add(this->addClientBirthdateTextBox);
+			this->addClientPanel->Controls->Add(this->addClientLNameTextBox);
+			this->addClientPanel->Controls->Add(this->addClientFNameTextBox);
+			this->addClientPanel->Controls->Add(this->addClientBirthdateLabel);
+			this->addClientPanel->Controls->Add(this->addClientLNameLabel);
+			this->addClientPanel->Controls->Add(this->addClientFNameLabel);
+			this->addClientPanel->Controls->Add(this->addClientTitleLabel);
+			this->addClientPanel->Controls->Add(this->addClientExitButton);
+			this->addClientPanel->Location = System::Drawing::Point(6, 6);
+			this->addClientPanel->Name = L"addClientPanel";
+			this->addClientPanel->Size = System::Drawing::Size(402, 412);
+			this->addClientPanel->TabIndex = 3;
+			// 
+			// addClientValidateButton
+			// 
+			this->addClientValidateButton->Location = System::Drawing::Point(231, 289);
+			this->addClientValidateButton->Name = L"addClientValidateButton";
+			this->addClientValidateButton->Size = System::Drawing::Size(99, 37);
+			this->addClientValidateButton->TabIndex = 8;
+			this->addClientValidateButton->Text = L"Validate";
+			this->addClientValidateButton->UseVisualStyleBackColor = true;
+			// 
+			// addClientBirthdateTextBox
+			// 
+			this->addClientBirthdateTextBox->Location = System::Drawing::Point(6, 176);
+			this->addClientBirthdateTextBox->Name = L"addClientBirthdateTextBox";
+			this->addClientBirthdateTextBox->Size = System::Drawing::Size(117, 24);
+			this->addClientBirthdateTextBox->TabIndex = 7;
+			// 
+			// addClientLNameTextBox
+			// 
+			this->addClientLNameTextBox->Location = System::Drawing::Point(6, 128);
+			this->addClientLNameTextBox->Name = L"addClientLNameTextBox";
+			this->addClientLNameTextBox->Size = System::Drawing::Size(117, 24);
+			this->addClientLNameTextBox->TabIndex = 6;
+			// 
+			// addClientFNameTextBox
+			// 
+			this->addClientFNameTextBox->Location = System::Drawing::Point(6, 79);
+			this->addClientFNameTextBox->Name = L"addClientFNameTextBox";
+			this->addClientFNameTextBox->Size = System::Drawing::Size(117, 24);
+			this->addClientFNameTextBox->TabIndex = 5;
+			// 
+			// addClientBirthdateLabel
+			// 
+			this->addClientBirthdateLabel->AutoSize = true;
+			this->addClientBirthdateLabel->Location = System::Drawing::Point(3, 154);
+			this->addClientBirthdateLabel->Name = L"addClientBirthdateLabel";
+			this->addClientBirthdateLabel->Size = System::Drawing::Size(66, 18);
+			this->addClientBirthdateLabel->TabIndex = 4;
+			this->addClientBirthdateLabel->Text = L"Birthdate";
+			// 
+			// addClientLNameLabel
+			// 
+			this->addClientLNameLabel->AutoSize = true;
+			this->addClientLNameLabel->Location = System::Drawing::Point(3, 105);
+			this->addClientLNameLabel->Name = L"addClientLNameLabel";
+			this->addClientLNameLabel->Size = System::Drawing::Size(71, 18);
+			this->addClientLNameLabel->TabIndex = 3;
+			this->addClientLNameLabel->Text = L"Last Name";
+			// 
+			// addClientFNameLabel
+			// 
+			this->addClientFNameLabel->AutoSize = true;
+			this->addClientFNameLabel->Location = System::Drawing::Point(3, 57);
+			this->addClientFNameLabel->Name = L"addClientFNameLabel";
+			this->addClientFNameLabel->Size = System::Drawing::Size(74, 18);
+			this->addClientFNameLabel->TabIndex = 2;
+			this->addClientFNameLabel->Text = L"First Name";
+			// 
+			// addClientTitleLabel
+			// 
+			this->addClientTitleLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->addClientTitleLabel->AutoSize = true;
+			this->addClientTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->addClientTitleLabel->Location = System::Drawing::Point(87, 3);
+			this->addClientTitleLabel->Name = L"addClientTitleLabel";
+			this->addClientTitleLabel->Size = System::Drawing::Size(167, 38);
+			this->addClientTitleLabel->TabIndex = 1;
+			this->addClientTitleLabel->Text = L"Add Client";
+			// 
+			// addClientExitButton
+			// 
+			this->addClientExitButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->addClientExitButton->Location = System::Drawing::Point(378, 3);
+			this->addClientExitButton->Name = L"addClientExitButton";
+			this->addClientExitButton->Size = System::Drawing::Size(22, 24);
+			this->addClientExitButton->TabIndex = 0;
+			this->addClientExitButton->Text = L"X";
+			this->addClientExitButton->UseVisualStyleBackColor = true;
+			this->addClientExitButton->Click += gcnew System::EventHandler(this, &MyForm::addClientExitButton_Click);
 			// 
 			// clientMPanel
 			// 
@@ -1135,33 +1312,12 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->dataGridView1->Size = System::Drawing::Size(472, 461);
 			this->dataGridView1->TabIndex = 0;
 			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(1109, 131);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(52, 17);
-			this->label1->TabIndex = 14;
-			this->label1->Text = L"label1";
-			// 
-			// testButton
-			// 
-			this->testButton->Location = System::Drawing::Point(1084, 88);
-			this->testButton->Name = L"testButton";
-			this->testButton->Size = System::Drawing::Size(139, 24);
-			this->testButton->TabIndex = 13;
-			this->testButton->Text = L"TestButton";
-			this->testButton->UseVisualStyleBackColor = true;
-			this->testButton->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->ClientSize = System::Drawing::Size(1243, 619);
-			this->Controls->Add(this->label1);
-			this->Controls->Add(this->testButton);
+			this->ClientSize = System::Drawing::Size(1239, 517);
 			this->Controls->Add(this->registerPanel);
 			this->Controls->Add(this->managerTablePanel);
 			this->Controls->Add(this->loginPanel);
@@ -1198,7 +1354,6 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->statisticMTabPage->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -1236,24 +1391,61 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 		addStockPanel->Visible = false;
 		stockMPanel->Visible = true;
 	}
+	private: System::Void registerValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
 
+		System::Data::DataSet^ alreadyExist = Adata->getRows("IF EXISTS (SELECT id_account FROM account WHERE account_name = '" + this->registerUsernameTextBox->Text + "') BEGIN SELECT 1 END ELSE BEGIN SELECT 0 END;", "Temp");
+		System::Data::DataTableReader^ DataTableReaderTest = alreadyExist->CreateDataReader();
+		DataTableReaderTest->Read();
 
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (this->registerUsernameTextBox->Text == "" || this->registerFirstnameTextBox->Text == "" || this->registerLastnameTextBox->Text == "" || this->registerPasswordTextBox->Text == "") {
+			this->registerErrorLabel->Text = "Please, fill all field.";
+		}
+		else if (DataTableReaderTest->GetInt32(0)) {
+			this->registerErrorLabel->Text = "This username is already used.";
+		}
+		else if (this->registerPasswordTextBox->Text->Length < 8) {
+			this->registerErrorLabel->Text = "Password too short. (8 characters)";
+		}
+		else {
+			AccountManager^ createAccount = gcnew AccountManager();
+			createAccount->insert(registerUsernameTextBox->Text, registerPasswordTextBox->Text->GetHashCode().ToString(),
+				this->registerFirstnameTextBox->Text, this->registerLastnameTextBox->Text, registerDateTimePicker->Value.ToString(), 0);
+			registerLoginButton_Click(sender, e);
+			this->loginUsernameTextBox->Text = registerUsernameTextBox->Text;
 
-		/*Personnel^ test = gcnew Personnel(1);
-		String^ test2 = test->get_account()->get_account_name();
+			this->registerUsernameTextBox->Text = "";
+			this->registerFirstnameTextBox->Text = "";
+			this->registerLastnameTextBox->Text = "";
+			this->registerPasswordTextBox->Text = "";
+			this->loginErrorLabel->Text = "Account has been successfully created. Please login.";
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Green;
+		}
+		DataTableReaderTest->Close();
+	}
 
+	private: System::Void loginValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
 
-		AccountManager^ mn = gcnew AccountManager();
-		mn->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 1);
+		System::Data::DataSet^ rightLogin = Adata->getRows("IF EXISTS (SELECT id_account FROM account WHERE account_name = '" + this->loginUsernameTextBox->Text + "' AND password_account = '" + loginPasswordTextBox->Text->GetHashCode().ToString() + "') BEGIN SELECT 0 END ELSE BEGIN SELECT 1 END;", "Temp");
+		System::Data::DataTableReader^ DataTableReaderTest = rightLogin->CreateDataReader();
+		DataTableReaderTest->Read();
 
-
-		test->set_is_manager(1);
-		Account^ test3 = gcnew Account(1);
-		test3->set_firstname_account("C mwa");
-		mn->update(test3);
-		mn->AccountManager::deleteElement(test3);
-		this->label1->Text = test2;*/
+		if (this->loginUsernameTextBox->Text == "" || this->loginPasswordTextBox->Text == "") {
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->loginErrorLabel->Text = "Please, fill all field.";
+		}
+		else if (DataTableReaderTest->GetInt32(0)) {
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->loginErrorLabel->Text = "Wrong username or password.";
+		}
+		else {
+			rightLogin = Adata->getRows("SELECT id_account FROM account WHERE account_name = '" + this->loginUsernameTextBox->Text + "' AND password_account = '" + loginPasswordTextBox->Text->GetHashCode().ToString() + "') BEGIN SELECT 0 END ELSE BEGIN SELECT 1 END;", "Temp");
+			connectedAccount = gcnew Account(DataTableReaderTest->GetInt32(0));
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Green;
+			this->loginErrorLabel->Text = "Afficher la page suivante...";
+		}
+		DataTableReaderTest->Close();
 	}
 };
 }
