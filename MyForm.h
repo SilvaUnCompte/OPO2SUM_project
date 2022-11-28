@@ -225,7 +225,6 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			this->orderMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->stockMTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->informationStockPanel = (gcnew System::Windows::Forms::Panel());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->informationStockModifyButton = (gcnew System::Windows::Forms::Button());
 			this->informationStockDeleteButton = (gcnew System::Windows::Forms::Button());
 			this->stockMPanel = (gcnew System::Windows::Forms::Panel());
@@ -791,22 +790,12 @@ private: System::Windows::Forms::ComboBox^ comboBox1;
 			// 
 			// informationStockPanel
 			// 
-			this->informationStockPanel->Controls->Add(this->label2);
 			this->informationStockPanel->Controls->Add(this->informationStockModifyButton);
 			this->informationStockPanel->Controls->Add(this->informationStockDeleteButton);
 			this->informationStockPanel->Location = System::Drawing::Point(6, 6);
 			this->informationStockPanel->Name = L"informationStockPanel";
 			this->informationStockPanel->Size = System::Drawing::Size(472, 491);
 			this->informationStockPanel->TabIndex = 15;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(23, 42);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(49, 17);
-			this->label2->TabIndex = 7;
-			this->label2->Text = L"Name";
 			// 
 			// informationStockModifyButton
 			// 
