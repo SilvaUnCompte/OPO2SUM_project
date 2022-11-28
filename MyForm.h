@@ -135,7 +135,8 @@ private: System::Windows::Forms::Label^ informationStockNameLabel;
 private: System::Windows::Forms::Label^ addStockStockLabel;
 
 private: System::Windows::Forms::Label^ addStockTVALabel;
-private: System::Windows::Forms::Label^ addStockPriceLabel;
+private: System::Windows::Forms::Label^ addStockMargeLabel;
+
 private: System::Windows::Forms::Label^ addStockCostLabel;
 private: System::Windows::Forms::TextBox^ addStockCostTextBox;
 
@@ -221,8 +222,6 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->addOrderTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->addOrderExitButton = (gcnew System::Windows::Forms::Button());
 			this->stockMTabPage = (gcnew System::Windows::Forms::TabPage());
-			this->statisticMTabPage = (gcnew System::Windows::Forms::TabPage());
-			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
 			this->addStockPanel = (gcnew System::Windows::Forms::Panel());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
@@ -232,7 +231,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->addStockRestockingLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockStockLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockTVALabel = (gcnew System::Windows::Forms::Label());
-			this->addStockPriceLabel = (gcnew System::Windows::Forms::Label());
+			this->addStockMargeLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockCostLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockValidateButton = (gcnew System::Windows::Forms::Button());
 			this->addStockQuantityTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -246,6 +245,8 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->stockMFilterButton = (gcnew System::Windows::Forms::Button());
 			this->stockMAddButton = (gcnew System::Windows::Forms::Button());
 			this->stockMDGV = (gcnew System::Windows::Forms::DataGridView());
+			this->statisticMTabPage = (gcnew System::Windows::Forms::TabPage());
+			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
 			this->informationStockModifyButton = (gcnew System::Windows::Forms::Button());
 			this->informationStockDeleteButton = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -264,10 +265,10 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->orderMDGV))->BeginInit();
 			this->addOrderPanel->SuspendLayout();
 			this->stockMTabPage->SuspendLayout();
-			this->statisticMTabPage->SuspendLayout();
 			this->addStockPanel->SuspendLayout();
 			this->stockMPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->stockMDGV))->BeginInit();
+			this->statisticMTabPage->SuspendLayout();
 			this->informationStockPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -779,6 +780,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// stockMTabPage
 			// 
 			this->stockMTabPage->Controls->Add(this->addStockPanel);
+			this->stockMTabPage->Controls->Add(this->informationStockPanel);
 			this->stockMTabPage->Controls->Add(this->stockMPanel);
 			this->stockMTabPage->Location = System::Drawing::Point(4, 25);
 			this->stockMTabPage->Name = L"stockMTabPage";
@@ -787,27 +789,6 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->stockMTabPage->TabIndex = 2;
 			this->stockMTabPage->Text = L"Stock";
 			this->stockMTabPage->UseVisualStyleBackColor = true;
-			// 
-			// statisticMTabPage
-			// 
-			this->statisticMTabPage->Controls->Add(this->statisticMPanel);
-			this->statisticMTabPage->Location = System::Drawing::Point(4, 25);
-			this->statisticMTabPage->Name = L"statisticMTabPage";
-			this->statisticMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->statisticMTabPage->Size = System::Drawing::Size(465, 487);
-			this->statisticMTabPage->TabIndex = 3;
-			this->statisticMTabPage->Text = L"Statistic";
-			this->statisticMTabPage->UseVisualStyleBackColor = true;
-			// 
-			// statisticMPanel
-			// 
-			this->statisticMPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->statisticMPanel->Location = System::Drawing::Point(6, 6);
-			this->statisticMPanel->Name = L"statisticMPanel";
-			this->statisticMPanel->Size = System::Drawing::Size(402, 412);
-			this->statisticMPanel->TabIndex = 3;
 			// 
 			// addStockPanel
 			// 
@@ -819,7 +800,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->addStockPanel->Controls->Add(this->addStockRestockingLabel);
 			this->addStockPanel->Controls->Add(this->addStockStockLabel);
 			this->addStockPanel->Controls->Add(this->addStockTVALabel);
-			this->addStockPanel->Controls->Add(this->addStockPriceLabel);
+			this->addStockPanel->Controls->Add(this->addStockMargeLabel);
 			this->addStockPanel->Controls->Add(this->addStockCostLabel);
 			this->addStockPanel->Controls->Add(this->addStockValidateButton);
 			this->addStockPanel->Controls->Add(this->addStockQuantityTextBox);
@@ -907,14 +888,14 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->addStockTVALabel->TabIndex = 11;
 			this->addStockTVALabel->Text = L"TVA";
 			// 
-			// addStockPriceLabel
+			// addStockMargeLabel
 			// 
-			this->addStockPriceLabel->AutoSize = true;
-			this->addStockPriceLabel->Location = System::Drawing::Point(3, 213);
-			this->addStockPriceLabel->Name = L"addStockPriceLabel";
-			this->addStockPriceLabel->Size = System::Drawing::Size(45, 17);
-			this->addStockPriceLabel->TabIndex = 10;
-			this->addStockPriceLabel->Text = L"Price";
+			this->addStockMargeLabel->AutoSize = true;
+			this->addStockMargeLabel->Location = System::Drawing::Point(3, 213);
+			this->addStockMargeLabel->Name = L"addStockMargeLabel";
+			this->addStockMargeLabel->Size = System::Drawing::Size(53, 17);
+			this->addStockMargeLabel->TabIndex = 10;
+			this->addStockMargeLabel->Text = L"Marge";
 			// 
 			// addStockCostLabel
 			// 
@@ -979,11 +960,11 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->addStockTitleLabel->AutoSize = true;
 			this->addStockTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->addStockTitleLabel->Location = System::Drawing::Point(125, 21);
+			this->addStockTitleLabel->Location = System::Drawing::Point(97, 19);
 			this->addStockTitleLabel->Name = L"addStockTitleLabel";
-			this->addStockTitleLabel->Size = System::Drawing::Size(167, 38);
+			this->addStockTitleLabel->Size = System::Drawing::Size(262, 38);
 			this->addStockTitleLabel->TabIndex = 1;
-			this->addStockTitleLabel->Text = L"Add Stock";
+			this->addStockTitleLabel->Text = L"Add new product";
 			// 
 			// addStockExitButton
 			// 
@@ -1054,6 +1035,27 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->stockMDGV->Size = System::Drawing::Size(447, 388);
 			this->stockMDGV->TabIndex = 0;
 			// 
+			// statisticMTabPage
+			// 
+			this->statisticMTabPage->Controls->Add(this->statisticMPanel);
+			this->statisticMTabPage->Location = System::Drawing::Point(4, 25);
+			this->statisticMTabPage->Name = L"statisticMTabPage";
+			this->statisticMTabPage->Padding = System::Windows::Forms::Padding(3);
+			this->statisticMTabPage->Size = System::Drawing::Size(465, 487);
+			this->statisticMTabPage->TabIndex = 3;
+			this->statisticMTabPage->Text = L"Statistic";
+			this->statisticMTabPage->UseVisualStyleBackColor = true;
+			// 
+			// statisticMPanel
+			// 
+			this->statisticMPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->statisticMPanel->Location = System::Drawing::Point(6, 6);
+			this->statisticMPanel->Name = L"statisticMPanel";
+			this->statisticMPanel->Size = System::Drawing::Size(402, 412);
+			this->statisticMPanel->TabIndex = 3;
+			// 
 			// informationStockModifyButton
 			// 
 			this->informationStockModifyButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
@@ -1098,7 +1100,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->informationStockPanel->Controls->Add(this->informationStockNameLabel);
 			this->informationStockPanel->Controls->Add(this->informationStockModifyButton);
 			this->informationStockPanel->Controls->Add(this->informationStockDeleteButton);
-			this->informationStockPanel->Location = System::Drawing::Point(981, 331);
+			this->informationStockPanel->Location = System::Drawing::Point(6, 6);
 			this->informationStockPanel->Name = L"informationStockPanel";
 			this->informationStockPanel->Size = System::Drawing::Size(281, 204);
 			this->informationStockPanel->TabIndex = 15;
@@ -1118,7 +1120,6 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->ClientSize = System::Drawing::Size(1684, 922);
-			this->Controls->Add(this->informationStockPanel);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->testButton);
 			this->Controls->Add(this->registerPanel);
@@ -1147,12 +1148,12 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->addOrderPanel->ResumeLayout(false);
 			this->addOrderPanel->PerformLayout();
 			this->stockMTabPage->ResumeLayout(false);
-			this->statisticMTabPage->ResumeLayout(false);
 			this->addStockPanel->ResumeLayout(false);
 			this->addStockPanel->PerformLayout();
 			this->stockMPanel->ResumeLayout(false);
 			this->stockMPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->stockMDGV))->EndInit();
+			this->statisticMTabPage->ResumeLayout(false);
 			this->informationStockPanel->ResumeLayout(false);
 			this->informationStockPanel->PerformLayout();
 			this->ResumeLayout(false);
