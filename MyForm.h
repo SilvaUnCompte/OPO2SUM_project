@@ -124,6 +124,30 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ addStockNameLabel;
 	private: System::Windows::Forms::Label^ addStockTitleLabel;
 	private: System::Windows::Forms::Button^ addStockExitButton;
+
+	private: System::Windows::Forms::Button^ orderMFilterButton;
+	private: System::Windows::Forms::Button^ stockMFilterButton;
+	private: System::Windows::Forms::Label^ stockMLabel;
+	private: System::Windows::Forms::Panel^ informationStockPanel;
+	private: System::Windows::Forms::Label^ informationStockNameLabel;
+
+	private: System::Windows::Forms::Label^ addStockStockLabel;
+
+	private: System::Windows::Forms::Label^ addStockTVALabel;
+	private: System::Windows::Forms::Label^ addStockMargeLabel;
+
+	private: System::Windows::Forms::Label^ addStockCostLabel;
+	private: System::Windows::Forms::TextBox^ addStockCostTextBox;
+
+	private: System::Windows::Forms::Label^ addStockRestockingLabel;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::Button^ statisticMStatisticButton;
+	private: System::Windows::Forms::ComboBox^ comboBox1;
+
 	private: System::Windows::Forms::Label^ registerErrorLabel;
 	private: System::Windows::Forms::Label^ registerLastnameLabel;
 	private: System::Windows::Forms::Label^ registerFirstnameLabel;
@@ -175,16 +199,6 @@ namespace OPO2SUMproject {
 			this->loginUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->loginUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->loginLoginLabel = (gcnew System::Windows::Forms::Label());
-			this->addClientPanel = (gcnew System::Windows::Forms::Panel());
-			this->addClientValidateButton = (gcnew System::Windows::Forms::Button());
-			this->addClientBirthdateTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->addClientLNameTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->addClientFNameTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->addClientBirthdateLabel = (gcnew System::Windows::Forms::Label());
-			this->addClientLNameLabel = (gcnew System::Windows::Forms::Label());
-			this->addClientFNameLabel = (gcnew System::Windows::Forms::Label());
-			this->addClientTitleLabel = (gcnew System::Windows::Forms::Label());
-			this->addClientExitButton = (gcnew System::Windows::Forms::Button());
 			this->clientMPanel = (gcnew System::Windows::Forms::Panel());
 			this->clientMModifyButton = (gcnew System::Windows::Forms::Button());
 			this->clientMDeleteButton = (gcnew System::Windows::Forms::Button());
@@ -245,7 +259,9 @@ namespace OPO2SUMproject {
 			this->addStockTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockExitButton = (gcnew System::Windows::Forms::Button());
 			this->statisticMTabPage = (gcnew System::Windows::Forms::TabPage());
-			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
+			this->statisticMStatisticButton = (gcnew System::Windows::Forms::Button());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->loginPanel->SuspendLayout();
 			this->registerPanel->SuspendLayout();
 			this->clientMPanel->SuspendLayout();
@@ -523,103 +539,6 @@ namespace OPO2SUMproject {
 			this->loginLoginLabel->Size = System::Drawing::Size(96, 38);
 			this->loginLoginLabel->TabIndex = 0;
 			this->loginLoginLabel->Text = L"Login";
-			// 
-			// addClientPanel
-			// 
-			this->addClientPanel->Controls->Add(this->addClientValidateButton);
-			this->addClientPanel->Controls->Add(this->addClientBirthdateTextBox);
-			this->addClientPanel->Controls->Add(this->addClientLNameTextBox);
-			this->addClientPanel->Controls->Add(this->addClientFNameTextBox);
-			this->addClientPanel->Controls->Add(this->addClientBirthdateLabel);
-			this->addClientPanel->Controls->Add(this->addClientLNameLabel);
-			this->addClientPanel->Controls->Add(this->addClientFNameLabel);
-			this->addClientPanel->Controls->Add(this->addClientTitleLabel);
-			this->addClientPanel->Controls->Add(this->addClientExitButton);
-			this->addClientPanel->Location = System::Drawing::Point(6, 6);
-			this->addClientPanel->Name = L"addClientPanel";
-			this->addClientPanel->Size = System::Drawing::Size(402, 412);
-			this->addClientPanel->TabIndex = 3;
-			// 
-			// addClientValidateButton
-			// 
-			this->addClientValidateButton->Location = System::Drawing::Point(231, 289);
-			this->addClientValidateButton->Name = L"addClientValidateButton";
-			this->addClientValidateButton->Size = System::Drawing::Size(99, 37);
-			this->addClientValidateButton->TabIndex = 8;
-			this->addClientValidateButton->Text = L"Validate";
-			this->addClientValidateButton->UseVisualStyleBackColor = true;
-			// 
-			// addClientBirthdateTextBox
-			// 
-			this->addClientBirthdateTextBox->Location = System::Drawing::Point(6, 176);
-			this->addClientBirthdateTextBox->Name = L"addClientBirthdateTextBox";
-			this->addClientBirthdateTextBox->Size = System::Drawing::Size(117, 24);
-			this->addClientBirthdateTextBox->TabIndex = 7;
-			// 
-			// addClientLNameTextBox
-			// 
-			this->addClientLNameTextBox->Location = System::Drawing::Point(6, 128);
-			this->addClientLNameTextBox->Name = L"addClientLNameTextBox";
-			this->addClientLNameTextBox->Size = System::Drawing::Size(117, 24);
-			this->addClientLNameTextBox->TabIndex = 6;
-			// 
-			// addClientFNameTextBox
-			// 
-			this->addClientFNameTextBox->Location = System::Drawing::Point(6, 79);
-			this->addClientFNameTextBox->Name = L"addClientFNameTextBox";
-			this->addClientFNameTextBox->Size = System::Drawing::Size(117, 24);
-			this->addClientFNameTextBox->TabIndex = 5;
-			// 
-			// addClientBirthdateLabel
-			// 
-			this->addClientBirthdateLabel->AutoSize = true;
-			this->addClientBirthdateLabel->Location = System::Drawing::Point(3, 154);
-			this->addClientBirthdateLabel->Name = L"addClientBirthdateLabel";
-			this->addClientBirthdateLabel->Size = System::Drawing::Size(66, 18);
-			this->addClientBirthdateLabel->TabIndex = 4;
-			this->addClientBirthdateLabel->Text = L"Birthdate";
-			// 
-			// addClientLNameLabel
-			// 
-			this->addClientLNameLabel->AutoSize = true;
-			this->addClientLNameLabel->Location = System::Drawing::Point(3, 105);
-			this->addClientLNameLabel->Name = L"addClientLNameLabel";
-			this->addClientLNameLabel->Size = System::Drawing::Size(71, 18);
-			this->addClientLNameLabel->TabIndex = 3;
-			this->addClientLNameLabel->Text = L"Last Name";
-			// 
-			// addClientFNameLabel
-			// 
-			this->addClientFNameLabel->AutoSize = true;
-			this->addClientFNameLabel->Location = System::Drawing::Point(3, 57);
-			this->addClientFNameLabel->Name = L"addClientFNameLabel";
-			this->addClientFNameLabel->Size = System::Drawing::Size(74, 18);
-			this->addClientFNameLabel->TabIndex = 2;
-			this->addClientFNameLabel->Text = L"First Name";
-			// 
-			// addClientTitleLabel
-			// 
-			this->addClientTitleLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->addClientTitleLabel->AutoSize = true;
-			this->addClientTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->addClientTitleLabel->Location = System::Drawing::Point(87, 3);
-			this->addClientTitleLabel->Name = L"addClientTitleLabel";
-			this->addClientTitleLabel->Size = System::Drawing::Size(167, 38);
-			this->addClientTitleLabel->TabIndex = 1;
-			this->addClientTitleLabel->Text = L"Add Client";
-			// 
-			// addClientExitButton
-			// 
-			this->addClientExitButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->addClientExitButton->Location = System::Drawing::Point(378, 3);
-			this->addClientExitButton->Name = L"addClientExitButton";
-			this->addClientExitButton->Size = System::Drawing::Size(22, 24);
-			this->addClientExitButton->TabIndex = 0;
-			this->addClientExitButton->Text = L"X";
-			this->addClientExitButton->UseVisualStyleBackColor = true;
-			this->addClientExitButton->Click += gcnew System::EventHandler(this, &MyForm::addClientExitButton_Click);
 			// 
 			// clientMPanel
 			// 
@@ -1440,7 +1359,11 @@ namespace OPO2SUMproject {
 			this->loginErrorLabel->Text = "Wrong username or password.";
 		}
 		else {
-			rightLogin = Adata->getRows("SELECT id_account FROM account WHERE account_name = '" + this->loginUsernameTextBox->Text + "' AND password_account = '" + loginPasswordTextBox->Text->GetHashCode().ToString() + "') BEGIN SELECT 0 END ELSE BEGIN SELECT 1 END;", "Temp");
+			DataTableReaderTest->Close();
+			AccessData^ Adata1 = gcnew AccessData;
+			rightLogin = Adata1->getRows("SELECT id_account FROM account WHERE account_name = '" + this->loginUsernameTextBox->Text + "' AND password_account = '" + loginPasswordTextBox->Text->GetHashCode().ToString() + "';", "Temp");
+			DataTableReaderTest = rightLogin->CreateDataReader();
+			DataTableReaderTest->Read();
 			connectedAccount = gcnew Account(DataTableReaderTest->GetInt32(0));
 			this->loginErrorLabel->ForeColor = System::Drawing::Color::Green;
 			this->loginErrorLabel->Text = "Afficher la page suivante...";
