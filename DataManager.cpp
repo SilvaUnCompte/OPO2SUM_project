@@ -34,6 +34,19 @@ OPO2SUMproject::Personnel::Personnel(int selectedId) {
 	DataTableReaderAccount->Close();
 }
 
+OPO2SUMproject::Order::Order(int selectedId) {
+	System::Data::DataSet^ dataSetAccount = Adata->getRows("SELECT * FROM opo2sum.dbo.Order WHERE id_order = " + selectedId, "Temp");
+	System::Data::DataTableReader^ DataTableReaderAccount = dataSetAccount->CreateDataReader();
+	DataTableReaderAccount->Read();
+
+	this->id = DataTableReaderAccount->GetInt32(0);
+	this->delevery_date = DataTableReaderAccount[1]->ToString();
+	this->issue_date = DataTableReaderAccount[2]->ToString();
+	this->account = gcnew Account(DataTableReaderAccount->GetInt32(3));
+
+	DataTableReaderAccount->Close();
+}
+
 // Account Manager ----------------------------------------------------------------------
 
 OPO2SUMproject::Account^ OPO2SUMproject::AccountManager::select(int id) {
@@ -75,3 +88,4 @@ void OPO2SUMproject::PersonnelManager::deleteElement(Personnel^ obj) {
 void OPO2SUMproject::PersonnelManager::update(Personnel^ obj) {
 	return; // ------------------------ ICI !!! Faut me faire oh oh ! Youuuuuuuuuuhouuuuuuuuuuuu tu m'as oublié !!
 }
+
