@@ -47,6 +47,20 @@ OPO2SUMproject::Order::Order(int selectedId) {
 	DataTableReaderAccount->Close();
 }
 
+OPO2SUMproject::Address::Address(int selectedId) {
+	System::Data::DataSet^ dataSetAddress = Adata->getRows("SELECT * FROM opo2sum.dbo.Address WHERE id_address = " + selectedId, "Temp");
+	System::Data::DataTableReader^ DataTableReaderAddress = dataSetAddress->CreateDataReader();
+	DataTableReaderAddress->Read();
+
+	this->id = DataTableReaderAddress->GetInt32(0);
+	this->street = DataTableReaderAddress[1]->ToString();
+	this->postal_code = DataTableReaderAddress->GetInt32(2);
+	this->city = DataTableReaderAddress[3]->ToString();
+	this->address_complement = DataTableReaderAddress[4]->ToString();
+
+	DataTableReaderAddress->Close();
+}
+
 // Account Manager ----------------------------------------------------------------------
 
 OPO2SUMproject::Account^ OPO2SUMproject::AccountManager::select(int id) {
@@ -65,7 +79,7 @@ void OPO2SUMproject::AccountManager::deleteElement(Account^ obj) {
 	AccountManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::AccountManager::update(Account^ obj) {
-	Adata->actionRows("UPDATE Account SET account_name = '" + obj->get_account_name() + "', password_account = '" + obj->get_password_account() + "', firstname_account = '" + 		obj->get_firstname_account() + "', lastname_account ='" + obj->get_lastname_account() +	"', birthday_account = '" + obj->get_birthday_account() + "', permission_lv_account = '" + obj->get_permission_lv_account() + "' WHERE id_account = " + obj->get_id() + ";");
+	Adata->actionRows("UPDATE Account SET account_name = '" + obj->get_account_name() + "', password_account = '" + obj->get_password_account() + "', firstname_account = '" + 	obj->get_firstname_account() + "', lastname_account ='" + obj->get_lastname_account() +	"', birthday_account = '" + obj->get_birthday_account() + "', permission_lv_account = '" + obj->get_permission_lv_account() + "' WHERE id_account = " + obj->get_id() + ";");
 }
 
 // Personnel Manager ---------------------------------------------------------------------
@@ -87,7 +101,6 @@ void OPO2SUMproject::PersonnelManager::deleteElement(Personnel^ obj) {
 }
 void OPO2SUMproject::PersonnelManager::update(Personnel^ obj) {
 	Adata->actionRows("UPDATE Personnel SET hire_date = '" + obj->get_hire_date() + "', is_manager = " + obj->get_is_manager() + ", id_account = " + obj->get_account()->get_id() + " WHERE id_personnel = " + obj->get_id() + ";");
-
 }
 
 // Order Manager ---------------------------------------------------------------------

@@ -1169,16 +1169,26 @@ namespace OPO2SUMproject {
 
 		mn->update(test);
 		mn->deleteElement(test);*/
+		//AccountManager^ mn = gcnew AccountManager();
+		//mn->insert("Le BG du 99", "mdp", "Dider", "Raoul", "2019-10-02", 1);
 
-		/*PersonnelManager^ mn1 = gcnew PersonnelManager();
-		mn1->insert("2019-10-02", 0, 1);
+		//PersonnelManager^ mn1 = gcnew PersonnelManager();
+		//mn1->insert("2019-10-02", 0, 1);
+
+		//Address^ changer = gcnew Address(1);
+		//AddressManager^ mn2 = gcnew AddressManager();
+		//mn2->insert("Rue des clochards", 14000, "gotham", "3eme etage");
+		//
+		////changer->set_postal_code(2000);
+		//Account^ test3 = gcnew Account(1);
+		//mn2->deleteElement(5);
 
 		Personnel^ changer = gcnew Personnel(2);
 		changer->set_is_manager(1);
 		Account^ test3 = gcnew Account(1);
 		mn1->update(changer);*/
 
-		//this->label1->Text = changer->get_is_manager().ToString();
+		this->label1->Text = changer->get_is_manager().ToString();*/
 	}
 	};
 }

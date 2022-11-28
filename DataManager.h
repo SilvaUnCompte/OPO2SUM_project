@@ -116,18 +116,39 @@ namespace OPO2SUMproject
 		void update(Order^);
 	};
 
-	/*ref class Address : ClassTable {};
+	ref class Address : ClassTable {
+	private:
+		System::String^ street;
+		int postal_code;
+		System::String^ city;
+		System::String^ address_complement;
+
+	public:
+		Address(int id);
+
+		System::String^ get_street() { return street; }
+		int get_postal_code() { return postal_code; }
+		System::String^ get_city() { return city; }
+		System::String^ get_address_complement() { return address_complement; }
+
+		void set_street(System::String^ st) { this->street = st; }
+		void set_postal_code(int zip) { this->postal_code = zip; }
+		void set_city(System::String^ city) { this->city= city; }
+		void set_address_complement(System::String^ address) { this->address_complement = address; }
+	};
+
 
 	ref class AddressManager : ClassTableManager
 	{
 	public:
 		Address^ select(int id);
-		void insert(Address^);
+		void insert(System::String^ street, int postal_code, System::String^ city, System::String^ address_complement);
 		void deleteElement(int id);
 		void deleteElement(Address^);
 		void update(Address^);
 	};
 
+	/*
 	ref class Product : ClassTable {};
 
 	ref class ProductManager : ClassTableManager
