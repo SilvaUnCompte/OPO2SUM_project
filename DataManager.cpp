@@ -129,10 +129,6 @@ OPO2SUMproject::Living::Living(int id_account, int id_address) {
 	Address^ account = gcnew Address(id_account);
 }
 
-	this->id_account = gcnew Account(DataTableReaderLiving->GetInt32(0));
-	this->id_address = gcnew Address(DataTableReaderLiving->GetInt32(1));
-
-	DataTableReaderLiving->Close();
 //Constructor Contain
 
 OPO2SUMproject::Contain::Contain(int id_order, int id_product, int nb) {
