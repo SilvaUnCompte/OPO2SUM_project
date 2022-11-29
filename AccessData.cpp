@@ -4,7 +4,7 @@
 
 OPO2SUMproject::AccessData::AccessData(void)
 {
-	this->sCnx = "Data Source=BOBLÉPONGE;Initial Catalog=OPO2SUM;Integrated Security=True";
+	this->sCnx = "Data Source=DESKTOP-TCQCSBR;Initial Catalog=OPO2SUM;Integrated Security=True";
 
 	this->sSql = "";
 

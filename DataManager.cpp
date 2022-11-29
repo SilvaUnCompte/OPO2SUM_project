@@ -75,9 +75,20 @@ OPO2SUMproject::Product::Product(int selectedId) {
 	this->stock_product = DataTableReaderProduct->GetInt32(6);
 	this->restocking_threshold_product= DataTableReaderProduct->GetInt32(7);
 
-
-
 	DataTableReaderProduct->Close();
+}
+
+OPO2SUMproject::Bill::Bill(int selectedId) {
+	System::Data::DataSet^ dataSetBill = Adata->getRows("SELECT * FROM opo2sum.dbo.bill WHERE id_bill = " + selectedId, "Temp");
+	System::Data::DataTableReader^ DataTableReaderBill = dataSetBill->CreateDataReader();
+	DataTableReaderBill->Read();
+
+	this->id = DataTableReaderBill->GetInt32(0);
+	this->total_bill = (float)DataTableReaderBill->GetDouble(1);
+	this->total_tva = (float)DataTableReaderBill->GetDouble(2);
+	this->order= gcnew Order(DataTableReaderBill->GetInt32(3));
+
+	DataTableReaderBill->Close();
 }
 
 // Account Manager ----------------------------------------------------------------------
@@ -184,5 +195,27 @@ void OPO2SUMproject::ProductManager::deleteElement(Product^ obj) {
 }
 void OPO2SUMproject::ProductManager::update(Product^ obj) {
 	Adata->actionRows("UPDATE Product SET name_product = '" + obj->get_name_product() + "', element_per_unit_product = " + obj->get_element_per_unit_product() + ", cost_product = " + obj->get_cost_product() + ", marge_product = " + obj->get_marge_product() + ", tva_product = " + obj->get_tva_product()+ ", stock_product = " + obj->get_stock_product() + ", restocking_threshold_product = " + obj->get_restocking_threshold_product() + " WHERE id_product = " + obj->get_id() +";");
+
+}
+
+//Bill Manager------------------------------------------------------------------------------
+
+OPO2SUMproject::Bill^ OPO2SUMproject::BillManager::select(int id) {
+	return gcnew Bill(id);
+}
+void OPO2SUMproject::BillManager::insert(float total_bill, float total_tva, int id_order) {
+	AccessData^ Adata = gcnew AccessData;
+	Adata->actionRows("INSERT INTO Bill " +
+		"(total_bill, total_tva, id_order)" +
+		"VALUES(" + total_bill + ", " + total_tva + ", " + id_order + ");");
+}
+void OPO2SUMproject::BillManager::deleteElement(int selectedId) {
+	Adata->actionRows("DELETE FROM Bill WHERE id_bill = " + selectedId);
+}
+void OPO2SUMproject::BillManager::deleteElement(Bill^ obj) {
+	BillManager::deleteElement(obj->get_id());
+}
+void OPO2SUMproject::BillManager::update(Bill^ obj) {
+	Adata->actionRows("UPDATE Bill SET total_bill = " + obj->get_total_bill() + ", total_tva = " + obj->get_total_tva() + ", id_order= " + obj->get_order()->get_id() + " WHERE id_bill = " + obj->get_id() + ";"); 
 
 }

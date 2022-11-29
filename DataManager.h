@@ -137,7 +137,6 @@ namespace OPO2SUMproject
 		void set_address_complement(System::String^ address) { this->address_complement = address; }
 	};
 
-
 	ref class AddressManager : ClassTableManager
 	{
 	public:
@@ -147,7 +146,6 @@ namespace OPO2SUMproject
 		void deleteElement(Address^);
 		void update(Address^);
 	};
-
 	
 	ref class Product : ClassTable {
 	private:
@@ -202,19 +200,41 @@ namespace OPO2SUMproject
 		void deleteElement(Payment^);
 		void update(Payment^);
 	};
+	*/
 
-	ref class Bill : ClassTable {};
 
+	ref class Bill : ClassTable {
+	private:
+		float total_bill;
+		float total_tva;
+		Order^ order;
+	
+
+	public:
+		Bill(int id);
+		 
+		float get_total_bill() { return total_bill; }
+		float get_total_tva() { return total_tva; }
+		Order^ get_order() { return order; }
+
+		void set_total_bill(float bill) { this->total_bill = bill; }
+		void set_total_tva(float tva) { this->total_tva = tva; }
+		void set_id_order(Order^ currentOrder) { this->order = currentOrder; }
+		
+
+	};
+	
 	ref class BillManager : ClassTableManager
 	{
 	public:
 		Bill^ select(int id);
-		void insert(Bill^);
+		void insert(float total_bill, float total_tva, int id_order);
 		void deleteElement(int id);
 		void deleteElement(Bill^);
 		void update(Bill^);
 	};
 
+	/*
 	ref class Living : ClassTable {};
 
 	ref class LivingManager : ClassTableManager
@@ -225,7 +245,7 @@ namespace OPO2SUMproject
 		void deleteElement(Living^);
 		void update(Living^);
 	};
-
+	
 	ref class Billing : ClassTable {};
 
 	ref class BillingManager : ClassTableManager
