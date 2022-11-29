@@ -140,13 +140,20 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TextBox^ addStockCostTextBox;
 
 	private: System::Windows::Forms::Label^ addStockRestockingLabel;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+private: System::Windows::Forms::TextBox^ addStockStockTextBox;
+
+private: System::Windows::Forms::TextBox^ addStockTVATextBox;
+
+private: System::Windows::Forms::TextBox^ addStockMargeTextBox;
+private: System::Windows::Forms::TextBox^ addStockRestockingTextBox;
+private: System::Windows::Forms::DataGridView^ statisticMDGV;
+
+
+
 	private: System::Windows::Forms::Button^ statisticMStatisticButton;
-	private: System::Windows::Forms::ComboBox^ comboBox1;
+private: System::Windows::Forms::ComboBox^ statisticMComboBox;
+
+
 
 	private: System::Windows::Forms::Label^ registerErrorLabel;
 	private: System::Windows::Forms::Label^ registerLastnameLabel;
@@ -176,6 +183,14 @@ namespace OPO2SUMproject {
 		void InitializeComponent(void)
 		{
 			this->loginPanel = (gcnew System::Windows::Forms::Panel());
+			this->loginErrorLabel = (gcnew System::Windows::Forms::Label());
+			this->loginValidateButton = (gcnew System::Windows::Forms::Button());
+			this->loginRegisterButton = (gcnew System::Windows::Forms::Button());
+			this->loginPasswordLabel = (gcnew System::Windows::Forms::Label());
+			this->loginPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->loginUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->loginUsernameLabel = (gcnew System::Windows::Forms::Label());
+			this->loginLoginLabel = (gcnew System::Windows::Forms::Label());
 			this->registerPanel = (gcnew System::Windows::Forms::Panel());
 			this->registerBirthdayLabel = (gcnew System::Windows::Forms::Label());
 			this->registerDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
@@ -191,14 +206,6 @@ namespace OPO2SUMproject {
 			this->registerUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->registerUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->registerRegisterLabel = (gcnew System::Windows::Forms::Label());
-			this->loginErrorLabel = (gcnew System::Windows::Forms::Label());
-			this->loginValidateButton = (gcnew System::Windows::Forms::Button());
-			this->loginRegisterButton = (gcnew System::Windows::Forms::Button());
-			this->loginPasswordLabel = (gcnew System::Windows::Forms::Label());
-			this->loginPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->loginUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->loginUsernameLabel = (gcnew System::Windows::Forms::Label());
-			this->loginLoginLabel = (gcnew System::Windows::Forms::Label());
 			this->clientMPanel = (gcnew System::Windows::Forms::Panel());
 			this->clientMModifyButton = (gcnew System::Windows::Forms::Button());
 			this->clientMDeleteButton = (gcnew System::Windows::Forms::Button());
@@ -241,10 +248,10 @@ namespace OPO2SUMproject {
 			this->stockMAddButton = (gcnew System::Windows::Forms::Button());
 			this->stockMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->addStockPanel = (gcnew System::Windows::Forms::Panel());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->addStockRestockingTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addStockStockTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addStockTVATextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addStockMargeTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->addStockCostTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->addStockRestockingLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockStockLabel = (gcnew System::Windows::Forms::Label());
@@ -260,8 +267,8 @@ namespace OPO2SUMproject {
 			this->addStockExitButton = (gcnew System::Windows::Forms::Button());
 			this->statisticMTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->statisticMStatisticButton = (gcnew System::Windows::Forms::Button());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->statisticMComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->statisticMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->loginPanel->SuspendLayout();
 			this->registerPanel->SuspendLayout();
 			this->clientMPanel->SuspendLayout();
@@ -279,7 +286,7 @@ namespace OPO2SUMproject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->stockMDGV))->BeginInit();
 			this->addStockPanel->SuspendLayout();
 			this->statisticMTabPage->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->statisticMDGV))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// loginPanel
@@ -296,6 +303,89 @@ namespace OPO2SUMproject {
 			this->loginPanel->Name = L"loginPanel";
 			this->loginPanel->Size = System::Drawing::Size(419, 462);
 			this->loginPanel->TabIndex = 0;
+			// 
+			// loginErrorLabel
+			// 
+			this->loginErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginErrorLabel->AutoSize = true;
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->loginErrorLabel->Location = System::Drawing::Point(176, 409);
+			this->loginErrorLabel->Name = L"loginErrorLabel";
+			this->loginErrorLabel->Size = System::Drawing::Size(78, 17);
+			this->loginErrorLabel->TabIndex = 18;
+			this->loginErrorLabel->Text = L"Lastname";
+			this->loginErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// loginValidateButton
+			// 
+			this->loginValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->loginValidateButton->Location = System::Drawing::Point(164, 358);
+			this->loginValidateButton->Name = L"loginValidateButton";
+			this->loginValidateButton->Size = System::Drawing::Size(87, 34);
+			this->loginValidateButton->TabIndex = 11;
+			this->loginValidateButton->Text = L"Validate";
+			this->loginValidateButton->UseVisualStyleBackColor = true;
+			this->loginValidateButton->Click += gcnew System::EventHandler(this, &MyForm::loginValidateButton_Click);
+			// 
+			// loginRegisterButton
+			// 
+			this->loginRegisterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->loginRegisterButton->Location = System::Drawing::Point(350, 3);
+			this->loginRegisterButton->Name = L"loginRegisterButton";
+			this->loginRegisterButton->Size = System::Drawing::Size(66, 34);
+			this->loginRegisterButton->TabIndex = 5;
+			this->loginRegisterButton->Text = L"Register";
+			this->loginRegisterButton->UseVisualStyleBackColor = true;
+			this->loginRegisterButton->Click += gcnew System::EventHandler(this, &MyForm::loginRegisterButton_Click);
+			// 
+			// loginPasswordLabel
+			// 
+			this->loginPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginPasswordLabel->AutoSize = true;
+			this->loginPasswordLabel->Location = System::Drawing::Point(176, 233);
+			this->loginPasswordLabel->Name = L"loginPasswordLabel";
+			this->loginPasswordLabel->Size = System::Drawing::Size(77, 17);
+			this->loginPasswordLabel->TabIndex = 4;
+			this->loginPasswordLabel->Text = L"Password";
+			// 
+			// loginPasswordTextBox
+			// 
+			this->loginPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginPasswordTextBox->Location = System::Drawing::Point(164, 254);
+			this->loginPasswordTextBox->Name = L"loginPasswordTextBox";
+			this->loginPasswordTextBox->PasswordChar = '*';
+			this->loginPasswordTextBox->Size = System::Drawing::Size(89, 22);
+			this->loginPasswordTextBox->TabIndex = 3;
+			// 
+			// loginUsernameTextBox
+			// 
+			this->loginUsernameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginUsernameTextBox->Location = System::Drawing::Point(164, 172);
+			this->loginUsernameTextBox->Name = L"loginUsernameTextBox";
+			this->loginUsernameTextBox->Size = System::Drawing::Size(89, 22);
+			this->loginUsernameTextBox->TabIndex = 2;
+			// 
+			// loginUsernameLabel
+			// 
+			this->loginUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginUsernameLabel->AutoSize = true;
+			this->loginUsernameLabel->Location = System::Drawing::Point(176, 151);
+			this->loginUsernameLabel->Name = L"loginUsernameLabel";
+			this->loginUsernameLabel->Size = System::Drawing::Size(81, 17);
+			this->loginUsernameLabel->TabIndex = 1;
+			this->loginUsernameLabel->Text = L"Username";
+			// 
+			// loginLoginLabel
+			// 
+			this->loginLoginLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginLoginLabel->AutoSize = true;
+			this->loginLoginLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->loginLoginLabel->Location = System::Drawing::Point(164, 54);
+			this->loginLoginLabel->Name = L"loginLoginLabel";
+			this->loginLoginLabel->Size = System::Drawing::Size(96, 38);
+			this->loginLoginLabel->TabIndex = 0;
+			this->loginLoginLabel->Text = L"Login";
 			// 
 			// registerPanel
 			// 
@@ -326,7 +416,7 @@ namespace OPO2SUMproject {
 			this->registerBirthdayLabel->AutoSize = true;
 			this->registerBirthdayLabel->Location = System::Drawing::Point(108, 242);
 			this->registerBirthdayLabel->Name = L"registerBirthdayLabel";
-			this->registerBirthdayLabel->Size = System::Drawing::Size(61, 18);
+			this->registerBirthdayLabel->Size = System::Drawing::Size(68, 17);
 			this->registerBirthdayLabel->TabIndex = 17;
 			this->registerBirthdayLabel->Text = L"Birthday";
 			// 
@@ -334,7 +424,7 @@ namespace OPO2SUMproject {
 			// 
 			this->registerDateTimePicker->Location = System::Drawing::Point(86, 269);
 			this->registerDateTimePicker->Name = L"registerDateTimePicker";
-			this->registerDateTimePicker->Size = System::Drawing::Size(200, 24);
+			this->registerDateTimePicker->Size = System::Drawing::Size(200, 22);
 			this->registerDateTimePicker->TabIndex = 9;
 			// 
 			// registerErrorLabel
@@ -345,7 +435,7 @@ namespace OPO2SUMproject {
 			this->registerErrorLabel->ForeColor = System::Drawing::Color::Red;
 			this->registerErrorLabel->Location = System::Drawing::Point(161, 374);
 			this->registerErrorLabel->Name = L"registerErrorLabel";
-			this->registerErrorLabel->Size = System::Drawing::Size(67, 18);
+			this->registerErrorLabel->Size = System::Drawing::Size(78, 17);
 			this->registerErrorLabel->TabIndex = 16;
 			this->registerErrorLabel->Text = L"Lastname";
 			this->registerErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -356,7 +446,7 @@ namespace OPO2SUMproject {
 			this->registerLastnameLabel->AutoSize = true;
 			this->registerLastnameLabel->Location = System::Drawing::Point(208, 178);
 			this->registerLastnameLabel->Name = L"registerLastnameLabel";
-			this->registerLastnameLabel->Size = System::Drawing::Size(67, 18);
+			this->registerLastnameLabel->Size = System::Drawing::Size(78, 17);
 			this->registerLastnameLabel->TabIndex = 15;
 			this->registerLastnameLabel->Text = L"Lastname";
 			// 
@@ -366,7 +456,7 @@ namespace OPO2SUMproject {
 			this->registerFirstnameLabel->AutoSize = true;
 			this->registerFirstnameLabel->Location = System::Drawing::Point(21, 175);
 			this->registerFirstnameLabel->Name = L"registerFirstnameLabel";
-			this->registerFirstnameLabel->Size = System::Drawing::Size(70, 18);
+			this->registerFirstnameLabel->Size = System::Drawing::Size(79, 17);
 			this->registerFirstnameLabel->TabIndex = 14;
 			this->registerFirstnameLabel->Text = L"Firstname";
 			// 
@@ -375,7 +465,7 @@ namespace OPO2SUMproject {
 			this->registerLastnameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerLastnameTextBox->Location = System::Drawing::Point(196, 196);
 			this->registerLastnameTextBox->Name = L"registerLastnameTextBox";
-			this->registerLastnameTextBox->Size = System::Drawing::Size(165, 24);
+			this->registerLastnameTextBox->Size = System::Drawing::Size(165, 22);
 			this->registerLastnameTextBox->TabIndex = 13;
 			// 
 			// registerFirstnameTextBox
@@ -383,7 +473,7 @@ namespace OPO2SUMproject {
 			this->registerFirstnameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerFirstnameTextBox->Location = System::Drawing::Point(10, 196);
 			this->registerFirstnameTextBox->Name = L"registerFirstnameTextBox";
-			this->registerFirstnameTextBox->Size = System::Drawing::Size(165, 24);
+			this->registerFirstnameTextBox->Size = System::Drawing::Size(165, 22);
 			this->registerFirstnameTextBox->TabIndex = 12;
 			// 
 			// registerValidateButton
@@ -424,7 +514,7 @@ namespace OPO2SUMproject {
 			this->registerPasswordTextBox->Location = System::Drawing::Point(196, 132);
 			this->registerPasswordTextBox->Name = L"registerPasswordTextBox";
 			this->registerPasswordTextBox->PasswordChar = '*';
-			this->registerPasswordTextBox->Size = System::Drawing::Size(165, 24);
+			this->registerPasswordTextBox->Size = System::Drawing::Size(165, 22);
 			this->registerPasswordTextBox->TabIndex = 3;
 			// 
 			// registerUsernameTextBox
@@ -456,89 +546,6 @@ namespace OPO2SUMproject {
 			this->registerRegisterLabel->Size = System::Drawing::Size(147, 38);
 			this->registerRegisterLabel->TabIndex = 0;
 			this->registerRegisterLabel->Text = L"Register";
-			// 
-			// loginErrorLabel
-			// 
-			this->loginErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginErrorLabel->AutoSize = true;
-			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
-			this->loginErrorLabel->Location = System::Drawing::Point(176, 409);
-			this->loginErrorLabel->Name = L"loginErrorLabel";
-			this->loginErrorLabel->Size = System::Drawing::Size(67, 18);
-			this->loginErrorLabel->TabIndex = 18;
-			this->loginErrorLabel->Text = L"Lastname";
-			this->loginErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// loginValidateButton
-			// 
-			this->loginValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->loginValidateButton->Location = System::Drawing::Point(164, 358);
-			this->loginValidateButton->Name = L"loginValidateButton";
-			this->loginValidateButton->Size = System::Drawing::Size(87, 34);
-			this->loginValidateButton->TabIndex = 11;
-			this->loginValidateButton->Text = L"Validate";
-			this->loginValidateButton->UseVisualStyleBackColor = true;
-			this->loginValidateButton->Click += gcnew System::EventHandler(this, &MyForm::loginValidateButton_Click);
-			// 
-			// loginRegisterButton
-			// 
-			this->loginRegisterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->loginRegisterButton->Location = System::Drawing::Point(350, 3);
-			this->loginRegisterButton->Name = L"loginRegisterButton";
-			this->loginRegisterButton->Size = System::Drawing::Size(66, 34);
-			this->loginRegisterButton->TabIndex = 5;
-			this->loginRegisterButton->Text = L"Register";
-			this->loginRegisterButton->UseVisualStyleBackColor = true;
-			this->loginRegisterButton->Click += gcnew System::EventHandler(this, &MyForm::loginRegisterButton_Click);
-			// 
-			// loginPasswordLabel
-			// 
-			this->loginPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginPasswordLabel->AutoSize = true;
-			this->loginPasswordLabel->Location = System::Drawing::Point(176, 233);
-			this->loginPasswordLabel->Name = L"loginPasswordLabel";
-			this->loginPasswordLabel->Size = System::Drawing::Size(68, 18);
-			this->loginPasswordLabel->TabIndex = 4;
-			this->loginPasswordLabel->Text = L"Password";
-			// 
-			// loginPasswordTextBox
-			// 
-			this->loginPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginPasswordTextBox->Location = System::Drawing::Point(164, 254);
-			this->loginPasswordTextBox->Name = L"loginPasswordTextBox";
-			this->loginPasswordTextBox->PasswordChar = '*';
-			this->loginPasswordTextBox->Size = System::Drawing::Size(89, 24);
-			this->loginPasswordTextBox->TabIndex = 3;
-			// 
-			// loginUsernameTextBox
-			// 
-			this->loginUsernameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginUsernameTextBox->Location = System::Drawing::Point(164, 172);
-			this->loginUsernameTextBox->Name = L"loginUsernameTextBox";
-			this->loginUsernameTextBox->Size = System::Drawing::Size(89, 24);
-			this->loginUsernameTextBox->TabIndex = 2;
-			// 
-			// loginUsernameLabel
-			// 
-			this->loginUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginUsernameLabel->AutoSize = true;
-			this->loginUsernameLabel->Location = System::Drawing::Point(176, 151);
-			this->loginUsernameLabel->Name = L"loginUsernameLabel";
-			this->loginUsernameLabel->Size = System::Drawing::Size(70, 18);
-			this->loginUsernameLabel->TabIndex = 1;
-			this->loginUsernameLabel->Text = L"Username";
-			// 
-			// loginLoginLabel
-			// 
-			this->loginLoginLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginLoginLabel->AutoSize = true;
-			this->loginLoginLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->loginLoginLabel->Location = System::Drawing::Point(164, 54);
-			this->loginLoginLabel->Name = L"loginLoginLabel";
-			this->loginLoginLabel->Size = System::Drawing::Size(96, 38);
-			this->loginLoginLabel->TabIndex = 0;
-			this->loginLoginLabel->Text = L"Login";
 			// 
 			// clientMPanel
 			// 
@@ -873,9 +880,9 @@ namespace OPO2SUMproject {
 			// 
 			// stockMTabPage
 			// 
+			this->stockMTabPage->Controls->Add(this->addStockPanel);
 			this->stockMTabPage->Controls->Add(this->informationStockPanel);
 			this->stockMTabPage->Controls->Add(this->stockMPanel);
-			this->stockMTabPage->Controls->Add(this->addStockPanel);
 			this->stockMTabPage->Location = System::Drawing::Point(4, 25);
 			this->stockMTabPage->Name = L"stockMTabPage";
 			this->stockMTabPage->Padding = System::Windows::Forms::Padding(3);
@@ -973,10 +980,10 @@ namespace OPO2SUMproject {
 			// 
 			// addStockPanel
 			// 
-			this->addStockPanel->Controls->Add(this->textBox5);
-			this->addStockPanel->Controls->Add(this->textBox4);
-			this->addStockPanel->Controls->Add(this->textBox3);
-			this->addStockPanel->Controls->Add(this->textBox2);
+			this->addStockPanel->Controls->Add(this->addStockRestockingTextBox);
+			this->addStockPanel->Controls->Add(this->addStockStockTextBox);
+			this->addStockPanel->Controls->Add(this->addStockTVATextBox);
+			this->addStockPanel->Controls->Add(this->addStockMargeTextBox);
 			this->addStockPanel->Controls->Add(this->addStockCostTextBox);
 			this->addStockPanel->Controls->Add(this->addStockRestockingLabel);
 			this->addStockPanel->Controls->Add(this->addStockStockLabel);
@@ -995,77 +1002,41 @@ namespace OPO2SUMproject {
 			this->addStockPanel->Size = System::Drawing::Size(472, 491);
 			this->addStockPanel->TabIndex = 9;
 			// 
-			// textBox5
+			// addStockRestockingTextBox
 			// 
-			this->textBox5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+			this->addStockRestockingTextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox5->Location = System::Drawing::Point(3, 368);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(466, 22);
-			this->textBox5->TabIndex = 16;
+			this->addStockRestockingTextBox->Location = System::Drawing::Point(3, 368);
+			this->addStockRestockingTextBox->Name = L"addStockRestockingTextBox";
+			this->addStockRestockingTextBox->Size = System::Drawing::Size(466, 22);
+			this->addStockRestockingTextBox->TabIndex = 16;
 			// 
-			// textBox4
+			// addStockStockTextBox
 			// 
-			this->textBox4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+			this->addStockStockTextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox4->Location = System::Drawing::Point(3, 323);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(466, 22);
-			this->textBox4->TabIndex = 17;
+			this->addStockStockTextBox->Location = System::Drawing::Point(3, 323);
+			this->addStockStockTextBox->Name = L"addStockStockTextBox";
+			this->addStockStockTextBox->Size = System::Drawing::Size(466, 22);
+			this->addStockStockTextBox->TabIndex = 17;
 			// 
-			// textBox3
+			// addStockTVATextBox
 			// 
-			this->textBox3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+			this->addStockTVATextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox3->Location = System::Drawing::Point(3, 278);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(466, 22);
-			this->textBox3->TabIndex = 16;
+			this->addStockTVATextBox->Location = System::Drawing::Point(3, 278);
+			this->addStockTVATextBox->Name = L"addStockTVATextBox";
+			this->addStockTVATextBox->Size = System::Drawing::Size(466, 22);
+			this->addStockTVATextBox->TabIndex = 16;
 			// 
-			// textBox2
+			// addStockMargeTextBox
 			// 
-			this->textBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+			this->addStockMargeTextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox2->Location = System::Drawing::Point(3, 233);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(466, 22);
-			this->textBox2->TabIndex = 15;
-			// 
-			// textBox5
-			// 
-			this->textBox5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox5->Location = System::Drawing::Point(3, 368);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(447, 22);
-			this->textBox5->TabIndex = 16;
-			// 
-			// textBox4
-			// 
-			this->textBox4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox4->Location = System::Drawing::Point(3, 323);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(447, 22);
-			this->textBox4->TabIndex = 17;
-			// 
-			// textBox3
-			// 
-			this->textBox3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox3->Location = System::Drawing::Point(3, 278);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(447, 22);
-			this->textBox3->TabIndex = 16;
-			// 
-			// textBox2
-			// 
-			this->textBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->textBox2->Location = System::Drawing::Point(3, 233);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(447, 22);
-			this->textBox2->TabIndex = 15;
+			this->addStockMargeTextBox->Location = System::Drawing::Point(3, 233);
+			this->addStockMargeTextBox->Name = L"addStockMargeTextBox";
+			this->addStockMargeTextBox->Size = System::Drawing::Size(466, 22);
+			this->addStockMargeTextBox->TabIndex = 15;
 			// 
 			// addStockCostTextBox
 			// 
@@ -1194,8 +1165,8 @@ namespace OPO2SUMproject {
 			// statisticMTabPage
 			// 
 			this->statisticMTabPage->Controls->Add(this->statisticMStatisticButton);
-			this->statisticMTabPage->Controls->Add(this->comboBox1);
-			this->statisticMTabPage->Controls->Add(this->dataGridView1);
+			this->statisticMTabPage->Controls->Add(this->statisticMComboBox);
+			this->statisticMTabPage->Controls->Add(this->statisticMDGV);
 			this->statisticMTabPage->Location = System::Drawing::Point(4, 25);
 			this->statisticMTabPage->Name = L"statisticMTabPage";
 			this->statisticMTabPage->Padding = System::Windows::Forms::Padding(3);
@@ -1213,23 +1184,23 @@ namespace OPO2SUMproject {
 			this->statisticMStatisticButton->Text = L"Statistique";
 			this->statisticMStatisticButton->UseVisualStyleBackColor = true;
 			// 
-			// comboBox1
+			// statisticMComboBox
 			// 
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(357, 473);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 24);
-			this->comboBox1->TabIndex = 15;
+			this->statisticMComboBox->FormattingEnabled = true;
+			this->statisticMComboBox->Location = System::Drawing::Point(357, 473);
+			this->statisticMComboBox->Name = L"statisticMComboBox";
+			this->statisticMComboBox->Size = System::Drawing::Size(121, 24);
+			this->statisticMComboBox->TabIndex = 15;
 			// 
-			// dataGridView1
+			// statisticMDGV
 			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(6, 6);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(472, 461);
-			this->dataGridView1->TabIndex = 0;
+			this->statisticMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->statisticMDGV->Location = System::Drawing::Point(6, 6);
+			this->statisticMDGV->Name = L"statisticMDGV";
+			this->statisticMDGV->RowHeadersWidth = 51;
+			this->statisticMDGV->RowTemplate->Height = 24;
+			this->statisticMDGV->Size = System::Drawing::Size(472, 461);
+			this->statisticMDGV->TabIndex = 0;
 			// 
 			// MyForm
 			// 
@@ -1264,14 +1235,13 @@ namespace OPO2SUMproject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->orderMDGV))->EndInit();
 			this->stockMTabPage->ResumeLayout(false);
 			this->informationStockPanel->ResumeLayout(false);
-			this->informationStockPanel->PerformLayout();
 			this->stockMPanel->ResumeLayout(false);
 			this->stockMPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->stockMDGV))->EndInit();
 			this->addStockPanel->ResumeLayout(false);
 			this->addStockPanel->PerformLayout();
 			this->statisticMTabPage->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->statisticMDGV))->EndInit();
 			this->ResumeLayout(false);
 
 		}
