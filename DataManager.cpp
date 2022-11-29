@@ -80,11 +80,11 @@ OPO2SUMproject::Product::Product(int selectedId) {
 	this->id = DataTableReaderProduct->GetInt32(0);
 	this->name_product = DataTableReaderProduct[1]->ToString();
 	this->element_per_unit_product = DataTableReaderProduct->GetInt32(2);
-	this->cost_product = (float) DataTableReaderProduct->GetDouble(3);
-	this->marge_product = (float) DataTableReaderProduct->GetDouble(4);
-	this->tva_product = (float) DataTableReaderProduct->GetDouble(5);
+	this->cost_product = (float)DataTableReaderProduct->GetDouble(3);
+	this->marge_product = (float)DataTableReaderProduct->GetDouble(4);
+	this->tva_product = (float)DataTableReaderProduct->GetDouble(5);
 	this->stock_product = DataTableReaderProduct->GetInt32(6);
-	this->restocking_threshold_product= DataTableReaderProduct->GetInt32(7);
+	this->restocking_threshold_product = DataTableReaderProduct->GetInt32(7);
 
 	DataTableReaderProduct->Close();
 }
@@ -95,7 +95,6 @@ OPO2SUMproject::Payment::Payment(int selectedId) {
 	System::Data::DataSet^ dataSetPayment = Adata->getRows("SELECT * FROM opo2sum.dbo.Payment WHERE id_payment = " + selectedId, "Temp");
 	System::Data::DataTableReader^ DataTableReaderPayment = dataSetPayment->CreateDataReader();
 	DataTableReaderPayment->Read();
-
 
 	this->id = DataTableReaderPayment->GetInt32(0);
 	this->date_payment = DataTableReaderPayment[1]->ToString();
@@ -113,27 +112,28 @@ OPO2SUMproject::Bill::Bill(int selectedId) {
 	System::Data::DataTableReader^ DataTableReaderBill = dataSetBill->CreateDataReader();
 	DataTableReaderBill->Read();
 
-
 	this->id = DataTableReaderBill->GetInt32(0);
 	this->total_bill = (float)DataTableReaderBill->GetDouble(1);
 	this->total_tva = (float)DataTableReaderBill->GetDouble(2);
-	this->order= gcnew Order(DataTableReaderBill->GetInt32(3));
+	this->order = gcnew Order(DataTableReaderBill->GetInt32(3));
 
 	DataTableReaderBill->Close();
 }
 
 // Constructor Living
 
-OPO2SUMproject::Living::Living(int selectedId) {
-	System::Data::DataSet^ dataSetLiving = Adata->getRows("SELECT * FROM opo2sum.dbo.Living WHERE id_living = " + selectedId, "Temp");
-	System::Data::DataTableReader^ DataTableReaderLiving = dataSetLiving->CreateDataReader();
-	DataTableReaderLiving->Read();
+OPO2SUMproject::Living::Living(int id_account, int id_address) {
+	Account^ address = gcnew Account(id_address);
+	Address^ account = gcnew Address(id_account);
+}
 
+//Constructor Contain
 
-	this->id_account = gcnew Account(DataTableReaderLiving->GetInt32(0));
-	this->id_address = gcnew Address(DataTableReaderLiving->GetInt32(1));
-	
-	DataTableReaderLiving->Close();
+OPO2SUMproject::Contain::Contain(int id_order, int id_product, int nb) {
+
+	Order^ order = gcnew Order(id_order);
+	Product^ product = gcnew Product(id_product);
+	this->nb_element = nb;
 }
 
 // Account Manager ----------------------------------------------------------------------
@@ -154,7 +154,7 @@ void OPO2SUMproject::AccountManager::deleteElement(Account^ obj) {
 	AccountManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::AccountManager::update(Account^ obj) {
-	Adata->actionRows("UPDATE Account SET account_name = '" + obj->get_account_name() + "', password_account = '" + obj->get_password_account() + "', firstname_account = '" + 	obj->get_firstname_account() + "', lastname_account ='" + obj->get_lastname_account() +	"', birthday_account = '" + obj->get_birthday_account() + "', permission_lv_account = '" + obj->get_permission_lv_account() + "' WHERE id_account = " + obj->get_id() + ";");
+	Adata->actionRows("UPDATE Account SET account_name = '" + obj->get_account_name() + "', password_account = '" + obj->get_password_account() + "', firstname_account = '" + obj->get_firstname_account() + "', lastname_account ='" + obj->get_lastname_account() + "', birthday_account = '" + obj->get_birthday_account() + "', permission_lv_account = '" + obj->get_permission_lv_account() + "' WHERE id_account = " + obj->get_id() + ";");
 }
 
 // Personnel Manager ---------------------------------------------------------------------
@@ -246,7 +246,7 @@ void OPO2SUMproject::ProductManager::update(Product^ obj) {
 OPO2SUMproject::Payment^ OPO2SUMproject::PaymentManager::select(int id) {
 	return gcnew Payment(id);
 }
-void OPO2SUMproject::PaymentManager::insert(System::String^ date_payment, int method_payment,int balance_payment, int order) {
+void OPO2SUMproject::PaymentManager::insert(System::String^ date_payment, int method_payment, int balance_payment, int order) {
 	AccessData^ Adata = gcnew AccessData;
 	Adata->actionRows("INSERT INTO Payment " +
 		"(date_payment, method_payment, balance_payment, id_order) " +
@@ -259,7 +259,7 @@ void OPO2SUMproject::PaymentManager::deleteElement(Payment^ obj) {
 	PaymentManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::PaymentManager::update(Payment^ obj) {
-	Adata->actionRows("UPDATE Payment SET date_payment = '" + obj->get_date_payment() + "', method_payment = " + obj->get_method_payment() + ", balance_payment = " + obj->get_balance_payment() + ", id_order = " + obj->get_order()->get_id() +" WHERE id_payment = " + obj->get_id() + ";");
+	Adata->actionRows("UPDATE Payment SET date_payment = '" + obj->get_date_payment() + "', method_payment = " + obj->get_method_payment() + ", balance_payment = " + obj->get_balance_payment() + ", id_order = " + obj->get_order()->get_id() + " WHERE id_payment = " + obj->get_id() + ";");
 }
 
 
@@ -281,7 +281,7 @@ void OPO2SUMproject::BillManager::deleteElement(Bill^ obj) {
 	BillManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::BillManager::update(Bill^ obj) {
-	Adata->actionRows("UPDATE Bill SET total_bill = " + obj->get_total_bill() + ", total_tva = " + obj->get_total_tva() + ", id_order= " + obj->get_order()->get_id() + " WHERE id_bill = " + obj->get_id() + ";"); 
+	Adata->actionRows("UPDATE Bill SET total_bill = " + obj->get_total_bill() + ", total_tva = " + obj->get_total_tva() + ", id_order= " + obj->get_order()->get_id() + " WHERE id_bill = " + obj->get_id() + ";");
 
 }
 
@@ -296,3 +296,13 @@ void OPO2SUMproject::LivingManager::insert(int id_account, int id_address) {
 
 //Contain Manager----------------------------------------------------------------------------
 
+void OPO2SUMproject::ContainManager::insert(Order^ id_order, Product^ id_product, int nb_element) {
+	AccessData^ Adata = gcnew AccessData;
+	Adata->actionRows("INSERT INTO Contain " +
+		"(id_order, id_product, nb_element)" +
+		"VALUES(" + id_order + ", " + id_product+ ", " + nb_element + ");");
+}
+void OPO2SUMproject::ContainManager::update(Contain^ obj) {
+	Adata->actionRows("UPDATE Contain SET nb_element = " + obj->get_nb_element() + " WHERE id_product = " + obj->get_id_product() + "OR id_order = " + obj->get_id_order() + ";");
+
+}

@@ -231,11 +231,11 @@ namespace OPO2SUMproject
 		float total_bill;
 		float total_tva;
 		Order^ order;
-	
+
 
 	public:
 		Bill(int id);
-		 
+
 		float get_total_bill() { return total_bill; }
 		float get_total_tva() { return total_tva; }
 		Order^ get_order() { return order; }
@@ -243,10 +243,10 @@ namespace OPO2SUMproject
 		void set_total_bill(float bill) { this->total_bill = bill; }
 		void set_total_tva(float tva) { this->total_tva = tva; }
 		void set_id_order(Order^ currentOrder) { this->order = currentOrder; }
-		
+
 
 	};
-	
+
 	ref class BillManager : ClassTableManager
 	{
 	public:
@@ -260,19 +260,19 @@ namespace OPO2SUMproject
 
 	ref class Living {
 	private:
-		Account^ id_account;
-		Address^ id_address;
+		Account^ account;
+		Address^ address;
 		AccessData^ Adata = gcnew AccessData;
 
 
 	public:
-		Living(int id);
+		Living(int account, int address);
 
-		Account^ get_id_account() { return id_account; }
-		Address^ get_address() { return id_address; }
+		Account^ get_account() { return account; }
+		Address^ get_address() { return address; }
 
-		void set_id_account(Account^ account) { this->id_account = account; }
-		void set_id_address(Address^ address) { this->id_address = address; }
+		void set_account(Account^ account) { this->account = account; }
+		void set_address(Address^ address) { this->address = address; }
 	};
 
 	ref class LivingManager : ClassTableManager
@@ -281,17 +281,33 @@ namespace OPO2SUMproject
 		void insert(int id_account, int id_address);
 	};
 
-	
 
-	ref class Contain : ClassTable {};
-/*
+
+	ref class Contain : ClassTable {
+	private:
+		Order^ id_order;
+		Product^ id_product;
+		int nb_element;
+		AccessData^ Adata = gcnew AccessData;
+
+	public:
+		Contain(int id_order, int id_product, int nb);
+
+		Order^ get_id_order() { return id_order; }
+		Product^ get_id_product() { return id_product; }
+		int get_nb_element() { return nb_element; }
+
+		void set_id_order(Order^ order) { this->id_order = order; }
+		void set_id_product(Product^ product) { this->id_product = product; }
+		void set_nb_element(int number) { this->nb_element = number; }
+	};
+
+
 	ref class ContainManager : ClassTableManager
 	{
 	public:
-		Contain^ select(int id);
-		void insert(Contain^);
-		void deleteElement(Contain^);
+		void insert(Order^ id_order, Product^ id_product, int nb_element);
 		void update(Contain^);
-	};*/
-}
+	};
+};
 
