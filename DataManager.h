@@ -90,36 +90,6 @@ namespace OPO2SUMproject
 		void update(Personnel^);
 	};
 
-
-	ref class Order : ClassTable {
-	private:
-		System::String^ delivery_date;
-		System::String^ issue_date;
-		Account^ account;
-
-	public:
-		Order(int id);
-
-		System::String^ get_delivery_date() { return delivery_date; }
-		System::String^ get_issue_date() { return issue_date; }
-		Account^ get_account() { return account; }
-
-		void set_delivery_date(System::String^ date) { delivery_date = date; }
-		void set_issue_date(System::String^ date) { issue_date = date; }
-		void set_account(Account^ currentAccount) { account = currentAccount; }
-	};
-
-	ref class OrderManager : ClassTableManager
-	{
-	public:
-		Order^ select(int id);
-		void insert(System::String^ delivery_date, System::String^ issue_date, int id_account);
-		void deleteElement(int id);
-		void deleteElement(Order^);
-		void update(Order^);
-	};
-
-
 	ref class Address : ClassTable {
 	private:
 		System::String^ street;
@@ -151,6 +121,39 @@ namespace OPO2SUMproject
 		void update(Address^);
 	};
 
+	ref class Order : ClassTable {
+	private:
+		System::String^ delivery_date;
+		System::String^ issue_date;
+		Account^ account;
+		Address^ billing_adderess;
+		Address^ shipping_adderess;
+
+	public:
+		Order(int id);
+
+		System::String^ get_delivery_date() { return delivery_date; }
+		System::String^ get_issue_date() { return issue_date; }
+		Account^ get_account() { return account; }
+		Address^ get_billing_address() { return billing_adderess; }
+		Address^ get_shipping_address() { return shipping_adderess; }
+
+		void set_delivery_date(System::String^ date) { delivery_date = date; }
+		void set_issue_date(System::String^ date) { issue_date = date; }
+		void set_account(Account^ currentAccount) { account = currentAccount; }
+		void set_billing_address(Address^ setAddress) { billing_adderess = setAddress; }
+		void set_shipping_address(Address^ setAddress) { shipping_adderess = setAddress; }
+	};
+
+	ref class OrderManager : ClassTableManager
+	{
+	public:
+		Order^ select(int id);
+		void insert(System::String^ delivery_date, System::String^ issue_date, int id_account, int id_billing_adderess, int id_shipping_adderess);
+		void deleteElement(int id);
+		void deleteElement(Order^);
+		void update(Order^);
+	};
 
 	ref class Product : ClassTable {
 	private:

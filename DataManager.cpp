@@ -50,6 +50,8 @@ OPO2SUMproject::Order::Order(int selectedId) {
 	this->delivery_date = DataTableReaderAccount[1]->ToString();
 	this->issue_date = DataTableReaderAccount[2]->ToString();
 	this->account = gcnew Account(DataTableReaderAccount->GetInt32(3));
+	this->billing_adderess = gcnew Address(DataTableReaderAccount->GetInt32(4));
+	this->shipping_adderess = gcnew Address(DataTableReaderAccount->GetInt32(5));
 
 	DataTableReaderAccount->Close();
 }
@@ -127,6 +129,10 @@ OPO2SUMproject::Living::Living(int id_account, int id_address) {
 	Address^ account = gcnew Address(id_account);
 }
 
+	this->id_account = gcnew Account(DataTableReaderLiving->GetInt32(0));
+	this->id_address = gcnew Address(DataTableReaderLiving->GetInt32(1));
+
+	DataTableReaderLiving->Close();
 //Constructor Contain
 
 OPO2SUMproject::Contain::Contain(int id_order, int id_product, int nb) {
@@ -183,11 +189,11 @@ void OPO2SUMproject::PersonnelManager::update(Personnel^ obj) {
 OPO2SUMproject::Order^ OPO2SUMproject::OrderManager::select(int id) {
 	return gcnew Order(id);
 }
-void OPO2SUMproject::OrderManager::insert(System::String^ delivery_date, System::String^ issue_date, int id_account) {
+void OPO2SUMproject::OrderManager::insert(System::String^ delivery_date, System::String^ issue_date, int id_account, int id_billing_address, int id_shipping_address) {
 	AccessData^ Adata = gcnew AccessData;
 	Adata->actionRows("INSERT INTO orderTab " +
-		"(delivery_date, issue_date, id_account) " +
-		"VALUES('" + delivery_date + "', '" + issue_date + "', " + id_account + ");");
+		"(delivery_date, issue_date, id_account, id_billing_address, id_shipping_address) " +
+		"VALUES('" + delivery_date + "', '" + issue_date + "', " + id_account + ", " + id_billing_address + ", " + id_shipping_address + ");");
 }
 void OPO2SUMproject::OrderManager::deleteElement(int selectedId) {
 	Adata->actionRows("DELETE FROM orderTab WHERE id_order = " + selectedId);
@@ -196,7 +202,7 @@ void OPO2SUMproject::OrderManager::deleteElement(Order^ obj) {
 	OrderManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::OrderManager::update(Order^ obj) {
-	Adata->actionRows("UPDATE orderTab SET delivery_date = '" + obj->get_delivery_date() + "', issue_date = '" + obj->get_issue_date() + "', id_account = " + obj->get_account()->get_id() + " WHERE id_order = " + obj->get_id() + ";");
+	Adata->actionRows("UPDATE orderTab SET delivery_date = '" + obj->get_delivery_date() + "', issue_date = '" + obj->get_issue_date() + "', id_account = " + obj->get_account()->get_id() + ", id_account = " + obj->get_billing_address()->get_id() + ", id_account = " + obj->get_shipping_address()->get_id() + " WHERE id_order = " + obj->get_id() + ";");
 }
 
 //Address Manager----------------------------------------------------------------------
