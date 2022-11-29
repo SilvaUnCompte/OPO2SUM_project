@@ -296,6 +296,8 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// 
 			// loginPanel
 			// 
+			this->loginPanel->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->loginPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->loginPanel->Controls->Add(this->loginPasswordPanel);
 			this->loginPanel->Controls->Add(this->loginUsernamePanel);
 			this->loginPanel->Controls->Add(this->loginErrorLabel);
@@ -306,7 +308,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			this->loginPanel->Location = System::Drawing::Point(0, 0);
 			this->loginPanel->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->loginPanel->Name = L"loginPanel";
-			this->loginPanel->Size = System::Drawing::Size(1186, 714);
+			this->loginPanel->Size = System::Drawing::Size(1188, 687);
 			this->loginPanel->TabIndex = 0;
 			// 
 			// loginUsernamePanel
@@ -339,12 +341,14 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// loginErrorLabel
 			// 
 			this->loginErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->loginErrorLabel->AutoSize = true;
+			this->loginErrorLabel->BackColor = System::Drawing::Color::Transparent;
+			this->loginErrorLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
-			this->loginErrorLabel->Location = System::Drawing::Point(532, 428);
+			this->loginErrorLabel->Location = System::Drawing::Point(374, 416);
 			this->loginErrorLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->loginErrorLabel->Name = L"loginErrorLabel";
-			this->loginErrorLabel->Size = System::Drawing::Size(67, 19);
+			this->loginErrorLabel->Size = System::Drawing::Size(445, 68);
 			this->loginErrorLabel->TabIndex = 18;
 			this->loginErrorLabel->Text = L"Lastname";
 			this->loginErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -353,7 +357,9 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// 
 			this->loginValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->loginValidateButton->BackColor = System::Drawing::Color::LimeGreen;
-			this->loginValidateButton->Location = System::Drawing::Point(373, 499);
+			this->loginValidateButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 12, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->loginValidateButton->Location = System::Drawing::Point(373, 501);
 			this->loginValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->loginValidateButton->Name = L"loginValidateButton";
 			this->loginValidateButton->Size = System::Drawing::Size(445, 64);
@@ -365,13 +371,16 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// loginRegisterButton
 			// 
 			this->loginRegisterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->loginRegisterButton->Location = System::Drawing::Point(1078, 3);
+			this->loginRegisterButton->BackColor = System::Drawing::Color::LimeGreen;
+			this->loginRegisterButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 12, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->loginRegisterButton->Location = System::Drawing::Point(1051, 12);
 			this->loginRegisterButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->loginRegisterButton->Name = L"loginRegisterButton";
-			this->loginRegisterButton->Size = System::Drawing::Size(106, 36);
+			this->loginRegisterButton->Size = System::Drawing::Size(126, 64);
 			this->loginRegisterButton->TabIndex = 5;
 			this->loginRegisterButton->Text = L"Register";
-			this->loginRegisterButton->UseVisualStyleBackColor = true;
+			this->loginRegisterButton->UseVisualStyleBackColor = false;
 			this->loginRegisterButton->Click += gcnew System::EventHandler(this, &MyForm::loginRegisterButton_Click);
 			// 
 			// loginPasswordTextBox
@@ -397,12 +406,14 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// 
 			this->loginLoginLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->loginLoginLabel->AutoSize = true;
-			this->loginLoginLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->loginLoginLabel->BackColor = System::Drawing::Color::Transparent;
+			this->loginLoginLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 72, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->loginLoginLabel->Location = System::Drawing::Point(396, 73);
+			this->loginLoginLabel->ForeColor = System::Drawing::Color::LimeGreen;
+			this->loginLoginLabel->Location = System::Drawing::Point(12, 9);
 			this->loginLoginLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->loginLoginLabel->Name = L"loginLoginLabel";
-			this->loginLoginLabel->Size = System::Drawing::Size(96, 38);
+			this->loginLoginLabel->Size = System::Drawing::Size(352, 135);
 			this->loginLoginLabel->TabIndex = 0;
 			this->loginLoginLabel->Text = L"Login";
 			// 
@@ -428,14 +439,14 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			this->registerPanel->Location = System::Drawing::Point(0, 0);
 			this->registerPanel->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->registerPanel->Name = L"registerPanel";
-			this->registerPanel->Size = System::Drawing::Size(1186, 714);
+			this->registerPanel->Size = System::Drawing::Size(1188, 687);
 			this->registerPanel->TabIndex = 12;
 			// 
 			// registerBirthdayLabel
 			// 
 			this->registerBirthdayLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerBirthdayLabel->AutoSize = true;
-			this->registerBirthdayLabel->Location = System::Drawing::Point(515, 257);
+			this->registerBirthdayLabel->Location = System::Drawing::Point(516, 257);
 			this->registerBirthdayLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->registerBirthdayLabel->Name = L"registerBirthdayLabel";
 			this->registerBirthdayLabel->Size = System::Drawing::Size(60, 19);
@@ -444,10 +455,10 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// 
 			// registerDateTimePicker
 			// 
-			this->registerDateTimePicker->Location = System::Drawing::Point(497, 319);
+			this->registerDateTimePicker->Location = System::Drawing::Point(473, 332);
 			this->registerDateTimePicker->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->registerDateTimePicker->Name = L"registerDateTimePicker";
-			this->registerDateTimePicker->Size = System::Drawing::Size(156, 25);
+			this->registerDateTimePicker->Size = System::Drawing::Size(223, 25);
 			this->registerDateTimePicker->TabIndex = 9;
 			// 
 			// registerErrorLabel
@@ -456,7 +467,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			this->registerErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerErrorLabel->AutoSize = true;
 			this->registerErrorLabel->ForeColor = System::Drawing::Color::Red;
-			this->registerErrorLabel->Location = System::Drawing::Point(556, 397);
+			this->registerErrorLabel->Location = System::Drawing::Point(557, 397);
 			this->registerErrorLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->registerErrorLabel->Name = L"registerErrorLabel";
 			this->registerErrorLabel->Size = System::Drawing::Size(67, 19);
@@ -468,7 +479,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// 
 			this->registerLastnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerLastnameLabel->AutoSize = true;
-			this->registerLastnameLabel->Location = System::Drawing::Point(592, 189);
+			this->registerLastnameLabel->Location = System::Drawing::Point(593, 189);
 			this->registerLastnameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->registerLastnameLabel->Name = L"registerLastnameLabel";
 			this->registerLastnameLabel->Size = System::Drawing::Size(67, 19);
@@ -479,7 +490,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// 
 			this->registerFirstnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerFirstnameLabel->AutoSize = true;
-			this->registerFirstnameLabel->Location = System::Drawing::Point(447, 186);
+			this->registerFirstnameLabel->Location = System::Drawing::Point(448, 186);
 			this->registerFirstnameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->registerFirstnameLabel->Name = L"registerFirstnameLabel";
 			this->registerFirstnameLabel->Size = System::Drawing::Size(69, 19);
@@ -489,7 +500,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// registerLastnameTextBox
 			// 
 			this->registerLastnameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->registerLastnameTextBox->Location = System::Drawing::Point(583, 208);
+			this->registerLastnameTextBox->Location = System::Drawing::Point(584, 208);
 			this->registerLastnameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->registerLastnameTextBox->Name = L"registerLastnameTextBox";
 			this->registerLastnameTextBox->Size = System::Drawing::Size(129, 25);
@@ -498,7 +509,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// registerFirstnameTextBox
 			// 
 			this->registerFirstnameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->registerFirstnameTextBox->Location = System::Drawing::Point(438, 208);
+			this->registerFirstnameTextBox->Location = System::Drawing::Point(439, 208);
 			this->registerFirstnameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->registerFirstnameTextBox->Name = L"registerFirstnameTextBox";
 			this->registerFirstnameTextBox->Size = System::Drawing::Size(129, 25);
@@ -507,7 +518,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// registerValidateButton
 			// 
 			this->registerValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->registerValidateButton->Location = System::Drawing::Point(898, 591);
+			this->registerValidateButton->Location = System::Drawing::Point(900, 564);
 			this->registerValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->registerValidateButton->Name = L"registerValidateButton";
 			this->registerValidateButton->Size = System::Drawing::Size(68, 36);
@@ -519,7 +530,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// registerLoginButton
 			// 
 			this->registerLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->registerLoginButton->Location = System::Drawing::Point(1133, 3);
+			this->registerLoginButton->Location = System::Drawing::Point(1135, 3);
 			this->registerLoginButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->registerLoginButton->Name = L"registerLoginButton";
 			this->registerLoginButton->Size = System::Drawing::Size(51, 36);
@@ -532,7 +543,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// 
 			this->registerPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerPasswordLabel->AutoSize = true;
-			this->registerPasswordLabel->Location = System::Drawing::Point(592, 118);
+			this->registerPasswordLabel->Location = System::Drawing::Point(593, 118);
 			this->registerPasswordLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->registerPasswordLabel->Name = L"registerPasswordLabel";
 			this->registerPasswordLabel->Size = System::Drawing::Size(67, 19);
@@ -542,7 +553,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// registerPasswordTextBox
 			// 
 			this->registerPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->registerPasswordTextBox->Location = System::Drawing::Point(583, 140);
+			this->registerPasswordTextBox->Location = System::Drawing::Point(584, 140);
 			this->registerPasswordTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->registerPasswordTextBox->Name = L"registerPasswordTextBox";
 			this->registerPasswordTextBox->PasswordChar = '*';
@@ -552,7 +563,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// registerUsernameTextBox
 			// 
 			this->registerUsernameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->registerUsernameTextBox->Location = System::Drawing::Point(438, 140);
+			this->registerUsernameTextBox->Location = System::Drawing::Point(439, 140);
 			this->registerUsernameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->registerUsernameTextBox->Name = L"registerUsernameTextBox";
 			this->registerUsernameTextBox->Size = System::Drawing::Size(129, 25);
@@ -562,7 +573,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			// 
 			this->registerUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerUsernameLabel->AutoSize = true;
-			this->registerUsernameLabel->Location = System::Drawing::Point(447, 118);
+			this->registerUsernameLabel->Location = System::Drawing::Point(448, 118);
 			this->registerUsernameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->registerUsernameLabel->Name = L"registerUsernameLabel";
 			this->registerUsernameLabel->Size = System::Drawing::Size(70, 19);
@@ -575,7 +586,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			this->registerRegisterLabel->AutoSize = true;
 			this->registerRegisterLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->registerRegisterLabel->Location = System::Drawing::Point(496, 41);
+			this->registerRegisterLabel->Location = System::Drawing::Point(497, 41);
 			this->registerRegisterLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->registerRegisterLabel->Name = L"registerRegisterLabel";
 			this->registerRegisterLabel->Size = System::Drawing::Size(147, 38);
@@ -1315,7 +1326,7 @@ private: System::Windows::Forms::Panel^ loginPasswordPanel;
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 17);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->ClientSize = System::Drawing::Size(1186, 714);
+			this->ClientSize = System::Drawing::Size(1188, 687);
 			this->Controls->Add(this->loginPanel);
 			this->Controls->Add(this->managerTablePanel);
 			this->Controls->Add(this->registerPanel);
