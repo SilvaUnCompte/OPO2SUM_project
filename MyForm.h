@@ -1168,18 +1168,18 @@ namespace OPO2SUMproject {
 		mn->deleteElement(py);*/
 
 		
-		/*AddressManager^ mn2 = gcnew AddressManager();
-		mn2->insert("Rue des clochards", 14000, "gotham", "3eme etage");*/
+		/*AddressManager^ mn1 = gcnew AddressManager();
+		mn1->insert("Rue des clochards", 14000, "gotham", "3eme etage");
 
-		//ProductManager^ mn3 = gcnew ProductManager();
-		//mn3->insert("doits robotiques", 10, 1, 40002, 0.2, 300, 100);
+		AccountManager^ mn2 = gcnew AccountManager();
+		mn2->insert("Bob","1111","B","O","2002-02-01",0);
 
-		/*OrderManager^ mn5 = gcnew OrderManager();
-		mn5->insert("2019-10-02", "2019-09-02", 1);
+		OrderManager^ mn5 = gcnew OrderManager();
+		mn5->insert("2019-10-02", "2019-09-02", 1, 1, 1);*/
 
-		Order^ order1 = gcnew Order(1);
+		//Order^ order1 = gcnew Order(1);
 		
-		BillManager^ mn4 = gcnew BillManager();
+		/*BillManager^ mn4 = gcnew BillManager();
 		mn4->insert(20, 20, 1);
 		
 		Bill^ changer = gcnew Bill(1);
