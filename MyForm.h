@@ -1172,10 +1172,19 @@ namespace OPO2SUMproject {
 		//ProductManager^ mn3 = gcnew ProductManager();
 		//mn3->insert("doits robotiques", 10, 1, 40002, 0.2, 300, 100);
 
-		/*Product^ changer = gcnew Product(2);
+		/*OrderManager^ mn5 = gcnew OrderManager();
+		mn5->insert("2019-10-02", "2019-09-02", 1);
+
+		Order^ order1 = gcnew Order(1);
 		*/
-		/*changer->set_restocking_threshold_product(150);
-		mn3->update(changer);*/
+		/*BillManager^ mn4 = gcnew BillManager();
+		mn4->insert(20, 20, 1);
+		
+		Bill^ changer = gcnew Bill(1);
+		
+		changer->set_total_bill(200);
+		mn4->deleteElement(2);*/
+
 		//Account^ test3 = gcnew Account(1);
 		// 
 		//mn3->deleteElement(5);
