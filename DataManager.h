@@ -252,29 +252,32 @@ namespace OPO2SUMproject
 		void update(Bill^);
 	};
 
-	/*
-	ref class Living : ClassTable {};
+	
+	ref class Living {
+	private:
+		Account^ id_account;
+		Address^ id_address;
+		AccessData^ Adata = gcnew AccessData;
+
+
+	public:
+		Living(int id);
+
+		Account^ get_id_account() { return id_account; }
+		Address^ get_address() { return id_address; }
+
+		void set_id_account(Account^ account) { this->id_account = account; }
+		void set_id_address(Address^ address) { this->id_address = address; }
+	};
 
 	ref class LivingManager : ClassTableManager
 	{
 	public:
-		Living^ select(int id);
-		void insert(Living^);
-		void deleteElement(Living^);
-		void update(Living^);
+		void insert(int id_account, int id_address);
 	};
+
 	
-	ref class Billing : ClassTable {};
-
-	ref class BillingManager : ClassTableManager
-	{
-	public:
-		Billing^ select(int id);
-		void insert(Billing^);
-		void deleteElement(Billing^);
-		void update(Billing^);
-	};
-
+/*
 	ref class Contain : ClassTable {};
 
 	ref class ContainManager : ClassTableManager

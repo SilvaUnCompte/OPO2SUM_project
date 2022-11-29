@@ -107,6 +107,18 @@ OPO2SUMproject::Bill::Bill(int selectedId) {
 	DataTableReaderBill->Close();
 }
 
+OPO2SUMproject::Living::Living(int selectedId) {
+	System::Data::DataSet^ dataSetLiving = Adata->getRows("SELECT * FROM opo2sum.dbo.Living WHERE id_living = " + selectedId, "Temp");
+	System::Data::DataTableReader^ DataTableReaderLiving = dataSetLiving->CreateDataReader();
+	DataTableReaderLiving->Read();
+
+
+	this->id_account = gcnew Account(DataTableReaderLiving->GetInt32(0));
+	this->id_address = gcnew Address(DataTableReaderLiving->GetInt32(1));
+	
+	DataTableReaderLiving->Close();
+}
+
 // Account Manager ----------------------------------------------------------------------
 
 OPO2SUMproject::Account^ OPO2SUMproject::AccountManager::select(int id) {
@@ -255,3 +267,13 @@ void OPO2SUMproject::BillManager::update(Bill^ obj) {
 	Adata->actionRows("UPDATE Bill SET total_bill = " + obj->get_total_bill() + ", total_tva = " + obj->get_total_tva() + ", id_order= " + obj->get_order()->get_id() + " WHERE id_bill = " + obj->get_id() + ";"); 
 
 }
+
+//Living Manager--------------------------------------------------------------------------
+
+void OPO2SUMproject::LivingManager::insert(int id_account, int id_address) {
+	AccessData^ Adata = gcnew AccessData;
+	Adata->actionRows("INSERT INTO Living " +
+		"(id_account, id_address)" +
+		"VALUES(" + id_account + ", " + id_address + ");");
+}
+
