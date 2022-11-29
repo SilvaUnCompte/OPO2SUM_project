@@ -133,7 +133,7 @@ namespace OPO2SUMproject
 
 		void set_street(System::String^ st) { this->street = st; }
 		void set_postal_code(int zip) { this->postal_code = zip; }
-		void set_city(System::String^ city) { this->city= city; }
+		void set_city(System::String^ city) { this->city = city; }
 		void set_address_complement(System::String^ address) { this->address_complement = address; }
 	};
 
@@ -146,7 +146,7 @@ namespace OPO2SUMproject
 		void deleteElement(Address^);
 		void update(Address^);
 	};
-	
+
 	ref class Product : ClassTable {
 	private:
 		System::String^ name_product;
@@ -175,9 +175,9 @@ namespace OPO2SUMproject
 		void set_tva_product(float tva) { this->tva_product = tva; }
 		void set_stock_product(int stock) { this->stock_product = stock; }
 		void set_restocking_threshold_product(int restocking) { this->restocking_threshold_product = restocking; }
-		
+
 	};
-	
+
 	ref class ProductManager : ClassTableManager
 	{
 	public:
@@ -188,19 +188,37 @@ namespace OPO2SUMproject
 		void update(Product^);
 	};
 
-	/*
-	ref class Payment : ClassTable {};
+	ref class Payment : ClassTable {
+	private:
+		System::String^ date_payment;
+		int method_payment;
+		int balance_payment;
+		Order^ order;
+
+	public:
+		Payment(int id);
+
+		System::String^ get_date_payment() { return date_payment; }
+		int get_method_payment() { return method_payment; }
+		int get_balance_payment() { return balance_payment; }
+		Order^ get_order() { return order; }
+
+		void set_date_payment(System::String^ setDate_payment) { this->date_payment = setDate_payment; }
+		void set_method_payment(int setMethod_payment) { this->method_payment = setMethod_payment; }
+		void set_balance_payment(int setBalance_payment) { this->balance_payment = setBalance_payment; }
+		void set_order(Order^ setOrder) { this->order = setOrder; }
+	};
 
 	ref class PaymentManager : ClassTableManager
 	{
 	public:
 		Payment^ select(int id);
-		void insert(Payment^);
+		void insert(System::String^ date_payment, int method_payment, int balance_payment, int order);
 		void deleteElement(int id);
 		void deleteElement(Payment^);
 		void update(Payment^);
 	};
-	*/
+	
 
 
 	ref class Bill : ClassTable {
