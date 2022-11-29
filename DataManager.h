@@ -21,6 +21,7 @@ namespace OPO2SUMproject
 		AccessData^ Adata = gcnew AccessData;
 	};
 
+
 	ref class Account : ClassTable
 	{
 	private:
@@ -59,6 +60,7 @@ namespace OPO2SUMproject
 		void update(Account^);
 	};
 
+
 	ref class Personnel : ClassTable
 	{
 	private:
@@ -88,6 +90,7 @@ namespace OPO2SUMproject
 		void update(Personnel^);
 	};
 
+
 	ref class Order : ClassTable {
 	private:
 		System::String^ delivery_date;
@@ -115,6 +118,7 @@ namespace OPO2SUMproject
 		void deleteElement(Order^);
 		void update(Order^);
 	};
+
 
 	ref class Address : ClassTable {
 	private:
@@ -146,6 +150,7 @@ namespace OPO2SUMproject
 		void deleteElement(Address^);
 		void update(Address^);
 	};
+
 
 	ref class Product : ClassTable {
 	private:
@@ -188,6 +193,7 @@ namespace OPO2SUMproject
 		void update(Product^);
 	};
 
+
 	ref class Payment : ClassTable {
 	private:
 		System::String^ date_payment;
@@ -218,7 +224,6 @@ namespace OPO2SUMproject
 		void deleteElement(Payment^);
 		void update(Payment^);
 	};
-	
 
 
 	ref class Bill : ClassTable {
@@ -252,7 +257,7 @@ namespace OPO2SUMproject
 		void update(Bill^);
 	};
 
-	
+
 	ref class Living {
 	private:
 		Account^ id_account;
@@ -277,9 +282,9 @@ namespace OPO2SUMproject
 	};
 
 	
-/*
-	ref class Contain : ClassTable {};
 
+	ref class Contain : ClassTable {};
+/*
 	ref class ContainManager : ClassTableManager
 	{
 	public:

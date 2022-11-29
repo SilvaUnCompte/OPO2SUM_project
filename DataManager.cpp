@@ -3,7 +3,10 @@
 #include "DataManager.h"
 
 // Constructor Classe-Tab
+
 OPO2SUMproject::ClassTable::ClassTable() {}
+
+// Constructor Account
 
 OPO2SUMproject::Account::Account(int selectedId) {
 	System::Data::DataSet^ dataSetAccount = Adata->getRows("SELECT * FROM opo2sum.dbo.Account WHERE id_account = " + selectedId, "Temp");
@@ -21,6 +24,8 @@ OPO2SUMproject::Account::Account(int selectedId) {
 	DataTableReaderAccount->Close();
 }
 
+// Constructor Personnel
+
 OPO2SUMproject::Personnel::Personnel(int selectedId) {
 	System::Data::DataSet^ dataSetPersonnel = Adata->getRows("SELECT * FROM opo2sum.dbo.Personnel WHERE id_personnel = " + selectedId, "Temp");
 	System::Data::DataTableReader^ DataTableReaderPersonnel = dataSetPersonnel->CreateDataReader();
@@ -33,6 +38,8 @@ OPO2SUMproject::Personnel::Personnel(int selectedId) {
 
 	DataTableReaderPersonnel->Close();
 }
+
+// Constructor Order
 
 OPO2SUMproject::Order::Order(int selectedId) {
 	System::Data::DataSet^ dataSetAccount = Adata->getRows("SELECT * FROM opo2sum.dbo.orderTab WHERE id_order = " + selectedId, "Temp");
@@ -47,6 +54,8 @@ OPO2SUMproject::Order::Order(int selectedId) {
 	DataTableReaderAccount->Close();
 }
 
+// Constructor Address
+
 OPO2SUMproject::Address::Address(int selectedId) {
 	System::Data::DataSet^ dataSetAddress = Adata->getRows("SELECT * FROM opo2sum.dbo.Address WHERE id_address = " + selectedId, "Temp");
 	System::Data::DataTableReader^ DataTableReaderAddress = dataSetAddress->CreateDataReader();
@@ -60,6 +69,8 @@ OPO2SUMproject::Address::Address(int selectedId) {
 
 	DataTableReaderAddress->Close();
 }
+
+// Constructor Product
 
 OPO2SUMproject::Product::Product(int selectedId) {
 	System::Data::DataSet^ dataSetProduct = Adata->getRows("SELECT * FROM opo2sum.dbo.product WHERE id_product = " + selectedId, "Temp");
@@ -78,6 +89,8 @@ OPO2SUMproject::Product::Product(int selectedId) {
 	DataTableReaderProduct->Close();
 }
 
+// Constructor Payment
+
 OPO2SUMproject::Payment::Payment(int selectedId) {
 	System::Data::DataSet^ dataSetPayment = Adata->getRows("SELECT * FROM opo2sum.dbo.Payment WHERE id_payment = " + selectedId, "Temp");
 	System::Data::DataTableReader^ DataTableReaderPayment = dataSetPayment->CreateDataReader();
@@ -93,6 +106,8 @@ OPO2SUMproject::Payment::Payment(int selectedId) {
 	DataTableReaderPayment->Close();
 }
 
+// Constructor Bill
+
 OPO2SUMproject::Bill::Bill(int selectedId) {
 	System::Data::DataSet^ dataSetBill = Adata->getRows("SELECT * FROM opo2sum.dbo.bill WHERE id_bill = " + selectedId, "Temp");
 	System::Data::DataTableReader^ DataTableReaderBill = dataSetBill->CreateDataReader();
@@ -106,6 +121,8 @@ OPO2SUMproject::Bill::Bill(int selectedId) {
 
 	DataTableReaderBill->Close();
 }
+
+// Constructor Living
 
 OPO2SUMproject::Living::Living(int selectedId) {
 	System::Data::DataSet^ dataSetLiving = Adata->getRows("SELECT * FROM opo2sum.dbo.Living WHERE id_living = " + selectedId, "Temp");
@@ -276,4 +293,6 @@ void OPO2SUMproject::LivingManager::insert(int id_account, int id_address) {
 		"(id_account, id_address)" +
 		"VALUES(" + id_account + ", " + id_address + ");");
 }
+
+//Contain Manager----------------------------------------------------------------------------
 
