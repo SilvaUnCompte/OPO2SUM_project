@@ -779,6 +779,15 @@ namespace OPO2SUMproject {
 			this->accountModifyButton->Enabled = false;
 			this->loginErrorLabel->Text = "";
 			this->accountErrorLabel->Text = "";
+
+
+			AccessData^ AdataAddress = gcnew AccessData;
+			System::Data::DataSet^ listAddress = AdataAddress->getRows("SELECT id_account FROM account WHERE account_name = '" + this->loginUsernameTextBox->Text + "' AND password_account = '" + loginPasswordTextBox->Text->GetHashCode().ToString() + "';", "Temp");
+
+			this->accountAddressListComboBox->DataSource = rightLogin->Tables[0];
+			this->accountAddressListComboBox->ValueMember = "id_account";
+			this->accountAddressListComboBox->DisplayMember = "id_account";
+
 		}
 		DataTableReaderTest->Close();
 	}
