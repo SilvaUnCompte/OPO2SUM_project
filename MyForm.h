@@ -171,6 +171,7 @@ namespace OPO2SUMproject {
 	private:
 		Account^ connectedAccount;
 		AddressManager^ addressManager = gcnew AddressManager();
+		AccountManager^ accountManager = gcnew AccountManager();
 
 
 #pragma region Windows Form Designer generated code
@@ -2224,7 +2225,26 @@ namespace OPO2SUMproject {
 		}
 	}
 	private: System::Void accountAddressDeleteButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		addressManager->deleteElement(int::Parse(this->accountAddressListComboBox->SelectedValue->ToString()));
+		AccessData^ Adata = gcnew AccessData;
+		System::Data::DataSet^ alreadyExist = Adata->getRows("IF EXISTS (SELECT id_account FROM account WHERE account_name = 'trashcan') BEGIN SELECT 0 END ELSE BEGIN SELECT 1 END;", "Temp");
+		System::Data::DataTableReader^ DataTableReaderTest = alreadyExist->CreateDataReader();
+		DataTableReaderTest->Read();
+		if (DataTableReaderTest->GetInt32(0)) {
+			accountManager->insert("trashcan", "", "", "", "2000-01-01", 4);
+		}
+		DataTableReaderTest->Close();
+
+		AccessData^ Adata_1 = gcnew AccessData;
+		alreadyExist = Adata_1->getRows("SELECT id_account FROM account WHERE account_name = 'trashcan';", "Temp");
+		DataTableReaderTest = alreadyExist->CreateDataReader();
+		DataTableReaderTest->Read();
+
+		Account^ selectedAccount = gcnew Account(DataTableReaderTest->GetInt32(0));
+
+		Address^ selectedAddress = gcnew Address(int::Parse(this->accountAddressListComboBox->SelectedValue->ToString()));
+		selectedAddress->set_account(selectedAccount);
+		addressManager->update(selectedAddress);
+
 		refreshAddressList();
 	}
 	};
