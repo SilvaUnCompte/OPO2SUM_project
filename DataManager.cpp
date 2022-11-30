@@ -128,7 +128,6 @@ OPO2SUMproject::Living::Living(int id_account, int id_address) {
 	Account^ address = gcnew Account(id_address);
 	Address^ account = gcnew Address(id_account);
 }
-
 //Constructor Contain
 
 OPO2SUMproject::Contain::Contain(int id_order, int id_product, int nb) {
