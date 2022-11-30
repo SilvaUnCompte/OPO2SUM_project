@@ -175,6 +175,42 @@ private: System::Windows::Forms::Button^ menuOrderButton;
 private: System::Windows::Forms::Panel^ titleBarPanel;
 private: System::Windows::Forms::Label^ titleBarLabel;
 private: System::Windows::Forms::Label^ nameProjectLabel;
+private: System::Windows::Forms::Button^ menuAccountButton;
+private: System::Windows::Forms::Panel^ accountPanel;
+private: System::Windows::Forms::TextBox^ accountAddressMoreTextBox;
+
+private: System::Windows::Forms::TextBox^ accountAddressPostalTextBox;
+
+private: System::Windows::Forms::TextBox^ accountAddressCityTextBox;
+
+private: System::Windows::Forms::TextBox^ accountAddressNbTextBox;
+
+private: System::Windows::Forms::TextBox^ accountBirthdayTextBox;
+
+private: System::Windows::Forms::TextBox^ accountPasswordTextBox;
+
+private: System::Windows::Forms::TextBox^ accountLastnameTextBox;
+private: System::Windows::Forms::TextBox^ accountFisrtnameTextBox;
+
+
+private: System::Windows::Forms::TextBox^ accountUsernameTextBox;
+private: System::Windows::Forms::Label^ accountAddressMoreLabel;
+private: System::Windows::Forms::Label^ accountPostalCodeLabel;
+private: System::Windows::Forms::Label^ accountCityLabel;
+private: System::Windows::Forms::Label^ accountStreetLabel;
+private: System::Windows::Forms::Label^ accountAddressLabel;
+private: System::Windows::Forms::Label^ accountBirthdayLabel;
+private: System::Windows::Forms::Label^ accountPasswordLabel;
+private: System::Windows::Forms::Label^ accountLastnameLabel;
+private: System::Windows::Forms::Label^ accountFirstnameLabel;
+private: System::Windows::Forms::Label^ accountUsernameLabel;
+private: System::Windows::Forms::Label^ accountTitleLabel;
+private: System::Windows::Forms::ComboBox^ accountAddressListComboBox;
+private: System::Windows::Forms::Button^ accountModifyButton;
+private: System::Windows::Forms::Button^ accountAddressAddButton;
+private: System::Windows::Forms::Button^ accountAddressDeleteButton;
+
+
 
 
 	protected:
@@ -282,14 +318,40 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			this->statisticMComboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->statisticMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->menuButtonPanel = (gcnew System::Windows::Forms::Panel());
+			this->menuAccountButton = (gcnew System::Windows::Forms::Button());
 			this->menuStatisticButton = (gcnew System::Windows::Forms::Button());
 			this->menuStockButton = (gcnew System::Windows::Forms::Button());
 			this->menuOrderButton = (gcnew System::Windows::Forms::Button());
 			this->menuClientButton = (gcnew System::Windows::Forms::Button());
 			this->menuLogoPanel = (gcnew System::Windows::Forms::Panel());
+			this->nameProjectLabel = (gcnew System::Windows::Forms::Label());
 			this->titleBarPanel = (gcnew System::Windows::Forms::Panel());
 			this->titleBarLabel = (gcnew System::Windows::Forms::Label());
-			this->nameProjectLabel = (gcnew System::Windows::Forms::Label());
+			this->accountPanel = (gcnew System::Windows::Forms::Panel());
+			this->accountModifyButton = (gcnew System::Windows::Forms::Button());
+			this->accountAddressListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->accountAddressMoreTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountAddressPostalTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountAddressCityTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountAddressNbTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountBirthdayTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountFisrtnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountAddressMoreLabel = (gcnew System::Windows::Forms::Label());
+			this->accountPostalCodeLabel = (gcnew System::Windows::Forms::Label());
+			this->accountCityLabel = (gcnew System::Windows::Forms::Label());
+			this->accountStreetLabel = (gcnew System::Windows::Forms::Label());
+			this->accountAddressLabel = (gcnew System::Windows::Forms::Label());
+			this->accountBirthdayLabel = (gcnew System::Windows::Forms::Label());
+			this->accountPasswordLabel = (gcnew System::Windows::Forms::Label());
+			this->accountLastnameLabel = (gcnew System::Windows::Forms::Label());
+			this->accountFirstnameLabel = (gcnew System::Windows::Forms::Label());
+			this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
+			this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
+			this->accountAddressDeleteButton = (gcnew System::Windows::Forms::Button());
+			this->accountAddressAddButton = (gcnew System::Windows::Forms::Button());
 			this->loginPanel->SuspendLayout();
 			this->loginPasswordPanel->SuspendLayout();
 			this->loginUsernamePanel->SuspendLayout();
@@ -313,6 +375,7 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			this->menuButtonPanel->SuspendLayout();
 			this->menuLogoPanel->SuspendLayout();
 			this->titleBarPanel->SuspendLayout();
+			this->accountPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// loginPanel
@@ -465,7 +528,7 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			this->registerPanel->Controls->Add(this->registerUsernameLabel);
 			this->registerPanel->Controls->Add(this->registerRegisterLabel);
 			this->registerPanel->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->registerPanel->Location = System::Drawing::Point(851, 405);
+			this->registerPanel->Location = System::Drawing::Point(851, 117);
 			this->registerPanel->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->registerPanel->Name = L"registerPanel";
 			this->registerPanel->Size = System::Drawing::Size(337, 282);
@@ -1344,6 +1407,7 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			// 
 			this->menuButtonPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
 				static_cast<System::Int32>(static_cast<System::Byte>(76)));
+			this->menuButtonPanel->Controls->Add(this->menuAccountButton);
 			this->menuButtonPanel->Controls->Add(this->menuStatisticButton);
 			this->menuButtonPanel->Controls->Add(this->menuStockButton);
 			this->menuButtonPanel->Controls->Add(this->menuOrderButton);
@@ -1355,8 +1419,28 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			this->menuButtonPanel->Size = System::Drawing::Size(220, 687);
 			this->menuButtonPanel->TabIndex = 13;
 			// 
+			// menuAccountButton
+			// 
+			this->menuAccountButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->menuAccountButton->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->menuAccountButton->FlatAppearance->BorderSize = 0;
+			this->menuAccountButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->menuAccountButton->ForeColor = System::Drawing::Color::Gainsboro;
+			this->menuAccountButton->Location = System::Drawing::Point(0, 627);
+			this->menuAccountButton->Name = L"menuAccountButton";
+			this->menuAccountButton->Size = System::Drawing::Size(220, 60);
+			this->menuAccountButton->TabIndex = 5;
+			this->menuAccountButton->Text = L"My Account";
+			this->menuAccountButton->UseVisualStyleBackColor = true;
+			this->menuAccountButton->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::menuAccountButton_MouseDown);
+			this->menuAccountButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuAccountButton_MouseEnter);
+			this->menuAccountButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuAccountButton_MouseLeave);
+			// 
 			// menuStatisticButton
 			// 
+			this->menuStatisticButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->menuStatisticButton->Dock = System::Windows::Forms::DockStyle::Top;
 			this->menuStatisticButton->FlatAppearance->BorderSize = 0;
 			this->menuStatisticButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
@@ -1374,6 +1458,7 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			// 
 			// menuStockButton
 			// 
+			this->menuStockButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->menuStockButton->Dock = System::Windows::Forms::DockStyle::Top;
 			this->menuStockButton->FlatAppearance->BorderSize = 0;
 			this->menuStockButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
@@ -1391,6 +1476,7 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			// 
 			// menuOrderButton
 			// 
+			this->menuOrderButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->menuOrderButton->Dock = System::Windows::Forms::DockStyle::Top;
 			this->menuOrderButton->FlatAppearance->BorderSize = 0;
 			this->menuOrderButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
@@ -1408,6 +1494,7 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			// 
 			// menuClientButton
 			// 
+			this->menuClientButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->menuClientButton->Dock = System::Windows::Forms::DockStyle::Top;
 			this->menuClientButton->FlatAppearance->BorderSize = 0;
 			this->menuClientButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
@@ -1434,6 +1521,18 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			this->menuLogoPanel->Size = System::Drawing::Size(220, 80);
 			this->menuLogoPanel->TabIndex = 0;
 			// 
+			// nameProjectLabel
+			// 
+			this->nameProjectLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->nameProjectLabel->ForeColor = System::Drawing::Color::LightGray;
+			this->nameProjectLabel->Location = System::Drawing::Point(3, 0);
+			this->nameProjectLabel->Name = L"nameProjectLabel";
+			this->nameProjectLabel->Size = System::Drawing::Size(214, 80);
+			this->nameProjectLabel->TabIndex = 0;
+			this->nameProjectLabel->Text = L"OPO2SUM";
+			this->nameProjectLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// titleBarPanel
 			// 
 			this->titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
@@ -1458,17 +1557,242 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			this->titleBarLabel->TabIndex = 0;
 			this->titleBarLabel->Text = L"HOME";
 			// 
-			// nameProjectLabel
+			// accountPanel
 			// 
-			this->nameProjectLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Bold,
+			this->accountPanel->Controls->Add(this->accountAddressAddButton);
+			this->accountPanel->Controls->Add(this->accountAddressDeleteButton);
+			this->accountPanel->Controls->Add(this->accountModifyButton);
+			this->accountPanel->Controls->Add(this->accountAddressListComboBox);
+			this->accountPanel->Controls->Add(this->accountAddressMoreTextBox);
+			this->accountPanel->Controls->Add(this->accountAddressPostalTextBox);
+			this->accountPanel->Controls->Add(this->accountAddressCityTextBox);
+			this->accountPanel->Controls->Add(this->accountAddressNbTextBox);
+			this->accountPanel->Controls->Add(this->accountBirthdayTextBox);
+			this->accountPanel->Controls->Add(this->accountPasswordTextBox);
+			this->accountPanel->Controls->Add(this->accountLastnameTextBox);
+			this->accountPanel->Controls->Add(this->accountFisrtnameTextBox);
+			this->accountPanel->Controls->Add(this->accountUsernameTextBox);
+			this->accountPanel->Controls->Add(this->accountAddressMoreLabel);
+			this->accountPanel->Controls->Add(this->accountPostalCodeLabel);
+			this->accountPanel->Controls->Add(this->accountCityLabel);
+			this->accountPanel->Controls->Add(this->accountStreetLabel);
+			this->accountPanel->Controls->Add(this->accountAddressLabel);
+			this->accountPanel->Controls->Add(this->accountBirthdayLabel);
+			this->accountPanel->Controls->Add(this->accountPasswordLabel);
+			this->accountPanel->Controls->Add(this->accountLastnameLabel);
+			this->accountPanel->Controls->Add(this->accountFirstnameLabel);
+			this->accountPanel->Controls->Add(this->accountUsernameLabel);
+			this->accountPanel->Controls->Add(this->accountTitleLabel);
+			this->accountPanel->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->accountPanel->Location = System::Drawing::Point(220, 80);
+			this->accountPanel->Name = L"accountPanel";
+			this->accountPanel->Size = System::Drawing::Size(968, 607);
+			this->accountPanel->TabIndex = 15;
+			// 
+			// accountModifyButton
+			// 
+			this->accountModifyButton->Enabled = false;
+			this->accountModifyButton->Location = System::Drawing::Point(802, 555);
+			this->accountModifyButton->Name = L"accountModifyButton";
+			this->accountModifyButton->Size = System::Drawing::Size(154, 40);
+			this->accountModifyButton->TabIndex = 21;
+			this->accountModifyButton->Text = L"Modify account";
+			this->accountModifyButton->UseVisualStyleBackColor = true;
+			// 
+			// accountAddressListComboBox
+			// 
+			this->accountAddressListComboBox->FormattingEnabled = true;
+			this->accountAddressListComboBox->Location = System::Drawing::Point(88, 407);
+			this->accountAddressListComboBox->Name = L"accountAddressListComboBox";
+			this->accountAddressListComboBox->Size = System::Drawing::Size(462, 25);
+			this->accountAddressListComboBox->TabIndex = 20;
+			// 
+			// accountAddressMoreTextBox
+			// 
+			this->accountAddressMoreTextBox->Location = System::Drawing::Point(88, 508);
+			this->accountAddressMoreTextBox->Name = L"accountAddressMoreTextBox";
+			this->accountAddressMoreTextBox->Size = System::Drawing::Size(462, 25);
+			this->accountAddressMoreTextBox->TabIndex = 19;
+			// 
+			// accountAddressPostalTextBox
+			// 
+			this->accountAddressPostalTextBox->Location = System::Drawing::Point(459, 458);
+			this->accountAddressPostalTextBox->Name = L"accountAddressPostalTextBox";
+			this->accountAddressPostalTextBox->Size = System::Drawing::Size(91, 25);
+			this->accountAddressPostalTextBox->TabIndex = 18;
+			// 
+			// accountAddressCityTextBox
+			// 
+			this->accountAddressCityTextBox->Location = System::Drawing::Point(276, 458);
+			this->accountAddressCityTextBox->Name = L"accountAddressCityTextBox";
+			this->accountAddressCityTextBox->Size = System::Drawing::Size(158, 25);
+			this->accountAddressCityTextBox->TabIndex = 17;
+			// 
+			// accountAddressNbTextBox
+			// 
+			this->accountAddressNbTextBox->Location = System::Drawing::Point(88, 458);
+			this->accountAddressNbTextBox->Name = L"accountAddressNbTextBox";
+			this->accountAddressNbTextBox->Size = System::Drawing::Size(158, 25);
+			this->accountAddressNbTextBox->TabIndex = 16;
+			// 
+			// accountBirthdayTextBox
+			// 
+			this->accountBirthdayTextBox->Enabled = false;
+			this->accountBirthdayTextBox->Location = System::Drawing::Point(276, 235);
+			this->accountBirthdayTextBox->Name = L"accountBirthdayTextBox";
+			this->accountBirthdayTextBox->Size = System::Drawing::Size(158, 25);
+			this->accountBirthdayTextBox->TabIndex = 15;
+			// 
+			// accountPasswordTextBox
+			// 
+			this->accountPasswordTextBox->Location = System::Drawing::Point(88, 235);
+			this->accountPasswordTextBox->Name = L"accountPasswordTextBox";
+			this->accountPasswordTextBox->Size = System::Drawing::Size(158, 25);
+			this->accountPasswordTextBox->TabIndex = 14;
+			this->accountPasswordTextBox->UseSystemPasswordChar = true;
+			// 
+			// accountLastnameTextBox
+			// 
+			this->accountLastnameTextBox->Location = System::Drawing::Point(459, 142);
+			this->accountLastnameTextBox->Name = L"accountLastnameTextBox";
+			this->accountLastnameTextBox->Size = System::Drawing::Size(158, 25);
+			this->accountLastnameTextBox->TabIndex = 13;
+			// 
+			// accountFisrtnameTextBox
+			// 
+			this->accountFisrtnameTextBox->Location = System::Drawing::Point(276, 142);
+			this->accountFisrtnameTextBox->Name = L"accountFisrtnameTextBox";
+			this->accountFisrtnameTextBox->Size = System::Drawing::Size(158, 25);
+			this->accountFisrtnameTextBox->TabIndex = 12;
+			// 
+			// accountUsernameTextBox
+			// 
+			this->accountUsernameTextBox->Enabled = false;
+			this->accountUsernameTextBox->Location = System::Drawing::Point(88, 142);
+			this->accountUsernameTextBox->Name = L"accountUsernameTextBox";
+			this->accountUsernameTextBox->Size = System::Drawing::Size(158, 25);
+			this->accountUsernameTextBox->TabIndex = 11;
+			// 
+			// accountAddressMoreLabel
+			// 
+			this->accountAddressMoreLabel->AutoSize = true;
+			this->accountAddressMoreLabel->Location = System::Drawing::Point(107, 486);
+			this->accountAddressMoreLabel->Name = L"accountAddressMoreLabel";
+			this->accountAddressMoreLabel->Size = System::Drawing::Size(176, 19);
+			this->accountAddressMoreLabel->TabIndex = 10;
+			this->accountAddressMoreLabel->Text = L"More information (ex : floor)";
+			// 
+			// accountPostalCodeLabel
+			// 
+			this->accountPostalCodeLabel->AutoSize = true;
+			this->accountPostalCodeLabel->Location = System::Drawing::Point(465, 435);
+			this->accountPostalCodeLabel->Name = L"accountPostalCodeLabel";
+			this->accountPostalCodeLabel->Size = System::Drawing::Size(78, 19);
+			this->accountPostalCodeLabel->TabIndex = 9;
+			this->accountPostalCodeLabel->Text = L"Postal code";
+			// 
+			// accountCityLabel
+			// 
+			this->accountCityLabel->AutoSize = true;
+			this->accountCityLabel->Location = System::Drawing::Point(290, 435);
+			this->accountCityLabel->Name = L"accountCityLabel";
+			this->accountCityLabel->Size = System::Drawing::Size(34, 19);
+			this->accountCityLabel->TabIndex = 8;
+			this->accountCityLabel->Text = L"City";
+			// 
+			// accountStreetLabel
+			// 
+			this->accountStreetLabel->AutoSize = true;
+			this->accountStreetLabel->Location = System::Drawing::Point(105, 435);
+			this->accountStreetLabel->Name = L"accountStreetLabel";
+			this->accountStreetLabel->Size = System::Drawing::Size(125, 19);
+			this->accountStreetLabel->TabIndex = 7;
+			this->accountStreetLabel->Text = L"Number and Street";
+			// 
+			// accountAddressLabel
+			// 
+			this->accountAddressLabel->AutoSize = true;
+			this->accountAddressLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->nameProjectLabel->ForeColor = System::Drawing::Color::LightGray;
-			this->nameProjectLabel->Location = System::Drawing::Point(3, 0);
-			this->nameProjectLabel->Name = L"nameProjectLabel";
-			this->nameProjectLabel->Size = System::Drawing::Size(214, 80);
-			this->nameProjectLabel->TabIndex = 0;
-			this->nameProjectLabel->Text = L"OPO2SUM";
-			this->nameProjectLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->accountAddressLabel->Location = System::Drawing::Point(7, 325);
+			this->accountAddressLabel->Name = L"accountAddressLabel";
+			this->accountAddressLabel->Size = System::Drawing::Size(145, 44);
+			this->accountAddressLabel->TabIndex = 6;
+			this->accountAddressLabel->Text = L"Address";
+			// 
+			// accountBirthdayLabel
+			// 
+			this->accountBirthdayLabel->AutoSize = true;
+			this->accountBirthdayLabel->Location = System::Drawing::Point(290, 213);
+			this->accountBirthdayLabel->Name = L"accountBirthdayLabel";
+			this->accountBirthdayLabel->Size = System::Drawing::Size(60, 19);
+			this->accountBirthdayLabel->TabIndex = 5;
+			this->accountBirthdayLabel->Text = L"Birthday";
+			// 
+			// accountPasswordLabel
+			// 
+			this->accountPasswordLabel->AutoSize = true;
+			this->accountPasswordLabel->Location = System::Drawing::Point(105, 213);
+			this->accountPasswordLabel->Name = L"accountPasswordLabel";
+			this->accountPasswordLabel->Size = System::Drawing::Size(118, 19);
+			this->accountPasswordLabel->TabIndex = 4;
+			this->accountPasswordLabel->Text = L"Change password";
+			// 
+			// accountLastnameLabel
+			// 
+			this->accountLastnameLabel->AutoSize = true;
+			this->accountLastnameLabel->Location = System::Drawing::Point(465, 120);
+			this->accountLastnameLabel->Name = L"accountLastnameLabel";
+			this->accountLastnameLabel->Size = System::Drawing::Size(67, 19);
+			this->accountLastnameLabel->TabIndex = 3;
+			this->accountLastnameLabel->Text = L"Lastname";
+			// 
+			// accountFirstnameLabel
+			// 
+			this->accountFirstnameLabel->AutoSize = true;
+			this->accountFirstnameLabel->Location = System::Drawing::Point(290, 120);
+			this->accountFirstnameLabel->Name = L"accountFirstnameLabel";
+			this->accountFirstnameLabel->Size = System::Drawing::Size(69, 19);
+			this->accountFirstnameLabel->TabIndex = 2;
+			this->accountFirstnameLabel->Text = L"Firstname";
+			// 
+			// accountUsernameLabel
+			// 
+			this->accountUsernameLabel->AutoSize = true;
+			this->accountUsernameLabel->Location = System::Drawing::Point(105, 120);
+			this->accountUsernameLabel->Name = L"accountUsernameLabel";
+			this->accountUsernameLabel->Size = System::Drawing::Size(70, 19);
+			this->accountUsernameLabel->TabIndex = 1;
+			this->accountUsernameLabel->Text = L"Username";
+			// 
+			// accountTitleLabel
+			// 
+			this->accountTitleLabel->AutoSize = true;
+			this->accountTitleLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->accountTitleLabel->Location = System::Drawing::Point(7, 7);
+			this->accountTitleLabel->Name = L"accountTitleLabel";
+			this->accountTitleLabel->Size = System::Drawing::Size(211, 44);
+			this->accountTitleLabel->TabIndex = 0;
+			this->accountTitleLabel->Text = L"My Account";
+			// 
+			// accountAddressDeleteButton
+			// 
+			this->accountAddressDeleteButton->Location = System::Drawing::Point(583, 407);
+			this->accountAddressDeleteButton->Name = L"accountAddressDeleteButton";
+			this->accountAddressDeleteButton->Size = System::Drawing::Size(118, 25);
+			this->accountAddressDeleteButton->TabIndex = 22;
+			this->accountAddressDeleteButton->Text = L"Delete";
+			this->accountAddressDeleteButton->UseVisualStyleBackColor = true;
+			// 
+			// accountAddressAddButton
+			// 
+			this->accountAddressAddButton->Location = System::Drawing::Point(583, 508);
+			this->accountAddressAddButton->Name = L"accountAddressAddButton";
+			this->accountAddressAddButton->Size = System::Drawing::Size(118, 25);
+			this->accountAddressAddButton->TabIndex = 23;
+			this->accountAddressAddButton->Text = L"Add";
+			this->accountAddressAddButton->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
@@ -1476,6 +1800,7 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->ClientSize = System::Drawing::Size(1188, 687);
+			this->Controls->Add(this->accountPanel);
 			this->Controls->Add(this->titleBarPanel);
 			this->Controls->Add(this->menuButtonPanel);
 			this->Controls->Add(this->managerTablePanel);
@@ -1520,12 +1845,20 @@ private: System::Windows::Forms::Label^ nameProjectLabel;
 			this->menuLogoPanel->ResumeLayout(false);
 			this->titleBarPanel->ResumeLayout(false);
 			this->titleBarPanel->PerformLayout();
+			this->accountPanel->ResumeLayout(false);
+			this->accountPanel->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+		void hideAllPanel() {
+			registerPanel->Visible = false;
+			loginPanel->Visible = false;
+			managerTablePanel->Visible = false;
+			accountPanel->Visible = false;
+		}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		managerTablePanel->Visible = false;
+		hideAllPanel();
 	}
 	private: System::Void loginRegisterButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		registerPanel->Visible = true;
@@ -1629,10 +1962,6 @@ private: System::Void otherclick_Click(System::Object^ sender, System::EventArgs
 		loginUsernameTextBox->Text = "Username";
 	}
 }
-//private: System::Void menuClientButton_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-//	menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-//		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-//}
 private: System::Void menuClientButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 	menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
 		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -1689,6 +2018,24 @@ private: System::Void menuStatisticButton_MouseLeave(System::Object^ sender, Sys
 	menuStatisticButton->ForeColor = System::Drawing::Color::Gainsboro;
 	menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
 		static_cast<System::Int32>(static_cast<System::Byte>(76)));
+}
+private: System::Void menuAccountButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+	menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+		static_cast<System::Int32>(static_cast<System::Byte>(32)));
+	menuAccountButton->ForeColor = System::Drawing::Color::Black;
+}
+private: System::Void menuAccountButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+	menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	menuAccountButton->ForeColor = System::Drawing::Color::Gainsboro;
+	menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+		static_cast<System::Int32>(static_cast<System::Byte>(76)));
+}
+private: System::Void menuAccountButton_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	hideAllPanel();
+	accountPanel->Visible = true;
 }
 };
 }
