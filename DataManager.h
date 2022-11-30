@@ -21,6 +21,7 @@ namespace OPO2SUMproject
 		AccessData^ Adata = gcnew AccessData;
 	};
 
+
 	ref class Account : ClassTable
 	{
 	private:
@@ -59,6 +60,7 @@ namespace OPO2SUMproject
 		void update(Account^);
 	};
 
+
 	ref class Personnel : ClassTable
 	{
 	private:
@@ -88,11 +90,47 @@ namespace OPO2SUMproject
 		void update(Personnel^);
 	};
 
+	ref class Address : ClassTable {
+	private:
+		System::String^ street;
+		System::String^ postal_code;
+		System::String^ city;
+		System::String^ address_complement;
+		Account^ id_account;
+
+	public:
+		Address(int id);
+
+		System::String^ get_street() { return street; }
+		System::String^ get_postal_code() { return postal_code; }
+		System::String^ get_city() { return city; }
+		System::String^ get_address_complement() { return address_complement; }
+		Account^ get_id_account() { return id_account; }
+
+		void set_street(System::String^ st) { this->street = st; }
+		void set_postal_code(System::String^ zip) { this->postal_code = zip; }
+		void set_city(System::String^ city) { this->city = city; }
+		void set_address_complement(System::String^ address) { this->address_complement = address; }
+		void set_account(Account^ currentAccount) { id_account = currentAccount; };
+	};
+
+	ref class AddressManager : ClassTableManager
+	{
+	public:
+		Address^ select(int id);
+		void insert(System::String^ street, System::String^ postal_code, System::String^ city, System::String^ address_complement, int id_account);
+		void deleteElement(int id);
+		void deleteElement(Address^);
+		void update(Address^);
+	};
+
 	ref class Order : ClassTable {
 	private:
 		System::String^ delivery_date;
 		System::String^ issue_date;
 		Account^ account;
+		Address^ billing_adderess;
+		Address^ shipping_adderess;
 
 	public:
 		Order(int id);
@@ -100,51 +138,24 @@ namespace OPO2SUMproject
 		System::String^ get_delivery_date() { return delivery_date; }
 		System::String^ get_issue_date() { return issue_date; }
 		Account^ get_account() { return account; }
+		Address^ get_billing_address() { return billing_adderess; }
+		Address^ get_shipping_address() { return shipping_adderess; }
 
 		void set_delivery_date(System::String^ date) { delivery_date = date; }
 		void set_issue_date(System::String^ date) { issue_date = date; }
 		void set_account(Account^ currentAccount) { account = currentAccount; }
+		void set_billing_address(Address^ setAddress) { billing_adderess = setAddress; }
+		void set_shipping_address(Address^ setAddress) { shipping_adderess = setAddress; }
 	};
 
 	ref class OrderManager : ClassTableManager
 	{
 	public:
 		Order^ select(int id);
-		void insert(System::String^ delivery_date, System::String^ issue_date, int id_account);
+		void insert(System::String^ delivery_date, System::String^ issue_date, int id_account, int id_billing_adderess, int id_shipping_adderess);
 		void deleteElement(int id);
 		void deleteElement(Order^);
 		void update(Order^);
-	};
-
-	ref class Address : ClassTable {
-	private:
-		System::String^ street;
-		int postal_code;
-		System::String^ city;
-		System::String^ address_complement;
-
-	public:
-		Address(int id);
-
-		System::String^ get_street() { return street; }
-		int get_postal_code() { return postal_code; }
-		System::String^ get_city() { return city; }
-		System::String^ get_address_complement() { return address_complement; }
-
-		void set_street(System::String^ st) { this->street = st; }
-		void set_postal_code(int zip) { this->postal_code = zip; }
-		void set_city(System::String^ city) { this->city = city; }
-		void set_address_complement(System::String^ address) { this->address_complement = address; }
-	};
-
-	ref class AddressManager : ClassTableManager
-	{
-	public:
-		Address^ select(int id);
-		void insert(System::String^ street, int postal_code, System::String^ city, System::String^ address_complement);
-		void deleteElement(int id);
-		void deleteElement(Address^);
-		void update(Address^);
 	};
 
 	ref class Product : ClassTable {
@@ -188,6 +199,7 @@ namespace OPO2SUMproject
 		void update(Product^);
 	};
 
+
 	ref class Payment : ClassTable {
 	private:
 		System::String^ date_payment;
@@ -219,50 +231,63 @@ namespace OPO2SUMproject
 		void update(Payment^);
 	};
 
-	/*
-	ref class Bill : ClassTable {};
+
+	ref class Bill : ClassTable {
+	private:
+		float total_bill;
+		float total_tva;
+		Order^ order;
+
+
+	public:
+		Bill(int id);
+
+		float get_total_bill() { return total_bill; }
+		float get_total_tva() { return total_tva; }
+		Order^ get_order() { return order; }
+
+		void set_total_bill(float bill) { this->total_bill = bill; }
+		void set_total_tva(float tva) { this->total_tva = tva; }
+		void set_id_order(Order^ currentOrder) { this->order = currentOrder; }
+
+
+	};
 
 	ref class BillManager : ClassTableManager
 	{
 	public:
 		Bill^ select(int id);
-		void insert(Bill^);
+		void insert(float total_bill, float total_tva, int id_order);
 		void deleteElement(int id);
 		void deleteElement(Bill^);
 		void update(Bill^);
 	};
 
-	ref class Living : ClassTable {};
 
-	ref class LivingManager : ClassTableManager
-	{
+	ref class Contain : ClassTable {
+	private:
+		Order^ id_order;
+		Product^ id_product;
+		int nb_element;
+		AccessData^ Adata = gcnew AccessData;
+
 	public:
-		Living^ select(int id);
-		void insert(Living^);
-		void deleteElement(Living^);
-		void update(Living^);
+		Contain(int id_order, int id_product, int nb);
+
+		Order^ get_id_order() { return id_order; }
+		Product^ get_id_product() { return id_product; }
+		int get_nb_element() { return nb_element; }
+
+		void set_id_order(Order^ order) { this->id_order = order; }
+		void set_id_product(Product^ product) { this->id_product = product; }
+		void set_nb_element(int number) { this->nb_element = number; }
 	};
 
-	ref class Billing : ClassTable {};
-
-	ref class BillingManager : ClassTableManager
-	{
-	public:
-		Billing^ select(int id);
-		void insert(Billing^);
-		void deleteElement(Billing^);
-		void update(Billing^);
-	};
-
-	ref class Contain : ClassTable {};
 
 	ref class ContainManager : ClassTableManager
 	{
 	public:
-		Contain^ select(int id);
-		void insert(Contain^);
-		void deleteElement(Contain^);
+		void insert(Order^ id_order, Product^ id_product, int nb_element);
 		void update(Contain^);
-	};*/
-}
-
+	};
+};

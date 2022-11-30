@@ -145,6 +145,7 @@ namespace OPO2SUMproject {
 			this->accountBirthdayTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->accountErrorLabel = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
@@ -158,7 +159,6 @@ namespace OPO2SUMproject {
 			this->accountAddressListComboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->Information = (gcnew System::Windows::Forms::Label());
-			this->accountErrorLabel = (gcnew System::Windows::Forms::Label());
 			this->loginPanel->SuspendLayout();
 			this->registerPanel->SuspendLayout();
 			this->panel1->SuspendLayout();
@@ -552,6 +552,19 @@ namespace OPO2SUMproject {
 			this->panel1->Size = System::Drawing::Size(934, 463);
 			this->panel1->TabIndex = 24;
 			// 
+			// accountErrorLabel
+			// 
+			this->accountErrorLabel->AccessibleRole = System::Windows::Forms::AccessibleRole::Text;
+			this->accountErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->accountErrorLabel->AutoSize = true;
+			this->accountErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->accountErrorLabel->Location = System::Drawing::Point(721, 207);
+			this->accountErrorLabel->Name = L"accountErrorLabel";
+			this->accountErrorLabel->Size = System::Drawing::Size(78, 17);
+			this->accountErrorLabel->TabIndex = 18;
+			this->accountErrorLabel->Text = L"Lastname";
+			this->accountErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
@@ -624,6 +637,7 @@ namespace OPO2SUMproject {
 			this->accountAddressAddButton->TabIndex = 28;
 			this->accountAddressAddButton->Text = L"Add";
 			this->accountAddressAddButton->UseVisualStyleBackColor = true;
+			this->accountAddressAddButton->Click += gcnew System::EventHandler(this, &MyForm::accountAddressAddButton_Click);
 			// 
 			// accountAddressDeleteButton
 			// 
@@ -663,19 +677,6 @@ namespace OPO2SUMproject {
 			this->Information->Size = System::Drawing::Size(183, 32);
 			this->Information->TabIndex = 24;
 			this->Information->Text = L"Informations";
-			// 
-			// accountErrorLabel
-			// 
-			this->accountErrorLabel->AccessibleRole = System::Windows::Forms::AccessibleRole::Text;
-			this->accountErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->accountErrorLabel->AutoSize = true;
-			this->accountErrorLabel->ForeColor = System::Drawing::Color::Red;
-			this->accountErrorLabel->Location = System::Drawing::Point(721, 207);
-			this->accountErrorLabel->Name = L"accountErrorLabel";
-			this->accountErrorLabel->Size = System::Drawing::Size(78, 17);
-			this->accountErrorLabel->TabIndex = 18;
-			this->accountErrorLabel->Text = L"Lastname";
-			this->accountErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// MyForm
 			// 
@@ -775,16 +776,16 @@ namespace OPO2SUMproject {
 			this->accountUsernameTextBox->Text = connectedAccount->get_account_name();
 			this->accountFirstnameTextBox->Text = connectedAccount->get_firstname_account();
 			this->accountLastnameTextBox->Text = connectedAccount->get_lastname_account();
-			this->accountBirthdayTextBox->Text = connectedAccount->get_birthday_account()->Substring(0,10);
+			this->accountBirthdayTextBox->Text = connectedAccount->get_birthday_account()->Substring(0, 10);
 			this->accountModifyButton->Enabled = false;
 			this->loginErrorLabel->Text = "";
 			this->accountErrorLabel->Text = "";
 
 
 			AccessData^ AdataAddress = gcnew AccessData;
-			System::Data::DataSet^ listAddress = AdataAddress->getRows("SELECT id_account FROM account WHERE account_name = '" + this->loginUsernameTextBox->Text + "' AND password_account = '" + loginPasswordTextBox->Text->GetHashCode().ToString() + "';", "Temp");
+			System::Data::DataSet^ listAddress = AdataAddress->getRows("SELECT * FROM address WHERE id_account = " + connectedAccount->get_id() + ";", "Temp");
 
-			this->accountAddressListComboBox->DataSource = rightLogin->Tables[0];
+			this->accountAddressListComboBox->DataSource = listAddress->Tables[0];
 			this->accountAddressListComboBox->ValueMember = "id_account";
 			this->accountAddressListComboBox->DisplayMember = "id_account";
 
@@ -808,7 +809,7 @@ namespace OPO2SUMproject {
 		else {
 			connectedAccount->set_firstname_account(accountFirstnameTextBox->Text);
 			connectedAccount->set_lastname_account(accountLastnameTextBox->Text);
-			
+
 			if (this->accountPasswordTextBox->Text->Length >= 8) {
 				connectedAccount->set_password_account(accountPasswordTextBox->Text->GetHashCode().ToString());
 			}
@@ -820,6 +821,10 @@ namespace OPO2SUMproject {
 			this->accountErrorLabel->ForeColor = System::Drawing::Color::Green;
 			this->accountModifyButton->Enabled = false;
 		}
+	}
+	private: System::Void accountAddressAddButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		AddressManager^ newAddress = gcnew AddressManager();
+		newAddress->insert(accountAddressNbTextBox->Text, accountAddressPostalTextBox->Text, accountAddressCityTextBox->Text, accountAddressMoreTextBox->Text, connectedAccount->get_id());
 	}
 	};
 }
