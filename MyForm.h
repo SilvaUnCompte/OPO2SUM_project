@@ -190,7 +190,8 @@ private: System::Windows::Forms::TextBox^ accountBirthdayTextBox;
 private: System::Windows::Forms::TextBox^ accountPasswordTextBox;
 
 private: System::Windows::Forms::TextBox^ accountLastnameTextBox;
-private: System::Windows::Forms::TextBox^ accountFisrtnameTextBox;
+private: System::Windows::Forms::TextBox^ accountFirstnameTextBox;
+
 
 
 private: System::Windows::Forms::TextBox^ accountUsernameTextBox;
@@ -209,6 +210,13 @@ private: System::Windows::Forms::ComboBox^ accountAddressListComboBox;
 private: System::Windows::Forms::Button^ accountModifyButton;
 private: System::Windows::Forms::Button^ accountAddressAddButton;
 private: System::Windows::Forms::Button^ accountAddressDeleteButton;
+private: System::Windows::Forms::Button^ menuPersonnellManageButton;
+
+private: System::Windows::Forms::Button^ menuCatalogButton;
+private: System::Windows::Forms::Label^ accountErrorLabel;
+
+
+
 
 
 
@@ -318,6 +326,8 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->statisticMComboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->statisticMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->menuButtonPanel = (gcnew System::Windows::Forms::Panel());
+			this->menuPersonnellManageButton = (gcnew System::Windows::Forms::Button());
+			this->menuCatalogButton = (gcnew System::Windows::Forms::Button());
 			this->menuAccountButton = (gcnew System::Windows::Forms::Button());
 			this->menuStatisticButton = (gcnew System::Windows::Forms::Button());
 			this->menuStockButton = (gcnew System::Windows::Forms::Button());
@@ -339,7 +349,7 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->accountBirthdayTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->accountPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->accountLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->accountFisrtnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->accountUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->accountAddressMoreLabel = (gcnew System::Windows::Forms::Label());
 			this->accountPostalCodeLabel = (gcnew System::Windows::Forms::Label());
@@ -352,6 +362,7 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->accountFirstnameLabel = (gcnew System::Windows::Forms::Label());
 			this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
+			this->accountErrorLabel = (gcnew System::Windows::Forms::Label());
 			this->loginPanel->SuspendLayout();
 			this->loginPasswordPanel->SuspendLayout();
 			this->loginUsernamePanel->SuspendLayout();
@@ -1407,6 +1418,8 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			// 
 			this->menuButtonPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
 				static_cast<System::Int32>(static_cast<System::Byte>(76)));
+			this->menuButtonPanel->Controls->Add(this->menuPersonnellManageButton);
+			this->menuButtonPanel->Controls->Add(this->menuCatalogButton);
 			this->menuButtonPanel->Controls->Add(this->menuAccountButton);
 			this->menuButtonPanel->Controls->Add(this->menuStatisticButton);
 			this->menuButtonPanel->Controls->Add(this->menuStockButton);
@@ -1419,6 +1432,41 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->menuButtonPanel->Size = System::Drawing::Size(220, 687);
 			this->menuButtonPanel->TabIndex = 13;
 			// 
+			// menuPersonnellManageButton
+			// 
+			this->menuPersonnellManageButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->menuPersonnellManageButton->FlatAppearance->BorderSize = 0;
+			this->menuPersonnellManageButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->menuPersonnellManageButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->menuPersonnellManageButton->ForeColor = System::Drawing::Color::White;
+			this->menuPersonnellManageButton->Location = System::Drawing::Point(0, 380);
+			this->menuPersonnellManageButton->Name = L"menuPersonnellManageButton";
+			this->menuPersonnellManageButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
+			this->menuPersonnellManageButton->Size = System::Drawing::Size(220, 60);
+			this->menuPersonnellManageButton->TabIndex = 7;
+			this->menuPersonnellManageButton->Text = L"Personnel  Manage";
+			this->menuPersonnellManageButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->menuPersonnellManageButton->UseVisualStyleBackColor = true;
+			// 
+			// menuCatalogButton
+			// 
+			this->menuCatalogButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->menuCatalogButton->Dock = System::Windows::Forms::DockStyle::Top;
+			this->menuCatalogButton->FlatAppearance->BorderSize = 0;
+			this->menuCatalogButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->menuCatalogButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->menuCatalogButton->ForeColor = System::Drawing::Color::White;
+			this->menuCatalogButton->Location = System::Drawing::Point(0, 80);
+			this->menuCatalogButton->Name = L"menuCatalogButton";
+			this->menuCatalogButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
+			this->menuCatalogButton->Size = System::Drawing::Size(220, 60);
+			this->menuCatalogButton->TabIndex = 2;
+			this->menuCatalogButton->Text = L"Catalog";
+			this->menuCatalogButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->menuCatalogButton->UseVisualStyleBackColor = true;
+			// 
 			// menuAccountButton
 			// 
 			this->menuAccountButton->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -1427,12 +1475,14 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->menuAccountButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->menuAccountButton->ForeColor = System::Drawing::Color::Gainsboro;
+			this->menuAccountButton->ForeColor = System::Drawing::Color::White;
 			this->menuAccountButton->Location = System::Drawing::Point(0, 627);
 			this->menuAccountButton->Name = L"menuAccountButton";
+			this->menuAccountButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
 			this->menuAccountButton->Size = System::Drawing::Size(220, 60);
 			this->menuAccountButton->TabIndex = 5;
 			this->menuAccountButton->Text = L"My Account";
+			this->menuAccountButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuAccountButton->UseVisualStyleBackColor = true;
 			this->menuAccountButton->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::menuAccountButton_MouseDown);
 			this->menuAccountButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuAccountButton_MouseEnter);
@@ -1441,17 +1491,18 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			// menuStatisticButton
 			// 
 			this->menuStatisticButton->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->menuStatisticButton->Dock = System::Windows::Forms::DockStyle::Top;
 			this->menuStatisticButton->FlatAppearance->BorderSize = 0;
 			this->menuStatisticButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->menuStatisticButton->ForeColor = System::Drawing::Color::Gainsboro;
-			this->menuStatisticButton->Location = System::Drawing::Point(0, 260);
+			this->menuStatisticButton->ForeColor = System::Drawing::Color::White;
+			this->menuStatisticButton->Location = System::Drawing::Point(0, 320);
 			this->menuStatisticButton->Name = L"menuStatisticButton";
+			this->menuStatisticButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
 			this->menuStatisticButton->Size = System::Drawing::Size(220, 60);
 			this->menuStatisticButton->TabIndex = 4;
 			this->menuStatisticButton->Text = L"Statistic";
+			this->menuStatisticButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuStatisticButton->UseVisualStyleBackColor = true;
 			this->menuStatisticButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuStatisticButton_MouseEnter);
 			this->menuStatisticButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuStatisticButton_MouseLeave);
@@ -1459,17 +1510,18 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			// menuStockButton
 			// 
 			this->menuStockButton->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->menuStockButton->Dock = System::Windows::Forms::DockStyle::Top;
 			this->menuStockButton->FlatAppearance->BorderSize = 0;
 			this->menuStockButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->menuStockButton->ForeColor = System::Drawing::Color::Gainsboro;
+			this->menuStockButton->ForeColor = System::Drawing::Color::White;
 			this->menuStockButton->Location = System::Drawing::Point(0, 200);
 			this->menuStockButton->Name = L"menuStockButton";
+			this->menuStockButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
 			this->menuStockButton->Size = System::Drawing::Size(220, 60);
-			this->menuStockButton->TabIndex = 3;
+			this->menuStockButton->TabIndex = 4;
 			this->menuStockButton->Text = L"Stock";
+			this->menuStockButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuStockButton->UseVisualStyleBackColor = true;
 			this->menuStockButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuStockButton_MouseEnter);
 			this->menuStockButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuStockButton_MouseLeave);
@@ -1477,17 +1529,18 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			// menuOrderButton
 			// 
 			this->menuOrderButton->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->menuOrderButton->Dock = System::Windows::Forms::DockStyle::Top;
 			this->menuOrderButton->FlatAppearance->BorderSize = 0;
 			this->menuOrderButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->menuOrderButton->ForeColor = System::Drawing::Color::Gainsboro;
+			this->menuOrderButton->ForeColor = System::Drawing::Color::White;
 			this->menuOrderButton->Location = System::Drawing::Point(0, 140);
 			this->menuOrderButton->Name = L"menuOrderButton";
+			this->menuOrderButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
 			this->menuOrderButton->Size = System::Drawing::Size(220, 60);
-			this->menuOrderButton->TabIndex = 2;
+			this->menuOrderButton->TabIndex = 3;
 			this->menuOrderButton->Text = L"Order";
+			this->menuOrderButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuOrderButton->UseVisualStyleBackColor = true;
 			this->menuOrderButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuOrderButton_MouseEnter);
 			this->menuOrderButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuOrderButton_MouseLeave);
@@ -1495,17 +1548,18 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			// menuClientButton
 			// 
 			this->menuClientButton->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->menuClientButton->Dock = System::Windows::Forms::DockStyle::Top;
 			this->menuClientButton->FlatAppearance->BorderSize = 0;
 			this->menuClientButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->menuClientButton->ForeColor = System::Drawing::Color::Gainsboro;
-			this->menuClientButton->Location = System::Drawing::Point(0, 80);
+			this->menuClientButton->ForeColor = System::Drawing::Color::White;
+			this->menuClientButton->Location = System::Drawing::Point(0, 260);
 			this->menuClientButton->Name = L"menuClientButton";
+			this->menuClientButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
 			this->menuClientButton->Size = System::Drawing::Size(220, 60);
 			this->menuClientButton->TabIndex = 1;
 			this->menuClientButton->Text = L"Client";
+			this->menuClientButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuClientButton->UseVisualStyleBackColor = true;
 			this->menuClientButton->Click += gcnew System::EventHandler(this, &MyForm::menuClientButton_Click);
 			this->menuClientButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuClientButton_MouseEnter);
@@ -1560,6 +1614,7 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			// 
 			// accountPanel
 			// 
+			this->accountPanel->Controls->Add(this->accountErrorLabel);
 			this->accountPanel->Controls->Add(this->accountAddressAddButton);
 			this->accountPanel->Controls->Add(this->accountAddressDeleteButton);
 			this->accountPanel->Controls->Add(this->accountModifyButton);
@@ -1571,7 +1626,7 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->accountPanel->Controls->Add(this->accountBirthdayTextBox);
 			this->accountPanel->Controls->Add(this->accountPasswordTextBox);
 			this->accountPanel->Controls->Add(this->accountLastnameTextBox);
-			this->accountPanel->Controls->Add(this->accountFisrtnameTextBox);
+			this->accountPanel->Controls->Add(this->accountFirstnameTextBox);
 			this->accountPanel->Controls->Add(this->accountUsernameTextBox);
 			this->accountPanel->Controls->Add(this->accountAddressMoreLabel);
 			this->accountPanel->Controls->Add(this->accountPostalCodeLabel);
@@ -1611,7 +1666,7 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			// accountModifyButton
 			// 
 			this->accountModifyButton->Enabled = false;
-			this->accountModifyButton->Location = System::Drawing::Point(802, 555);
+			this->accountModifyButton->Location = System::Drawing::Point(753, 220);
 			this->accountModifyButton->Name = L"accountModifyButton";
 			this->accountModifyButton->Size = System::Drawing::Size(154, 40);
 			this->accountModifyButton->TabIndex = 21;
@@ -1669,6 +1724,7 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->accountPasswordTextBox->Size = System::Drawing::Size(158, 25);
 			this->accountPasswordTextBox->TabIndex = 14;
 			this->accountPasswordTextBox->UseSystemPasswordChar = true;
+			this->accountPasswordTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableAccountModifyButton);
 			// 
 			// accountLastnameTextBox
 			// 
@@ -1676,13 +1732,15 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->accountLastnameTextBox->Name = L"accountLastnameTextBox";
 			this->accountLastnameTextBox->Size = System::Drawing::Size(158, 25);
 			this->accountLastnameTextBox->TabIndex = 13;
+			this->accountLastnameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableAccountModifyButton);
 			// 
-			// accountFisrtnameTextBox
+			// accountFirstnameTextBox
 			// 
-			this->accountFisrtnameTextBox->Location = System::Drawing::Point(276, 142);
-			this->accountFisrtnameTextBox->Name = L"accountFisrtnameTextBox";
-			this->accountFisrtnameTextBox->Size = System::Drawing::Size(158, 25);
-			this->accountFisrtnameTextBox->TabIndex = 12;
+			this->accountFirstnameTextBox->Location = System::Drawing::Point(276, 142);
+			this->accountFirstnameTextBox->Name = L"accountFirstnameTextBox";
+			this->accountFirstnameTextBox->Size = System::Drawing::Size(158, 25);
+			this->accountFirstnameTextBox->TabIndex = 12;
+			this->accountFirstnameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableAccountModifyButton);
 			// 
 			// accountUsernameTextBox
 			// 
@@ -1794,6 +1852,15 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->accountTitleLabel->Size = System::Drawing::Size(211, 44);
 			this->accountTitleLabel->TabIndex = 0;
 			this->accountTitleLabel->Text = L"My Account";
+			// 
+			// accountErrorLabel
+			// 
+			this->accountErrorLabel->BackColor = System::Drawing::Color::Transparent;
+			this->accountErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->accountErrorLabel->Location = System::Drawing::Point(753, 279);
+			this->accountErrorLabel->Name = L"accountErrorLabel";
+			this->accountErrorLabel->Size = System::Drawing::Size(154, 40);
+			this->accountErrorLabel->TabIndex = 24;
 			// 
 			// MyForm
 			// 
@@ -1941,7 +2008,10 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			DataTableReaderTest->Read();
 			connectedAccount = gcnew Account(DataTableReaderTest->GetInt32(0));
 			this->loginErrorLabel->ForeColor = System::Drawing::Color::Green;
-			this->loginErrorLabel->Text = "Afficher la page suivante...";
+			//connectedAccount->get_permission_lv_account();
+			//
+			//
+			//
 		}
 		DataTableReaderTest->Close();
 	}
@@ -1995,8 +2065,8 @@ private: System::Void menuOrderButton_MouseLeave(System::Object^ sender, System:
 private: System::Void menuStockButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 	menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
 		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(176)),
-		static_cast<System::Int32>(static_cast<System::Byte>(150)));
+	menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+		static_cast<System::Int32>(static_cast<System::Byte>(143)));
 	menuStockButton->ForeColor = System::Drawing::Color::Black;
 }
 private: System::Void menuStockButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
@@ -2041,6 +2111,9 @@ private: System::Void menuAccountButton_MouseDown(System::Object^ sender, System
 private: System::Void menuClientButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	hideAllPanel();
 	managerTablePanel->Visible = true;
+}
+private: System::Void enableAccountModifyButton(System::Object^ sender, System::EventArgs^ e) {
+	this->accountModifyButton->Enabled = true;
 }
 };
 }
