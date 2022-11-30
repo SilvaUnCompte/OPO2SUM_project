@@ -115,7 +115,7 @@ namespace OPO2SUMproject
 	{
 	public:
 		Address^ select(int id);
-		void insert(System::String^ street, int postal_code, System::String^ city, System::String^ address_complement);
+		void insert(System::String^ street, System::String^ postal_code, System::String^ city, System::String^ address_complement);
 		void deleteElement(int id);
 		void deleteElement(Address^);
 		void update(Address^);

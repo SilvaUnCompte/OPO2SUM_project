@@ -211,7 +211,7 @@ void OPO2SUMproject::OrderManager::update(Order^ obj) {
 OPO2SUMproject::Address^ OPO2SUMproject::AddressManager::select(int id) {
 	return gcnew Address(id);
 }
-void OPO2SUMproject::AddressManager::insert(System::String^ street, int postal_code, System::String^ city, System::String^ address_complement) {
+void OPO2SUMproject::AddressManager::insert(System::String^ street, System::String^ postal_code, System::String^ city, System::String^ address_complement) {
 	AccessData^ Adata = gcnew AccessData;
 	Adata->actionRows("INSERT INTO Address " +
 		"(street, postal_code, city, address_complement) " +
