@@ -214,6 +214,8 @@ private: System::Windows::Forms::Button^ menuPersonnellManageButton;
 
 private: System::Windows::Forms::Button^ menuCatalogButton;
 private: System::Windows::Forms::Label^ accountErrorLabel;
+private: System::Windows::Forms::Label^ accountErrorDeleteAddressLabel;
+private: System::Windows::Forms::Label^ accountErrorAddAddressLabel;
 
 
 
@@ -338,6 +340,7 @@ private: System::Windows::Forms::Label^ accountErrorLabel;
 			this->titleBarPanel = (gcnew System::Windows::Forms::Panel());
 			this->titleBarLabel = (gcnew System::Windows::Forms::Label());
 			this->accountPanel = (gcnew System::Windows::Forms::Panel());
+			this->accountErrorLabel = (gcnew System::Windows::Forms::Label());
 			this->accountAddressAddButton = (gcnew System::Windows::Forms::Button());
 			this->accountAddressDeleteButton = (gcnew System::Windows::Forms::Button());
 			this->accountModifyButton = (gcnew System::Windows::Forms::Button());
@@ -362,7 +365,8 @@ private: System::Windows::Forms::Label^ accountErrorLabel;
 			this->accountFirstnameLabel = (gcnew System::Windows::Forms::Label());
 			this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
-			this->accountErrorLabel = (gcnew System::Windows::Forms::Label());
+			this->accountErrorAddAddressLabel = (gcnew System::Windows::Forms::Label());
+			this->accountErrorDeleteAddressLabel = (gcnew System::Windows::Forms::Label());
 			this->loginPanel->SuspendLayout();
 			this->loginPasswordPanel->SuspendLayout();
 			this->loginUsernamePanel->SuspendLayout();
@@ -1614,6 +1618,8 @@ private: System::Windows::Forms::Label^ accountErrorLabel;
 			// 
 			// accountPanel
 			// 
+			this->accountPanel->Controls->Add(this->accountErrorDeleteAddressLabel);
+			this->accountPanel->Controls->Add(this->accountErrorAddAddressLabel);
 			this->accountPanel->Controls->Add(this->accountErrorLabel);
 			this->accountPanel->Controls->Add(this->accountAddressAddButton);
 			this->accountPanel->Controls->Add(this->accountAddressDeleteButton);
@@ -1644,6 +1650,15 @@ private: System::Windows::Forms::Label^ accountErrorLabel;
 			this->accountPanel->Name = L"accountPanel";
 			this->accountPanel->Size = System::Drawing::Size(968, 607);
 			this->accountPanel->TabIndex = 15;
+			// 
+			// accountErrorLabel
+			// 
+			this->accountErrorLabel->BackColor = System::Drawing::Color::Transparent;
+			this->accountErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->accountErrorLabel->Location = System::Drawing::Point(753, 279);
+			this->accountErrorLabel->Name = L"accountErrorLabel";
+			this->accountErrorLabel->Size = System::Drawing::Size(154, 40);
+			this->accountErrorLabel->TabIndex = 24;
 			// 
 			// accountAddressAddButton
 			// 
@@ -1853,14 +1868,23 @@ private: System::Windows::Forms::Label^ accountErrorLabel;
 			this->accountTitleLabel->TabIndex = 0;
 			this->accountTitleLabel->Text = L"My Account";
 			// 
-			// accountErrorLabel
+			// accountErrorAddAddressLabel
 			// 
-			this->accountErrorLabel->BackColor = System::Drawing::Color::Transparent;
-			this->accountErrorLabel->ForeColor = System::Drawing::Color::Red;
-			this->accountErrorLabel->Location = System::Drawing::Point(753, 279);
-			this->accountErrorLabel->Name = L"accountErrorLabel";
-			this->accountErrorLabel->Size = System::Drawing::Size(154, 40);
-			this->accountErrorLabel->TabIndex = 24;
+			this->accountErrorAddAddressLabel->BackColor = System::Drawing::Color::Transparent;
+			this->accountErrorAddAddressLabel->ForeColor = System::Drawing::Color::Red;
+			this->accountErrorAddAddressLabel->Location = System::Drawing::Point(721, 394);
+			this->accountErrorAddAddressLabel->Name = L"accountErrorAddAddressLabel";
+			this->accountErrorAddAddressLabel->Size = System::Drawing::Size(154, 40);
+			this->accountErrorAddAddressLabel->TabIndex = 25;
+			// 
+			// accountErrorDeleteAddressLabel
+			// 
+			this->accountErrorDeleteAddressLabel->BackColor = System::Drawing::Color::Transparent;
+			this->accountErrorDeleteAddressLabel->ForeColor = System::Drawing::Color::Red;
+			this->accountErrorDeleteAddressLabel->Location = System::Drawing::Point(721, 493);
+			this->accountErrorDeleteAddressLabel->Name = L"accountErrorDeleteAddressLabel";
+			this->accountErrorDeleteAddressLabel->Size = System::Drawing::Size(154, 40);
+			this->accountErrorDeleteAddressLabel->TabIndex = 26;
 			// 
 			// MyForm
 			// 
@@ -2115,5 +2139,6 @@ private: System::Void menuClientButton_Click(System::Object^ sender, System::Eve
 private: System::Void enableAccountModifyButton(System::Object^ sender, System::EventArgs^ e) {
 	this->accountModifyButton->Enabled = true;
 }
+
 };
 }
