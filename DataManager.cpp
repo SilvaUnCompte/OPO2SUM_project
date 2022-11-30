@@ -128,6 +128,7 @@ OPO2SUMproject::Living::Living(int id_account, int id_address) {
 	Account^ address = gcnew Account(id_address);
 	Address^ account = gcnew Address(id_account);
 }
+
 //Constructor Contain
 
 OPO2SUMproject::Contain::Contain(int id_order, int id_product, int nb) {
@@ -149,6 +150,7 @@ void OPO2SUMproject::AccountManager::insert(System::String^ account_name, System
 }
 void OPO2SUMproject::AccountManager::deleteElement(int selectedId) {
 	Adata->actionRows("DELETE FROM Personnel WHERE id_account = " + selectedId);
+	Adata->actionRows("DELETE FROM Living WHERE id_account = " + selectedId);
 	Adata->actionRows("DELETE FROM Account WHERE id_account = " + selectedId);
 }
 void OPO2SUMproject::AccountManager::deleteElement(Account^ obj) {
@@ -191,6 +193,10 @@ void OPO2SUMproject::OrderManager::insert(System::String^ delivery_date, System:
 		"VALUES('" + delivery_date + "', '" + issue_date + "', " + id_account + ", " + id_billing_address + ", " + id_shipping_address + ");");
 }
 void OPO2SUMproject::OrderManager::deleteElement(int selectedId) {
+	Adata->actionRows("DELETE FROM Payment WHERE id_order = " + selectedId);
+	Adata->actionRows("DELETE FROM Contain WHERE id_order = " + selectedId);
+	Adata->actionRows("DELETE FROM bill WHERE id_order = " + selectedId);
+
 	Adata->actionRows("DELETE FROM orderTab WHERE id_order = " + selectedId);
 }
 void OPO2SUMproject::OrderManager::deleteElement(Order^ obj) {
@@ -212,6 +218,7 @@ void OPO2SUMproject::AddressManager::insert(System::String^ street, int postal_c
 		"VALUES('" + street + "', " + postal_code + ", '" + city + "', '" + address_complement + "');");
 }
 void OPO2SUMproject::AddressManager::deleteElement(int selectedId) {
+	Adata->actionRows("DELETE FROM Living WHERE id_address = " + selectedId);
 	Adata->actionRows("DELETE FROM Address WHERE id_address = " + selectedId);
 }
 void OPO2SUMproject::AddressManager::deleteElement(Address^ obj) {
@@ -233,6 +240,7 @@ void OPO2SUMproject::ProductManager::insert(System::String^ name_product, int el
 		"VALUES('" + name_product + "', " + element_per_unit_product + ", " + cost_product + ", " + marge_product + ", " + tva_product + ", " + stock_product + ", " + restocking_threshold_product + ");");
 }
 void OPO2SUMproject::ProductManager::deleteElement(int selectedId) {
+	Adata->actionRows("DELETE FROM contain WHERE id_product = " + selectedId);
 	Adata->actionRows("DELETE FROM Product WHERE id_product = " + selectedId);
 }
 void OPO2SUMproject::ProductManager::deleteElement(Product^ obj) {
@@ -301,7 +309,7 @@ void OPO2SUMproject::ContainManager::insert(Order^ id_order, Product^ id_product
 	AccessData^ Adata = gcnew AccessData;
 	Adata->actionRows("INSERT INTO Contain " +
 		"(id_order, id_product, nb_element)" +
-		"VALUES(" + id_order + ", " + id_product+ ", " + nb_element + ");");
+		"VALUES(" + id_order + ", " + id_product + ", " + nb_element + ");");
 }
 void OPO2SUMproject::ContainManager::update(Contain^ obj) {
 	Adata->actionRows("UPDATE Contain SET nb_element = " + obj->get_nb_element() + " WHERE id_product = " + obj->get_id_product() + "OR id_order = " + obj->get_id_order() + ";");
