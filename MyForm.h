@@ -1,6 +1,8 @@
 #pragma once
 #include "AccessData.h"
 #include "DataManager.h"
+#include <iostream>
+#include <ctime>
 
 namespace OPO2SUMproject {
 
@@ -12,7 +14,7 @@ namespace OPO2SUMproject {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de MyForm
+	/// Description rÃ©sumÃ©e de MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -27,7 +29,7 @@ namespace OPO2SUMproject {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisÃ©es.
 		/// </summary>
 		~MyForm()
 		{
@@ -43,7 +45,7 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TextBox^ loginUsernameTextBox;
 	private: System::Windows::Forms::Label^ loginUsernameLabel;
 	private: System::Windows::Forms::Label^ loginLoginLabel;
-	private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
+
 	private: System::Windows::Forms::Button^ loginRegisterButton;
 	private: System::Windows::Forms::Panel^ managerTablePanel;
 	private: System::Windows::Forms::TabControl^ managerTabControl;
@@ -54,18 +56,18 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::DataGridView^ clientMDGV;
 	private: System::Windows::Forms::Button^ clientMSearchButton;
 
-	private: System::Windows::Forms::Button^ clientMAddButton;
-	private: System::Windows::Forms::Panel^ addClientPanel;
-	private: System::Windows::Forms::Label^ addClientTitleLabel;
-	private: System::Windows::Forms::Button^ addClientExitButton;
-	private: System::Windows::Forms::Label^ addClientLNameLabel;
-	private: System::Windows::Forms::Label^ addClientFNameLabel;
-	private: System::Windows::Forms::Button^ addClientValidateButton;
 
-	private: System::Windows::Forms::TextBox^ addClientBirthdateTextBox;
-	private: System::Windows::Forms::TextBox^ addClientLNameTextBox;
-	private: System::Windows::Forms::TextBox^ addClientFNameTextBox;
-	private: System::Windows::Forms::Label^ addClientBirthdateLabel;
+
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Label^ clientMCityLabel;
 	private: System::Windows::Forms::Label^ clientMLNameLabel;
 	private: System::Windows::Forms::Label^ clientMFNameLabel;
@@ -83,7 +85,7 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Button^ orderMSearchButton;
 	private: System::Windows::Forms::Button^ orderMAddButton;
 	private: System::Windows::Forms::Button^ loginValidateButton;
-	private: System::Windows::Forms::Panel^ statisticMPanel;
+
 
 	private: System::Windows::Forms::Panel^ registerPanel;
 	private: System::Windows::Forms::Button^ registerValidateButton;
@@ -94,10 +96,12 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ registerUsernameLabel;
 	private: System::Windows::Forms::Label^ registerRegisterLabel;
 	private: System::Windows::Forms::Panel^ stockMPanel;
-	private: System::Windows::Forms::Button^ stockMSearchButton;
+
 	private: System::Windows::Forms::Button^ stockMAddButton;
-	private: System::Windows::Forms::Button^ stockMModifyButton;
-	private: System::Windows::Forms::Button^ stockMDeleteButton;
+	private: System::Windows::Forms::Button^ informationStockModifyButton;
+
+	private: System::Windows::Forms::Button^ informationStockDeleteButton;
+
 	private: System::Windows::Forms::DataGridView^ stockMDGV;
 	private: System::Windows::Forms::Panel^ addOrderPanel;
 
@@ -113,45 +117,73 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Panel^ addStockPanel;
 	private: System::Windows::Forms::Button^ addStockValidateButton;
 	private: System::Windows::Forms::TextBox^ addStockQuantityTextBox;
-	private: System::Windows::Forms::TextBox^ addStockReferenceTextBox;
+
 	private: System::Windows::Forms::TextBox^ addStockNameTextBox;
 	private: System::Windows::Forms::Label^ addStockQuantityLabel;
-	private: System::Windows::Forms::Label^ addStockReferenceLabel;
+
 	private: System::Windows::Forms::Label^ addStockNameLabel;
 	private: System::Windows::Forms::Label^ addStockTitleLabel;
 	private: System::Windows::Forms::Button^ addStockExitButton;
 
+	private: System::Windows::Forms::Button^ orderMFilterButton;
+	private: System::Windows::Forms::Button^ stockMFilterButton;
+	private: System::Windows::Forms::Label^ stockMLabel;
+	private: System::Windows::Forms::Panel^ informationStockPanel;
+	private: System::Windows::Forms::Label^ informationStockNameLabel;
 
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ testButton;
+	private: System::Windows::Forms::Label^ addStockStockLabel;
+
+	private: System::Windows::Forms::Label^ addStockTVALabel;
+	private: System::Windows::Forms::Label^ addStockMargeLabel;
+
+	private: System::Windows::Forms::Label^ addStockCostLabel;
+	private: System::Windows::Forms::TextBox^ addStockCostTextBox;
+
+	private: System::Windows::Forms::Label^ addStockRestockingLabel;
+private: System::Windows::Forms::TextBox^ addStockStockTextBox;
+
+private: System::Windows::Forms::TextBox^ addStockTVATextBox;
+
+private: System::Windows::Forms::TextBox^ addStockMargeTextBox;
+private: System::Windows::Forms::TextBox^ addStockRestockingTextBox;
+private: System::Windows::Forms::DataGridView^ statisticMDGV;
 
 
 
+	private: System::Windows::Forms::Button^ statisticMStatisticButton;
+private: System::Windows::Forms::ComboBox^ statisticMComboBox;
 
 
 
-
-
+	private: System::Windows::Forms::Label^ registerErrorLabel;
+	private: System::Windows::Forms::Label^ registerLastnameLabel;
+	private: System::Windows::Forms::Label^ registerFirstnameLabel;
+	private: System::Windows::Forms::TextBox^ registerLastnameTextBox;
+	private: System::Windows::Forms::TextBox^ registerFirstnameTextBox;
+	private: System::Windows::Forms::DateTimePicker^ registerDateTimePicker;
+	private: System::Windows::Forms::Label^ registerBirthdayLabel;
+  private: System::Windows::Forms::Label^ loginErrorLabel;
 	private: System::ComponentModel::IContainer^ components;
 
 	protected:
 
 
 	private:
+		Account^ connectedAccount;
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nÃ©cessaire au concepteur.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// MÃ©thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mÃ©thode avec l'Ã©diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = (gcnew System::ComponentModel::Container());
 			this->loginPanel = (gcnew System::Windows::Forms::Panel());
+			this->loginErrorLabel = (gcnew System::Windows::Forms::Label());
 			this->loginValidateButton = (gcnew System::Windows::Forms::Button());
 			this->loginRegisterButton = (gcnew System::Windows::Forms::Button());
 			this->loginPasswordLabel = (gcnew System::Windows::Forms::Label());
@@ -160,6 +192,13 @@ namespace OPO2SUMproject {
 			this->loginUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->loginLoginLabel = (gcnew System::Windows::Forms::Label());
 			this->registerPanel = (gcnew System::Windows::Forms::Panel());
+			this->registerBirthdayLabel = (gcnew System::Windows::Forms::Label());
+			this->registerDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			this->registerErrorLabel = (gcnew System::Windows::Forms::Label());
+			this->registerLastnameLabel = (gcnew System::Windows::Forms::Label());
+			this->registerFirstnameLabel = (gcnew System::Windows::Forms::Label());
+			this->registerLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->registerFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->registerValidateButton = (gcnew System::Windows::Forms::Button());
 			this->registerLoginButton = (gcnew System::Windows::Forms::Button());
 			this->registerPasswordLabel = (gcnew System::Windows::Forms::Label());
@@ -167,16 +206,6 @@ namespace OPO2SUMproject {
 			this->registerUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->registerUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->registerRegisterLabel = (gcnew System::Windows::Forms::Label());
-			this->addClientPanel = (gcnew System::Windows::Forms::Panel());
-			this->addClientValidateButton = (gcnew System::Windows::Forms::Button());
-			this->addClientBirthdateTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->addClientLNameTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->addClientFNameTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->addClientBirthdateLabel = (gcnew System::Windows::Forms::Label());
-			this->addClientLNameLabel = (gcnew System::Windows::Forms::Label());
-			this->addClientFNameLabel = (gcnew System::Windows::Forms::Label());
-			this->addClientTitleLabel = (gcnew System::Windows::Forms::Label());
-			this->addClientExitButton = (gcnew System::Windows::Forms::Button());
 			this->clientMPanel = (gcnew System::Windows::Forms::Panel());
 			this->clientMModifyButton = (gcnew System::Windows::Forms::Button());
 			this->clientMDeleteButton = (gcnew System::Windows::Forms::Button());
@@ -184,22 +213,14 @@ namespace OPO2SUMproject {
 			this->clientMLNameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->clientMCityTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->clientMDGV = (gcnew System::Windows::Forms::DataGridView());
-			this->clientMAddButton = (gcnew System::Windows::Forms::Button());
 			this->clientMSearchButton = (gcnew System::Windows::Forms::Button());
 			this->clientMCityLabel = (gcnew System::Windows::Forms::Label());
 			this->clientMFNameLabel = (gcnew System::Windows::Forms::Label());
 			this->clientMLNameLabel = (gcnew System::Windows::Forms::Label());
-			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->managerTablePanel = (gcnew System::Windows::Forms::Panel());
 			this->managerTabControl = (gcnew System::Windows::Forms::TabControl());
 			this->clientMTabPage = (gcnew System::Windows::Forms::TabPage());
 			this->orderMTabPage = (gcnew System::Windows::Forms::TabPage());
-			this->orderMPanel = (gcnew System::Windows::Forms::Panel());
-			this->orderMSearchButton = (gcnew System::Windows::Forms::Button());
-			this->orderMAddButton = (gcnew System::Windows::Forms::Button());
-			this->orderMModifyButton = (gcnew System::Windows::Forms::Button());
-			this->orderMDeleteButton = (gcnew System::Windows::Forms::Button());
-			this->orderMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->addOrderPanel = (gcnew System::Windows::Forms::Panel());
 			this->addOrderValidateButton = (gcnew System::Windows::Forms::Button());
 			this->addOrderDateTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -210,48 +231,67 @@ namespace OPO2SUMproject {
 			this->addOrderFNameLabel = (gcnew System::Windows::Forms::Label());
 			this->addOrderTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->addOrderExitButton = (gcnew System::Windows::Forms::Button());
+			this->orderMPanel = (gcnew System::Windows::Forms::Panel());
+			this->orderMSearchButton = (gcnew System::Windows::Forms::Button());
+			this->orderMFilterButton = (gcnew System::Windows::Forms::Button());
+			this->orderMAddButton = (gcnew System::Windows::Forms::Button());
+			this->orderMModifyButton = (gcnew System::Windows::Forms::Button());
+			this->orderMDeleteButton = (gcnew System::Windows::Forms::Button());
+			this->orderMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->stockMTabPage = (gcnew System::Windows::Forms::TabPage());
+			this->informationStockPanel = (gcnew System::Windows::Forms::Panel());
+			this->informationStockModifyButton = (gcnew System::Windows::Forms::Button());
+			this->informationStockDeleteButton = (gcnew System::Windows::Forms::Button());
 			this->stockMPanel = (gcnew System::Windows::Forms::Panel());
-			this->stockMSearchButton = (gcnew System::Windows::Forms::Button());
+			this->stockMLabel = (gcnew System::Windows::Forms::Label());
+			this->stockMFilterButton = (gcnew System::Windows::Forms::Button());
 			this->stockMAddButton = (gcnew System::Windows::Forms::Button());
-			this->stockMModifyButton = (gcnew System::Windows::Forms::Button());
-			this->stockMDeleteButton = (gcnew System::Windows::Forms::Button());
 			this->stockMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->addStockPanel = (gcnew System::Windows::Forms::Panel());
+			this->addStockRestockingTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addStockStockTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addStockTVATextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addStockMargeTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addStockCostTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->addStockRestockingLabel = (gcnew System::Windows::Forms::Label());
+			this->addStockStockLabel = (gcnew System::Windows::Forms::Label());
+			this->addStockTVALabel = (gcnew System::Windows::Forms::Label());
+			this->addStockMargeLabel = (gcnew System::Windows::Forms::Label());
+			this->addStockCostLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockValidateButton = (gcnew System::Windows::Forms::Button());
 			this->addStockQuantityTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->addStockReferenceTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->addStockNameTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->addStockQuantityLabel = (gcnew System::Windows::Forms::Label());
-			this->addStockReferenceLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockNameLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockExitButton = (gcnew System::Windows::Forms::Button());
 			this->statisticMTabPage = (gcnew System::Windows::Forms::TabPage());
-			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->testButton = (gcnew System::Windows::Forms::Button());
+			this->statisticMStatisticButton = (gcnew System::Windows::Forms::Button());
+			this->statisticMComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->statisticMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->loginPanel->SuspendLayout();
 			this->registerPanel->SuspendLayout();
-			this->addClientPanel->SuspendLayout();
 			this->clientMPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientMDGV))->BeginInit();
 			this->managerTablePanel->SuspendLayout();
 			this->managerTabControl->SuspendLayout();
 			this->clientMTabPage->SuspendLayout();
 			this->orderMTabPage->SuspendLayout();
+			this->addOrderPanel->SuspendLayout();
 			this->orderMPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->orderMDGV))->BeginInit();
-			this->addOrderPanel->SuspendLayout();
 			this->stockMTabPage->SuspendLayout();
+			this->informationStockPanel->SuspendLayout();
 			this->stockMPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->stockMDGV))->BeginInit();
 			this->addStockPanel->SuspendLayout();
 			this->statisticMTabPage->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->statisticMDGV))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// loginPanel
 			// 
+			this->loginPanel->Controls->Add(this->loginErrorLabel);
 			this->loginPanel->Controls->Add(this->loginValidateButton);
 			this->loginPanel->Controls->Add(this->loginRegisterButton);
 			this->loginPanel->Controls->Add(this->loginPasswordLabel);
@@ -264,6 +304,18 @@ namespace OPO2SUMproject {
 			this->loginPanel->Size = System::Drawing::Size(419, 462);
 			this->loginPanel->TabIndex = 0;
 			// 
+			// loginErrorLabel
+			// 
+			this->loginErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->loginErrorLabel->AutoSize = true;
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->loginErrorLabel->Location = System::Drawing::Point(176, 409);
+			this->loginErrorLabel->Name = L"loginErrorLabel";
+			this->loginErrorLabel->Size = System::Drawing::Size(78, 17);
+			this->loginErrorLabel->TabIndex = 18;
+			this->loginErrorLabel->Text = L"Lastname";
+			this->loginErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// loginValidateButton
 			// 
 			this->loginValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
@@ -273,6 +325,7 @@ namespace OPO2SUMproject {
 			this->loginValidateButton->TabIndex = 11;
 			this->loginValidateButton->Text = L"Validate";
 			this->loginValidateButton->UseVisualStyleBackColor = true;
+			this->loginValidateButton->Click += gcnew System::EventHandler(this, &MyForm::loginValidateButton_Click);
 			// 
 			// loginRegisterButton
 			// 
@@ -291,7 +344,7 @@ namespace OPO2SUMproject {
 			this->loginPasswordLabel->AutoSize = true;
 			this->loginPasswordLabel->Location = System::Drawing::Point(176, 233);
 			this->loginPasswordLabel->Name = L"loginPasswordLabel";
-			this->loginPasswordLabel->Size = System::Drawing::Size(68, 18);
+			this->loginPasswordLabel->Size = System::Drawing::Size(77, 17);
 			this->loginPasswordLabel->TabIndex = 4;
 			this->loginPasswordLabel->Text = L"Password";
 			// 
@@ -300,7 +353,8 @@ namespace OPO2SUMproject {
 			this->loginPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->loginPasswordTextBox->Location = System::Drawing::Point(164, 254);
 			this->loginPasswordTextBox->Name = L"loginPasswordTextBox";
-			this->loginPasswordTextBox->Size = System::Drawing::Size(89, 24);
+			this->loginPasswordTextBox->PasswordChar = '*';
+			this->loginPasswordTextBox->Size = System::Drawing::Size(89, 22);
 			this->loginPasswordTextBox->TabIndex = 3;
 			// 
 			// loginUsernameTextBox
@@ -308,7 +362,7 @@ namespace OPO2SUMproject {
 			this->loginUsernameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->loginUsernameTextBox->Location = System::Drawing::Point(164, 172);
 			this->loginUsernameTextBox->Name = L"loginUsernameTextBox";
-			this->loginUsernameTextBox->Size = System::Drawing::Size(89, 24);
+			this->loginUsernameTextBox->Size = System::Drawing::Size(89, 22);
 			this->loginUsernameTextBox->TabIndex = 2;
 			// 
 			// loginUsernameLabel
@@ -317,7 +371,7 @@ namespace OPO2SUMproject {
 			this->loginUsernameLabel->AutoSize = true;
 			this->loginUsernameLabel->Location = System::Drawing::Point(176, 151);
 			this->loginUsernameLabel->Name = L"loginUsernameLabel";
-			this->loginUsernameLabel->Size = System::Drawing::Size(70, 18);
+			this->loginUsernameLabel->Size = System::Drawing::Size(81, 17);
 			this->loginUsernameLabel->TabIndex = 1;
 			this->loginUsernameLabel->Text = L"Username";
 			// 
@@ -336,6 +390,13 @@ namespace OPO2SUMproject {
 			// registerPanel
 			// 
 			this->registerPanel->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->registerPanel->Controls->Add(this->registerBirthdayLabel);
+			this->registerPanel->Controls->Add(this->registerDateTimePicker);
+			this->registerPanel->Controls->Add(this->registerErrorLabel);
+			this->registerPanel->Controls->Add(this->registerLastnameLabel);
+			this->registerPanel->Controls->Add(this->registerFirstnameLabel);
+			this->registerPanel->Controls->Add(this->registerLastnameTextBox);
+			this->registerPanel->Controls->Add(this->registerFirstnameTextBox);
 			this->registerPanel->Controls->Add(this->registerValidateButton);
 			this->registerPanel->Controls->Add(this->registerLoginButton);
 			this->registerPanel->Controls->Add(this->registerPasswordLabel);
@@ -344,20 +405,87 @@ namespace OPO2SUMproject {
 			this->registerPanel->Controls->Add(this->registerUsernameLabel);
 			this->registerPanel->Controls->Add(this->registerRegisterLabel);
 			this->registerPanel->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->registerPanel->Location = System::Drawing::Point(10, 13);
+			this->registerPanel->Location = System::Drawing::Point(9, 10);
 			this->registerPanel->Name = L"registerPanel";
 			this->registerPanel->Size = System::Drawing::Size(419, 462);
 			this->registerPanel->TabIndex = 12;
 			// 
+			// registerBirthdayLabel
+			// 
+			this->registerBirthdayLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerBirthdayLabel->AutoSize = true;
+			this->registerBirthdayLabel->Location = System::Drawing::Point(108, 242);
+			this->registerBirthdayLabel->Name = L"registerBirthdayLabel";
+			this->registerBirthdayLabel->Size = System::Drawing::Size(68, 17);
+			this->registerBirthdayLabel->TabIndex = 17;
+			this->registerBirthdayLabel->Text = L"Birthday";
+			// 
+			// registerDateTimePicker
+			// 
+			this->registerDateTimePicker->Location = System::Drawing::Point(86, 269);
+			this->registerDateTimePicker->Name = L"registerDateTimePicker";
+			this->registerDateTimePicker->Size = System::Drawing::Size(200, 22);
+			this->registerDateTimePicker->TabIndex = 9;
+			// 
+			// registerErrorLabel
+			// 
+			this->registerErrorLabel->AccessibleRole = System::Windows::Forms::AccessibleRole::Text;
+			this->registerErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerErrorLabel->AutoSize = true;
+			this->registerErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->registerErrorLabel->Location = System::Drawing::Point(161, 374);
+			this->registerErrorLabel->Name = L"registerErrorLabel";
+			this->registerErrorLabel->Size = System::Drawing::Size(78, 17);
+			this->registerErrorLabel->TabIndex = 16;
+			this->registerErrorLabel->Text = L"Lastname";
+			this->registerErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// registerLastnameLabel
+			// 
+			this->registerLastnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerLastnameLabel->AutoSize = true;
+			this->registerLastnameLabel->Location = System::Drawing::Point(208, 178);
+			this->registerLastnameLabel->Name = L"registerLastnameLabel";
+			this->registerLastnameLabel->Size = System::Drawing::Size(78, 17);
+			this->registerLastnameLabel->TabIndex = 15;
+			this->registerLastnameLabel->Text = L"Lastname";
+			// 
+			// registerFirstnameLabel
+			// 
+			this->registerFirstnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerFirstnameLabel->AutoSize = true;
+			this->registerFirstnameLabel->Location = System::Drawing::Point(21, 175);
+			this->registerFirstnameLabel->Name = L"registerFirstnameLabel";
+			this->registerFirstnameLabel->Size = System::Drawing::Size(79, 17);
+			this->registerFirstnameLabel->TabIndex = 14;
+			this->registerFirstnameLabel->Text = L"Firstname";
+			// 
+			// registerLastnameTextBox
+			// 
+			this->registerLastnameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerLastnameTextBox->Location = System::Drawing::Point(196, 196);
+			this->registerLastnameTextBox->Name = L"registerLastnameTextBox";
+			this->registerLastnameTextBox->Size = System::Drawing::Size(165, 22);
+			this->registerLastnameTextBox->TabIndex = 13;
+			// 
+			// registerFirstnameTextBox
+			// 
+			this->registerFirstnameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->registerFirstnameTextBox->Location = System::Drawing::Point(10, 196);
+			this->registerFirstnameTextBox->Name = L"registerFirstnameTextBox";
+			this->registerFirstnameTextBox->Size = System::Drawing::Size(165, 22);
+			this->registerFirstnameTextBox->TabIndex = 12;
+			// 
 			// registerValidateButton
 			// 
 			this->registerValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->registerValidateButton->Location = System::Drawing::Point(164, 358);
+			this->registerValidateButton->Location = System::Drawing::Point(164, 327);
 			this->registerValidateButton->Name = L"registerValidateButton";
 			this->registerValidateButton->Size = System::Drawing::Size(87, 34);
 			this->registerValidateButton->TabIndex = 11;
 			this->registerValidateButton->Text = L"Validate";
 			this->registerValidateButton->UseVisualStyleBackColor = true;
+			this->registerValidateButton->Click += gcnew System::EventHandler(this, &MyForm::registerValidateButton_Click);
 			// 
 			// registerLoginButton
 			// 
@@ -374,35 +502,36 @@ namespace OPO2SUMproject {
 			// 
 			this->registerPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerPasswordLabel->AutoSize = true;
-			this->registerPasswordLabel->Location = System::Drawing::Point(6, 173);
+			this->registerPasswordLabel->Location = System::Drawing::Point(208, 111);
 			this->registerPasswordLabel->Name = L"registerPasswordLabel";
-			this->registerPasswordLabel->Size = System::Drawing::Size(68, 18);
+			this->registerPasswordLabel->Size = System::Drawing::Size(77, 17);
 			this->registerPasswordLabel->TabIndex = 4;
 			this->registerPasswordLabel->Text = L"Password";
 			// 
 			// registerPasswordTextBox
 			// 
 			this->registerPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->registerPasswordTextBox->Location = System::Drawing::Point(85, 170);
+			this->registerPasswordTextBox->Location = System::Drawing::Point(196, 132);
 			this->registerPasswordTextBox->Name = L"registerPasswordTextBox";
-			this->registerPasswordTextBox->Size = System::Drawing::Size(165, 24);
+			this->registerPasswordTextBox->PasswordChar = '*';
+			this->registerPasswordTextBox->Size = System::Drawing::Size(165, 22);
 			this->registerPasswordTextBox->TabIndex = 3;
 			// 
 			// registerUsernameTextBox
 			// 
 			this->registerUsernameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->registerUsernameTextBox->Location = System::Drawing::Point(85, 132);
+			this->registerUsernameTextBox->Location = System::Drawing::Point(10, 132);
 			this->registerUsernameTextBox->Name = L"registerUsernameTextBox";
-			this->registerUsernameTextBox->Size = System::Drawing::Size(165, 24);
+			this->registerUsernameTextBox->Size = System::Drawing::Size(165, 22);
 			this->registerUsernameTextBox->TabIndex = 2;
 			// 
 			// registerUsernameLabel
 			// 
 			this->registerUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerUsernameLabel->AutoSize = true;
-			this->registerUsernameLabel->Location = System::Drawing::Point(3, 135);
+			this->registerUsernameLabel->Location = System::Drawing::Point(21, 111);
 			this->registerUsernameLabel->Name = L"registerUsernameLabel";
-			this->registerUsernameLabel->Size = System::Drawing::Size(70, 18);
+			this->registerUsernameLabel->Size = System::Drawing::Size(81, 17);
 			this->registerUsernameLabel->TabIndex = 1;
 			this->registerUsernameLabel->Text = L"Username";
 			// 
@@ -410,110 +539,13 @@ namespace OPO2SUMproject {
 			// 
 			this->registerRegisterLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			this->registerRegisterLabel->AutoSize = true;
-			this->registerRegisterLabel->Font = (gcnew System::Drawing::Font(L"Source Sans Pro", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->registerRegisterLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->registerRegisterLabel->Location = System::Drawing::Point(146, 53);
 			this->registerRegisterLabel->Name = L"registerRegisterLabel";
-			this->registerRegisterLabel->Size = System::Drawing::Size(140, 41);
+			this->registerRegisterLabel->Size = System::Drawing::Size(147, 38);
 			this->registerRegisterLabel->TabIndex = 0;
 			this->registerRegisterLabel->Text = L"Register";
-			// 
-			// addClientPanel
-			// 
-			this->addClientPanel->Controls->Add(this->addClientValidateButton);
-			this->addClientPanel->Controls->Add(this->addClientBirthdateTextBox);
-			this->addClientPanel->Controls->Add(this->addClientLNameTextBox);
-			this->addClientPanel->Controls->Add(this->addClientFNameTextBox);
-			this->addClientPanel->Controls->Add(this->addClientBirthdateLabel);
-			this->addClientPanel->Controls->Add(this->addClientLNameLabel);
-			this->addClientPanel->Controls->Add(this->addClientFNameLabel);
-			this->addClientPanel->Controls->Add(this->addClientTitleLabel);
-			this->addClientPanel->Controls->Add(this->addClientExitButton);
-			this->addClientPanel->Location = System::Drawing::Point(6, 6);
-			this->addClientPanel->Name = L"addClientPanel";
-			this->addClientPanel->Size = System::Drawing::Size(402, 412);
-			this->addClientPanel->TabIndex = 3;
-			// 
-			// addClientValidateButton
-			// 
-			this->addClientValidateButton->Location = System::Drawing::Point(231, 289);
-			this->addClientValidateButton->Name = L"addClientValidateButton";
-			this->addClientValidateButton->Size = System::Drawing::Size(99, 37);
-			this->addClientValidateButton->TabIndex = 8;
-			this->addClientValidateButton->Text = L"Validate";
-			this->addClientValidateButton->UseVisualStyleBackColor = true;
-			// 
-			// addClientBirthdateTextBox
-			// 
-			this->addClientBirthdateTextBox->Location = System::Drawing::Point(6, 176);
-			this->addClientBirthdateTextBox->Name = L"addClientBirthdateTextBox";
-			this->addClientBirthdateTextBox->Size = System::Drawing::Size(117, 24);
-			this->addClientBirthdateTextBox->TabIndex = 7;
-			// 
-			// addClientLNameTextBox
-			// 
-			this->addClientLNameTextBox->Location = System::Drawing::Point(6, 128);
-			this->addClientLNameTextBox->Name = L"addClientLNameTextBox";
-			this->addClientLNameTextBox->Size = System::Drawing::Size(117, 24);
-			this->addClientLNameTextBox->TabIndex = 6;
-			// 
-			// addClientFNameTextBox
-			// 
-			this->addClientFNameTextBox->Location = System::Drawing::Point(6, 79);
-			this->addClientFNameTextBox->Name = L"addClientFNameTextBox";
-			this->addClientFNameTextBox->Size = System::Drawing::Size(117, 24);
-			this->addClientFNameTextBox->TabIndex = 5;
-			// 
-			// addClientBirthdateLabel
-			// 
-			this->addClientBirthdateLabel->AutoSize = true;
-			this->addClientBirthdateLabel->Location = System::Drawing::Point(3, 154);
-			this->addClientBirthdateLabel->Name = L"addClientBirthdateLabel";
-			this->addClientBirthdateLabel->Size = System::Drawing::Size(66, 18);
-			this->addClientBirthdateLabel->TabIndex = 4;
-			this->addClientBirthdateLabel->Text = L"Birthdate";
-			// 
-			// addClientLNameLabel
-			// 
-			this->addClientLNameLabel->AutoSize = true;
-			this->addClientLNameLabel->Location = System::Drawing::Point(3, 105);
-			this->addClientLNameLabel->Name = L"addClientLNameLabel";
-			this->addClientLNameLabel->Size = System::Drawing::Size(71, 18);
-			this->addClientLNameLabel->TabIndex = 3;
-			this->addClientLNameLabel->Text = L"Last Name";
-			// 
-			// addClientFNameLabel
-			// 
-			this->addClientFNameLabel->AutoSize = true;
-			this->addClientFNameLabel->Location = System::Drawing::Point(3, 57);
-			this->addClientFNameLabel->Name = L"addClientFNameLabel";
-			this->addClientFNameLabel->Size = System::Drawing::Size(74, 18);
-			this->addClientFNameLabel->TabIndex = 2;
-			this->addClientFNameLabel->Text = L"First Name";
-			// 
-			// addClientTitleLabel
-			// 
-			this->addClientTitleLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->addClientTitleLabel->AutoSize = true;
-			this->addClientTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->addClientTitleLabel->Location = System::Drawing::Point(87, 3);
-			this->addClientTitleLabel->Name = L"addClientTitleLabel";
-			this->addClientTitleLabel->Size = System::Drawing::Size(167, 38);
-			this->addClientTitleLabel->TabIndex = 1;
-			this->addClientTitleLabel->Text = L"Add Client";
-			// 
-			// addClientExitButton
-			// 
-			this->addClientExitButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->addClientExitButton->Location = System::Drawing::Point(378, 3);
-			this->addClientExitButton->Name = L"addClientExitButton";
-			this->addClientExitButton->Size = System::Drawing::Size(22, 24);
-			this->addClientExitButton->TabIndex = 0;
-			this->addClientExitButton->Text = L"X";
-			this->addClientExitButton->UseVisualStyleBackColor = true;
-			this->addClientExitButton->Click += gcnew System::EventHandler(this, &MyForm::addClientExitButton_Click);
 			// 
 			// clientMPanel
 			// 
@@ -526,22 +558,21 @@ namespace OPO2SUMproject {
 			this->clientMPanel->Controls->Add(this->clientMLNameTextBox);
 			this->clientMPanel->Controls->Add(this->clientMCityTextBox);
 			this->clientMPanel->Controls->Add(this->clientMDGV);
-			this->clientMPanel->Controls->Add(this->clientMAddButton);
 			this->clientMPanel->Controls->Add(this->clientMSearchButton);
 			this->clientMPanel->Controls->Add(this->clientMCityLabel);
 			this->clientMPanel->Controls->Add(this->clientMFNameLabel);
 			this->clientMPanel->Controls->Add(this->clientMLNameLabel);
 			this->clientMPanel->Location = System::Drawing::Point(6, 6);
 			this->clientMPanel->Name = L"clientMPanel";
-			this->clientMPanel->Size = System::Drawing::Size(402, 411);
+			this->clientMPanel->Size = System::Drawing::Size(472, 491);
 			this->clientMPanel->TabIndex = 4;
 			// 
 			// clientMModifyButton
 			// 
 			this->clientMModifyButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMModifyButton->Location = System::Drawing::Point(262, 374);
+			this->clientMModifyButton->Location = System::Drawing::Point(293, 453);
 			this->clientMModifyButton->Name = L"clientMModifyButton";
-			this->clientMModifyButton->Size = System::Drawing::Size(66, 34);
+			this->clientMModifyButton->Size = System::Drawing::Size(85, 34);
 			this->clientMModifyButton->TabIndex = 10;
 			this->clientMModifyButton->Text = L"Modify";
 			this->clientMModifyButton->UseVisualStyleBackColor = true;
@@ -549,32 +580,32 @@ namespace OPO2SUMproject {
 			// clientMDeleteButton
 			// 
 			this->clientMDeleteButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMDeleteButton->Location = System::Drawing::Point(335, 374);
+			this->clientMDeleteButton->Location = System::Drawing::Point(384, 453);
 			this->clientMDeleteButton->Name = L"clientMDeleteButton";
-			this->clientMDeleteButton->Size = System::Drawing::Size(66, 34);
+			this->clientMDeleteButton->Size = System::Drawing::Size(85, 34);
 			this->clientMDeleteButton->TabIndex = 9;
 			this->clientMDeleteButton->Text = L"Delete";
 			this->clientMDeleteButton->UseVisualStyleBackColor = true;
 			// 
 			// clientMFNameTextBox
 			// 
-			this->clientMFNameTextBox->Location = System::Drawing::Point(80, 39);
+			this->clientMFNameTextBox->Location = System::Drawing::Point(103, 39);
 			this->clientMFNameTextBox->Name = L"clientMFNameTextBox";
-			this->clientMFNameTextBox->Size = System::Drawing::Size(115, 24);
+			this->clientMFNameTextBox->Size = System::Drawing::Size(115, 22);
 			this->clientMFNameTextBox->TabIndex = 6;
 			// 
 			// clientMLNameTextBox
 			// 
-			this->clientMLNameTextBox->Location = System::Drawing::Point(80, 69);
+			this->clientMLNameTextBox->Location = System::Drawing::Point(103, 69);
 			this->clientMLNameTextBox->Name = L"clientMLNameTextBox";
-			this->clientMLNameTextBox->Size = System::Drawing::Size(115, 24);
+			this->clientMLNameTextBox->Size = System::Drawing::Size(115, 22);
 			this->clientMLNameTextBox->TabIndex = 7;
 			// 
 			// clientMCityTextBox
 			// 
-			this->clientMCityTextBox->Location = System::Drawing::Point(80, 101);
+			this->clientMCityTextBox->Location = System::Drawing::Point(103, 101);
 			this->clientMCityTextBox->Name = L"clientMCityTextBox";
-			this->clientMCityTextBox->Size = System::Drawing::Size(115, 24);
+			this->clientMCityTextBox->Size = System::Drawing::Size(115, 22);
 			this->clientMCityTextBox->TabIndex = 8;
 			// 
 			// clientMDGV
@@ -582,30 +613,19 @@ namespace OPO2SUMproject {
 			this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->clientMDGV->Location = System::Drawing::Point(3, 207);
+			this->clientMDGV->Location = System::Drawing::Point(3, 287);
 			this->clientMDGV->Name = L"clientMDGV";
 			this->clientMDGV->RowHeadersWidth = 51;
 			this->clientMDGV->RowTemplate->Height = 24;
-			this->clientMDGV->Size = System::Drawing::Size(398, 160);
+			this->clientMDGV->Size = System::Drawing::Size(466, 160);
 			this->clientMDGV->TabIndex = 0;
-			// 
-			// clientMAddButton
-			// 
-			this->clientMAddButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMAddButton->Location = System::Drawing::Point(192, 374);
-			this->clientMAddButton->Name = L"clientMAddButton";
-			this->clientMAddButton->Size = System::Drawing::Size(66, 34);
-			this->clientMAddButton->TabIndex = 2;
-			this->clientMAddButton->Text = L"Add";
-			this->clientMAddButton->UseVisualStyleBackColor = true;
-			this->clientMAddButton->Click += gcnew System::EventHandler(this, &MyForm::clientMAddButton_Click);
 			// 
 			// clientMSearchButton
 			// 
 			this->clientMSearchButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->clientMSearchButton->Location = System::Drawing::Point(335, 167);
+			this->clientMSearchButton->Location = System::Drawing::Point(384, 247);
 			this->clientMSearchButton->Name = L"clientMSearchButton";
-			this->clientMSearchButton->Size = System::Drawing::Size(66, 34);
+			this->clientMSearchButton->Size = System::Drawing::Size(85, 34);
 			this->clientMSearchButton->TabIndex = 1;
 			this->clientMSearchButton->Text = L"Search";
 			this->clientMSearchButton->UseVisualStyleBackColor = true;
@@ -615,7 +635,7 @@ namespace OPO2SUMproject {
 			this->clientMCityLabel->AutoSize = true;
 			this->clientMCityLabel->Location = System::Drawing::Point(3, 104);
 			this->clientMCityLabel->Name = L"clientMCityLabel";
-			this->clientMCityLabel->Size = System::Drawing::Size(39, 18);
+			this->clientMCityLabel->Size = System::Drawing::Size(45, 17);
 			this->clientMCityLabel->TabIndex = 5;
 			this->clientMCityLabel->Text = L"City :";
 			// 
@@ -624,7 +644,7 @@ namespace OPO2SUMproject {
 			this->clientMFNameLabel->AutoSize = true;
 			this->clientMFNameLabel->Location = System::Drawing::Point(3, 42);
 			this->clientMFNameLabel->Name = L"clientMFNameLabel";
-			this->clientMFNameLabel->Size = System::Drawing::Size(80, 18);
+			this->clientMFNameLabel->Size = System::Drawing::Size(94, 17);
 			this->clientMFNameLabel->TabIndex = 3;
 			this->clientMFNameLabel->Text = L"First name :";
 			// 
@@ -633,22 +653,16 @@ namespace OPO2SUMproject {
 			this->clientMLNameLabel->AutoSize = true;
 			this->clientMLNameLabel->Location = System::Drawing::Point(3, 72);
 			this->clientMLNameLabel->Name = L"clientMLNameLabel";
-			this->clientMLNameLabel->Size = System::Drawing::Size(77, 18);
+			this->clientMLNameLabel->Size = System::Drawing::Size(93, 17);
 			this->clientMLNameLabel->TabIndex = 4;
 			this->clientMLNameLabel->Text = L"Last name :";
-			// 
-			// contextMenuStrip1
-			// 
-			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->contextMenuStrip1->Name = L"contextMenuStrip1";
-			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
 			// 
 			// managerTablePanel
 			// 
 			this->managerTablePanel->Controls->Add(this->managerTabControl);
 			this->managerTablePanel->Location = System::Drawing::Point(434, 13);
 			this->managerTablePanel->Name = L"managerTablePanel";
-			this->managerTablePanel->Size = System::Drawing::Size(426, 462);
+			this->managerTablePanel->Size = System::Drawing::Size(498, 538);
 			this->managerTablePanel->TabIndex = 2;
 			// 
 			// managerTabControl
@@ -663,97 +677,31 @@ namespace OPO2SUMproject {
 			this->managerTabControl->Location = System::Drawing::Point(3, 3);
 			this->managerTabControl->Name = L"managerTabControl";
 			this->managerTabControl->SelectedIndex = 0;
-			this->managerTabControl->Size = System::Drawing::Size(420, 456);
+			this->managerTabControl->Size = System::Drawing::Size(492, 532);
 			this->managerTabControl->TabIndex = 0;
 			// 
 			// clientMTabPage
 			// 
-			this->clientMTabPage->Controls->Add(this->addClientPanel);
 			this->clientMTabPage->Controls->Add(this->clientMPanel);
-			this->clientMTabPage->Location = System::Drawing::Point(4, 26);
+			this->clientMTabPage->Location = System::Drawing::Point(4, 25);
 			this->clientMTabPage->Name = L"clientMTabPage";
 			this->clientMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->clientMTabPage->Size = System::Drawing::Size(412, 426);
+			this->clientMTabPage->Size = System::Drawing::Size(484, 503);
 			this->clientMTabPage->TabIndex = 0;
 			this->clientMTabPage->Text = L"Client";
 			this->clientMTabPage->UseVisualStyleBackColor = true;
 			// 
 			// orderMTabPage
 			// 
-			this->orderMTabPage->Controls->Add(this->orderMPanel);
 			this->orderMTabPage->Controls->Add(this->addOrderPanel);
-			this->orderMTabPage->Location = System::Drawing::Point(4, 26);
+			this->orderMTabPage->Controls->Add(this->orderMPanel);
+			this->orderMTabPage->Location = System::Drawing::Point(4, 25);
 			this->orderMTabPage->Name = L"orderMTabPage";
 			this->orderMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->orderMTabPage->Size = System::Drawing::Size(412, 426);
+			this->orderMTabPage->Size = System::Drawing::Size(484, 503);
 			this->orderMTabPage->TabIndex = 1;
 			this->orderMTabPage->Text = L"Order";
 			this->orderMTabPage->UseVisualStyleBackColor = true;
-			// 
-			// orderMPanel
-			// 
-			this->orderMPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->orderMPanel->Controls->Add(this->orderMSearchButton);
-			this->orderMPanel->Controls->Add(this->orderMAddButton);
-			this->orderMPanel->Controls->Add(this->orderMModifyButton);
-			this->orderMPanel->Controls->Add(this->orderMDeleteButton);
-			this->orderMPanel->Controls->Add(this->orderMDGV);
-			this->orderMPanel->Location = System::Drawing::Point(6, 6);
-			this->orderMPanel->Name = L"orderMPanel";
-			this->orderMPanel->Size = System::Drawing::Size(402, 412);
-			this->orderMPanel->TabIndex = 0;
-			// 
-			// orderMSearchButton
-			// 
-			this->orderMSearchButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->orderMSearchButton->Location = System::Drawing::Point(335, 167);
-			this->orderMSearchButton->Name = L"orderMSearchButton";
-			this->orderMSearchButton->Size = System::Drawing::Size(66, 34);
-			this->orderMSearchButton->TabIndex = 8;
-			this->orderMSearchButton->Text = L"Search";
-			this->orderMSearchButton->UseVisualStyleBackColor = true;
-			// 
-			// orderMAddButton
-			// 
-			this->orderMAddButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->orderMAddButton->Location = System::Drawing::Point(192, 375);
-			this->orderMAddButton->Name = L"orderMAddButton";
-			this->orderMAddButton->Size = System::Drawing::Size(66, 34);
-			this->orderMAddButton->TabIndex = 7;
-			this->orderMAddButton->Text = L"Add";
-			this->orderMAddButton->UseVisualStyleBackColor = true;
-			this->orderMAddButton->Click += gcnew System::EventHandler(this, &MyForm::orderMAddButton_Click);
-			// 
-			// orderMModifyButton
-			// 
-			this->orderMModifyButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->orderMModifyButton->Location = System::Drawing::Point(262, 375);
-			this->orderMModifyButton->Name = L"orderMModifyButton";
-			this->orderMModifyButton->Size = System::Drawing::Size(66, 34);
-			this->orderMModifyButton->TabIndex = 6;
-			this->orderMModifyButton->Text = L"Modify";
-			this->orderMModifyButton->UseVisualStyleBackColor = true;
-			// 
-			// orderMDeleteButton
-			// 
-			this->orderMDeleteButton->Location = System::Drawing::Point(335, 375);
-			this->orderMDeleteButton->Name = L"orderMDeleteButton";
-			this->orderMDeleteButton->Size = System::Drawing::Size(66, 34);
-			this->orderMDeleteButton->TabIndex = 1;
-			this->orderMDeleteButton->Text = L"Delete";
-			this->orderMDeleteButton->UseVisualStyleBackColor = true;
-			// 
-			// orderMDGV
-			// 
-			this->orderMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->orderMDGV->Location = System::Drawing::Point(3, 207);
-			this->orderMDGV->Name = L"orderMDGV";
-			this->orderMDGV->RowHeadersWidth = 51;
-			this->orderMDGV->RowTemplate->Height = 24;
-			this->orderMDGV->Size = System::Drawing::Size(398, 162);
-			this->orderMDGV->TabIndex = 0;
 			// 
 			// addOrderPanel
 			// 
@@ -768,7 +716,7 @@ namespace OPO2SUMproject {
 			this->addOrderPanel->Controls->Add(this->addOrderExitButton);
 			this->addOrderPanel->Location = System::Drawing::Point(6, 6);
 			this->addOrderPanel->Name = L"addOrderPanel";
-			this->addOrderPanel->Size = System::Drawing::Size(402, 412);
+			this->addOrderPanel->Size = System::Drawing::Size(472, 491);
 			this->addOrderPanel->TabIndex = 9;
 			// 
 			// addOrderValidateButton
@@ -784,21 +732,21 @@ namespace OPO2SUMproject {
 			// 
 			this->addOrderDateTextBox->Location = System::Drawing::Point(6, 176);
 			this->addOrderDateTextBox->Name = L"addOrderDateTextBox";
-			this->addOrderDateTextBox->Size = System::Drawing::Size(117, 24);
+			this->addOrderDateTextBox->Size = System::Drawing::Size(117, 22);
 			this->addOrderDateTextBox->TabIndex = 7;
 			// 
 			// addOrderLNameTextBox
 			// 
 			this->addOrderLNameTextBox->Location = System::Drawing::Point(6, 128);
 			this->addOrderLNameTextBox->Name = L"addOrderLNameTextBox";
-			this->addOrderLNameTextBox->Size = System::Drawing::Size(117, 24);
+			this->addOrderLNameTextBox->Size = System::Drawing::Size(117, 22);
 			this->addOrderLNameTextBox->TabIndex = 6;
 			// 
 			// addOrderFNameTextBox
 			// 
 			this->addOrderFNameTextBox->Location = System::Drawing::Point(6, 79);
 			this->addOrderFNameTextBox->Name = L"addOrderFNameTextBox";
-			this->addOrderFNameTextBox->Size = System::Drawing::Size(117, 24);
+			this->addOrderFNameTextBox->Size = System::Drawing::Size(117, 22);
 			this->addOrderFNameTextBox->TabIndex = 5;
 			// 
 			// addOrderDateLabe
@@ -806,7 +754,7 @@ namespace OPO2SUMproject {
 			this->addOrderDateLabe->AutoSize = true;
 			this->addOrderDateLabe->Location = System::Drawing::Point(3, 154);
 			this->addOrderDateLabe->Name = L"addOrderDateLabe";
-			this->addOrderDateLabe->Size = System::Drawing::Size(36, 18);
+			this->addOrderDateLabe->Size = System::Drawing::Size(42, 17);
 			this->addOrderDateLabe->TabIndex = 4;
 			this->addOrderDateLabe->Text = L"Date";
 			// 
@@ -815,7 +763,7 @@ namespace OPO2SUMproject {
 			this->addOrderLNameLabel->AutoSize = true;
 			this->addOrderLNameLabel->Location = System::Drawing::Point(3, 105);
 			this->addOrderLNameLabel->Name = L"addOrderLNameLabel";
-			this->addOrderLNameLabel->Size = System::Drawing::Size(71, 18);
+			this->addOrderLNameLabel->Size = System::Drawing::Size(85, 17);
 			this->addOrderLNameLabel->TabIndex = 3;
 			this->addOrderLNameLabel->Text = L"Last Name";
 			// 
@@ -824,7 +772,7 @@ namespace OPO2SUMproject {
 			this->addOrderFNameLabel->AutoSize = true;
 			this->addOrderFNameLabel->Location = System::Drawing::Point(3, 57);
 			this->addOrderFNameLabel->Name = L"addOrderFNameLabel";
-			this->addOrderFNameLabel->Size = System::Drawing::Size(74, 18);
+			this->addOrderFNameLabel->Size = System::Drawing::Size(86, 17);
 			this->addOrderFNameLabel->TabIndex = 2;
 			this->addOrderFNameLabel->Text = L"First Name";
 			// 
@@ -833,18 +781,18 @@ namespace OPO2SUMproject {
 			this->addOrderTitleLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->addOrderTitleLabel->AutoSize = true;
-			this->addOrderTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->addOrderTitleLabel->Location = System::Drawing::Point(87, 3);
+			this->addOrderTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->addOrderTitleLabel->Location = System::Drawing::Point(104, 3);
 			this->addOrderTitleLabel->Name = L"addOrderTitleLabel";
-			this->addOrderTitleLabel->Size = System::Drawing::Size(168, 38);
+			this->addOrderTitleLabel->Size = System::Drawing::Size(177, 38);
 			this->addOrderTitleLabel->TabIndex = 1;
 			this->addOrderTitleLabel->Text = L"Add Order";
 			// 
 			// addOrderExitButton
 			// 
 			this->addOrderExitButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->addOrderExitButton->Location = System::Drawing::Point(378, 3);
+			this->addOrderExitButton->Location = System::Drawing::Point(448, 3);
 			this->addOrderExitButton->Name = L"addOrderExitButton";
 			this->addOrderExitButton->Size = System::Drawing::Size(22, 24);
 			this->addOrderExitButton->TabIndex = 0;
@@ -852,102 +800,302 @@ namespace OPO2SUMproject {
 			this->addOrderExitButton->UseVisualStyleBackColor = true;
 			this->addOrderExitButton->Click += gcnew System::EventHandler(this, &MyForm::addOrderExitButton_Click);
 			// 
+			// orderMPanel
+			// 
+			this->orderMPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->orderMPanel->Controls->Add(this->orderMSearchButton);
+			this->orderMPanel->Controls->Add(this->orderMFilterButton);
+			this->orderMPanel->Controls->Add(this->orderMAddButton);
+			this->orderMPanel->Controls->Add(this->orderMModifyButton);
+			this->orderMPanel->Controls->Add(this->orderMDeleteButton);
+			this->orderMPanel->Controls->Add(this->orderMDGV);
+			this->orderMPanel->Location = System::Drawing::Point(6, 6);
+			this->orderMPanel->Name = L"orderMPanel";
+			this->orderMPanel->Size = System::Drawing::Size(472, 491);
+			this->orderMPanel->TabIndex = 0;
+			// 
+			// orderMSearchButton
+			// 
+			this->orderMSearchButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->orderMSearchButton->Location = System::Drawing::Point(393, 3);
+			this->orderMSearchButton->Name = L"orderMSearchButton";
+			this->orderMSearchButton->Size = System::Drawing::Size(76, 34);
+			this->orderMSearchButton->TabIndex = 8;
+			this->orderMSearchButton->Text = L"Search";
+			this->orderMSearchButton->UseVisualStyleBackColor = true;
+			// 
+			// orderMFilterButton
+			// 
+			this->orderMFilterButton->Location = System::Drawing::Point(3, 3);
+			this->orderMFilterButton->Name = L"orderMFilterButton";
+			this->orderMFilterButton->Size = System::Drawing::Size(75, 34);
+			this->orderMFilterButton->TabIndex = 9;
+			this->orderMFilterButton->Text = L"Filter";
+			this->orderMFilterButton->UseVisualStyleBackColor = true;
+			// 
+			// orderMAddButton
+			// 
+			this->orderMAddButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->orderMAddButton->Location = System::Drawing::Point(259, 454);
+			this->orderMAddButton->Name = L"orderMAddButton";
+			this->orderMAddButton->Size = System::Drawing::Size(66, 34);
+			this->orderMAddButton->TabIndex = 7;
+			this->orderMAddButton->Text = L"Add";
+			this->orderMAddButton->UseVisualStyleBackColor = true;
+			this->orderMAddButton->Click += gcnew System::EventHandler(this, &MyForm::orderMAddButton_Click);
+			// 
+			// orderMModifyButton
+			// 
+			this->orderMModifyButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->orderMModifyButton->Location = System::Drawing::Point(331, 454);
+			this->orderMModifyButton->Name = L"orderMModifyButton";
+			this->orderMModifyButton->Size = System::Drawing::Size(66, 34);
+			this->orderMModifyButton->TabIndex = 6;
+			this->orderMModifyButton->Text = L"Modify";
+			this->orderMModifyButton->UseVisualStyleBackColor = true;
+			// 
+			// orderMDeleteButton
+			// 
+			this->orderMDeleteButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->orderMDeleteButton->Location = System::Drawing::Point(403, 454);
+			this->orderMDeleteButton->Name = L"orderMDeleteButton";
+			this->orderMDeleteButton->Size = System::Drawing::Size(66, 34);
+			this->orderMDeleteButton->TabIndex = 1;
+			this->orderMDeleteButton->Text = L"Delete";
+			this->orderMDeleteButton->UseVisualStyleBackColor = true;
+			// 
+			// orderMDGV
+			// 
+			this->orderMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->orderMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->orderMDGV->Location = System::Drawing::Point(3, 119);
+			this->orderMDGV->Name = L"orderMDGV";
+			this->orderMDGV->RowHeadersWidth = 51;
+			this->orderMDGV->RowTemplate->Height = 24;
+			this->orderMDGV->Size = System::Drawing::Size(466, 329);
+			this->orderMDGV->TabIndex = 0;
+			// 
 			// stockMTabPage
 			// 
-			this->stockMTabPage->Controls->Add(this->stockMPanel);
 			this->stockMTabPage->Controls->Add(this->addStockPanel);
-			this->stockMTabPage->Location = System::Drawing::Point(4, 26);
+			this->stockMTabPage->Controls->Add(this->informationStockPanel);
+			this->stockMTabPage->Controls->Add(this->stockMPanel);
+			this->stockMTabPage->Location = System::Drawing::Point(4, 25);
 			this->stockMTabPage->Name = L"stockMTabPage";
 			this->stockMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->stockMTabPage->Size = System::Drawing::Size(412, 426);
+			this->stockMTabPage->Size = System::Drawing::Size(484, 503);
 			this->stockMTabPage->TabIndex = 2;
 			this->stockMTabPage->Text = L"Stock";
 			this->stockMTabPage->UseVisualStyleBackColor = true;
+			// 
+			// informationStockPanel
+			// 
+			this->informationStockPanel->Controls->Add(this->informationStockModifyButton);
+			this->informationStockPanel->Controls->Add(this->informationStockDeleteButton);
+			this->informationStockPanel->Location = System::Drawing::Point(6, 6);
+			this->informationStockPanel->Name = L"informationStockPanel";
+			this->informationStockPanel->Size = System::Drawing::Size(472, 491);
+			this->informationStockPanel->TabIndex = 15;
+			// 
+			// informationStockModifyButton
+			// 
+			this->informationStockModifyButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->informationStockModifyButton->Location = System::Drawing::Point(311, 454);
+			this->informationStockModifyButton->Name = L"informationStockModifyButton";
+			this->informationStockModifyButton->Size = System::Drawing::Size(76, 34);
+			this->informationStockModifyButton->TabIndex = 6;
+			this->informationStockModifyButton->Text = L"Modify";
+			this->informationStockModifyButton->UseVisualStyleBackColor = true;
+			// 
+			// informationStockDeleteButton
+			// 
+			this->informationStockDeleteButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->informationStockDeleteButton->Location = System::Drawing::Point(393, 454);
+			this->informationStockDeleteButton->Name = L"informationStockDeleteButton";
+			this->informationStockDeleteButton->Size = System::Drawing::Size(76, 34);
+			this->informationStockDeleteButton->TabIndex = 1;
+			this->informationStockDeleteButton->Text = L"Delete";
+			this->informationStockDeleteButton->UseVisualStyleBackColor = true;
 			// 
 			// stockMPanel
 			// 
 			this->stockMPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->stockMPanel->Controls->Add(this->stockMSearchButton);
+			this->stockMPanel->Controls->Add(this->stockMLabel);
+			this->stockMPanel->Controls->Add(this->stockMFilterButton);
 			this->stockMPanel->Controls->Add(this->stockMAddButton);
-			this->stockMPanel->Controls->Add(this->stockMModifyButton);
-			this->stockMPanel->Controls->Add(this->stockMDeleteButton);
 			this->stockMPanel->Controls->Add(this->stockMDGV);
 			this->stockMPanel->Location = System::Drawing::Point(6, 6);
 			this->stockMPanel->Name = L"stockMPanel";
-			this->stockMPanel->Size = System::Drawing::Size(402, 412);
+			this->stockMPanel->Size = System::Drawing::Size(472, 491);
 			this->stockMPanel->TabIndex = 9;
 			// 
-			// stockMSearchButton
+			// stockMLabel
 			// 
-			this->stockMSearchButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->stockMSearchButton->Location = System::Drawing::Point(335, 167);
-			this->stockMSearchButton->Name = L"stockMSearchButton";
-			this->stockMSearchButton->Size = System::Drawing::Size(66, 34);
-			this->stockMSearchButton->TabIndex = 8;
-			this->stockMSearchButton->Text = L"Search";
-			this->stockMSearchButton->UseVisualStyleBackColor = true;
+			this->stockMLabel->AutoSize = true;
+			this->stockMLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->stockMLabel->Location = System::Drawing::Point(87, 3);
+			this->stockMLabel->Name = L"stockMLabel";
+			this->stockMLabel->Size = System::Drawing::Size(250, 38);
+			this->stockMLabel->TabIndex = 15;
+			this->stockMLabel->Text = L"Stock Manager";
+			// 
+			// stockMFilterButton
+			// 
+			this->stockMFilterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->stockMFilterButton->Location = System::Drawing::Point(311, 454);
+			this->stockMFilterButton->Name = L"stockMFilterButton";
+			this->stockMFilterButton->Size = System::Drawing::Size(76, 34);
+			this->stockMFilterButton->TabIndex = 9;
+			this->stockMFilterButton->Text = L"Filter";
+			this->stockMFilterButton->UseVisualStyleBackColor = true;
 			// 
 			// stockMAddButton
 			// 
-			this->stockMAddButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->stockMAddButton->Location = System::Drawing::Point(192, 375);
+			this->stockMAddButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->stockMAddButton->Location = System::Drawing::Point(393, 454);
 			this->stockMAddButton->Name = L"stockMAddButton";
-			this->stockMAddButton->Size = System::Drawing::Size(66, 34);
+			this->stockMAddButton->Size = System::Drawing::Size(76, 34);
 			this->stockMAddButton->TabIndex = 7;
 			this->stockMAddButton->Text = L"Add";
 			this->stockMAddButton->UseVisualStyleBackColor = true;
 			this->stockMAddButton->Click += gcnew System::EventHandler(this, &MyForm::stockMAddButton_Click);
 			// 
-			// stockMModifyButton
-			// 
-			this->stockMModifyButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->stockMModifyButton->Location = System::Drawing::Point(262, 375);
-			this->stockMModifyButton->Name = L"stockMModifyButton";
-			this->stockMModifyButton->Size = System::Drawing::Size(66, 34);
-			this->stockMModifyButton->TabIndex = 6;
-			this->stockMModifyButton->Text = L"Modify";
-			this->stockMModifyButton->UseVisualStyleBackColor = true;
-			// 
-			// stockMDeleteButton
-			// 
-			this->stockMDeleteButton->Location = System::Drawing::Point(335, 375);
-			this->stockMDeleteButton->Name = L"stockMDeleteButton";
-			this->stockMDeleteButton->Size = System::Drawing::Size(66, 34);
-			this->stockMDeleteButton->TabIndex = 1;
-			this->stockMDeleteButton->Text = L"Delete";
-			this->stockMDeleteButton->UseVisualStyleBackColor = true;
-			// 
 			// stockMDGV
 			// 
+			this->stockMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->stockMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->stockMDGV->Location = System::Drawing::Point(3, 207);
+			this->stockMDGV->Location = System::Drawing::Point(3, 121);
 			this->stockMDGV->Name = L"stockMDGV";
 			this->stockMDGV->RowHeadersWidth = 51;
 			this->stockMDGV->RowTemplate->Height = 24;
-			this->stockMDGV->Size = System::Drawing::Size(398, 162);
+			this->stockMDGV->Size = System::Drawing::Size(466, 327);
 			this->stockMDGV->TabIndex = 0;
 			// 
 			// addStockPanel
 			// 
+			this->addStockPanel->Controls->Add(this->addStockRestockingTextBox);
+			this->addStockPanel->Controls->Add(this->addStockStockTextBox);
+			this->addStockPanel->Controls->Add(this->addStockTVATextBox);
+			this->addStockPanel->Controls->Add(this->addStockMargeTextBox);
+			this->addStockPanel->Controls->Add(this->addStockCostTextBox);
+			this->addStockPanel->Controls->Add(this->addStockRestockingLabel);
+			this->addStockPanel->Controls->Add(this->addStockStockLabel);
+			this->addStockPanel->Controls->Add(this->addStockTVALabel);
+			this->addStockPanel->Controls->Add(this->addStockMargeLabel);
+			this->addStockPanel->Controls->Add(this->addStockCostLabel);
 			this->addStockPanel->Controls->Add(this->addStockValidateButton);
 			this->addStockPanel->Controls->Add(this->addStockQuantityTextBox);
-			this->addStockPanel->Controls->Add(this->addStockReferenceTextBox);
 			this->addStockPanel->Controls->Add(this->addStockNameTextBox);
 			this->addStockPanel->Controls->Add(this->addStockQuantityLabel);
-			this->addStockPanel->Controls->Add(this->addStockReferenceLabel);
 			this->addStockPanel->Controls->Add(this->addStockNameLabel);
 			this->addStockPanel->Controls->Add(this->addStockTitleLabel);
 			this->addStockPanel->Controls->Add(this->addStockExitButton);
 			this->addStockPanel->Location = System::Drawing::Point(6, 6);
 			this->addStockPanel->Name = L"addStockPanel";
-			this->addStockPanel->Size = System::Drawing::Size(402, 412);
+			this->addStockPanel->Size = System::Drawing::Size(472, 491);
 			this->addStockPanel->TabIndex = 9;
+			// 
+			// addStockRestockingTextBox
+			// 
+			this->addStockRestockingTextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->addStockRestockingTextBox->Location = System::Drawing::Point(3, 368);
+			this->addStockRestockingTextBox->Name = L"addStockRestockingTextBox";
+			this->addStockRestockingTextBox->Size = System::Drawing::Size(466, 22);
+			this->addStockRestockingTextBox->TabIndex = 16;
+			// 
+			// addStockStockTextBox
+			// 
+			this->addStockStockTextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->addStockStockTextBox->Location = System::Drawing::Point(3, 323);
+			this->addStockStockTextBox->Name = L"addStockStockTextBox";
+			this->addStockStockTextBox->Size = System::Drawing::Size(466, 22);
+			this->addStockStockTextBox->TabIndex = 17;
+			// 
+			// addStockTVATextBox
+			// 
+			this->addStockTVATextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->addStockTVATextBox->Location = System::Drawing::Point(3, 278);
+			this->addStockTVATextBox->Name = L"addStockTVATextBox";
+			this->addStockTVATextBox->Size = System::Drawing::Size(466, 22);
+			this->addStockTVATextBox->TabIndex = 16;
+			// 
+			// addStockMargeTextBox
+			// 
+			this->addStockMargeTextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->addStockMargeTextBox->Location = System::Drawing::Point(3, 233);
+			this->addStockMargeTextBox->Name = L"addStockMargeTextBox";
+			this->addStockMargeTextBox->Size = System::Drawing::Size(466, 22);
+			this->addStockMargeTextBox->TabIndex = 15;
+			// 
+			// addStockCostTextBox
+			// 
+			this->addStockCostTextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->addStockCostTextBox->Location = System::Drawing::Point(3, 188);
+			this->addStockCostTextBox->Name = L"addStockCostTextBox";
+			this->addStockCostTextBox->Size = System::Drawing::Size(466, 22);
+			this->addStockCostTextBox->TabIndex = 14;
+			// 
+			// addStockRestockingLabel
+			// 
+			this->addStockRestockingLabel->AutoSize = true;
+			this->addStockRestockingLabel->Location = System::Drawing::Point(3, 348);
+			this->addStockRestockingLabel->Name = L"addStockRestockingLabel";
+			this->addStockRestockingLabel->Size = System::Drawing::Size(161, 17);
+			this->addStockRestockingLabel->TabIndex = 13;
+			this->addStockRestockingLabel->Text = L"Restocking threshold";
+			// 
+			// addStockStockLabel
+			// 
+			this->addStockStockLabel->AutoSize = true;
+			this->addStockStockLabel->Location = System::Drawing::Point(3, 303);
+			this->addStockStockLabel->Name = L"addStockStockLabel";
+			this->addStockStockLabel->Size = System::Drawing::Size(48, 17);
+			this->addStockStockLabel->TabIndex = 12;
+			this->addStockStockLabel->Text = L"Stock";
+			// 
+			// addStockTVALabel
+			// 
+			this->addStockTVALabel->AutoSize = true;
+			this->addStockTVALabel->Location = System::Drawing::Point(3, 258);
+			this->addStockTVALabel->Name = L"addStockTVALabel";
+			this->addStockTVALabel->Size = System::Drawing::Size(38, 17);
+			this->addStockTVALabel->TabIndex = 11;
+			this->addStockTVALabel->Text = L"TVA";
+			// 
+			// addStockMargeLabel
+			// 
+			this->addStockMargeLabel->AutoSize = true;
+			this->addStockMargeLabel->Location = System::Drawing::Point(3, 213);
+			this->addStockMargeLabel->Name = L"addStockMargeLabel";
+			this->addStockMargeLabel->Size = System::Drawing::Size(53, 17);
+			this->addStockMargeLabel->TabIndex = 10;
+			this->addStockMargeLabel->Text = L"Marge";
+			// 
+			// addStockCostLabel
+			// 
+			this->addStockCostLabel->AutoSize = true;
+			this->addStockCostLabel->Location = System::Drawing::Point(3, 168);
+			this->addStockCostLabel->Name = L"addStockCostLabel";
+			this->addStockCostLabel->Size = System::Drawing::Size(40, 17);
+			this->addStockCostLabel->TabIndex = 9;
+			this->addStockCostLabel->Text = L"Cost";
 			// 
 			// addStockValidateButton
 			// 
-			this->addStockValidateButton->Location = System::Drawing::Point(231, 289);
+			this->addStockValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->addStockValidateButton->Location = System::Drawing::Point(370, 448);
 			this->addStockValidateButton->Name = L"addStockValidateButton";
 			this->addStockValidateButton->Size = System::Drawing::Size(99, 37);
 			this->addStockValidateButton->TabIndex = 8;
@@ -956,51 +1104,39 @@ namespace OPO2SUMproject {
 			// 
 			// addStockQuantityTextBox
 			// 
-			this->addStockQuantityTextBox->Location = System::Drawing::Point(6, 176);
+			this->addStockQuantityTextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->addStockQuantityTextBox->Location = System::Drawing::Point(3, 143);
 			this->addStockQuantityTextBox->Name = L"addStockQuantityTextBox";
-			this->addStockQuantityTextBox->Size = System::Drawing::Size(117, 24);
+			this->addStockQuantityTextBox->Size = System::Drawing::Size(466, 22);
 			this->addStockQuantityTextBox->TabIndex = 7;
-			// 
-			// addStockReferenceTextBox
-			// 
-			this->addStockReferenceTextBox->Location = System::Drawing::Point(6, 80);
-			this->addStockReferenceTextBox->Name = L"addStockReferenceTextBox";
-			this->addStockReferenceTextBox->Size = System::Drawing::Size(117, 24);
-			this->addStockReferenceTextBox->TabIndex = 6;
 			// 
 			// addStockNameTextBox
 			// 
-			this->addStockNameTextBox->Location = System::Drawing::Point(6, 128);
+			this->addStockNameTextBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->addStockNameTextBox->Location = System::Drawing::Point(3, 98);
 			this->addStockNameTextBox->Name = L"addStockNameTextBox";
-			this->addStockNameTextBox->Size = System::Drawing::Size(117, 24);
+			this->addStockNameTextBox->Size = System::Drawing::Size(466, 22);
 			this->addStockNameTextBox->TabIndex = 5;
 			// 
 			// addStockQuantityLabel
 			// 
 			this->addStockQuantityLabel->AutoSize = true;
-			this->addStockQuantityLabel->Location = System::Drawing::Point(3, 154);
+			this->addStockQuantityLabel->Location = System::Drawing::Point(3, 123);
 			this->addStockQuantityLabel->Name = L"addStockQuantityLabel";
-			this->addStockQuantityLabel->Size = System::Drawing::Size(62, 18);
+			this->addStockQuantityLabel->Size = System::Drawing::Size(69, 17);
 			this->addStockQuantityLabel->TabIndex = 4;
 			this->addStockQuantityLabel->Text = L"Quantity";
-			// 
-			// addStockReferenceLabel
-			// 
-			this->addStockReferenceLabel->AutoSize = true;
-			this->addStockReferenceLabel->Location = System::Drawing::Point(3, 58);
-			this->addStockReferenceLabel->Name = L"addStockReferenceLabel";
-			this->addStockReferenceLabel->Size = System::Drawing::Size(71, 18);
-			this->addStockReferenceLabel->TabIndex = 3;
-			this->addStockReferenceLabel->Text = L"Reference";
 			// 
 			// addStockNameLabel
 			// 
 			this->addStockNameLabel->AutoSize = true;
-			this->addStockNameLabel->Location = System::Drawing::Point(3, 106);
+			this->addStockNameLabel->Location = System::Drawing::Point(3, 78);
 			this->addStockNameLabel->Name = L"addStockNameLabel";
-			this->addStockNameLabel->Size = System::Drawing::Size(43, 18);
+			this->addStockNameLabel->Size = System::Drawing::Size(128, 17);
 			this->addStockNameLabel->TabIndex = 2;
-			this->addStockNameLabel->Text = L"Name";
+			this->addStockNameLabel->Text = L"Name of product";
 			// 
 			// addStockTitleLabel
 			// 
@@ -1009,16 +1145,16 @@ namespace OPO2SUMproject {
 			this->addStockTitleLabel->AutoSize = true;
 			this->addStockTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->addStockTitleLabel->Location = System::Drawing::Point(87, 3);
+			this->addStockTitleLabel->Location = System::Drawing::Point(97, 19);
 			this->addStockTitleLabel->Name = L"addStockTitleLabel";
-			this->addStockTitleLabel->Size = System::Drawing::Size(167, 38);
+			this->addStockTitleLabel->Size = System::Drawing::Size(262, 38);
 			this->addStockTitleLabel->TabIndex = 1;
-			this->addStockTitleLabel->Text = L"Add Stock";
+			this->addStockTitleLabel->Text = L"Add new product";
 			// 
 			// addStockExitButton
 			// 
 			this->addStockExitButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->addStockExitButton->Location = System::Drawing::Point(378, 3);
+			this->addStockExitButton->Location = System::Drawing::Point(448, 3);
 			this->addStockExitButton->Name = L"addStockExitButton";
 			this->addStockExitButton->Size = System::Drawing::Size(22, 24);
 			this->addStockExitButton->TabIndex = 0;
@@ -1028,68 +1164,64 @@ namespace OPO2SUMproject {
 			// 
 			// statisticMTabPage
 			// 
-			this->statisticMTabPage->Controls->Add(this->statisticMPanel);
-			this->statisticMTabPage->Location = System::Drawing::Point(4, 26);
+			this->statisticMTabPage->Controls->Add(this->statisticMStatisticButton);
+			this->statisticMTabPage->Controls->Add(this->statisticMComboBox);
+			this->statisticMTabPage->Controls->Add(this->statisticMDGV);
+			this->statisticMTabPage->Location = System::Drawing::Point(4, 25);
 			this->statisticMTabPage->Name = L"statisticMTabPage";
 			this->statisticMTabPage->Padding = System::Windows::Forms::Padding(3);
-			this->statisticMTabPage->Size = System::Drawing::Size(412, 426);
+			this->statisticMTabPage->Size = System::Drawing::Size(484, 503);
 			this->statisticMTabPage->TabIndex = 3;
 			this->statisticMTabPage->Text = L"Statistic";
 			this->statisticMTabPage->UseVisualStyleBackColor = true;
 			// 
-			// statisticMPanel
+			// statisticMStatisticButton
 			// 
-			this->statisticMPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->statisticMPanel->Location = System::Drawing::Point(6, 6);
-			this->statisticMPanel->Name = L"statisticMPanel";
-			this->statisticMPanel->Size = System::Drawing::Size(402, 412);
-			this->statisticMPanel->TabIndex = 3;
+			this->statisticMStatisticButton->Location = System::Drawing::Point(234, 473);
+			this->statisticMStatisticButton->Name = L"statisticMStatisticButton";
+			this->statisticMStatisticButton->Size = System::Drawing::Size(117, 24);
+			this->statisticMStatisticButton->TabIndex = 16;
+			this->statisticMStatisticButton->Text = L"Statistique";
+			this->statisticMStatisticButton->UseVisualStyleBackColor = true;
 			// 
-			// label1
+			// statisticMComboBox
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(1109, 131);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(45, 18);
-			this->label1->TabIndex = 14;
-			this->label1->Text = L"label1";
+			this->statisticMComboBox->FormattingEnabled = true;
+			this->statisticMComboBox->Location = System::Drawing::Point(357, 473);
+			this->statisticMComboBox->Name = L"statisticMComboBox";
+			this->statisticMComboBox->Size = System::Drawing::Size(121, 24);
+			this->statisticMComboBox->TabIndex = 15;
 			// 
-			// testButton
+			// statisticMDGV
 			// 
-			this->testButton->Location = System::Drawing::Point(1084, 88);
-			this->testButton->Name = L"testButton";
-			this->testButton->Size = System::Drawing::Size(139, 24);
-			this->testButton->TabIndex = 13;
-			this->testButton->Text = L"TestButton";
-			this->testButton->UseVisualStyleBackColor = true;
-			this->testButton->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->statisticMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->statisticMDGV->Location = System::Drawing::Point(6, 6);
+			this->statisticMDGV->Name = L"statisticMDGV";
+			this->statisticMDGV->RowHeadersWidth = 51;
+			this->statisticMDGV->RowTemplate->Height = 24;
+			this->statisticMDGV->Size = System::Drawing::Size(472, 461);
+			this->statisticMDGV->TabIndex = 0;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 17);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->ClientSize = System::Drawing::Size(1239, 517);
-			this->Controls->Add(this->label1);
-			this->Controls->Add(this->testButton);
 			this->Controls->Add(this->registerPanel);
 			this->Controls->Add(this->managerTablePanel);
 			this->Controls->Add(this->loginPanel);
-			this->Font = (gcnew System::Drawing::Font(L"Source Sans Pro", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ForeColor = System::Drawing::Color::Black;
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Opo2suM";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->loginPanel->ResumeLayout(false);
 			this->loginPanel->PerformLayout();
 			this->registerPanel->ResumeLayout(false);
 			this->registerPanel->PerformLayout();
-			this->addClientPanel->ResumeLayout(false);
-			this->addClientPanel->PerformLayout();
 			this->clientMPanel->ResumeLayout(false);
 			this->clientMPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientMDGV))->EndInit();
@@ -1097,23 +1229,24 @@ namespace OPO2SUMproject {
 			this->managerTabControl->ResumeLayout(false);
 			this->clientMTabPage->ResumeLayout(false);
 			this->orderMTabPage->ResumeLayout(false);
-			this->orderMPanel->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->orderMDGV))->EndInit();
 			this->addOrderPanel->ResumeLayout(false);
 			this->addOrderPanel->PerformLayout();
+			this->orderMPanel->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->orderMDGV))->EndInit();
 			this->stockMTabPage->ResumeLayout(false);
+			this->informationStockPanel->ResumeLayout(false);
 			this->stockMPanel->ResumeLayout(false);
+			this->stockMPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->stockMDGV))->EndInit();
 			this->addStockPanel->ResumeLayout(false);
 			this->addStockPanel->PerformLayout();
 			this->statisticMTabPage->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->statisticMDGV))->EndInit();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		addClientPanel->Visible = false;
 		clientMPanel->Visible = true;
 		registerPanel->Visible = false;
 		loginPanel->Visible = true;
@@ -1121,14 +1254,7 @@ namespace OPO2SUMproject {
 		addOrderPanel->Visible = false;
 		addStockPanel->Visible = false;
 		stockMPanel->Visible = true;
-	}
-	private: System::Void addClientExitButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		clientMPanel->Visible = true;
-		addClientPanel->Visible = false;
-	}
-	private: System::Void clientMAddButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		addClientPanel->Visible = true;
-		clientMPanel->Visible = false;
+		informationStockPanel->Visible = false;
 	}
 	private: System::Void loginRegisterButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		registerPanel->Visible = true;
@@ -1154,46 +1280,64 @@ namespace OPO2SUMproject {
 		addStockPanel->Visible = false;
 		stockMPanel->Visible = true;
 	}
+	private: System::Void registerValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
 
+		System::Data::DataSet^ alreadyExist = Adata->getRows("IF EXISTS (SELECT id_account FROM account WHERE account_name = '" + this->registerUsernameTextBox->Text + "') BEGIN SELECT 1 END ELSE BEGIN SELECT 0 END;", "Temp");
+		System::Data::DataTableReader^ DataTableReaderTest = alreadyExist->CreateDataReader();
+		DataTableReaderTest->Read();
 
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
-		/*PaymentManager^ mn = gcnew PaymentManager();
-
-		mn->insert("2019-10-02", 1, 200, 1);
-
-		Payment^ py = gcnew Payment(2);
-		py->set_date_payment("2019-10-12");
-		mn->deleteElement(py);*/
-
-		
-		/*AddressManager^ mn1 = gcnew AddressManager();
-		mn1->insert("Rue des clochards", 14000, "gotham", "3eme etage");
-
-		AccountManager^ mn2 = gcnew AccountManager();
-		mn2->insert("Bob","1111","B","O","2002-02-01",0);
-
-		OrderManager^ mn5 = gcnew OrderManager();
-		mn5->insert("2019-10-02", "2019-09-02", 1, 1, 1);*/
-
-		//Order^ order1 = gcnew Order(1);
-		
-		/*BillManager^ mn4 = gcnew BillManager();
-		mn4->insert(20, 20, 1);
-		
-		Bill^ changer = gcnew Bill(1);
-		
-		changer->set_total_bill(200);
-		mn4->deleteElement(2);
-		*/
-		//Account^ test3 = gcnew Account(1);
-		// 
-		//mn3->deleteElement(5);
-
-		//this->label1->Text = changer->get_element_per_unit_product().ToString();
-
-		this->label1->Text = "No error";
+		if (this->registerUsernameTextBox->Text == "" || this->registerFirstnameTextBox->Text == "" || this->registerLastnameTextBox->Text == "" || this->registerPasswordTextBox->Text == "") {
+			this->registerErrorLabel->Text = "Please, fill all field.";
+		}
+		else if (DataTableReaderTest->GetInt32(0)) {
+			this->registerErrorLabel->Text = "This username is already used.";
+		}
+		else if (this->registerPasswordTextBox->Text->Length < 8) {
+			this->registerErrorLabel->Text = "Password too short. (8 characters)";
+		}
+		else {
+			AccountManager^ createAccount = gcnew AccountManager();
+			createAccount->insert(registerUsernameTextBox->Text, registerPasswordTextBox->Text->GetHashCode().ToString(),
+				this->registerFirstnameTextBox->Text, this->registerLastnameTextBox->Text, registerDateTimePicker->Value.ToString(), 0);
+			registerLoginButton_Click(sender, e);
+			this->loginUsernameTextBox->Text = registerUsernameTextBox->Text;
+			this->registerUsernameTextBox->Text = "";
+			this->registerFirstnameTextBox->Text = "";
+			this->registerLastnameTextBox->Text = "";
+			this->registerPasswordTextBox->Text = "";
+			this->loginErrorLabel->Text = "Account has been successfully created. Please login.";
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Green;
+		}
+		DataTableReaderTest->Close();
 	}
-	};
+
+	private: System::Void loginValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+
+		System::Data::DataSet^ rightLogin = Adata->getRows("IF EXISTS (SELECT id_account FROM account WHERE account_name = '" + this->loginUsernameTextBox->Text + "' AND password_account = '" + loginPasswordTextBox->Text->GetHashCode().ToString() + "') BEGIN SELECT 0 END ELSE BEGIN SELECT 1 END;", "Temp");
+		System::Data::DataTableReader^ DataTableReaderTest = rightLogin->CreateDataReader();
+		DataTableReaderTest->Read();
+
+		if (this->loginUsernameTextBox->Text == "" || this->loginPasswordTextBox->Text == "") {
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->loginErrorLabel->Text = "Please, fill all field.";
+		}
+		else if (DataTableReaderTest->GetInt32(0)) {
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->loginErrorLabel->Text = "Wrong username or password.";
+		}
+		else {
+			DataTableReaderTest->Close();
+			AccessData^ Adata1 = gcnew AccessData;
+			rightLogin = Adata1->getRows("SELECT id_account FROM account WHERE account_name = '" + this->loginUsernameTextBox->Text + "' AND password_account = '" + loginPasswordTextBox->Text->GetHashCode().ToString() + "';", "Temp");
+			DataTableReaderTest = rightLogin->CreateDataReader();
+			DataTableReaderTest->Read();
+			connectedAccount = gcnew Account(DataTableReaderTest->GetInt32(0));
+			this->loginErrorLabel->ForeColor = System::Drawing::Color::Green;
+			this->loginErrorLabel->Text = "Afficher la page suivante...";
+		}
+		DataTableReaderTest->Close();
+	}
+};
 }
