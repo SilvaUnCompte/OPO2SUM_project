@@ -96,6 +96,7 @@ namespace OPO2SUMproject
 		int postal_code;
 		System::String^ city;
 		System::String^ address_complement;
+		Account^ id_account;
 
 	public:
 		Address(int id);
@@ -104,18 +105,20 @@ namespace OPO2SUMproject
 		int get_postal_code() { return postal_code; }
 		System::String^ get_city() { return city; }
 		System::String^ get_address_complement() { return address_complement; }
+		Account^ get_id_account() { return id_account; }
 
 		void set_street(System::String^ st) { this->street = st; }
 		void set_postal_code(int zip) { this->postal_code = zip; }
 		void set_city(System::String^ city) { this->city = city; }
 		void set_address_complement(System::String^ address) { this->address_complement = address; }
+		void set_account(Account^ currentAccount) { id_account = currentAccount; };
 	};
 
 	ref class AddressManager : ClassTableManager
 	{
 	public:
 		Address^ select(int id);
-		void insert(System::String^ street, System::String^ postal_code, System::String^ city, System::String^ address_complement);
+		void insert(System::String^ street, System::String^ postal_code, System::String^ city, System::String^ address_complement, int id_account);
 		void deleteElement(int id);
 		void deleteElement(Address^);
 		void update(Address^);
@@ -261,31 +264,6 @@ namespace OPO2SUMproject
 	};
 
 
-	ref class Living {
-	private:
-		Account^ account;
-		Address^ address;
-		AccessData^ Adata = gcnew AccessData;
-
-
-	public:
-		Living(int account, int address);
-
-		Account^ get_account() { return account; }
-		Address^ get_address() { return address; }
-
-		void set_account(Account^ account) { this->account = account; }
-		void set_address(Address^ address) { this->address = address; }
-	};
-
-	ref class LivingManager : ClassTableManager
-	{
-	public:
-		void insert(int id_account, int id_address);
-	};
-
-
-
 	ref class Contain : ClassTable {
 	private:
 		Order^ id_order;
@@ -313,4 +291,3 @@ namespace OPO2SUMproject
 		void update(Contain^);
 	};
 };
-
