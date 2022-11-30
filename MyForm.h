@@ -39,13 +39,9 @@ namespace OPO2SUMproject {
 			}
 		}
 	private: System::Windows::Forms::Panel^ loginPanel;
-	protected:
-
 	private: System::Windows::Forms::TextBox^ loginPasswordTextBox;
 	private: System::Windows::Forms::TextBox^ loginUsernameTextBox;
-
 	private: System::Windows::Forms::Label^ loginLoginLabel;
-
 	private: System::Windows::Forms::Button^ loginRegisterButton;
 	private: System::Windows::Forms::Panel^ managerTablePanel;
 	private: System::Windows::Forms::TabControl^ managerTabControl;
@@ -55,19 +51,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TabPage^ statisticMTabPage;
 	private: System::Windows::Forms::DataGridView^ clientMDGV;
 	private: System::Windows::Forms::Button^ clientMSearchButton;
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Label^ clientMCityLabel;
 	private: System::Windows::Forms::Label^ clientMLNameLabel;
 	private: System::Windows::Forms::Label^ clientMFNameLabel;
@@ -79,14 +62,11 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Button^ clientMDeleteButton;
 	private: System::Windows::Forms::Panel^ orderMPanel;
 	private: System::Windows::Forms::Button^ orderMModifyButton;
-
 	private: System::Windows::Forms::Button^ orderMDeleteButton;
 	private: System::Windows::Forms::DataGridView^ orderMDGV;
 	private: System::Windows::Forms::Button^ orderMSearchButton;
 	private: System::Windows::Forms::Button^ orderMAddButton;
 	private: System::Windows::Forms::Button^ loginValidateButton;
-
-
 	private: System::Windows::Forms::Panel^ registerPanel;
 	private: System::Windows::Forms::Button^ registerValidateButton;
 	private: System::Windows::Forms::Button^ registerLoginButton;
@@ -96,15 +76,11 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ registerUsernameLabel;
 	private: System::Windows::Forms::Label^ registerRegisterLabel;
 	private: System::Windows::Forms::Panel^ stockMPanel;
-
 	private: System::Windows::Forms::Button^ stockMAddButton;
 	private: System::Windows::Forms::Button^ informationStockModifyButton;
-
 	private: System::Windows::Forms::Button^ informationStockDeleteButton;
-
 	private: System::Windows::Forms::DataGridView^ stockMDGV;
 	private: System::Windows::Forms::Panel^ addOrderPanel;
-
 	private: System::Windows::Forms::Button^ addOrderValidateButton;
 	private: System::Windows::Forms::TextBox^ addOrderDateTextBox;
 	private: System::Windows::Forms::TextBox^ addOrderLNameTextBox;
@@ -117,44 +93,29 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Panel^ addStockPanel;
 	private: System::Windows::Forms::Button^ addStockValidateButton;
 	private: System::Windows::Forms::TextBox^ addStockQuantityTextBox;
-
 	private: System::Windows::Forms::TextBox^ addStockNameTextBox;
 	private: System::Windows::Forms::Label^ addStockQuantityLabel;
-
 	private: System::Windows::Forms::Label^ addStockNameLabel;
 	private: System::Windows::Forms::Label^ addStockTitleLabel;
 	private: System::Windows::Forms::Button^ addStockExitButton;
-
 	private: System::Windows::Forms::Button^ orderMFilterButton;
 	private: System::Windows::Forms::Button^ stockMFilterButton;
 	private: System::Windows::Forms::Label^ stockMLabel;
 	private: System::Windows::Forms::Panel^ informationStockPanel;
 	private: System::Windows::Forms::Label^ informationStockNameLabel;
-
 	private: System::Windows::Forms::Label^ addStockStockLabel;
-
 	private: System::Windows::Forms::Label^ addStockTVALabel;
 	private: System::Windows::Forms::Label^ addStockMargeLabel;
-
 	private: System::Windows::Forms::Label^ addStockCostLabel;
 	private: System::Windows::Forms::TextBox^ addStockCostTextBox;
-
 	private: System::Windows::Forms::Label^ addStockRestockingLabel;
-private: System::Windows::Forms::TextBox^ addStockStockTextBox;
-
-private: System::Windows::Forms::TextBox^ addStockTVATextBox;
-
-private: System::Windows::Forms::TextBox^ addStockMargeTextBox;
-private: System::Windows::Forms::TextBox^ addStockRestockingTextBox;
-private: System::Windows::Forms::DataGridView^ statisticMDGV;
-
-
-
+	private: System::Windows::Forms::TextBox^ addStockStockTextBox;
+	private: System::Windows::Forms::TextBox^ addStockTVATextBox;
+	private: System::Windows::Forms::TextBox^ addStockMargeTextBox;
+	private: System::Windows::Forms::TextBox^ addStockRestockingTextBox;
+	private: System::Windows::Forms::DataGridView^ statisticMDGV;
 	private: System::Windows::Forms::Button^ statisticMStatisticButton;
-private: System::Windows::Forms::ComboBox^ statisticMComboBox;
-
-
-
+	private: System::Windows::Forms::ComboBox^ statisticMComboBox;
 	private: System::Windows::Forms::Label^ registerErrorLabel;
 	private: System::Windows::Forms::Label^ registerLastnameLabel;
 	private: System::Windows::Forms::Label^ registerFirstnameLabel;
@@ -162,69 +123,50 @@ private: System::Windows::Forms::ComboBox^ statisticMComboBox;
 	private: System::Windows::Forms::TextBox^ registerFirstnameTextBox;
 	private: System::Windows::Forms::DateTimePicker^ registerDateTimePicker;
 	private: System::Windows::Forms::Label^ registerBirthdayLabel;
-  private: System::Windows::Forms::Label^ loginErrorLabel;
+	private: System::Windows::Forms::Label^ loginErrorLabel;
 	private: System::ComponentModel::IContainer^ components;
-private: System::Windows::Forms::Panel^ loginUsernamePanel;
-private: System::Windows::Forms::Panel^ loginPasswordPanel;
-private: System::Windows::Forms::Panel^ menuButtonPanel;
-private: System::Windows::Forms::Button^ menuClientButton;
-private: System::Windows::Forms::Panel^ menuLogoPanel;
-private: System::Windows::Forms::Button^ menuStatisticButton;
-private: System::Windows::Forms::Button^ menuStockButton;
-private: System::Windows::Forms::Button^ menuOrderButton;
-private: System::Windows::Forms::Panel^ titleBarPanel;
-private: System::Windows::Forms::Label^ titleBarLabel;
-private: System::Windows::Forms::Label^ nameProjectLabel;
-private: System::Windows::Forms::Button^ menuAccountButton;
-private: System::Windows::Forms::Panel^ accountPanel;
-private: System::Windows::Forms::TextBox^ accountAddressMoreTextBox;
-
-private: System::Windows::Forms::TextBox^ accountAddressPostalTextBox;
-
-private: System::Windows::Forms::TextBox^ accountAddressCityTextBox;
-
-private: System::Windows::Forms::TextBox^ accountAddressNbTextBox;
-
-private: System::Windows::Forms::TextBox^ accountBirthdayTextBox;
-
-private: System::Windows::Forms::TextBox^ accountPasswordTextBox;
-
-private: System::Windows::Forms::TextBox^ accountLastnameTextBox;
-private: System::Windows::Forms::TextBox^ accountFirstnameTextBox;
-
-
-
-private: System::Windows::Forms::TextBox^ accountUsernameTextBox;
-private: System::Windows::Forms::Label^ accountAddressMoreLabel;
-private: System::Windows::Forms::Label^ accountPostalCodeLabel;
-private: System::Windows::Forms::Label^ accountCityLabel;
-private: System::Windows::Forms::Label^ accountStreetLabel;
-private: System::Windows::Forms::Label^ accountAddressLabel;
-private: System::Windows::Forms::Label^ accountBirthdayLabel;
-private: System::Windows::Forms::Label^ accountPasswordLabel;
-private: System::Windows::Forms::Label^ accountLastnameLabel;
-private: System::Windows::Forms::Label^ accountFirstnameLabel;
-private: System::Windows::Forms::Label^ accountUsernameLabel;
-private: System::Windows::Forms::Label^ accountTitleLabel;
-private: System::Windows::Forms::ComboBox^ accountAddressListComboBox;
-private: System::Windows::Forms::Button^ accountModifyButton;
-private: System::Windows::Forms::Button^ accountAddressAddButton;
-private: System::Windows::Forms::Button^ accountAddressDeleteButton;
-private: System::Windows::Forms::Button^ menuPersonnellManageButton;
-
-private: System::Windows::Forms::Button^ menuCatalogButton;
-private: System::Windows::Forms::Label^ accountErrorLabel;
-private: System::Windows::Forms::Label^ accountErrorDeleteAddressLabel;
-private: System::Windows::Forms::Label^ accountErrorAddAddressLabel;
-
-
-
-
-
-
-
-	protected:
-
+	private: System::Windows::Forms::Panel^ loginUsernamePanel;
+	private: System::Windows::Forms::Panel^ loginPasswordPanel;
+	private: System::Windows::Forms::Panel^ menuButtonPanel;
+	private: System::Windows::Forms::Button^ menuClientButton;
+	private: System::Windows::Forms::Panel^ menuLogoPanel;
+	private: System::Windows::Forms::Button^ menuStatisticButton;
+	private: System::Windows::Forms::Button^ menuStockButton;
+	private: System::Windows::Forms::Button^ menuOrderButton;
+	private: System::Windows::Forms::Panel^ titleBarPanel;
+	private: System::Windows::Forms::Label^ titleBarLabel;
+	private: System::Windows::Forms::Label^ nameProjectLabel;
+	private: System::Windows::Forms::Button^ menuAccountButton;
+	private: System::Windows::Forms::Panel^ accountPanel;
+	private: System::Windows::Forms::TextBox^ accountAddressMoreTextBox;
+	private: System::Windows::Forms::TextBox^ accountAddressPostalTextBox;
+	private: System::Windows::Forms::TextBox^ accountAddressCityTextBox;
+	private: System::Windows::Forms::TextBox^ accountAddressNbTextBox;
+	private: System::Windows::Forms::TextBox^ accountBirthdayTextBox;
+	private: System::Windows::Forms::TextBox^ accountPasswordTextBox;
+	private: System::Windows::Forms::TextBox^ accountLastnameTextBox;
+	private: System::Windows::Forms::TextBox^ accountFirstnameTextBox;
+	private: System::Windows::Forms::TextBox^ accountUsernameTextBox;
+	private: System::Windows::Forms::Label^ accountAddressMoreLabel;
+	private: System::Windows::Forms::Label^ accountPostalCodeLabel;
+	private: System::Windows::Forms::Label^ accountCityLabel;
+	private: System::Windows::Forms::Label^ accountStreetLabel;
+	private: System::Windows::Forms::Label^ accountAddressLabel;
+	private: System::Windows::Forms::Label^ accountBirthdayLabel;
+	private: System::Windows::Forms::Label^ accountPasswordLabel;
+	private: System::Windows::Forms::Label^ accountLastnameLabel;
+	private: System::Windows::Forms::Label^ accountFirstnameLabel;
+	private: System::Windows::Forms::Label^ accountUsernameLabel;
+	private: System::Windows::Forms::Label^ accountTitleLabel;
+	private: System::Windows::Forms::ComboBox^ accountAddressListComboBox;
+	private: System::Windows::Forms::Button^ accountModifyButton;
+	private: System::Windows::Forms::Button^ accountAddressAddButton;
+	private: System::Windows::Forms::Button^ accountAddressDeleteButton;
+	private: System::Windows::Forms::Button^ menuPersonnellManageButton;
+	private: System::Windows::Forms::Button^ menuCatalogButton;
+	private: System::Windows::Forms::Label^ accountErrorLabel;
+	private: System::Windows::Forms::Label^ accountErrorDeleteAddressLabel;
+	private: System::Windows::Forms::Label^ accountErrorAddAddressLabel;
 
 	private:
 		Account^ connectedAccount;
@@ -2039,106 +1981,106 @@ private: System::Windows::Forms::Label^ accountErrorAddAddressLabel;
 		}
 		DataTableReaderTest->Close();
 	}
-private: System::Void loginUsernameTextBox_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (loginUsernameTextBox->Text == "Username") {
-		loginUsernameTextBox->Text = "";
+	private: System::Void loginUsernameTextBox_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (loginUsernameTextBox->Text == "Username") {
+			loginUsernameTextBox->Text = "";
+		}
 	}
-}
-private: System::Void loginPasswordTextBox_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (loginPasswordTextBox->Text == "Password") {
-		loginPasswordTextBox->Text = "";
+	private: System::Void loginPasswordTextBox_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (loginPasswordTextBox->Text == "Password") {
+			loginPasswordTextBox->Text = "";
+		}
 	}
-}
-private: System::Void otherclick_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (loginPasswordTextBox->Text == "") {
-		loginPasswordTextBox->Text = "Password";
+	private: System::Void otherclick_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (loginPasswordTextBox->Text == "") {
+			loginPasswordTextBox->Text = "Password";
+		}
+		if (loginUsernameTextBox->Text == "") {
+			loginUsernameTextBox->Text = "Username";
+		}
 	}
-	if (loginUsernameTextBox->Text == "") {
-		loginUsernameTextBox->Text = "Username";
+	private: System::Void menuClientButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+			static_cast<System::Int32>(static_cast<System::Byte>(251)));
+		menuClientButton->ForeColor = System::Drawing::Color::Black;
 	}
-}
-private: System::Void menuClientButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-	menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
-		static_cast<System::Int32>(static_cast<System::Byte>(251)));
-	menuClientButton->ForeColor = System::Drawing::Color::Black;
-}
-private: System::Void menuClientButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuClientButton->ForeColor = System::Drawing::Color::Gainsboro;
-	menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-		static_cast<System::Int32>(static_cast<System::Byte>(76)));
+	private: System::Void menuClientButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuClientButton->ForeColor = System::Drawing::Color::Gainsboro;
+		menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
 
-}
-private: System::Void menuOrderButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-	menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-		static_cast<System::Int32>(static_cast<System::Byte>(214)));
-	menuOrderButton->ForeColor = System::Drawing::Color::Black;
-}
-private: System::Void menuOrderButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuOrderButton->ForeColor = System::Drawing::Color::Gainsboro;
-	menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-		static_cast<System::Int32>(static_cast<System::Byte>(76)));
-}
-private: System::Void menuStockButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-	menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
-		static_cast<System::Int32>(static_cast<System::Byte>(143)));
-	menuStockButton->ForeColor = System::Drawing::Color::Black;
-}
-private: System::Void menuStockButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuStockButton->ForeColor = System::Drawing::Color::Gainsboro;
-	menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-		static_cast<System::Int32>(static_cast<System::Byte>(76)));
-}
-private: System::Void menuStatisticButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-	menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(96)),
-		static_cast<System::Int32>(static_cast<System::Byte>(59)));
-	menuStatisticButton->ForeColor = System::Drawing::Color::Black;
-}
-private: System::Void menuStatisticButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuStatisticButton->ForeColor = System::Drawing::Color::Gainsboro;
-	menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-		static_cast<System::Int32>(static_cast<System::Byte>(76)));
-}
-private: System::Void menuAccountButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-	menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-		static_cast<System::Int32>(static_cast<System::Byte>(32)));
-	menuAccountButton->ForeColor = System::Drawing::Color::Black;
-}
-private: System::Void menuAccountButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-	menuAccountButton->ForeColor = System::Drawing::Color::Gainsboro;
-	menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-		static_cast<System::Int32>(static_cast<System::Byte>(76)));
-}
-private: System::Void menuAccountButton_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-	hideAllPanel();
-	accountPanel->Visible = true;
-}
-private: System::Void menuClientButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	hideAllPanel();
-	managerTablePanel->Visible = true;
-}
-private: System::Void enableAccountModifyButton(System::Object^ sender, System::EventArgs^ e) {
-	this->accountModifyButton->Enabled = true;
-}
+	}
+	private: System::Void menuOrderButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
+			static_cast<System::Int32>(static_cast<System::Byte>(214)));
+		menuOrderButton->ForeColor = System::Drawing::Color::Black;
+	}
+	private: System::Void menuOrderButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuOrderButton->ForeColor = System::Drawing::Color::Gainsboro;
+		menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+	}
+	private: System::Void menuStockButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+			static_cast<System::Int32>(static_cast<System::Byte>(143)));
+		menuStockButton->ForeColor = System::Drawing::Color::Black;
+	}
+	private: System::Void menuStockButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuStockButton->ForeColor = System::Drawing::Color::Gainsboro;
+		menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+	}
+	private: System::Void menuStatisticButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(96)),
+			static_cast<System::Int32>(static_cast<System::Byte>(59)));
+		menuStatisticButton->ForeColor = System::Drawing::Color::Black;
+	}
+	private: System::Void menuStatisticButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuStatisticButton->ForeColor = System::Drawing::Color::Gainsboro;
+		menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+	}
+	private: System::Void menuAccountButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+			static_cast<System::Int32>(static_cast<System::Byte>(32)));
+		menuAccountButton->ForeColor = System::Drawing::Color::Black;
+	}
+	private: System::Void menuAccountButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuAccountButton->ForeColor = System::Drawing::Color::Gainsboro;
+		menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+	}
+	private: System::Void menuAccountButton_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+		hideAllPanel();
+		accountPanel->Visible = true;
+	}
+	private: System::Void menuClientButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		hideAllPanel();
+		managerTablePanel->Visible = true;
+	}
+	private: System::Void enableAccountModifyButton(System::Object^ sender, System::EventArgs^ e) {
+		this->accountModifyButton->Enabled = true;
+	}
 
-};
+	};
 }
