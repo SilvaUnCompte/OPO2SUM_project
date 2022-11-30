@@ -101,6 +101,7 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::ComboBox^ accountAddressListComboBox;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ Information;
+	private: System::Windows::Forms::Label^ accountErrorLabel;
 
 	private:
 		Account^ connectedAccount;
@@ -144,19 +145,20 @@ namespace OPO2SUMproject {
 			this->accountBirthdayTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->Information = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->accountAddressListComboBox = (gcnew System::Windows::Forms::ComboBox());
-			this->accountAddressDeleteButton = (gcnew System::Windows::Forms::Button());
-			this->accountAddressAddButton = (gcnew System::Windows::Forms::Button());
-			this->accountAddressNbTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->accountAddressCityTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->accountAddressPostalTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->accountAddressMoreTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->accountAddressMoreTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountAddressPostalTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountAddressCityTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountAddressNbTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->accountAddressAddButton = (gcnew System::Windows::Forms::Button());
+			this->accountAddressDeleteButton = (gcnew System::Windows::Forms::Button());
+			this->accountAddressListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->Information = (gcnew System::Windows::Forms::Label());
+			this->accountErrorLabel = (gcnew System::Windows::Forms::Label());
 			this->loginPanel->SuspendLayout();
 			this->registerPanel->SuspendLayout();
 			this->panel1->SuspendLayout();
@@ -427,6 +429,7 @@ namespace OPO2SUMproject {
 			this->accountUsernameTextBox->Name = L"accountUsernameTextBox";
 			this->accountUsernameTextBox->Size = System::Drawing::Size(183, 22);
 			this->accountUsernameTextBox->TabIndex = 13;
+			this->accountUsernameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableAccountModifyButton);
 			// 
 			// accountFirstnameTextBox
 			// 
@@ -434,6 +437,7 @@ namespace OPO2SUMproject {
 			this->accountFirstnameTextBox->Name = L"accountFirstnameTextBox";
 			this->accountFirstnameTextBox->Size = System::Drawing::Size(183, 22);
 			this->accountFirstnameTextBox->TabIndex = 14;
+			this->accountFirstnameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableAccountModifyButton);
 			// 
 			// accountLastnameTextBox
 			// 
@@ -441,6 +445,7 @@ namespace OPO2SUMproject {
 			this->accountLastnameTextBox->Name = L"accountLastnameTextBox";
 			this->accountLastnameTextBox->Size = System::Drawing::Size(183, 22);
 			this->accountLastnameTextBox->TabIndex = 15;
+			this->accountLastnameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableAccountModifyButton);
 			// 
 			// accountPasswordTextBox
 			// 
@@ -449,6 +454,7 @@ namespace OPO2SUMproject {
 			this->accountPasswordTextBox->PasswordChar = '*';
 			this->accountPasswordTextBox->Size = System::Drawing::Size(183, 22);
 			this->accountPasswordTextBox->TabIndex = 16;
+			this->accountPasswordTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableAccountModifyButton);
 			// 
 			// label1
 			// 
@@ -489,12 +495,13 @@ namespace OPO2SUMproject {
 			// accountModifyButton
 			// 
 			this->accountModifyButton->Enabled = false;
-			this->accountModifyButton->Location = System::Drawing::Point(760, 410);
+			this->accountModifyButton->Location = System::Drawing::Point(708, 176);
 			this->accountModifyButton->Name = L"accountModifyButton";
 			this->accountModifyButton->Size = System::Drawing::Size(150, 28);
 			this->accountModifyButton->TabIndex = 21;
 			this->accountModifyButton->Text = L"Modify account";
 			this->accountModifyButton->UseVisualStyleBackColor = true;
+			this->accountModifyButton->Click += gcnew System::EventHandler(this, &MyForm::accountModifyButton_Click);
 			// 
 			// accountBirthdayTextBox
 			// 
@@ -515,6 +522,7 @@ namespace OPO2SUMproject {
 			// 
 			// panel1
 			// 
+			this->panel1->Controls->Add(this->accountErrorLabel);
 			this->panel1->Controls->Add(this->label10);
 			this->panel1->Controls->Add(this->label9);
 			this->panel1->Controls->Add(this->label8);
@@ -544,16 +552,95 @@ namespace OPO2SUMproject {
 			this->panel1->Size = System::Drawing::Size(934, 463);
 			this->panel1->TabIndex = 24;
 			// 
-			// Information
+			// label10
 			// 
-			this->Information->AutoSize = true;
-			this->Information->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->Information->Location = System::Drawing::Point(20, 22);
-			this->Information->Name = L"Information";
-			this->Information->Size = System::Drawing::Size(183, 32);
-			this->Information->TabIndex = 24;
-			this->Information->Text = L"Informations";
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(27, 408);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(206, 17);
+			this->label10->TabIndex = 36;
+			this->label10->Text = L"More information (ex: floor)";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(300, 349);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(93, 17);
+			this->label9->TabIndex = 35;
+			this->label9->Text = L"Postal code";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(192, 349);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(35, 17);
+			this->label8->TabIndex = 34;
+			this->label8->Text = L"City";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(26, 349);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(143, 17);
+			this->label7->TabIndex = 33;
+			this->label7->Text = L"Number and street";
+			// 
+			// accountAddressMoreTextBox
+			// 
+			this->accountAddressMoreTextBox->Location = System::Drawing::Point(26, 428);
+			this->accountAddressMoreTextBox->Name = L"accountAddressMoreTextBox";
+			this->accountAddressMoreTextBox->Size = System::Drawing::Size(367, 22);
+			this->accountAddressMoreTextBox->TabIndex = 32;
+			// 
+			// accountAddressPostalTextBox
+			// 
+			this->accountAddressPostalTextBox->Location = System::Drawing::Point(294, 372);
+			this->accountAddressPostalTextBox->Name = L"accountAddressPostalTextBox";
+			this->accountAddressPostalTextBox->Size = System::Drawing::Size(100, 22);
+			this->accountAddressPostalTextBox->TabIndex = 31;
+			// 
+			// accountAddressCityTextBox
+			// 
+			this->accountAddressCityTextBox->Location = System::Drawing::Point(188, 372);
+			this->accountAddressCityTextBox->Name = L"accountAddressCityTextBox";
+			this->accountAddressCityTextBox->Size = System::Drawing::Size(100, 22);
+			this->accountAddressCityTextBox->TabIndex = 30;
+			// 
+			// accountAddressNbTextBox
+			// 
+			this->accountAddressNbTextBox->Location = System::Drawing::Point(26, 372);
+			this->accountAddressNbTextBox->Name = L"accountAddressNbTextBox";
+			this->accountAddressNbTextBox->Size = System::Drawing::Size(156, 22);
+			this->accountAddressNbTextBox->TabIndex = 29;
+			// 
+			// accountAddressAddButton
+			// 
+			this->accountAddressAddButton->Location = System::Drawing::Point(410, 427);
+			this->accountAddressAddButton->Name = L"accountAddressAddButton";
+			this->accountAddressAddButton->Size = System::Drawing::Size(103, 25);
+			this->accountAddressAddButton->TabIndex = 28;
+			this->accountAddressAddButton->Text = L"Add";
+			this->accountAddressAddButton->UseVisualStyleBackColor = true;
+			// 
+			// accountAddressDeleteButton
+			// 
+			this->accountAddressDeleteButton->Location = System::Drawing::Point(410, 298);
+			this->accountAddressDeleteButton->Name = L"accountAddressDeleteButton";
+			this->accountAddressDeleteButton->Size = System::Drawing::Size(103, 25);
+			this->accountAddressDeleteButton->TabIndex = 27;
+			this->accountAddressDeleteButton->Text = L"Delete";
+			this->accountAddressDeleteButton->UseVisualStyleBackColor = true;
+			// 
+			// accountAddressListComboBox
+			// 
+			this->accountAddressListComboBox->FormattingEnabled = true;
+			this->accountAddressListComboBox->Location = System::Drawing::Point(26, 298);
+			this->accountAddressListComboBox->Name = L"accountAddressListComboBox";
+			this->accountAddressListComboBox->Size = System::Drawing::Size(367, 24);
+			this->accountAddressListComboBox->TabIndex = 26;
 			// 
 			// label6
 			// 
@@ -566,95 +653,29 @@ namespace OPO2SUMproject {
 			this->label6->TabIndex = 25;
 			this->label6->Text = L"Address";
 			// 
-			// accountAddressListComboBox
+			// Information
 			// 
-			this->accountAddressListComboBox->FormattingEnabled = true;
-			this->accountAddressListComboBox->Location = System::Drawing::Point(26, 298);
-			this->accountAddressListComboBox->Name = L"accountAddressListComboBox";
-			this->accountAddressListComboBox->Size = System::Drawing::Size(367, 24);
-			this->accountAddressListComboBox->TabIndex = 26;
+			this->Information->AutoSize = true;
+			this->Information->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Information->Location = System::Drawing::Point(20, 22);
+			this->Information->Name = L"Information";
+			this->Information->Size = System::Drawing::Size(183, 32);
+			this->Information->TabIndex = 24;
+			this->Information->Text = L"Informations";
 			// 
-			// accountAddressDeleteButton
+			// accountErrorLabel
 			// 
-			this->accountAddressDeleteButton->Location = System::Drawing::Point(410, 298);
-			this->accountAddressDeleteButton->Name = L"accountAddressDeleteButton";
-			this->accountAddressDeleteButton->Size = System::Drawing::Size(103, 25);
-			this->accountAddressDeleteButton->TabIndex = 27;
-			this->accountAddressDeleteButton->Text = L"Delete";
-			this->accountAddressDeleteButton->UseVisualStyleBackColor = true;
-			// 
-			// accountAddressAddButton
-			// 
-			this->accountAddressAddButton->Location = System::Drawing::Point(410, 427);
-			this->accountAddressAddButton->Name = L"accountAddressAddButton";
-			this->accountAddressAddButton->Size = System::Drawing::Size(103, 25);
-			this->accountAddressAddButton->TabIndex = 28;
-			this->accountAddressAddButton->Text = L"Add";
-			this->accountAddressAddButton->UseVisualStyleBackColor = true;
-			// 
-			// accountAddressNbTextBox
-			// 
-			this->accountAddressNbTextBox->Location = System::Drawing::Point(26, 372);
-			this->accountAddressNbTextBox->Name = L"accountAddressNbTextBox";
-			this->accountAddressNbTextBox->Size = System::Drawing::Size(156, 22);
-			this->accountAddressNbTextBox->TabIndex = 29;
-			// 
-			// accountAddressCityTextBox
-			// 
-			this->accountAddressCityTextBox->Location = System::Drawing::Point(188, 372);
-			this->accountAddressCityTextBox->Name = L"accountAddressCityTextBox";
-			this->accountAddressCityTextBox->Size = System::Drawing::Size(100, 22);
-			this->accountAddressCityTextBox->TabIndex = 30;
-			// 
-			// accountAddressPostalTextBox
-			// 
-			this->accountAddressPostalTextBox->Location = System::Drawing::Point(294, 372);
-			this->accountAddressPostalTextBox->Name = L"accountAddressPostalTextBox";
-			this->accountAddressPostalTextBox->Size = System::Drawing::Size(100, 22);
-			this->accountAddressPostalTextBox->TabIndex = 31;
-			// 
-			// accountAddressMoreTextBox
-			// 
-			this->accountAddressMoreTextBox->Location = System::Drawing::Point(26, 428);
-			this->accountAddressMoreTextBox->Name = L"accountAddressMoreTextBox";
-			this->accountAddressMoreTextBox->Size = System::Drawing::Size(367, 22);
-			this->accountAddressMoreTextBox->TabIndex = 32;
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(26, 349);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(143, 17);
-			this->label7->TabIndex = 33;
-			this->label7->Text = L"Number and street";
-			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(192, 349);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(35, 17);
-			this->label8->TabIndex = 34;
-			this->label8->Text = L"City";
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(300, 349);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(93, 17);
-			this->label9->TabIndex = 35;
-			this->label9->Text = L"Postal code";
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(27, 408);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(206, 17);
-			this->label10->TabIndex = 36;
-			this->label10->Text = L"More information (ex: floor)";
+			this->accountErrorLabel->AccessibleRole = System::Windows::Forms::AccessibleRole::Text;
+			this->accountErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			this->accountErrorLabel->AutoSize = true;
+			this->accountErrorLabel->ForeColor = System::Drawing::Color::Red;
+			this->accountErrorLabel->Location = System::Drawing::Point(721, 207);
+			this->accountErrorLabel->Name = L"accountErrorLabel";
+			this->accountErrorLabel->Size = System::Drawing::Size(78, 17);
+			this->accountErrorLabel->TabIndex = 18;
+			this->accountErrorLabel->Text = L"Lastname";
+			this->accountErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// MyForm
 			// 
@@ -750,9 +771,46 @@ namespace OPO2SUMproject {
 			DataTableReaderTest->Read();
 			connectedAccount = gcnew Account(DataTableReaderTest->GetInt32(0));
 			this->loginErrorLabel->ForeColor = System::Drawing::Color::Green;
-			this->loginErrorLabel->Text = "Afficher la page suivante...";
+
+			this->accountUsernameTextBox->Text = connectedAccount->get_account_name();
+			this->accountFirstnameTextBox->Text = connectedAccount->get_firstname_account();
+			this->accountLastnameTextBox->Text = connectedAccount->get_lastname_account();
+			this->accountBirthdayTextBox->Text = connectedAccount->get_birthday_account()->Substring(0,10);
+			this->accountModifyButton->Enabled = false;
+			this->loginErrorLabel->Text = "";
+			this->accountErrorLabel->Text = "";
 		}
 		DataTableReaderTest->Close();
 	}
-};
+
+	private: System::Void enableAccountModifyButton(System::Object^ sender, System::EventArgs^ e) {
+		this->accountModifyButton->Enabled = true;
+	}
+
+	private: System::Void accountModifyButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+
+		if (this->accountFirstnameTextBox->Text == "" || this->accountLastnameTextBox->Text == "") {
+			this->accountErrorLabel->Text = "Firstname and Lastname cannot be empty.";
+		}
+		else if (this->accountPasswordTextBox->Text->Length < 8 && this->accountPasswordTextBox->Text->Length > 0) {
+			this->accountErrorLabel->Text = "Password too short. (8 characters)";
+		}
+		else {
+			connectedAccount->set_firstname_account(accountFirstnameTextBox->Text);
+			connectedAccount->set_lastname_account(accountLastnameTextBox->Text);
+			
+			if (this->accountPasswordTextBox->Text->Length >= 8) {
+				connectedAccount->set_password_account(accountPasswordTextBox->Text->GetHashCode().ToString());
+			}
+
+			AccountManager^ updateAccount = gcnew AccountManager();
+			updateAccount->update(connectedAccount);
+
+			this->accountErrorLabel->Text = "Account updated.";
+			this->accountErrorLabel->ForeColor = System::Drawing::Color::Green;
+			this->accountModifyButton->Enabled = false;
+		}
+	}
+	};
 }
