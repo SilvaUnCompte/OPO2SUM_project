@@ -122,12 +122,6 @@ OPO2SUMproject::Bill::Bill(int selectedId) {
 	DataTableReaderBill->Close();
 }
 
-// Constructor Living
-
-OPO2SUMproject::Living::Living(int id_account, int id_address) {
-	Account^ address = gcnew Account(id_address);
-	Address^ account = gcnew Address(id_account);
-}
 
 //Constructor Contain
 
@@ -150,7 +144,6 @@ void OPO2SUMproject::AccountManager::insert(System::String^ account_name, System
 }
 void OPO2SUMproject::AccountManager::deleteElement(int selectedId) {
 	Adata->actionRows("DELETE FROM Personnel WHERE id_account = " + selectedId);
-	Adata->actionRows("DELETE FROM Living WHERE id_account = " + selectedId);
 	Adata->actionRows("DELETE FROM Account WHERE id_account = " + selectedId);
 }
 void OPO2SUMproject::AccountManager::deleteElement(Account^ obj) {
@@ -218,7 +211,7 @@ void OPO2SUMproject::AddressManager::insert(System::String^ street, int postal_c
 		"VALUES('" + street + "', " + postal_code + ", '" + city + "', '" + address_complement + "');");
 }
 void OPO2SUMproject::AddressManager::deleteElement(int selectedId) {
-	Adata->actionRows("DELETE FROM Living WHERE id_address = " + selectedId);
+	
 	Adata->actionRows("DELETE FROM Address WHERE id_address = " + selectedId);
 }
 void OPO2SUMproject::AddressManager::deleteElement(Address^ obj) {
@@ -294,14 +287,6 @@ void OPO2SUMproject::BillManager::update(Bill^ obj) {
 
 }
 
-//Living Manager--------------------------------------------------------------------------
-
-void OPO2SUMproject::LivingManager::insert(int id_account, int id_address) {
-	AccessData^ Adata = gcnew AccessData;
-	Adata->actionRows("INSERT INTO Living " +
-		"(id_account, id_address)" +
-		"VALUES(" + id_account + ", " + id_address + ");");
-}
 
 //Contain Manager----------------------------------------------------------------------------
 

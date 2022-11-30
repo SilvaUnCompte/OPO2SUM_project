@@ -261,31 +261,6 @@ namespace OPO2SUMproject
 	};
 
 
-	ref class Living {
-	private:
-		Account^ account;
-		Address^ address;
-		AccessData^ Adata = gcnew AccessData;
-
-
-	public:
-		Living(int account, int address);
-
-		Account^ get_account() { return account; }
-		Address^ get_address() { return address; }
-
-		void set_account(Account^ account) { this->account = account; }
-		void set_address(Address^ address) { this->address = address; }
-	};
-
-	ref class LivingManager : ClassTableManager
-	{
-	public:
-		void insert(int id_account, int id_address);
-	};
-
-
-
 	ref class Contain : ClassTable {
 	private:
 		Order^ id_order;
