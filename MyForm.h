@@ -328,6 +328,8 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->titleBarPanel = (gcnew System::Windows::Forms::Panel());
 			this->titleBarLabel = (gcnew System::Windows::Forms::Label());
 			this->accountPanel = (gcnew System::Windows::Forms::Panel());
+			this->accountAddressAddButton = (gcnew System::Windows::Forms::Button());
+			this->accountAddressDeleteButton = (gcnew System::Windows::Forms::Button());
 			this->accountModifyButton = (gcnew System::Windows::Forms::Button());
 			this->accountAddressListComboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->accountAddressMoreTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -350,8 +352,6 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->accountFirstnameLabel = (gcnew System::Windows::Forms::Label());
 			this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
-			this->accountAddressDeleteButton = (gcnew System::Windows::Forms::Button());
-			this->accountAddressAddButton = (gcnew System::Windows::Forms::Button());
 			this->loginPanel->SuspendLayout();
 			this->loginPasswordPanel->SuspendLayout();
 			this->loginUsernamePanel->SuspendLayout();
@@ -1507,6 +1507,7 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->menuClientButton->TabIndex = 1;
 			this->menuClientButton->Text = L"Client";
 			this->menuClientButton->UseVisualStyleBackColor = true;
+			this->menuClientButton->Click += gcnew System::EventHandler(this, &MyForm::menuClientButton_Click);
 			this->menuClientButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuClientButton_MouseEnter);
 			this->menuClientButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuClientButton_MouseLeave);
 			// 
@@ -1588,6 +1589,24 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->accountPanel->Name = L"accountPanel";
 			this->accountPanel->Size = System::Drawing::Size(968, 607);
 			this->accountPanel->TabIndex = 15;
+			// 
+			// accountAddressAddButton
+			// 
+			this->accountAddressAddButton->Location = System::Drawing::Point(583, 508);
+			this->accountAddressAddButton->Name = L"accountAddressAddButton";
+			this->accountAddressAddButton->Size = System::Drawing::Size(118, 25);
+			this->accountAddressAddButton->TabIndex = 23;
+			this->accountAddressAddButton->Text = L"Add";
+			this->accountAddressAddButton->UseVisualStyleBackColor = true;
+			// 
+			// accountAddressDeleteButton
+			// 
+			this->accountAddressDeleteButton->Location = System::Drawing::Point(583, 407);
+			this->accountAddressDeleteButton->Name = L"accountAddressDeleteButton";
+			this->accountAddressDeleteButton->Size = System::Drawing::Size(118, 25);
+			this->accountAddressDeleteButton->TabIndex = 22;
+			this->accountAddressDeleteButton->Text = L"Delete";
+			this->accountAddressDeleteButton->UseVisualStyleBackColor = true;
 			// 
 			// accountModifyButton
 			// 
@@ -1775,24 +1794,6 @@ private: System::Windows::Forms::Button^ accountAddressDeleteButton;
 			this->accountTitleLabel->Size = System::Drawing::Size(211, 44);
 			this->accountTitleLabel->TabIndex = 0;
 			this->accountTitleLabel->Text = L"My Account";
-			// 
-			// accountAddressDeleteButton
-			// 
-			this->accountAddressDeleteButton->Location = System::Drawing::Point(583, 407);
-			this->accountAddressDeleteButton->Name = L"accountAddressDeleteButton";
-			this->accountAddressDeleteButton->Size = System::Drawing::Size(118, 25);
-			this->accountAddressDeleteButton->TabIndex = 22;
-			this->accountAddressDeleteButton->Text = L"Delete";
-			this->accountAddressDeleteButton->UseVisualStyleBackColor = true;
-			// 
-			// accountAddressAddButton
-			// 
-			this->accountAddressAddButton->Location = System::Drawing::Point(583, 508);
-			this->accountAddressAddButton->Name = L"accountAddressAddButton";
-			this->accountAddressAddButton->Size = System::Drawing::Size(118, 25);
-			this->accountAddressAddButton->TabIndex = 23;
-			this->accountAddressAddButton->Text = L"Add";
-			this->accountAddressAddButton->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
@@ -2036,6 +2037,10 @@ private: System::Void menuAccountButton_MouseLeave(System::Object^ sender, Syste
 private: System::Void menuAccountButton_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 	hideAllPanel();
 	accountPanel->Visible = true;
+}
+private: System::Void menuClientButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	hideAllPanel();
+	managerTablePanel->Visible = true;
 }
 };
 }
