@@ -2205,7 +2205,6 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 				this->registerFirstnameTextBox->Text, this->registerLastnameTextBox->Text, registerDateTimePicker->Value.ToString(), 0);
 			registerLoginButton_Click(sender, e);
 			this->loginUsernameTextBox->Text = registerUsernameTextBox->Text;
-
 			this->registerUsernameTextBox->Text = "";
 			this->registerFirstnameTextBox->Text = "";
 			this->registerLastnameTextBox->Text = "";
