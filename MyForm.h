@@ -483,6 +483,7 @@ namespace OPO2SUMproject {
 			   this->catalogResearchTextBox->Name = L"catalogResearchTextBox";
 			   this->catalogResearchTextBox->Size = System::Drawing::Size(268, 22);
 			   this->catalogResearchTextBox->TabIndex = 32;
+			   this->catalogResearchTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::catalogResearchTextBox_TextChanged);
 			   // 
 			   // Information
 			   // 
@@ -645,21 +646,9 @@ namespace OPO2SUMproject {
 			DataTableReaderTest->Read();
 			connectedAccount = gcnew Account(DataTableReaderTest->GetInt32(0));
 			this->loginErrorLabel->ForeColor = System::Drawing::Color::Green;
-			catalogRefreshGlobalList();
+			catalogResearchTextBox_TextChanged(sender, e);
 		}
 		DataTableReaderTest->Close();
-	}
-	private: void catalogRefreshGlobalList() {
-		AccessData^ Adata = gcnew AccessData;
-		DataSet^ listProduct = Adata->getRows("SELECT * FROM product WHERE stock_product > 0;", "Temp");
-		DataTable^ products = listProduct->Tables[0];
-
-		catalogGlobalListView->Items->Clear();
-		for (int i = 0; i < products->Rows->Count; i++)
-		{
-			DataRow^ drow = products->Rows[i];
-			catalogGlobalListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString());
-		}
 	}
 	private: System::Void catalogCartButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -671,7 +660,7 @@ namespace OPO2SUMproject {
 		try {
 			String^ selectedProduct = catalogGlobalListView->SelectedItems[0]->Text;
 
-			String^ countProduct = Microsoft::VisualBasic::Interaction::InputBox("How many " + selectedProduct->Substring(selectedProduct->LastIndexOf(" ") + 1) + " do you want?", selectedProduct->Substring(selectedProduct->LastIndexOf(" ") + 1), "1", 500, 500);
+			String^ countProduct = Microsoft::VisualBasic::Interaction::InputBox("How many \"" + selectedProduct->Substring(selectedProduct->IndexOf(" ") + 1) + "\" do you want?", selectedProduct->Substring(selectedProduct->LastIndexOf(" ") + 1), "1", 500, 500);
 			if (!(countProduct == "" || countProduct == "0")) {
 				try {
 					int::Parse(countProduct);
@@ -692,5 +681,17 @@ namespace OPO2SUMproject {
 		}
 		catch (...) {}
 	}
-	};
+	private: System::Void catalogResearchTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ listProduct = Adata->getRows("SELECT * FROM product WHERE stock_product > 0 AND (name_product LIKE '%" + catalogResearchTextBox->Text + "%' OR id_product LIKE '%" + catalogResearchTextBox->Text + "%');", "Temp");
+		DataTable^ products = listProduct->Tables[0];
+
+		catalogGlobalListView->Items->Clear();
+		for (int i = 0; i < products->Rows->Count; i++)
+		{
+			DataRow^ drow = products->Rows[i];
+			catalogGlobalListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString());
+		}
+	}
+};
 }
