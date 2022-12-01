@@ -188,7 +188,7 @@ namespace OPO2SUMproject
 		void set_tva_product(float tva) { this->tva_product = tva; }
 		void set_stock_product(int stock) { this->stock_product = stock; }
 		void set_restocking_threshold_product(int restocking) { this->restocking_threshold_product = restocking; }
-		void set_enable_product(int set_eneble_product) { this->enable_product = set_eneble_product; }
+		void set_enable_product(int set_enable_product) { this->enable_product = set_enable_product; }
 	};
 
 	ref class ProductManager : ClassTableManager
