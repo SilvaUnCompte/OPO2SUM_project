@@ -4,6 +4,7 @@
 
 OPO2SUMproject::AccessData::AccessData(void)
 {
+	// Enzo : DESKTOP-1P8UTCD | Selyan : BOBLÉPONGE | Nezar : 
 	this->sCnx = "Data Source=DESKTOP-1P8UTCD;Initial Catalog=OPO2SUM;Integrated Security=True";
 
 	this->sSql = "";
