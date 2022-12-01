@@ -293,7 +293,7 @@ void OPO2SUMproject::BillManager::update(Bill^ obj) {
 
 //Contain Manager----------------------------------------------------------------------------
 
-void OPO2SUMproject::ContainManager::insert(Order^ id_order, Product^ id_product, int nb_element) {
+void OPO2SUMproject::ContainManager::insert(int id_order, int id_product, int nb_element) {
 	AccessData^ Adata = gcnew AccessData;
 	Adata->actionRows("INSERT INTO Contain " +
 		"(id_order, id_product, nb_element)" +

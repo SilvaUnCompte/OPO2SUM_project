@@ -287,7 +287,7 @@ namespace OPO2SUMproject
 	ref class ContainManager : ClassTableManager
 	{
 	public:
-		void insert(Order^ id_order, Product^ id_product, int nb_element);
+		void insert(int id_order, int id_product, int nb_element);
 		void update(Contain^);
 	};
 };

@@ -2,7 +2,7 @@
 #include "AccessData.h"
 #include "DataManager.h"
 #include <iostream>
-#include <ctime>
+#include <vector>
 
 namespace OPO2SUMproject {
 
@@ -66,56 +66,17 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::DateTimePicker^ registerDateTimePicker;
 	private: System::Windows::Forms::Label^ registerBirthdayLabel;
 	private: System::Windows::Forms::Panel^ registerPanel;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ catalogResearchTextBox;
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Label^ Information;
-
-
-
 
 	private:
 		Account^ connectedAccount;
-
-
-
-
 		AddressManager^ addressManager = gcnew AddressManager();
+		ContainManager^ containManager = gcnew ContainManager();
+		OrderManager^ orderManager = gcnew OrderManager();
+
 	private: System::Windows::Forms::Button^ catalogCheckoutButton;
 
 
@@ -131,6 +92,10 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Button^ catalogCartButton;
 	private: System::Windows::Forms::Button^ catalogBackButton;
+	private: System::Windows::Forms::ComboBox^ catalogAddressBillingListComboBox;
+	private: System::Windows::Forms::ComboBox^ catalogAddressShippingListComboBox;
+
+
 		   AccountManager^ accountManager = gcnew AccountManager();
 
 #pragma region Windows Form Designer generated code
@@ -168,6 +133,8 @@ namespace OPO2SUMproject {
 			   this->Information = (gcnew System::Windows::Forms::Label());
 			   this->catalogCheckoutButton = (gcnew System::Windows::Forms::Button());
 			   this->panel2 = (gcnew System::Windows::Forms::Panel());
+			   this->catalogAddressBillingListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->catalogAddressShippingListComboBox = (gcnew System::Windows::Forms::ComboBox());
 			   this->catalogBackButton = (gcnew System::Windows::Forms::Button());
 			   this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
 			   this->label3 = (gcnew System::Windows::Forms::Label());
@@ -508,6 +475,8 @@ namespace OPO2SUMproject {
 			   // 
 			   // panel2
 			   // 
+			   this->panel2->Controls->Add(this->catalogAddressBillingListComboBox);
+			   this->panel2->Controls->Add(this->catalogAddressShippingListComboBox);
 			   this->panel2->Controls->Add(this->catalogBackButton);
 			   this->panel2->Controls->Add(this->catalogSelectedListView);
 			   this->panel2->Controls->Add(this->label3);
@@ -516,6 +485,22 @@ namespace OPO2SUMproject {
 			   this->panel2->Name = L"panel2";
 			   this->panel2->Size = System::Drawing::Size(431, 463);
 			   this->panel2->TabIndex = 41;
+			   // 
+			   // catalogAddressBillingListComboBox
+			   // 
+			   this->catalogAddressBillingListComboBox->FormattingEnabled = true;
+			   this->catalogAddressBillingListComboBox->Location = System::Drawing::Point(26, 311);
+			   this->catalogAddressBillingListComboBox->Name = L"catalogAddressBillingListComboBox";
+			   this->catalogAddressBillingListComboBox->Size = System::Drawing::Size(121, 24);
+			   this->catalogAddressBillingListComboBox->TabIndex = 44;
+			   // 
+			   // catalogAddressShippingListComboBox
+			   // 
+			   this->catalogAddressShippingListComboBox->FormattingEnabled = true;
+			   this->catalogAddressShippingListComboBox->Location = System::Drawing::Point(26, 341);
+			   this->catalogAddressShippingListComboBox->Name = L"catalogAddressShippingListComboBox";
+			   this->catalogAddressShippingListComboBox->Size = System::Drawing::Size(121, 24);
+			   this->catalogAddressShippingListComboBox->TabIndex = 43;
 			   // 
 			   // catalogBackButton
 			   // 
@@ -532,7 +517,7 @@ namespace OPO2SUMproject {
 			   this->catalogSelectedListView->HideSelection = false;
 			   this->catalogSelectedListView->Location = System::Drawing::Point(26, 129);
 			   this->catalogSelectedListView->Name = L"catalogSelectedListView";
-			   this->catalogSelectedListView->Size = System::Drawing::Size(383, 254);
+			   this->catalogSelectedListView->Size = System::Drawing::Size(383, 122);
 			   this->catalogSelectedListView->TabIndex = 41;
 			   this->catalogSelectedListView->UseCompatibleStateImageBehavior = false;
 			   this->catalogSelectedListView->View = System::Windows::Forms::View::List;
@@ -622,7 +607,6 @@ namespace OPO2SUMproject {
 		}
 		DataTableReaderTest->Close();
 	}
-
 	private: System::Void loginValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
 
@@ -651,19 +635,88 @@ namespace OPO2SUMproject {
 		DataTableReaderTest->Close();
 	}
 	private: System::Void catalogCartButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		// afficher la bonne page
+		AccessData^ Adata = gcnew AccessData;
+		System::Data::DataSet^ listAddress = Adata->getRows("SELECT * FROM address WHERE id_account = " + connectedAccount->get_id() + ";", "Temp");
+		this->catalogAddressBillingListComboBox->DataSource = listAddress->Tables[0];
+		this->catalogAddressBillingListComboBox->ValueMember = "id_address";
+		this->catalogAddressBillingListComboBox->DisplayMember = "street";
+		this->catalogAddressShippingListComboBox->DataSource = listAddress->Tables[0];
+		this->catalogAddressShippingListComboBox->ValueMember = "id_address";
+		this->catalogAddressShippingListComboBox->DisplayMember = "street";
 	}
 	private: System::Void catalogBackButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void catalogCheckoutButton_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		if (this->catalogAddressBillingListComboBox->SelectedIndex == -1 || this->catalogAddressShippingListComboBox->SelectedIndex == -1) {
+			MessageBox::Show("No address selected.");
+			return;
+		}
+
+		String^ summaryOrder;
+		std::vector<int> idList(catalogSelectedListView->Items->Count);
+		std::vector<int> nbList(catalogSelectedListView->Items->Count);
+
+		for (int i = 0; i < catalogSelectedListView->Items->Count; i++)
+		{
+			String^ tempProduct = catalogSelectedListView->Items[i]->Text;
+
+			int tempNb = int::Parse(tempProduct->Substring(0, tempProduct->IndexOf(" ") - 1));
+			int tempId = int::Parse(tempProduct->Substring(tempProduct->IndexOf("#") + 1)->Substring(0, tempProduct->IndexOf("#") - tempProduct->IndexOf(" ") - 1));
+			Product^ currentProduct = gcnew Product(tempId);
+			if (currentProduct->get_stock_product() - tempNb < 0) {
+				if (MessageBox::Show("Due to some stock problems, you can only have " + currentProduct->get_stock_product() + "x \"" + currentProduct->get_name_product() + "\"", "Warning", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
+					tempNb = currentProduct->get_stock_product();
+				}
+				else { return; }
+			}
+			nbList[i] = tempNb;
+			idList[i] = tempId;
+			summaryOrder += "\n" + nbList[i] + "x   " + currentProduct->get_name_product();
+		}
+
+		if (MessageBox::Show("Summary :\n" + summaryOrder, "Confirm", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
+
+			orderManager->insert(DateTime::Now.ToString(), DateTime::Now.ToString(), connectedAccount->get_id(), 
+				int::Parse(this->catalogAddressBillingListComboBox->SelectedValue->ToString()),
+				int::Parse(this->catalogAddressShippingListComboBox->SelectedValue->ToString()));
+
+			AccessData^ Adata = gcnew AccessData;
+			System::Data::DataSet^ lastOrder = Adata->getRows("SELECT TOP (1) id_order FROM orderTab","Temp");
+			System::Data::DataTableReader^ DataTableReaderTest = lastOrder->CreateDataReader();
+			DataTableReaderTest->Read();
+			int id_selectedOrder = DataTableReaderTest->GetInt32(0);
+			DataTableReaderTest->Close();
+
+			for (int i = 0; i < catalogSelectedListView->Items->Count; i++)
+			{
+				containManager->insert(id_selectedOrder, idList[i], nbList[i]);
+			}
+			
+		}
+
+		//catalogGlobalListView->Items->Clear();
 	}
 	private: System::Void catalogGlobalListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
 		try {
 			String^ selectedProduct = catalogGlobalListView->SelectedItems[0]->Text;
 
+			bool noDouble = true;
+			for (int i = 0; i < catalogSelectedListView->Items->Count; i++) {
+				noDouble = selectedProduct->Substring(selectedProduct->IndexOf("\"") + 1) + "\"" ==
+					catalogSelectedListView->Items[i]->Text->Substring(catalogSelectedListView->Items[i]->Text->IndexOf("\"") + 1) ? false : noDouble;
+			}
+
+			if (!noDouble) { MessageBox::Show("This article is already in your cart."); return; }
+
 			String^ countProduct = Microsoft::VisualBasic::Interaction::InputBox("How many \"" + selectedProduct->Substring(selectedProduct->IndexOf(" ") + 1) + "\" do you want?", selectedProduct->Substring(selectedProduct->LastIndexOf(" ") + 1), "1", 500, 500);
 			if (!(countProduct == "" || countProduct == "0")) {
 				try {
-					int::Parse(countProduct);
+					if (int::Parse(countProduct) < 1) {
+						MessageBox::Show("Invalide Value");
+						return;
+					}
 					catalogSelectedListView->Items->Add(countProduct + "x \"" + selectedProduct + "\"");
 				}
 				catch (...) {
@@ -693,5 +746,5 @@ namespace OPO2SUMproject {
 			catalogGlobalListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString());
 		}
 	}
-};
+	};
 }
