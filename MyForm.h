@@ -75,6 +75,7 @@ namespace OPO2SUMproject {
 		Account^ connectedAccount;
 		AddressManager^ addressManager = gcnew AddressManager();
 		ContainManager^ containManager = gcnew ContainManager();
+		ProductManager^ productManager = gcnew ProductManager();
 		OrderManager^ orderManager = gcnew OrderManager();
 
 	private: System::Windows::Forms::Button^ catalogCheckoutButton;
@@ -638,10 +639,12 @@ namespace OPO2SUMproject {
 		// afficher la bonne page
 		AccessData^ Adata = gcnew AccessData;
 		System::Data::DataSet^ listAddress = Adata->getRows("SELECT * FROM address WHERE id_account = " + connectedAccount->get_id() + ";", "Temp");
+		AccessData^ Adata2 = gcnew AccessData;
+		System::Data::DataSet^ listAddress2 = Adata2->getRows("SELECT * FROM address WHERE id_account = " + connectedAccount->get_id() + ";", "Temp");
 		this->catalogAddressBillingListComboBox->DataSource = listAddress->Tables[0];
 		this->catalogAddressBillingListComboBox->ValueMember = "id_address";
 		this->catalogAddressBillingListComboBox->DisplayMember = "street";
-		this->catalogAddressShippingListComboBox->DataSource = listAddress->Tables[0];
+		this->catalogAddressShippingListComboBox->DataSource = listAddress2->Tables[0];
 		this->catalogAddressShippingListComboBox->ValueMember = "id_address";
 		this->catalogAddressShippingListComboBox->DisplayMember = "street";
 	}
@@ -651,6 +654,10 @@ namespace OPO2SUMproject {
 
 		if (this->catalogAddressBillingListComboBox->SelectedIndex == -1 || this->catalogAddressShippingListComboBox->SelectedIndex == -1) {
 			MessageBox::Show("No address selected.");
+			return;
+		}
+		if (this->catalogSelectedListView->Items->Count == 0) {
+			MessageBox::Show("Cart empty.");
 			return;
 		}
 
@@ -683,7 +690,7 @@ namespace OPO2SUMproject {
 				int::Parse(this->catalogAddressShippingListComboBox->SelectedValue->ToString()));
 
 			AccessData^ Adata = gcnew AccessData;
-			System::Data::DataSet^ lastOrder = Adata->getRows("SELECT TOP (1) id_order FROM orderTab","Temp");
+			System::Data::DataSet^ lastOrder = Adata->getRows("SELECT TOP (1) id_order FROM orderTab ORDER BY id_order DESC","Temp");
 			System::Data::DataTableReader^ DataTableReaderTest = lastOrder->CreateDataReader();
 			DataTableReaderTest->Read();
 			int id_selectedOrder = DataTableReaderTest->GetInt32(0);
@@ -691,12 +698,17 @@ namespace OPO2SUMproject {
 
 			for (int i = 0; i < catalogSelectedListView->Items->Count; i++)
 			{
+				MessageBox::Show("1");
+				Product^ selectedProduct = gcnew Product(idList[i]);
+				selectedProduct->set_stock_product(selectedProduct->get_stock_product() - nbList[i]);
+				productManager->update(selectedProduct);
+
 				containManager->insert(id_selectedOrder, idList[i], nbList[i]);
 			}
-			
+			MessageBox::Show("Order successfully created!");
+			catalogBackButton_Click(sender, e);
+			catalogSelectedListView->Items->Clear();
 		}
-
-		//catalogGlobalListView->Items->Clear();
 	}
 	private: System::Void catalogGlobalListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
 		try {
