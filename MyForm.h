@@ -698,7 +698,6 @@ namespace OPO2SUMproject {
 
 			for (int i = 0; i < catalogSelectedListView->Items->Count; i++)
 			{
-				MessageBox::Show("1");
 				Product^ selectedProduct = gcnew Product(idList[i]);
 				selectedProduct->set_stock_product(selectedProduct->get_stock_product() - nbList[i]);
 				productManager->update(selectedProduct);
@@ -706,6 +705,7 @@ namespace OPO2SUMproject {
 				containManager->insert(id_selectedOrder, idList[i], nbList[i]);
 			}
 			MessageBox::Show("Order successfully created!");
+			catalogResearchTextBox_TextChanged(sender, e);
 			catalogBackButton_Click(sender, e);
 			catalogSelectedListView->Items->Clear();
 		}
@@ -748,7 +748,7 @@ namespace OPO2SUMproject {
 	}
 	private: System::Void catalogResearchTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ listProduct = Adata->getRows("SELECT * FROM product WHERE stock_product > 0 AND (name_product LIKE '%" + catalogResearchTextBox->Text + "%' OR id_product LIKE '%" + catalogResearchTextBox->Text + "%');", "Temp");
+		DataSet^ listProduct = Adata->getRows("SELECT * FROM product WHERE stock_product > 0 AND enable_product = 1 AND (name_product LIKE '%" + catalogResearchTextBox->Text + "%' OR id_product LIKE '%" + catalogResearchTextBox->Text + "%');", "Temp");
 		DataTable^ products = listProduct->Tables[0];
 
 		catalogGlobalListView->Items->Clear();

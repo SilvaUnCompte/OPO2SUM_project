@@ -89,6 +89,7 @@ OPO2SUMproject::Product::Product(int selectedId) {
 	this->tva_product = DataTableReaderProduct->GetDouble(5);
 	this->stock_product = DataTableReaderProduct->GetInt32(6);
 	this->restocking_threshold_product = DataTableReaderProduct->GetInt32(7);
+	this->enable_product = DataTableReaderProduct->GetInt32(8);
 
 	DataTableReaderProduct->Close();
 }
