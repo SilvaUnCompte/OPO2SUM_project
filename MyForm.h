@@ -174,6 +174,22 @@ namespace OPO2SUMproject {
 private: System::Windows::Forms::Panel^ hubPanel;
 private: System::Windows::Forms::Button^ testToSupprButton;
 private: System::Windows::Forms::Panel^ statisticMPanel;
+private: System::Windows::Forms::Button^ stockMAddButton;
+private: System::Windows::Forms::Panel^ catalogCartPanel;
+private: System::Windows::Forms::Panel^ catalogOrderPanel;
+private: System::Windows::Forms::Button^ catalogCartButton;
+private: System::Windows::Forms::ListView^ catalogGlobalListView;
+private: System::Windows::Forms::TextBox^ catalogResearchTextBox;
+private: System::Windows::Forms::Label^ catalogOrderResearchLabel;
+private: System::Windows::Forms::Label^ catalogOrderTitleLabel;
+private: System::Windows::Forms::Label^ catalogCartTitleLabel;
+private: System::Windows::Forms::Label^ catalogAddressShippingLabel;
+private: System::Windows::Forms::Label^ catalogAddressBillingLabel;
+private: System::Windows::Forms::ComboBox^ catalogAddressShippingListComboBox;
+private: System::Windows::Forms::ComboBox^ catalogAddressBillingListComboBox;
+private: System::Windows::Forms::Button^ catalogCheckoutButton;
+private: System::Windows::Forms::Button^ catalogBackButton;
+private: System::Windows::Forms::ListView^ catalogSelectedListView;
 
 
 
@@ -222,6 +238,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->statisticMComboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->statisticMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->stockMPanel = (gcnew System::Windows::Forms::Panel());
+			this->stockMAddButton = (gcnew System::Windows::Forms::Button());
 			this->stockMLabel = (gcnew System::Windows::Forms::Label());
 			this->addStockPanel = (gcnew System::Windows::Forms::Panel());
 			this->addStockRestockingTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -310,7 +327,22 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->hubPanel = (gcnew System::Windows::Forms::Panel());
+			this->catalogCartPanel = (gcnew System::Windows::Forms::Panel());
+			this->catalogCartTitleLabel = (gcnew System::Windows::Forms::Label());
+			this->catalogOrderPanel = (gcnew System::Windows::Forms::Panel());
+			this->catalogCartButton = (gcnew System::Windows::Forms::Button());
+			this->catalogGlobalListView = (gcnew System::Windows::Forms::ListView());
+			this->catalogResearchTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->catalogOrderResearchLabel = (gcnew System::Windows::Forms::Label());
+			this->catalogOrderTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
+			this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
+			this->catalogBackButton = (gcnew System::Windows::Forms::Button());
+			this->catalogCheckoutButton = (gcnew System::Windows::Forms::Button());
+			this->catalogAddressBillingListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->catalogAddressShippingListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->catalogAddressBillingLabel = (gcnew System::Windows::Forms::Label());
+			this->catalogAddressShippingLabel = (gcnew System::Windows::Forms::Label());
 			this->loginPanel->SuspendLayout();
 			this->loginPasswordPanel->SuspendLayout();
 			this->loginUsernamePanel->SuspendLayout();
@@ -329,6 +361,8 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->accountPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			this->hubPanel->SuspendLayout();
+			this->catalogCartPanel->SuspendLayout();
+			this->catalogOrderPanel->SuspendLayout();
 			this->statisticMPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -590,10 +624,10 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			// registerLoginButton
 			// 
 			this->registerLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->registerLoginButton->Location = System::Drawing::Point(1108, 3);
+			this->registerLoginButton->Location = System::Drawing::Point(1099, 3);
 			this->registerLoginButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->registerLoginButton->Name = L"registerLoginButton";
-			this->registerLoginButton->Size = System::Drawing::Size(78, 43);
+			this->registerLoginButton->Size = System::Drawing::Size(87, 55);
 			this->registerLoginButton->TabIndex = 5;
 			this->registerLoginButton->Text = L"Login";
 			this->registerLoginButton->UseVisualStyleBackColor = true;
@@ -711,12 +745,23 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->stockMPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->stockMPanel->Controls->Add(this->stockMAddButton);
 			this->stockMPanel->Controls->Add(this->stockMLabel);
 			this->stockMPanel->Location = System::Drawing::Point(220, 80);
 			this->stockMPanel->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->stockMPanel->Name = L"stockMPanel";
 			this->stockMPanel->Size = System::Drawing::Size(968, 607);
 			this->stockMPanel->TabIndex = 9;
+			// 
+			// stockMAddButton
+			// 
+			this->stockMAddButton->Location = System::Drawing::Point(831, 547);
+			this->stockMAddButton->Name = L"stockMAddButton";
+			this->stockMAddButton->Size = System::Drawing::Size(126, 49);
+			this->stockMAddButton->TabIndex = 16;
+			this->stockMAddButton->Text = L"Add new product";
+			this->stockMAddButton->UseVisualStyleBackColor = true;
+			this->stockMAddButton->Click += gcnew System::EventHandler(this, &MyForm::stockMAddButton_Click_1);
 			// 
 			// stockMLabel
 			// 
@@ -858,13 +903,14 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			// addStockValidateButton
 			// 
 			this->addStockValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->addStockValidateButton->Location = System::Drawing::Point(288, 476);
+			this->addStockValidateButton->Location = System::Drawing::Point(879, 555);
 			this->addStockValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->addStockValidateButton->Name = L"addStockValidateButton";
 			this->addStockValidateButton->Size = System::Drawing::Size(77, 39);
 			this->addStockValidateButton->TabIndex = 8;
 			this->addStockValidateButton->Text = L"Validate";
 			this->addStockValidateButton->UseVisualStyleBackColor = true;
+			this->addStockValidateButton->Click += gcnew System::EventHandler(this, &MyForm::addStockValidateButton_Click);
 			// 
 			// addStockQuantityTextBox
 			// 
@@ -1316,6 +1362,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->menuPersonnellManageButton->Text = L"Personnel  Manage";
 			this->menuPersonnellManageButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuPersonnellManageButton->UseVisualStyleBackColor = true;
+			this->menuPersonnellManageButton->Visible = false;
 			// 
 			// menuCatalogButton
 			// 
@@ -1334,6 +1381,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->menuCatalogButton->Text = L"Catalog";
 			this->menuCatalogButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuCatalogButton->UseVisualStyleBackColor = true;
+			this->menuCatalogButton->Visible = false;
 			// 
 			// menuAccountButton
 			// 
@@ -1372,6 +1420,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->menuStatisticButton->Text = L"Statistic";
 			this->menuStatisticButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuStatisticButton->UseVisualStyleBackColor = true;
+			this->menuStatisticButton->Visible = false;
 			this->menuStatisticButton->Click += gcnew System::EventHandler(this, &MyForm::menuStatisticButton_Click);
 			this->menuStatisticButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuStatisticButton_MouseEnter);
 			this->menuStatisticButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuStatisticButton_MouseLeave);
@@ -1392,6 +1441,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->menuStockButton->Text = L"Stock";
 			this->menuStockButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuStockButton->UseVisualStyleBackColor = true;
+			this->menuStockButton->Visible = false;
 			this->menuStockButton->Click += gcnew System::EventHandler(this, &MyForm::menuStockButton_Click);
 			this->menuStockButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuStockButton_MouseEnter);
 			this->menuStockButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuStockButton_MouseLeave);
@@ -1412,6 +1462,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->menuOrderButton->Text = L"Order";
 			this->menuOrderButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuOrderButton->UseVisualStyleBackColor = true;
+			this->menuOrderButton->Visible = false;
 			this->menuOrderButton->Click += gcnew System::EventHandler(this, &MyForm::menuOrderButton_Click);
 			this->menuOrderButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuOrderButton_MouseEnter);
 			this->menuOrderButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuOrderButton_MouseLeave);
@@ -1432,6 +1483,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->menuClientButton->Text = L"Client";
 			this->menuClientButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuClientButton->UseVisualStyleBackColor = true;
+			this->menuClientButton->Visible = false;
 			this->menuClientButton->Click += gcnew System::EventHandler(this, &MyForm::menuClientButton_Click);
 			this->menuClientButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuClientButton_MouseEnter);
 			this->menuClientButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuClientButton_MouseLeave);
@@ -1761,19 +1813,104 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			// 
 			// hubPanel
 			// 
+			this->hubPanel->Controls->Add(this->catalogCartPanel);
+			this->hubPanel->Controls->Add(this->catalogOrderPanel);
 			this->hubPanel->Controls->Add(this->menuButtonPanel);
 			this->hubPanel->Controls->Add(this->titleBarPanel);
-			this->hubPanel->Controls->Add(this->accountPanel);
-			this->hubPanel->Controls->Add(this->clientMPanel);
-			this->hubPanel->Controls->Add(this->addOrderPanel);
 			this->hubPanel->Controls->Add(this->addStockPanel);
 			this->hubPanel->Controls->Add(this->stockMPanel);
 			this->hubPanel->Controls->Add(this->statisticMPanel);
 			this->hubPanel->Controls->Add(this->orderMPanel);
+			this->hubPanel->Controls->Add(this->accountPanel);
+			this->hubPanel->Controls->Add(this->clientMPanel);
+			this->hubPanel->Controls->Add(this->addOrderPanel);
 			this->hubPanel->Location = System::Drawing::Point(0, 0);
 			this->hubPanel->Name = L"hubPanel";
 			this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			this->hubPanel->TabIndex = 29;
+			// 
+			// catalogCartPanel
+			// 
+			this->catalogCartPanel->Controls->Add(this->catalogAddressShippingLabel);
+			this->catalogCartPanel->Controls->Add(this->catalogAddressBillingLabel);
+			this->catalogCartPanel->Controls->Add(this->catalogAddressShippingListComboBox);
+			this->catalogCartPanel->Controls->Add(this->catalogAddressBillingListComboBox);
+			this->catalogCartPanel->Controls->Add(this->catalogCheckoutButton);
+			this->catalogCartPanel->Controls->Add(this->catalogBackButton);
+			this->catalogCartPanel->Controls->Add(this->catalogSelectedListView);
+			this->catalogCartPanel->Controls->Add(this->catalogCartTitleLabel);
+			this->catalogCartPanel->Location = System::Drawing::Point(220, 80);
+			this->catalogCartPanel->Name = L"catalogCartPanel";
+			this->catalogCartPanel->Size = System::Drawing::Size(968, 607);
+			this->catalogCartPanel->TabIndex = 19;
+			// 
+			// catalogCartTitleLabel
+			// 
+			this->catalogCartTitleLabel->AutoSize = true;
+			this->catalogCartTitleLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->catalogCartTitleLabel->Location = System::Drawing::Point(7, 12);
+			this->catalogCartTitleLabel->Name = L"catalogCartTitleLabel";
+			this->catalogCartTitleLabel->Size = System::Drawing::Size(89, 44);
+			this->catalogCartTitleLabel->TabIndex = 0;
+			this->catalogCartTitleLabel->Text = L"Cart";
+			// 
+			// catalogOrderPanel
+			// 
+			this->catalogOrderPanel->Controls->Add(this->catalogCartButton);
+			this->catalogOrderPanel->Controls->Add(this->catalogGlobalListView);
+			this->catalogOrderPanel->Controls->Add(this->catalogResearchTextBox);
+			this->catalogOrderPanel->Controls->Add(this->catalogOrderResearchLabel);
+			this->catalogOrderPanel->Controls->Add(this->catalogOrderTitleLabel);
+			this->catalogOrderPanel->Location = System::Drawing::Point(220, 80);
+			this->catalogOrderPanel->Name = L"catalogOrderPanel";
+			this->catalogOrderPanel->Size = System::Drawing::Size(968, 607);
+			this->catalogOrderPanel->TabIndex = 18;
+			// 
+			// catalogCartButton
+			// 
+			this->catalogCartButton->Location = System::Drawing::Point(793, 405);
+			this->catalogCartButton->Name = L"catalogCartButton";
+			this->catalogCartButton->Size = System::Drawing::Size(102, 35);
+			this->catalogCartButton->TabIndex = 4;
+			this->catalogCartButton->Text = L"Cart";
+			this->catalogCartButton->UseVisualStyleBackColor = true;
+			// 
+			// catalogGlobalListView
+			// 
+			this->catalogGlobalListView->HideSelection = false;
+			this->catalogGlobalListView->Location = System::Drawing::Point(104, 142);
+			this->catalogGlobalListView->Name = L"catalogGlobalListView";
+			this->catalogGlobalListView->Size = System::Drawing::Size(556, 245);
+			this->catalogGlobalListView->TabIndex = 3;
+			this->catalogGlobalListView->UseCompatibleStateImageBehavior = false;
+			// 
+			// catalogResearchTextBox
+			// 
+			this->catalogResearchTextBox->Location = System::Drawing::Point(102, 104);
+			this->catalogResearchTextBox->Name = L"catalogResearchTextBox";
+			this->catalogResearchTextBox->Size = System::Drawing::Size(273, 22);
+			this->catalogResearchTextBox->TabIndex = 2;
+			// 
+			// catalogOrderResearchLabel
+			// 
+			this->catalogOrderResearchLabel->AutoSize = true;
+			this->catalogOrderResearchLabel->Location = System::Drawing::Point(101, 82);
+			this->catalogOrderResearchLabel->Name = L"catalogOrderResearchLabel";
+			this->catalogOrderResearchLabel->Size = System::Drawing::Size(69, 17);
+			this->catalogOrderResearchLabel->TabIndex = 1;
+			this->catalogOrderResearchLabel->Text = L"Research";
+			// 
+			// catalogOrderTitleLabel
+			// 
+			this->catalogOrderTitleLabel->AutoSize = true;
+			this->catalogOrderTitleLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->catalogOrderTitleLabel->Location = System::Drawing::Point(6, 6);
+			this->catalogOrderTitleLabel->Name = L"catalogOrderTitleLabel";
+			this->catalogOrderTitleLabel->Size = System::Drawing::Size(111, 44);
+			this->catalogOrderTitleLabel->TabIndex = 0;
+			this->catalogOrderTitleLabel->Text = L"Order";
 			// 
 			// statisticMPanel
 			// 
@@ -1785,6 +1922,67 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->statisticMPanel->Size = System::Drawing::Size(968, 607);
 			this->statisticMPanel->TabIndex = 10;
 			// 
+			// catalogSelectedListView
+			// 
+			this->catalogSelectedListView->HideSelection = false;
+			this->catalogSelectedListView->Location = System::Drawing::Point(68, 62);
+			this->catalogSelectedListView->Name = L"catalogSelectedListView";
+			this->catalogSelectedListView->Size = System::Drawing::Size(475, 262);
+			this->catalogSelectedListView->TabIndex = 1;
+			this->catalogSelectedListView->UseCompatibleStateImageBehavior = false;
+			// 
+			// catalogBackButton
+			// 
+			this->catalogBackButton->Location = System::Drawing::Point(879, 12);
+			this->catalogBackButton->Name = L"catalogBackButton";
+			this->catalogBackButton->Size = System::Drawing::Size(75, 23);
+			this->catalogBackButton->TabIndex = 2;
+			this->catalogBackButton->Text = L"Back";
+			this->catalogBackButton->UseVisualStyleBackColor = true;
+			// 
+			// catalogCheckoutButton
+			// 
+			this->catalogCheckoutButton->Location = System::Drawing::Point(848, 417);
+			this->catalogCheckoutButton->Name = L"catalogCheckoutButton";
+			this->catalogCheckoutButton->Size = System::Drawing::Size(75, 23);
+			this->catalogCheckoutButton->TabIndex = 3;
+			this->catalogCheckoutButton->Text = L"Checkout";
+			this->catalogCheckoutButton->UseVisualStyleBackColor = true;
+			// 
+			// catalogAddressBillingListComboBox
+			// 
+			this->catalogAddressBillingListComboBox->FormattingEnabled = true;
+			this->catalogAddressBillingListComboBox->Location = System::Drawing::Point(649, 112);
+			this->catalogAddressBillingListComboBox->Name = L"catalogAddressBillingListComboBox";
+			this->catalogAddressBillingListComboBox->Size = System::Drawing::Size(246, 24);
+			this->catalogAddressBillingListComboBox->TabIndex = 4;
+			// 
+			// catalogAddressShippingListComboBox
+			// 
+			this->catalogAddressShippingListComboBox->FormattingEnabled = true;
+			this->catalogAddressShippingListComboBox->Location = System::Drawing::Point(649, 229);
+			this->catalogAddressShippingListComboBox->Name = L"catalogAddressShippingListComboBox";
+			this->catalogAddressShippingListComboBox->Size = System::Drawing::Size(246, 24);
+			this->catalogAddressShippingListComboBox->TabIndex = 5;
+			// 
+			// catalogAddressBillingLabel
+			// 
+			this->catalogAddressBillingLabel->AutoSize = true;
+			this->catalogAddressBillingLabel->Location = System::Drawing::Point(649, 82);
+			this->catalogAddressBillingLabel->Name = L"catalogAddressBillingLabel";
+			this->catalogAddressBillingLabel->Size = System::Drawing::Size(100, 17);
+			this->catalogAddressBillingLabel->TabIndex = 6;
+			this->catalogAddressBillingLabel->Text = L"Address billing";
+			// 
+			// catalogAddressShippingLabel
+			// 
+			this->catalogAddressShippingLabel->AutoSize = true;
+			this->catalogAddressShippingLabel->Location = System::Drawing::Point(649, 203);
+			this->catalogAddressShippingLabel->Name = L"catalogAddressShippingLabel";
+			this->catalogAddressShippingLabel->Size = System::Drawing::Size(117, 17);
+			this->catalogAddressShippingLabel->TabIndex = 7;
+			this->catalogAddressShippingLabel->Text = L"Address shipping";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1792,8 +1990,8 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->ClientSize = System::Drawing::Size(1188, 687);
 			this->Controls->Add(this->hubPanel);
-			this->Controls->Add(this->loginPanel);
 			this->Controls->Add(this->registerPanel);
+			this->Controls->Add(this->loginPanel);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ForeColor = System::Drawing::Color::Black;
@@ -1829,6 +2027,10 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->accountPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			this->hubPanel->ResumeLayout(false);
+			this->catalogCartPanel->ResumeLayout(false);
+			this->catalogCartPanel->PerformLayout();
+			this->catalogOrderPanel->ResumeLayout(false);
+			this->catalogOrderPanel->PerformLayout();
 			this->statisticMPanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
@@ -1847,6 +2049,8 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 		addStockPanel->Visible = false;
 		stockMPanel->Visible = false;
 		statisticMPanel->Visible = false;
+		catalogCartPanel->Visible = false;
+		catalogOrderPanel->Visible = false;
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
@@ -2052,7 +2256,28 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			refreshAddressList();
 			this->accountAddressListComboBox->ValueMember = "id_address";
 			this->accountAddressListComboBox->DisplayMember = "street";
-
+			hideAllPanel();
+			if (connectedAccount->get_permission_lv_account() == 0) {
+				menuCatalogButton->Visible = true;
+				menuOrderButton->Visible = true;
+			}
+			else if (connectedAccount->get_permission_lv_account() == 1)
+			{
+				menuCatalogButton->Visible = true;
+				menuOrderButton->Visible = true;
+				menuStockButton->Visible = true;
+				menuClientButton->Visible = true;
+				menuStatisticButton->Visible = true;
+			}
+			else if (connectedAccount->get_permission_lv_account() == 2)
+			{
+				menuCatalogButton->Visible = true;
+				menuOrderButton->Visible = true;
+				menuStockButton->Visible = true;
+				menuClientButton->Visible = true;
+				menuStatisticButton->Visible = true;
+				menuPersonnellManageButton->Visible = true;
+			}
 		}
 		DataTableReaderTest->Close();
 	}
@@ -2137,5 +2362,22 @@ private: System::Void menuStatisticButton_Click(System::Object^ sender, System::
 	hideAllPanel();
 	statisticMPanel->Visible = true;
 }
+private: System::Void stockMAddButton_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	hideAllPanel();
+	addStockPanel->Visible = true;
+}
+private: System::Void clearAddStockTextBox() {
+	addStockNameTextBox->Text = "";
+	addStockQuantityTextBox->Text = "";
+	addStockCostTextBox->Text = "";
+	addStockTVATextBox->Text = "";
+	addStockMargeTextBox->Text = "";
+	addStockStockTextBox->Text = "";
+	addStockRestockingTextBox->Text = "";
+}
+private: System::Void addStockValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	clearAddStockTextBox();
+}
+
 };
 }
