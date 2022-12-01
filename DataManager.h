@@ -167,6 +167,7 @@ namespace OPO2SUMproject
 		float tva_product;
 		int stock_product;
 		int restocking_threshold_product;
+		int enable_product;
 
 	public:
 		Product(int id);
@@ -178,6 +179,7 @@ namespace OPO2SUMproject
 		float get_tva_product() { return tva_product; }
 		int get_stock_product() { return stock_product; }
 		int get_restocking_threshold_product() { return restocking_threshold_product; }
+		int get_enable_product() { return enable_product; }
 
 		void set_name_product(System::String^ name) { this->name_product = name; }
 		void set_element_per_unit_product(int elementperunit) { this->element_per_unit_product = elementperunit; }
@@ -186,14 +188,14 @@ namespace OPO2SUMproject
 		void set_tva_product(float tva) { this->tva_product = tva; }
 		void set_stock_product(int stock) { this->stock_product = stock; }
 		void set_restocking_threshold_product(int restocking) { this->restocking_threshold_product = restocking; }
-
+		void set_enable_product(int set_enable_product) { this->enable_product = set_enable_product; }
 	};
 
 	ref class ProductManager : ClassTableManager
 	{
 	public:
 		Product^ select(int id);
-		void insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product);
+		void insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product, int enable_product);
 		void deleteElement(int id);
 		void deleteElement(Product^);
 		void update(Product^);
