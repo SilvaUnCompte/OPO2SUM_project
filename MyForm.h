@@ -2001,7 +2001,6 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 				this->registerFirstnameTextBox->Text, this->registerLastnameTextBox->Text, registerDateTimePicker->Value.ToString(), 0);
 			registerLoginButton_Click(sender, e);
 			this->loginUsernameTextBox->Text = registerUsernameTextBox->Text;
-
 			this->registerUsernameTextBox->Text = "";
 			this->registerFirstnameTextBox->Text = "";
 			this->registerLastnameTextBox->Text = "";
