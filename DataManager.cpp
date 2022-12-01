@@ -65,7 +65,7 @@ OPO2SUMproject::Address::Address(int selectedId) {
 
 	this->id = DataTableReaderAddress->GetInt32(0);
 	this->street = DataTableReaderAddress[1]->ToString();
-	this->postal_code = DataTableReaderAddress->GetInt32(2);
+	this->postal_code = DataTableReaderAddress[1]->ToString();
 	this->city = DataTableReaderAddress[3]->ToString();
 	this->address_complement = DataTableReaderAddress[4]->ToString();
 	this->id_account = gcnew Account(DataTableReaderAddress->GetInt32(5));
@@ -86,10 +86,9 @@ OPO2SUMproject::Product::Product(int selectedId) {
 	this->element_per_unit_product = DataTableReaderProduct->GetInt32(2);
 	this->cost_product = (float)DataTableReaderProduct->GetDouble(3);
 	this->marge_product = (float)DataTableReaderProduct->GetDouble(4);
-	this->tva_product = (float)DataTableReaderProduct->GetDouble(5);
+	this->tva_product = DataTableReaderProduct->GetDouble(5);
 	this->stock_product = DataTableReaderProduct->GetInt32(6);
 	this->restocking_threshold_product = DataTableReaderProduct->GetInt32(7);
-	this->enable_product = DataTableReaderProduct->GetInt32(8);
 
 	DataTableReaderProduct->Close();
 }
@@ -124,6 +123,7 @@ OPO2SUMproject::Bill::Bill(int selectedId) {
 
 	DataTableReaderBill->Close();
 }
+
 
 //Constructor Contain
 
@@ -231,9 +231,10 @@ OPO2SUMproject::Product^ OPO2SUMproject::ProductManager::select(int id) {
 }
 void OPO2SUMproject::ProductManager::insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product, int enable_product) {
 	AccessData^ Adata = gcnew AccessData;
+	int newTVA = tva_product * 10;
 	Adata->actionRows("INSERT INTO Product " +
 		"(name_product, element_per_unit_product, cost_product, marge_product, tva_product, stock_product, restocking_threshold_product, enable_product) " +
-		"VALUES('" + name_product + "', " + element_per_unit_product + ", " + cost_product + ", " + marge_product + ", " + tva_product + ", " + stock_product + ", " + restocking_threshold_product + "," + enable_product + ");");
+		"VALUES('" + name_product + "', " + element_per_unit_product + ", " + cost_product + ", " + marge_product + ", 0." + newTVA + ", " + stock_product + ", " + restocking_threshold_product + "," + enable_product + ");");
 }
 void OPO2SUMproject::ProductManager::deleteElement(int selectedId) {
 	Adata->actionRows("DELETE FROM contain WHERE id_product = " + selectedId);
@@ -243,7 +244,8 @@ void OPO2SUMproject::ProductManager::deleteElement(Product^ obj) {
 	ProductManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::ProductManager::update(Product^ obj) {
-	Adata->actionRows("UPDATE Product SET name_product = '" + obj->get_name_product() + "', element_per_unit_product = " + obj->get_element_per_unit_product() + ", cost_product = " + obj->get_cost_product() + ", marge_product = " + obj->get_marge_product() + ", tva_product = " + obj->get_tva_product() + ", stock_product = " + obj->get_stock_product() + ", restocking_threshold_product = " + obj->get_restocking_threshold_product() + ", " + obj->get_enable_product() + " WHERE id_product = " + obj->get_id() + ";");
+	int newTVA = obj->get_tva_product() * 10;
+	Adata->actionRows("UPDATE Product SET name_product = '" + obj->get_name_product() + "', element_per_unit_product = " + obj->get_element_per_unit_product() + ", cost_product = " + obj->get_cost_product() + ", marge_product = " + obj->get_marge_product() + ", tva_product = 0." + newTVA + ", stock_product = " + obj->get_stock_product() + ", restocking_threshold_product = " + obj->get_restocking_threshold_product() + ", enable_product = " + obj->get_enable_product() + " WHERE id_product = " + obj->get_id() + ";");
 }
 
 //Payment Manager----------------------------------------------------------------------
@@ -293,7 +295,7 @@ void OPO2SUMproject::BillManager::update(Bill^ obj) {
 
 //Contain Manager----------------------------------------------------------------------------
 
-void OPO2SUMproject::ContainManager::insert(Order^ id_order, Product^ id_product, int nb_element) {
+void OPO2SUMproject::ContainManager::insert(int id_order, int id_product, int nb_element) {
 	AccessData^ Adata = gcnew AccessData;
 	Adata->actionRows("INSERT INTO Contain " +
 		"(id_order, id_product, nb_element)" +
