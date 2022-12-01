@@ -721,12 +721,12 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			// stockMLabel
 			// 
 			this->stockMLabel->AutoSize = true;
-			this->stockMLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->stockMLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->stockMLabel->Location = System::Drawing::Point(3, 3);
 			this->stockMLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->stockMLabel->Name = L"stockMLabel";
-			this->stockMLabel->Size = System::Drawing::Size(260, 46);
+			this->stockMLabel->Size = System::Drawing::Size(250, 38);
 			this->stockMLabel->TabIndex = 15;
 			this->stockMLabel->Text = L"Stock Manager";
 			// 
@@ -1563,6 +1563,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->accountAddressAddButton->TabIndex = 23;
 			this->accountAddressAddButton->Text = L"Add";
 			this->accountAddressAddButton->UseVisualStyleBackColor = true;
+			this->accountAddressAddButton->Click += gcnew System::EventHandler(this, &MyForm::accountAddressAddButton_Click);
 			// 
 			// accountAddressDeleteButton
 			// 
@@ -1572,6 +1573,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			this->accountAddressDeleteButton->TabIndex = 22;
 			this->accountAddressDeleteButton->Text = L"Delete";
 			this->accountAddressDeleteButton->UseVisualStyleBackColor = true;
+			this->accountAddressDeleteButton->Click += gcnew System::EventHandler(this, &MyForm::accountAddressDeleteButton_Click);
 			// 
 			// accountModifyButton
 			// 
@@ -1761,13 +1763,13 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			// 
 			this->hubPanel->Controls->Add(this->menuButtonPanel);
 			this->hubPanel->Controls->Add(this->titleBarPanel);
-			this->hubPanel->Controls->Add(this->stockMPanel);
-			this->hubPanel->Controls->Add(this->statisticMPanel);
-			this->hubPanel->Controls->Add(this->orderMPanel);
 			this->hubPanel->Controls->Add(this->accountPanel);
 			this->hubPanel->Controls->Add(this->clientMPanel);
 			this->hubPanel->Controls->Add(this->addOrderPanel);
 			this->hubPanel->Controls->Add(this->addStockPanel);
+			this->hubPanel->Controls->Add(this->stockMPanel);
+			this->hubPanel->Controls->Add(this->statisticMPanel);
+			this->hubPanel->Controls->Add(this->orderMPanel);
 			this->hubPanel->Location = System::Drawing::Point(0, 0);
 			this->hubPanel->Name = L"hubPanel";
 			this->hubPanel->Size = System::Drawing::Size(1188, 687);
@@ -2050,7 +2052,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			refreshAddressList();
 			this->accountAddressListComboBox->ValueMember = "id_address";
 			this->accountAddressListComboBox->DisplayMember = "street";
-			hideAllPanel();
+
 		}
 		DataTableReaderTest->Close();
 	}
@@ -2096,6 +2098,7 @@ private: System::Windows::Forms::Panel^ statisticMPanel;
 			refreshAddressList();
 		}
 	}
+
 	private: System::Void accountAddressDeleteButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
 		System::Data::DataSet^ alreadyExist = Adata->getRows("IF EXISTS (SELECT id_account FROM account WHERE account_name = 'trashcan') BEGIN SELECT 0 END ELSE BEGIN SELECT 1 END;", "Temp");
