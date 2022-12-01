@@ -12,6 +12,7 @@ namespace OPO2SUMproject {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace Microsoft::VisualBasic;
 
 	/// <summary>
 	/// Description résumée de MyForm
@@ -89,10 +90,12 @@ namespace OPO2SUMproject {
 
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::TextBox^ catalogResearchTextBox;
 
 
 
-	private: System::Windows::Forms::TextBox^ accountAddressMoreTextBox;
+
+
 
 
 
@@ -103,7 +106,7 @@ namespace OPO2SUMproject {
 
 	private: System::Windows::Forms::Label^ Information;
 
-	private: System::Windows::Forms::Label^ accountErrorAddAddressLabel;
+
 
 
 	private:
@@ -112,7 +115,22 @@ namespace OPO2SUMproject {
 
 
 
-		   AddressManager^ addressManager = gcnew AddressManager();
+		AddressManager^ addressManager = gcnew AddressManager();
+	private: System::Windows::Forms::Button^ catalogCheckoutButton;
+
+
+	private: System::Windows::Forms::ListView^ catalogGlobalListView;
+
+
+
+	private: System::Windows::Forms::Panel^ panel2;
+
+
+	private: System::Windows::Forms::ListView^ catalogSelectedListView;
+
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Button^ catalogCartButton;
+	private: System::Windows::Forms::Button^ catalogBackButton;
 		   AccountManager^ accountManager = gcnew AccountManager();
 
 #pragma region Windows Form Designer generated code
@@ -143,13 +161,20 @@ namespace OPO2SUMproject {
 			   this->registerBirthdayLabel = (gcnew System::Windows::Forms::Label());
 			   this->registerPanel = (gcnew System::Windows::Forms::Panel());
 			   this->panel1 = (gcnew System::Windows::Forms::Panel());
-			   this->accountErrorAddAddressLabel = (gcnew System::Windows::Forms::Label());
+			   this->catalogCartButton = (gcnew System::Windows::Forms::Button());
+			   this->catalogGlobalListView = (gcnew System::Windows::Forms::ListView());
 			   this->label10 = (gcnew System::Windows::Forms::Label());
-			   this->accountAddressMoreTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->catalogResearchTextBox = (gcnew System::Windows::Forms::TextBox());
 			   this->Information = (gcnew System::Windows::Forms::Label());
+			   this->catalogCheckoutButton = (gcnew System::Windows::Forms::Button());
+			   this->panel2 = (gcnew System::Windows::Forms::Panel());
+			   this->catalogBackButton = (gcnew System::Windows::Forms::Button());
+			   this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
+			   this->label3 = (gcnew System::Windows::Forms::Label());
 			   this->loginPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
 			   this->panel1->SuspendLayout();
+			   this->panel2->SuspendLayout();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
@@ -374,7 +399,7 @@ namespace OPO2SUMproject {
 			   // 
 			   this->registerDateTimePicker->Location = System::Drawing::Point(86, 269);
 			   this->registerDateTimePicker->Name = L"registerDateTimePicker";
-			   this->registerDateTimePicker->Size = System::Drawing::Size(200, 22);
+			   this->registerDateTimePicker->Size = System::Drawing::Size(250, 22);
 			   this->registerDateTimePicker->TabIndex = 9;
 			   // 
 			   // registerBirthdayLabel
@@ -412,43 +437,52 @@ namespace OPO2SUMproject {
 			   // 
 			   // panel1
 			   // 
-			   this->panel1->Controls->Add(this->accountErrorAddAddressLabel);
+			   this->panel1->Controls->Add(this->catalogCartButton);
+			   this->panel1->Controls->Add(this->catalogGlobalListView);
 			   this->panel1->Controls->Add(this->label10);
-			   this->panel1->Controls->Add(this->accountAddressMoreTextBox);
+			   this->panel1->Controls->Add(this->catalogResearchTextBox);
 			   this->panel1->Controls->Add(this->Information);
 			   this->panel1->Location = System::Drawing::Point(450, 12);
 			   this->panel1->Name = L"panel1";
-			   this->panel1->Size = System::Drawing::Size(934, 463);
+			   this->panel1->Size = System::Drawing::Size(448, 463);
 			   this->panel1->TabIndex = 24;
 			   // 
-			   // accountErrorAddAddressLabel
+			   // catalogCartButton
 			   // 
-			   this->accountErrorAddAddressLabel->AccessibleRole = System::Windows::Forms::AccessibleRole::Text;
-			   this->accountErrorAddAddressLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->accountErrorAddAddressLabel->AutoSize = true;
-			   this->accountErrorAddAddressLabel->ForeColor = System::Drawing::Color::Red;
-			   this->accountErrorAddAddressLabel->Location = System::Drawing::Point(531, 94);
-			   this->accountErrorAddAddressLabel->Name = L"accountErrorAddAddressLabel";
-			   this->accountErrorAddAddressLabel->Size = System::Drawing::Size(78, 17);
-			   this->accountErrorAddAddressLabel->TabIndex = 37;
-			   this->accountErrorAddAddressLabel->Text = L"Lastname";
-			   this->accountErrorAddAddressLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			   this->catalogCartButton->Location = System::Drawing::Point(315, 394);
+			   this->catalogCartButton->Name = L"catalogCartButton";
+			   this->catalogCartButton->Size = System::Drawing::Size(111, 33);
+			   this->catalogCartButton->TabIndex = 40;
+			   this->catalogCartButton->Text = L"Cart";
+			   this->catalogCartButton->UseVisualStyleBackColor = true;
+			   this->catalogCartButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCartButton_Click);
+			   // 
+			   // catalogGlobalListView
+			   // 
+			   this->catalogGlobalListView->HideSelection = false;
+			   this->catalogGlobalListView->Location = System::Drawing::Point(38, 130);
+			   this->catalogGlobalListView->Name = L"catalogGlobalListView";
+			   this->catalogGlobalListView->Size = System::Drawing::Size(393, 254);
+			   this->catalogGlobalListView->TabIndex = 38;
+			   this->catalogGlobalListView->UseCompatibleStateImageBehavior = false;
+			   this->catalogGlobalListView->View = System::Windows::Forms::View::List;
+			   this->catalogGlobalListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::catalogGlobalListView_DoubleClick);
 			   // 
 			   // label10
 			   // 
 			   this->label10->AutoSize = true;
 			   this->label10->Location = System::Drawing::Point(39, 69);
 			   this->label10->Name = L"label10";
-			   this->label10->Size = System::Drawing::Size(206, 17);
+			   this->label10->Size = System::Drawing::Size(77, 17);
 			   this->label10->TabIndex = 36;
-			   this->label10->Text = L"More information (ex: floor)";
+			   this->label10->Text = L"Research";
 			   // 
-			   // accountAddressMoreTextBox
+			   // catalogResearchTextBox
 			   // 
-			   this->accountAddressMoreTextBox->Location = System::Drawing::Point(38, 89);
-			   this->accountAddressMoreTextBox->Name = L"accountAddressMoreTextBox";
-			   this->accountAddressMoreTextBox->Size = System::Drawing::Size(367, 22);
-			   this->accountAddressMoreTextBox->TabIndex = 32;
+			   this->catalogResearchTextBox->Location = System::Drawing::Point(38, 89);
+			   this->catalogResearchTextBox->Name = L"catalogResearchTextBox";
+			   this->catalogResearchTextBox->Size = System::Drawing::Size(268, 22);
+			   this->catalogResearchTextBox->TabIndex = 32;
 			   // 
 			   // Information
 			   // 
@@ -457,16 +491,70 @@ namespace OPO2SUMproject {
 				   static_cast<System::Byte>(0)));
 			   this->Information->Location = System::Drawing::Point(20, 22);
 			   this->Information->Name = L"Information";
-			   this->Information->Size = System::Drawing::Size(183, 32);
+			   this->Information->Size = System::Drawing::Size(92, 32);
 			   this->Information->TabIndex = 24;
-			   this->Information->Text = L"Informations";
+			   this->Information->Text = L"Order";
+			   // 
+			   // catalogCheckoutButton
+			   // 
+			   this->catalogCheckoutButton->Location = System::Drawing::Point(284, 394);
+			   this->catalogCheckoutButton->Name = L"catalogCheckoutButton";
+			   this->catalogCheckoutButton->Size = System::Drawing::Size(112, 33);
+			   this->catalogCheckoutButton->TabIndex = 39;
+			   this->catalogCheckoutButton->Text = L"checkout";
+			   this->catalogCheckoutButton->UseVisualStyleBackColor = true;
+			   this->catalogCheckoutButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCheckoutButton_Click);
+			   // 
+			   // panel2
+			   // 
+			   this->panel2->Controls->Add(this->catalogBackButton);
+			   this->panel2->Controls->Add(this->catalogSelectedListView);
+			   this->panel2->Controls->Add(this->label3);
+			   this->panel2->Controls->Add(this->catalogCheckoutButton);
+			   this->panel2->Location = System::Drawing::Point(915, 12);
+			   this->panel2->Name = L"panel2";
+			   this->panel2->Size = System::Drawing::Size(431, 463);
+			   this->panel2->TabIndex = 41;
+			   // 
+			   // catalogBackButton
+			   // 
+			   this->catalogBackButton->Location = System::Drawing::Point(301, 22);
+			   this->catalogBackButton->Name = L"catalogBackButton";
+			   this->catalogBackButton->Size = System::Drawing::Size(108, 33);
+			   this->catalogBackButton->TabIndex = 42;
+			   this->catalogBackButton->Text = L"Back";
+			   this->catalogBackButton->UseVisualStyleBackColor = true;
+			   this->catalogBackButton->Click += gcnew System::EventHandler(this, &MyForm::catalogBackButton_Click);
+			   // 
+			   // catalogSelectedListView
+			   // 
+			   this->catalogSelectedListView->HideSelection = false;
+			   this->catalogSelectedListView->Location = System::Drawing::Point(26, 129);
+			   this->catalogSelectedListView->Name = L"catalogSelectedListView";
+			   this->catalogSelectedListView->Size = System::Drawing::Size(383, 254);
+			   this->catalogSelectedListView->TabIndex = 41;
+			   this->catalogSelectedListView->UseCompatibleStateImageBehavior = false;
+			   this->catalogSelectedListView->View = System::Windows::Forms::View::List;
+			   this->catalogSelectedListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::catalogSelectedListView_DoubleClick);
+			   // 
+			   // label3
+			   // 
+			   this->label3->AutoSize = true;
+			   this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   this->label3->Location = System::Drawing::Point(20, 22);
+			   this->label3->Name = L"label3";
+			   this->label3->Size = System::Drawing::Size(72, 32);
+			   this->label3->TabIndex = 24;
+			   this->label3->Text = L"Cart";
 			   // 
 			   // MyForm
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(9, 16);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::SystemColors::ButtonFace;
-			   this->ClientSize = System::Drawing::Size(1396, 596);
+			   this->ClientSize = System::Drawing::Size(1375, 526);
+			   this->Controls->Add(this->panel2);
 			   this->Controls->Add(this->panel1);
 			   this->Controls->Add(this->registerPanel);
 			   this->Controls->Add(this->loginPanel);
@@ -483,6 +571,8 @@ namespace OPO2SUMproject {
 			   this->registerPanel->PerformLayout();
 			   this->panel1->ResumeLayout(false);
 			   this->panel1->PerformLayout();
+			   this->panel2->ResumeLayout(false);
+			   this->panel2->PerformLayout();
 			   this->ResumeLayout(false);
 
 		   }
@@ -555,8 +645,52 @@ namespace OPO2SUMproject {
 			DataTableReaderTest->Read();
 			connectedAccount = gcnew Account(DataTableReaderTest->GetInt32(0));
 			this->loginErrorLabel->ForeColor = System::Drawing::Color::Green;
+			catalogRefreshGlobalList();
 		}
 		DataTableReaderTest->Close();
+	}
+	private: void catalogRefreshGlobalList() {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ listProduct = Adata->getRows("SELECT * FROM product WHERE stock_product > 0;", "Temp");
+		DataTable^ products = listProduct->Tables[0];
+
+		catalogGlobalListView->Items->Clear();
+		for (int i = 0; i < products->Rows->Count; i++)
+		{
+			DataRow^ drow = products->Rows[i];
+			catalogGlobalListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString());
+		}
+	}
+	private: System::Void catalogCartButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void catalogBackButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void catalogCheckoutButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void catalogGlobalListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
+		try {
+			String^ selectedProduct = catalogGlobalListView->SelectedItems[0]->Text;
+
+			String^ countProduct = Microsoft::VisualBasic::Interaction::InputBox("How many " + selectedProduct->Substring(selectedProduct->LastIndexOf(" ") + 1) + " do you want?", selectedProduct->Substring(selectedProduct->LastIndexOf(" ") + 1), "1", 500, 500);
+			if (!(countProduct == "" || countProduct == "0")) {
+				try {
+					int::Parse(countProduct);
+					catalogSelectedListView->Items->Add(countProduct + "x \"" + selectedProduct + "\"");
+				}
+				catch (...) {
+					MessageBox::Show("Invalide Value");
+				}
+			}
+		}
+		catch (...) {}
+	}
+	private: System::Void catalogSelectedListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
+		try {
+			if (MessageBox::Show("Do you want remove this article?", "Remove article", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
+				catalogSelectedListView->Items->RemoveAt(catalogSelectedListView->SelectedIndices[0]);
+			}
+		}
+		catch (...) {}
 	}
 	};
 }
