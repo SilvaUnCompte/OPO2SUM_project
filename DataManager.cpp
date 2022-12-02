@@ -243,8 +243,7 @@ void OPO2SUMproject::ProductManager::deleteElement(Product^ obj) {
 	ProductManager::deleteElement(obj->get_id());
 }
 void OPO2SUMproject::ProductManager::update(Product^ obj) {
-	int newTVA = obj->get_tva_product() * 10;
-	Adata->actionRows("UPDATE Product SET name_product = '" + obj->get_name_product() + "', element_per_unit_product = " + obj->get_element_per_unit_product() + ", cost_product = " + obj->get_cost_product() + ", marge_product = " + obj->get_marge_product() + ", tva_product = 0." + newTVA + ", stock_product = " + obj->get_stock_product() + ", restocking_threshold_product = " + obj->get_restocking_threshold_product() + ", enable_product = " + obj->get_enable_product() + " WHERE id_product = " + obj->get_id() + ";");
+	Adata->actionRows("UPDATE Product SET name_product = '" + obj->get_name_product() + "', element_per_unit_product = " + obj->get_element_per_unit_product() + ", cost_product = " + obj->get_cost_product() + ", marge_product = " + obj->get_marge_product() + ", tva_product = " + obj->get_tva_product().ToString("F", System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) + ", stock_product = " + obj->get_stock_product() + ", restocking_threshold_product = " + obj->get_restocking_threshold_product() + ", enable_product = " + obj->get_enable_product() + " WHERE id_product = " + obj->get_id() + ";");
 }
 
 //Payment Manager----------------------------------------------------------------------
