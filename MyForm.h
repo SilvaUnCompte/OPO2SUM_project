@@ -2507,7 +2507,7 @@ namespace OPO2SUMproject {
 		resetHubButton();
 	}
 
-	// Catalog --------------------------------------------------------------------
+		   // Catalog --------------------------------------------------------------------
 
 	private: System::Void menuCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
@@ -2649,7 +2649,7 @@ namespace OPO2SUMproject {
 		}
 	}
 
-	// Statistics ---------------------------------------
+		   // Statistics ---------------------------------------
 
 	private: System::Void Panier_Poyen_Button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
@@ -2715,5 +2715,12 @@ namespace OPO2SUMproject {
 		dataGridViewstat->DataSource = Purchase_Value_of_Stock; // dataset
 		dataGridViewstat->DataMember = "Temp";
 	}
+
+	// Client Manager -------------------------------------------------
+	
+	// Personnel Manager -------------------------------------------------
+
+		   //(pense à remettre ton login dans le AccessData pour avoir ta bdd)
+
 	};
 }
