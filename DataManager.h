@@ -93,7 +93,7 @@ namespace OPO2SUMproject
 	ref class Address : ClassTable {
 	private:
 		System::String^ street;
-		int postal_code;
+		System::String^ postal_code;
 		System::String^ city;
 		System::String^ address_complement;
 		Account^ id_account;
@@ -102,13 +102,13 @@ namespace OPO2SUMproject
 		Address(int id);
 
 		System::String^ get_street() { return street; }
-		int get_postal_code() { return postal_code; }
+		System::String^ get_postal_code() { return postal_code; }
 		System::String^ get_city() { return city; }
 		System::String^ get_address_complement() { return address_complement; }
 		Account^ get_id_account() { return id_account; }
 
 		void set_street(System::String^ st) { this->street = st; }
-		void set_postal_code(int zip) { this->postal_code = zip; }
+		void set_postal_code(System::String^ zip) { this->postal_code = zip; }
 		void set_city(System::String^ city) { this->city = city; }
 		void set_address_complement(System::String^ address) { this->address_complement = address; }
 		void set_account(Account^ currentAccount) { id_account = currentAccount; };
@@ -189,6 +189,7 @@ namespace OPO2SUMproject
 		void set_stock_product(int stock) { this->stock_product = stock; }
 		void set_restocking_threshold_product(int restocking) { this->restocking_threshold_product = restocking; }
 		void set_enable_product(int set_enable_product) { this->enable_product = set_enable_product; }
+
 	};
 
 	ref class ProductManager : ClassTableManager
@@ -289,7 +290,7 @@ namespace OPO2SUMproject
 	ref class ContainManager : ClassTableManager
 	{
 	public:
-		void insert(Order^ id_order, Product^ id_product, int nb_element);
+		void insert(int id_order, int id_product, int nb_element);
 		void update(Contain^);
 	};
 };
