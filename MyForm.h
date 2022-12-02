@@ -327,10 +327,6 @@ private: System::Windows::Forms::Button^ loginPasswordModButton;
 			this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->hubPanel = (gcnew System::Windows::Forms::Panel());
-			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
-			this->statisticMComboBox = (gcnew System::Windows::Forms::ComboBox());
-			this->statisticMStatisticButton = (gcnew System::Windows::Forms::Button());
-			this->statisticMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->catalogCartPanel = (gcnew System::Windows::Forms::Panel());
 			this->catalogAddressShippingLabel = (gcnew System::Windows::Forms::Label());
 			this->catalogAddressBillingLabel = (gcnew System::Windows::Forms::Label());
@@ -340,6 +336,10 @@ private: System::Windows::Forms::Button^ loginPasswordModButton;
 			this->catalogBackButton = (gcnew System::Windows::Forms::Button());
 			this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
 			this->catalogCartTitleLabel = (gcnew System::Windows::Forms::Label());
+			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
+			this->statisticMComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->statisticMStatisticButton = (gcnew System::Windows::Forms::Button());
+			this->statisticMDGV = (gcnew System::Windows::Forms::DataGridView());
 			this->catalogOrderPanel = (gcnew System::Windows::Forms::Panel());
 			this->catalogCartButton = (gcnew System::Windows::Forms::Button());
 			this->catalogGlobalListView = (gcnew System::Windows::Forms::ListView());
@@ -363,9 +363,9 @@ private: System::Windows::Forms::Button^ loginPasswordModButton;
 			this->accountPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			this->hubPanel->SuspendLayout();
+			this->catalogCartPanel->SuspendLayout();
 			this->statisticMPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->statisticMDGV))->BeginInit();
-			this->catalogCartPanel->SuspendLayout();
 			this->catalogOrderPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -1777,6 +1777,7 @@ private: System::Windows::Forms::Button^ loginPasswordModButton;
 			this->hubPanel->Controls->Add(this->menuButtonPanel);
 			this->hubPanel->Controls->Add(this->titleBarPanel);
 			this->hubPanel->Controls->Add(this->catalogOrderPanel);
+			this->hubPanel->Controls->Add(this->catalogCartPanel);
 			this->hubPanel->Controls->Add(this->addStockPanel);
 			this->hubPanel->Controls->Add(this->stockMPanel);
 			this->hubPanel->Controls->Add(this->statisticMPanel);
@@ -1784,74 +1785,10 @@ private: System::Windows::Forms::Button^ loginPasswordModButton;
 			this->hubPanel->Controls->Add(this->accountPanel);
 			this->hubPanel->Controls->Add(this->clientMPanel);
 			this->hubPanel->Controls->Add(this->addOrderPanel);
-			this->hubPanel->Controls->Add(this->catalogCartPanel);
 			this->hubPanel->Location = System::Drawing::Point(0, 0);
 			this->hubPanel->Name = L"hubPanel";
 			this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			this->hubPanel->TabIndex = 29;
-			// 
-			// statisticMPanel
-			// 
-			this->statisticMPanel->Controls->Add(this->statisticMComboBox);
-			this->statisticMPanel->Controls->Add(this->statisticMStatisticButton);
-			this->statisticMPanel->Controls->Add(this->statisticMDGV);
-			this->statisticMPanel->Location = System::Drawing::Point(220, 80);
-			this->statisticMPanel->Name = L"statisticMPanel";
-			this->statisticMPanel->Size = System::Drawing::Size(968, 607);
-			this->statisticMPanel->TabIndex = 10;
-			// 
-			// statisticMComboBox
-			// 
-			this->statisticMComboBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->statisticMComboBox->FormattingEnabled = true;
-			this->statisticMComboBox->Location = System::Drawing::Point(789, 578);
-			this->statisticMComboBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			this->statisticMComboBox->Name = L"statisticMComboBox";
-			this->statisticMComboBox->Size = System::Drawing::Size(176, 24);
-			this->statisticMComboBox->TabIndex = 15;
-			// 
-			// statisticMStatisticButton
-			// 
-			this->statisticMStatisticButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
-			this->statisticMStatisticButton->Location = System::Drawing::Point(2, 578);
-			this->statisticMStatisticButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			this->statisticMStatisticButton->Name = L"statisticMStatisticButton";
-			this->statisticMStatisticButton->Size = System::Drawing::Size(91, 26);
-			this->statisticMStatisticButton->TabIndex = 16;
-			this->statisticMStatisticButton->Text = L"Statistique";
-			this->statisticMStatisticButton->UseVisualStyleBackColor = true;
-			// 
-			// statisticMDGV
-			// 
-			this->statisticMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->statisticMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-			this->statisticMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle6->ForeColor = System::Drawing::Color::Black;
-			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->statisticMDGV->DefaultCellStyle = dataGridViewCellStyle6;
-			this->statisticMDGV->Location = System::Drawing::Point(2, 3);
-			this->statisticMDGV->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			this->statisticMDGV->Name = L"statisticMDGV";
-			this->statisticMDGV->RowHeadersWidth = 51;
-			this->statisticMDGV->RowTemplate->Height = 24;
-			this->statisticMDGV->Size = System::Drawing::Size(964, 564);
-			this->statisticMDGV->TabIndex = 0;
 			// 
 			// catalogCartPanel
 			// 
@@ -1919,6 +1856,7 @@ private: System::Windows::Forms::Button^ loginPasswordModButton;
 			this->catalogBackButton->TabIndex = 2;
 			this->catalogBackButton->Text = L"Back";
 			this->catalogBackButton->UseVisualStyleBackColor = true;
+			this->catalogBackButton->Click += gcnew System::EventHandler(this, &MyForm::catalogBackButton_Click);
 			// 
 			// catalogSelectedListView
 			// 
@@ -1940,6 +1878,69 @@ private: System::Windows::Forms::Button^ loginPasswordModButton;
 			this->catalogCartTitleLabel->TabIndex = 0;
 			this->catalogCartTitleLabel->Text = L"Cart";
 			// 
+			// statisticMPanel
+			// 
+			this->statisticMPanel->Controls->Add(this->statisticMComboBox);
+			this->statisticMPanel->Controls->Add(this->statisticMStatisticButton);
+			this->statisticMPanel->Controls->Add(this->statisticMDGV);
+			this->statisticMPanel->Location = System::Drawing::Point(220, 80);
+			this->statisticMPanel->Name = L"statisticMPanel";
+			this->statisticMPanel->Size = System::Drawing::Size(968, 607);
+			this->statisticMPanel->TabIndex = 10;
+			// 
+			// statisticMComboBox
+			// 
+			this->statisticMComboBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->statisticMComboBox->FormattingEnabled = true;
+			this->statisticMComboBox->Location = System::Drawing::Point(789, 578);
+			this->statisticMComboBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			this->statisticMComboBox->Name = L"statisticMComboBox";
+			this->statisticMComboBox->Size = System::Drawing::Size(176, 24);
+			this->statisticMComboBox->TabIndex = 15;
+			// 
+			// statisticMStatisticButton
+			// 
+			this->statisticMStatisticButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+			this->statisticMStatisticButton->Location = System::Drawing::Point(2, 578);
+			this->statisticMStatisticButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			this->statisticMStatisticButton->Name = L"statisticMStatisticButton";
+			this->statisticMStatisticButton->Size = System::Drawing::Size(91, 26);
+			this->statisticMStatisticButton->TabIndex = 16;
+			this->statisticMStatisticButton->Text = L"Statistique";
+			this->statisticMStatisticButton->UseVisualStyleBackColor = true;
+			// 
+			// statisticMDGV
+			// 
+			this->statisticMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->statisticMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			this->statisticMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle6->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->statisticMDGV->DefaultCellStyle = dataGridViewCellStyle6;
+			this->statisticMDGV->Location = System::Drawing::Point(2, 3);
+			this->statisticMDGV->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			this->statisticMDGV->Name = L"statisticMDGV";
+			this->statisticMDGV->RowHeadersWidth = 51;
+			this->statisticMDGV->RowTemplate->Height = 24;
+			this->statisticMDGV->Size = System::Drawing::Size(964, 564);
+			this->statisticMDGV->TabIndex = 0;
+			// 
 			// catalogOrderPanel
 			// 
 			this->catalogOrderPanel->Controls->Add(this->catalogCartButton);
@@ -1960,6 +1961,7 @@ private: System::Windows::Forms::Button^ loginPasswordModButton;
 			this->catalogCartButton->TabIndex = 4;
 			this->catalogCartButton->Text = L"Cart";
 			this->catalogCartButton->UseVisualStyleBackColor = true;
+			this->catalogCartButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCartButton_Click);
 			// 
 			// catalogGlobalListView
 			// 
@@ -2040,10 +2042,10 @@ private: System::Windows::Forms::Button^ loginPasswordModButton;
 			this->accountPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			this->hubPanel->ResumeLayout(false);
-			this->statisticMPanel->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->statisticMDGV))->EndInit();
 			this->catalogCartPanel->ResumeLayout(false);
 			this->catalogCartPanel->PerformLayout();
+			this->statisticMPanel->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->statisticMDGV))->EndInit();
 			this->catalogOrderPanel->ResumeLayout(false);
 			this->catalogOrderPanel->PerformLayout();
 			this->ResumeLayout(false);
@@ -2425,7 +2427,16 @@ private: System::Void menuAccountButton_MouseLeave(System::Object^ sender, Syste
 	resetHubButton();
 }
 private: System::Void menuCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	
+	hideAllPanel();
+	catalogOrderPanel->Visible = true;
+}
+private: System::Void catalogBackButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	hideAllPanel();
+	catalogOrderPanel->Visible = true;
+}
+private: System::Void catalogCartButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	hideAllPanel();
+	catalogCartPanel->Visible = true;
 }
 };
 }
