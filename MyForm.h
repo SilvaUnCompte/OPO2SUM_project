@@ -324,15 +324,6 @@ namespace OPO2SUMproject {
 			this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->hubPanel = (gcnew System::Windows::Forms::Panel());
-			this->catalogCartPanel = (gcnew System::Windows::Forms::Panel());
-			this->catalogAddressShippingLabel = (gcnew System::Windows::Forms::Label());
-			this->catalogAddressBillingLabel = (gcnew System::Windows::Forms::Label());
-			this->catalogAddressShippingListComboBox = (gcnew System::Windows::Forms::ComboBox());
-			this->catalogAddressBillingListComboBox = (gcnew System::Windows::Forms::ComboBox());
-			this->catalogCheckoutButton = (gcnew System::Windows::Forms::Button());
-			this->catalogBackButton = (gcnew System::Windows::Forms::Button());
-			this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
-			this->catalogCartTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
 			this->stat_label = (gcnew System::Windows::Forms::Label());
 			this->Purchase_Value_button = (gcnew System::Windows::Forms::Button());
@@ -350,6 +341,15 @@ namespace OPO2SUMproject {
 			this->catalogResearchTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->catalogOrderResearchLabel = (gcnew System::Windows::Forms::Label());
 			this->catalogOrderTitleLabel = (gcnew System::Windows::Forms::Label());
+			this->catalogCartPanel = (gcnew System::Windows::Forms::Panel());
+			this->catalogAddressShippingLabel = (gcnew System::Windows::Forms::Label());
+			this->catalogAddressBillingLabel = (gcnew System::Windows::Forms::Label());
+			this->catalogAddressShippingListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->catalogAddressBillingListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->catalogCheckoutButton = (gcnew System::Windows::Forms::Button());
+			this->catalogBackButton = (gcnew System::Windows::Forms::Button());
+			this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
+			this->catalogCartTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->loginPanel->SuspendLayout();
 			this->loginPasswordPanel->SuspendLayout();
 			this->loginUsernamePanel->SuspendLayout();
@@ -367,10 +367,10 @@ namespace OPO2SUMproject {
 			this->accountPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			this->hubPanel->SuspendLayout();
-			this->catalogCartPanel->SuspendLayout();
 			this->statisticMPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
 			this->catalogOrderPanel->SuspendLayout();
+			this->catalogCartPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// loginPanel
@@ -1780,110 +1780,19 @@ namespace OPO2SUMproject {
 			// 
 			this->hubPanel->Controls->Add(this->menuButtonPanel);
 			this->hubPanel->Controls->Add(this->titleBarPanel);
-			this->hubPanel->Controls->Add(this->catalogOrderPanel);
-			this->hubPanel->Controls->Add(this->catalogCartPanel);
-			this->hubPanel->Controls->Add(this->addStockPanel);
-			this->hubPanel->Controls->Add(this->stockMPanel);
 			this->hubPanel->Controls->Add(this->statisticMPanel);
 			this->hubPanel->Controls->Add(this->orderMPanel);
 			this->hubPanel->Controls->Add(this->accountPanel);
 			this->hubPanel->Controls->Add(this->clientMPanel);
 			this->hubPanel->Controls->Add(this->addOrderPanel);
+			this->hubPanel->Controls->Add(this->catalogOrderPanel);
+			this->hubPanel->Controls->Add(this->catalogCartPanel);
+			this->hubPanel->Controls->Add(this->addStockPanel);
+			this->hubPanel->Controls->Add(this->stockMPanel);
 			this->hubPanel->Location = System::Drawing::Point(0, 0);
 			this->hubPanel->Name = L"hubPanel";
 			this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			this->hubPanel->TabIndex = 29;
-			// 
-			// catalogCartPanel
-			// 
-			this->catalogCartPanel->Controls->Add(this->catalogAddressShippingLabel);
-			this->catalogCartPanel->Controls->Add(this->catalogAddressBillingLabel);
-			this->catalogCartPanel->Controls->Add(this->catalogAddressShippingListComboBox);
-			this->catalogCartPanel->Controls->Add(this->catalogAddressBillingListComboBox);
-			this->catalogCartPanel->Controls->Add(this->catalogCheckoutButton);
-			this->catalogCartPanel->Controls->Add(this->catalogBackButton);
-			this->catalogCartPanel->Controls->Add(this->catalogSelectedListView);
-			this->catalogCartPanel->Controls->Add(this->catalogCartTitleLabel);
-			this->catalogCartPanel->Location = System::Drawing::Point(220, 80);
-			this->catalogCartPanel->Name = L"catalogCartPanel";
-			this->catalogCartPanel->Size = System::Drawing::Size(968, 607);
-			this->catalogCartPanel->TabIndex = 19;
-			// 
-			// catalogAddressShippingLabel
-			// 
-			this->catalogAddressShippingLabel->AutoSize = true;
-			this->catalogAddressShippingLabel->Location = System::Drawing::Point(649, 203);
-			this->catalogAddressShippingLabel->Name = L"catalogAddressShippingLabel";
-			this->catalogAddressShippingLabel->Size = System::Drawing::Size(117, 17);
-			this->catalogAddressShippingLabel->TabIndex = 7;
-			this->catalogAddressShippingLabel->Text = L"Address shipping";
-			// 
-			// catalogAddressBillingLabel
-			// 
-			this->catalogAddressBillingLabel->AutoSize = true;
-			this->catalogAddressBillingLabel->Location = System::Drawing::Point(649, 82);
-			this->catalogAddressBillingLabel->Name = L"catalogAddressBillingLabel";
-			this->catalogAddressBillingLabel->Size = System::Drawing::Size(100, 17);
-			this->catalogAddressBillingLabel->TabIndex = 6;
-			this->catalogAddressBillingLabel->Text = L"Address billing";
-			// 
-			// catalogAddressShippingListComboBox
-			// 
-			this->catalogAddressShippingListComboBox->FormattingEnabled = true;
-			this->catalogAddressShippingListComboBox->Location = System::Drawing::Point(649, 229);
-			this->catalogAddressShippingListComboBox->Name = L"catalogAddressShippingListComboBox";
-			this->catalogAddressShippingListComboBox->Size = System::Drawing::Size(246, 24);
-			this->catalogAddressShippingListComboBox->TabIndex = 5;
-			// 
-			// catalogAddressBillingListComboBox
-			// 
-			this->catalogAddressBillingListComboBox->FormattingEnabled = true;
-			this->catalogAddressBillingListComboBox->Location = System::Drawing::Point(649, 112);
-			this->catalogAddressBillingListComboBox->Name = L"catalogAddressBillingListComboBox";
-			this->catalogAddressBillingListComboBox->Size = System::Drawing::Size(246, 24);
-			this->catalogAddressBillingListComboBox->TabIndex = 4;
-			// 
-			// catalogCheckoutButton
-			// 
-			this->catalogCheckoutButton->Location = System::Drawing::Point(848, 417);
-			this->catalogCheckoutButton->Name = L"catalogCheckoutButton";
-			this->catalogCheckoutButton->Size = System::Drawing::Size(75, 23);
-			this->catalogCheckoutButton->TabIndex = 3;
-			this->catalogCheckoutButton->Text = L"Checkout";
-			this->catalogCheckoutButton->UseVisualStyleBackColor = true;
-			this->catalogCheckoutButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCheckoutButton_Click);
-			// 
-			// catalogBackButton
-			// 
-			this->catalogBackButton->Location = System::Drawing::Point(879, 12);
-			this->catalogBackButton->Name = L"catalogBackButton";
-			this->catalogBackButton->Size = System::Drawing::Size(75, 23);
-			this->catalogBackButton->TabIndex = 2;
-			this->catalogBackButton->Text = L"Back";
-			this->catalogBackButton->UseVisualStyleBackColor = true;
-			this->catalogBackButton->Click += gcnew System::EventHandler(this, &MyForm::menuCatalogButton_Click);
-			// 
-			// catalogSelectedListView
-			// 
-			this->catalogSelectedListView->HideSelection = false;
-			this->catalogSelectedListView->Location = System::Drawing::Point(68, 62);
-			this->catalogSelectedListView->Name = L"catalogSelectedListView";
-			this->catalogSelectedListView->Size = System::Drawing::Size(475, 262);
-			this->catalogSelectedListView->TabIndex = 1;
-			this->catalogSelectedListView->UseCompatibleStateImageBehavior = false;
-			this->catalogSelectedListView->View = System::Windows::Forms::View::List;
-			this->catalogSelectedListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::catalogSelectedListView_DoubleClick);
-			// 
-			// catalogCartTitleLabel
-			// 
-			this->catalogCartTitleLabel->AutoSize = true;
-			this->catalogCartTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->catalogCartTitleLabel->Location = System::Drawing::Point(7, 12);
-			this->catalogCartTitleLabel->Name = L"catalogCartTitleLabel";
-			this->catalogCartTitleLabel->Size = System::Drawing::Size(83, 38);
-			this->catalogCartTitleLabel->TabIndex = 0;
-			this->catalogCartTitleLabel->Text = L"Cart";
 			// 
 			// statisticMPanel
 			// 
@@ -1906,7 +1815,7 @@ namespace OPO2SUMproject {
 			// 
 			this->stat_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->stat_label->Location = System::Drawing::Point(5, 10);
+			this->stat_label->Location = System::Drawing::Point(83, 4);
 			this->stat_label->Name = L"stat_label";
 			this->stat_label->Size = System::Drawing::Size(783, 40);
 			this->stat_label->TabIndex = 9;
@@ -1914,75 +1823,83 @@ namespace OPO2SUMproject {
 			// 
 			// Purchase_Value_button
 			// 
-			this->Purchase_Value_button->Location = System::Drawing::Point(793, 547);
+			this->Purchase_Value_button->Location = System::Drawing::Point(730, 524);
 			this->Purchase_Value_button->Name = L"Purchase_Value_button";
 			this->Purchase_Value_button->Size = System::Drawing::Size(164, 50);
 			this->Purchase_Value_button->TabIndex = 8;
 			this->Purchase_Value_button->Text = L"Purchase value of stock";
 			this->Purchase_Value_button->UseVisualStyleBackColor = true;
+			this->Purchase_Value_button->Click += gcnew System::EventHandler(this, &MyForm::Purchase_Value_button_Click);
 			// 
 			// Commercial_Value_button
 			// 
-			this->Commercial_Value_button->Location = System::Drawing::Point(793, 491);
+			this->Commercial_Value_button->Location = System::Drawing::Point(730, 460);
 			this->Commercial_Value_button->Name = L"Commercial_Value_button";
 			this->Commercial_Value_button->Size = System::Drawing::Size(164, 50);
 			this->Commercial_Value_button->TabIndex = 7;
 			this->Commercial_Value_button->Text = L"Commercial value of stock";
 			this->Commercial_Value_button->UseVisualStyleBackColor = true;
+			this->Commercial_Value_button->Click += gcnew System::EventHandler(this, &MyForm::Commercial_Value_button_Click);
 			// 
 			// buys_down_button
 			// 
-			this->buys_down_button->Location = System::Drawing::Point(793, 435);
+			this->buys_down_button->Location = System::Drawing::Point(502, 523);
 			this->buys_down_button->Name = L"buys_down_button";
 			this->buys_down_button->Size = System::Drawing::Size(164, 50);
 			this->buys_down_button->TabIndex = 6;
 			this->buys_down_button->Text = L"10 - buy";
 			this->buys_down_button->UseVisualStyleBackColor = true;
+			this->buys_down_button->Click += gcnew System::EventHandler(this, &MyForm::buys_down_button_Click);
 			// 
 			// top_buys_button
 			// 
-			this->top_buys_button->Location = System::Drawing::Point(793, 379);
+			this->top_buys_button->Location = System::Drawing::Point(502, 460);
 			this->top_buys_button->Name = L"top_buys_button";
 			this->top_buys_button->Size = System::Drawing::Size(164, 50);
 			this->top_buys_button->TabIndex = 5;
 			this->top_buys_button->Text = L"10 + buy";
 			this->top_buys_button->UseVisualStyleBackColor = true;
+			this->top_buys_button->Click += gcnew System::EventHandler(this, &MyForm::top_buys_button_Click);
 			// 
 			// Amount_per_client_button
 			// 
-			this->Amount_per_client_button->Location = System::Drawing::Point(793, 323);
+			this->Amount_per_client_button->Location = System::Drawing::Point(279, 523);
 			this->Amount_per_client_button->Name = L"Amount_per_client_button";
 			this->Amount_per_client_button->Size = System::Drawing::Size(164, 50);
 			this->Amount_per_client_button->TabIndex = 4;
 			this->Amount_per_client_button->Text = L"Total amount of a client";
 			this->Amount_per_client_button->UseVisualStyleBackColor = true;
+			this->Amount_per_client_button->Click += gcnew System::EventHandler(this, &MyForm::Amount_per_client_button_Click);
 			// 
 			// Prod_u_restocking_button
 			// 
-			this->Prod_u_restocking_button->Location = System::Drawing::Point(793, 267);
+			this->Prod_u_restocking_button->Location = System::Drawing::Point(279, 460);
 			this->Prod_u_restocking_button->Name = L"Prod_u_restocking_button";
 			this->Prod_u_restocking_button->Size = System::Drawing::Size(164, 50);
 			this->Prod_u_restocking_button->TabIndex = 3;
 			this->Prod_u_restocking_button->Text = L"Products under restocking threshold";
 			this->Prod_u_restocking_button->UseVisualStyleBackColor = true;
+			this->Prod_u_restocking_button->Click += gcnew System::EventHandler(this, &MyForm::Prod_u_restocking_button_Click);
 			// 
 			// turnover_button
 			// 
-			this->turnover_button->Location = System::Drawing::Point(793, 211);
+			this->turnover_button->Location = System::Drawing::Point(57, 524);
 			this->turnover_button->Name = L"turnover_button";
 			this->turnover_button->Size = System::Drawing::Size(164, 50);
 			this->turnover_button->TabIndex = 2;
 			this->turnover_button->Text = L"Turnover per month";
 			this->turnover_button->UseVisualStyleBackColor = true;
+			this->turnover_button->Click += gcnew System::EventHandler(this, &MyForm::turnover_button_Click);
 			// 
 			// Panier_Poyen_Button
 			// 
-			this->Panier_Poyen_Button->Location = System::Drawing::Point(793, 155);
+			this->Panier_Poyen_Button->Location = System::Drawing::Point(57, 460);
 			this->Panier_Poyen_Button->Name = L"Panier_Poyen_Button";
 			this->Panier_Poyen_Button->Size = System::Drawing::Size(164, 50);
 			this->Panier_Poyen_Button->TabIndex = 1;
 			this->Panier_Poyen_Button->Text = L"Average basket";
 			this->Panier_Poyen_Button->UseVisualStyleBackColor = true;
+			this->Panier_Poyen_Button->Click += gcnew System::EventHandler(this, &MyForm::Panier_Poyen_Button_Click);
 			// 
 			// dataGridViewstat
 			// 
@@ -2008,12 +1925,12 @@ namespace OPO2SUMproject {
 			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle6;
-			this->dataGridViewstat->Location = System::Drawing::Point(5, 58);
+			this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
 			this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->dataGridViewstat->Name = L"dataGridViewstat";
 			this->dataGridViewstat->RowHeadersWidth = 51;
 			this->dataGridViewstat->RowTemplate->Height = 24;
-			this->dataGridViewstat->Size = System::Drawing::Size(783, 544);
+			this->dataGridViewstat->Size = System::Drawing::Size(918, 371);
 			this->dataGridViewstat->TabIndex = 0;
 			// 
 			// catalogOrderPanel
@@ -2077,6 +1994,97 @@ namespace OPO2SUMproject {
 			this->catalogOrderTitleLabel->TabIndex = 0;
 			this->catalogOrderTitleLabel->Text = L"Catalog";
 			// 
+			// catalogCartPanel
+			// 
+			this->catalogCartPanel->Controls->Add(this->catalogAddressShippingLabel);
+			this->catalogCartPanel->Controls->Add(this->catalogAddressBillingLabel);
+			this->catalogCartPanel->Controls->Add(this->catalogAddressShippingListComboBox);
+			this->catalogCartPanel->Controls->Add(this->catalogAddressBillingListComboBox);
+			this->catalogCartPanel->Controls->Add(this->catalogCheckoutButton);
+			this->catalogCartPanel->Controls->Add(this->catalogBackButton);
+			this->catalogCartPanel->Controls->Add(this->catalogSelectedListView);
+			this->catalogCartPanel->Controls->Add(this->catalogCartTitleLabel);
+			this->catalogCartPanel->Location = System::Drawing::Point(220, 80);
+			this->catalogCartPanel->Name = L"catalogCartPanel";
+			this->catalogCartPanel->Size = System::Drawing::Size(968, 607);
+			this->catalogCartPanel->TabIndex = 19;
+			// 
+			// catalogAddressShippingLabel
+			// 
+			this->catalogAddressShippingLabel->AutoSize = true;
+			this->catalogAddressShippingLabel->Location = System::Drawing::Point(659, 172);
+			this->catalogAddressShippingLabel->Name = L"catalogAddressShippingLabel";
+			this->catalogAddressShippingLabel->Size = System::Drawing::Size(117, 17);
+			this->catalogAddressShippingLabel->TabIndex = 7;
+			this->catalogAddressShippingLabel->Text = L"Address shipping";
+			// 
+			// catalogAddressBillingLabel
+			// 
+			this->catalogAddressBillingLabel->AutoSize = true;
+			this->catalogAddressBillingLabel->Location = System::Drawing::Point(659, 83);
+			this->catalogAddressBillingLabel->Name = L"catalogAddressBillingLabel";
+			this->catalogAddressBillingLabel->Size = System::Drawing::Size(100, 17);
+			this->catalogAddressBillingLabel->TabIndex = 6;
+			this->catalogAddressBillingLabel->Text = L"Address billing";
+			// 
+			// catalogAddressShippingListComboBox
+			// 
+			this->catalogAddressShippingListComboBox->FormattingEnabled = true;
+			this->catalogAddressShippingListComboBox->Location = System::Drawing::Point(649, 197);
+			this->catalogAddressShippingListComboBox->Name = L"catalogAddressShippingListComboBox";
+			this->catalogAddressShippingListComboBox->Size = System::Drawing::Size(246, 24);
+			this->catalogAddressShippingListComboBox->TabIndex = 5;
+			// 
+			// catalogAddressBillingListComboBox
+			// 
+			this->catalogAddressBillingListComboBox->FormattingEnabled = true;
+			this->catalogAddressBillingListComboBox->Location = System::Drawing::Point(649, 112);
+			this->catalogAddressBillingListComboBox->Name = L"catalogAddressBillingListComboBox";
+			this->catalogAddressBillingListComboBox->Size = System::Drawing::Size(246, 24);
+			this->catalogAddressBillingListComboBox->TabIndex = 4;
+			// 
+			// catalogCheckoutButton
+			// 
+			this->catalogCheckoutButton->Location = System::Drawing::Point(763, 300);
+			this->catalogCheckoutButton->Name = L"catalogCheckoutButton";
+			this->catalogCheckoutButton->Size = System::Drawing::Size(122, 40);
+			this->catalogCheckoutButton->TabIndex = 3;
+			this->catalogCheckoutButton->Text = L"Checkout";
+			this->catalogCheckoutButton->UseVisualStyleBackColor = true;
+			this->catalogCheckoutButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCheckoutButton_Click);
+			// 
+			// catalogBackButton
+			// 
+			this->catalogBackButton->Location = System::Drawing::Point(662, 300);
+			this->catalogBackButton->Name = L"catalogBackButton";
+			this->catalogBackButton->Size = System::Drawing::Size(85, 40);
+			this->catalogBackButton->TabIndex = 2;
+			this->catalogBackButton->Text = L"Back";
+			this->catalogBackButton->UseVisualStyleBackColor = true;
+			this->catalogBackButton->Click += gcnew System::EventHandler(this, &MyForm::menuCatalogButton_Click);
+			// 
+			// catalogSelectedListView
+			// 
+			this->catalogSelectedListView->HideSelection = false;
+			this->catalogSelectedListView->Location = System::Drawing::Point(37, 77);
+			this->catalogSelectedListView->Name = L"catalogSelectedListView";
+			this->catalogSelectedListView->Size = System::Drawing::Size(571, 496);
+			this->catalogSelectedListView->TabIndex = 1;
+			this->catalogSelectedListView->UseCompatibleStateImageBehavior = false;
+			this->catalogSelectedListView->View = System::Windows::Forms::View::List;
+			this->catalogSelectedListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::catalogSelectedListView_DoubleClick);
+			// 
+			// catalogCartTitleLabel
+			// 
+			this->catalogCartTitleLabel->AutoSize = true;
+			this->catalogCartTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->catalogCartTitleLabel->Location = System::Drawing::Point(7, 12);
+			this->catalogCartTitleLabel->Name = L"catalogCartTitleLabel";
+			this->catalogCartTitleLabel->Size = System::Drawing::Size(83, 38);
+			this->catalogCartTitleLabel->TabIndex = 0;
+			this->catalogCartTitleLabel->Text = L"Cart";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -2120,12 +2128,12 @@ namespace OPO2SUMproject {
 			this->accountPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			this->hubPanel->ResumeLayout(false);
-			this->catalogCartPanel->ResumeLayout(false);
-			this->catalogCartPanel->PerformLayout();
 			this->statisticMPanel->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->EndInit();
 			this->catalogOrderPanel->ResumeLayout(false);
 			this->catalogOrderPanel->PerformLayout();
+			this->catalogCartPanel->ResumeLayout(false);
+			this->catalogCartPanel->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -2498,6 +2506,9 @@ namespace OPO2SUMproject {
 	private: System::Void menuAccountButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 		resetHubButton();
 	}
+
+	// Catalog --------------------------------------------------------------------
+
 	private: System::Void menuCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
 		catalogOrderPanel->Visible = true;
@@ -2637,5 +2648,72 @@ namespace OPO2SUMproject {
 			catalogSelectedListView->Items->Clear();
 		}
 	}
-};
+
+	// Statistics ---------------------------------------
+
+	private: System::Void Panier_Poyen_Button_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ panier = Adata->getRows("SELECT  SUM(total_bill)/count(id_bill) AS panier FROM bill", "temp");
+		stat_label->Text = "Average basket";
+		//dataGridViewstat->AutoGenerateColumns = true;
+		dataGridViewstat->DataSource = panier; // dataset
+		dataGridViewstat->DataMember = "Temp";
+	}
+	private: System::Void turnover_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ turnover = Adata->getRows("Select sum(c.nb_element *  p.marge_product) AS CHIFFRE_D_AFFARE from opo2sum.dbo.contain c , opo2sum.dbo.product p  where c.id_product = p.id_product", "temp");
+		stat_label->Text = "turnover per month";
+		//dataGridViewstat->AutoGenerateColumns = true;
+		dataGridViewstat->DataSource = turnover; // dataset
+		dataGridViewstat->DataMember = "Temp";
+	}
+	private: System::Void Prod_u_restocking_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ restocking = Adata->getRows("SELECT p.name_product, p.stock_product, p.restocking_threshold_product FROM opo2sum.dbo.product p WHERE((([stock_product]) <= [restocking_threshold_product])); ", "temp");
+		stat_label->Text = "Products under restocking threshold";
+		//dataGridViewstat->AutoGenerateColumns = true;
+		dataGridViewstat->DataSource = restocking; // dataset
+		dataGridViewstat->DataMember = "Temp";
+	}
+	private: System::Void Amount_per_client_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ Amount_per_client = Adata->getRows(" SELECT id_order, SUM(total_bill) AS total_per_client FROM opo2sum.dbo.bill GROUP BY id_order", "temp");
+		stat_label->Text = "Amount_per_client";
+		//dataGridViewstat->AutoGenerateColumns = true;
+		dataGridViewstat->DataSource = Amount_per_client; // dataset
+		dataGridViewstat->DataMember = "Temp";
+	}
+	private: System::Void top_buys_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ top10_buys = Adata->getRows(" SELECT TOP 10 [id_product], SUM(nb_element) Qte_top FROM opo2sum.dbo.contain GROUP BY[id_product] ORDER BY Qte_top DESC", "temp");
+		stat_label->Text = "top10_buys";
+		//dataGridViewstat->AutoGenerateColumns = true;
+		dataGridViewstat->DataSource = top10_buys; // dataset
+		dataGridViewstat->DataMember = "Temp";
+	}
+	private: System::Void buys_down_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ down10_buys = Adata->getRows("  SELECT  [id_product], SUM(nb_element) Qte_down FROM opo2sum.dbo.contain GROUP BY[id_product] ORDER BY Qte_down DESC", "temp");
+		stat_label->Text = "bottom10_buys";
+		//dataGridViewstat->AutoGenerateColumns = true;
+		dataGridViewstat->DataSource = down10_buys; // dataset
+		dataGridViewstat->DataMember = "Temp";
+	}
+	private: System::Void Commercial_Value_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ Commercial_Value_of_Stock = Adata->getRows(" Select sum(cost_product+marge_product) AS buy_value_commercial from  opo2sum.dbo.product  where id_product = id_product", "temp");
+		stat_label->Text = "Commercial_Value_of_Stock";
+		//dataGridViewstat->AutoGenerateColumns = true;
+		dataGridViewstat->DataSource = Commercial_Value_of_Stock; // dataset
+		dataGridViewstat->DataMember = "Temp";
+	}
+	private: System::Void Purchase_Value_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ Purchase_Value_of_Stock = Adata->getRows("Select sum((cost_product+marge_product)*(1+tva_product)) AS buy_value from  opo2sum.dbo.product  where id_product = id_product", "temp");
+		stat_label->Text = "Purchase_Value_of_Stock";
+		//dataGridViewstat->AutoGenerateColumns = true;
+		dataGridViewstat->DataSource = Purchase_Value_of_Stock; // dataset
+		dataGridViewstat->DataMember = "Temp";
+	}
+	};
 }
