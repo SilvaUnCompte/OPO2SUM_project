@@ -190,6 +190,7 @@ private: System::Windows::Forms::ComboBox^ catalogAddressBillingListComboBox;
 private: System::Windows::Forms::Button^ catalogCheckoutButton;
 private: System::Windows::Forms::Button^ catalogBackButton;
 private: System::Windows::Forms::ListView^ catalogSelectedListView;
+private: System::Windows::Forms::Button^ loginPasswordModButton;
 
 
 
@@ -212,6 +213,7 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			this->loginPanel = (gcnew System::Windows::Forms::Panel());
 			this->testToSupprButton = (gcnew System::Windows::Forms::Button());
 			this->loginPasswordPanel = (gcnew System::Windows::Forms::Panel());
+			this->loginPasswordModButton = (gcnew System::Windows::Forms::Button());
 			this->loginPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->loginUsernamePanel = (gcnew System::Windows::Forms::Panel());
 			this->loginUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -327,7 +329,15 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->hubPanel = (gcnew System::Windows::Forms::Panel());
+			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
 			this->catalogCartPanel = (gcnew System::Windows::Forms::Panel());
+			this->catalogAddressShippingLabel = (gcnew System::Windows::Forms::Label());
+			this->catalogAddressBillingLabel = (gcnew System::Windows::Forms::Label());
+			this->catalogAddressShippingListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->catalogAddressBillingListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->catalogCheckoutButton = (gcnew System::Windows::Forms::Button());
+			this->catalogBackButton = (gcnew System::Windows::Forms::Button());
+			this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
 			this->catalogCartTitleLabel = (gcnew System::Windows::Forms::Label());
 			this->catalogOrderPanel = (gcnew System::Windows::Forms::Panel());
 			this->catalogCartButton = (gcnew System::Windows::Forms::Button());
@@ -335,14 +345,6 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			this->catalogResearchTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->catalogOrderResearchLabel = (gcnew System::Windows::Forms::Label());
 			this->catalogOrderTitleLabel = (gcnew System::Windows::Forms::Label());
-			this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
-			this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
-			this->catalogBackButton = (gcnew System::Windows::Forms::Button());
-			this->catalogCheckoutButton = (gcnew System::Windows::Forms::Button());
-			this->catalogAddressBillingListComboBox = (gcnew System::Windows::Forms::ComboBox());
-			this->catalogAddressShippingListComboBox = (gcnew System::Windows::Forms::ComboBox());
-			this->catalogAddressBillingLabel = (gcnew System::Windows::Forms::Label());
-			this->catalogAddressShippingLabel = (gcnew System::Windows::Forms::Label());
 			this->loginPanel->SuspendLayout();
 			this->loginPasswordPanel->SuspendLayout();
 			this->loginUsernamePanel->SuspendLayout();
@@ -361,9 +363,9 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			this->accountPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			this->hubPanel->SuspendLayout();
+			this->statisticMPanel->SuspendLayout();
 			this->catalogCartPanel->SuspendLayout();
 			this->catalogOrderPanel->SuspendLayout();
-			this->statisticMPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// loginPanel
@@ -397,11 +399,22 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			// 
 			this->loginPasswordPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)),
 				static_cast<System::Int32>(static_cast<System::Byte>(50)), static_cast<System::Int32>(static_cast<System::Byte>(61)));
+			this->loginPasswordPanel->Controls->Add(this->loginPasswordModButton);
 			this->loginPasswordPanel->Controls->Add(this->loginPasswordTextBox);
 			this->loginPasswordPanel->Location = System::Drawing::Point(373, 317);
 			this->loginPasswordPanel->Name = L"loginPasswordPanel";
 			this->loginPasswordPanel->Size = System::Drawing::Size(445, 64);
 			this->loginPasswordPanel->TabIndex = 20;
+			// 
+			// loginPasswordModButton
+			// 
+			this->loginPasswordModButton->Location = System::Drawing::Point(396, 13);
+			this->loginPasswordModButton->Name = L"loginPasswordModButton";
+			this->loginPasswordModButton->Size = System::Drawing::Size(36, 31);
+			this->loginPasswordModButton->TabIndex = 4;
+			this->loginPasswordModButton->Text = L"O";
+			this->loginPasswordModButton->UseVisualStyleBackColor = true;
+			this->loginPasswordModButton->Click += gcnew System::EventHandler(this, &MyForm::loginPasswordModButton_Click);
 			// 
 			// loginPasswordTextBox
 			// 
@@ -413,10 +426,10 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->loginPasswordTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(247)),
 				static_cast<System::Int32>(static_cast<System::Byte>(122)), static_cast<System::Int32>(static_cast<System::Byte>(93)));
-			this->loginPasswordTextBox->Location = System::Drawing::Point(31, 15);
+			this->loginPasswordTextBox->Location = System::Drawing::Point(37, 13);
 			this->loginPasswordTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->loginPasswordTextBox->Name = L"loginPasswordTextBox";
-			this->loginPasswordTextBox->Size = System::Drawing::Size(398, 31);
+			this->loginPasswordTextBox->Size = System::Drawing::Size(323, 31);
 			this->loginPasswordTextBox->TabIndex = 3;
 			this->loginPasswordTextBox->Text = L"Password";
 			this->loginPasswordTextBox->UseSystemPasswordChar = true;
@@ -461,7 +474,6 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			this->loginErrorLabel->Name = L"loginErrorLabel";
 			this->loginErrorLabel->Size = System::Drawing::Size(445, 68);
 			this->loginErrorLabel->TabIndex = 18;
-			this->loginErrorLabel->Text = L"Lastname";
 			this->loginErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// loginValidateButton
@@ -969,10 +981,10 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			// addStockExitButton
 			// 
 			this->addStockExitButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->addStockExitButton->Location = System::Drawing::Point(348, 3);
+			this->addStockExitButton->Location = System::Drawing::Point(915, 10);
 			this->addStockExitButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			this->addStockExitButton->Name = L"addStockExitButton";
-			this->addStockExitButton->Size = System::Drawing::Size(17, 26);
+			this->addStockExitButton->Size = System::Drawing::Size(42, 40);
 			this->addStockExitButton->TabIndex = 0;
 			this->addStockExitButton->Text = L"X";
 			this->addStockExitButton->UseVisualStyleBackColor = true;
@@ -1382,6 +1394,7 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			this->menuCatalogButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->menuCatalogButton->UseVisualStyleBackColor = true;
 			this->menuCatalogButton->Visible = false;
+			this->menuCatalogButton->Click += gcnew System::EventHandler(this, &MyForm::menuCatalogButton_Click);
 			// 
 			// menuAccountButton
 			// 
@@ -1813,8 +1826,6 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			// 
 			// hubPanel
 			// 
-			this->hubPanel->Controls->Add(this->catalogCartPanel);
-			this->hubPanel->Controls->Add(this->catalogOrderPanel);
 			this->hubPanel->Controls->Add(this->menuButtonPanel);
 			this->hubPanel->Controls->Add(this->titleBarPanel);
 			this->hubPanel->Controls->Add(this->addStockPanel);
@@ -1824,10 +1835,22 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			this->hubPanel->Controls->Add(this->accountPanel);
 			this->hubPanel->Controls->Add(this->clientMPanel);
 			this->hubPanel->Controls->Add(this->addOrderPanel);
+			this->hubPanel->Controls->Add(this->catalogCartPanel);
+			this->hubPanel->Controls->Add(this->catalogOrderPanel);
 			this->hubPanel->Location = System::Drawing::Point(0, 0);
 			this->hubPanel->Name = L"hubPanel";
 			this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			this->hubPanel->TabIndex = 29;
+			// 
+			// statisticMPanel
+			// 
+			this->statisticMPanel->Controls->Add(this->statisticMComboBox);
+			this->statisticMPanel->Controls->Add(this->statisticMStatisticButton);
+			this->statisticMPanel->Controls->Add(this->statisticMDGV);
+			this->statisticMPanel->Location = System::Drawing::Point(220, 80);
+			this->statisticMPanel->Name = L"statisticMPanel";
+			this->statisticMPanel->Size = System::Drawing::Size(968, 607);
+			this->statisticMPanel->TabIndex = 10;
 			// 
 			// catalogCartPanel
 			// 
@@ -1843,6 +1866,67 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			this->catalogCartPanel->Name = L"catalogCartPanel";
 			this->catalogCartPanel->Size = System::Drawing::Size(968, 607);
 			this->catalogCartPanel->TabIndex = 19;
+			// 
+			// catalogAddressShippingLabel
+			// 
+			this->catalogAddressShippingLabel->AutoSize = true;
+			this->catalogAddressShippingLabel->Location = System::Drawing::Point(649, 203);
+			this->catalogAddressShippingLabel->Name = L"catalogAddressShippingLabel";
+			this->catalogAddressShippingLabel->Size = System::Drawing::Size(117, 17);
+			this->catalogAddressShippingLabel->TabIndex = 7;
+			this->catalogAddressShippingLabel->Text = L"Address shipping";
+			// 
+			// catalogAddressBillingLabel
+			// 
+			this->catalogAddressBillingLabel->AutoSize = true;
+			this->catalogAddressBillingLabel->Location = System::Drawing::Point(649, 82);
+			this->catalogAddressBillingLabel->Name = L"catalogAddressBillingLabel";
+			this->catalogAddressBillingLabel->Size = System::Drawing::Size(100, 17);
+			this->catalogAddressBillingLabel->TabIndex = 6;
+			this->catalogAddressBillingLabel->Text = L"Address billing";
+			// 
+			// catalogAddressShippingListComboBox
+			// 
+			this->catalogAddressShippingListComboBox->FormattingEnabled = true;
+			this->catalogAddressShippingListComboBox->Location = System::Drawing::Point(649, 229);
+			this->catalogAddressShippingListComboBox->Name = L"catalogAddressShippingListComboBox";
+			this->catalogAddressShippingListComboBox->Size = System::Drawing::Size(246, 24);
+			this->catalogAddressShippingListComboBox->TabIndex = 5;
+			// 
+			// catalogAddressBillingListComboBox
+			// 
+			this->catalogAddressBillingListComboBox->FormattingEnabled = true;
+			this->catalogAddressBillingListComboBox->Location = System::Drawing::Point(649, 112);
+			this->catalogAddressBillingListComboBox->Name = L"catalogAddressBillingListComboBox";
+			this->catalogAddressBillingListComboBox->Size = System::Drawing::Size(246, 24);
+			this->catalogAddressBillingListComboBox->TabIndex = 4;
+			// 
+			// catalogCheckoutButton
+			// 
+			this->catalogCheckoutButton->Location = System::Drawing::Point(848, 417);
+			this->catalogCheckoutButton->Name = L"catalogCheckoutButton";
+			this->catalogCheckoutButton->Size = System::Drawing::Size(75, 23);
+			this->catalogCheckoutButton->TabIndex = 3;
+			this->catalogCheckoutButton->Text = L"Checkout";
+			this->catalogCheckoutButton->UseVisualStyleBackColor = true;
+			// 
+			// catalogBackButton
+			// 
+			this->catalogBackButton->Location = System::Drawing::Point(879, 12);
+			this->catalogBackButton->Name = L"catalogBackButton";
+			this->catalogBackButton->Size = System::Drawing::Size(75, 23);
+			this->catalogBackButton->TabIndex = 2;
+			this->catalogBackButton->Text = L"Back";
+			this->catalogBackButton->UseVisualStyleBackColor = true;
+			// 
+			// catalogSelectedListView
+			// 
+			this->catalogSelectedListView->HideSelection = false;
+			this->catalogSelectedListView->Location = System::Drawing::Point(68, 62);
+			this->catalogSelectedListView->Name = L"catalogSelectedListView";
+			this->catalogSelectedListView->Size = System::Drawing::Size(475, 262);
+			this->catalogSelectedListView->TabIndex = 1;
+			this->catalogSelectedListView->UseCompatibleStateImageBehavior = false;
 			// 
 			// catalogCartTitleLabel
 			// 
@@ -1912,77 +1996,6 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			this->catalogOrderTitleLabel->TabIndex = 0;
 			this->catalogOrderTitleLabel->Text = L"Order";
 			// 
-			// statisticMPanel
-			// 
-			this->statisticMPanel->Controls->Add(this->statisticMComboBox);
-			this->statisticMPanel->Controls->Add(this->statisticMStatisticButton);
-			this->statisticMPanel->Controls->Add(this->statisticMDGV);
-			this->statisticMPanel->Location = System::Drawing::Point(220, 80);
-			this->statisticMPanel->Name = L"statisticMPanel";
-			this->statisticMPanel->Size = System::Drawing::Size(968, 607);
-			this->statisticMPanel->TabIndex = 10;
-			// 
-			// catalogSelectedListView
-			// 
-			this->catalogSelectedListView->HideSelection = false;
-			this->catalogSelectedListView->Location = System::Drawing::Point(68, 62);
-			this->catalogSelectedListView->Name = L"catalogSelectedListView";
-			this->catalogSelectedListView->Size = System::Drawing::Size(475, 262);
-			this->catalogSelectedListView->TabIndex = 1;
-			this->catalogSelectedListView->UseCompatibleStateImageBehavior = false;
-			// 
-			// catalogBackButton
-			// 
-			this->catalogBackButton->Location = System::Drawing::Point(879, 12);
-			this->catalogBackButton->Name = L"catalogBackButton";
-			this->catalogBackButton->Size = System::Drawing::Size(75, 23);
-			this->catalogBackButton->TabIndex = 2;
-			this->catalogBackButton->Text = L"Back";
-			this->catalogBackButton->UseVisualStyleBackColor = true;
-			// 
-			// catalogCheckoutButton
-			// 
-			this->catalogCheckoutButton->Location = System::Drawing::Point(848, 417);
-			this->catalogCheckoutButton->Name = L"catalogCheckoutButton";
-			this->catalogCheckoutButton->Size = System::Drawing::Size(75, 23);
-			this->catalogCheckoutButton->TabIndex = 3;
-			this->catalogCheckoutButton->Text = L"Checkout";
-			this->catalogCheckoutButton->UseVisualStyleBackColor = true;
-			// 
-			// catalogAddressBillingListComboBox
-			// 
-			this->catalogAddressBillingListComboBox->FormattingEnabled = true;
-			this->catalogAddressBillingListComboBox->Location = System::Drawing::Point(649, 112);
-			this->catalogAddressBillingListComboBox->Name = L"catalogAddressBillingListComboBox";
-			this->catalogAddressBillingListComboBox->Size = System::Drawing::Size(246, 24);
-			this->catalogAddressBillingListComboBox->TabIndex = 4;
-			// 
-			// catalogAddressShippingListComboBox
-			// 
-			this->catalogAddressShippingListComboBox->FormattingEnabled = true;
-			this->catalogAddressShippingListComboBox->Location = System::Drawing::Point(649, 229);
-			this->catalogAddressShippingListComboBox->Name = L"catalogAddressShippingListComboBox";
-			this->catalogAddressShippingListComboBox->Size = System::Drawing::Size(246, 24);
-			this->catalogAddressShippingListComboBox->TabIndex = 5;
-			// 
-			// catalogAddressBillingLabel
-			// 
-			this->catalogAddressBillingLabel->AutoSize = true;
-			this->catalogAddressBillingLabel->Location = System::Drawing::Point(649, 82);
-			this->catalogAddressBillingLabel->Name = L"catalogAddressBillingLabel";
-			this->catalogAddressBillingLabel->Size = System::Drawing::Size(100, 17);
-			this->catalogAddressBillingLabel->TabIndex = 6;
-			this->catalogAddressBillingLabel->Text = L"Address billing";
-			// 
-			// catalogAddressShippingLabel
-			// 
-			this->catalogAddressShippingLabel->AutoSize = true;
-			this->catalogAddressShippingLabel->Location = System::Drawing::Point(649, 203);
-			this->catalogAddressShippingLabel->Name = L"catalogAddressShippingLabel";
-			this->catalogAddressShippingLabel->Size = System::Drawing::Size(117, 17);
-			this->catalogAddressShippingLabel->TabIndex = 7;
-			this->catalogAddressShippingLabel->Text = L"Address shipping";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -2027,16 +2040,52 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 			this->accountPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			this->hubPanel->ResumeLayout(false);
+			this->statisticMPanel->ResumeLayout(false);
 			this->catalogCartPanel->ResumeLayout(false);
 			this->catalogCartPanel->PerformLayout();
 			this->catalogOrderPanel->ResumeLayout(false);
 			this->catalogOrderPanel->PerformLayout();
-			this->statisticMPanel->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-
+	private: System::Void resetHubButton() {
+		menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuAccountButton->ForeColor = System::Drawing::Color::White;
+		menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+		menuCatalogButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuCatalogButton->ForeColor = System::Drawing::Color::White;
+		menuCatalogButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+		menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuAccountButton->ForeColor = System::Drawing::Color::White;
+		menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+		menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuStatisticButton->ForeColor = System::Drawing::Color::White;
+		menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+		menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuStockButton->ForeColor = System::Drawing::Color::White;
+		menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+		menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuOrderButton->ForeColor = System::Drawing::Color::White;
+		menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+		menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuClientButton->ForeColor = System::Drawing::Color::White;
+		menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+			static_cast<System::Int32>(static_cast<System::Byte>(76)));
+	}
 	private: System::Void hideAllPanel() {
 		registerPanel->Visible = false;
 		loginPanel->Visible = false;
@@ -2051,6 +2100,15 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 		statisticMPanel->Visible = false;
 		catalogCartPanel->Visible = false;
 		catalogOrderPanel->Visible = false;
+	}
+	private: System::Void clearAddStockTextBox() {
+		addStockNameTextBox->Text = "";
+		addStockQuantityTextBox->Text = "";
+		addStockCostTextBox->Text = "";
+		addStockTVATextBox->Text = "";
+		addStockMargeTextBox->Text = "";
+		addStockStockTextBox->Text = "";
+		addStockRestockingTextBox->Text = "";
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
@@ -2082,6 +2140,7 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 	private: System::Void addStockExitButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
 		stockMPanel->Visible = true;
+		clearAddStockTextBox();
 	}
 	private: System::Void loginUsernameTextBox_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (loginUsernameTextBox->Text == "Username") {
@@ -2100,77 +2159,6 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 		if (loginUsernameTextBox->Text == "") {
 			loginUsernameTextBox->Text = "Username";
 		}
-	}
-	private: System::Void menuClientButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-		menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
-			static_cast<System::Int32>(static_cast<System::Byte>(251)));
-		menuClientButton->ForeColor = System::Drawing::Color::Black;
-	}
-	private: System::Void menuClientButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-		menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuClientButton->ForeColor = System::Drawing::Color::Gainsboro;
-		menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-			static_cast<System::Int32>(static_cast<System::Byte>(76)));
-
-	}
-	private: System::Void menuOrderButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-		menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-			static_cast<System::Int32>(static_cast<System::Byte>(214)));
-		menuOrderButton->ForeColor = System::Drawing::Color::Black;
-	}
-	private: System::Void menuOrderButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-		menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuOrderButton->ForeColor = System::Drawing::Color::Gainsboro;
-		menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-			static_cast<System::Int32>(static_cast<System::Byte>(76)));
-	}
-	private: System::Void menuStockButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-		menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
-			static_cast<System::Int32>(static_cast<System::Byte>(143)));
-		menuStockButton->ForeColor = System::Drawing::Color::Black;
-	}
-	private: System::Void menuStockButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-		menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuStockButton->ForeColor = System::Drawing::Color::Gainsboro;
-		menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-			static_cast<System::Int32>(static_cast<System::Byte>(76)));
-	}
-	private: System::Void menuStatisticButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-		menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(96)),
-			static_cast<System::Int32>(static_cast<System::Byte>(59)));
-		menuStatisticButton->ForeColor = System::Drawing::Color::Black;
-	}
-	private: System::Void menuStatisticButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-		menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuStatisticButton->ForeColor = System::Drawing::Color::Gainsboro;
-		menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-			static_cast<System::Int32>(static_cast<System::Byte>(76)));
-	}
-	private: System::Void menuAccountButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-		menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-			static_cast<System::Int32>(static_cast<System::Byte>(32)));
-		menuAccountButton->ForeColor = System::Drawing::Color::Black;
-	}
-	private: System::Void menuAccountButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-		menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuAccountButton->ForeColor = System::Drawing::Color::Gainsboro;
-		menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
-			static_cast<System::Int32>(static_cast<System::Byte>(76)));
 	}
 	private: System::Void menuAccountButton_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 		hideAllPanel();
@@ -2348,6 +2336,12 @@ private: System::Windows::Forms::ListView^ catalogSelectedListView;
 	}
 	private: System::Void testToSupprButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
+		menuCatalogButton->Visible = true;
+		menuOrderButton->Visible = true;
+		menuStockButton->Visible = true;
+		menuClientButton->Visible = true;
+		menuStatisticButton->Visible = true;
+		menuPersonnellManageButton->Visible = true;
 	}
 private: System::Void menuOrderButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	hideAllPanel();
@@ -2365,18 +2359,71 @@ private: System::Void stockMAddButton_Click_1(System::Object^ sender, System::Ev
 	hideAllPanel();
 	addStockPanel->Visible = true;
 }
-private: System::Void clearAddStockTextBox() {
-	addStockNameTextBox->Text = "";
-	addStockQuantityTextBox->Text = "";
-	addStockCostTextBox->Text = "";
-	addStockTVATextBox->Text = "";
-	addStockMargeTextBox->Text = "";
-	addStockStockTextBox->Text = "";
-	addStockRestockingTextBox->Text = "";
-}
 private: System::Void addStockValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	clearAddStockTextBox();
 }
 
+private: System::Void loginPasswordModButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (loginPasswordTextBox->UseSystemPasswordChar) {
+		loginPasswordTextBox->UseSystemPasswordChar = false;
+	}
+	else
+	{
+		loginPasswordTextBox->UseSystemPasswordChar = true;
+	}
+}
+private: System::Void menuClientButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+	menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+		static_cast<System::Int32>(static_cast<System::Byte>(251)));
+	menuClientButton->ForeColor = System::Drawing::Color::Black;
+}
+private: System::Void menuClientButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+	resetHubButton();
+}
+private: System::Void menuOrderButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+	menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
+		static_cast<System::Int32>(static_cast<System::Byte>(214)));
+	menuOrderButton->ForeColor = System::Drawing::Color::Black;
+}
+private: System::Void menuOrderButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+	resetHubButton();
+}
+private: System::Void menuStockButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+	menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+		static_cast<System::Int32>(static_cast<System::Byte>(143)));
+	menuStockButton->ForeColor = System::Drawing::Color::Black;
+}
+private: System::Void menuStockButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+	resetHubButton();
+}
+private: System::Void menuStatisticButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+	menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(96)),
+		static_cast<System::Int32>(static_cast<System::Byte>(59)));
+	menuStatisticButton->ForeColor = System::Drawing::Color::Black;
+}
+private: System::Void menuStatisticButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+	resetHubButton();
+}
+private: System::Void menuAccountButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+	menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+		System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+	menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+		static_cast<System::Int32>(static_cast<System::Byte>(32)));
+	menuAccountButton->ForeColor = System::Drawing::Color::Black;
+}
+private: System::Void menuAccountButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+	resetHubButton();
+}
+private: System::Void menuCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+}
 };
 }
