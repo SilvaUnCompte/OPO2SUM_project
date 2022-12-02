@@ -125,7 +125,6 @@ OPO2SUMproject::Bill::Bill(int selectedId) {
 	DataTableReaderBill->Close();
 }
 
-
 //Constructor Contain
 
 OPO2SUMproject::Contain::Contain(int id_order, int id_product, int nb) {
@@ -232,10 +231,9 @@ OPO2SUMproject::Product^ OPO2SUMproject::ProductManager::select(int id) {
 }
 void OPO2SUMproject::ProductManager::insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product, int enable_product) {
 	AccessData^ Adata = gcnew AccessData;
-	int newTVA = tva_product * 10;
 	Adata->actionRows("INSERT INTO Product " +
 		"(name_product, element_per_unit_product, cost_product, marge_product, tva_product, stock_product, restocking_threshold_product, enable_product) " +
-		"VALUES('" + name_product + "', " + element_per_unit_product + ", " + cost_product + ", " + marge_product + ", 0." + newTVA + ", " + stock_product + ", " + restocking_threshold_product + "," + enable_product + ");");
+		"VALUES('" + name_product + "', " + element_per_unit_product + ", " + cost_product + ", " + marge_product + ", " + tva_product.ToString("F", System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) + ", " + stock_product + ", " + restocking_threshold_product + "," + enable_product + ");");
 }
 void OPO2SUMproject::ProductManager::deleteElement(int selectedId) {
 	Adata->actionRows("DELETE FROM contain WHERE id_product = " + selectedId);
@@ -270,7 +268,6 @@ void OPO2SUMproject::PaymentManager::update(Payment^ obj) {
 	Adata->actionRows("UPDATE Payment SET date_payment = '" + obj->get_date_payment() + "', method_payment = " + obj->get_method_payment() + ", balance_payment = " + obj->get_balance_payment() + ", id_order = " + obj->get_order()->get_id() + " WHERE id_payment = " + obj->get_id() + ";");
 }
 
-
 //Bill Manager------------------------------------------------------------------------------
 
 OPO2SUMproject::Bill^ OPO2SUMproject::BillManager::select(int id) {
@@ -278,9 +275,7 @@ OPO2SUMproject::Bill^ OPO2SUMproject::BillManager::select(int id) {
 }
 void OPO2SUMproject::BillManager::insert(float total_bill, float total_tva, int id_order) {
 	AccessData^ Adata = gcnew AccessData;
-	Adata->actionRows("INSERT INTO Bill " +
-		"(total_bill, total_tva, id_order)" +
-		"VALUES(" + total_bill + ", " + total_tva + ", " + id_order + ");");
+	Adata->actionRows("INSERT INTO Bill (total_bill, total_tva, id_order) VALUES(" + total_bill.ToString("F", System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) + ", " + total_tva.ToString("F", System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) + ", " + id_order + ");");
 }
 void OPO2SUMproject::BillManager::deleteElement(int selectedId) {
 	Adata->actionRows("DELETE FROM Bill WHERE id_bill = " + selectedId);
@@ -292,7 +287,6 @@ void OPO2SUMproject::BillManager::update(Bill^ obj) {
 	Adata->actionRows("UPDATE Bill SET total_bill = " + obj->get_total_bill() + ", total_tva = " + obj->get_total_tva() + ", id_order= " + obj->get_order()->get_id() + " WHERE id_bill = " + obj->get_id() + ";");
 
 }
-
 
 //Contain Manager----------------------------------------------------------------------------
 
