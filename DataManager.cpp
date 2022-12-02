@@ -232,10 +232,9 @@ OPO2SUMproject::Product^ OPO2SUMproject::ProductManager::select(int id) {
 }
 void OPO2SUMproject::ProductManager::insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product, int enable_product) {
 	AccessData^ Adata = gcnew AccessData;
-	int newTVA = tva_product * 10;
 	Adata->actionRows("INSERT INTO Product " +
 		"(name_product, element_per_unit_product, cost_product, marge_product, tva_product, stock_product, restocking_threshold_product, enable_product) " +
-		"VALUES('" + name_product + "', " + element_per_unit_product + ", " + cost_product + ", " + marge_product + ", 0." + newTVA + ", " + stock_product + ", " + restocking_threshold_product + "," + enable_product + ");");
+		"VALUES('" + name_product + "', " + element_per_unit_product + ", " + cost_product + ", " + marge_product + ", " + tva_product.ToString("F", System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) + ", " + stock_product + ", " + restocking_threshold_product + "," + enable_product + ");");
 }
 void OPO2SUMproject::ProductManager::deleteElement(int selectedId) {
 	Adata->actionRows("DELETE FROM contain WHERE id_product = " + selectedId);
@@ -278,9 +277,7 @@ OPO2SUMproject::Bill^ OPO2SUMproject::BillManager::select(int id) {
 }
 void OPO2SUMproject::BillManager::insert(float total_bill, float total_tva, int id_order) {
 	AccessData^ Adata = gcnew AccessData;
-	Adata->actionRows("INSERT INTO Bill " +
-		"(total_bill, total_tva, id_order)" +
-		"VALUES(" + total_bill + ", " + total_tva + ", " + id_order + ");");
+	Adata->actionRows("INSERT INTO Bill (total_bill, total_tva, id_order) VALUES(" + total_bill.ToString("F", System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) + ", " + total_tva.ToString("F", System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) + ", " + id_order + ");");
 }
 void OPO2SUMproject::BillManager::deleteElement(int selectedId) {
 	Adata->actionRows("DELETE FROM Bill WHERE id_bill = " + selectedId);

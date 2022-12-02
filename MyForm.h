@@ -77,6 +77,7 @@ namespace OPO2SUMproject {
 		ContainManager^ containManager = gcnew ContainManager();
 		ProductManager^ productManager = gcnew ProductManager();
 		OrderManager^ orderManager = gcnew OrderManager();
+		BillManager^ billManager = gcnew BillManager();
 
 	private: System::Windows::Forms::Button^ catalogCheckoutButton;
 
@@ -664,13 +665,17 @@ namespace OPO2SUMproject {
 		String^ summaryOrder;
 		std::vector<int> idList(catalogSelectedListView->Items->Count);
 		std::vector<int> nbList(catalogSelectedListView->Items->Count);
+		std::vector<float> costList(catalogSelectedListView->Items->Count);
+		float tempCost = 0;
+		float tempCostHT = 0;
 
 		for (int i = 0; i < catalogSelectedListView->Items->Count; i++)
 		{
 			String^ tempProduct = catalogSelectedListView->Items[i]->Text;
 
 			int tempNb = int::Parse(tempProduct->Substring(0, tempProduct->IndexOf(" ") - 1));
-			int tempId = int::Parse(tempProduct->Substring(tempProduct->IndexOf("#") + 1)->Substring(0, tempProduct->IndexOf("#") - tempProduct->IndexOf(" ") - 1));
+			int tempId = int::Parse(tempProduct->Substring(tempProduct->IndexOf("#") + 1, tempProduct->Substring(0,tempProduct->IndexOf("#") + 1)->IndexOf(" ")));
+
 			Product^ currentProduct = gcnew Product(tempId);
 			if (currentProduct->get_stock_product() - tempNb < 0) {
 				if (MessageBox::Show("Due to some stock problems, you can only have " + currentProduct->get_stock_product() + "x \"" + currentProduct->get_name_product() + "\"", "Warning", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
@@ -680,17 +685,21 @@ namespace OPO2SUMproject {
 			}
 			nbList[i] = tempNb;
 			idList[i] = tempId;
+
+			tempCostHT += (currentProduct->get_cost_product() + currentProduct->get_marge_product()) * tempNb;
+			tempCost += (currentProduct->get_cost_product() + currentProduct->get_marge_product()) * (1 + currentProduct->get_tva_product()) * tempNb;
 			summaryOrder += "\n" + nbList[i] + "x   " + currentProduct->get_name_product();
 		}
+		summaryOrder += "\n\n      $" + tempCost;
 
 		if (MessageBox::Show("Summary :\n" + summaryOrder, "Confirm", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
 
-			orderManager->insert(DateTime::Now.ToString(), DateTime::Now.ToString(), connectedAccount->get_id(), 
+			orderManager->insert(DateTime::Now.ToString(), DateTime::Now.ToString(), connectedAccount->get_id(),
 				int::Parse(this->catalogAddressBillingListComboBox->SelectedValue->ToString()),
 				int::Parse(this->catalogAddressShippingListComboBox->SelectedValue->ToString()));
 
 			AccessData^ Adata = gcnew AccessData;
-			System::Data::DataSet^ lastOrder = Adata->getRows("SELECT TOP (1) id_order FROM orderTab ORDER BY id_order DESC","Temp");
+			System::Data::DataSet^ lastOrder = Adata->getRows("SELECT TOP (1) id_order FROM orderTab ORDER BY id_order DESC", "Temp");
 			System::Data::DataTableReader^ DataTableReaderTest = lastOrder->CreateDataReader();
 			DataTableReaderTest->Read();
 			int id_selectedOrder = DataTableReaderTest->GetInt32(0);
@@ -701,9 +710,11 @@ namespace OPO2SUMproject {
 				Product^ selectedProduct = gcnew Product(idList[i]);
 				selectedProduct->set_stock_product(selectedProduct->get_stock_product() - nbList[i]);
 				productManager->update(selectedProduct);
-
 				containManager->insert(id_selectedOrder, idList[i], nbList[i]);
 			}
+
+			billManager->insert(tempCost, (tempCost / tempCostHT)-1, id_selectedOrder);
+			
 			MessageBox::Show("Order successfully created!");
 			catalogResearchTextBox_TextChanged(sender, e);
 			catalogBackButton_Click(sender, e);
@@ -716,20 +727,22 @@ namespace OPO2SUMproject {
 
 			bool noDouble = true;
 			for (int i = 0; i < catalogSelectedListView->Items->Count; i++) {
-				noDouble = selectedProduct->Substring(selectedProduct->IndexOf("\"") + 1) + "\"" ==
-					catalogSelectedListView->Items[i]->Text->Substring(catalogSelectedListView->Items[i]->Text->IndexOf("\"") + 1) ? false : noDouble;
+				noDouble = selectedProduct->Substring(0, selectedProduct->LastIndexOf("$") - 2) ==
+					catalogSelectedListView->Items[i]->Text->Substring(catalogSelectedListView->Items[i]->Text->IndexOf("\"") + 1, catalogSelectedListView->Items[i]->Text->LastIndexOf("$") - catalogSelectedListView->Items[i]->Text->IndexOf("\"") - 4) ? false : noDouble;
 			}
 
 			if (!noDouble) { MessageBox::Show("This article is already in your cart."); return; }
 
-			String^ countProduct = Microsoft::VisualBasic::Interaction::InputBox("How many \"" + selectedProduct->Substring(selectedProduct->IndexOf(" ") + 1) + "\" do you want?", selectedProduct->Substring(selectedProduct->LastIndexOf(" ") + 1), "1", 500, 500);
+			String^ countProduct = Microsoft::VisualBasic::Interaction::InputBox("How many \"" + selectedProduct->Substring(selectedProduct->IndexOf(" ") + 1, selectedProduct->LastIndexOf("$") - selectedProduct->IndexOf(" ") - 3) + "\" do you want?", "Confirm", "1", 500, 500);
+			float cost = float::Parse(selectedProduct->Substring(selectedProduct->LastIndexOf("$") + 1));
+
 			if (!(countProduct == "" || countProduct == "0")) {
 				try {
 					if (int::Parse(countProduct) < 1) {
 						MessageBox::Show("Invalide Value");
 						return;
 					}
-					catalogSelectedListView->Items->Add(countProduct + "x \"" + selectedProduct + "\"");
+					catalogSelectedListView->Items->Add(countProduct + "x \"" + selectedProduct->Substring(0, selectedProduct->LastIndexOf("$") - 2) + "\"  $" + (cost * float::Parse(countProduct)));
 				}
 				catch (...) {
 					MessageBox::Show("Invalide Value");
@@ -755,7 +768,8 @@ namespace OPO2SUMproject {
 		for (int i = 0; i < products->Rows->Count; i++)
 		{
 			DataRow^ drow = products->Rows[i];
-			catalogGlobalListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString());
+			float cost = float::Parse(drow[3]->ToString()) + float::Parse(drow[4]->ToString());
+			catalogGlobalListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString() + "  $" + (cost * (1 + float::Parse(drow[5]->ToString()))));
 		}
 	}
 	};
