@@ -1827,7 +1827,6 @@ namespace OPO2SUMproject {
 			this->Purchase_Value_button->Name = L"Purchase_Value_button";
 			this->Purchase_Value_button->Size = System::Drawing::Size(164, 50);
 			this->Purchase_Value_button->TabIndex = 8;
-			this->Purchase_Value_button->Text = L"Purchase value of stock";
 			this->Purchase_Value_button->UseVisualStyleBackColor = true;
 			this->Purchase_Value_button->Click += gcnew System::EventHandler(this, &MyForm::Purchase_Value_button_Click);
 			// 
@@ -2653,23 +2652,23 @@ namespace OPO2SUMproject {
 
 	private: System::Void Panier_Poyen_Button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ panier = Adata->getRows("SELECT  SUM(total_bill)/count(id_bill) AS panier FROM bill", "temp");
-		stat_label->Text = "Average basket";
+		DataSet^ panier = Adata->getRows("SELECT  SUM(total_bill)/count(id_bill) AS 'Average Cart' FROM bill", "temp");
+		stat_label->Text = "Average cart";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = panier; // dataset
 		dataGridViewstat->DataMember = "Temp";
 	}
 	private: System::Void turnover_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ turnover = Adata->getRows("Select sum(c.nb_element *  p.marge_product) AS CHIFFRE_D_AFFARE from opo2sum.dbo.contain c , opo2sum.dbo.product p  where c.id_product = p.id_product", "temp");
-		stat_label->Text = "turnover per month";
+		DataSet^ turnover = Adata->getRows("select sum(c.nb_element * p.marge_product) AS Tunrover, YEAR(issue_date) AS Year, MONTH(issue_date) AS Month from orderTab o inner join contain c ON o.id_order = c.id_order inner join product p ON c.id_product = p.id_product group by YEAR(issue_date), MONTH(issue_date)", "temp");
+		stat_label->Text = "Turnover per month";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = turnover; // dataset
 		dataGridViewstat->DataMember = "Temp";
 	}
 	private: System::Void Prod_u_restocking_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ restocking = Adata->getRows("SELECT p.name_product, p.stock_product, p.restocking_threshold_product FROM opo2sum.dbo.product p WHERE((([stock_product]) <= [restocking_threshold_product])); ", "temp");
+		DataSet^ restocking = Adata->getRows("SELECT p.id_product, p.name_product, p.stock_product, p.restocking_threshold_product FROM opo2sum.dbo.product p WHERE((([stock_product]) <= [restocking_threshold_product])); ", "temp");
 		stat_label->Text = "Products under restocking threshold";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = restocking; // dataset
@@ -2677,43 +2676,38 @@ namespace OPO2SUMproject {
 	}
 	private: System::Void Amount_per_client_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ Amount_per_client = Adata->getRows(" SELECT id_order, SUM(total_bill) AS total_per_client FROM opo2sum.dbo.bill GROUP BY id_order", "temp");
-		stat_label->Text = "Amount_per_client";
+		DataSet^ Amount_per_client = Adata->getRows("SELECT a.account_name, SUM(total_bill) AS total_per_client FROM opo2sum.dbo.bill b inner join orderTab o ON o.id_order = b.id_order inner join account a ON o.id_account = a.id_account GROUP BY a.account_name;", "temp");
+		stat_label->Text = "Amount per client";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = Amount_per_client; // dataset
 		dataGridViewstat->DataMember = "Temp";
 	}
 	private: System::Void top_buys_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ top10_buys = Adata->getRows(" SELECT TOP 10 [id_product], SUM(nb_element) Qte_top FROM opo2sum.dbo.contain GROUP BY[id_product] ORDER BY Qte_top DESC", "temp");
-		stat_label->Text = "top10_buys";
+		DataSet^ top10_buys = Adata->getRows(" SELECT TOP 10 id_product, SUM(nb_element) Quantity FROM opo2sum.dbo.contain GROUP BY[id_product] ORDER BY Quantity DESC", "temp");
+		stat_label->Text = "Top10 buys";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = top10_buys; // dataset
 		dataGridViewstat->DataMember = "Temp";
 	}
 	private: System::Void buys_down_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ down10_buys = Adata->getRows("  SELECT  [id_product], SUM(nb_element) Qte_down FROM opo2sum.dbo.contain GROUP BY[id_product] ORDER BY Qte_down DESC", "temp");
-		stat_label->Text = "bottom10_buys";
+		DataSet^ down10_buys = Adata->getRows("  SELECT TOP 10 id_product, SUM(nb_element) Quantity FROM opo2sum.dbo.contain GROUP BY[id_product] ORDER BY Quantity ASC	", "temp");
+		stat_label->Text = "Bottom10 buys";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = down10_buys; // dataset
 		dataGridViewstat->DataMember = "Temp";
 	}
 	private: System::Void Commercial_Value_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ Commercial_Value_of_Stock = Adata->getRows(" Select sum(cost_product+marge_product) AS buy_value_commercial from  opo2sum.dbo.product  where id_product = id_product", "temp");
-		stat_label->Text = "Commercial_Value_of_Stock";
+		DataSet^ Commercial_Value_of_Stock = Adata->getRows(" Select sum(cost_product) as 'Commercial Value', sum((cost_product+marge_product)*(1+tva_product)) AS 'Buy Value', sum(marge_product) as 'Marge Value' from  opo2sum.dbo.product", "temp");
+		stat_label->Text = "Commercial Value of Stock";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = Commercial_Value_of_Stock; // dataset
 		dataGridViewstat->DataMember = "Temp";
 	}
 	private: System::Void Purchase_Value_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		AccessData^ Adata = gcnew AccessData;
-		DataSet^ Purchase_Value_of_Stock = Adata->getRows("Select sum((cost_product+marge_product)*(1+tva_product)) AS buy_value from  opo2sum.dbo.product  where id_product = id_product", "temp");
-		stat_label->Text = "Purchase_Value_of_Stock";
-		//dataGridViewstat->AutoGenerateColumns = true;
-		dataGridViewstat->DataSource = Purchase_Value_of_Stock; // dataset
-		dataGridViewstat->DataMember = "Temp";
+		stat_label->Text = "";
 	}
 
 	// Client Manager -------------------------------------------------
