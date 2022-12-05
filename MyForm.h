@@ -208,11 +208,11 @@ namespace OPO2SUMproject {
 		   void InitializeComponent(void)
 		   {
 			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   this->loginPanel = (gcnew System::Windows::Forms::Panel());
 			   this->testToSupprButton = (gcnew System::Windows::Forms::Button());
 			   this->loginPasswordPanel = (gcnew System::Windows::Forms::Panel());
@@ -532,7 +532,9 @@ namespace OPO2SUMproject {
 			   this->registerPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->registerPanel->BackColor = System::Drawing::SystemColors::ButtonFace;
+			   this->registerPanel->BackColor = System::Drawing::Color::Transparent;
+			   this->registerPanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"registerPanel.BackgroundImage")));
+			   this->registerPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->registerPanel->Controls->Add(this->registerBirthdayLabel);
 			   this->registerPanel->Controls->Add(this->registerDateTimePicker);
 			   this->registerPanel->Controls->Add(this->registerErrorLabel);
@@ -558,43 +560,50 @@ namespace OPO2SUMproject {
 			   // 
 			   this->registerBirthdayLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerBirthdayLabel->AutoSize = true;
-			   this->registerBirthdayLabel->Location = System::Drawing::Point(515, 300);
+			   this->registerBirthdayLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerBirthdayLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			   this->registerBirthdayLabel->Location = System::Drawing::Point(439, 347);
 			   this->registerBirthdayLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerBirthdayLabel->Name = L"registerBirthdayLabel";
-			   this->registerBirthdayLabel->Size = System::Drawing::Size(60, 17);
+			   this->registerBirthdayLabel->Size = System::Drawing::Size(72, 22);
 			   this->registerBirthdayLabel->TabIndex = 17;
 			   this->registerBirthdayLabel->Text = L"Birthday";
 			   // 
 			   // registerDateTimePicker
 			   // 
-			   this->registerDateTimePicker->Location = System::Drawing::Point(341, 338);
+			   this->registerDateTimePicker->CalendarForeColor = System::Drawing::Color::Black;
+			   this->registerDateTimePicker->Location = System::Drawing::Point(439, 373);
 			   this->registerDateTimePicker->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerDateTimePicker->Name = L"registerDateTimePicker";
-			   this->registerDateTimePicker->Size = System::Drawing::Size(223, 22);
+			   this->registerDateTimePicker->Size = System::Drawing::Size(278, 22);
 			   this->registerDateTimePicker->TabIndex = 9;
 			   // 
 			   // registerErrorLabel
 			   // 
 			   this->registerErrorLabel->AccessibleRole = System::Windows::Forms::AccessibleRole::Text;
 			   this->registerErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->registerErrorLabel->AutoSize = true;
 			   this->registerErrorLabel->ForeColor = System::Drawing::Color::Red;
-			   this->registerErrorLabel->Location = System::Drawing::Point(557, 397);
+			   this->registerErrorLabel->Location = System::Drawing::Point(439, 423);
 			   this->registerErrorLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerErrorLabel->Name = L"registerErrorLabel";
-			   this->registerErrorLabel->Size = System::Drawing::Size(70, 17);
+			   this->registerErrorLabel->Size = System::Drawing::Size(274, 45);
 			   this->registerErrorLabel->TabIndex = 16;
-			   this->registerErrorLabel->Text = L"Lastname";
 			   this->registerErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
 			   // registerLastnameLabel
 			   // 
 			   this->registerLastnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerLastnameLabel->AutoSize = true;
-			   this->registerLastnameLabel->Location = System::Drawing::Point(593, 189);
+			   this->registerLastnameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerLastnameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			   this->registerLastnameLabel->Location = System::Drawing::Point(584, 187);
 			   this->registerLastnameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerLastnameLabel->Name = L"registerLastnameLabel";
-			   this->registerLastnameLabel->Size = System::Drawing::Size(70, 17);
+			   this->registerLastnameLabel->Size = System::Drawing::Size(80, 22);
 			   this->registerLastnameLabel->TabIndex = 15;
 			   this->registerLastnameLabel->Text = L"Lastname";
 			   // 
@@ -602,10 +611,14 @@ namespace OPO2SUMproject {
 			   // 
 			   this->registerFirstnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerFirstnameLabel->AutoSize = true;
-			   this->registerFirstnameLabel->Location = System::Drawing::Point(448, 186);
+			   this->registerFirstnameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerFirstnameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			   this->registerFirstnameLabel->Location = System::Drawing::Point(439, 184);
 			   this->registerFirstnameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerFirstnameLabel->Name = L"registerFirstnameLabel";
-			   this->registerFirstnameLabel->Size = System::Drawing::Size(70, 17);
+			   this->registerFirstnameLabel->Size = System::Drawing::Size(82, 22);
 			   this->registerFirstnameLabel->TabIndex = 14;
 			   this->registerFirstnameLabel->Text = L"Firstname";
 			   // 
@@ -630,35 +643,47 @@ namespace OPO2SUMproject {
 			   // registerValidateButton
 			   // 
 			   this->registerValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			   this->registerValidateButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			   this->registerValidateButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->registerValidateButton->ForeColor = System::Drawing::Color::White;
 			   this->registerValidateButton->Location = System::Drawing::Point(439, 471);
 			   this->registerValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerValidateButton->Name = L"registerValidateButton";
-			   this->registerValidateButton->Size = System::Drawing::Size(278, 36);
+			   this->registerValidateButton->Size = System::Drawing::Size(278, 57);
 			   this->registerValidateButton->TabIndex = 11;
 			   this->registerValidateButton->Text = L"Validate";
-			   this->registerValidateButton->UseVisualStyleBackColor = true;
+			   this->registerValidateButton->UseVisualStyleBackColor = false;
 			   this->registerValidateButton->Click += gcnew System::EventHandler(this, &MyForm::registerValidateButton_Click);
 			   // 
 			   // registerLoginButton
 			   // 
 			   this->registerLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			   this->registerLoginButton->Location = System::Drawing::Point(1099, 3);
+			   this->registerLoginButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			   this->registerLoginButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->registerLoginButton->ForeColor = System::Drawing::Color::White;
+			   this->registerLoginButton->Location = System::Drawing::Point(1090, 12);
 			   this->registerLoginButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerLoginButton->Name = L"registerLoginButton";
 			   this->registerLoginButton->Size = System::Drawing::Size(87, 55);
 			   this->registerLoginButton->TabIndex = 5;
 			   this->registerLoginButton->Text = L"Login";
-			   this->registerLoginButton->UseVisualStyleBackColor = true;
+			   this->registerLoginButton->UseVisualStyleBackColor = false;
 			   this->registerLoginButton->Click += gcnew System::EventHandler(this, &MyForm::registerLoginButton_Click);
 			   // 
 			   // registerPasswordLabel
 			   // 
 			   this->registerPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerPasswordLabel->AutoSize = true;
-			   this->registerPasswordLabel->Location = System::Drawing::Point(593, 118);
+			   this->registerPasswordLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerPasswordLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			   this->registerPasswordLabel->Location = System::Drawing::Point(584, 116);
 			   this->registerPasswordLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerPasswordLabel->Name = L"registerPasswordLabel";
-			   this->registerPasswordLabel->Size = System::Drawing::Size(69, 17);
+			   this->registerPasswordLabel->Size = System::Drawing::Size(80, 22);
 			   this->registerPasswordLabel->TabIndex = 4;
 			   this->registerPasswordLabel->Text = L"Password";
 			   // 
@@ -685,10 +710,14 @@ namespace OPO2SUMproject {
 			   // 
 			   this->registerUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerUsernameLabel->AutoSize = true;
-			   this->registerUsernameLabel->Location = System::Drawing::Point(448, 118);
+			   this->registerUsernameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerUsernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			   this->registerUsernameLabel->Location = System::Drawing::Point(439, 116);
 			   this->registerUsernameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerUsernameLabel->Name = L"registerUsernameLabel";
-			   this->registerUsernameLabel->Size = System::Drawing::Size(73, 17);
+			   this->registerUsernameLabel->Size = System::Drawing::Size(85, 22);
 			   this->registerUsernameLabel->TabIndex = 1;
 			   this->registerUsernameLabel->Text = L"Username";
 			   // 
@@ -696,12 +725,15 @@ namespace OPO2SUMproject {
 			   // 
 			   this->registerRegisterLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerRegisterLabel->AutoSize = true;
-			   this->registerRegisterLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+			   this->registerRegisterLabel->BackColor = System::Drawing::Color::Transparent;
+			   this->registerRegisterLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Bold,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->registerRegisterLabel->Location = System::Drawing::Point(497, 41);
+			   this->registerRegisterLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			   this->registerRegisterLabel->Location = System::Drawing::Point(11, 9);
 			   this->registerRegisterLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerRegisterLabel->Name = L"registerRegisterLabel";
-			   this->registerRegisterLabel->Size = System::Drawing::Size(147, 38);
+			   this->registerRegisterLabel->Size = System::Drawing::Size(151, 46);
 			   this->registerRegisterLabel->TabIndex = 0;
 			   this->registerRegisterLabel->Text = L"Register";
 			   // 
@@ -1048,25 +1080,25 @@ namespace OPO2SUMproject {
 			   // 
 			   this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			   dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			   this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			   dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle7->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle7;
+			   dataGridViewCellStyle2->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle2;
 			   this->clientMDGV->Location = System::Drawing::Point(2, 390);
 			   this->clientMDGV->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->clientMDGV->Name = L"clientMDGV";
@@ -1888,34 +1920,34 @@ namespace OPO2SUMproject {
 			   // 
 			   // dataGridViewstat
 			   // 
-			   dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+			   dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
 			   this->dataGridViewstat->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCellsExceptHeaders;
-			   dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			   dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
+			   dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			   dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+			   dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			   this->dataGridViewstat->ColumnHeadersHeight = 29;
 			   this->dataGridViewstat->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			   dataGridViewCellStyle10->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle10->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle10->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle10->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle10->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle10->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle10;
+			   dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   dataGridViewCellStyle5->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle5;
 			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
 			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->dataGridViewstat->Name = L"dataGridViewstat";
@@ -1931,8 +1963,8 @@ namespace OPO2SUMproject {
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			   this->ClientSize = System::Drawing::Size(1188, 687);
-			   this->Controls->Add(this->loginPanel);
 			   this->Controls->Add(this->registerPanel);
+			   this->Controls->Add(this->loginPanel);
 			   this->Controls->Add(this->hubPanel);
 			   this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
