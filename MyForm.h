@@ -3248,7 +3248,7 @@ private: System::Windows::Forms::ListView^ employeeListView;
 	}
 	private: System::Void Commercial_Value_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ Commercial_Value_of_Stock = Adata->getRows(" Select sum(cost_product) as 'Commercial Value', sum((cost_product+marge_product)*(1+tva_product)) AS 'Buy Value', sum(marge_product) as 'Marge Value' from  opo2sum.dbo.product", "temp");
+		DataSet^ Commercial_Value_of_Stock = Adata->getRows(" Select sum(cost_product*stock_product) as 'Commercial Value', sum((cost_product+marge_product)*(1+tva_product)*stock_product) AS 'Buy Value', sum(marge_product*stock_product) as 'Marge Value' from  opo2sum.dbo.product", "temp");
 		stat_label->Text = "Commercial Value of Stock";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = Commercial_Value_of_Stock; // dataset
