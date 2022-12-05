@@ -217,167 +217,167 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ loginUsernameLabel;
 	private: System::Windows::Forms::Label^ loginBarLabel;
 	private: System::Windows::Forms::Label^ loginBarLabel2;
-private: System::Windows::Forms::Panel^ clientModifyPanel;
-private: System::Windows::Forms::Label^ clientModifyBarLabel;
-private: System::Windows::Forms::NumericUpDown^ clientModifyPostalCodeNumericUpDown;
+	private: System::Windows::Forms::Panel^ clientModifyPanel;
+	private: System::Windows::Forms::Label^ clientModifyBarLabel;
+	private: System::Windows::Forms::NumericUpDown^ clientModifyPostalCodeNumericUpDown;
 
 
 
 
 
-private: System::Windows::Forms::Button^ clientModifyAddAddressButton;
+	private: System::Windows::Forms::Button^ clientModifyAddAddressButton;
 
-private: System::Windows::Forms::Button^ clientModifyDeleteAddressButton;
+	private: System::Windows::Forms::Button^ clientModifyDeleteAddressButton;
 
-private: System::Windows::Forms::ComboBox^ clientModifyAddressPickerComboBox;
-private: System::Windows::Forms::TextBox^ clientModifyMoreInfoTextBox;
+	private: System::Windows::Forms::ComboBox^ clientModifyAddressPickerComboBox;
+	private: System::Windows::Forms::TextBox^ clientModifyMoreInfoTextBox;
 
 
 
-private: System::Windows::Forms::TextBox^ clientModifyCityTextBox;
+	private: System::Windows::Forms::TextBox^ clientModifyCityTextBox;
 
-private: System::Windows::Forms::TextBox^ clientModifyAddressStreetTextBox;
+	private: System::Windows::Forms::TextBox^ clientModifyAddressStreetTextBox;
 
 
 
-private: System::Windows::Forms::TextBox^ clientModifyLastnameTextBox;
+	private: System::Windows::Forms::TextBox^ clientModifyLastnameTextBox;
 
-private: System::Windows::Forms::TextBox^ clientModifyFirstnameTextBox;
+	private: System::Windows::Forms::TextBox^ clientModifyFirstnameTextBox;
 
-private: System::Windows::Forms::TextBox^ clientModifyUsernameTextBox;
-private: System::Windows::Forms::Label^ clientModifyMoreInfoLabel;
+	private: System::Windows::Forms::TextBox^ clientModifyUsernameTextBox;
+	private: System::Windows::Forms::Label^ clientModifyMoreInfoLabel;
 
-private: System::Windows::Forms::Label^ clientModifyPostalCodeLabel;
+	private: System::Windows::Forms::Label^ clientModifyPostalCodeLabel;
 
 
 
 
 
-private: System::Windows::Forms::Label^ clientModifyCityLabel;
+	private: System::Windows::Forms::Label^ clientModifyCityLabel;
 
-private: System::Windows::Forms::Label^ clientModifyAddressStreetLabel;
+	private: System::Windows::Forms::Label^ clientModifyAddressStreetLabel;
 
-private: System::Windows::Forms::Label^ clientModifyAddressLabel;
+	private: System::Windows::Forms::Label^ clientModifyAddressLabel;
 
-private: System::Windows::Forms::Label^ clientModifyBirthdayLabel;
+	private: System::Windows::Forms::Label^ clientModifyBirthdayLabel;
 
 
-private: System::Windows::Forms::Label^ clientModifyLastnameLabel;
+	private: System::Windows::Forms::Label^ clientModifyLastnameLabel;
 
-private: System::Windows::Forms::Label^ clientModifyFirstnameLabel;
+	private: System::Windows::Forms::Label^ clientModifyFirstnameLabel;
 
-private: System::Windows::Forms::Label^ clientModifyUsernameLabel;
+	private: System::Windows::Forms::Label^ clientModifyUsernameLabel;
 
-private: System::Windows::Forms::Label^ clientModifyInformationsLabel;
-private: System::Windows::Forms::DateTimePicker^ clientModifyBirthdayDateTimePicker;
-private: System::Windows::Forms::Button^ clientModifyApplyModifButton;
-private: System::Windows::Forms::Label^ clientModifyErrorBoxLabel;
+	private: System::Windows::Forms::Label^ clientModifyInformationsLabel;
+	private: System::Windows::Forms::DateTimePicker^ clientModifyBirthdayDateTimePicker;
+	private: System::Windows::Forms::Button^ clientModifyApplyModifButton;
+	private: System::Windows::Forms::Label^ clientModifyErrorBoxLabel;
 
-private: System::Windows::Forms::Panel^ employeeListViewPanel;
-private: System::Windows::Forms::Panel^ clientListViewPanel;
-private: System::Windows::Forms::Button^ employeeAddNewEmployeeButton;
-private: System::Windows::Forms::ListView^ employeeListView;
-private: System::Windows::Forms::Panel^ employeeModifyPanel;
-private: System::Windows::Forms::Label^ employeeModifyErrorBoxLabel;
+	private: System::Windows::Forms::Panel^ employeeListViewPanel;
+	private: System::Windows::Forms::Panel^ clientListViewPanel;
+	private: System::Windows::Forms::Button^ employeeAddNewEmployeeButton;
+	private: System::Windows::Forms::ListView^ employeeListView;
+	private: System::Windows::Forms::Panel^ employeeModifyPanel;
+	private: System::Windows::Forms::Label^ employeeModifyErrorBoxLabel;
 
-private: System::Windows::Forms::Button^ employeeModifyApplyModifButton;
+	private: System::Windows::Forms::Button^ employeeModifyApplyModifButton;
 
-private: System::Windows::Forms::DateTimePicker^ employeeModifyBirthdayDateTimePicker;
-private: System::Windows::Forms::Label^ barSeparateLabel;
+	private: System::Windows::Forms::DateTimePicker^ employeeModifyBirthdayDateTimePicker;
+	private: System::Windows::Forms::Label^ barSeparateLabel;
 
 
-private: System::Windows::Forms::NumericUpDown^ employeeModifyPostalCodeNumericUpDown;
-private: System::Windows::Forms::Button^ employeeModifyAddAddressButton;
+	private: System::Windows::Forms::NumericUpDown^ employeeModifyPostalCodeNumericUpDown;
+	private: System::Windows::Forms::Button^ employeeModifyAddAddressButton;
 
 
-private: System::Windows::Forms::Button^ employeeModifyDeleteAddressButton;
+	private: System::Windows::Forms::Button^ employeeModifyDeleteAddressButton;
 
-private: System::Windows::Forms::ComboBox^ employeeModifyAddressPickerComboBox;
-private: System::Windows::Forms::TextBox^ employeeModifyMoreInfoTextBox;
+	private: System::Windows::Forms::ComboBox^ employeeModifyAddressPickerComboBox;
+	private: System::Windows::Forms::TextBox^ employeeModifyMoreInfoTextBox;
 
 
-private: System::Windows::Forms::TextBox^ employeeModifyCityTextBox;
+	private: System::Windows::Forms::TextBox^ employeeModifyCityTextBox;
 
-private: System::Windows::Forms::TextBox^ employeeModifyAddressStreetTextBox;
+	private: System::Windows::Forms::TextBox^ employeeModifyAddressStreetTextBox;
 
-private: System::Windows::Forms::TextBox^ employeeModifyLastnameTextBox;
+	private: System::Windows::Forms::TextBox^ employeeModifyLastnameTextBox;
 
-private: System::Windows::Forms::TextBox^ employeeModifyFirstnameTextBox;
+	private: System::Windows::Forms::TextBox^ employeeModifyFirstnameTextBox;
 
-private: System::Windows::Forms::TextBox^ employeeModifyUsernameTextBox;
-private: System::Windows::Forms::Label^ employeeModifyMoreInfoLabel;
+	private: System::Windows::Forms::TextBox^ employeeModifyUsernameTextBox;
+	private: System::Windows::Forms::Label^ employeeModifyMoreInfoLabel;
 
 
-private: System::Windows::Forms::Label^ employeeModifyPostalCodeLabel;
+	private: System::Windows::Forms::Label^ employeeModifyPostalCodeLabel;
 
-private: System::Windows::Forms::Label^ employeeModifyCityLabel;
+	private: System::Windows::Forms::Label^ employeeModifyCityLabel;
 
-private: System::Windows::Forms::Label^ employeeModifyAddressStreetLabel;
+	private: System::Windows::Forms::Label^ employeeModifyAddressStreetLabel;
 
-private: System::Windows::Forms::Label^ employeeModifyAddressLabel;
+	private: System::Windows::Forms::Label^ employeeModifyAddressLabel;
 
-private: System::Windows::Forms::Label^ employeeModifyBirthdayLabel;
+	private: System::Windows::Forms::Label^ employeeModifyBirthdayLabel;
 
-private: System::Windows::Forms::Label^ employeeModifyLastnameLabel;
+	private: System::Windows::Forms::Label^ employeeModifyLastnameLabel;
 
-private: System::Windows::Forms::Label^ employeeModifyFirstnameLabel;
+	private: System::Windows::Forms::Label^ employeeModifyFirstnameLabel;
 
-private: System::Windows::Forms::Label^ employeeModifyUsernameLabel;
+	private: System::Windows::Forms::Label^ employeeModifyUsernameLabel;
 
-private: System::Windows::Forms::Label^ employeeModifyInformationsLabel;
+	private: System::Windows::Forms::Label^ employeeModifyInformationsLabel;
 
-private: System::Windows::Forms::ListView^ clientListView;
-private: System::Windows::Forms::Label^ employeeModifyHireDateLabel;
-private: System::Windows::Forms::DateTimePicker^ employeeModifyHireDateDateTimePicker;
-private: System::Windows::Forms::Button^ employeeModifyBackButton;
-private: System::Windows::Forms::Button^ clientModifyBackButton;
-private: System::Windows::Forms::Panel^ employeeAddEmployeePanel;
-private: System::Windows::Forms::Label^ employeeAddEmployeeLastnameLabel;
+	private: System::Windows::Forms::ListView^ clientListView;
+	private: System::Windows::Forms::Label^ employeeModifyHireDateLabel;
+	private: System::Windows::Forms::DateTimePicker^ employeeModifyHireDateDateTimePicker;
+	private: System::Windows::Forms::Button^ employeeModifyBackButton;
+	private: System::Windows::Forms::Button^ clientModifyBackButton;
+	private: System::Windows::Forms::Panel^ employeeAddEmployeePanel;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeLastnameLabel;
 
-private: System::Windows::Forms::Label^ employeeAddEmployeeFirstnameLabel;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeFirstnameLabel;
 
-private: System::Windows::Forms::Label^ employeeAddEmployeeUsernameLabel;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeUsernameLabel;
 
-private: System::Windows::Forms::Label^ employeeAddEmployeeLabel;
-private: System::Windows::Forms::DateTimePicker^ employeeAddEmployeeHireDateDateTimePicker;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeLabel;
+	private: System::Windows::Forms::DateTimePicker^ employeeAddEmployeeHireDateDateTimePicker;
 
-private: System::Windows::Forms::DateTimePicker^ employeeAddEmployeeBirthdayDateTimePicker;
+	private: System::Windows::Forms::DateTimePicker^ employeeAddEmployeeBirthdayDateTimePicker;
 
-private: System::Windows::Forms::TextBox^ employeeAddEmployeePasswordTextBox;
+	private: System::Windows::Forms::TextBox^ employeeAddEmployeePasswordTextBox;
 
-private: System::Windows::Forms::TextBox^ employeeAddEmployeeLastnameTextbox;
+	private: System::Windows::Forms::TextBox^ employeeAddEmployeeLastnameTextbox;
 
-private: System::Windows::Forms::TextBox^ employeeAddEmployeeFirstnameTextBox;
+	private: System::Windows::Forms::TextBox^ employeeAddEmployeeFirstnameTextBox;
 
-private: System::Windows::Forms::TextBox^ employeeAddEmployeeUsernameTextBox;
-private: System::Windows::Forms::Button^ employeeAddEmployeeCancelButton;
+	private: System::Windows::Forms::TextBox^ employeeAddEmployeeUsernameTextBox;
+	private: System::Windows::Forms::Button^ employeeAddEmployeeCancelButton;
 
 
-private: System::Windows::Forms::Button^ employeeAddEmployeeAddButton;
+	private: System::Windows::Forms::Button^ employeeAddEmployeeAddButton;
 
-private: System::Windows::Forms::CheckBox^ employeeAddEmployeeManagerCheckBox;
+	private: System::Windows::Forms::CheckBox^ employeeAddEmployeeManagerCheckBox;
 
-private: System::Windows::Forms::Label^ employeeAddEmployeeHireDateLabel;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeHireDateLabel;
 
-private: System::Windows::Forms::Label^ employeeAddEmployeeBirthdayLabel;
-private: System::Windows::Forms::Label^ employeeAddEmployeePasswordLabel;
-private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
-private: System::Windows::Forms::Panel^ simulationPanel;
-private: System::Windows::Forms::Label^ simulationResultLabel;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeBirthdayLabel;
+	private: System::Windows::Forms::Label^ employeeAddEmployeePasswordLabel;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
+	private: System::Windows::Forms::Panel^ simulationPanel;
+	private: System::Windows::Forms::Label^ simulationResultLabel;
 
-private: System::Windows::Forms::Label^ simulationMarkdownLabel;
-private: System::Windows::Forms::Label^ simulationDiscountLabel;
-private: System::Windows::Forms::Label^ simulationMargeLabel;
-private: System::Windows::Forms::Label^ simulationTVALabel;
-private: System::Windows::Forms::Label^ simulationEntryPriceLabel;
-private: System::Windows::Forms::Label^ simulationTitleLabel;
+	private: System::Windows::Forms::Label^ simulationMarkdownLabel;
+	private: System::Windows::Forms::Label^ simulationDiscountLabel;
+	private: System::Windows::Forms::Label^ simulationMargeLabel;
+	private: System::Windows::Forms::Label^ simulationTVALabel;
+	private: System::Windows::Forms::Label^ simulationEntryPriceLabel;
+	private: System::Windows::Forms::Label^ simulationTitleLabel;
 
-private: System::Windows::Forms::ComboBox^ simulationMarkdownComboBox;
+	private: System::Windows::Forms::ComboBox^ simulationMarkdownComboBox;
 
-private: System::Windows::Forms::ComboBox^ simulationDiscountComboBox;
-private: System::Windows::Forms::ComboBox^ simulationMargeComboBox;
-private: System::Windows::Forms::ComboBox^ simulationTVAComboBox;
-private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
+	private: System::Windows::Forms::ComboBox^ simulationDiscountComboBox;
+	private: System::Windows::Forms::ComboBox^ simulationMargeComboBox;
+	private: System::Windows::Forms::ComboBox^ simulationTVAComboBox;
+	private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 
 
 
@@ -515,6 +515,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->hubPanel = (gcnew System::Windows::Forms::Panel());
+			   this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
 			   this->simulationPanel = (gcnew System::Windows::Forms::Panel());
 			   this->simulationResultLabel = (gcnew System::Windows::Forms::Label());
 			   this->simulationMarkdownLabel = (gcnew System::Windows::Forms::Label());
@@ -528,6 +529,16 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->simulationMargeComboBox = (gcnew System::Windows::Forms::ComboBox());
 			   this->simulationTVAComboBox = (gcnew System::Windows::Forms::ComboBox());
 			   this->simulationEntryPriceTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->Purchase_Value_button = (gcnew System::Windows::Forms::Button());
+			   this->Commercial_Value_button = (gcnew System::Windows::Forms::Button());
+			   this->buys_down_button = (gcnew System::Windows::Forms::Button());
+			   this->top_buys_button = (gcnew System::Windows::Forms::Button());
+			   this->Amount_per_client_button = (gcnew System::Windows::Forms::Button());
+			   this->Prod_u_restocking_button = (gcnew System::Windows::Forms::Button());
+			   this->turnover_button = (gcnew System::Windows::Forms::Button());
+			   this->Panier_Poyen_Button = (gcnew System::Windows::Forms::Button());
+			   this->dataGridViewstat = (gcnew System::Windows::Forms::DataGridView());
+			   this->stat_label = (gcnew System::Windows::Forms::Label());
 			   this->employeeAddEmployeePanel = (gcnew System::Windows::Forms::Panel());
 			   this->employeeAddEmployeeErrorBoxLabel = (gcnew System::Windows::Forms::Label());
 			   this->employeeAddEmployeeHireDateDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
@@ -627,17 +638,6 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->catalogBackButton = (gcnew System::Windows::Forms::Button());
 			   this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
 			   this->catalogCartTitleLabel = (gcnew System::Windows::Forms::Label());
-			   this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
-			   this->Purchase_Value_button = (gcnew System::Windows::Forms::Button());
-			   this->Commercial_Value_button = (gcnew System::Windows::Forms::Button());
-			   this->buys_down_button = (gcnew System::Windows::Forms::Button());
-			   this->top_buys_button = (gcnew System::Windows::Forms::Button());
-			   this->Amount_per_client_button = (gcnew System::Windows::Forms::Button());
-			   this->Prod_u_restocking_button = (gcnew System::Windows::Forms::Button());
-			   this->turnover_button = (gcnew System::Windows::Forms::Button());
-			   this->Panier_Poyen_Button = (gcnew System::Windows::Forms::Button());
-			   this->dataGridViewstat = (gcnew System::Windows::Forms::DataGridView());
-			   this->stat_label = (gcnew System::Windows::Forms::Label());
 			   this->loginPanel->SuspendLayout();
 			   this->loginTextPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
@@ -653,7 +653,9 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->accountPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			   this->hubPanel->SuspendLayout();
+			   this->statisticMPanel->SuspendLayout();
 			   this->simulationPanel->SuspendLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
 			   this->employeeAddEmployeePanel->SuspendLayout();
 			   this->employeeListViewPanel->SuspendLayout();
 			   this->clientListViewPanel->SuspendLayout();
@@ -664,8 +666,6 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->preCatalogPanel->SuspendLayout();
 			   this->catalogOrderPanel->SuspendLayout();
 			   this->catalogCartPanel->SuspendLayout();
-			   this->statisticMPanel->SuspendLayout();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
@@ -1611,7 +1611,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->menuPersonnellManageButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->menuPersonnellManageButton->ForeColor = System::Drawing::Color::White;
-			   this->menuPersonnellManageButton->Location = System::Drawing::Point(0, 380);
+			   this->menuPersonnellManageButton->Location = System::Drawing::Point(-2, 380);
 			   this->menuPersonnellManageButton->Name = L"menuPersonnellManageButton";
 			   this->menuPersonnellManageButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
 			   this->menuPersonnellManageButton->Size = System::Drawing::Size(220, 60);
@@ -1676,7 +1676,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->menuStatisticButton->ForeColor = System::Drawing::Color::White;
-			   this->menuStatisticButton->Location = System::Drawing::Point(0, 260);
+			   this->menuStatisticButton->Location = System::Drawing::Point(-1, 260);
 			   this->menuStatisticButton->Name = L"menuStatisticButton";
 			   this->menuStatisticButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
 			   this->menuStatisticButton->Size = System::Drawing::Size(220, 60);
@@ -1739,7 +1739,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->menuClientButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->menuClientButton->ForeColor = System::Drawing::Color::White;
-			   this->menuClientButton->Location = System::Drawing::Point(-3, 321);
+			   this->menuClientButton->Location = System::Drawing::Point(-2, 321);
 			   this->menuClientButton->Name = L"menuClientButton";
 			   this->menuClientButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
 			   this->menuClientButton->Size = System::Drawing::Size(220, 60);
@@ -2079,10 +2079,11 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   // 
 			   // hubPanel
 			   // 
-			   this->hubPanel->Controls->Add(this->simulationPanel);
-			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
+			   this->hubPanel->Controls->Add(this->statisticMPanel);
+			   this->hubPanel->Controls->Add(this->orderMPanel);
+			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
 			   this->hubPanel->Controls->Add(this->employeeListViewPanel);
 			   this->hubPanel->Controls->Add(this->clientListViewPanel);
 			   this->hubPanel->Controls->Add(this->clientModifyPanel);
@@ -2094,12 +2095,28 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->hubPanel->Controls->Add(this->catalogCartPanel);
 			   this->hubPanel->Controls->Add(this->addStockPanel);
 			   this->hubPanel->Controls->Add(this->stockMPanel);
-			   this->hubPanel->Controls->Add(this->statisticMPanel);
-			   this->hubPanel->Controls->Add(this->orderMPanel);
 			   this->hubPanel->Location = System::Drawing::Point(0, 0);
 			   this->hubPanel->Name = L"hubPanel";
 			   this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			   this->hubPanel->TabIndex = 29;
+			   // 
+			   // statisticMPanel
+			   // 
+			   this->statisticMPanel->Controls->Add(this->simulationPanel);
+			   this->statisticMPanel->Controls->Add(this->Purchase_Value_button);
+			   this->statisticMPanel->Controls->Add(this->Commercial_Value_button);
+			   this->statisticMPanel->Controls->Add(this->buys_down_button);
+			   this->statisticMPanel->Controls->Add(this->top_buys_button);
+			   this->statisticMPanel->Controls->Add(this->Amount_per_client_button);
+			   this->statisticMPanel->Controls->Add(this->Prod_u_restocking_button);
+			   this->statisticMPanel->Controls->Add(this->turnover_button);
+			   this->statisticMPanel->Controls->Add(this->Panier_Poyen_Button);
+			   this->statisticMPanel->Controls->Add(this->dataGridViewstat);
+			   this->statisticMPanel->Controls->Add(this->stat_label);
+			   this->statisticMPanel->Location = System::Drawing::Point(220, 80);
+			   this->statisticMPanel->Name = L"statisticMPanel";
+			   this->statisticMPanel->Size = System::Drawing::Size(968, 607);
+			   this->statisticMPanel->TabIndex = 10;
 			   // 
 			   // simulationPanel
 			   // 
@@ -2115,14 +2132,14 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->simulationPanel->Controls->Add(this->simulationMargeComboBox);
 			   this->simulationPanel->Controls->Add(this->simulationTVAComboBox);
 			   this->simulationPanel->Controls->Add(this->simulationEntryPriceTextBox);
-			   this->simulationPanel->Location = System::Drawing::Point(220, 80);
+			   this->simulationPanel->Location = System::Drawing::Point(24, 9);
 			   this->simulationPanel->Name = L"simulationPanel";
-			   this->simulationPanel->Size = System::Drawing::Size(968, 607);
+			   this->simulationPanel->Size = System::Drawing::Size(918, 421);
 			   this->simulationPanel->TabIndex = 17;
 			   // 
 			   // simulationResultLabel
 			   // 
-			   this->simulationResultLabel->Location = System::Drawing::Point(646, 217);
+			   this->simulationResultLabel->Location = System::Drawing::Point(602, 277);
 			   this->simulationResultLabel->Name = L"simulationResultLabel";
 			   this->simulationResultLabel->Size = System::Drawing::Size(259, 109);
 			   this->simulationResultLabel->TabIndex = 11;
@@ -2131,7 +2148,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   // simulationMarkdownLabel
 			   // 
 			   this->simulationMarkdownLabel->AutoSize = true;
-			   this->simulationMarkdownLabel->Location = System::Drawing::Point(741, 131);
+			   this->simulationMarkdownLabel->Location = System::Drawing::Point(727, 206);
 			   this->simulationMarkdownLabel->Name = L"simulationMarkdownLabel";
 			   this->simulationMarkdownLabel->Size = System::Drawing::Size(152, 17);
 			   this->simulationMarkdownLabel->TabIndex = 10;
@@ -2140,7 +2157,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   // simulationDiscountLabel
 			   // 
 			   this->simulationDiscountLabel->AutoSize = true;
-			   this->simulationDiscountLabel->Location = System::Drawing::Point(601, 131);
+			   this->simulationDiscountLabel->Location = System::Drawing::Point(587, 206);
 			   this->simulationDiscountLabel->Name = L"simulationDiscountLabel";
 			   this->simulationDiscountLabel->Size = System::Drawing::Size(89, 17);
 			   this->simulationDiscountLabel->TabIndex = 9;
@@ -2149,7 +2166,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   // simulationMargeLabel
 			   // 
 			   this->simulationMargeLabel->AutoSize = true;
-			   this->simulationMargeLabel->Location = System::Drawing::Point(451, 131);
+			   this->simulationMargeLabel->Location = System::Drawing::Point(437, 206);
 			   this->simulationMargeLabel->Name = L"simulationMargeLabel";
 			   this->simulationMargeLabel->Size = System::Drawing::Size(74, 17);
 			   this->simulationMargeLabel->TabIndex = 8;
@@ -2158,7 +2175,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   // simulationTVALabel
 			   // 
 			   this->simulationTVALabel->AutoSize = true;
-			   this->simulationTVALabel->Location = System::Drawing::Point(306, 129);
+			   this->simulationTVALabel->Location = System::Drawing::Point(292, 204);
 			   this->simulationTVALabel->Name = L"simulationTVALabel";
 			   this->simulationTVALabel->Size = System::Drawing::Size(61, 17);
 			   this->simulationTVALabel->TabIndex = 7;
@@ -2167,7 +2184,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   // simulationEntryPriceLabel
 			   // 
 			   this->simulationEntryPriceLabel->AutoSize = true;
-			   this->simulationEntryPriceLabel->Location = System::Drawing::Point(68, 129);
+			   this->simulationEntryPriceLabel->Location = System::Drawing::Point(54, 204);
 			   this->simulationEntryPriceLabel->Name = L"simulationEntryPriceLabel";
 			   this->simulationEntryPriceLabel->Size = System::Drawing::Size(83, 17);
 			   this->simulationEntryPriceLabel->TabIndex = 6;
@@ -2178,50 +2195,188 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->simulationTitleLabel->AutoSize = true;
 			   this->simulationTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->simulationTitleLabel->Location = System::Drawing::Point(13, 13);
+			   this->simulationTitleLabel->Location = System::Drawing::Point(21, 86);
 			   this->simulationTitleLabel->Name = L"simulationTitleLabel";
-			   this->simulationTitleLabel->Size = System::Drawing::Size(177, 39);
+			   this->simulationTitleLabel->Size = System::Drawing::Size(168, 38);
 			   this->simulationTitleLabel->TabIndex = 5;
 			   this->simulationTitleLabel->Text = L"Simulation";
 			   // 
 			   // simulationMarkdownComboBox
 			   // 
 			   this->simulationMarkdownComboBox->FormattingEnabled = true;
-			   this->simulationMarkdownComboBox->Location = System::Drawing::Point(744, 152);
+			   this->simulationMarkdownComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"0", L"2", L"3", L"5" });
+			   this->simulationMarkdownComboBox->Location = System::Drawing::Point(730, 227);
 			   this->simulationMarkdownComboBox->Name = L"simulationMarkdownComboBox";
 			   this->simulationMarkdownComboBox->Size = System::Drawing::Size(149, 24);
 			   this->simulationMarkdownComboBox->TabIndex = 4;
+			   this->simulationMarkdownComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationDiscountComboBox
 			   // 
 			   this->simulationDiscountComboBox->FormattingEnabled = true;
-			   this->simulationDiscountComboBox->Location = System::Drawing::Point(604, 152);
+			   this->simulationDiscountComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0", L"5", L"6" });
+			   this->simulationDiscountComboBox->Location = System::Drawing::Point(590, 227);
 			   this->simulationDiscountComboBox->Name = L"simulationDiscountComboBox";
 			   this->simulationDiscountComboBox->Size = System::Drawing::Size(121, 24);
 			   this->simulationDiscountComboBox->TabIndex = 3;
+			   this->simulationDiscountComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationMargeComboBox
 			   // 
 			   this->simulationMargeComboBox->FormattingEnabled = true;
-			   this->simulationMargeComboBox->Location = System::Drawing::Point(454, 152);
+			   this->simulationMargeComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"0", L"5", L"10", L"15" });
+			   this->simulationMargeComboBox->Location = System::Drawing::Point(440, 227);
 			   this->simulationMargeComboBox->Name = L"simulationMargeComboBox";
 			   this->simulationMargeComboBox->Size = System::Drawing::Size(121, 24);
 			   this->simulationMargeComboBox->TabIndex = 2;
+			   this->simulationMargeComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationTVAComboBox
 			   // 
 			   this->simulationTVAComboBox->FormattingEnabled = true;
-			   this->simulationTVAComboBox->Location = System::Drawing::Point(307, 152);
+			   this->simulationTVAComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"0", L"5.5", L"10", L"20" });
+			   this->simulationTVAComboBox->Location = System::Drawing::Point(293, 227);
 			   this->simulationTVAComboBox->Name = L"simulationTVAComboBox";
 			   this->simulationTVAComboBox->Size = System::Drawing::Size(121, 24);
 			   this->simulationTVAComboBox->TabIndex = 1;
+			   this->simulationTVAComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationEntryPriceTextBox
 			   // 
-			   this->simulationEntryPriceTextBox->Location = System::Drawing::Point(67, 152);
+			   this->simulationEntryPriceTextBox->Location = System::Drawing::Point(53, 227);
 			   this->simulationEntryPriceTextBox->Name = L"simulationEntryPriceTextBox";
 			   this->simulationEntryPriceTextBox->Size = System::Drawing::Size(186, 22);
 			   this->simulationEntryPriceTextBox->TabIndex = 0;
+			   this->simulationEntryPriceTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
+			   // 
+			   // Purchase_Value_button
+			   // 
+			   this->Purchase_Value_button->Location = System::Drawing::Point(730, 524);
+			   this->Purchase_Value_button->Name = L"Purchase_Value_button";
+			   this->Purchase_Value_button->Size = System::Drawing::Size(164, 50);
+			   this->Purchase_Value_button->TabIndex = 8;
+			   this->Purchase_Value_button->Text = L"Value Simulation";
+			   this->Purchase_Value_button->UseVisualStyleBackColor = true;
+			   this->Purchase_Value_button->Click += gcnew System::EventHandler(this, &MyForm::Purchase_Value_button_Click);
+			   // 
+			   // Commercial_Value_button
+			   // 
+			   this->Commercial_Value_button->Location = System::Drawing::Point(730, 460);
+			   this->Commercial_Value_button->Name = L"Commercial_Value_button";
+			   this->Commercial_Value_button->Size = System::Drawing::Size(164, 50);
+			   this->Commercial_Value_button->TabIndex = 7;
+			   this->Commercial_Value_button->Text = L"Commercial value of stock";
+			   this->Commercial_Value_button->UseVisualStyleBackColor = true;
+			   this->Commercial_Value_button->Click += gcnew System::EventHandler(this, &MyForm::Commercial_Value_button_Click);
+			   // 
+			   // buys_down_button
+			   // 
+			   this->buys_down_button->Location = System::Drawing::Point(502, 523);
+			   this->buys_down_button->Name = L"buys_down_button";
+			   this->buys_down_button->Size = System::Drawing::Size(164, 50);
+			   this->buys_down_button->TabIndex = 6;
+			   this->buys_down_button->Text = L"10 - buy";
+			   this->buys_down_button->UseVisualStyleBackColor = true;
+			   this->buys_down_button->Click += gcnew System::EventHandler(this, &MyForm::buys_down_button_Click);
+			   // 
+			   // top_buys_button
+			   // 
+			   this->top_buys_button->Location = System::Drawing::Point(502, 460);
+			   this->top_buys_button->Name = L"top_buys_button";
+			   this->top_buys_button->Size = System::Drawing::Size(164, 50);
+			   this->top_buys_button->TabIndex = 5;
+			   this->top_buys_button->Text = L"10 + buy";
+			   this->top_buys_button->UseVisualStyleBackColor = true;
+			   this->top_buys_button->Click += gcnew System::EventHandler(this, &MyForm::top_buys_button_Click);
+			   // 
+			   // Amount_per_client_button
+			   // 
+			   this->Amount_per_client_button->Location = System::Drawing::Point(279, 523);
+			   this->Amount_per_client_button->Name = L"Amount_per_client_button";
+			   this->Amount_per_client_button->Size = System::Drawing::Size(164, 50);
+			   this->Amount_per_client_button->TabIndex = 4;
+			   this->Amount_per_client_button->Text = L"Total amount per client";
+			   this->Amount_per_client_button->UseVisualStyleBackColor = true;
+			   this->Amount_per_client_button->Click += gcnew System::EventHandler(this, &MyForm::Amount_per_client_button_Click);
+			   // 
+			   // Prod_u_restocking_button
+			   // 
+			   this->Prod_u_restocking_button->Location = System::Drawing::Point(279, 460);
+			   this->Prod_u_restocking_button->Name = L"Prod_u_restocking_button";
+			   this->Prod_u_restocking_button->Size = System::Drawing::Size(164, 50);
+			   this->Prod_u_restocking_button->TabIndex = 3;
+			   this->Prod_u_restocking_button->Text = L"Products under restocking threshold";
+			   this->Prod_u_restocking_button->UseVisualStyleBackColor = true;
+			   this->Prod_u_restocking_button->Click += gcnew System::EventHandler(this, &MyForm::Prod_u_restocking_button_Click);
+			   // 
+			   // turnover_button
+			   // 
+			   this->turnover_button->Location = System::Drawing::Point(57, 524);
+			   this->turnover_button->Name = L"turnover_button";
+			   this->turnover_button->Size = System::Drawing::Size(164, 50);
+			   this->turnover_button->TabIndex = 2;
+			   this->turnover_button->Text = L"Turnover per month";
+			   this->turnover_button->UseVisualStyleBackColor = true;
+			   this->turnover_button->Click += gcnew System::EventHandler(this, &MyForm::turnover_button_Click);
+			   // 
+			   // Panier_Poyen_Button
+			   // 
+			   this->Panier_Poyen_Button->Location = System::Drawing::Point(57, 460);
+			   this->Panier_Poyen_Button->Name = L"Panier_Poyen_Button";
+			   this->Panier_Poyen_Button->Size = System::Drawing::Size(164, 50);
+			   this->Panier_Poyen_Button->TabIndex = 1;
+			   this->Panier_Poyen_Button->Text = L"Average basket";
+			   this->Panier_Poyen_Button->UseVisualStyleBackColor = true;
+			   this->Panier_Poyen_Button->Click += gcnew System::EventHandler(this, &MyForm::Panier_Poyen_Button_Click);
+			   // 
+			   // dataGridViewstat
+			   // 
+			   dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
+			   this->dataGridViewstat->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCellsExceptHeaders;
+			   dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			   dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+			   this->dataGridViewstat->ColumnHeadersHeight = 29;
+			   this->dataGridViewstat->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
+			   dataGridViewCellStyle10->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle10->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   dataGridViewCellStyle10->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle10->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle10->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle10->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle10;
+			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
+			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->dataGridViewstat->Name = L"dataGridViewstat";
+			   this->dataGridViewstat->ReadOnly = true;
+			   this->dataGridViewstat->RowHeadersWidth = 51;
+			   this->dataGridViewstat->RowTemplate->Height = 24;
+			   this->dataGridViewstat->Size = System::Drawing::Size(918, 371);
+			   this->dataGridViewstat->TabIndex = 0;
+			   // 
+			   // stat_label
+			   // 
+			   this->stat_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   this->stat_label->Location = System::Drawing::Point(83, 4);
+			   this->stat_label->Name = L"stat_label";
+			   this->stat_label->Size = System::Drawing::Size(783, 40);
+			   this->stat_label->TabIndex = 9;
+			   this->stat_label->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
 			   // employeeAddEmployeePanel
 			   // 
@@ -2242,7 +2397,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeFirstnameLabel);
 			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeUsernameLabel);
 			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeLabel);
-			   this->employeeAddEmployeePanel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeePanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeePanel->Location = System::Drawing::Point(220, 80);
 			   this->employeeAddEmployeePanel->Name = L"employeeAddEmployeePanel";
@@ -2261,20 +2416,20 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   // 
 			   // employeeAddEmployeeHireDateDateTimePicker
 			   // 
-			   this->employeeAddEmployeeHireDateDateTimePicker->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeeHireDateDateTimePicker->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeeHireDateDateTimePicker->Location = System::Drawing::Point(357, 404);
 			   this->employeeAddEmployeeHireDateDateTimePicker->Name = L"employeeAddEmployeeHireDateDateTimePicker";
-			   this->employeeAddEmployeeHireDateDateTimePicker->Size = System::Drawing::Size(268, 25);
+			   this->employeeAddEmployeeHireDateDateTimePicker->Size = System::Drawing::Size(268, 22);
 			   this->employeeAddEmployeeHireDateDateTimePicker->TabIndex = 15;
 			   // 
 			   // employeeAddEmployeeBirthdayDateTimePicker
 			   // 
-			   this->employeeAddEmployeeBirthdayDateTimePicker->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeeBirthdayDateTimePicker->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeeBirthdayDateTimePicker->Location = System::Drawing::Point(357, 342);
 			   this->employeeAddEmployeeBirthdayDateTimePicker->Name = L"employeeAddEmployeeBirthdayDateTimePicker";
-			   this->employeeAddEmployeeBirthdayDateTimePicker->Size = System::Drawing::Size(268, 25);
+			   this->employeeAddEmployeeBirthdayDateTimePicker->Size = System::Drawing::Size(268, 22);
 			   this->employeeAddEmployeeBirthdayDateTimePicker->TabIndex = 14;
 			   // 
 			   // employeeAddEmployeePasswordTextBox
@@ -2282,7 +2437,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->employeeAddEmployeePasswordTextBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			   this->employeeAddEmployeePasswordTextBox->Location = System::Drawing::Point(357, 282);
 			   this->employeeAddEmployeePasswordTextBox->Name = L"employeeAddEmployeePasswordTextBox";
-			   this->employeeAddEmployeePasswordTextBox->Size = System::Drawing::Size(268, 25);
+			   this->employeeAddEmployeePasswordTextBox->Size = System::Drawing::Size(268, 22);
 			   this->employeeAddEmployeePasswordTextBox->TabIndex = 13;
 			   // 
 			   // employeeAddEmployeeLastnameTextbox
@@ -2290,7 +2445,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->employeeAddEmployeeLastnameTextbox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			   this->employeeAddEmployeeLastnameTextbox->Location = System::Drawing::Point(357, 223);
 			   this->employeeAddEmployeeLastnameTextbox->Name = L"employeeAddEmployeeLastnameTextbox";
-			   this->employeeAddEmployeeLastnameTextbox->Size = System::Drawing::Size(268, 25);
+			   this->employeeAddEmployeeLastnameTextbox->Size = System::Drawing::Size(268, 22);
 			   this->employeeAddEmployeeLastnameTextbox->TabIndex = 12;
 			   // 
 			   // employeeAddEmployeeFirstnameTextBox
@@ -2298,7 +2453,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->employeeAddEmployeeFirstnameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			   this->employeeAddEmployeeFirstnameTextBox->Location = System::Drawing::Point(357, 162);
 			   this->employeeAddEmployeeFirstnameTextBox->Name = L"employeeAddEmployeeFirstnameTextBox";
-			   this->employeeAddEmployeeFirstnameTextBox->Size = System::Drawing::Size(268, 25);
+			   this->employeeAddEmployeeFirstnameTextBox->Size = System::Drawing::Size(268, 22);
 			   this->employeeAddEmployeeFirstnameTextBox->TabIndex = 11;
 			   // 
 			   // employeeAddEmployeeUsernameTextBox
@@ -2306,12 +2461,12 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->employeeAddEmployeeUsernameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			   this->employeeAddEmployeeUsernameTextBox->Location = System::Drawing::Point(357, 105);
 			   this->employeeAddEmployeeUsernameTextBox->Name = L"employeeAddEmployeeUsernameTextBox";
-			   this->employeeAddEmployeeUsernameTextBox->Size = System::Drawing::Size(268, 25);
+			   this->employeeAddEmployeeUsernameTextBox->Size = System::Drawing::Size(268, 22);
 			   this->employeeAddEmployeeUsernameTextBox->TabIndex = 10;
 			   // 
 			   // employeeAddEmployeeCancelButton
 			   // 
-			   this->employeeAddEmployeeCancelButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeeCancelButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeeCancelButton->Location = System::Drawing::Point(550, 525);
 			   this->employeeAddEmployeeCancelButton->Name = L"employeeAddEmployeeCancelButton";
@@ -2322,7 +2477,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   // 
 			   // employeeAddEmployeeAddButton
 			   // 
-			   this->employeeAddEmployeeAddButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeeAddButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeeAddButton->Location = System::Drawing::Point(454, 525);
 			   this->employeeAddEmployeeAddButton->Name = L"employeeAddEmployeeAddButton";
@@ -2334,11 +2489,11 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   // employeeAddEmployeeManagerCheckBox
 			   // 
 			   this->employeeAddEmployeeManagerCheckBox->AutoSize = true;
-			   this->employeeAddEmployeeManagerCheckBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeeManagerCheckBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeeManagerCheckBox->Location = System::Drawing::Point(357, 532);
 			   this->employeeAddEmployeeManagerCheckBox->Name = L"employeeAddEmployeeManagerCheckBox";
-			   this->employeeAddEmployeeManagerCheckBox->Size = System::Drawing::Size(85, 23);
+			   this->employeeAddEmployeeManagerCheckBox->Size = System::Drawing::Size(86, 21);
 			   this->employeeAddEmployeeManagerCheckBox->TabIndex = 7;
 			   this->employeeAddEmployeeManagerCheckBox->Text = L"Manager";
 			   this->employeeAddEmployeeManagerCheckBox->UseVisualStyleBackColor = true;
@@ -2348,73 +2503,73 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->employeeAddEmployeeHireDateLabel->AutoSize = true;
 			   this->employeeAddEmployeeHireDateLabel->Location = System::Drawing::Point(368, 379);
 			   this->employeeAddEmployeeHireDateLabel->Name = L"employeeAddEmployeeHireDateLabel";
-			   this->employeeAddEmployeeHireDateLabel->Size = System::Drawing::Size(66, 19);
+			   this->employeeAddEmployeeHireDateLabel->Size = System::Drawing::Size(68, 17);
 			   this->employeeAddEmployeeHireDateLabel->TabIndex = 6;
 			   this->employeeAddEmployeeHireDateLabel->Text = L"Hire Date";
 			   // 
 			   // employeeAddEmployeeBirthdayLabel
 			   // 
 			   this->employeeAddEmployeeBirthdayLabel->AutoSize = true;
-			   this->employeeAddEmployeeBirthdayLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeeBirthdayLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeeBirthdayLabel->Location = System::Drawing::Point(368, 320);
 			   this->employeeAddEmployeeBirthdayLabel->Name = L"employeeAddEmployeeBirthdayLabel";
-			   this->employeeAddEmployeeBirthdayLabel->Size = System::Drawing::Size(60, 19);
+			   this->employeeAddEmployeeBirthdayLabel->Size = System::Drawing::Size(60, 17);
 			   this->employeeAddEmployeeBirthdayLabel->TabIndex = 5;
 			   this->employeeAddEmployeeBirthdayLabel->Text = L"Birthday";
 			   // 
 			   // employeeAddEmployeePasswordLabel
 			   // 
 			   this->employeeAddEmployeePasswordLabel->AutoSize = true;
-			   this->employeeAddEmployeePasswordLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeePasswordLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeePasswordLabel->Location = System::Drawing::Point(368, 260);
 			   this->employeeAddEmployeePasswordLabel->Name = L"employeeAddEmployeePasswordLabel";
-			   this->employeeAddEmployeePasswordLabel->Size = System::Drawing::Size(67, 19);
+			   this->employeeAddEmployeePasswordLabel->Size = System::Drawing::Size(69, 17);
 			   this->employeeAddEmployeePasswordLabel->TabIndex = 4;
 			   this->employeeAddEmployeePasswordLabel->Text = L"Password";
 			   // 
 			   // employeeAddEmployeeLastnameLabel
 			   // 
 			   this->employeeAddEmployeeLastnameLabel->AutoSize = true;
-			   this->employeeAddEmployeeLastnameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeeLastnameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeeLastnameLabel->Location = System::Drawing::Point(368, 197);
 			   this->employeeAddEmployeeLastnameLabel->Name = L"employeeAddEmployeeLastnameLabel";
-			   this->employeeAddEmployeeLastnameLabel->Size = System::Drawing::Size(67, 19);
+			   this->employeeAddEmployeeLastnameLabel->Size = System::Drawing::Size(70, 17);
 			   this->employeeAddEmployeeLastnameLabel->TabIndex = 3;
 			   this->employeeAddEmployeeLastnameLabel->Text = L"Lastname";
 			   // 
 			   // employeeAddEmployeeFirstnameLabel
 			   // 
 			   this->employeeAddEmployeeFirstnameLabel->AutoSize = true;
-			   this->employeeAddEmployeeFirstnameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeeFirstnameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeeFirstnameLabel->Location = System::Drawing::Point(368, 139);
 			   this->employeeAddEmployeeFirstnameLabel->Name = L"employeeAddEmployeeFirstnameLabel";
-			   this->employeeAddEmployeeFirstnameLabel->Size = System::Drawing::Size(69, 19);
+			   this->employeeAddEmployeeFirstnameLabel->Size = System::Drawing::Size(70, 17);
 			   this->employeeAddEmployeeFirstnameLabel->TabIndex = 2;
 			   this->employeeAddEmployeeFirstnameLabel->Text = L"Firstname";
 			   // 
 			   // employeeAddEmployeeUsernameLabel
 			   // 
 			   this->employeeAddEmployeeUsernameLabel->AutoSize = true;
-			   this->employeeAddEmployeeUsernameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeeUsernameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeeUsernameLabel->Location = System::Drawing::Point(368, 84);
 			   this->employeeAddEmployeeUsernameLabel->Name = L"employeeAddEmployeeUsernameLabel";
-			   this->employeeAddEmployeeUsernameLabel->Size = System::Drawing::Size(70, 19);
+			   this->employeeAddEmployeeUsernameLabel->Size = System::Drawing::Size(73, 17);
 			   this->employeeAddEmployeeUsernameLabel->TabIndex = 1;
 			   this->employeeAddEmployeeUsernameLabel->Text = L"Username";
 			   // 
 			   // employeeAddEmployeeLabel
 			   // 
 			   this->employeeAddEmployeeLabel->AutoSize = true;
-			   this->employeeAddEmployeeLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 16.2F, System::Drawing::FontStyle::Regular,
+			   this->employeeAddEmployeeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->employeeAddEmployeeLabel->Location = System::Drawing::Point(350, 6);
 			   this->employeeAddEmployeeLabel->Name = L"employeeAddEmployeeLabel";
-			   this->employeeAddEmployeeLabel->Size = System::Drawing::Size(258, 37);
+			   this->employeeAddEmployeeLabel->Size = System::Drawing::Size(263, 32);
 			   this->employeeAddEmployeeLabel->TabIndex = 0;
 			   this->employeeAddEmployeeLabel->Text = L"Add New Employee";
 			   // 
@@ -3063,6 +3218,8 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   // 
 			   // preCatalogListView
 			   // 
+			   this->preCatalogListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->preCatalogListView->HideSelection = false;
 			   this->preCatalogListView->Location = System::Drawing::Point(19, 142);
 			   this->preCatalogListView->Name = L"preCatalogListView";
@@ -3227,151 +3384,6 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->catalogCartTitleLabel->TabIndex = 0;
 			   this->catalogCartTitleLabel->Text = L"Cart";
 			   // 
-			   // statisticMPanel
-			   // 
-			   this->statisticMPanel->Controls->Add(this->Purchase_Value_button);
-			   this->statisticMPanel->Controls->Add(this->Commercial_Value_button);
-			   this->statisticMPanel->Controls->Add(this->buys_down_button);
-			   this->statisticMPanel->Controls->Add(this->top_buys_button);
-			   this->statisticMPanel->Controls->Add(this->Amount_per_client_button);
-			   this->statisticMPanel->Controls->Add(this->Prod_u_restocking_button);
-			   this->statisticMPanel->Controls->Add(this->turnover_button);
-			   this->statisticMPanel->Controls->Add(this->Panier_Poyen_Button);
-			   this->statisticMPanel->Controls->Add(this->dataGridViewstat);
-			   this->statisticMPanel->Controls->Add(this->stat_label);
-			   this->statisticMPanel->Location = System::Drawing::Point(220, 80);
-			   this->statisticMPanel->Name = L"statisticMPanel";
-			   this->statisticMPanel->Size = System::Drawing::Size(968, 607);
-			   this->statisticMPanel->TabIndex = 10;
-			   // 
-			   // Purchase_Value_button
-			   // 
-			   this->Purchase_Value_button->Location = System::Drawing::Point(730, 524);
-			   this->Purchase_Value_button->Name = L"Purchase_Value_button";
-			   this->Purchase_Value_button->Size = System::Drawing::Size(164, 50);
-			   this->Purchase_Value_button->TabIndex = 8;
-			   this->Purchase_Value_button->UseVisualStyleBackColor = true;
-			   this->Purchase_Value_button->Click += gcnew System::EventHandler(this, &MyForm::Purchase_Value_button_Click);
-			   // 
-			   // Commercial_Value_button
-			   // 
-			   this->Commercial_Value_button->Location = System::Drawing::Point(730, 460);
-			   this->Commercial_Value_button->Name = L"Commercial_Value_button";
-			   this->Commercial_Value_button->Size = System::Drawing::Size(164, 50);
-			   this->Commercial_Value_button->TabIndex = 7;
-			   this->Commercial_Value_button->Text = L"Commercial value of stock";
-			   this->Commercial_Value_button->UseVisualStyleBackColor = true;
-			   this->Commercial_Value_button->Click += gcnew System::EventHandler(this, &MyForm::Commercial_Value_button_Click);
-			   // 
-			   // buys_down_button
-			   // 
-			   this->buys_down_button->Location = System::Drawing::Point(502, 523);
-			   this->buys_down_button->Name = L"buys_down_button";
-			   this->buys_down_button->Size = System::Drawing::Size(164, 50);
-			   this->buys_down_button->TabIndex = 6;
-			   this->buys_down_button->Text = L"10 - buy";
-			   this->buys_down_button->UseVisualStyleBackColor = true;
-			   this->buys_down_button->Click += gcnew System::EventHandler(this, &MyForm::buys_down_button_Click);
-			   // 
-			   // top_buys_button
-			   // 
-			   this->top_buys_button->Location = System::Drawing::Point(502, 460);
-			   this->top_buys_button->Name = L"top_buys_button";
-			   this->top_buys_button->Size = System::Drawing::Size(164, 50);
-			   this->top_buys_button->TabIndex = 5;
-			   this->top_buys_button->Text = L"10 + buy";
-			   this->top_buys_button->UseVisualStyleBackColor = true;
-			   this->top_buys_button->Click += gcnew System::EventHandler(this, &MyForm::top_buys_button_Click);
-			   // 
-			   // Amount_per_client_button
-			   // 
-			   this->Amount_per_client_button->Location = System::Drawing::Point(279, 523);
-			   this->Amount_per_client_button->Name = L"Amount_per_client_button";
-			   this->Amount_per_client_button->Size = System::Drawing::Size(164, 50);
-			   this->Amount_per_client_button->TabIndex = 4;
-			   this->Amount_per_client_button->Text = L"Total amount of a client";
-			   this->Amount_per_client_button->UseVisualStyleBackColor = true;
-			   this->Amount_per_client_button->Click += gcnew System::EventHandler(this, &MyForm::Amount_per_client_button_Click);
-			   // 
-			   // Prod_u_restocking_button
-			   // 
-			   this->Prod_u_restocking_button->Location = System::Drawing::Point(279, 460);
-			   this->Prod_u_restocking_button->Name = L"Prod_u_restocking_button";
-			   this->Prod_u_restocking_button->Size = System::Drawing::Size(164, 50);
-			   this->Prod_u_restocking_button->TabIndex = 3;
-			   this->Prod_u_restocking_button->Text = L"Products under restocking threshold";
-			   this->Prod_u_restocking_button->UseVisualStyleBackColor = true;
-			   this->Prod_u_restocking_button->Click += gcnew System::EventHandler(this, &MyForm::Prod_u_restocking_button_Click);
-			   // 
-			   // turnover_button
-			   // 
-			   this->turnover_button->Location = System::Drawing::Point(57, 524);
-			   this->turnover_button->Name = L"turnover_button";
-			   this->turnover_button->Size = System::Drawing::Size(164, 50);
-			   this->turnover_button->TabIndex = 2;
-			   this->turnover_button->Text = L"Turnover per month";
-			   this->turnover_button->UseVisualStyleBackColor = true;
-			   this->turnover_button->Click += gcnew System::EventHandler(this, &MyForm::turnover_button_Click);
-			   // 
-			   // Panier_Poyen_Button
-			   // 
-			   this->Panier_Poyen_Button->Location = System::Drawing::Point(57, 460);
-			   this->Panier_Poyen_Button->Name = L"Panier_Poyen_Button";
-			   this->Panier_Poyen_Button->Size = System::Drawing::Size(164, 50);
-			   this->Panier_Poyen_Button->TabIndex = 1;
-			   this->Panier_Poyen_Button->Text = L"Average basket";
-			   this->Panier_Poyen_Button->UseVisualStyleBackColor = true;
-			   this->Panier_Poyen_Button->Click += gcnew System::EventHandler(this, &MyForm::Panier_Poyen_Button_Click);
-			   // 
-			   // dataGridViewstat
-			   // 
-			   dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
-			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
-			   this->dataGridViewstat->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCellsExceptHeaders;
-			   dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			   dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-			   this->dataGridViewstat->ColumnHeadersHeight = 29;
-			   this->dataGridViewstat->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			   dataGridViewCellStyle10->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle10->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle10->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle10->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle10->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle10->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle10;
-			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
-			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->dataGridViewstat->Name = L"dataGridViewstat";
-			   this->dataGridViewstat->ReadOnly = true;
-			   this->dataGridViewstat->RowHeadersWidth = 51;
-			   this->dataGridViewstat->RowTemplate->Height = 24;
-			   this->dataGridViewstat->Size = System::Drawing::Size(918, 371);
-			   this->dataGridViewstat->TabIndex = 0;
-			   // 
-			   // stat_label
-			   // 
-			   this->stat_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   this->stat_label->Location = System::Drawing::Point(83, 4);
-			   this->stat_label->Name = L"stat_label";
-			   this->stat_label->Size = System::Drawing::Size(783, 40);
-			   this->stat_label->TabIndex = 9;
-			   this->stat_label->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			   // 
 			   // MyForm
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -3411,8 +3423,10 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->accountPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			   this->hubPanel->ResumeLayout(false);
+			   this->statisticMPanel->ResumeLayout(false);
 			   this->simulationPanel->ResumeLayout(false);
 			   this->simulationPanel->PerformLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->EndInit();
 			   this->employeeAddEmployeePanel->ResumeLayout(false);
 			   this->employeeAddEmployeePanel->PerformLayout();
 			   this->employeeListViewPanel->ResumeLayout(false);
@@ -3429,8 +3443,6 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			   this->catalogOrderPanel->PerformLayout();
 			   this->catalogCartPanel->ResumeLayout(false);
 			   this->catalogCartPanel->PerformLayout();
-			   this->statisticMPanel->ResumeLayout(false);
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->EndInit();
 			   this->ResumeLayout(false);
 
 		   }
@@ -3466,6 +3478,7 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 			static_cast<System::Int32>(static_cast<System::Byte>(76)));
 	}
 	private: System::Void hideAllPanel() {
+		simulationPanel->Visible = false;
 		registerPanel->Visible = false;
 		loginPanel->Visible = false;
 		accountPanel->Visible = false;
@@ -4056,10 +4069,15 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 		dataGridViewstat->DataMember = "Temp";
 	}
 	private: System::Void Purchase_Value_button_Click(System::Object^ sender, System::EventArgs^ e) {
-		stat_label->Text = "";
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ total_cost_dataset = Adata->getRows("Select sum(cost_product*stock_product) as pp FROM product", "temp2");
+		DataTable^ total_cost_datatable = total_cost_dataset->Tables[0];
+		DataRow^ drow = total_cost_datatable->Rows[0];
+		this->simulationEntryPriceTextBox->Text = drow[0]->ToString();
+		this->simulationPanel->Visible = !this->simulationPanel->Visible;
 	}
 
-		   // Order page --------------------------------------------------------
+		   // Ohhrder page --------------------------------------------------------
 
 	private: System::Void orderFilterTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		orderGlobalListView->Items->Clear();
@@ -4139,17 +4157,67 @@ private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 	private: System::Void loginReturnPreCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		MyForm_Load(sender, e);
 	}
-private: System::Void clientModifyBackButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	hideAllPanel();
-	clientListViewPanel->Visible = true;
-}
-private: System::Void employeeModifyBackButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	hideAllPanel();
-	employeeListViewPanel->Visible = true;
-}
-private: System::Void employeeAddNewEmployeeButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	hideAllPanel();
-	employeeAddEmployeePanel->Visible = true;
-}
-};
+	private: System::Void clientModifyBackButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		hideAllPanel();
+		clientListViewPanel->Visible = true;
+	}
+	private: System::Void employeeModifyBackButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		hideAllPanel();
+		employeeListViewPanel->Visible = true;
+	}
+	private: System::Void employeeAddNewEmployeeButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		hideAllPanel();
+		employeeAddEmployeePanel->Visible = true;
+	}
+
+	// Gestion simultation ---------------------------------------
+
+	private: System::Void simulationEntryPriceTextBox_Invalide() {
+		this->simulationResultLabel->Text = "Invalide entry";
+		this->simulationResultLabel->ForeColor = Color::Red;
+	}
+	private: System::Void simulationEntryPriceTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		float total_cost;
+		float tva;
+		float marge;
+		float discount;
+		float markdown;
+
+		try { total_cost = float::Parse(this->simulationEntryPriceTextBox->Text); }
+		catch (...) {
+			try { total_cost = float::Parse(this->simulationEntryPriceTextBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")); }
+			catch (...) { simulationEntryPriceTextBox_Invalide();	return; }
+		}
+		try { tva = float::Parse(this->simulationTVAComboBox->Text) / 100; }
+		catch (...) {
+			try { tva = (float::Parse(this->simulationTVAComboBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) / 100); }
+			catch (...) { simulationEntryPriceTextBox_Invalide();	return; }
+		}
+		try { marge = float::Parse(this->simulationMargeComboBox->Text) / 100; }
+		catch (...) {
+			try { marge = float::Parse(this->simulationMargeComboBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) / 100; }
+			catch (...) { simulationEntryPriceTextBox_Invalide();	return; }
+		}
+		try { discount = float::Parse(this->simulationDiscountComboBox->Text) / 100; }
+		catch (...) {
+			try { discount = float::Parse(this->simulationDiscountComboBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) / 100; }
+			catch (...) { simulationEntryPriceTextBox_Invalide();	return; }
+		}
+		try { markdown = float::Parse(this->simulationMarkdownComboBox->Text) / 100; }
+		catch (...) {
+			try { markdown = float::Parse(this->simulationMarkdownComboBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) / 100; }
+			catch (...) { simulationEntryPriceTextBox_Invalide();	return; }
+		}
+
+		this->simulationResultLabel->ForeColor = Color::Black;
+		this->simulationResultLabel->Text = ((((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown)) * (1 + tva)).ToString();
+	}
+	private: System::Void afficherPage_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ total_cost_dataset = Adata->getRows("Select sum(cost_product*stock_product) as pp FROM product", "temp2");
+		DataTable^ total_cost_datatable = total_cost_dataset->Tables[0];
+		DataRow^ drow = total_cost_datatable->Rows[0];
+		this->simulationEntryPriceTextBox->Text = drow[0]->ToString();
+	}
+	};
 }
