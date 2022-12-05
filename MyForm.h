@@ -362,6 +362,22 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeHireDateLabel;
 private: System::Windows::Forms::Label^ employeeAddEmployeeBirthdayLabel;
 private: System::Windows::Forms::Label^ employeeAddEmployeePasswordLabel;
 private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
+private: System::Windows::Forms::Panel^ simulationPanel;
+private: System::Windows::Forms::Label^ simulationResultLabel;
+
+private: System::Windows::Forms::Label^ simulationMarkdownLabel;
+private: System::Windows::Forms::Label^ simulationDiscountLabel;
+private: System::Windows::Forms::Label^ simulationMargeLabel;
+private: System::Windows::Forms::Label^ simulationTVALabel;
+private: System::Windows::Forms::Label^ simulationEntryPriceLabel;
+private: System::Windows::Forms::Label^ simulationTitleLabel;
+
+private: System::Windows::Forms::ComboBox^ simulationMarkdownComboBox;
+
+private: System::Windows::Forms::ComboBox^ simulationDiscountComboBox;
+private: System::Windows::Forms::ComboBox^ simulationMargeComboBox;
+private: System::Windows::Forms::ComboBox^ simulationTVAComboBox;
+private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 
 
 
@@ -384,11 +400,11 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 		   /// </summary>
 		   void InitializeComponent(void)
 		   {
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   this->loginPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginTextPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginReturnPreCatalogButton = (gcnew System::Windows::Forms::Button());
@@ -499,7 +515,21 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 			   this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->hubPanel = (gcnew System::Windows::Forms::Panel());
+			   this->simulationPanel = (gcnew System::Windows::Forms::Panel());
+			   this->simulationResultLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationMarkdownLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationDiscountLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationMargeLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationTVALabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationEntryPriceLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationTitleLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationMarkdownComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationDiscountComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationMargeComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationTVAComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationEntryPriceTextBox = (gcnew System::Windows::Forms::TextBox());
 			   this->employeeAddEmployeePanel = (gcnew System::Windows::Forms::Panel());
+			   this->employeeAddEmployeeErrorBoxLabel = (gcnew System::Windows::Forms::Label());
 			   this->employeeAddEmployeeHireDateDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
 			   this->employeeAddEmployeeBirthdayDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
 			   this->employeeAddEmployeePasswordTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -608,7 +638,6 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 			   this->Panier_Poyen_Button = (gcnew System::Windows::Forms::Button());
 			   this->dataGridViewstat = (gcnew System::Windows::Forms::DataGridView());
 			   this->stat_label = (gcnew System::Windows::Forms::Label());
-			   this->employeeAddEmployeeErrorBoxLabel = (gcnew System::Windows::Forms::Label());
 			   this->loginPanel->SuspendLayout();
 			   this->loginTextPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
@@ -624,6 +653,7 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 			   this->accountPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			   this->hubPanel->SuspendLayout();
+			   this->simulationPanel->SuspendLayout();
 			   this->employeeAddEmployeePanel->SuspendLayout();
 			   this->employeeListViewPanel->SuspendLayout();
 			   this->clientListViewPanel->SuspendLayout();
@@ -1486,25 +1516,25 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 			   // 
 			   this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			   dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			   this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			   dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle2->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle2;
+			   dataGridViewCellStyle7->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle7;
 			   this->clientMDGV->Location = System::Drawing::Point(2, 390);
 			   this->clientMDGV->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->clientMDGV->Name = L"clientMDGV";
@@ -2049,6 +2079,7 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 			   // 
 			   // hubPanel
 			   // 
+			   this->hubPanel->Controls->Add(this->simulationPanel);
 			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
@@ -2069,6 +2100,128 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 			   this->hubPanel->Name = L"hubPanel";
 			   this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			   this->hubPanel->TabIndex = 29;
+			   // 
+			   // simulationPanel
+			   // 
+			   this->simulationPanel->Controls->Add(this->simulationResultLabel);
+			   this->simulationPanel->Controls->Add(this->simulationMarkdownLabel);
+			   this->simulationPanel->Controls->Add(this->simulationDiscountLabel);
+			   this->simulationPanel->Controls->Add(this->simulationMargeLabel);
+			   this->simulationPanel->Controls->Add(this->simulationTVALabel);
+			   this->simulationPanel->Controls->Add(this->simulationEntryPriceLabel);
+			   this->simulationPanel->Controls->Add(this->simulationTitleLabel);
+			   this->simulationPanel->Controls->Add(this->simulationMarkdownComboBox);
+			   this->simulationPanel->Controls->Add(this->simulationDiscountComboBox);
+			   this->simulationPanel->Controls->Add(this->simulationMargeComboBox);
+			   this->simulationPanel->Controls->Add(this->simulationTVAComboBox);
+			   this->simulationPanel->Controls->Add(this->simulationEntryPriceTextBox);
+			   this->simulationPanel->Location = System::Drawing::Point(220, 80);
+			   this->simulationPanel->Name = L"simulationPanel";
+			   this->simulationPanel->Size = System::Drawing::Size(968, 607);
+			   this->simulationPanel->TabIndex = 17;
+			   // 
+			   // simulationResultLabel
+			   // 
+			   this->simulationResultLabel->Location = System::Drawing::Point(646, 217);
+			   this->simulationResultLabel->Name = L"simulationResultLabel";
+			   this->simulationResultLabel->Size = System::Drawing::Size(259, 109);
+			   this->simulationResultLabel->TabIndex = 11;
+			   this->simulationResultLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			   // 
+			   // simulationMarkdownLabel
+			   // 
+			   this->simulationMarkdownLabel->AutoSize = true;
+			   this->simulationMarkdownLabel->Location = System::Drawing::Point(741, 131);
+			   this->simulationMarkdownLabel->Name = L"simulationMarkdownLabel";
+			   this->simulationMarkdownLabel->Size = System::Drawing::Size(152, 17);
+			   this->simulationMarkdownLabel->TabIndex = 10;
+			   this->simulationMarkdownLabel->Text = L"Unknow Markdown (%)";
+			   // 
+			   // simulationDiscountLabel
+			   // 
+			   this->simulationDiscountLabel->AutoSize = true;
+			   this->simulationDiscountLabel->Location = System::Drawing::Point(601, 131);
+			   this->simulationDiscountLabel->Name = L"simulationDiscountLabel";
+			   this->simulationDiscountLabel->Size = System::Drawing::Size(89, 17);
+			   this->simulationDiscountLabel->TabIndex = 9;
+			   this->simulationDiscountLabel->Text = L"Discount (%)";
+			   // 
+			   // simulationMargeLabel
+			   // 
+			   this->simulationMargeLabel->AutoSize = true;
+			   this->simulationMargeLabel->Location = System::Drawing::Point(451, 131);
+			   this->simulationMargeLabel->Name = L"simulationMargeLabel";
+			   this->simulationMargeLabel->Size = System::Drawing::Size(74, 17);
+			   this->simulationMargeLabel->TabIndex = 8;
+			   this->simulationMargeLabel->Text = L"Marge (%)";
+			   // 
+			   // simulationTVALabel
+			   // 
+			   this->simulationTVALabel->AutoSize = true;
+			   this->simulationTVALabel->Location = System::Drawing::Point(306, 129);
+			   this->simulationTVALabel->Name = L"simulationTVALabel";
+			   this->simulationTVALabel->Size = System::Drawing::Size(61, 17);
+			   this->simulationTVALabel->TabIndex = 7;
+			   this->simulationTVALabel->Text = L"TVA (%)";
+			   // 
+			   // simulationEntryPriceLabel
+			   // 
+			   this->simulationEntryPriceLabel->AutoSize = true;
+			   this->simulationEntryPriceLabel->Location = System::Drawing::Point(68, 129);
+			   this->simulationEntryPriceLabel->Name = L"simulationEntryPriceLabel";
+			   this->simulationEntryPriceLabel->Size = System::Drawing::Size(83, 17);
+			   this->simulationEntryPriceLabel->TabIndex = 6;
+			   this->simulationEntryPriceLabel->Text = L"Stock Value";
+			   // 
+			   // simulationTitleLabel
+			   // 
+			   this->simulationTitleLabel->AutoSize = true;
+			   this->simulationTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->simulationTitleLabel->Location = System::Drawing::Point(13, 13);
+			   this->simulationTitleLabel->Name = L"simulationTitleLabel";
+			   this->simulationTitleLabel->Size = System::Drawing::Size(177, 39);
+			   this->simulationTitleLabel->TabIndex = 5;
+			   this->simulationTitleLabel->Text = L"Simulation";
+			   // 
+			   // simulationMarkdownComboBox
+			   // 
+			   this->simulationMarkdownComboBox->FormattingEnabled = true;
+			   this->simulationMarkdownComboBox->Location = System::Drawing::Point(744, 152);
+			   this->simulationMarkdownComboBox->Name = L"simulationMarkdownComboBox";
+			   this->simulationMarkdownComboBox->Size = System::Drawing::Size(149, 24);
+			   this->simulationMarkdownComboBox->TabIndex = 4;
+			   // 
+			   // simulationDiscountComboBox
+			   // 
+			   this->simulationDiscountComboBox->FormattingEnabled = true;
+			   this->simulationDiscountComboBox->Location = System::Drawing::Point(604, 152);
+			   this->simulationDiscountComboBox->Name = L"simulationDiscountComboBox";
+			   this->simulationDiscountComboBox->Size = System::Drawing::Size(121, 24);
+			   this->simulationDiscountComboBox->TabIndex = 3;
+			   // 
+			   // simulationMargeComboBox
+			   // 
+			   this->simulationMargeComboBox->FormattingEnabled = true;
+			   this->simulationMargeComboBox->Location = System::Drawing::Point(454, 152);
+			   this->simulationMargeComboBox->Name = L"simulationMargeComboBox";
+			   this->simulationMargeComboBox->Size = System::Drawing::Size(121, 24);
+			   this->simulationMargeComboBox->TabIndex = 2;
+			   // 
+			   // simulationTVAComboBox
+			   // 
+			   this->simulationTVAComboBox->FormattingEnabled = true;
+			   this->simulationTVAComboBox->Location = System::Drawing::Point(307, 152);
+			   this->simulationTVAComboBox->Name = L"simulationTVAComboBox";
+			   this->simulationTVAComboBox->Size = System::Drawing::Size(121, 24);
+			   this->simulationTVAComboBox->TabIndex = 1;
+			   // 
+			   // simulationEntryPriceTextBox
+			   // 
+			   this->simulationEntryPriceTextBox->Location = System::Drawing::Point(67, 152);
+			   this->simulationEntryPriceTextBox->Name = L"simulationEntryPriceTextBox";
+			   this->simulationEntryPriceTextBox->Size = System::Drawing::Size(186, 22);
+			   this->simulationEntryPriceTextBox->TabIndex = 0;
 			   // 
 			   // employeeAddEmployeePanel
 			   // 
@@ -2095,6 +2248,16 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 			   this->employeeAddEmployeePanel->Name = L"employeeAddEmployeePanel";
 			   this->employeeAddEmployeePanel->Size = System::Drawing::Size(968, 607);
 			   this->employeeAddEmployeePanel->TabIndex = 2;
+			   // 
+			   // employeeAddEmployeeErrorBoxLabel
+			   // 
+			   this->employeeAddEmployeeErrorBoxLabel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->employeeAddEmployeeErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
+			   this->employeeAddEmployeeErrorBoxLabel->Location = System::Drawing::Point(357, 468);
+			   this->employeeAddEmployeeErrorBoxLabel->Name = L"employeeAddEmployeeErrorBoxLabel";
+			   this->employeeAddEmployeeErrorBoxLabel->Size = System::Drawing::Size(268, 42);
+			   this->employeeAddEmployeeErrorBoxLabel->TabIndex = 16;
+			   this->employeeAddEmployeeErrorBoxLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
 			   // employeeAddEmployeeHireDateDateTimePicker
 			   // 
@@ -3162,34 +3325,34 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 			   // 
 			   // dataGridViewstat
 			   // 
-			   dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+			   dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
 			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
 			   this->dataGridViewstat->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCellsExceptHeaders;
-			   dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			   dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
+			   dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			   dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			   dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
 			   this->dataGridViewstat->ColumnHeadersHeight = 29;
 			   this->dataGridViewstat->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			   dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle5->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle5;
+			   dataGridViewCellStyle10->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle10->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   dataGridViewCellStyle10->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle10->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle10->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle10->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle10;
 			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
 			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->dataGridViewstat->Name = L"dataGridViewstat";
@@ -3208,16 +3371,6 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 			   this->stat_label->Size = System::Drawing::Size(783, 40);
 			   this->stat_label->TabIndex = 9;
 			   this->stat_label->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			   // 
-			   // employeeAddEmployeeErrorBoxLabel
-			   // 
-			   this->employeeAddEmployeeErrorBoxLabel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->employeeAddEmployeeErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
-			   this->employeeAddEmployeeErrorBoxLabel->Location = System::Drawing::Point(357, 468);
-			   this->employeeAddEmployeeErrorBoxLabel->Name = L"employeeAddEmployeeErrorBoxLabel";
-			   this->employeeAddEmployeeErrorBoxLabel->Size = System::Drawing::Size(268, 42);
-			   this->employeeAddEmployeeErrorBoxLabel->TabIndex = 16;
-			   this->employeeAddEmployeeErrorBoxLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
 			   // MyForm
 			   // 
@@ -3258,6 +3411,8 @@ private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 			   this->accountPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			   this->hubPanel->ResumeLayout(false);
+			   this->simulationPanel->ResumeLayout(false);
+			   this->simulationPanel->PerformLayout();
 			   this->employeeAddEmployeePanel->ResumeLayout(false);
 			   this->employeeAddEmployeePanel->PerformLayout();
 			   this->employeeListViewPanel->ResumeLayout(false);
