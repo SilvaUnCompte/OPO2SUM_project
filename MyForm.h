@@ -46,8 +46,10 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Panel^ stockMPanel;
 
 	private: System::Windows::Forms::Panel^ addStockPanel;
-	private: System::Windows::Forms::Panel^ loginUsernamePanel;
-	private: System::Windows::Forms::Panel^ loginPasswordPanel;
+	private: System::Windows::Forms::Panel^ loginTextPanel;
+
+
+
 	private: System::Windows::Forms::Panel^ menuButtonPanel;
 	private: System::Windows::Forms::Panel^ menuLogoPanel;
 	private: System::Windows::Forms::Panel^ titleBarPanel;
@@ -82,7 +84,7 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TextBox^ registerPasswordTextBox;
 	private: System::Windows::Forms::TextBox^ registerUsernameTextBox;
 	private: System::Windows::Forms::Label^ registerUsernameLabel;
-	private: System::Windows::Forms::Label^ registerRegisterLabel;
+
 
 
 
@@ -158,7 +160,7 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ accountErrorAddAddressLabel;
 	private: System::Windows::Forms::NumericUpDown^ accountAddressPostalNumericUpDown;
 	private: System::Windows::Forms::Label^ accountSeparatorLabel;
-	private: System::Windows::Forms::Button^ testToSupprButton;
+
 	private: System::Windows::Forms::Button^ stockMAddButton;
 	private: System::Windows::Forms::Button^ catalogCartButton;
 	private: System::Windows::Forms::ListView^ catalogGlobalListView;
@@ -173,7 +175,7 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Button^ catalogCheckoutButton;
 	private: System::Windows::Forms::Button^ catalogBackButton;
 	private: System::Windows::Forms::ListView^ catalogSelectedListView;
-	private: System::Windows::Forms::Button^ loginPasswordModButton;
+
 	private: System::Windows::Forms::Button^ Purchase_Value_button;
 	private: System::Windows::Forms::Button^ Commercial_Value_button;
 	private: System::Windows::Forms::Button^ buys_down_button;
@@ -202,6 +204,21 @@ private: System::Windows::Forms::Label^ preCatalogTitleLabel;
 private: System::Windows::Forms::Label^ preCatalogSearchLabel;
 private: System::Windows::Forms::TextBox^ preCatalogTextBox;
 private: System::Windows::Forms::ListView^ preCatalogListView;
+private: System::Windows::Forms::Panel^ registerTextPanel;
+private: System::Windows::Forms::Label^ registerCreateYourAccountLabel;
+private: System::Windows::Forms::Label^ registerBlueBarLabel;
+private: System::Windows::Forms::Label^ registerBlueBarLabel4;
+
+private: System::Windows::Forms::Label^ registerBlueBarLabel2;
+private: System::Windows::Forms::Label^ registerBlueBarLabel3;
+private: System::Windows::Forms::Button^ loginReturnPreCatalogButton;
+private: System::Windows::Forms::Label^ loginYouWantRegisterLabel;
+private: System::Windows::Forms::Label^ loginPasswordLabel;
+private: System::Windows::Forms::Label^ loginUsernameLabel;
+private: System::Windows::Forms::Label^ loginBarLabel;
+private: System::Windows::Forms::Label^ loginBarLabel2;
+
+
 
 
 
@@ -221,31 +238,39 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   this->loginPanel = (gcnew System::Windows::Forms::Panel());
-			   this->testToSupprButton = (gcnew System::Windows::Forms::Button());
-			   this->loginPasswordPanel = (gcnew System::Windows::Forms::Panel());
-			   this->loginPasswordModButton = (gcnew System::Windows::Forms::Button());
-			   this->loginPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->loginUsernamePanel = (gcnew System::Windows::Forms::Panel());
-			   this->loginUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->loginErrorLabel = (gcnew System::Windows::Forms::Label());
-			   this->loginValidateButton = (gcnew System::Windows::Forms::Button());
+			   this->loginTextPanel = (gcnew System::Windows::Forms::Panel());
+			   this->loginReturnPreCatalogButton = (gcnew System::Windows::Forms::Button());
+			   this->loginYouWantRegisterLabel = (gcnew System::Windows::Forms::Label());
+			   this->loginPasswordLabel = (gcnew System::Windows::Forms::Label());
 			   this->loginRegisterButton = (gcnew System::Windows::Forms::Button());
+			   this->loginUsernameLabel = (gcnew System::Windows::Forms::Label());
+			   this->loginPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->loginValidateButton = (gcnew System::Windows::Forms::Button());
 			   this->loginLoginLabel = (gcnew System::Windows::Forms::Label());
+			   this->loginErrorLabel = (gcnew System::Windows::Forms::Label());
+			   this->loginUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->loginBarLabel = (gcnew System::Windows::Forms::Label());
+			   this->loginBarLabel2 = (gcnew System::Windows::Forms::Label());
 			   this->registerPanel = (gcnew System::Windows::Forms::Panel());
-			   this->registerBirthdayLabel = (gcnew System::Windows::Forms::Label());
-			   this->registerDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
-			   this->registerErrorLabel = (gcnew System::Windows::Forms::Label());
-			   this->registerLastnameLabel = (gcnew System::Windows::Forms::Label());
-			   this->registerFirstnameLabel = (gcnew System::Windows::Forms::Label());
-			   this->registerLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->registerFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->registerValidateButton = (gcnew System::Windows::Forms::Button());
-			   this->registerLoginButton = (gcnew System::Windows::Forms::Button());
-			   this->registerPasswordLabel = (gcnew System::Windows::Forms::Label());
-			   this->registerPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->registerTextPanel = (gcnew System::Windows::Forms::Panel());
 			   this->registerUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->registerLoginButton = (gcnew System::Windows::Forms::Button());
+			   this->registerErrorLabel = (gcnew System::Windows::Forms::Label());
+			   this->registerDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			   this->registerValidateButton = (gcnew System::Windows::Forms::Button());
+			   this->registerBirthdayLabel = (gcnew System::Windows::Forms::Label());
+			   this->registerCreateYourAccountLabel = (gcnew System::Windows::Forms::Label());
+			   this->registerFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->registerBlueBarLabel = (gcnew System::Windows::Forms::Label());
+			   this->registerLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->registerLastnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->registerPasswordTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->registerPasswordLabel = (gcnew System::Windows::Forms::Label());
+			   this->registerBlueBarLabel4 = (gcnew System::Windows::Forms::Label());
 			   this->registerUsernameLabel = (gcnew System::Windows::Forms::Label());
-			   this->registerRegisterLabel = (gcnew System::Windows::Forms::Label());
+			   this->registerFirstnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->registerBlueBarLabel2 = (gcnew System::Windows::Forms::Label());
+			   this->registerBlueBarLabel3 = (gcnew System::Windows::Forms::Label());
 			   this->stockMPanel = (gcnew System::Windows::Forms::Panel());
 			   this->stockMAddButton = (gcnew System::Windows::Forms::Button());
 			   this->stockMLabel = (gcnew System::Windows::Forms::Label());
@@ -356,9 +381,9 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->preCatalogTextBox = (gcnew System::Windows::Forms::TextBox());
 			   this->preCatalogListView = (gcnew System::Windows::Forms::ListView());
 			   this->loginPanel->SuspendLayout();
-			   this->loginPasswordPanel->SuspendLayout();
-			   this->loginUsernamePanel->SuspendLayout();
+			   this->loginTextPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
+			   this->registerTextPanel->SuspendLayout();
 			   this->stockMPanel->SuspendLayout();
 			   this->addStockPanel->SuspendLayout();
 			   this->orderMPanel->SuspendLayout();
@@ -379,101 +404,163 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // 
 			   // loginPanel
 			   // 
-			   this->loginPanel->BackColor = System::Drawing::Color::Transparent;
-			   this->loginPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			   this->loginPanel->Controls->Add(this->testToSupprButton);
-			   this->loginPanel->Controls->Add(this->loginPasswordPanel);
-			   this->loginPanel->Controls->Add(this->loginUsernamePanel);
-			   this->loginPanel->Controls->Add(this->loginErrorLabel);
-			   this->loginPanel->Controls->Add(this->loginValidateButton);
-			   this->loginPanel->Controls->Add(this->loginRegisterButton);
-			   this->loginPanel->Controls->Add(this->loginLoginLabel);
+			   this->loginPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(230)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(230)));
+			   this->loginPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			   this->loginPanel->Controls->Add(this->loginTextPanel);
+			   this->loginPanel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)));
 			   this->loginPanel->Location = System::Drawing::Point(0, 0);
 			   this->loginPanel->Margin = System::Windows::Forms::Padding(0);
 			   this->loginPanel->Name = L"loginPanel";
 			   this->loginPanel->Size = System::Drawing::Size(1188, 687);
 			   this->loginPanel->TabIndex = 0;
 			   // 
-			   // testToSupprButton
+			   // loginTextPanel
 			   // 
-			   this->testToSupprButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->testToSupprButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->testToSupprButton->ForeColor = System::Drawing::Color::White;
-			   this->testToSupprButton->Location = System::Drawing::Point(1068, 632);
-			   this->testToSupprButton->Name = L"testToSupprButton";
-			   this->testToSupprButton->Size = System::Drawing::Size(108, 44);
-			   this->testToSupprButton->TabIndex = 21;
-			   this->testToSupprButton->Text = L"Hide Login";
-			   this->testToSupprButton->UseVisualStyleBackColor = false;
-			   this->testToSupprButton->Click += gcnew System::EventHandler(this, &MyForm::testToSupprButton_Click);
+			   this->loginTextPanel->BackColor = System::Drawing::Color::White;
+			   this->loginTextPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			   this->loginTextPanel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			   this->loginTextPanel->Controls->Add(this->loginReturnPreCatalogButton);
+			   this->loginTextPanel->Controls->Add(this->loginYouWantRegisterLabel);
+			   this->loginTextPanel->Controls->Add(this->loginPasswordLabel);
+			   this->loginTextPanel->Controls->Add(this->loginRegisterButton);
+			   this->loginTextPanel->Controls->Add(this->loginUsernameLabel);
+			   this->loginTextPanel->Controls->Add(this->loginPasswordTextBox);
+			   this->loginTextPanel->Controls->Add(this->loginValidateButton);
+			   this->loginTextPanel->Controls->Add(this->loginLoginLabel);
+			   this->loginTextPanel->Controls->Add(this->loginErrorLabel);
+			   this->loginTextPanel->Controls->Add(this->loginUsernameTextBox);
+			   this->loginTextPanel->Controls->Add(this->loginBarLabel);
+			   this->loginTextPanel->Controls->Add(this->loginBarLabel2);
+			   this->loginTextPanel->Location = System::Drawing::Point(399, 162);
+			   this->loginTextPanel->Name = L"loginTextPanel";
+			   this->loginTextPanel->Size = System::Drawing::Size(390, 363);
+			   this->loginTextPanel->TabIndex = 19;
 			   // 
-			   // loginPasswordPanel
+			   // loginReturnPreCatalogButton
 			   // 
-			   this->loginPasswordPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->loginPasswordPanel->Controls->Add(this->loginPasswordModButton);
-			   this->loginPasswordPanel->Controls->Add(this->loginPasswordTextBox);
-			   this->loginPasswordPanel->Location = System::Drawing::Point(373, 317);
-			   this->loginPasswordPanel->Name = L"loginPasswordPanel";
-			   this->loginPasswordPanel->Size = System::Drawing::Size(445, 64);
-			   this->loginPasswordPanel->TabIndex = 20;
+			   this->loginReturnPreCatalogButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->loginReturnPreCatalogButton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginReturnPreCatalogButton->Location = System::Drawing::Point(3, 3);
+			   this->loginReturnPreCatalogButton->Name = L"loginReturnPreCatalogButton";
+			   this->loginReturnPreCatalogButton->Size = System::Drawing::Size(30, 30);
+			   this->loginReturnPreCatalogButton->TabIndex = 24;
+			   this->loginReturnPreCatalogButton->Text = L"X";
+			   this->loginReturnPreCatalogButton->UseVisualStyleBackColor = true;
+			   this->loginReturnPreCatalogButton->Click += gcnew System::EventHandler(this, &MyForm::loginReturnPreCatalogButton_Click);
 			   // 
-			   // loginPasswordModButton
+			   // loginYouWantRegisterLabel
 			   // 
-			   this->loginPasswordModButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->loginPasswordModButton->ForeColor = System::Drawing::Color::White;
-			   this->loginPasswordModButton->Location = System::Drawing::Point(396, 13);
-			   this->loginPasswordModButton->Name = L"loginPasswordModButton";
-			   this->loginPasswordModButton->Size = System::Drawing::Size(36, 31);
-			   this->loginPasswordModButton->TabIndex = 4;
-			   this->loginPasswordModButton->Text = L"O";
-			   this->loginPasswordModButton->UseVisualStyleBackColor = true;
-			   this->loginPasswordModButton->Click += gcnew System::EventHandler(this, &MyForm::loginPasswordModButton_Click);
+			   this->loginYouWantRegisterLabel->AutoSize = true;
+			   this->loginYouWantRegisterLabel->BackColor = System::Drawing::Color::Transparent;
+			   this->loginYouWantRegisterLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginYouWantRegisterLabel->Location = System::Drawing::Point(57, 326);
+			   this->loginYouWantRegisterLabel->Name = L"loginYouWantRegisterLabel";
+			   this->loginYouWantRegisterLabel->Size = System::Drawing::Size(189, 17);
+			   this->loginYouWantRegisterLabel->TabIndex = 23;
+			   this->loginYouWantRegisterLabel->Text = L"You don\'t have an account \?";
+			   // 
+			   // loginPasswordLabel
+			   // 
+			   this->loginPasswordLabel->AutoSize = true;
+			   this->loginPasswordLabel->BackColor = System::Drawing::Color::Transparent;
+			   this->loginPasswordLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->loginPasswordLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginPasswordLabel->Location = System::Drawing::Point(96, 133);
+			   this->loginPasswordLabel->Name = L"loginPasswordLabel";
+			   this->loginPasswordLabel->Size = System::Drawing::Size(67, 19);
+			   this->loginPasswordLabel->TabIndex = 20;
+			   this->loginPasswordLabel->Text = L"Password";
+			   // 
+			   // loginRegisterButton
+			   // 
+			   this->loginRegisterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			   this->loginRegisterButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(230)));
+			   this->loginRegisterButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->loginRegisterButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->loginRegisterButton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginRegisterButton->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
+			   this->loginRegisterButton->Location = System::Drawing::Point(261, 319);
+			   this->loginRegisterButton->Margin = System::Windows::Forms::Padding(0);
+			   this->loginRegisterButton->Name = L"loginRegisterButton";
+			   this->loginRegisterButton->Size = System::Drawing::Size(78, 28);
+			   this->loginRegisterButton->TabIndex = 5;
+			   this->loginRegisterButton->Text = L"Register";
+			   this->loginRegisterButton->UseVisualStyleBackColor = false;
+			   this->loginRegisterButton->Click += gcnew System::EventHandler(this, &MyForm::loginRegisterButton_Click);
+			   // 
+			   // loginUsernameLabel
+			   // 
+			   this->loginUsernameLabel->AutoSize = true;
+			   this->loginUsernameLabel->BackColor = System::Drawing::Color::Transparent;
+			   this->loginUsernameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->loginUsernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginUsernameLabel->Location = System::Drawing::Point(96, 79);
+			   this->loginUsernameLabel->Name = L"loginUsernameLabel";
+			   this->loginUsernameLabel->Size = System::Drawing::Size(70, 19);
+			   this->loginUsernameLabel->TabIndex = 19;
+			   this->loginUsernameLabel->Text = L"Username";
 			   // 
 			   // loginPasswordTextBox
 			   // 
 			   this->loginPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->loginPasswordTextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			   this->loginPasswordTextBox->BackColor = System::Drawing::Color::White;
 			   this->loginPasswordTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			   this->loginPasswordTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular,
+			   this->loginPasswordTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->loginPasswordTextBox->ForeColor = System::Drawing::Color::White;
-			   this->loginPasswordTextBox->Location = System::Drawing::Point(37, 13);
+			   this->loginPasswordTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginPasswordTextBox->Location = System::Drawing::Point(92, 154);
 			   this->loginPasswordTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->loginPasswordTextBox->Name = L"loginPasswordTextBox";
-			   this->loginPasswordTextBox->Size = System::Drawing::Size(323, 31);
+			   this->loginPasswordTextBox->Size = System::Drawing::Size(155, 23);
 			   this->loginPasswordTextBox->TabIndex = 3;
-			   this->loginPasswordTextBox->Text = L"Password";
 			   this->loginPasswordTextBox->UseSystemPasswordChar = true;
 			   this->loginPasswordTextBox->Click += gcnew System::EventHandler(this, &MyForm::loginPasswordTextBox_Click);
 			   // 
-			   // loginUsernamePanel
+			   // loginValidateButton
 			   // 
-			   this->loginUsernamePanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->loginUsernamePanel->Controls->Add(this->loginUsernameTextBox);
-			   this->loginUsernamePanel->Location = System::Drawing::Point(373, 230);
-			   this->loginUsernamePanel->Name = L"loginUsernamePanel";
-			   this->loginUsernamePanel->Size = System::Drawing::Size(445, 58);
-			   this->loginUsernamePanel->TabIndex = 19;
-			   // 
-			   // loginUsernameTextBox
-			   // 
-			   this->loginUsernameTextBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->loginUsernameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			   this->loginUsernameTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular,
+			   this->loginValidateButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(230)));
+			   this->loginValidateButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->loginValidateButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->loginUsernameTextBox->ForeColor = System::Drawing::Color::White;
-			   this->loginUsernameTextBox->Location = System::Drawing::Point(37, 11);
-			   this->loginUsernameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->loginUsernameTextBox->Name = L"loginUsernameTextBox";
-			   this->loginUsernameTextBox->Size = System::Drawing::Size(371, 31);
-			   this->loginUsernameTextBox->TabIndex = 2;
-			   this->loginUsernameTextBox->Text = L"Username";
-			   this->loginUsernameTextBox->Click += gcnew System::EventHandler(this, &MyForm::loginUsernameTextBox_Click);
+			   this->loginValidateButton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginValidateButton->Location = System::Drawing::Point(43, 255);
+			   this->loginValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->loginValidateButton->Name = L"loginValidateButton";
+			   this->loginValidateButton->Size = System::Drawing::Size(298, 45);
+			   this->loginValidateButton->TabIndex = 11;
+			   this->loginValidateButton->Text = L"Login";
+			   this->loginValidateButton->UseVisualStyleBackColor = false;
+			   this->loginValidateButton->Click += gcnew System::EventHandler(this, &MyForm::loginValidateButton_Click);
+			   // 
+			   // loginLoginLabel
+			   // 
+			   this->loginLoginLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			   this->loginLoginLabel->AutoSize = true;
+			   this->loginLoginLabel->BackColor = System::Drawing::Color::Transparent;
+			   this->loginLoginLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 16.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->loginLoginLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginLoginLabel->Location = System::Drawing::Point(136, 4);
+			   this->loginLoginLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			   this->loginLoginLabel->Name = L"loginLoginLabel";
+			   this->loginLoginLabel->Size = System::Drawing::Size(85, 37);
+			   this->loginLoginLabel->TabIndex = 0;
+			   this->loginLoginLabel->Text = L"Login";
 			   // 
 			   // loginErrorLabel
 			   // 
@@ -482,86 +569,61 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->loginErrorLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
-			   this->loginErrorLabel->Location = System::Drawing::Point(373, 414);
+			   this->loginErrorLabel->Location = System::Drawing::Point(42, 202);
 			   this->loginErrorLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->loginErrorLabel->Name = L"loginErrorLabel";
-			   this->loginErrorLabel->Size = System::Drawing::Size(445, 68);
+			   this->loginErrorLabel->Size = System::Drawing::Size(298, 41);
 			   this->loginErrorLabel->TabIndex = 18;
 			   this->loginErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
-			   // loginValidateButton
+			   // loginUsernameTextBox
 			   // 
-			   this->loginValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			   this->loginValidateButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->loginValidateButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->loginValidateButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
+			   this->loginUsernameTextBox->BackColor = System::Drawing::Color::White;
+			   this->loginUsernameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			   this->loginUsernameTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->loginValidateButton->ForeColor = System::Drawing::Color::White;
-			   this->loginValidateButton->Location = System::Drawing::Point(373, 510);
-			   this->loginValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->loginValidateButton->Name = L"loginValidateButton";
-			   this->loginValidateButton->Size = System::Drawing::Size(445, 64);
-			   this->loginValidateButton->TabIndex = 11;
-			   this->loginValidateButton->Text = L"Validate";
-			   this->loginValidateButton->UseVisualStyleBackColor = false;
-			   this->loginValidateButton->Click += gcnew System::EventHandler(this, &MyForm::loginValidateButton_Click);
+			   this->loginUsernameTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginUsernameTextBox->Location = System::Drawing::Point(93, 100);
+			   this->loginUsernameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->loginUsernameTextBox->Name = L"loginUsernameTextBox";
+			   this->loginUsernameTextBox->Size = System::Drawing::Size(155, 23);
+			   this->loginUsernameTextBox->TabIndex = 2;
+			   this->loginUsernameTextBox->Click += gcnew System::EventHandler(this, &MyForm::loginUsernameTextBox_Click);
 			   // 
-			   // loginRegisterButton
+			   // loginBarLabel
 			   // 
-			   this->loginRegisterButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			   this->loginRegisterButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->loginRegisterButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->loginRegisterButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->loginRegisterButton->ForeColor = System::Drawing::Color::White;
-			   this->loginRegisterButton->Location = System::Drawing::Point(1051, 12);
-			   this->loginRegisterButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->loginRegisterButton->Name = L"loginRegisterButton";
-			   this->loginRegisterButton->Size = System::Drawing::Size(126, 64);
-			   this->loginRegisterButton->TabIndex = 5;
-			   this->loginRegisterButton->Text = L"Register";
-			   this->loginRegisterButton->UseVisualStyleBackColor = false;
-			   this->loginRegisterButton->Click += gcnew System::EventHandler(this, &MyForm::loginRegisterButton_Click);
+			   this->loginBarLabel->AutoSize = true;
+			   this->loginBarLabel->BackColor = System::Drawing::Color::Transparent;
+			   this->loginBarLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginBarLabel->Location = System::Drawing::Point(88, 107);
+			   this->loginBarLabel->Name = L"loginBarLabel";
+			   this->loginBarLabel->Size = System::Drawing::Size(160, 17);
+			   this->loginBarLabel->TabIndex = 21;
+			   this->loginBarLabel->Text = L"___________________";
 			   // 
-			   // loginLoginLabel
+			   // loginBarLabel2
 			   // 
-			   this->loginLoginLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->loginLoginLabel->AutoSize = true;
-			   this->loginLoginLabel->BackColor = System::Drawing::Color::Transparent;
-			   this->loginLoginLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 72, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   this->loginLoginLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->loginLoginLabel->Location = System::Drawing::Point(11, 9);
-			   this->loginLoginLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			   this->loginLoginLabel->Name = L"loginLoginLabel";
-			   this->loginLoginLabel->Size = System::Drawing::Size(352, 135);
-			   this->loginLoginLabel->TabIndex = 0;
-			   this->loginLoginLabel->Text = L"Login";
+			   this->loginBarLabel2->AutoSize = true;
+			   this->loginBarLabel2->BackColor = System::Drawing::Color::Transparent;
+			   this->loginBarLabel2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->loginBarLabel2->Location = System::Drawing::Point(88, 161);
+			   this->loginBarLabel2->Name = L"loginBarLabel2";
+			   this->loginBarLabel2->Size = System::Drawing::Size(160, 17);
+			   this->loginBarLabel2->TabIndex = 22;
+			   this->loginBarLabel2->Text = L"___________________";
 			   // 
 			   // registerPanel
 			   // 
 			   this->registerPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->registerPanel->BackColor = System::Drawing::Color::Transparent;
+			   this->registerPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(230)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(230)));
 			   this->registerPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			   this->registerPanel->Controls->Add(this->registerBirthdayLabel);
-			   this->registerPanel->Controls->Add(this->registerDateTimePicker);
-			   this->registerPanel->Controls->Add(this->registerErrorLabel);
-			   this->registerPanel->Controls->Add(this->registerLastnameLabel);
-			   this->registerPanel->Controls->Add(this->registerFirstnameLabel);
-			   this->registerPanel->Controls->Add(this->registerLastnameTextBox);
-			   this->registerPanel->Controls->Add(this->registerFirstnameTextBox);
-			   this->registerPanel->Controls->Add(this->registerValidateButton);
-			   this->registerPanel->Controls->Add(this->registerLoginButton);
-			   this->registerPanel->Controls->Add(this->registerPasswordLabel);
-			   this->registerPanel->Controls->Add(this->registerPasswordTextBox);
-			   this->registerPanel->Controls->Add(this->registerUsernameTextBox);
-			   this->registerPanel->Controls->Add(this->registerUsernameLabel);
-			   this->registerPanel->Controls->Add(this->registerRegisterLabel);
+			   this->registerPanel->Controls->Add(this->registerTextPanel);
 			   this->registerPanel->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			   this->registerPanel->Location = System::Drawing::Point(0, 0);
 			   this->registerPanel->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
@@ -569,186 +631,282 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->registerPanel->Size = System::Drawing::Size(1188, 687);
 			   this->registerPanel->TabIndex = 12;
 			   // 
-			   // registerBirthdayLabel
+			   // registerTextPanel
 			   // 
-			   this->registerBirthdayLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->registerBirthdayLabel->AutoSize = true;
-			   this->registerBirthdayLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->registerTextPanel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			   this->registerTextPanel->BackColor = System::Drawing::Color::White;
+			   this->registerTextPanel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			   this->registerTextPanel->Controls->Add(this->registerUsernameTextBox);
+			   this->registerTextPanel->Controls->Add(this->registerLoginButton);
+			   this->registerTextPanel->Controls->Add(this->registerErrorLabel);
+			   this->registerTextPanel->Controls->Add(this->registerDateTimePicker);
+			   this->registerTextPanel->Controls->Add(this->registerValidateButton);
+			   this->registerTextPanel->Controls->Add(this->registerBirthdayLabel);
+			   this->registerTextPanel->Controls->Add(this->registerCreateYourAccountLabel);
+			   this->registerTextPanel->Controls->Add(this->registerFirstnameTextBox);
+			   this->registerTextPanel->Controls->Add(this->registerBlueBarLabel);
+			   this->registerTextPanel->Controls->Add(this->registerLastnameTextBox);
+			   this->registerTextPanel->Controls->Add(this->registerLastnameLabel);
+			   this->registerTextPanel->Controls->Add(this->registerPasswordTextBox);
+			   this->registerTextPanel->Controls->Add(this->registerPasswordLabel);
+			   this->registerTextPanel->Controls->Add(this->registerBlueBarLabel4);
+			   this->registerTextPanel->Controls->Add(this->registerUsernameLabel);
+			   this->registerTextPanel->Controls->Add(this->registerFirstnameLabel);
+			   this->registerTextPanel->Controls->Add(this->registerBlueBarLabel2);
+			   this->registerTextPanel->Controls->Add(this->registerBlueBarLabel3);
+			   this->registerTextPanel->Location = System::Drawing::Point(399, 93);
+			   this->registerTextPanel->Name = L"registerTextPanel";
+			   this->registerTextPanel->Size = System::Drawing::Size(390, 500);
+			   this->registerTextPanel->TabIndex = 18;
+			   // 
+			   // registerUsernameTextBox
+			   // 
+			   this->registerUsernameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			   this->registerUsernameTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->registerBirthdayLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->registerBirthdayLabel->Location = System::Drawing::Point(437, 258);
-			   this->registerBirthdayLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			   this->registerBirthdayLabel->Name = L"registerBirthdayLabel";
-			   this->registerBirthdayLabel->Size = System::Drawing::Size(72, 22);
-			   this->registerBirthdayLabel->TabIndex = 17;
-			   this->registerBirthdayLabel->Text = L"Birthday";
+			   this->registerUsernameTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerUsernameTextBox->Location = System::Drawing::Point(32, 84);
+			   this->registerUsernameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->registerUsernameTextBox->Name = L"registerUsernameTextBox";
+			   this->registerUsernameTextBox->Size = System::Drawing::Size(133, 23);
+			   this->registerUsernameTextBox->TabIndex = 2;
 			   // 
-			   // registerDateTimePicker
+			   // registerLoginButton
 			   // 
-			   this->registerDateTimePicker->CalendarForeColor = System::Drawing::Color::Black;
-			   this->registerDateTimePicker->Location = System::Drawing::Point(437, 284);
-			   this->registerDateTimePicker->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->registerDateTimePicker->Name = L"registerDateTimePicker";
-			   this->registerDateTimePicker->Size = System::Drawing::Size(278, 22);
-			   this->registerDateTimePicker->TabIndex = 9;
+			   this->registerLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			   this->registerLoginButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(230)));
+			   this->registerLoginButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->registerLoginButton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerLoginButton->Location = System::Drawing::Point(3, 3);
+			   this->registerLoginButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->registerLoginButton->Name = L"registerLoginButton";
+			   this->registerLoginButton->Size = System::Drawing::Size(30, 30);
+			   this->registerLoginButton->TabIndex = 5;
+			   this->registerLoginButton->Text = L"X";
+			   this->registerLoginButton->UseVisualStyleBackColor = false;
+			   this->registerLoginButton->Click += gcnew System::EventHandler(this, &MyForm::registerLoginButton_Click);
 			   // 
 			   // registerErrorLabel
 			   // 
 			   this->registerErrorLabel->AccessibleRole = System::Windows::Forms::AccessibleRole::Text;
 			   this->registerErrorLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerErrorLabel->ForeColor = System::Drawing::Color::Red;
-			   this->registerErrorLabel->Location = System::Drawing::Point(439, 423);
+			   this->registerErrorLabel->Location = System::Drawing::Point(56, 371);
 			   this->registerErrorLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerErrorLabel->Name = L"registerErrorLabel";
-			   this->registerErrorLabel->Size = System::Drawing::Size(274, 45);
+			   this->registerErrorLabel->Size = System::Drawing::Size(278, 49);
 			   this->registerErrorLabel->TabIndex = 16;
 			   this->registerErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
+			   // registerDateTimePicker
+			   // 
+			   this->registerDateTimePicker->CalendarForeColor = System::Drawing::Color::Black;
+			   this->registerDateTimePicker->Location = System::Drawing::Point(33, 340);
+			   this->registerDateTimePicker->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->registerDateTimePicker->Name = L"registerDateTimePicker";
+			   this->registerDateTimePicker->Size = System::Drawing::Size(229, 22);
+			   this->registerDateTimePicker->TabIndex = 9;
+			   // 
+			   // registerValidateButton
+			   // 
+			   this->registerValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			   this->registerValidateButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(230)));
+			   this->registerValidateButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->registerValidateButton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerValidateButton->Location = System::Drawing::Point(71, 434);
+			   this->registerValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->registerValidateButton->Name = L"registerValidateButton";
+			   this->registerValidateButton->Size = System::Drawing::Size(278, 41);
+			   this->registerValidateButton->TabIndex = 11;
+			   this->registerValidateButton->Text = L"Register";
+			   this->registerValidateButton->UseVisualStyleBackColor = false;
+			   this->registerValidateButton->Click += gcnew System::EventHandler(this, &MyForm::registerValidateButton_Click);
+			   // 
+			   // registerBirthdayLabel
+			   // 
+			   this->registerBirthdayLabel->AutoSize = true;
+			   this->registerBirthdayLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerBirthdayLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerBirthdayLabel->Location = System::Drawing::Point(29, 309);
+			   this->registerBirthdayLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			   this->registerBirthdayLabel->Name = L"registerBirthdayLabel";
+			   this->registerBirthdayLabel->Size = System::Drawing::Size(72, 22);
+			   this->registerBirthdayLabel->TabIndex = 17;
+			   this->registerBirthdayLabel->Text = L"Birthday";
+			   // 
+			   // registerCreateYourAccountLabel
+			   // 
+			   this->registerCreateYourAccountLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			   this->registerCreateYourAccountLabel->AutoSize = true;
+			   this->registerCreateYourAccountLabel->BackColor = System::Drawing::Color::Transparent;
+			   this->registerCreateYourAccountLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 13.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerCreateYourAccountLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerCreateYourAccountLabel->Location = System::Drawing::Point(73, 7);
+			   this->registerCreateYourAccountLabel->Name = L"registerCreateYourAccountLabel";
+			   this->registerCreateYourAccountLabel->Size = System::Drawing::Size(235, 32);
+			   this->registerCreateYourAccountLabel->TabIndex = 19;
+			   this->registerCreateYourAccountLabel->Text = L"Create Your Account";
+			   // 
+			   // registerFirstnameTextBox
+			   // 
+			   this->registerFirstnameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			   this->registerFirstnameTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerFirstnameTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerFirstnameTextBox->Location = System::Drawing::Point(32, 144);
+			   this->registerFirstnameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->registerFirstnameTextBox->Name = L"registerFirstnameTextBox";
+			   this->registerFirstnameTextBox->Size = System::Drawing::Size(129, 23);
+			   this->registerFirstnameTextBox->TabIndex = 12;
+			   // 
+			   // registerBlueBarLabel
+			   // 
+			   this->registerBlueBarLabel->AutoSize = true;
+			   this->registerBlueBarLabel->BackColor = System::Drawing::Color::Transparent;
+			   this->registerBlueBarLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerBlueBarLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerBlueBarLabel->Location = System::Drawing::Point(29, 88);
+			   this->registerBlueBarLabel->Name = L"registerBlueBarLabel";
+			   this->registerBlueBarLabel->Size = System::Drawing::Size(150, 22);
+			   this->registerBlueBarLabel->TabIndex = 19;
+			   this->registerBlueBarLabel->Text = L"____________________";
+			   // 
+			   // registerLastnameTextBox
+			   // 
+			   this->registerLastnameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			   this->registerLastnameTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerLastnameTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerLastnameTextBox->Location = System::Drawing::Point(33, 209);
+			   this->registerLastnameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->registerLastnameTextBox->Name = L"registerLastnameTextBox";
+			   this->registerLastnameTextBox->Size = System::Drawing::Size(129, 23);
+			   this->registerLastnameTextBox->TabIndex = 13;
+			   // 
 			   // registerLastnameLabel
 			   // 
-			   this->registerLastnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerLastnameLabel->AutoSize = true;
 			   this->registerLastnameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->registerLastnameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->registerLastnameLabel->Location = System::Drawing::Point(584, 187);
+			   this->registerLastnameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerLastnameLabel->Location = System::Drawing::Point(29, 184);
 			   this->registerLastnameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerLastnameLabel->Name = L"registerLastnameLabel";
 			   this->registerLastnameLabel->Size = System::Drawing::Size(80, 22);
 			   this->registerLastnameLabel->TabIndex = 15;
 			   this->registerLastnameLabel->Text = L"Lastname";
 			   // 
-			   // registerFirstnameLabel
+			   // registerPasswordTextBox
 			   // 
-			   this->registerFirstnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->registerFirstnameLabel->AutoSize = true;
-			   this->registerFirstnameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->registerPasswordTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			   this->registerPasswordTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->registerFirstnameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->registerFirstnameLabel->Location = System::Drawing::Point(439, 184);
-			   this->registerFirstnameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			   this->registerFirstnameLabel->Name = L"registerFirstnameLabel";
-			   this->registerFirstnameLabel->Size = System::Drawing::Size(82, 22);
-			   this->registerFirstnameLabel->TabIndex = 14;
-			   this->registerFirstnameLabel->Text = L"Firstname";
-			   // 
-			   // registerLastnameTextBox
-			   // 
-			   this->registerLastnameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->registerLastnameTextBox->Location = System::Drawing::Point(584, 208);
-			   this->registerLastnameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->registerLastnameTextBox->Name = L"registerLastnameTextBox";
-			   this->registerLastnameTextBox->Size = System::Drawing::Size(129, 22);
-			   this->registerLastnameTextBox->TabIndex = 13;
-			   // 
-			   // registerFirstnameTextBox
-			   // 
-			   this->registerFirstnameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->registerFirstnameTextBox->Location = System::Drawing::Point(439, 208);
-			   this->registerFirstnameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->registerFirstnameTextBox->Name = L"registerFirstnameTextBox";
-			   this->registerFirstnameTextBox->Size = System::Drawing::Size(129, 22);
-			   this->registerFirstnameTextBox->TabIndex = 12;
-			   // 
-			   // registerValidateButton
-			   // 
-			   this->registerValidateButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			   this->registerValidateButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->registerValidateButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->registerValidateButton->ForeColor = System::Drawing::Color::White;
-			   this->registerValidateButton->Location = System::Drawing::Point(437, 356);
-			   this->registerValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->registerValidateButton->Name = L"registerValidateButton";
-			   this->registerValidateButton->Size = System::Drawing::Size(278, 41);
-			   this->registerValidateButton->TabIndex = 11;
-			   this->registerValidateButton->Text = L"Validate";
-			   this->registerValidateButton->UseVisualStyleBackColor = false;
-			   this->registerValidateButton->Click += gcnew System::EventHandler(this, &MyForm::registerValidateButton_Click);
-			   // 
-			   // registerLoginButton
-			   // 
-			   this->registerLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			   this->registerLoginButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->registerLoginButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->registerLoginButton->ForeColor = System::Drawing::Color::White;
-			   this->registerLoginButton->Location = System::Drawing::Point(1099, 12);
-			   this->registerLoginButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->registerLoginButton->Name = L"registerLoginButton";
-			   this->registerLoginButton->Size = System::Drawing::Size(78, 41);
-			   this->registerLoginButton->TabIndex = 5;
-			   this->registerLoginButton->Text = L"Login";
-			   this->registerLoginButton->UseVisualStyleBackColor = false;
-			   this->registerLoginButton->Click += gcnew System::EventHandler(this, &MyForm::registerLoginButton_Click);
+			   this->registerPasswordTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerPasswordTextBox->Location = System::Drawing::Point(32, 272);
+			   this->registerPasswordTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->registerPasswordTextBox->Name = L"registerPasswordTextBox";
+			   this->registerPasswordTextBox->PasswordChar = '*';
+			   this->registerPasswordTextBox->Size = System::Drawing::Size(129, 23);
+			   this->registerPasswordTextBox->TabIndex = 3;
 			   // 
 			   // registerPasswordLabel
 			   // 
-			   this->registerPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerPasswordLabel->AutoSize = true;
 			   this->registerPasswordLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->registerPasswordLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->registerPasswordLabel->Location = System::Drawing::Point(584, 116);
+			   this->registerPasswordLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerPasswordLabel->Location = System::Drawing::Point(28, 247);
 			   this->registerPasswordLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerPasswordLabel->Name = L"registerPasswordLabel";
 			   this->registerPasswordLabel->Size = System::Drawing::Size(80, 22);
 			   this->registerPasswordLabel->TabIndex = 4;
 			   this->registerPasswordLabel->Text = L"Password";
 			   // 
-			   // registerPasswordTextBox
+			   // registerBlueBarLabel4
 			   // 
-			   this->registerPasswordTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->registerPasswordTextBox->Location = System::Drawing::Point(584, 140);
-			   this->registerPasswordTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->registerPasswordTextBox->Name = L"registerPasswordTextBox";
-			   this->registerPasswordTextBox->PasswordChar = '*';
-			   this->registerPasswordTextBox->Size = System::Drawing::Size(129, 22);
-			   this->registerPasswordTextBox->TabIndex = 3;
-			   // 
-			   // registerUsernameTextBox
-			   // 
-			   this->registerUsernameTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->registerUsernameTextBox->Location = System::Drawing::Point(439, 140);
-			   this->registerUsernameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
-			   this->registerUsernameTextBox->Name = L"registerUsernameTextBox";
-			   this->registerUsernameTextBox->Size = System::Drawing::Size(129, 22);
-			   this->registerUsernameTextBox->TabIndex = 2;
+			   this->registerBlueBarLabel4->AutoSize = true;
+			   this->registerBlueBarLabel4->BackColor = System::Drawing::Color::Transparent;
+			   this->registerBlueBarLabel4->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerBlueBarLabel4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerBlueBarLabel4->Location = System::Drawing::Point(28, 281);
+			   this->registerBlueBarLabel4->Name = L"registerBlueBarLabel4";
+			   this->registerBlueBarLabel4->Size = System::Drawing::Size(150, 22);
+			   this->registerBlueBarLabel4->TabIndex = 20;
+			   this->registerBlueBarLabel4->Text = L"____________________";
 			   // 
 			   // registerUsernameLabel
 			   // 
-			   this->registerUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerUsernameLabel->AutoSize = true;
 			   this->registerUsernameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->registerUsernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->registerUsernameLabel->Location = System::Drawing::Point(439, 116);
+			   this->registerUsernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerUsernameLabel->Location = System::Drawing::Point(29, 60);
 			   this->registerUsernameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerUsernameLabel->Name = L"registerUsernameLabel";
 			   this->registerUsernameLabel->Size = System::Drawing::Size(85, 22);
 			   this->registerUsernameLabel->TabIndex = 1;
 			   this->registerUsernameLabel->Text = L"Username";
 			   // 
-			   // registerRegisterLabel
+			   // registerFirstnameLabel
 			   // 
-			   this->registerRegisterLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			   this->registerRegisterLabel->AutoSize = true;
-			   this->registerRegisterLabel->BackColor = System::Drawing::Color::Transparent;
-			   this->registerRegisterLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Bold,
+			   this->registerFirstnameLabel->AutoSize = true;
+			   this->registerFirstnameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->registerRegisterLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->registerRegisterLabel->Location = System::Drawing::Point(11, 9);
-			   this->registerRegisterLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			   this->registerRegisterLabel->Name = L"registerRegisterLabel";
-			   this->registerRegisterLabel->Size = System::Drawing::Size(149, 44);
-			   this->registerRegisterLabel->TabIndex = 0;
-			   this->registerRegisterLabel->Text = L"Register";
+			   this->registerFirstnameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerFirstnameLabel->Location = System::Drawing::Point(28, 119);
+			   this->registerFirstnameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			   this->registerFirstnameLabel->Name = L"registerFirstnameLabel";
+			   this->registerFirstnameLabel->Size = System::Drawing::Size(82, 22);
+			   this->registerFirstnameLabel->TabIndex = 14;
+			   this->registerFirstnameLabel->Text = L"Firstname";
+			   // 
+			   // registerBlueBarLabel2
+			   // 
+			   this->registerBlueBarLabel2->AutoSize = true;
+			   this->registerBlueBarLabel2->BackColor = System::Drawing::Color::Transparent;
+			   this->registerBlueBarLabel2->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerBlueBarLabel2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerBlueBarLabel2->Location = System::Drawing::Point(28, 152);
+			   this->registerBlueBarLabel2->Name = L"registerBlueBarLabel2";
+			   this->registerBlueBarLabel2->Size = System::Drawing::Size(150, 22);
+			   this->registerBlueBarLabel2->TabIndex = 21;
+			   this->registerBlueBarLabel2->Text = L"____________________";
+			   // 
+			   // registerBlueBarLabel3
+			   // 
+			   this->registerBlueBarLabel3->AutoSize = true;
+			   this->registerBlueBarLabel3->BackColor = System::Drawing::Color::Transparent;
+			   this->registerBlueBarLabel3->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerBlueBarLabel3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->registerBlueBarLabel3->Location = System::Drawing::Point(29, 216);
+			   this->registerBlueBarLabel3->Name = L"registerBlueBarLabel3";
+			   this->registerBlueBarLabel3->Size = System::Drawing::Size(150, 22);
+			   this->registerBlueBarLabel3->TabIndex = 22;
+			   this->registerBlueBarLabel3->Text = L"____________________";
 			   // 
 			   // stockMPanel
 			   // 
@@ -1240,6 +1398,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->menuAccountButton->Text = L"My Account";
 			   this->menuAccountButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			   this->menuAccountButton->UseVisualStyleBackColor = true;
+			   this->menuAccountButton->Visible = false;
 			   this->menuAccountButton->Click += gcnew System::EventHandler(this, &MyForm::menuAccountButton_Click);
 			   this->menuAccountButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuAccountButton_MouseEnter);
 			   this->menuAccountButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuAccountButton_MouseLeave);
@@ -1656,6 +1815,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // 
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
+			   this->hubPanel->Controls->Add(this->preCatalogPanel);
 			   this->hubPanel->Controls->Add(this->catalogOrderPanel);
 			   this->hubPanel->Controls->Add(this->catalogCartPanel);
 			   this->hubPanel->Controls->Add(this->addStockPanel);
@@ -1978,9 +2138,9 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->preCatalogPanel->Controls->Add(this->preCatalogSearchLabel);
 			   this->preCatalogPanel->Controls->Add(this->preCatalogTextBox);
 			   this->preCatalogPanel->Controls->Add(this->preCatalogListView);
-			   this->preCatalogPanel->Location = System::Drawing::Point(0, 0);
+			   this->preCatalogPanel->Location = System::Drawing::Point(220, 80);
 			   this->preCatalogPanel->Name = L"preCatalogPanel";
-			   this->preCatalogPanel->Size = System::Drawing::Size(1188, 687);
+			   this->preCatalogPanel->Size = System::Drawing::Size(968, 607);
 			   this->preCatalogPanel->TabIndex = 5;
 			   // 
 			   // preCatalogSentenceLabel
@@ -1989,7 +2149,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->preCatalogSentenceLabel->AutoSize = true;
 			   this->preCatalogSentenceLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogSentenceLabel->Location = System::Drawing::Point(907, 646);
+			   this->preCatalogSentenceLabel->Location = System::Drawing::Point(658, 565);
 			   this->preCatalogSentenceLabel->Name = L"preCatalogSentenceLabel";
 			   this->preCatalogSentenceLabel->Size = System::Drawing::Size(146, 19);
 			   this->preCatalogSentenceLabel->TabIndex = 5;
@@ -2000,7 +2160,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->preCatalogLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			   this->preCatalogLoginButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogLoginButton->Location = System::Drawing::Point(1059, 638);
+			   this->preCatalogLoginButton->Location = System::Drawing::Point(839, 556);
 			   this->preCatalogLoginButton->Name = L"preCatalogLoginButton";
 			   this->preCatalogLoginButton->Size = System::Drawing::Size(117, 38);
 			   this->preCatalogLoginButton->TabIndex = 4;
@@ -2040,9 +2200,9 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // preCatalogListView
 			   // 
 			   this->preCatalogListView->HideSelection = false;
-			   this->preCatalogListView->Location = System::Drawing::Point(19, 183);
+			   this->preCatalogListView->Location = System::Drawing::Point(19, 185);
 			   this->preCatalogListView->Name = L"preCatalogListView";
-			   this->preCatalogListView->Size = System::Drawing::Size(1143, 423);
+			   this->preCatalogListView->Size = System::Drawing::Size(923, 258);
 			   this->preCatalogListView->TabIndex = 0;
 			   this->preCatalogListView->UseCompatibleStateImageBehavior = false;
 			   // 
@@ -2052,10 +2212,9 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			   this->ClientSize = System::Drawing::Size(1188, 687);
-			   this->Controls->Add(this->preCatalogPanel);
 			   this->Controls->Add(this->hubPanel);
-			   this->Controls->Add(this->loginPanel);
 			   this->Controls->Add(this->registerPanel);
+			   this->Controls->Add(this->loginPanel);
 			   this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->ForeColor = System::Drawing::Color::Black;
@@ -2065,13 +2224,11 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->Text = L"Opo2suM";
 			   this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			   this->loginPanel->ResumeLayout(false);
-			   this->loginPanel->PerformLayout();
-			   this->loginPasswordPanel->ResumeLayout(false);
-			   this->loginPasswordPanel->PerformLayout();
-			   this->loginUsernamePanel->ResumeLayout(false);
-			   this->loginUsernamePanel->PerformLayout();
+			   this->loginTextPanel->ResumeLayout(false);
+			   this->loginTextPanel->PerformLayout();
 			   this->registerPanel->ResumeLayout(false);
-			   this->registerPanel->PerformLayout();
+			   this->registerTextPanel->ResumeLayout(false);
+			   this->registerTextPanel->PerformLayout();
 			   this->stockMPanel->ResumeLayout(false);
 			   this->stockMPanel->PerformLayout();
 			   this->addStockPanel->ResumeLayout(false);
@@ -2299,6 +2456,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			if (connectedAccount->get_permission_lv_account() == 0) {
 				menuCatalogButton->Visible = true;
 				menuOrderButton->Visible = true;
+				menuAccountButton->Visible = true;
 			}
 			else if (connectedAccount->get_permission_lv_account() == 1)
 			{
@@ -2307,6 +2465,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 				menuStockButton->Visible = true;
 				menuClientButton->Visible = true;
 				menuStatisticButton->Visible = true;
+				menuAccountButton->Visible = true;
 			}
 			else if (connectedAccount->get_permission_lv_account() == 2)
 			{
@@ -2316,6 +2475,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 				menuClientButton->Visible = true;
 				menuStatisticButton->Visible = true;
 				menuPersonnellManageButton->Visible = true;
+				menuAccountButton->Visible = true;
 			}
 		}
 		DataTableReaderTest->Close();
@@ -2774,6 +2934,9 @@ private: System::Void preCatalogLoginButton_Click(System::Object^ sender, System
 	hideAllPanel();
 	loginPanel->Visible = true;
 	loginPanel->BringToFront();
+}
+private: System::Void loginReturnPreCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	MyForm_Load(sender, e);
 }
 };
 }
