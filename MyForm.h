@@ -1139,6 +1139,9 @@ namespace OPO2SUMproject {
 			   this->menuPersonnellManageButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			   this->menuPersonnellManageButton->UseVisualStyleBackColor = true;
 			   this->menuPersonnellManageButton->Visible = false;
+			   this->menuPersonnellManageButton->Click += gcnew System::EventHandler(this, &MyForm::menuPersonnellManageButton_Click);
+			   this->menuPersonnellManageButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuPersonnellManageButton_MouseEnter);
+			   this->menuPersonnellManageButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuPersonnellManageButton_MouseLeave);
 			   // 
 			   // menuCatalogButton
 			   // 
@@ -1159,6 +1162,8 @@ namespace OPO2SUMproject {
 			   this->menuCatalogButton->UseVisualStyleBackColor = true;
 			   this->menuCatalogButton->Visible = false;
 			   this->menuCatalogButton->Click += gcnew System::EventHandler(this, &MyForm::menuCatalogButton_Click);
+			   this->menuCatalogButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuCatalogButton_MouseEnter);
+			   this->menuCatalogButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuCatalogButton_MouseLeave);
 			   // 
 			   // menuAccountButton
 			   // 
@@ -1177,7 +1182,7 @@ namespace OPO2SUMproject {
 			   this->menuAccountButton->Text = L"My Account";
 			   this->menuAccountButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			   this->menuAccountButton->UseVisualStyleBackColor = true;
-			   this->menuAccountButton->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::menuAccountButton_MouseDown);
+			   this->menuAccountButton->Click += gcnew System::EventHandler(this, &MyForm::menuAccountButton_Click);
 			   this->menuAccountButton->MouseEnter += gcnew System::EventHandler(this, &MyForm::menuAccountButton_MouseEnter);
 			   this->menuAccountButton->MouseLeave += gcnew System::EventHandler(this, &MyForm::menuAccountButton_MouseLeave);
 			   // 
@@ -1281,13 +1286,14 @@ namespace OPO2SUMproject {
 			   this->nameProjectLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->nameProjectLabel->ForeColor = System::Drawing::Color::LightGray;
-			   this->nameProjectLabel->Location = System::Drawing::Point(0, 0);
+			   this->nameProjectLabel->Location = System::Drawing::Point(0, 3);
 			   this->nameProjectLabel->Margin = System::Windows::Forms::Padding(0);
 			   this->nameProjectLabel->Name = L"nameProjectLabel";
-			   this->nameProjectLabel->Size = System::Drawing::Size(220, 80);
+			   this->nameProjectLabel->Size = System::Drawing::Size(220, 73);
 			   this->nameProjectLabel->TabIndex = 0;
 			   this->nameProjectLabel->Text = L"OPO2SUM";
 			   this->nameProjectLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			   this->nameProjectLabel->Click += gcnew System::EventHandler(this, &MyForm::nameProjectLabel_Click);
 			   // 
 			   // titleBarPanel
 			   // 
@@ -1302,15 +1308,15 @@ namespace OPO2SUMproject {
 			   // titleBarLabel
 			   // 
 			   this->titleBarLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
-			   this->titleBarLabel->AutoSize = true;
 			   this->titleBarLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->titleBarLabel->ForeColor = System::Drawing::Color::White;
-			   this->titleBarLabel->Location = System::Drawing::Point(408, 26);
+			   this->titleBarLabel->Location = System::Drawing::Point(5, 3);
 			   this->titleBarLabel->Name = L"titleBarLabel";
-			   this->titleBarLabel->Size = System::Drawing::Size(99, 32);
+			   this->titleBarLabel->Size = System::Drawing::Size(960, 73);
 			   this->titleBarLabel->TabIndex = 0;
 			   this->titleBarLabel->Text = L"HOME";
+			   this->titleBarLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
 			   // accountPanel
 			   // 
@@ -1592,14 +1598,14 @@ namespace OPO2SUMproject {
 			   // 
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
-			   this->hubPanel->Controls->Add(this->orderMPanel);
-			   this->hubPanel->Controls->Add(this->accountPanel);
-			   this->hubPanel->Controls->Add(this->clientMPanel);
 			   this->hubPanel->Controls->Add(this->catalogOrderPanel);
 			   this->hubPanel->Controls->Add(this->catalogCartPanel);
 			   this->hubPanel->Controls->Add(this->addStockPanel);
 			   this->hubPanel->Controls->Add(this->stockMPanel);
 			   this->hubPanel->Controls->Add(this->statisticMPanel);
+			   this->hubPanel->Controls->Add(this->orderMPanel);
+			   this->hubPanel->Controls->Add(this->accountPanel);
+			   this->hubPanel->Controls->Add(this->clientMPanel);
 			   this->hubPanel->Location = System::Drawing::Point(0, 0);
 			   this->hubPanel->Name = L"hubPanel";
 			   this->hubPanel->Size = System::Drawing::Size(1188, 687);
@@ -1942,7 +1948,6 @@ namespace OPO2SUMproject {
 			   this->menuButtonPanel->ResumeLayout(false);
 			   this->menuLogoPanel->ResumeLayout(false);
 			   this->titleBarPanel->ResumeLayout(false);
-			   this->titleBarPanel->PerformLayout();
 			   this->accountPanel->ResumeLayout(false);
 			   this->accountPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
@@ -1960,37 +1965,30 @@ namespace OPO2SUMproject {
 	private: System::Void resetHubButton() {
 		menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuAccountButton->ForeColor = System::Drawing::Color::White;
 		menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
 			static_cast<System::Int32>(static_cast<System::Byte>(76)));
 		menuCatalogButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuCatalogButton->ForeColor = System::Drawing::Color::White;
 		menuCatalogButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
 			static_cast<System::Int32>(static_cast<System::Byte>(76)));
-		menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+		menuPersonnellManageButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuAccountButton->ForeColor = System::Drawing::Color::White;
-		menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+		menuPersonnellManageButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
 			static_cast<System::Int32>(static_cast<System::Byte>(76)));
 		menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuStatisticButton->ForeColor = System::Drawing::Color::White;
 		menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
 			static_cast<System::Int32>(static_cast<System::Byte>(76)));
 		menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuStockButton->ForeColor = System::Drawing::Color::White;
 		menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
 			static_cast<System::Int32>(static_cast<System::Byte>(76)));
 		menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuOrderButton->ForeColor = System::Drawing::Color::White;
 		menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
 			static_cast<System::Int32>(static_cast<System::Byte>(76)));
 		menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuClientButton->ForeColor = System::Drawing::Color::White;
 		menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
 			static_cast<System::Int32>(static_cast<System::Byte>(76)));
 	}
@@ -2063,13 +2061,23 @@ namespace OPO2SUMproject {
 			loginUsernameTextBox->Text = "Username";
 		}
 	}
-	private: System::Void menuAccountButton_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	private: System::Void menuAccountButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
 		accountPanel->Visible = true;
+		clientMPanel->Visible = true; titleBarLabel->Text = "MY ACCOUNT";
+		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
+			static_cast<System::Int32>(static_cast<System::Byte>(188)));
+		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(74)),
+			static_cast<System::Int32>(static_cast<System::Byte>(94)));
+
 	}
 	private: System::Void menuClientButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
-		clientMPanel->Visible = true;
+		clientMPanel->Visible = true; titleBarLabel->Text = "CLIENT MANAGE";
+		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(139)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+			static_cast<System::Int32>(static_cast<System::Byte>(64)));
+		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(69)), static_cast<System::Int32>(static_cast<System::Byte>(97)),
+			static_cast<System::Int32>(static_cast<System::Byte>(32)));
 	}
 	private: System::Void enableAccountModifyButton(System::Object^ sender, System::EventArgs^ e) {
 		this->accountModifyButton->Enabled = true;
@@ -2252,14 +2260,29 @@ namespace OPO2SUMproject {
 		hideAllPanel();
 		orderFilterTextBox_TextChanged(sender, e);
 		orderMPanel->Visible = true;
+		titleBarLabel->Text = "ORDER";
+		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(228)), static_cast<System::Int32>(static_cast<System::Byte>(26)),
+			static_cast<System::Int32>(static_cast<System::Byte>(74)));
+		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(114)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
+			static_cast<System::Int32>(static_cast<System::Byte>(37)));
 	}
 	private: System::Void menuStockButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
 		stockMPanel->Visible = true;
+		titleBarLabel->Text = "STOCK";
+		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(176)),
+			static_cast<System::Int32>(static_cast<System::Byte>(173)));
+		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(88)),
+			static_cast<System::Int32>(static_cast<System::Byte>(86)));
 	}
 	private: System::Void menuStatisticButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
 		statisticMPanel->Visible = true;
+		titleBarLabel->Text = "STATISTIC";
+		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(236)), static_cast<System::Int32>(static_cast<System::Byte>(236)),
+			static_cast<System::Int32>(static_cast<System::Byte>(120)));
+		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(118)), static_cast<System::Int32>(static_cast<System::Byte>(118)),
+			static_cast<System::Int32>(static_cast<System::Byte>(60)));
 	}
 	private: System::Void stockMAddButton_Click_1(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
@@ -2271,12 +2294,23 @@ namespace OPO2SUMproject {
 	private: System::Void loginPasswordModButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		loginPasswordTextBox->UseSystemPasswordChar = !loginPasswordTextBox->UseSystemPasswordChar;
 	}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// BOUTON COULEUR //////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	private: System::Void menuCatalogButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		menuCatalogButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuCatalogButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
+			static_cast<System::Int32>(static_cast<System::Byte>(243)));
+	}
+	private: System::Void menuCatalogButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		resetHubButton();
+	}
 	private: System::Void menuClientButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 		menuClientButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
-			static_cast<System::Int32>(static_cast<System::Byte>(251)));
-		menuClientButton->ForeColor = System::Drawing::Color::Black;
+		menuClientButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(139)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+			static_cast<System::Int32>(static_cast<System::Byte>(64)));
 	}
 	private: System::Void menuClientButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 		resetHubButton();
@@ -2284,9 +2318,8 @@ namespace OPO2SUMproject {
 	private: System::Void menuOrderButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 		menuOrderButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(174)),
-			static_cast<System::Int32>(static_cast<System::Byte>(214)));
-		menuOrderButton->ForeColor = System::Drawing::Color::Black;
+		menuOrderButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(228)), static_cast<System::Int32>(static_cast<System::Byte>(26)),
+			static_cast<System::Int32>(static_cast<System::Byte>(74)));
 	}
 	private: System::Void menuOrderButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 		resetHubButton();
@@ -2294,9 +2327,8 @@ namespace OPO2SUMproject {
 	private: System::Void menuStockButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 		menuStockButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
-			static_cast<System::Int32>(static_cast<System::Byte>(143)));
-		menuStockButton->ForeColor = System::Drawing::Color::Black;
+		menuStockButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(176)),
+			static_cast<System::Int32>(static_cast<System::Byte>(173)));
 	}
 	private: System::Void menuStockButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 		resetHubButton();
@@ -2304,9 +2336,8 @@ namespace OPO2SUMproject {
 	private: System::Void menuStatisticButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 		menuStatisticButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(96)),
-			static_cast<System::Int32>(static_cast<System::Byte>(59)));
-		menuStatisticButton->ForeColor = System::Drawing::Color::Black;
+		menuStatisticButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(236)), static_cast<System::Int32>(static_cast<System::Byte>(236)),
+			static_cast<System::Int32>(static_cast<System::Byte>(120)));
 	}
 	private: System::Void menuStatisticButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 		resetHubButton();
@@ -2314,19 +2345,38 @@ namespace OPO2SUMproject {
 	private: System::Void menuAccountButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 		menuAccountButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
 			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-		menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-			static_cast<System::Int32>(static_cast<System::Byte>(32)));
-		menuAccountButton->ForeColor = System::Drawing::Color::Black;
+		menuAccountButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
+			static_cast<System::Int32>(static_cast<System::Byte>(188)));
 	}
 	private: System::Void menuAccountButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 		resetHubButton();
 	}
+	private: System::Void menuPersonnellManageButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		menuPersonnellManageButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+		menuPersonnellManageButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(87)),
+			static_cast<System::Int32>(static_cast<System::Byte>(34)));
+	}
+	private: System::Void menuPersonnellManageButton_Click(System::Object ^ sender, System::EventArgs ^ e) {
+		hideAllPanel();
+		titleBarLabel->Text = "PERSONNEL MANAGE";
+		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(87)),
+			static_cast<System::Int32>(static_cast<System::Byte>(34)));
+		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(127)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+			static_cast<System::Int32>(static_cast<System::Byte>(17)));
+	}
+
 
 		   // Catalog --------------------------------------------------------------------
 
 	private: System::Void menuCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
 		catalogOrderPanel->Visible = true;
+		titleBarLabel->Text = "CATALOG";
+		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
+			static_cast<System::Int32>(static_cast<System::Byte>(243)));
+		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(16)), static_cast<System::Int32>(static_cast<System::Byte>(75)),
+			static_cast<System::Int32>(static_cast<System::Byte>(121)));
 	}
 	private: System::Void catalogCartButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
@@ -2566,5 +2616,20 @@ namespace OPO2SUMproject {
 				  //(pense à remettre ton login dans le AccessData pour avoir ta bdd)
 
 
-	};
+
+
+private: System::Void nameProjectLabel_Click(System::Object^ sender, System::EventArgs^ e) {
+	hideAllPanel();
+	titleBarLabel->Text = "HOME";
+	titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
+		static_cast<System::Int32>(static_cast<System::Byte>(136)));
+	menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(39)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
+		static_cast<System::Int32>(static_cast<System::Byte>(58)));
+}
+
+
+private: System::Void menuPersonnellManageButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+	resetHubButton();
+}
+};
 }
