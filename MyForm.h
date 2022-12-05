@@ -67,8 +67,8 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ registerBirthdayLabel;
 	private: System::Windows::Forms::Panel^ registerPanel;
 	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::TextBox^ catalogResearchTextBox;
+
+
 	private: System::Windows::Forms::Label^ Information;
 
 	private:
@@ -78,24 +78,46 @@ namespace OPO2SUMproject {
 		ProductManager^ productManager = gcnew ProductManager();
 		OrderManager^ orderManager = gcnew OrderManager();
 		BillManager^ billManager = gcnew BillManager();
-
-	private: System::Windows::Forms::Button^ catalogCheckoutButton;
-
-
-	private: System::Windows::Forms::ListView^ catalogGlobalListView;
+	private: System::Windows::Forms::ComboBox^ simulationDiscountComboBox;
+	private: System::Windows::Forms::ComboBox^ simulationMarkdownComboBox;
 
 
+	private: System::Windows::Forms::Label^ simulationResultLabel;
 
-	private: System::Windows::Forms::Panel^ panel2;
 
 
-	private: System::Windows::Forms::ListView^ catalogSelectedListView;
 
+
+
+	private: System::Windows::Forms::ComboBox^ simulationTVAComboBox;
+	private: System::Windows::Forms::ComboBox^ simulationMargeComboBox;
+
+
+	private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Button^ catalogCartButton;
-	private: System::Windows::Forms::Button^ catalogBackButton;
-	private: System::Windows::Forms::ComboBox^ catalogAddressBillingListComboBox;
-	private: System::Windows::Forms::ComboBox^ catalogAddressShippingListComboBox;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ afficherPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 		   AccountManager^ accountManager = gcnew AccountManager();
@@ -128,22 +150,22 @@ namespace OPO2SUMproject {
 			   this->registerBirthdayLabel = (gcnew System::Windows::Forms::Label());
 			   this->registerPanel = (gcnew System::Windows::Forms::Panel());
 			   this->panel1 = (gcnew System::Windows::Forms::Panel());
-			   this->catalogCartButton = (gcnew System::Windows::Forms::Button());
-			   this->catalogGlobalListView = (gcnew System::Windows::Forms::ListView());
-			   this->label10 = (gcnew System::Windows::Forms::Label());
-			   this->catalogResearchTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->Information = (gcnew System::Windows::Forms::Label());
-			   this->catalogCheckoutButton = (gcnew System::Windows::Forms::Button());
-			   this->panel2 = (gcnew System::Windows::Forms::Panel());
-			   this->catalogAddressBillingListComboBox = (gcnew System::Windows::Forms::ComboBox());
-			   this->catalogAddressShippingListComboBox = (gcnew System::Windows::Forms::ComboBox());
-			   this->catalogBackButton = (gcnew System::Windows::Forms::Button());
-			   this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
+			   this->label5 = (gcnew System::Windows::Forms::Label());
+			   this->label4 = (gcnew System::Windows::Forms::Label());
 			   this->label3 = (gcnew System::Windows::Forms::Label());
+			   this->label2 = (gcnew System::Windows::Forms::Label());
+			   this->label1 = (gcnew System::Windows::Forms::Label());
+			   this->simulationMarkdownComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationResultLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationTVAComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationMargeComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationEntryPriceTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->simulationDiscountComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->Information = (gcnew System::Windows::Forms::Label());
+			   this->afficherPage = (gcnew System::Windows::Forms::Button());
 			   this->loginPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
 			   this->panel1->SuspendLayout();
-			   this->panel2->SuspendLayout();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
@@ -182,7 +204,6 @@ namespace OPO2SUMproject {
 			   this->loginValidateButton->TabIndex = 11;
 			   this->loginValidateButton->Text = L"Validate";
 			   this->loginValidateButton->UseVisualStyleBackColor = true;
-			   this->loginValidateButton->Click += gcnew System::EventHandler(this, &MyForm::loginValidateButton_Click);
 			   // 
 			   // loginRegisterButton
 			   // 
@@ -406,53 +427,131 @@ namespace OPO2SUMproject {
 			   // 
 			   // panel1
 			   // 
-			   this->panel1->Controls->Add(this->catalogCartButton);
-			   this->panel1->Controls->Add(this->catalogGlobalListView);
-			   this->panel1->Controls->Add(this->label10);
-			   this->panel1->Controls->Add(this->catalogResearchTextBox);
+			   this->panel1->Controls->Add(this->label5);
+			   this->panel1->Controls->Add(this->label4);
+			   this->panel1->Controls->Add(this->label3);
+			   this->panel1->Controls->Add(this->label2);
+			   this->panel1->Controls->Add(this->label1);
+			   this->panel1->Controls->Add(this->simulationMarkdownComboBox);
+			   this->panel1->Controls->Add(this->simulationResultLabel);
+			   this->panel1->Controls->Add(this->simulationTVAComboBox);
+			   this->panel1->Controls->Add(this->simulationMargeComboBox);
+			   this->panel1->Controls->Add(this->simulationEntryPriceTextBox);
+			   this->panel1->Controls->Add(this->simulationDiscountComboBox);
 			   this->panel1->Controls->Add(this->Information);
 			   this->panel1->Location = System::Drawing::Point(450, 12);
 			   this->panel1->Name = L"panel1";
-			   this->panel1->Size = System::Drawing::Size(448, 463);
+			   this->panel1->Size = System::Drawing::Size(697, 463);
 			   this->panel1->TabIndex = 24;
 			   // 
-			   // catalogCartButton
+			   // label5
 			   // 
-			   this->catalogCartButton->Location = System::Drawing::Point(315, 394);
-			   this->catalogCartButton->Name = L"catalogCartButton";
-			   this->catalogCartButton->Size = System::Drawing::Size(111, 33);
-			   this->catalogCartButton->TabIndex = 40;
-			   this->catalogCartButton->Text = L"Cart";
-			   this->catalogCartButton->UseVisualStyleBackColor = true;
-			   this->catalogCartButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCartButton_Click);
+			   this->label5->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			   this->label5->AutoSize = true;
+			   this->label5->Location = System::Drawing::Point(499, 128);
+			   this->label5->Name = L"label5";
+			   this->label5->Size = System::Drawing::Size(171, 17);
+			   this->label5->TabIndex = 51;
+			   this->label5->Text = L"Unknow Markdown (%)";
 			   // 
-			   // catalogGlobalListView
+			   // label4
 			   // 
-			   this->catalogGlobalListView->HideSelection = false;
-			   this->catalogGlobalListView->Location = System::Drawing::Point(38, 130);
-			   this->catalogGlobalListView->Name = L"catalogGlobalListView";
-			   this->catalogGlobalListView->Size = System::Drawing::Size(393, 254);
-			   this->catalogGlobalListView->TabIndex = 38;
-			   this->catalogGlobalListView->UseCompatibleStateImageBehavior = false;
-			   this->catalogGlobalListView->View = System::Windows::Forms::View::List;
-			   this->catalogGlobalListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::catalogGlobalListView_DoubleClick);
+			   this->label4->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			   this->label4->AutoSize = true;
+			   this->label4->Location = System::Drawing::Point(392, 128);
+			   this->label4->Name = L"label4";
+			   this->label4->Size = System::Drawing::Size(101, 17);
+			   this->label4->TabIndex = 50;
+			   this->label4->Text = L"Discount (%)";
 			   // 
-			   // label10
+			   // label3
 			   // 
-			   this->label10->AutoSize = true;
-			   this->label10->Location = System::Drawing::Point(39, 69);
-			   this->label10->Name = L"label10";
-			   this->label10->Size = System::Drawing::Size(77, 17);
-			   this->label10->TabIndex = 36;
-			   this->label10->Text = L"Research";
+			   this->label3->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			   this->label3->AutoSize = true;
+			   this->label3->Location = System::Drawing::Point(289, 128);
+			   this->label3->Name = L"label3";
+			   this->label3->Size = System::Drawing::Size(83, 17);
+			   this->label3->TabIndex = 49;
+			   this->label3->Text = L"Marge (%)";
 			   // 
-			   // catalogResearchTextBox
+			   // label2
 			   // 
-			   this->catalogResearchTextBox->Location = System::Drawing::Point(38, 89);
-			   this->catalogResearchTextBox->Name = L"catalogResearchTextBox";
-			   this->catalogResearchTextBox->Size = System::Drawing::Size(268, 22);
-			   this->catalogResearchTextBox->TabIndex = 32;
-			   this->catalogResearchTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::catalogResearchTextBox_TextChanged);
+			   this->label2->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			   this->label2->AutoSize = true;
+			   this->label2->Location = System::Drawing::Point(202, 128);
+			   this->label2->Name = L"label2";
+			   this->label2->Size = System::Drawing::Size(68, 17);
+			   this->label2->TabIndex = 48;
+			   this->label2->Text = L"TVA (%)";
+			   // 
+			   // label1
+			   // 
+			   this->label1->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			   this->label1->AutoSize = true;
+			   this->label1->Location = System::Drawing::Point(38, 128);
+			   this->label1->Name = L"label1";
+			   this->label1->Size = System::Drawing::Size(94, 17);
+			   this->label1->TabIndex = 47;
+			   this->label1->Text = L"Stock Value";
+			   // 
+			   // simulationMarkdownComboBox
+			   // 
+			   this->simulationMarkdownComboBox->FormattingEnabled = true;
+			   this->simulationMarkdownComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"0", L"2", L"3", L"5" });
+			   this->simulationMarkdownComboBox->Location = System::Drawing::Point(522, 152);
+			   this->simulationMarkdownComboBox->Name = L"simulationMarkdownComboBox";
+			   this->simulationMarkdownComboBox->Size = System::Drawing::Size(80, 24);
+			   this->simulationMarkdownComboBox->TabIndex = 46;
+			   this->simulationMarkdownComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
+			   // 
+			   // simulationResultLabel
+			   // 
+			   this->simulationResultLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			   this->simulationResultLabel->AutoSize = true;
+			   this->simulationResultLabel->Location = System::Drawing::Point(499, 220);
+			   this->simulationResultLabel->Name = L"simulationResultLabel";
+			   this->simulationResultLabel->Size = System::Drawing::Size(49, 17);
+			   this->simulationResultLabel->TabIndex = 18;
+			   this->simulationResultLabel->Text = L"result";
+			   // 
+			   // simulationTVAComboBox
+			   // 
+			   this->simulationTVAComboBox->FormattingEnabled = true;
+			   this->simulationTVAComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"0", L"5,5", L"10", L"20" });
+			   this->simulationTVAComboBox->Location = System::Drawing::Point(190, 150);
+			   this->simulationTVAComboBox->Name = L"simulationTVAComboBox";
+			   this->simulationTVAComboBox->Size = System::Drawing::Size(80, 24);
+			   this->simulationTVAComboBox->TabIndex = 45;
+			   this->simulationTVAComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
+			   // 
+			   // simulationMargeComboBox
+			   // 
+			   this->simulationMargeComboBox->FormattingEnabled = true;
+			   this->simulationMargeComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"0", L"5", L"10", L"15" });
+			   this->simulationMargeComboBox->Location = System::Drawing::Point(292, 152);
+			   this->simulationMargeComboBox->Name = L"simulationMargeComboBox";
+			   this->simulationMargeComboBox->Size = System::Drawing::Size(80, 24);
+			   this->simulationMargeComboBox->TabIndex = 44;
+			   this->simulationMargeComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
+			   // 
+			   // simulationEntryPriceTextBox
+			   // 
+			   this->simulationEntryPriceTextBox->Anchor = System::Windows::Forms::AnchorStyles::Top;
+			   this->simulationEntryPriceTextBox->Location = System::Drawing::Point(26, 152);
+			   this->simulationEntryPriceTextBox->Name = L"simulationEntryPriceTextBox";
+			   this->simulationEntryPriceTextBox->Size = System::Drawing::Size(154, 22);
+			   this->simulationEntryPriceTextBox->TabIndex = 18;
+			   this->simulationEntryPriceTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
+			   // 
+			   // simulationDiscountComboBox
+			   // 
+			   this->simulationDiscountComboBox->FormattingEnabled = true;
+			   this->simulationDiscountComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"0", L"5", L"6" });
+			   this->simulationDiscountComboBox->Location = System::Drawing::Point(395, 152);
+			   this->simulationDiscountComboBox->Name = L"simulationDiscountComboBox";
+			   this->simulationDiscountComboBox->Size = System::Drawing::Size(80, 24);
+			   this->simulationDiscountComboBox->TabIndex = 43;
+			   this->simulationDiscountComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // Information
 			   // 
@@ -461,80 +560,20 @@ namespace OPO2SUMproject {
 				   static_cast<System::Byte>(0)));
 			   this->Information->Location = System::Drawing::Point(20, 22);
 			   this->Information->Name = L"Information";
-			   this->Information->Size = System::Drawing::Size(92, 32);
+			   this->Information->Size = System::Drawing::Size(160, 32);
 			   this->Information->TabIndex = 24;
-			   this->Information->Text = L"Order";
+			   this->Information->Text = L"Simulation";
 			   // 
-			   // catalogCheckoutButton
+			   // afficherPage
 			   // 
-			   this->catalogCheckoutButton->Location = System::Drawing::Point(284, 394);
-			   this->catalogCheckoutButton->Name = L"catalogCheckoutButton";
-			   this->catalogCheckoutButton->Size = System::Drawing::Size(112, 33);
-			   this->catalogCheckoutButton->TabIndex = 39;
-			   this->catalogCheckoutButton->Text = L"checkout";
-			   this->catalogCheckoutButton->UseVisualStyleBackColor = true;
-			   this->catalogCheckoutButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCheckoutButton_Click);
-			   // 
-			   // panel2
-			   // 
-			   this->panel2->Controls->Add(this->catalogAddressBillingListComboBox);
-			   this->panel2->Controls->Add(this->catalogAddressShippingListComboBox);
-			   this->panel2->Controls->Add(this->catalogBackButton);
-			   this->panel2->Controls->Add(this->catalogSelectedListView);
-			   this->panel2->Controls->Add(this->label3);
-			   this->panel2->Controls->Add(this->catalogCheckoutButton);
-			   this->panel2->Location = System::Drawing::Point(915, 12);
-			   this->panel2->Name = L"panel2";
-			   this->panel2->Size = System::Drawing::Size(431, 463);
-			   this->panel2->TabIndex = 41;
-			   // 
-			   // catalogAddressBillingListComboBox
-			   // 
-			   this->catalogAddressBillingListComboBox->FormattingEnabled = true;
-			   this->catalogAddressBillingListComboBox->Location = System::Drawing::Point(26, 311);
-			   this->catalogAddressBillingListComboBox->Name = L"catalogAddressBillingListComboBox";
-			   this->catalogAddressBillingListComboBox->Size = System::Drawing::Size(121, 24);
-			   this->catalogAddressBillingListComboBox->TabIndex = 44;
-			   // 
-			   // catalogAddressShippingListComboBox
-			   // 
-			   this->catalogAddressShippingListComboBox->FormattingEnabled = true;
-			   this->catalogAddressShippingListComboBox->Location = System::Drawing::Point(26, 341);
-			   this->catalogAddressShippingListComboBox->Name = L"catalogAddressShippingListComboBox";
-			   this->catalogAddressShippingListComboBox->Size = System::Drawing::Size(121, 24);
-			   this->catalogAddressShippingListComboBox->TabIndex = 43;
-			   // 
-			   // catalogBackButton
-			   // 
-			   this->catalogBackButton->Location = System::Drawing::Point(301, 22);
-			   this->catalogBackButton->Name = L"catalogBackButton";
-			   this->catalogBackButton->Size = System::Drawing::Size(108, 33);
-			   this->catalogBackButton->TabIndex = 42;
-			   this->catalogBackButton->Text = L"Back";
-			   this->catalogBackButton->UseVisualStyleBackColor = true;
-			   this->catalogBackButton->Click += gcnew System::EventHandler(this, &MyForm::catalogBackButton_Click);
-			   // 
-			   // catalogSelectedListView
-			   // 
-			   this->catalogSelectedListView->HideSelection = false;
-			   this->catalogSelectedListView->Location = System::Drawing::Point(26, 129);
-			   this->catalogSelectedListView->Name = L"catalogSelectedListView";
-			   this->catalogSelectedListView->Size = System::Drawing::Size(383, 122);
-			   this->catalogSelectedListView->TabIndex = 41;
-			   this->catalogSelectedListView->UseCompatibleStateImageBehavior = false;
-			   this->catalogSelectedListView->View = System::Windows::Forms::View::List;
-			   this->catalogSelectedListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::catalogSelectedListView_DoubleClick);
-			   // 
-			   // label3
-			   // 
-			   this->label3->AutoSize = true;
-			   this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   this->label3->Location = System::Drawing::Point(20, 22);
-			   this->label3->Name = L"label3";
-			   this->label3->Size = System::Drawing::Size(72, 32);
-			   this->label3->TabIndex = 24;
-			   this->label3->Text = L"Cart";
+			   this->afficherPage->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			   this->afficherPage->Location = System::Drawing::Point(1221, 255);
+			   this->afficherPage->Name = L"afficherPage";
+			   this->afficherPage->Size = System::Drawing::Size(87, 34);
+			   this->afficherPage->TabIndex = 25;
+			   this->afficherPage->Text = L"Show";
+			   this->afficherPage->UseVisualStyleBackColor = true;
+			   this->afficherPage->Click += gcnew System::EventHandler(this, &MyForm::afficherPage_Click);
 			   // 
 			   // MyForm
 			   // 
@@ -542,7 +581,7 @@ namespace OPO2SUMproject {
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			   this->ClientSize = System::Drawing::Size(1375, 526);
-			   this->Controls->Add(this->panel2);
+			   this->Controls->Add(this->afficherPage);
 			   this->Controls->Add(this->panel1);
 			   this->Controls->Add(this->registerPanel);
 			   this->Controls->Add(this->loginPanel);
@@ -559,8 +598,6 @@ namespace OPO2SUMproject {
 			   this->registerPanel->PerformLayout();
 			   this->panel1->ResumeLayout(false);
 			   this->panel1->PerformLayout();
-			   this->panel2->ResumeLayout(false);
-			   this->panel2->PerformLayout();
 			   this->ResumeLayout(false);
 
 		   }
@@ -609,168 +646,55 @@ namespace OPO2SUMproject {
 		}
 		DataTableReaderTest->Close();
 	}
-	private: System::Void loginValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	private: System::Void simulationEntryPriceTextBox_Invalide() {
+		this->simulationResultLabel->Text = "Invalide entry";
+		this->simulationResultLabel->ForeColor = Color::Red;
+	}
+	private: System::Void simulationEntryPriceTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		float total_cost;
+		float tva;
+		float marge;
+		float discount;
+		float markdown;
+
+		try { total_cost = float::Parse(this->simulationEntryPriceTextBox->Text); }
+		catch (...) {
+			try { total_cost = float::Parse(this->simulationEntryPriceTextBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")); }
+			catch (...) { simulationEntryPriceTextBox_Invalide();	return; }
+		}
+		try { tva = float::Parse(this->simulationTVAComboBox->Text) / 100; }
+		catch (...) {
+			try { tva = (float::Parse(this->simulationTVAComboBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) / 100); }
+			catch (...) { simulationEntryPriceTextBox_Invalide();	return; }
+		}
+		try { marge = float::Parse(this->simulationMargeComboBox->Text) / 100; }
+		catch (...) {
+			try { marge = float::Parse(this->simulationMargeComboBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) / 100; }
+			catch (...) { simulationEntryPriceTextBox_Invalide();	return; }
+		}
+		try { discount = float::Parse(this->simulationDiscountComboBox->Text) / 100; }
+		catch (...) {
+			try { discount = float::Parse(this->simulationDiscountComboBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) / 100; }
+			catch (...) { simulationEntryPriceTextBox_Invalide();	return; }
+		}
+		try { markdown = float::Parse(this->simulationMarkdownComboBox->Text) / 100; }
+		catch (...) {
+			try { markdown = float::Parse(this->simulationMarkdownComboBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")) / 100; }
+			catch (...) { simulationEntryPriceTextBox_Invalide();	return; }
+		}
+
+		MessageBox::Show(marge.ToString() + " | " + discount.ToString() + " | " + markdown.ToString() + " | " + tva.ToString());
+
+		this->simulationResultLabel->ForeColor = Color::Black;
+		this->simulationResultLabel->Text = ((((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown)) * (1 + tva)).ToString();
+	}
+	private: System::Void afficherPage_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-
-		System::Data::DataSet^ rightLogin = Adata->getRows("IF EXISTS (SELECT id_account FROM account WHERE account_name = '" + this->loginUsernameTextBox->Text + "' AND password_account = '" + loginPasswordTextBox->Text->GetHashCode().ToString() + "') BEGIN SELECT 0 END ELSE BEGIN SELECT 1 END;", "Temp");
-		System::Data::DataTableReader^ DataTableReaderTest = rightLogin->CreateDataReader();
-		DataTableReaderTest->Read();
-
-		if (this->loginUsernameTextBox->Text == "" || this->loginPasswordTextBox->Text == "") {
-			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
-			this->loginErrorLabel->Text = "Please, fill all field.";
-		}
-		else if (DataTableReaderTest->GetInt32(0)) {
-			this->loginErrorLabel->ForeColor = System::Drawing::Color::Red;
-			this->loginErrorLabel->Text = "Wrong username or password.";
-		}
-		else {
-			DataTableReaderTest->Close();
-			AccessData^ Adata1 = gcnew AccessData;
-			rightLogin = Adata1->getRows("SELECT id_account FROM account WHERE account_name = '" + this->loginUsernameTextBox->Text + "' AND password_account = '" + loginPasswordTextBox->Text->GetHashCode().ToString() + "';", "Temp");
-			DataTableReaderTest = rightLogin->CreateDataReader();
-			DataTableReaderTest->Read();
-			connectedAccount = gcnew Account(DataTableReaderTest->GetInt32(0));
-			this->loginErrorLabel->ForeColor = System::Drawing::Color::Green;
-			catalogResearchTextBox_TextChanged(sender, e);
-		}
-		DataTableReaderTest->Close();
-	}
-	private: System::Void catalogCartButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		// afficher la bonne page
-		AccessData^ Adata = gcnew AccessData;
-		System::Data::DataSet^ listAddress = Adata->getRows("SELECT * FROM address WHERE id_account = " + connectedAccount->get_id() + ";", "Temp");
-		AccessData^ Adata2 = gcnew AccessData;
-		System::Data::DataSet^ listAddress2 = Adata2->getRows("SELECT * FROM address WHERE id_account = " + connectedAccount->get_id() + ";", "Temp");
-		this->catalogAddressBillingListComboBox->DataSource = listAddress->Tables[0];
-		this->catalogAddressBillingListComboBox->ValueMember = "id_address";
-		this->catalogAddressBillingListComboBox->DisplayMember = "street";
-		this->catalogAddressShippingListComboBox->DataSource = listAddress2->Tables[0];
-		this->catalogAddressShippingListComboBox->ValueMember = "id_address";
-		this->catalogAddressShippingListComboBox->DisplayMember = "street";
-	}
-	private: System::Void catalogBackButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void catalogCheckoutButton_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		if (this->catalogAddressBillingListComboBox->SelectedIndex == -1 || this->catalogAddressShippingListComboBox->SelectedIndex == -1) {
-			MessageBox::Show("No address selected.");
-			return;
-		}
-		if (this->catalogSelectedListView->Items->Count == 0) {
-			MessageBox::Show("Cart empty.");
-			return;
-		}
-
-		String^ summaryOrder;
-		std::vector<int> idList(catalogSelectedListView->Items->Count);
-		std::vector<int> nbList(catalogSelectedListView->Items->Count);
-		std::vector<float> costList(catalogSelectedListView->Items->Count);
-		float tempCost = 0;
-		float tempCostHT = 0;
-
-		for (int i = 0; i < catalogSelectedListView->Items->Count; i++)
-		{
-			String^ tempProduct = catalogSelectedListView->Items[i]->Text;
-
-			int tempNb = int::Parse(tempProduct->Substring(0, tempProduct->IndexOf(" ") - 1));
-			int tempId = int::Parse(tempProduct->Substring(tempProduct->IndexOf("#") + 1, tempProduct->Substring(0,tempProduct->IndexOf("#") + 1)->IndexOf(" ")));
-
-			Product^ currentProduct = gcnew Product(tempId);
-			if (currentProduct->get_stock_product() - tempNb < 0) {
-				if (MessageBox::Show("Due to some stock problems, you can only have " + currentProduct->get_stock_product() + "x \"" + currentProduct->get_name_product() + "\"", "Warning", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
-					tempNb = currentProduct->get_stock_product();
-				}
-				else { return; }
-			}
-			nbList[i] = tempNb;
-			idList[i] = tempId;
-
-			tempCostHT += (currentProduct->get_cost_product() + currentProduct->get_marge_product()) * tempNb;
-			tempCost += (currentProduct->get_cost_product() + currentProduct->get_marge_product()) * (1 + currentProduct->get_tva_product()) * tempNb;
-			summaryOrder += "\n" + nbList[i] + "x   " + currentProduct->get_name_product();
-		}
-		summaryOrder += "\n\n      $" + tempCost;
-
-		if (MessageBox::Show("Summary :\n" + summaryOrder, "Confirm", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
-
-			orderManager->insert(DateTime::Now.ToString(), DateTime::Now.ToString(), connectedAccount->get_id(),
-				int::Parse(this->catalogAddressBillingListComboBox->SelectedValue->ToString()),
-				int::Parse(this->catalogAddressShippingListComboBox->SelectedValue->ToString()));
-
-			AccessData^ Adata = gcnew AccessData;
-			System::Data::DataSet^ lastOrder = Adata->getRows("SELECT TOP (1) id_order FROM orderTab ORDER BY id_order DESC", "Temp");
-			System::Data::DataTableReader^ DataTableReaderTest = lastOrder->CreateDataReader();
-			DataTableReaderTest->Read();
-			int id_selectedOrder = DataTableReaderTest->GetInt32(0);
-			DataTableReaderTest->Close();
-
-			for (int i = 0; i < catalogSelectedListView->Items->Count; i++)
-			{
-				Product^ selectedProduct = gcnew Product(idList[i]);
-				selectedProduct->set_stock_product(selectedProduct->get_stock_product() - nbList[i]);
-				productManager->update(selectedProduct);
-				containManager->insert(id_selectedOrder, idList[i], nbList[i]);
-			}
-
-			billManager->insert(tempCost, (tempCost / tempCostHT)-1, id_selectedOrder);
-			
-			MessageBox::Show("Order successfully created!");
-			catalogResearchTextBox_TextChanged(sender, e);
-			catalogBackButton_Click(sender, e);
-			catalogSelectedListView->Items->Clear();
-		}
-	}
-	private: System::Void catalogGlobalListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
-		try {
-			String^ selectedProduct = catalogGlobalListView->SelectedItems[0]->Text;
-
-			bool noDouble = true;
-			for (int i = 0; i < catalogSelectedListView->Items->Count; i++) {
-				noDouble = selectedProduct->Substring(0, selectedProduct->LastIndexOf("$") - 2) ==
-					catalogSelectedListView->Items[i]->Text->Substring(catalogSelectedListView->Items[i]->Text->IndexOf("\"") + 1, catalogSelectedListView->Items[i]->Text->LastIndexOf("$") - catalogSelectedListView->Items[i]->Text->IndexOf("\"") - 4) ? false : noDouble;
-			}
-
-			if (!noDouble) { MessageBox::Show("This article is already in your cart."); return; }
-
-			String^ countProduct = Microsoft::VisualBasic::Interaction::InputBox("How many \"" + selectedProduct->Substring(selectedProduct->IndexOf(" ") + 1, selectedProduct->LastIndexOf("$") - selectedProduct->IndexOf(" ") - 3) + "\" do you want?", "Confirm", "1", 500, 500);
-			float cost = float::Parse(selectedProduct->Substring(selectedProduct->LastIndexOf("$") + 1));
-
-			if (!(countProduct == "" || countProduct == "0")) {
-				try {
-					if (int::Parse(countProduct) < 1) {
-						MessageBox::Show("Invalide Value");
-						return;
-					}
-					catalogSelectedListView->Items->Add(countProduct + "x \"" + selectedProduct->Substring(0, selectedProduct->LastIndexOf("$") - 2) + "\"  $" + (cost * float::Parse(countProduct)));
-				}
-				catch (...) {
-					MessageBox::Show("Invalide Value");
-				}
-			}
-		}
-		catch (...) {}
-	}
-	private: System::Void catalogSelectedListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
-		try {
-			if (MessageBox::Show("Do you want remove this article?", "Remove article", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
-				catalogSelectedListView->Items->RemoveAt(catalogSelectedListView->SelectedIndices[0]);
-			}
-		}
-		catch (...) {}
-	}
-	private: System::Void catalogResearchTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-		AccessData^ Adata = gcnew AccessData;
-		DataSet^ listProduct = Adata->getRows("SELECT * FROM product WHERE stock_product > 0 AND enable_product = 1 AND (name_product LIKE '%" + catalogResearchTextBox->Text + "%' OR id_product LIKE '%" + catalogResearchTextBox->Text + "%');", "Temp");
-		DataTable^ products = listProduct->Tables[0];
-
-		catalogGlobalListView->Items->Clear();
-		for (int i = 0; i < products->Rows->Count; i++)
-		{
-			DataRow^ drow = products->Rows[i];
-			float cost = float::Parse(drow[3]->ToString()) + float::Parse(drow[4]->ToString());
-			catalogGlobalListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString() + "  $" + (cost * (1 + float::Parse(drow[5]->ToString()))));
-		}
+		DataSet^ total_cost_dataset = Adata->getRows("Select sum(cost_product*stock_product) as pp FROM product", "temp2");
+		DataTable^ total_cost_datatable = total_cost_dataset->Tables[0];
+		DataRow^ drow = total_cost_datatable->Rows[0];
+		this->simulationEntryPriceTextBox->Text = drow[0]->ToString();
 	}
 	};
 }
