@@ -96,6 +96,7 @@ namespace OPO2SUMproject
 		int postal_code;
 		System::String^ city;
 		System::String^ address_complement;
+		Account^ id_account;
 
 	public:
 		Address(int id);
@@ -104,18 +105,20 @@ namespace OPO2SUMproject
 		int get_postal_code() { return postal_code; }
 		System::String^ get_city() { return city; }
 		System::String^ get_address_complement() { return address_complement; }
+		Account^ get_id_account() { return id_account; }
 
 		void set_street(System::String^ st) { this->street = st; }
 		void set_postal_code(int zip) { this->postal_code = zip; }
 		void set_city(System::String^ city) { this->city = city; }
 		void set_address_complement(System::String^ address) { this->address_complement = address; }
+		void set_account(Account^ currentAccount) { id_account = currentAccount; };
 	};
 
 	ref class AddressManager : ClassTableManager
 	{
 	public:
 		Address^ select(int id);
-		void insert(System::String^ street, int postal_code, System::String^ city, System::String^ address_complement);
+		void insert(System::String^ street, System::String^ postal_code, System::String^ city, System::String^ address_complement, int id_account);
 		void deleteElement(int id);
 		void deleteElement(Address^);
 		void update(Address^);
@@ -164,6 +167,7 @@ namespace OPO2SUMproject
 		float tva_product;
 		int stock_product;
 		int restocking_threshold_product;
+		int enable_product;
 
 	public:
 		Product(int id);
@@ -175,6 +179,7 @@ namespace OPO2SUMproject
 		float get_tva_product() { return tva_product; }
 		int get_stock_product() { return stock_product; }
 		int get_restocking_threshold_product() { return restocking_threshold_product; }
+		int get_enable_product() { return enable_product; }
 
 		void set_name_product(System::String^ name) { this->name_product = name; }
 		void set_element_per_unit_product(int elementperunit) { this->element_per_unit_product = elementperunit; }
@@ -183,14 +188,14 @@ namespace OPO2SUMproject
 		void set_tva_product(float tva) { this->tva_product = tva; }
 		void set_stock_product(int stock) { this->stock_product = stock; }
 		void set_restocking_threshold_product(int restocking) { this->restocking_threshold_product = restocking; }
-
+		void set_enable_product(int set_enable_product) { this->enable_product = set_enable_product; }
 	};
 
 	ref class ProductManager : ClassTableManager
 	{
 	public:
 		Product^ select(int id);
-		void insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product);
+		void insert(System::String^ name_product, int element_per_unit_product, float cost_product, float marge_product, float tva_product, int stock_product, int restocking_threshold_product, int enable_product);
 		void deleteElement(int id);
 		void deleteElement(Product^);
 		void update(Product^);
@@ -261,31 +266,6 @@ namespace OPO2SUMproject
 	};
 
 
-	ref class Living {
-	private:
-		Account^ account;
-		Address^ address;
-		AccessData^ Adata = gcnew AccessData;
-
-
-	public:
-		Living(int account, int address);
-
-		Account^ get_account() { return account; }
-		Address^ get_address() { return address; }
-
-		void set_account(Account^ account) { this->account = account; }
-		void set_address(Address^ address) { this->address = address; }
-	};
-
-	ref class LivingManager : ClassTableManager
-	{
-	public:
-		void insert(int id_account, int id_address);
-	};
-
-
-
 	ref class Contain : ClassTable {
 	private:
 		Order^ id_order;
@@ -313,4 +293,3 @@ namespace OPO2SUMproject
 		void update(Contain^);
 	};
 };
-
