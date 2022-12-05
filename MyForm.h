@@ -196,27 +196,90 @@ namespace OPO2SUMproject {
 		BillManager^ billManager = gcnew BillManager();
 	private: System::Windows::Forms::ListView^ orderGlobalListView;
 	private: System::Windows::Forms::TextBox^ orderFilterTextBox;
-private: System::Windows::Forms::Panel^ preCatalogPanel;
-private: System::Windows::Forms::Label^ preCatalogSentenceLabel;
+	private: System::Windows::Forms::Panel^ preCatalogPanel;
+	private: System::Windows::Forms::Label^ preCatalogSentenceLabel;
 
-private: System::Windows::Forms::Button^ preCatalogLoginButton;
-private: System::Windows::Forms::Label^ preCatalogTitleLabel;
-private: System::Windows::Forms::Label^ preCatalogSearchLabel;
-private: System::Windows::Forms::TextBox^ preCatalogTextBox;
-private: System::Windows::Forms::ListView^ preCatalogListView;
-private: System::Windows::Forms::Panel^ registerTextPanel;
-private: System::Windows::Forms::Label^ registerCreateYourAccountLabel;
-private: System::Windows::Forms::Label^ registerBlueBarLabel;
-private: System::Windows::Forms::Label^ registerBlueBarLabel4;
+	private: System::Windows::Forms::Button^ preCatalogLoginButton;
+	private: System::Windows::Forms::Label^ preCatalogTitleLabel;
+	private: System::Windows::Forms::Label^ preCatalogSearchLabel;
+	private: System::Windows::Forms::TextBox^ preCatalogTextBox;
+	private: System::Windows::Forms::ListView^ preCatalogListView;
+	private: System::Windows::Forms::Panel^ registerTextPanel;
+	private: System::Windows::Forms::Label^ registerCreateYourAccountLabel;
+	private: System::Windows::Forms::Label^ registerBlueBarLabel;
+	private: System::Windows::Forms::Label^ registerBlueBarLabel4;
 
-private: System::Windows::Forms::Label^ registerBlueBarLabel2;
-private: System::Windows::Forms::Label^ registerBlueBarLabel3;
-private: System::Windows::Forms::Button^ loginReturnPreCatalogButton;
-private: System::Windows::Forms::Label^ loginYouWantRegisterLabel;
-private: System::Windows::Forms::Label^ loginPasswordLabel;
-private: System::Windows::Forms::Label^ loginUsernameLabel;
-private: System::Windows::Forms::Label^ loginBarLabel;
-private: System::Windows::Forms::Label^ loginBarLabel2;
+	private: System::Windows::Forms::Label^ registerBlueBarLabel2;
+	private: System::Windows::Forms::Label^ registerBlueBarLabel3;
+	private: System::Windows::Forms::Button^ loginReturnPreCatalogButton;
+	private: System::Windows::Forms::Label^ loginYouWantRegisterLabel;
+	private: System::Windows::Forms::Label^ loginPasswordLabel;
+	private: System::Windows::Forms::Label^ loginUsernameLabel;
+	private: System::Windows::Forms::Label^ loginBarLabel;
+	private: System::Windows::Forms::Label^ loginBarLabel2;
+private: System::Windows::Forms::Panel^ clientModifyPanel;
+private: System::Windows::Forms::Label^ clientModifyBarLabel;
+private: System::Windows::Forms::NumericUpDown^ clientModifyPostalCodeNumericUpDown;
+
+
+
+
+
+private: System::Windows::Forms::Button^ clientModifyAddAddressButton;
+
+private: System::Windows::Forms::Button^ clientModifyDeleteAddressButton;
+
+private: System::Windows::Forms::ComboBox^ clientModifyAddressPickerComboBox;
+private: System::Windows::Forms::TextBox^ clientModifyMoreInfoTextBox;
+
+
+
+private: System::Windows::Forms::TextBox^ clientModifyCityTextBox;
+
+private: System::Windows::Forms::TextBox^ clientModifyAddressStreetTextBox;
+
+
+
+private: System::Windows::Forms::TextBox^ clientModifyLastnameTextBox;
+
+private: System::Windows::Forms::TextBox^ clientModifyFirstnameTextBox;
+
+private: System::Windows::Forms::TextBox^ clientModifyUsernameTextBox;
+private: System::Windows::Forms::Label^ clientModifyMoreInfoLabel;
+
+private: System::Windows::Forms::Label^ clientModifyPostalCodeLabel;
+
+
+
+
+
+private: System::Windows::Forms::Label^ clientModifyCityLabel;
+
+private: System::Windows::Forms::Label^ clientModifyAddressStreetLabel;
+
+private: System::Windows::Forms::Label^ clientModifyAddressLabel;
+
+private: System::Windows::Forms::Label^ clientModifyBirthdayLabel;
+
+
+private: System::Windows::Forms::Label^ clientModifyLastnameLabel;
+
+private: System::Windows::Forms::Label^ clientModifyFirstnameLabel;
+
+private: System::Windows::Forms::Label^ clientModifyUsernameLabel;
+
+private: System::Windows::Forms::Label^ clientModifyInformationsLabel;
+private: System::Windows::Forms::DateTimePicker^ clientModifyBirthdayDateTimePicker;
+private: System::Windows::Forms::Button^ clientModifyApplyModifButton;
+private: System::Windows::Forms::Label^ clientModifyErrorBoxLabel;
+
+private: System::Windows::Forms::Panel^ employeeListViewPanel;
+private: System::Windows::Forms::Panel^ clientListViewPanel;
+private: System::Windows::Forms::Button^ employeeAddNewEmployeeButton;
+private: System::Windows::Forms::ListView^ employeeListView;
+
+
+
 
 
 
@@ -232,11 +295,11 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 		   /// </summary>
 		   void InitializeComponent(void)
 		   {
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   this->loginPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginTextPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginReturnPreCatalogButton = (gcnew System::Windows::Forms::Button());
@@ -347,6 +410,38 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->hubPanel = (gcnew System::Windows::Forms::Panel());
+			   this->clientModifyPanel = (gcnew System::Windows::Forms::Panel());
+			   this->clientModifyErrorBoxLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyApplyModifButton = (gcnew System::Windows::Forms::Button());
+			   this->clientModifyBirthdayDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			   this->clientModifyBarLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyPostalCodeNumericUpDown = (gcnew System::Windows::Forms::NumericUpDown());
+			   this->clientModifyAddAddressButton = (gcnew System::Windows::Forms::Button());
+			   this->clientModifyDeleteAddressButton = (gcnew System::Windows::Forms::Button());
+			   this->clientModifyAddressPickerComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->clientModifyMoreInfoTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyCityTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyAddressStreetTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyMoreInfoLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyPostalCodeLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyCityLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyAddressStreetLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyAddressLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyBirthdayLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyLastnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyFirstnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyUsernameLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogPanel = (gcnew System::Windows::Forms::Panel());
+			   this->preCatalogSentenceLabel = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogLoginButton = (gcnew System::Windows::Forms::Button());
+			   this->preCatalogTitleLabel = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogSearchLabel = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->preCatalogListView = (gcnew System::Windows::Forms::ListView());
 			   this->catalogOrderPanel = (gcnew System::Windows::Forms::Panel());
 			   this->catalogCartButton = (gcnew System::Windows::Forms::Button());
 			   this->catalogGlobalListView = (gcnew System::Windows::Forms::ListView());
@@ -363,7 +458,6 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
 			   this->catalogCartTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
-			   this->stat_label = (gcnew System::Windows::Forms::Label());
 			   this->Purchase_Value_button = (gcnew System::Windows::Forms::Button());
 			   this->Commercial_Value_button = (gcnew System::Windows::Forms::Button());
 			   this->buys_down_button = (gcnew System::Windows::Forms::Button());
@@ -373,13 +467,11 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->turnover_button = (gcnew System::Windows::Forms::Button());
 			   this->Panier_Poyen_Button = (gcnew System::Windows::Forms::Button());
 			   this->dataGridViewstat = (gcnew System::Windows::Forms::DataGridView());
-			   this->preCatalogPanel = (gcnew System::Windows::Forms::Panel());
-			   this->preCatalogSentenceLabel = (gcnew System::Windows::Forms::Label());
-			   this->preCatalogLoginButton = (gcnew System::Windows::Forms::Button());
-			   this->preCatalogTitleLabel = (gcnew System::Windows::Forms::Label());
-			   this->preCatalogSearchLabel = (gcnew System::Windows::Forms::Label());
-			   this->preCatalogTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->preCatalogListView = (gcnew System::Windows::Forms::ListView());
+			   this->stat_label = (gcnew System::Windows::Forms::Label());
+			   this->employeeListViewPanel = (gcnew System::Windows::Forms::Panel());
+			   this->clientListViewPanel = (gcnew System::Windows::Forms::Panel());
+			   this->employeeListView = (gcnew System::Windows::Forms::ListView());
+			   this->employeeAddNewEmployeeButton = (gcnew System::Windows::Forms::Button());
 			   this->loginPanel->SuspendLayout();
 			   this->loginTextPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
@@ -395,11 +487,14 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->accountPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			   this->hubPanel->SuspendLayout();
+			   this->clientModifyPanel->SuspendLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->BeginInit();
+			   this->preCatalogPanel->SuspendLayout();
 			   this->catalogOrderPanel->SuspendLayout();
 			   this->catalogCartPanel->SuspendLayout();
 			   this->statisticMPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
-			   this->preCatalogPanel->SuspendLayout();
+			   this->employeeListViewPanel->SuspendLayout();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
@@ -662,8 +757,7 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   // registerUsernameTextBox
 			   // 
 			   this->registerUsernameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			   this->registerUsernameTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerUsernameTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F));
 			   this->registerUsernameTextBox->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
 			   this->registerUsernameTextBox->Location = System::Drawing::Point(32, 84);
@@ -730,8 +824,7 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   // registerBirthdayLabel
 			   // 
 			   this->registerBirthdayLabel->AutoSize = true;
-			   this->registerBirthdayLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->registerBirthdayLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F));
 			   this->registerBirthdayLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
 			   this->registerBirthdayLabel->Location = System::Drawing::Point(29, 309);
@@ -798,6 +891,7 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   // 
 			   // registerLastnameLabel
 			   // 
+			   this->registerLastnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerLastnameLabel->AutoSize = true;
 			   this->registerLastnameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -827,14 +921,14 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   // registerPasswordLabel
 			   // 
 			   this->registerPasswordLabel->AutoSize = true;
-			   this->registerPasswordLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->registerPasswordLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->registerPasswordLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
 			   this->registerPasswordLabel->Location = System::Drawing::Point(28, 247);
 			   this->registerPasswordLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerPasswordLabel->Name = L"registerPasswordLabel";
-			   this->registerPasswordLabel->Size = System::Drawing::Size(80, 22);
+			   this->registerPasswordLabel->Size = System::Drawing::Size(83, 20);
 			   this->registerPasswordLabel->TabIndex = 4;
 			   this->registerPasswordLabel->Text = L"Password";
 			   // 
@@ -855,14 +949,14 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   // registerUsernameLabel
 			   // 
 			   this->registerUsernameLabel->AutoSize = true;
-			   this->registerUsernameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->registerUsernameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->registerUsernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
 			   this->registerUsernameLabel->Location = System::Drawing::Point(29, 60);
 			   this->registerUsernameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerUsernameLabel->Name = L"registerUsernameLabel";
-			   this->registerUsernameLabel->Size = System::Drawing::Size(85, 22);
+			   this->registerUsernameLabel->Size = System::Drawing::Size(86, 20);
 			   this->registerUsernameLabel->TabIndex = 1;
 			   this->registerUsernameLabel->Text = L"Username";
 			   // 
@@ -1251,25 +1345,25 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   // 
 			   this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			   dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			   this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			   dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle7->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle7;
+			   dataGridViewCellStyle2->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle2;
 			   this->clientMDGV->Location = System::Drawing::Point(2, 390);
 			   this->clientMDGV->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->clientMDGV->Name = L"clientMDGV";
@@ -1351,7 +1445,7 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->menuPersonnellManageButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
 			   this->menuPersonnellManageButton->Size = System::Drawing::Size(220, 60);
 			   this->menuPersonnellManageButton->TabIndex = 7;
-			   this->menuPersonnellManageButton->Text = L"Personnel  Manage";
+			   this->menuPersonnellManageButton->Text = L"Personnel Manager";
 			   this->menuPersonnellManageButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			   this->menuPersonnellManageButton->UseVisualStyleBackColor = true;
 			   this->menuPersonnellManageButton->Visible = false;
@@ -1479,7 +1573,7 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->menuClientButton->Padding = System::Windows::Forms::Padding(20, 0, 0, 0);
 			   this->menuClientButton->Size = System::Drawing::Size(220, 60);
 			   this->menuClientButton->TabIndex = 1;
-			   this->menuClientButton->Text = L" Client Manage";
+			   this->menuClientButton->Text = L"Client Manager";
 			   this->menuClientButton->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			   this->menuClientButton->UseVisualStyleBackColor = true;
 			   this->menuClientButton->Visible = false;
@@ -1636,6 +1730,7 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->accountModifyButton->TabIndex = 21;
 			   this->accountModifyButton->Text = L"Modify account";
 			   this->accountModifyButton->UseVisualStyleBackColor = true;
+			   this->accountModifyButton->Click += gcnew System::EventHandler(this, &MyForm::accountModifyButton_Click);
 			   // 
 			   // accountAddressListComboBox
 			   // 
@@ -1815,6 +1910,11 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   // 
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
+			   this->hubPanel->Controls->Add(this->employeeListViewPanel);
+			   this->hubPanel->Controls->Add(this->clientListViewPanel);
+			   this->hubPanel->Controls->Add(this->clientModifyPanel);
+			   this->hubPanel->Controls->Add(this->accountPanel);
+			   this->hubPanel->Controls->Add(this->clientMPanel);
 			   this->hubPanel->Controls->Add(this->preCatalogPanel);
 			   this->hubPanel->Controls->Add(this->catalogOrderPanel);
 			   this->hubPanel->Controls->Add(this->catalogCartPanel);
@@ -1822,12 +1922,332 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->hubPanel->Controls->Add(this->stockMPanel);
 			   this->hubPanel->Controls->Add(this->statisticMPanel);
 			   this->hubPanel->Controls->Add(this->orderMPanel);
-			   this->hubPanel->Controls->Add(this->accountPanel);
-			   this->hubPanel->Controls->Add(this->clientMPanel);
 			   this->hubPanel->Location = System::Drawing::Point(0, 0);
 			   this->hubPanel->Name = L"hubPanel";
 			   this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			   this->hubPanel->TabIndex = 29;
+			   // 
+			   // clientModifyPanel
+			   // 
+			   this->clientModifyPanel->Controls->Add(this->clientModifyErrorBoxLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyApplyModifButton);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyBirthdayDateTimePicker);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyBarLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyPostalCodeNumericUpDown);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyAddAddressButton);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyDeleteAddressButton);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressPickerComboBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyMoreInfoTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyCityTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressStreetTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyLastnameTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyFirstnameTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyUsernameTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyMoreInfoLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyPostalCodeLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyCityLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressStreetLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyBirthdayLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyLastnameLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyFirstnameLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyUsernameLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyInformationsLabel);
+			   this->clientModifyPanel->Location = System::Drawing::Point(220, 80);
+			   this->clientModifyPanel->Name = L"clientModifyPanel";
+			   this->clientModifyPanel->Size = System::Drawing::Size(968, 607);
+			   this->clientModifyPanel->TabIndex = 29;
+			   // 
+			   // clientModifyErrorBoxLabel
+			   // 
+			   this->clientModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
+			   this->clientModifyErrorBoxLabel->Location = System::Drawing::Point(741, 556);
+			   this->clientModifyErrorBoxLabel->Name = L"clientModifyErrorBoxLabel";
+			   this->clientModifyErrorBoxLabel->Size = System::Drawing::Size(177, 38);
+			   this->clientModifyErrorBoxLabel->TabIndex = 31;
+			   // 
+			   // clientModifyApplyModifButton
+			   // 
+			   this->clientModifyApplyModifButton->Location = System::Drawing::Point(741, 524);
+			   this->clientModifyApplyModifButton->Name = L"clientModifyApplyModifButton";
+			   this->clientModifyApplyModifButton->Size = System::Drawing::Size(177, 26);
+			   this->clientModifyApplyModifButton->TabIndex = 30;
+			   this->clientModifyApplyModifButton->Text = L"Apply Modifications";
+			   this->clientModifyApplyModifButton->UseVisualStyleBackColor = true;
+			   // 
+			   // clientModifyBirthdayDateTimePicker
+			   // 
+			   this->clientModifyBirthdayDateTimePicker->Location = System::Drawing::Point(90, 187);
+			   this->clientModifyBirthdayDateTimePicker->Name = L"clientModifyBirthdayDateTimePicker";
+			   this->clientModifyBirthdayDateTimePicker->Size = System::Drawing::Size(200, 22);
+			   this->clientModifyBirthdayDateTimePicker->TabIndex = 29;
+			   // 
+			   // clientModifyBarLabel
+			   // 
+			   this->clientModifyBarLabel->AutoSize = true;
+			   this->clientModifyBarLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->clientModifyBarLabel->Location = System::Drawing::Point(46, 229);
+			   this->clientModifyBarLabel->Name = L"clientModifyBarLabel";
+			   this->clientModifyBarLabel->Size = System::Drawing::Size(872, 38);
+			   this->clientModifyBarLabel->TabIndex = 28;
+			   this->clientModifyBarLabel->Text = L"_____________________________________________";
+			   // 
+			   // clientModifyPostalCodeNumericUpDown
+			   // 
+			   this->clientModifyPostalCodeNumericUpDown->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) {
+				   1000, 0, 0,
+					   0
+			   });
+			   this->clientModifyPostalCodeNumericUpDown->Location = System::Drawing::Point(446, 474);
+			   this->clientModifyPostalCodeNumericUpDown->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) {
+				   100000, 0, 0,
+					   0
+			   });
+			   this->clientModifyPostalCodeNumericUpDown->Name = L"clientModifyPostalCodeNumericUpDown";
+			   this->clientModifyPostalCodeNumericUpDown->Size = System::Drawing::Size(108, 22);
+			   this->clientModifyPostalCodeNumericUpDown->TabIndex = 27;
+			   // 
+			   // clientModifyAddAddressButton
+			   // 
+			   this->clientModifyAddAddressButton->Location = System::Drawing::Point(583, 524);
+			   this->clientModifyAddAddressButton->Name = L"clientModifyAddAddressButton";
+			   this->clientModifyAddAddressButton->Size = System::Drawing::Size(118, 25);
+			   this->clientModifyAddAddressButton->TabIndex = 23;
+			   this->clientModifyAddAddressButton->Text = L"Add";
+			   this->clientModifyAddAddressButton->UseVisualStyleBackColor = true;
+			   // 
+			   // clientModifyDeleteAddressButton
+			   // 
+			   this->clientModifyDeleteAddressButton->Location = System::Drawing::Point(583, 373);
+			   this->clientModifyDeleteAddressButton->Name = L"clientModifyDeleteAddressButton";
+			   this->clientModifyDeleteAddressButton->Size = System::Drawing::Size(118, 25);
+			   this->clientModifyDeleteAddressButton->TabIndex = 22;
+			   this->clientModifyDeleteAddressButton->Text = L"Delete";
+			   this->clientModifyDeleteAddressButton->UseVisualStyleBackColor = true;
+			   // 
+			   // clientModifyAddressPickerComboBox
+			   // 
+			   this->clientModifyAddressPickerComboBox->BackColor = System::Drawing::SystemColors::Window;
+			   this->clientModifyAddressPickerComboBox->FormattingEnabled = true;
+			   this->clientModifyAddressPickerComboBox->Location = System::Drawing::Point(88, 374);
+			   this->clientModifyAddressPickerComboBox->Name = L"clientModifyAddressPickerComboBox";
+			   this->clientModifyAddressPickerComboBox->Size = System::Drawing::Size(466, 24);
+			   this->clientModifyAddressPickerComboBox->TabIndex = 20;
+			   // 
+			   // clientModifyMoreInfoTextBox
+			   // 
+			   this->clientModifyMoreInfoTextBox->Location = System::Drawing::Point(88, 524);
+			   this->clientModifyMoreInfoTextBox->Name = L"clientModifyMoreInfoTextBox";
+			   this->clientModifyMoreInfoTextBox->Size = System::Drawing::Size(466, 22);
+			   this->clientModifyMoreInfoTextBox->TabIndex = 19;
+			   // 
+			   // clientModifyCityTextBox
+			   // 
+			   this->clientModifyCityTextBox->Location = System::Drawing::Point(276, 474);
+			   this->clientModifyCityTextBox->Name = L"clientModifyCityTextBox";
+			   this->clientModifyCityTextBox->Size = System::Drawing::Size(158, 22);
+			   this->clientModifyCityTextBox->TabIndex = 17;
+			   // 
+			   // clientModifyAddressStreetTextBox
+			   // 
+			   this->clientModifyAddressStreetTextBox->Location = System::Drawing::Point(88, 474);
+			   this->clientModifyAddressStreetTextBox->Name = L"clientModifyAddressStreetTextBox";
+			   this->clientModifyAddressStreetTextBox->Size = System::Drawing::Size(176, 22);
+			   this->clientModifyAddressStreetTextBox->TabIndex = 16;
+			   // 
+			   // clientModifyLastnameTextBox
+			   // 
+			   this->clientModifyLastnameTextBox->Location = System::Drawing::Point(461, 114);
+			   this->clientModifyLastnameTextBox->Name = L"clientModifyLastnameTextBox";
+			   this->clientModifyLastnameTextBox->Size = System::Drawing::Size(158, 22);
+			   this->clientModifyLastnameTextBox->TabIndex = 13;
+			   // 
+			   // clientModifyFirstnameTextBox
+			   // 
+			   this->clientModifyFirstnameTextBox->Location = System::Drawing::Point(278, 114);
+			   this->clientModifyFirstnameTextBox->Name = L"clientModifyFirstnameTextBox";
+			   this->clientModifyFirstnameTextBox->Size = System::Drawing::Size(158, 22);
+			   this->clientModifyFirstnameTextBox->TabIndex = 12;
+			   // 
+			   // clientModifyUsernameTextBox
+			   // 
+			   this->clientModifyUsernameTextBox->Location = System::Drawing::Point(90, 114);
+			   this->clientModifyUsernameTextBox->Name = L"clientModifyUsernameTextBox";
+			   this->clientModifyUsernameTextBox->Size = System::Drawing::Size(158, 22);
+			   this->clientModifyUsernameTextBox->TabIndex = 11;
+			   // 
+			   // clientModifyMoreInfoLabel
+			   // 
+			   this->clientModifyMoreInfoLabel->AutoSize = true;
+			   this->clientModifyMoreInfoLabel->Location = System::Drawing::Point(107, 502);
+			   this->clientModifyMoreInfoLabel->Name = L"clientModifyMoreInfoLabel";
+			   this->clientModifyMoreInfoLabel->Size = System::Drawing::Size(182, 17);
+			   this->clientModifyMoreInfoLabel->TabIndex = 10;
+			   this->clientModifyMoreInfoLabel->Text = L"More information (ex : floor)";
+			   // 
+			   // clientModifyPostalCodeLabel
+			   // 
+			   this->clientModifyPostalCodeLabel->AutoSize = true;
+			   this->clientModifyPostalCodeLabel->Location = System::Drawing::Point(456, 451);
+			   this->clientModifyPostalCodeLabel->Name = L"clientModifyPostalCodeLabel";
+			   this->clientModifyPostalCodeLabel->Size = System::Drawing::Size(82, 17);
+			   this->clientModifyPostalCodeLabel->TabIndex = 9;
+			   this->clientModifyPostalCodeLabel->Text = L"Postal code";
+			   // 
+			   // clientModifyCityLabel
+			   // 
+			   this->clientModifyCityLabel->AutoSize = true;
+			   this->clientModifyCityLabel->Location = System::Drawing::Point(290, 451);
+			   this->clientModifyCityLabel->Name = L"clientModifyCityLabel";
+			   this->clientModifyCityLabel->Size = System::Drawing::Size(31, 17);
+			   this->clientModifyCityLabel->TabIndex = 8;
+			   this->clientModifyCityLabel->Text = L"City";
+			   // 
+			   // clientModifyAddressStreetLabel
+			   // 
+			   this->clientModifyAddressStreetLabel->AutoSize = true;
+			   this->clientModifyAddressStreetLabel->Location = System::Drawing::Point(105, 451);
+			   this->clientModifyAddressStreetLabel->Name = L"clientModifyAddressStreetLabel";
+			   this->clientModifyAddressStreetLabel->Size = System::Drawing::Size(128, 17);
+			   this->clientModifyAddressStreetLabel->TabIndex = 7;
+			   this->clientModifyAddressStreetLabel->Text = L"Number and Street";
+			   // 
+			   // clientModifyAddressLabel
+			   // 
+			   this->clientModifyAddressLabel->AutoSize = true;
+			   this->clientModifyAddressLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->clientModifyAddressLabel->Location = System::Drawing::Point(30, 300);
+			   this->clientModifyAddressLabel->Name = L"clientModifyAddressLabel";
+			   this->clientModifyAddressLabel->Size = System::Drawing::Size(145, 38);
+			   this->clientModifyAddressLabel->TabIndex = 6;
+			   this->clientModifyAddressLabel->Text = L"Address";
+			   // 
+			   // clientModifyBirthdayLabel
+			   // 
+			   this->clientModifyBirthdayLabel->AutoSize = true;
+			   this->clientModifyBirthdayLabel->Location = System::Drawing::Point(107, 165);
+			   this->clientModifyBirthdayLabel->Name = L"clientModifyBirthdayLabel";
+			   this->clientModifyBirthdayLabel->Size = System::Drawing::Size(60, 17);
+			   this->clientModifyBirthdayLabel->TabIndex = 5;
+			   this->clientModifyBirthdayLabel->Text = L"Birthday";
+			   // 
+			   // clientModifyLastnameLabel
+			   // 
+			   this->clientModifyLastnameLabel->AutoSize = true;
+			   this->clientModifyLastnameLabel->Location = System::Drawing::Point(467, 92);
+			   this->clientModifyLastnameLabel->Name = L"clientModifyLastnameLabel";
+			   this->clientModifyLastnameLabel->Size = System::Drawing::Size(70, 17);
+			   this->clientModifyLastnameLabel->TabIndex = 3;
+			   this->clientModifyLastnameLabel->Text = L"Lastname";
+			   // 
+			   // clientModifyFirstnameLabel
+			   // 
+			   this->clientModifyFirstnameLabel->AutoSize = true;
+			   this->clientModifyFirstnameLabel->Location = System::Drawing::Point(292, 92);
+			   this->clientModifyFirstnameLabel->Name = L"clientModifyFirstnameLabel";
+			   this->clientModifyFirstnameLabel->Size = System::Drawing::Size(70, 17);
+			   this->clientModifyFirstnameLabel->TabIndex = 2;
+			   this->clientModifyFirstnameLabel->Text = L"Firstname";
+			   // 
+			   // clientModifyUsernameLabel
+			   // 
+			   this->clientModifyUsernameLabel->AutoSize = true;
+			   this->clientModifyUsernameLabel->Location = System::Drawing::Point(107, 92);
+			   this->clientModifyUsernameLabel->Name = L"clientModifyUsernameLabel";
+			   this->clientModifyUsernameLabel->Size = System::Drawing::Size(73, 17);
+			   this->clientModifyUsernameLabel->TabIndex = 1;
+			   this->clientModifyUsernameLabel->Text = L"Username";
+			   // 
+			   // clientModifyInformationsLabel
+			   // 
+			   this->clientModifyInformationsLabel->AutoSize = true;
+			   this->clientModifyInformationsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->clientModifyInformationsLabel->Location = System::Drawing::Point(22, 22);
+			   this->clientModifyInformationsLabel->Name = L"clientModifyInformationsLabel";
+			   this->clientModifyInformationsLabel->Size = System::Drawing::Size(207, 38);
+			   this->clientModifyInformationsLabel->TabIndex = 0;
+			   this->clientModifyInformationsLabel->Text = L"Informations";
+			   // 
+			   // preCatalogPanel
+			   // 
+			   this->preCatalogPanel->Controls->Add(this->preCatalogSentenceLabel);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogLoginButton);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogTitleLabel);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogSearchLabel);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogTextBox);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogListView);
+			   this->preCatalogPanel->Location = System::Drawing::Point(220, 80);
+			   this->preCatalogPanel->Name = L"preCatalogPanel";
+			   this->preCatalogPanel->Size = System::Drawing::Size(968, 607);
+			   this->preCatalogPanel->TabIndex = 5;
+			   // 
+			   // preCatalogSentenceLabel
+			   // 
+			   this->preCatalogSentenceLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			   this->preCatalogSentenceLabel->AutoSize = true;
+			   this->preCatalogSentenceLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogSentenceLabel->Location = System::Drawing::Point(672, 566);
+			   this->preCatalogSentenceLabel->Name = L"preCatalogSentenceLabel";
+			   this->preCatalogSentenceLabel->Size = System::Drawing::Size(153, 17);
+			   this->preCatalogSentenceLabel->TabIndex = 5;
+			   this->preCatalogSentenceLabel->Text = L"Envie de commander \?";
+			   // 
+			   // preCatalogLoginButton
+			   // 
+			   this->preCatalogLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			   this->preCatalogLoginButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogLoginButton->Location = System::Drawing::Point(839, 556);
+			   this->preCatalogLoginButton->Name = L"preCatalogLoginButton";
+			   this->preCatalogLoginButton->Size = System::Drawing::Size(117, 38);
+			   this->preCatalogLoginButton->TabIndex = 4;
+			   this->preCatalogLoginButton->Text = L"Login";
+			   this->preCatalogLoginButton->UseVisualStyleBackColor = true;
+			   this->preCatalogLoginButton->Click += gcnew System::EventHandler(this, &MyForm::preCatalogLoginButton_Click);
+			   // 
+			   // preCatalogTitleLabel
+			   // 
+			   this->preCatalogTitleLabel->AutoSize = true;
+			   this->preCatalogTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogTitleLabel->Location = System::Drawing::Point(13, 9);
+			   this->preCatalogTitleLabel->Name = L"preCatalogTitleLabel";
+			   this->preCatalogTitleLabel->Size = System::Drawing::Size(129, 38);
+			   this->preCatalogTitleLabel->TabIndex = 3;
+			   this->preCatalogTitleLabel->Text = L"Catalog";
+			   // 
+			   // preCatalogSearchLabel
+			   // 
+			   this->preCatalogSearchLabel->AutoSize = true;
+			   this->preCatalogSearchLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogSearchLabel->Location = System::Drawing::Point(19, 125);
+			   this->preCatalogSearchLabel->Name = L"preCatalogSearchLabel";
+			   this->preCatalogSearchLabel->Size = System::Drawing::Size(53, 17);
+			   this->preCatalogSearchLabel->TabIndex = 2;
+			   this->preCatalogSearchLabel->Text = L"Search";
+			   // 
+			   // preCatalogTextBox
+			   // 
+			   this->preCatalogTextBox->Location = System::Drawing::Point(19, 151);
+			   this->preCatalogTextBox->Name = L"preCatalogTextBox";
+			   this->preCatalogTextBox->Size = System::Drawing::Size(155, 22);
+			   this->preCatalogTextBox->TabIndex = 1;
+			   this->preCatalogTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::preCatalogTextBox_TextChanged);
+			   // 
+			   // preCatalogListView
+			   // 
+			   this->preCatalogListView->HideSelection = false;
+			   this->preCatalogListView->Location = System::Drawing::Point(19, 185);
+			   this->preCatalogListView->Name = L"preCatalogListView";
+			   this->preCatalogListView->Size = System::Drawing::Size(923, 258);
+			   this->preCatalogListView->TabIndex = 0;
+			   this->preCatalogListView->UseCompatibleStateImageBehavior = false;
+			   this->preCatalogListView->View = System::Windows::Forms::View::List;
 			   // 
 			   // catalogOrderPanel
 			   // 
@@ -1987,7 +2407,6 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   // 
 			   // statisticMPanel
 			   // 
-			   this->statisticMPanel->Controls->Add(this->stat_label);
 			   this->statisticMPanel->Controls->Add(this->Purchase_Value_button);
 			   this->statisticMPanel->Controls->Add(this->Commercial_Value_button);
 			   this->statisticMPanel->Controls->Add(this->buys_down_button);
@@ -1997,20 +2416,11 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->statisticMPanel->Controls->Add(this->turnover_button);
 			   this->statisticMPanel->Controls->Add(this->Panier_Poyen_Button);
 			   this->statisticMPanel->Controls->Add(this->dataGridViewstat);
+			   this->statisticMPanel->Controls->Add(this->stat_label);
 			   this->statisticMPanel->Location = System::Drawing::Point(220, 80);
 			   this->statisticMPanel->Name = L"statisticMPanel";
 			   this->statisticMPanel->Size = System::Drawing::Size(968, 607);
 			   this->statisticMPanel->TabIndex = 10;
-			   // 
-			   // stat_label
-			   // 
-			   this->stat_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   this->stat_label->Location = System::Drawing::Point(83, 4);
-			   this->stat_label->Name = L"stat_label";
-			   this->stat_label->Size = System::Drawing::Size(783, 40);
-			   this->stat_label->TabIndex = 9;
-			   this->stat_label->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
 			   // Purchase_Value_button
 			   // 
@@ -2093,34 +2503,34 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   // 
 			   // dataGridViewstat
 			   // 
-			   dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+			   dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
 			   this->dataGridViewstat->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCellsExceptHeaders;
-			   dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			   dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
+			   dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			   dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+			   dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			   this->dataGridViewstat->ColumnHeadersHeight = 29;
 			   this->dataGridViewstat->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			   dataGridViewCellStyle10->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle10->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle10->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle10->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle10->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle10->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle10;
+			   dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   dataGridViewCellStyle5->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle5;
 			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
 			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->dataGridViewstat->Name = L"dataGridViewstat";
@@ -2130,81 +2540,49 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->dataGridViewstat->Size = System::Drawing::Size(918, 371);
 			   this->dataGridViewstat->TabIndex = 0;
 			   // 
-			   // preCatalogPanel
+			   // stat_label
 			   // 
-			   this->preCatalogPanel->Controls->Add(this->preCatalogSentenceLabel);
-			   this->preCatalogPanel->Controls->Add(this->preCatalogLoginButton);
-			   this->preCatalogPanel->Controls->Add(this->preCatalogTitleLabel);
-			   this->preCatalogPanel->Controls->Add(this->preCatalogSearchLabel);
-			   this->preCatalogPanel->Controls->Add(this->preCatalogTextBox);
-			   this->preCatalogPanel->Controls->Add(this->preCatalogListView);
-			   this->preCatalogPanel->Location = System::Drawing::Point(220, 80);
-			   this->preCatalogPanel->Name = L"preCatalogPanel";
-			   this->preCatalogPanel->Size = System::Drawing::Size(968, 607);
-			   this->preCatalogPanel->TabIndex = 5;
+			   this->stat_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   this->stat_label->Location = System::Drawing::Point(83, 4);
+			   this->stat_label->Name = L"stat_label";
+			   this->stat_label->Size = System::Drawing::Size(783, 40);
+			   this->stat_label->TabIndex = 9;
+			   this->stat_label->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
-			   // preCatalogSentenceLabel
+			   // employeeListViewPanel
 			   // 
-			   this->preCatalogSentenceLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			   this->preCatalogSentenceLabel->AutoSize = true;
-			   this->preCatalogSentenceLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogSentenceLabel->Location = System::Drawing::Point(658, 565);
-			   this->preCatalogSentenceLabel->Name = L"preCatalogSentenceLabel";
-			   this->preCatalogSentenceLabel->Size = System::Drawing::Size(146, 19);
-			   this->preCatalogSentenceLabel->TabIndex = 5;
-			   this->preCatalogSentenceLabel->Text = L"Envie de commander \?";
+			   this->employeeListViewPanel->Controls->Add(this->employeeAddNewEmployeeButton);
+			   this->employeeListViewPanel->Controls->Add(this->employeeListView);
+			   this->employeeListViewPanel->Location = System::Drawing::Point(220, 80);
+			   this->employeeListViewPanel->Name = L"employeeListViewPanel";
+			   this->employeeListViewPanel->Size = System::Drawing::Size(968, 607);
+			   this->employeeListViewPanel->TabIndex = 33;
 			   // 
-			   // preCatalogLoginButton
+			   // clientListViewPanel
 			   // 
-			   this->preCatalogLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			   this->preCatalogLoginButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogLoginButton->Location = System::Drawing::Point(839, 556);
-			   this->preCatalogLoginButton->Name = L"preCatalogLoginButton";
-			   this->preCatalogLoginButton->Size = System::Drawing::Size(117, 38);
-			   this->preCatalogLoginButton->TabIndex = 4;
-			   this->preCatalogLoginButton->Text = L"Login";
-			   this->preCatalogLoginButton->UseVisualStyleBackColor = true;
-			   this->preCatalogLoginButton->Click += gcnew System::EventHandler(this, &MyForm::preCatalogLoginButton_Click);
+			   this->clientListViewPanel->Location = System::Drawing::Point(220, 80);
+			   this->clientListViewPanel->Name = L"clientListViewPanel";
+			   this->clientListViewPanel->Size = System::Drawing::Size(968, 607);
+			   this->clientListViewPanel->TabIndex = 32;
 			   // 
-			   // preCatalogTitleLabel
+			   // employeeListView
 			   // 
-			   this->preCatalogTitleLabel->AutoSize = true;
-			   this->preCatalogTitleLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogTitleLabel->Location = System::Drawing::Point(13, 9);
-			   this->preCatalogTitleLabel->Name = L"preCatalogTitleLabel";
-			   this->preCatalogTitleLabel->Size = System::Drawing::Size(133, 44);
-			   this->preCatalogTitleLabel->TabIndex = 3;
-			   this->preCatalogTitleLabel->Text = L"Catalog";
+			   this->employeeListView->HideSelection = false;
+			   this->employeeListView->Location = System::Drawing::Point(53, 44);
+			   this->employeeListView->Name = L"employeeListView";
+			   this->employeeListView->Size = System::Drawing::Size(870, 432);
+			   this->employeeListView->TabIndex = 0;
+			   this->employeeListView->UseCompatibleStateImageBehavior = false;
 			   // 
-			   // preCatalogSearchLabel
+			   // employeeAddNewEmployeeButton
 			   // 
-			   this->preCatalogSearchLabel->AutoSize = true;
-			   this->preCatalogSearchLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogSearchLabel->Location = System::Drawing::Point(19, 125);
-			   this->preCatalogSearchLabel->Name = L"preCatalogSearchLabel";
-			   this->preCatalogSearchLabel->Size = System::Drawing::Size(51, 19);
-			   this->preCatalogSearchLabel->TabIndex = 2;
-			   this->preCatalogSearchLabel->Text = L"Search";
-			   // 
-			   // preCatalogTextBox
-			   // 
-			   this->preCatalogTextBox->Location = System::Drawing::Point(19, 151);
-			   this->preCatalogTextBox->Name = L"preCatalogTextBox";
-			   this->preCatalogTextBox->Size = System::Drawing::Size(155, 22);
-			   this->preCatalogTextBox->TabIndex = 1;
-			   // 
-			   // preCatalogListView
-			   // 
-			   this->preCatalogListView->HideSelection = false;
-			   this->preCatalogListView->Location = System::Drawing::Point(19, 185);
-			   this->preCatalogListView->Name = L"preCatalogListView";
-			   this->preCatalogListView->Size = System::Drawing::Size(923, 258);
-			   this->preCatalogListView->TabIndex = 0;
-			   this->preCatalogListView->UseCompatibleStateImageBehavior = false;
+			   this->employeeAddNewEmployeeButton->Location = System::Drawing::Point(778, 528);
+			   this->employeeAddNewEmployeeButton->Name = L"employeeAddNewEmployeeButton";
+			   this->employeeAddNewEmployeeButton->Size = System::Drawing::Size(145, 43);
+			   this->employeeAddNewEmployeeButton->TabIndex = 1;
+			   this->employeeAddNewEmployeeButton->Text = L"Add New Employee";
+			   this->employeeAddNewEmployeeButton->UseVisualStyleBackColor = true;
 			   // 
 			   // MyForm
 			   // 
@@ -2245,14 +2623,18 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 			   this->accountPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			   this->hubPanel->ResumeLayout(false);
+			   this->clientModifyPanel->ResumeLayout(false);
+			   this->clientModifyPanel->PerformLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->EndInit();
+			   this->preCatalogPanel->ResumeLayout(false);
+			   this->preCatalogPanel->PerformLayout();
 			   this->catalogOrderPanel->ResumeLayout(false);
 			   this->catalogOrderPanel->PerformLayout();
 			   this->catalogCartPanel->ResumeLayout(false);
 			   this->catalogCartPanel->PerformLayout();
 			   this->statisticMPanel->ResumeLayout(false);
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->EndInit();
-			   this->preCatalogPanel->ResumeLayout(false);
-			   this->preCatalogPanel->PerformLayout();
+			   this->employeeListViewPanel->ResumeLayout(false);
 			   this->ResumeLayout(false);
 
 		   }
@@ -2312,6 +2694,7 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 		addStockRestockingTextBox->Text = "";
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		preCatalogTextBox_TextChanged(sender, e);
 		hideAllPanel();
 		preCatalogPanel->Visible = true;
 		preCatalogPanel->BringToFront();
@@ -2593,12 +2976,12 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 	private: System::Void loginPasswordModButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		loginPasswordTextBox->UseSystemPasswordChar = !loginPasswordTextBox->UseSystemPasswordChar;
 	}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////// BOUTON COULEUR //////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		   //////////////////////////////////////// BOUTON COULEUR //////////////////////////////////////////////////////
+		   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	private: System::Void menuCatalogButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 		menuCatalogButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 		menuCatalogButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 			static_cast<System::Int32>(static_cast<System::Byte>(243)));
 	}
@@ -2656,7 +3039,7 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 		menuPersonnellManageButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(87)),
 			static_cast<System::Int32>(static_cast<System::Byte>(34)));
 	}
-	private: System::Void menuPersonnellManageButton_Click(System::Object ^ sender, System::EventArgs ^ e) {
+	private: System::Void menuPersonnellManageButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
 		titleBarLabel->Text = "PERSONNEL MANAGE";
 		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(87)),
@@ -2893,7 +3276,7 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 		}
 	}
 	private: System::Void orderGlobalListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
-		int id_order = int::Parse(orderGlobalListView->SelectedItems[0]->Text->ToString()->Substring(1, orderGlobalListView->SelectedItems[0]->Text->ToString()->IndexOf(")")-1));
+		int id_order = int::Parse(orderGlobalListView->SelectedItems[0]->Text->ToString()->Substring(1, orderGlobalListView->SelectedItems[0]->Text->ToString()->IndexOf(")") - 1));
 		AccessData^ Adata = gcnew AccessData;
 		DataSet^ listElement = Adata->getRows("SELECT nb_element, name_product FROM contain c inner join product p ON p.id_product = c.id_product WHERE id_order = " + id_order, "Temp");
 		DataTable^ elements = listElement->Tables[0];
@@ -2917,26 +3300,44 @@ private: System::Windows::Forms::Label^ loginBarLabel2;
 
 
 
-private: System::Void nameProjectLabel_Click(System::Object^ sender, System::EventArgs^ e) {
-	hideAllPanel();
-	titleBarLabel->Text = "HOME";
-	titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
-		static_cast<System::Int32>(static_cast<System::Byte>(136)));
-	menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(39)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
-		static_cast<System::Int32>(static_cast<System::Byte>(58)));
-}
+	private: System::Void nameProjectLabel_Click(System::Object^ sender, System::EventArgs^ e) {
+		hideAllPanel();
+		titleBarLabel->Text = "HOME";
+		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
+			static_cast<System::Int32>(static_cast<System::Byte>(136)));
+		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(39)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
+			static_cast<System::Int32>(static_cast<System::Byte>(58)));
+	}
 
 
-private: System::Void menuPersonnellManageButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	resetHubButton();
-}
-private: System::Void preCatalogLoginButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	hideAllPanel();
-	loginPanel->Visible = true;
-	loginPanel->BringToFront();
-}
-private: System::Void loginReturnPreCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	MyForm_Load(sender, e);
-}
+	private: System::Void menuPersonnellManageButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		resetHubButton();
+	}
+
+		   // Precatalog -------------------------------------------------
+
+	private: System::Void preCatalogLoginButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		hideAllPanel();
+		loginPanel->Visible = true;
+		loginPanel->BringToFront();
+	}
+	private: System::Void preCatalogTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ listProduct = Adata->getRows("SELECT * FROM product WHERE stock_product > 0 AND enable_product = 1 AND (name_product LIKE '%" + catalogResearchTextBox->Text + "%' OR id_product LIKE '%" + catalogResearchTextBox->Text + "%');", "Temp");
+		DataTable^ products = listProduct->Tables[0];
+
+		catalogGlobalListView->Items->Clear();
+		for (int i = 0; i < products->Rows->Count; i++)
+		{
+			DataRow^ drow = products->Rows[i];
+			float cost = float::Parse(drow[3]->ToString()) + float::Parse(drow[4]->ToString());
+			preCatalogListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString() + "  $" + (cost * (1 + float::Parse(drow[5]->ToString()))));
+		}
+	}
+
+	private: System::Void loginReturnPreCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyForm_Load(sender, e);
+	}
+
 };
 }
