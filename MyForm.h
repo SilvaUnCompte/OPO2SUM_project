@@ -194,14 +194,14 @@ namespace OPO2SUMproject {
 		BillManager^ billManager = gcnew BillManager();
 	private: System::Windows::Forms::ListView^ orderGlobalListView;
 	private: System::Windows::Forms::TextBox^ orderFilterTextBox;
-private: System::Windows::Forms::Panel^ preCatalogPanel;
-private: System::Windows::Forms::Label^ preCatalogSentenceLabel;
+	private: System::Windows::Forms::Panel^ preCatalogPanel;
+	private: System::Windows::Forms::Label^ preCatalogSentenceLabel;
 
-private: System::Windows::Forms::Button^ preCatalogLoginButton;
-private: System::Windows::Forms::Label^ preCatalogTitleLabel;
-private: System::Windows::Forms::Label^ preCatalogSearchLabel;
-private: System::Windows::Forms::TextBox^ preCatalogTextBox;
-private: System::Windows::Forms::ListView^ preCatalogListView;
+	private: System::Windows::Forms::Button^ preCatalogLoginButton;
+	private: System::Windows::Forms::Label^ preCatalogTitleLabel;
+	private: System::Windows::Forms::Label^ preCatalogSearchLabel;
+	private: System::Windows::Forms::TextBox^ preCatalogTextBox;
+	private: System::Windows::Forms::ListView^ preCatalogListView;
 
 
 
@@ -215,11 +215,11 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 		   /// </summary>
 		   void InitializeComponent(void)
 		   {
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   this->loginPanel = (gcnew System::Windows::Forms::Panel());
 			   this->testToSupprButton = (gcnew System::Windows::Forms::Button());
 			   this->loginPasswordPanel = (gcnew System::Windows::Forms::Panel());
@@ -573,14 +573,14 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // 
 			   this->registerBirthdayLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerBirthdayLabel->AutoSize = true;
-			   this->registerBirthdayLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->registerBirthdayLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->registerBirthdayLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			   this->registerBirthdayLabel->Location = System::Drawing::Point(437, 258);
 			   this->registerBirthdayLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerBirthdayLabel->Name = L"registerBirthdayLabel";
-			   this->registerBirthdayLabel->Size = System::Drawing::Size(72, 22);
+			   this->registerBirthdayLabel->Size = System::Drawing::Size(71, 20);
 			   this->registerBirthdayLabel->TabIndex = 17;
 			   this->registerBirthdayLabel->Text = L"Birthday";
 			   // 
@@ -609,14 +609,14 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // 
 			   this->registerLastnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerLastnameLabel->AutoSize = true;
-			   this->registerLastnameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->registerLastnameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->registerLastnameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			   this->registerLastnameLabel->Location = System::Drawing::Point(584, 187);
 			   this->registerLastnameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerLastnameLabel->Name = L"registerLastnameLabel";
-			   this->registerLastnameLabel->Size = System::Drawing::Size(80, 22);
+			   this->registerLastnameLabel->Size = System::Drawing::Size(83, 20);
 			   this->registerLastnameLabel->TabIndex = 15;
 			   this->registerLastnameLabel->Text = L"Lastname";
 			   // 
@@ -624,14 +624,14 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // 
 			   this->registerFirstnameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerFirstnameLabel->AutoSize = true;
-			   this->registerFirstnameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->registerFirstnameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->registerFirstnameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			   this->registerFirstnameLabel->Location = System::Drawing::Point(439, 184);
 			   this->registerFirstnameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerFirstnameLabel->Name = L"registerFirstnameLabel";
-			   this->registerFirstnameLabel->Size = System::Drawing::Size(82, 22);
+			   this->registerFirstnameLabel->Size = System::Drawing::Size(84, 20);
 			   this->registerFirstnameLabel->TabIndex = 14;
 			   this->registerFirstnameLabel->Text = L"Firstname";
 			   // 
@@ -689,14 +689,14 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // 
 			   this->registerPasswordLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerPasswordLabel->AutoSize = true;
-			   this->registerPasswordLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->registerPasswordLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->registerPasswordLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			   this->registerPasswordLabel->Location = System::Drawing::Point(584, 116);
 			   this->registerPasswordLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerPasswordLabel->Name = L"registerPasswordLabel";
-			   this->registerPasswordLabel->Size = System::Drawing::Size(80, 22);
+			   this->registerPasswordLabel->Size = System::Drawing::Size(83, 20);
 			   this->registerPasswordLabel->TabIndex = 4;
 			   this->registerPasswordLabel->Text = L"Password";
 			   // 
@@ -723,14 +723,14 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // 
 			   this->registerUsernameLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerUsernameLabel->AutoSize = true;
-			   this->registerUsernameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->registerUsernameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->registerUsernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			   this->registerUsernameLabel->Location = System::Drawing::Point(439, 116);
 			   this->registerUsernameLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerUsernameLabel->Name = L"registerUsernameLabel";
-			   this->registerUsernameLabel->Size = System::Drawing::Size(85, 22);
+			   this->registerUsernameLabel->Size = System::Drawing::Size(86, 20);
 			   this->registerUsernameLabel->TabIndex = 1;
 			   this->registerUsernameLabel->Text = L"Username";
 			   // 
@@ -739,14 +739,14 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->registerRegisterLabel->Anchor = System::Windows::Forms::AnchorStyles::Top;
 			   this->registerRegisterLabel->AutoSize = true;
 			   this->registerRegisterLabel->BackColor = System::Drawing::Color::Transparent;
-			   this->registerRegisterLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Bold,
+			   this->registerRegisterLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->registerRegisterLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			   this->registerRegisterLabel->Location = System::Drawing::Point(11, 9);
 			   this->registerRegisterLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerRegisterLabel->Name = L"registerRegisterLabel";
-			   this->registerRegisterLabel->Size = System::Drawing::Size(149, 44);
+			   this->registerRegisterLabel->Size = System::Drawing::Size(147, 38);
 			   this->registerRegisterLabel->TabIndex = 0;
 			   this->registerRegisterLabel->Text = L"Register";
 			   // 
@@ -1093,25 +1093,25 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // 
 			   this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			   dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			   this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			   dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle7->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle7;
+			   dataGridViewCellStyle2->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle2;
 			   this->clientMDGV->Location = System::Drawing::Point(2, 390);
 			   this->clientMDGV->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->clientMDGV->Name = L"clientMDGV";
@@ -1933,34 +1933,34 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // 
 			   // dataGridViewstat
 			   // 
-			   dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+			   dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
 			   this->dataGridViewstat->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCellsExceptHeaders;
-			   dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			   dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
+			   dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			   dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+			   dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			   this->dataGridViewstat->ColumnHeadersHeight = 29;
 			   this->dataGridViewstat->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			   dataGridViewCellStyle10->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle10->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle10->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle10->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle10->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle10->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle10;
+			   dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   dataGridViewCellStyle5->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle5;
 			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
 			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->dataGridViewstat->Name = L"dataGridViewstat";
@@ -1987,20 +1987,20 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // 
 			   this->preCatalogSentenceLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			   this->preCatalogSentenceLabel->AutoSize = true;
-			   this->preCatalogSentenceLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->preCatalogSentenceLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogSentenceLabel->Location = System::Drawing::Point(907, 646);
+			   this->preCatalogSentenceLabel->Location = System::Drawing::Point(879, 643);
 			   this->preCatalogSentenceLabel->Name = L"preCatalogSentenceLabel";
-			   this->preCatalogSentenceLabel->Size = System::Drawing::Size(146, 19);
+			   this->preCatalogSentenceLabel->Size = System::Drawing::Size(153, 17);
 			   this->preCatalogSentenceLabel->TabIndex = 5;
 			   this->preCatalogSentenceLabel->Text = L"Envie de commander \?";
 			   // 
 			   // preCatalogLoginButton
 			   // 
 			   this->preCatalogLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			   this->preCatalogLoginButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->preCatalogLoginButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogLoginButton->Location = System::Drawing::Point(1059, 638);
+			   this->preCatalogLoginButton->Location = System::Drawing::Point(1045, 632);
 			   this->preCatalogLoginButton->Name = L"preCatalogLoginButton";
 			   this->preCatalogLoginButton->Size = System::Drawing::Size(117, 38);
 			   this->preCatalogLoginButton->TabIndex = 4;
@@ -2011,22 +2011,22 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   // preCatalogTitleLabel
 			   // 
 			   this->preCatalogTitleLabel->AutoSize = true;
-			   this->preCatalogTitleLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Regular,
+			   this->preCatalogTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->preCatalogTitleLabel->Location = System::Drawing::Point(13, 9);
 			   this->preCatalogTitleLabel->Name = L"preCatalogTitleLabel";
-			   this->preCatalogTitleLabel->Size = System::Drawing::Size(133, 44);
+			   this->preCatalogTitleLabel->Size = System::Drawing::Size(129, 38);
 			   this->preCatalogTitleLabel->TabIndex = 3;
 			   this->preCatalogTitleLabel->Text = L"Catalog";
 			   // 
 			   // preCatalogSearchLabel
 			   // 
 			   this->preCatalogSearchLabel->AutoSize = true;
-			   this->preCatalogSearchLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+			   this->preCatalogSearchLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->preCatalogSearchLabel->Location = System::Drawing::Point(19, 125);
 			   this->preCatalogSearchLabel->Name = L"preCatalogSearchLabel";
-			   this->preCatalogSearchLabel->Size = System::Drawing::Size(51, 19);
+			   this->preCatalogSearchLabel->Size = System::Drawing::Size(53, 17);
 			   this->preCatalogSearchLabel->TabIndex = 2;
 			   this->preCatalogSearchLabel->Text = L"Search";
 			   // 
@@ -2036,6 +2036,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->preCatalogTextBox->Name = L"preCatalogTextBox";
 			   this->preCatalogTextBox->Size = System::Drawing::Size(155, 22);
 			   this->preCatalogTextBox->TabIndex = 1;
+			   this->preCatalogTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::preCatalogTextBox_TextChanged);
 			   // 
 			   // preCatalogListView
 			   // 
@@ -2045,6 +2046,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 			   this->preCatalogListView->Size = System::Drawing::Size(1143, 423);
 			   this->preCatalogListView->TabIndex = 0;
 			   this->preCatalogListView->UseCompatibleStateImageBehavior = false;
+			   this->preCatalogListView->View = System::Windows::Forms::View::List;
 			   // 
 			   // MyForm
 			   // 
@@ -2155,6 +2157,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 		addStockRestockingTextBox->Text = "";
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		preCatalogTextBox_TextChanged(sender,e);
 		hideAllPanel();
 		preCatalogPanel->Visible = true;
 		preCatalogPanel->BringToFront();
@@ -2433,12 +2436,12 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 	private: System::Void loginPasswordModButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		loginPasswordTextBox->UseSystemPasswordChar = !loginPasswordTextBox->UseSystemPasswordChar;
 	}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////// BOUTON COULEUR //////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		   //////////////////////////////////////// BOUTON COULEUR //////////////////////////////////////////////////////
+		   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	private: System::Void menuCatalogButton_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 		menuCatalogButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Bold,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 		menuCatalogButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 			static_cast<System::Int32>(static_cast<System::Byte>(243)));
 	}
@@ -2496,7 +2499,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 		menuPersonnellManageButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(87)),
 			static_cast<System::Int32>(static_cast<System::Byte>(34)));
 	}
-	private: System::Void menuPersonnellManageButton_Click(System::Object ^ sender, System::EventArgs ^ e) {
+	private: System::Void menuPersonnellManageButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
 		titleBarLabel->Text = "PERSONNEL MANAGE";
 		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(87)),
@@ -2733,7 +2736,7 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 		}
 	}
 	private: System::Void orderGlobalListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
-		int id_order = int::Parse(orderGlobalListView->SelectedItems[0]->Text->ToString()->Substring(1, orderGlobalListView->SelectedItems[0]->Text->ToString()->IndexOf(")")-1));
+		int id_order = int::Parse(orderGlobalListView->SelectedItems[0]->Text->ToString()->Substring(1, orderGlobalListView->SelectedItems[0]->Text->ToString()->IndexOf(")") - 1));
 		AccessData^ Adata = gcnew AccessData;
 		DataSet^ listElement = Adata->getRows("SELECT nb_element, name_product FROM contain c inner join product p ON p.id_product = c.id_product WHERE id_order = " + id_order, "Temp");
 		DataTable^ elements = listElement->Tables[0];
@@ -2757,23 +2760,39 @@ private: System::Windows::Forms::ListView^ preCatalogListView;
 
 
 
-private: System::Void nameProjectLabel_Click(System::Object^ sender, System::EventArgs^ e) {
-	hideAllPanel();
-	titleBarLabel->Text = "HOME";
-	titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
-		static_cast<System::Int32>(static_cast<System::Byte>(136)));
-	menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(39)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
-		static_cast<System::Int32>(static_cast<System::Byte>(58)));
-}
+	private: System::Void nameProjectLabel_Click(System::Object^ sender, System::EventArgs^ e) {
+		hideAllPanel();
+		titleBarLabel->Text = "HOME";
+		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
+			static_cast<System::Int32>(static_cast<System::Byte>(136)));
+		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(39)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
+			static_cast<System::Int32>(static_cast<System::Byte>(58)));
+	}
 
 
-private: System::Void menuPersonnellManageButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	resetHubButton();
-}
-private: System::Void preCatalogLoginButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	hideAllPanel();
-	loginPanel->Visible = true;
-	loginPanel->BringToFront();
-}
-};
+	private: System::Void menuPersonnellManageButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		resetHubButton();
+	}
+	
+	// Precatalog -------------------------------------------------
+
+	private: System::Void preCatalogLoginButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		hideAllPanel();
+		loginPanel->Visible = true;
+		loginPanel->BringToFront();
+	}
+	private: System::Void preCatalogTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ listProduct = Adata->getRows("SELECT * FROM product WHERE stock_product > 0 AND enable_product = 1 AND (name_product LIKE '%" + catalogResearchTextBox->Text + "%' OR id_product LIKE '%" + catalogResearchTextBox->Text + "%');", "Temp");
+		DataTable^ products = listProduct->Tables[0];
+
+		catalogGlobalListView->Items->Clear();
+		for (int i = 0; i < products->Rows->Count; i++)
+		{
+			DataRow^ drow = products->Rows[i];
+			float cost = float::Parse(drow[3]->ToString()) + float::Parse(drow[4]->ToString());
+			preCatalogListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString() + "  $" + (cost * (1 + float::Parse(drow[5]->ToString()))));
+		}
+	}
+	};
 }
