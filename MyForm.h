@@ -462,10 +462,6 @@ private: System::Windows::Forms::DateTimePicker^ employeeModifyHireDateDateTimeP
 			   this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->hubPanel = (gcnew System::Windows::Forms::Panel());
-			   this->employeeListViewPanel = (gcnew System::Windows::Forms::Panel());
-			   this->employeeAddNewEmployeeButton = (gcnew System::Windows::Forms::Button());
-			   this->employeeListView = (gcnew System::Windows::Forms::ListView());
-			   this->clientListViewPanel = (gcnew System::Windows::Forms::Panel());
 			   this->clientModifyPanel = (gcnew System::Windows::Forms::Panel());
 			   this->clientModifyErrorBoxLabel = (gcnew System::Windows::Forms::Label());
 			   this->clientModifyApplyModifButton = (gcnew System::Windows::Forms::Button());
