@@ -194,6 +194,13 @@ namespace OPO2SUMproject {
 		BillManager^ billManager = gcnew BillManager();
 	private: System::Windows::Forms::ListView^ orderGlobalListView;
 	private: System::Windows::Forms::TextBox^ orderFilterTextBox;
+private: System::Windows::Forms::Panel^ preCatalogPanel;
+private: System::Windows::Forms::Label^ label1;
+private: System::Windows::Forms::Button^ preCatalogLoginButton;
+private: System::Windows::Forms::Label^ preCatalogTitleLabel;
+private: System::Windows::Forms::Label^ preCatalogSearchLabel;
+private: System::Windows::Forms::TextBox^ preCatalogTextBox;
+private: System::Windows::Forms::ListView^ preCatalogListView;
 
 
 
@@ -207,7 +214,6 @@ namespace OPO2SUMproject {
 		   /// </summary>
 		   void InitializeComponent(void)
 		   {
-			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
@@ -341,6 +347,13 @@ namespace OPO2SUMproject {
 			   this->turnover_button = (gcnew System::Windows::Forms::Button());
 			   this->Panier_Poyen_Button = (gcnew System::Windows::Forms::Button());
 			   this->dataGridViewstat = (gcnew System::Windows::Forms::DataGridView());
+			   this->preCatalogPanel = (gcnew System::Windows::Forms::Panel());
+			   this->label1 = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogLoginButton = (gcnew System::Windows::Forms::Button());
+			   this->preCatalogTitleLabel = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogSearchLabel = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->preCatalogListView = (gcnew System::Windows::Forms::ListView());
 			   this->loginPanel->SuspendLayout();
 			   this->loginPasswordPanel->SuspendLayout();
 			   this->loginUsernamePanel->SuspendLayout();
@@ -360,12 +373,12 @@ namespace OPO2SUMproject {
 			   this->catalogCartPanel->SuspendLayout();
 			   this->statisticMPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
+			   this->preCatalogPanel->SuspendLayout();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
 			   // 
 			   this->loginPanel->BackColor = System::Drawing::Color::Transparent;
-			   this->loginPanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"loginPanel.BackgroundImage")));
 			   this->loginPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->loginPanel->Controls->Add(this->testToSupprButton);
 			   this->loginPanel->Controls->Add(this->loginPasswordPanel);
@@ -533,7 +546,6 @@ namespace OPO2SUMproject {
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->registerPanel->BackColor = System::Drawing::Color::Transparent;
-			   this->registerPanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"registerPanel.BackgroundImage")));
 			   this->registerPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->registerPanel->Controls->Add(this->registerBirthdayLabel);
 			   this->registerPanel->Controls->Add(this->registerDateTimePicker);
@@ -564,7 +576,7 @@ namespace OPO2SUMproject {
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->registerBirthdayLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
-			   this->registerBirthdayLabel->Location = System::Drawing::Point(439, 347);
+			   this->registerBirthdayLabel->Location = System::Drawing::Point(437, 258);
 			   this->registerBirthdayLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerBirthdayLabel->Name = L"registerBirthdayLabel";
 			   this->registerBirthdayLabel->Size = System::Drawing::Size(72, 22);
@@ -574,7 +586,7 @@ namespace OPO2SUMproject {
 			   // registerDateTimePicker
 			   // 
 			   this->registerDateTimePicker->CalendarForeColor = System::Drawing::Color::Black;
-			   this->registerDateTimePicker->Location = System::Drawing::Point(439, 373);
+			   this->registerDateTimePicker->Location = System::Drawing::Point(437, 284);
 			   this->registerDateTimePicker->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerDateTimePicker->Name = L"registerDateTimePicker";
 			   this->registerDateTimePicker->Size = System::Drawing::Size(278, 22);
@@ -647,10 +659,10 @@ namespace OPO2SUMproject {
 				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			   this->registerValidateButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->registerValidateButton->ForeColor = System::Drawing::Color::White;
-			   this->registerValidateButton->Location = System::Drawing::Point(439, 471);
+			   this->registerValidateButton->Location = System::Drawing::Point(437, 356);
 			   this->registerValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerValidateButton->Name = L"registerValidateButton";
-			   this->registerValidateButton->Size = System::Drawing::Size(278, 57);
+			   this->registerValidateButton->Size = System::Drawing::Size(278, 41);
 			   this->registerValidateButton->TabIndex = 11;
 			   this->registerValidateButton->Text = L"Validate";
 			   this->registerValidateButton->UseVisualStyleBackColor = false;
@@ -663,10 +675,10 @@ namespace OPO2SUMproject {
 				   static_cast<System::Int32>(static_cast<System::Byte>(150)), static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			   this->registerLoginButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->registerLoginButton->ForeColor = System::Drawing::Color::White;
-			   this->registerLoginButton->Location = System::Drawing::Point(1090, 12);
+			   this->registerLoginButton->Location = System::Drawing::Point(1099, 12);
 			   this->registerLoginButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerLoginButton->Name = L"registerLoginButton";
-			   this->registerLoginButton->Size = System::Drawing::Size(87, 55);
+			   this->registerLoginButton->Size = System::Drawing::Size(78, 41);
 			   this->registerLoginButton->TabIndex = 5;
 			   this->registerLoginButton->Text = L"Login";
 			   this->registerLoginButton->UseVisualStyleBackColor = false;
@@ -733,7 +745,7 @@ namespace OPO2SUMproject {
 			   this->registerRegisterLabel->Location = System::Drawing::Point(11, 9);
 			   this->registerRegisterLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->registerRegisterLabel->Name = L"registerRegisterLabel";
-			   this->registerRegisterLabel->Size = System::Drawing::Size(151, 46);
+			   this->registerRegisterLabel->Size = System::Drawing::Size(149, 44);
 			   this->registerRegisterLabel->TabIndex = 0;
 			   this->registerRegisterLabel->Text = L"Register";
 			   // 
@@ -1957,19 +1969,96 @@ namespace OPO2SUMproject {
 			   this->dataGridViewstat->Size = System::Drawing::Size(918, 371);
 			   this->dataGridViewstat->TabIndex = 0;
 			   // 
+			   // preCatalogPanel
+			   // 
+			   this->preCatalogPanel->Controls->Add(this->label1);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogLoginButton);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogTitleLabel);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogSearchLabel);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogTextBox);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogListView);
+			   this->preCatalogPanel->Location = System::Drawing::Point(0, 0);
+			   this->preCatalogPanel->Name = L"preCatalogPanel";
+			   this->preCatalogPanel->Size = System::Drawing::Size(1188, 687);
+			   this->preCatalogPanel->TabIndex = 5;
+			   // 
+			   // label1
+			   // 
+			   this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			   this->label1->AutoSize = true;
+			   this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   this->label1->Location = System::Drawing::Point(907, 646);
+			   this->label1->Name = L"label1";
+			   this->label1->Size = System::Drawing::Size(146, 19);
+			   this->label1->TabIndex = 5;
+			   this->label1->Text = L"Envie de commander \?";
+			   // 
+			   // preCatalogLoginButton
+			   // 
+			   this->preCatalogLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			   this->preCatalogLoginButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogLoginButton->Location = System::Drawing::Point(1059, 638);
+			   this->preCatalogLoginButton->Name = L"preCatalogLoginButton";
+			   this->preCatalogLoginButton->Size = System::Drawing::Size(117, 38);
+			   this->preCatalogLoginButton->TabIndex = 4;
+			   this->preCatalogLoginButton->Text = L"Login";
+			   this->preCatalogLoginButton->UseVisualStyleBackColor = true;
+			   this->preCatalogLoginButton->Click += gcnew System::EventHandler(this, &MyForm::preCatalogLoginButton_Click);
+			   // 
+			   // preCatalogTitleLabel
+			   // 
+			   this->preCatalogTitleLabel->AutoSize = true;
+			   this->preCatalogTitleLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogTitleLabel->Location = System::Drawing::Point(13, 9);
+			   this->preCatalogTitleLabel->Name = L"preCatalogTitleLabel";
+			   this->preCatalogTitleLabel->Size = System::Drawing::Size(133, 44);
+			   this->preCatalogTitleLabel->TabIndex = 3;
+			   this->preCatalogTitleLabel->Text = L"Catalog";
+			   // 
+			   // preCatalogSearchLabel
+			   // 
+			   this->preCatalogSearchLabel->AutoSize = true;
+			   this->preCatalogSearchLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogSearchLabel->Location = System::Drawing::Point(19, 125);
+			   this->preCatalogSearchLabel->Name = L"preCatalogSearchLabel";
+			   this->preCatalogSearchLabel->Size = System::Drawing::Size(51, 19);
+			   this->preCatalogSearchLabel->TabIndex = 2;
+			   this->preCatalogSearchLabel->Text = L"Search";
+			   // 
+			   // preCatalogTextBox
+			   // 
+			   this->preCatalogTextBox->Location = System::Drawing::Point(19, 151);
+			   this->preCatalogTextBox->Name = L"preCatalogTextBox";
+			   this->preCatalogTextBox->Size = System::Drawing::Size(155, 22);
+			   this->preCatalogTextBox->TabIndex = 1;
+			   // 
+			   // preCatalogListView
+			   // 
+			   this->preCatalogListView->HideSelection = false;
+			   this->preCatalogListView->Location = System::Drawing::Point(19, 183);
+			   this->preCatalogListView->Name = L"preCatalogListView";
+			   this->preCatalogListView->Size = System::Drawing::Size(1143, 423);
+			   this->preCatalogListView->TabIndex = 0;
+			   this->preCatalogListView->UseCompatibleStateImageBehavior = false;
+			   // 
 			   // MyForm
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::SystemColors::ButtonFace;
 			   this->ClientSize = System::Drawing::Size(1188, 687);
-			   this->Controls->Add(this->registerPanel);
-			   this->Controls->Add(this->loginPanel);
+			   this->Controls->Add(this->preCatalogPanel);
 			   this->Controls->Add(this->hubPanel);
+			   this->Controls->Add(this->loginPanel);
+			   this->Controls->Add(this->registerPanel);
 			   this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->ForeColor = System::Drawing::Color::Black;
-			   this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::SizableToolWindow;
+			   this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			   this->Margin = System::Windows::Forms::Padding(2);
 			   this->Name = L"MyForm";
 			   this->Text = L"Opo2suM";
@@ -2004,6 +2093,8 @@ namespace OPO2SUMproject {
 			   this->catalogCartPanel->PerformLayout();
 			   this->statisticMPanel->ResumeLayout(false);
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->EndInit();
+			   this->preCatalogPanel->ResumeLayout(false);
+			   this->preCatalogPanel->PerformLayout();
 			   this->ResumeLayout(false);
 
 		   }
@@ -2051,6 +2142,7 @@ namespace OPO2SUMproject {
 		statisticMPanel->Visible = false;
 		catalogCartPanel->Visible = false;
 		catalogOrderPanel->Visible = false;
+		preCatalogPanel->Visible = false;
 	}
 	private: System::Void clearAddStockTextBox() {
 		addStockNameTextBox->Text = "";
@@ -2063,8 +2155,8 @@ namespace OPO2SUMproject {
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
-		loginPanel->Visible = true;
-		loginPanel->BringToFront();
+		preCatalogPanel->Visible = true;
+		preCatalogPanel->BringToFront();
 	}
 	private: System::Void loginRegisterButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
@@ -2676,6 +2768,11 @@ private: System::Void nameProjectLabel_Click(System::Object^ sender, System::Eve
 
 private: System::Void menuPersonnellManageButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 	resetHubButton();
+}
+private: System::Void preCatalogLoginButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	hideAllPanel();
+	loginPanel->Visible = true;
+	loginPanel->BringToFront();
 }
 };
 }
