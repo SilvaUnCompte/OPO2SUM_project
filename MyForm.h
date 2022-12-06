@@ -2672,7 +2672,7 @@ private: System::Windows::Forms::Button^ disconnectButton;
 			   this->simulationPanel->Controls->Add(this->simulationEntryPriceTextBox);
 			   this->simulationPanel->Location = System::Drawing::Point(24, 9);
 			   this->simulationPanel->Name = L"simulationPanel";
-			   this->simulationPanel->Size = System::Drawing::Size(918, 421);
+			   this->simulationPanel->Size = System::Drawing::Size(918, 432);
 			   this->simulationPanel->TabIndex = 17;
 			   // 
 			   // simulationResultLabel
@@ -2880,7 +2880,6 @@ private: System::Windows::Forms::Button^ disconnectButton;
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
-			   this->dataGridViewstat->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCellsExceptHeaders;
 			   dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			   dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
 			   dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
@@ -4064,7 +4063,7 @@ private: System::Windows::Forms::Button^ disconnectButton;
 	}
 	private: System::Void Amount_per_client_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ Amount_per_client = Adata->getRows("SELECT a.account_name, SUM(total_bill) AS total_per_client FROM opo2sum.dbo.bill b inner join orderTab o ON o.id_order = b.id_order inner join account a ON o.id_account = a.id_account GROUP BY a.account_name;", "temp");
+		DataSet^ Amount_per_client = Adata->getRows("SELECT a.account_name, SUM(total_bill) AS 'Total per client' FROM opo2sum.dbo.bill b inner join orderTab o ON o.id_order = b.id_order inner join account a ON o.id_account = a.id_account GROUP BY a.account_name;", "temp");
 		stat_label->Text = "Amount per client";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = Amount_per_client; // dataset
@@ -4072,7 +4071,7 @@ private: System::Windows::Forms::Button^ disconnectButton;
 	}
 	private: System::Void top_buys_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ top10_buys = Adata->getRows("SELECT Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity DESC;", "temp");
+		DataSet^ top10_buys = Adata->getRows("SELECT TOP(10) Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity DESC;", "temp");
 		stat_label->Text = "Top10 buys";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = top10_buys; // dataset
@@ -4080,7 +4079,7 @@ private: System::Windows::Forms::Button^ disconnectButton;
 	}
 	private: System::Void buys_down_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ down10_buys = Adata->getRows("SELECT Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity ASC;", "temp");
+		DataSet^ down10_buys = Adata->getRows("SELECT TOP(10) Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity ASC;", "temp");
 		stat_label->Text = "Bottom10 buys";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = down10_buys; // dataset
