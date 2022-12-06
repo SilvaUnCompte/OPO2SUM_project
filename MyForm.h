@@ -3680,29 +3680,20 @@ private: System::Windows::Forms::Button^ disconnectButton;
 
 			hideAllPanel();
 			disconnectButton->Visible = true;
-			if (connectedAccount->get_permission_lv_account() == 0) {
+			if (connectedAccount->get_permission_lv_account() >= 0) {
 				menuCatalogButton->Visible = true;
 				menuOrderButton->Visible = true;
 				menuAccountButton->Visible = true;
 			}
-			else if (connectedAccount->get_permission_lv_account() == 1)
+			if (connectedAccount->get_permission_lv_account() >= 1)
 			{
-				menuCatalogButton->Visible = true;
-				menuOrderButton->Visible = true;
 				menuStockButton->Visible = true;
 				menuClientButton->Visible = true;
 				menuStatisticButton->Visible = true;
-				menuAccountButton->Visible = true;
 			}
-			else if (connectedAccount->get_permission_lv_account() == 2)
+			if (connectedAccount->get_permission_lv_account() >= 2)
 			{
-				menuCatalogButton->Visible = true;
-				menuOrderButton->Visible = true;
-				menuStockButton->Visible = true;
-				menuClientButton->Visible = true;
-				menuStatisticButton->Visible = true;
 				menuPersonnellManageButton->Visible = true;
-				menuAccountButton->Visible = true;
 			}
 		}
 		DataTableReaderTest->Close();
@@ -3897,6 +3888,7 @@ private: System::Windows::Forms::Button^ disconnectButton;
 
 	private: System::Void menuCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
+		catalogResearchTextBox_TextChanged(sender, e);
 		catalogOrderPanel->Visible = true;
 		titleBarLabel->Text = "CATALOG";
 		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
