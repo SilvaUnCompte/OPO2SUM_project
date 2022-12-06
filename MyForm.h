@@ -409,12 +409,11 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 		   /// </summary>
 		   void InitializeComponent(void)
 		   {
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   this->loginPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginTextPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginReturnPreCatalogButton = (gcnew System::Windows::Forms::Button());
@@ -1531,25 +1530,25 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   // 
 			   this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			   dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
 			   this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			   dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle2->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle2;
+			   dataGridViewCellStyle6->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle6;
 			   this->clientMDGV->Location = System::Drawing::Point(2, 390);
 			   this->clientMDGV->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->clientMDGV->Name = L"clientMDGV";
@@ -2115,6 +2114,13 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->hubPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
+			   this->hubPanel->Controls->Add(this->statisticMPanel);
+			   this->hubPanel->Controls->Add(this->orderMPanel);
+			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
+			   this->hubPanel->Controls->Add(this->employeeListViewPanel);
+			   this->hubPanel->Controls->Add(this->clientListViewPanel);
+			   this->hubPanel->Controls->Add(this->clientModifyPanel);
+			   this->hubPanel->Controls->Add(this->logoPictureBox);
 			   this->hubPanel->Controls->Add(this->accountPanel);
 			   this->hubPanel->Controls->Add(this->clientMPanel);
 			   this->hubPanel->Controls->Add(this->employeeModifyPanel);
@@ -2123,13 +2129,6 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->hubPanel->Controls->Add(this->catalogCartPanel);
 			   this->hubPanel->Controls->Add(this->addStockPanel);
 			   this->hubPanel->Controls->Add(this->stockMPanel);
-			   this->hubPanel->Controls->Add(this->statisticMPanel);
-			   this->hubPanel->Controls->Add(this->orderMPanel);
-			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
-			   this->hubPanel->Controls->Add(this->employeeListViewPanel);
-			   this->hubPanel->Controls->Add(this->clientListViewPanel);
-			   this->hubPanel->Controls->Add(this->clientModifyPanel);
-			   this->hubPanel->Controls->Add(this->logoPictureBox);
 			   this->hubPanel->Location = System::Drawing::Point(0, 0);
 			   this->hubPanel->Name = L"hubPanel";
 			   this->hubPanel->Size = System::Drawing::Size(1188, 687);
@@ -2680,7 +2679,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->simulationPanel->Controls->Add(this->simulationEntryPriceTextBox);
 			   this->simulationPanel->Location = System::Drawing::Point(24, 9);
 			   this->simulationPanel->Name = L"simulationPanel";
-			   this->simulationPanel->Size = System::Drawing::Size(918, 421);
+			   this->simulationPanel->Size = System::Drawing::Size(918, 425);
 			   this->simulationPanel->TabIndex = 17;
 			   // 
 			   // simulationResultLabel
@@ -2881,34 +2880,15 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   // 
 			   // dataGridViewstat
 			   // 
-			   dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+			   dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
 			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
-			   this->dataGridViewstat->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCellsExceptHeaders;
-			   dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			   dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
 			   this->dataGridViewstat->ColumnHeadersHeight = 29;
-			   this->dataGridViewstat->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			   dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle5->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle5;
 			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
 			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->dataGridViewstat->Name = L"dataGridViewstat";
@@ -4145,7 +4125,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 	}
 	private: System::Void Amount_per_client_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ Amount_per_client = Adata->getRows("SELECT a.account_name, SUM(total_bill) AS total_per_client FROM opo2sum.dbo.bill b inner join orderTab o ON o.id_order = b.id_order inner join account a ON o.id_account = a.id_account GROUP BY a.account_name;", "temp");
+		DataSet^ Amount_per_client = Adata->getRows("SELECT a.account_name, SUM(total_bill) AS 'Total per client' FROM opo2sum.dbo.bill b inner join orderTab o ON o.id_order = b.id_order inner join account a ON o.id_account = a.id_account GROUP BY a.account_name;", "temp");
 		stat_label->Text = "Amount per client";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = Amount_per_client; // dataset
@@ -4153,7 +4133,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 	}
 	private: System::Void top_buys_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ top10_buys = Adata->getRows("SELECT Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity DESC;", "temp");
+		DataSet^ top10_buys = Adata->getRows("SELECT TOP(10) Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity DESC;", "temp");
 		stat_label->Text = "Top10 buys";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = top10_buys; // dataset
@@ -4161,7 +4141,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 	}
 	private: System::Void buys_down_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ down10_buys = Adata->getRows("SELECT Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity ASC;", "temp");
+		DataSet^ down10_buys = Adata->getRows("SELECT TOP(10) Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity ASC;", "temp");
 		stat_label->Text = "Bottom10 buys";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = down10_buys; // dataset
