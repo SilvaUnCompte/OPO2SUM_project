@@ -279,30 +279,30 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Button^ disconnectButton;
 	private: System::Windows::Forms::CheckBox^ addStockEnableCheckBox;
 	private: System::Windows::Forms::Label^ addStockErrorLabel;
-private: System::Windows::Forms::ListView^ stockListView;
-private: System::Windows::Forms::Panel^ stockModifyPanel;
-private: System::Windows::Forms::Label^ stockModifyRestockLabel;
-private: System::Windows::Forms::Label^ stockModifyStockLabel;
-private: System::Windows::Forms::Label^ stockModifyTVALabel;
-private: System::Windows::Forms::Label^ stockModifyMargeLabel;
-private: System::Windows::Forms::Label^ stockModifyCostLabel;
-private: System::Windows::Forms::Label^ stockModifyQuantityLabel;
-private: System::Windows::Forms::Label^ stockModifyNameLabel;
-private: System::Windows::Forms::TextBox^ stockModifyRestockTextBox;
-private: System::Windows::Forms::CheckBox^ stockModifyEnableCheckBox;
+	private: System::Windows::Forms::ListView^ stockListView;
+	private: System::Windows::Forms::Panel^ stockModifyPanel;
+	private: System::Windows::Forms::Label^ stockModifyRestockLabel;
+	private: System::Windows::Forms::Label^ stockModifyStockLabel;
+	private: System::Windows::Forms::Label^ stockModifyTVALabel;
+	private: System::Windows::Forms::Label^ stockModifyMargeLabel;
+	private: System::Windows::Forms::Label^ stockModifyCostLabel;
+	private: System::Windows::Forms::Label^ stockModifyQuantityLabel;
+	private: System::Windows::Forms::Label^ stockModifyNameLabel;
+	private: System::Windows::Forms::TextBox^ stockModifyRestockTextBox;
+	private: System::Windows::Forms::CheckBox^ stockModifyEnableCheckBox;
 
 
-private: System::Windows::Forms::TextBox^ stockModifyMargeTextBox;
-private: System::Windows::Forms::TextBox^ stockModifyTVATextBox;
-private: System::Windows::Forms::TextBox^ stockModifyStockTextBox;
+	private: System::Windows::Forms::TextBox^ stockModifyMargeTextBox;
+	private: System::Windows::Forms::TextBox^ stockModifyTVATextBox;
+	private: System::Windows::Forms::TextBox^ stockModifyStockTextBox;
 
 
 
-private: System::Windows::Forms::TextBox^ stockModifyCostTextBox;
+	private: System::Windows::Forms::TextBox^ stockModifyCostTextBox;
 
-private: System::Windows::Forms::TextBox^ stockModifyQuantityTextBox;
+	private: System::Windows::Forms::TextBox^ stockModifyQuantityTextBox;
 
-private: System::Windows::Forms::TextBox^ stockModifyNameTextBox;
+	private: System::Windows::Forms::TextBox^ stockModifyNameTextBox;
 
 private: System::Windows::Forms::Button^ stockModifyModifyButton;
 private: System::Windows::Forms::Label^ stockModifyTitleLabel;
@@ -1119,7 +1119,7 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 			   // stockListView
 			   // 
 			   this->stockListView->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			   this->stockListView->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   this->stockListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
 			   this->stockListView->HideSelection = false;
 			   this->stockListView->Location = System::Drawing::Point(14, 74);
@@ -1180,6 +1180,8 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 			   // addStockEnableCheckBox
 			   // 
 			   this->addStockEnableCheckBox->AutoSize = true;
+			   this->addStockEnableCheckBox->Checked = true;
+			   this->addStockEnableCheckBox->CheckState = System::Windows::Forms::CheckState::Checked;
 			   this->addStockEnableCheckBox->Location = System::Drawing::Point(251, 459);
 			   this->addStockEnableCheckBox->Name = L"addStockEnableCheckBox";
 			   this->addStockEnableCheckBox->Size = System::Drawing::Size(74, 21);
@@ -1325,9 +1327,9 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 			   this->addStockQuantityLabel->Location = System::Drawing::Point(239, 146);
 			   this->addStockQuantityLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			   this->addStockQuantityLabel->Name = L"addStockQuantityLabel";
-			   this->addStockQuantityLabel->Size = System::Drawing::Size(61, 17);
+			   this->addStockQuantityLabel->Size = System::Drawing::Size(115, 17);
 			   this->addStockQuantityLabel->TabIndex = 4;
-			   this->addStockQuantityLabel->Text = L"Quantity";
+			   this->addStockQuantityLabel->Text = L"Quantity per Unit";
 			   // 
 			   // addStockNameLabel
 			   // 
@@ -1913,14 +1915,8 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 			   // 
 			   this->hubPanel->BackColor = System::Drawing::Color::White;
 			   this->hubPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			   this->hubPanel->Controls->Add(this->stockModifyPanel);
-			   this->hubPanel->Controls->Add(this->stockMPanel);
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
-			   this->hubPanel->Controls->Add(this->employeeModifyPanel);
-			   this->hubPanel->Controls->Add(this->preCatalogPanel);
-			   this->hubPanel->Controls->Add(this->catalogOrderPanel);
-			   this->hubPanel->Controls->Add(this->catalogCartPanel);
 			   this->hubPanel->Controls->Add(this->addStockPanel);
 			   this->hubPanel->Controls->Add(this->statisticMPanel);
 			   this->hubPanel->Controls->Add(this->orderMPanel);
@@ -1930,6 +1926,12 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 			   this->hubPanel->Controls->Add(this->clientModifyPanel);
 			   this->hubPanel->Controls->Add(this->accountPanel);
 			   this->hubPanel->Controls->Add(this->logoPictureBox);
+			   this->hubPanel->Controls->Add(this->stockModifyPanel);
+			   this->hubPanel->Controls->Add(this->stockMPanel);
+			   this->hubPanel->Controls->Add(this->employeeModifyPanel);
+			   this->hubPanel->Controls->Add(this->preCatalogPanel);
+			   this->hubPanel->Controls->Add(this->catalogOrderPanel);
+			   this->hubPanel->Controls->Add(this->catalogCartPanel);
 			   this->hubPanel->Location = System::Drawing::Point(0, 0);
 			   this->hubPanel->Name = L"hubPanel";
 			   this->hubPanel->Size = System::Drawing::Size(1188, 687);
@@ -1990,109 +1992,109 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 			   // stockModifyTitleLabel
 			   // 
 			   this->stockModifyTitleLabel->AutoSize = true;
-			   this->stockModifyTitleLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 19.8F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyTitleLabel->Location = System::Drawing::Point(15, 15);
 			   this->stockModifyTitleLabel->Name = L"stockModifyTitleLabel";
-			   this->stockModifyTitleLabel->Size = System::Drawing::Size(203, 44);
+			   this->stockModifyTitleLabel->Size = System::Drawing::Size(195, 38);
 			   this->stockModifyTitleLabel->TabIndex = 16;
 			   this->stockModifyTitleLabel->Text = L"Informations";
 			   // 
 			   // stockModifyRestockLabel
 			   // 
 			   this->stockModifyRestockLabel->AutoSize = true;
-			   this->stockModifyRestockLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyRestockLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyRestockLabel->Location = System::Drawing::Point(329, 440);
 			   this->stockModifyRestockLabel->Name = L"stockModifyRestockLabel";
-			   this->stockModifyRestockLabel->Size = System::Drawing::Size(70, 22);
+			   this->stockModifyRestockLabel->Size = System::Drawing::Size(70, 20);
 			   this->stockModifyRestockLabel->TabIndex = 15;
 			   this->stockModifyRestockLabel->Text = L"Restock";
 			   // 
 			   // stockModifyStockLabel
 			   // 
 			   this->stockModifyStockLabel->AutoSize = true;
-			   this->stockModifyStockLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyStockLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyStockLabel->Location = System::Drawing::Point(329, 380);
 			   this->stockModifyStockLabel->Name = L"stockModifyStockLabel";
-			   this->stockModifyStockLabel->Size = System::Drawing::Size(51, 22);
+			   this->stockModifyStockLabel->Size = System::Drawing::Size(51, 20);
 			   this->stockModifyStockLabel->TabIndex = 14;
 			   this->stockModifyStockLabel->Text = L"Stock";
 			   // 
 			   // stockModifyTVALabel
 			   // 
 			   this->stockModifyTVALabel->AutoSize = true;
-			   this->stockModifyTVALabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyTVALabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyTVALabel->Location = System::Drawing::Point(329, 324);
 			   this->stockModifyTVALabel->Name = L"stockModifyTVALabel";
-			   this->stockModifyTVALabel->Size = System::Drawing::Size(40, 22);
+			   this->stockModifyTVALabel->Size = System::Drawing::Size(41, 20);
 			   this->stockModifyTVALabel->TabIndex = 13;
 			   this->stockModifyTVALabel->Text = L"TVA";
 			   // 
 			   // stockModifyMargeLabel
 			   // 
 			   this->stockModifyMargeLabel->AutoSize = true;
-			   this->stockModifyMargeLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyMargeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyMargeLabel->Location = System::Drawing::Point(329, 263);
 			   this->stockModifyMargeLabel->Name = L"stockModifyMargeLabel";
-			   this->stockModifyMargeLabel->Size = System::Drawing::Size(58, 22);
+			   this->stockModifyMargeLabel->Size = System::Drawing::Size(56, 20);
 			   this->stockModifyMargeLabel->TabIndex = 12;
 			   this->stockModifyMargeLabel->Text = L"Marge";
 			   // 
 			   // stockModifyCostLabel
 			   // 
 			   this->stockModifyCostLabel->AutoSize = true;
-			   this->stockModifyCostLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyCostLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyCostLabel->Location = System::Drawing::Point(329, 205);
 			   this->stockModifyCostLabel->Name = L"stockModifyCostLabel";
-			   this->stockModifyCostLabel->Size = System::Drawing::Size(46, 22);
+			   this->stockModifyCostLabel->Size = System::Drawing::Size(44, 20);
 			   this->stockModifyCostLabel->TabIndex = 11;
 			   this->stockModifyCostLabel->Text = L"Cost";
 			   // 
 			   // stockModifyQuantityLabel
 			   // 
 			   this->stockModifyQuantityLabel->AutoSize = true;
-			   this->stockModifyQuantityLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyQuantityLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyQuantityLabel->Location = System::Drawing::Point(329, 146);
 			   this->stockModifyQuantityLabel->Name = L"stockModifyQuantityLabel";
-			   this->stockModifyQuantityLabel->Size = System::Drawing::Size(199, 22);
+			   this->stockModifyQuantityLabel->Size = System::Drawing::Size(193, 20);
 			   this->stockModifyQuantityLabel->TabIndex = 10;
 			   this->stockModifyQuantityLabel->Text = L"Quantity per unit product";
 			   // 
 			   // stockModifyNameLabel
 			   // 
 			   this->stockModifyNameLabel->AutoSize = true;
-			   this->stockModifyNameLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyNameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyNameLabel->Location = System::Drawing::Point(329, 90);
 			   this->stockModifyNameLabel->Name = L"stockModifyNameLabel";
-			   this->stockModifyNameLabel->Size = System::Drawing::Size(117, 22);
+			   this->stockModifyNameLabel->Size = System::Drawing::Size(116, 20);
 			   this->stockModifyNameLabel->TabIndex = 9;
 			   this->stockModifyNameLabel->Text = L"Name Product";
 			   // 
 			   // stockModifyRestockTextBox
 			   // 
-			   this->stockModifyRestockTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyRestockTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyRestockTextBox->Location = System::Drawing::Point(311, 464);
 			   this->stockModifyRestockTextBox->Name = L"stockModifyRestockTextBox";
-			   this->stockModifyRestockTextBox->Size = System::Drawing::Size(237, 30);
+			   this->stockModifyRestockTextBox->Size = System::Drawing::Size(237, 27);
 			   this->stockModifyRestockTextBox->TabIndex = 8;
 			   this->stockModifyRestockTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyEnableCheckBox
 			   // 
 			   this->stockModifyEnableCheckBox->AutoSize = true;
-			   this->stockModifyEnableCheckBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyEnableCheckBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyEnableCheckBox->Location = System::Drawing::Point(322, 508);
 			   this->stockModifyEnableCheckBox->Name = L"stockModifyEnableCheckBox";
-			   this->stockModifyEnableCheckBox->Size = System::Drawing::Size(80, 26);
+			   this->stockModifyEnableCheckBox->Size = System::Drawing::Size(82, 24);
 			   this->stockModifyEnableCheckBox->TabIndex = 7;
 			   this->stockModifyEnableCheckBox->Text = L"Enable";
 			   this->stockModifyEnableCheckBox->UseVisualStyleBackColor = true;
@@ -2100,61 +2102,61 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 			   // 
 			   // stockModifyMargeTextBox
 			   // 
-			   this->stockModifyMargeTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyMargeTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyMargeTextBox->Location = System::Drawing::Point(311, 291);
 			   this->stockModifyMargeTextBox->Name = L"stockModifyMargeTextBox";
-			   this->stockModifyMargeTextBox->Size = System::Drawing::Size(237, 30);
+			   this->stockModifyMargeTextBox->Size = System::Drawing::Size(237, 27);
 			   this->stockModifyMargeTextBox->TabIndex = 6;
 			   this->stockModifyMargeTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyTVATextBox
 			   // 
-			   this->stockModifyTVATextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyTVATextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyTVATextBox->Location = System::Drawing::Point(311, 348);
 			   this->stockModifyTVATextBox->Name = L"stockModifyTVATextBox";
-			   this->stockModifyTVATextBox->Size = System::Drawing::Size(237, 30);
+			   this->stockModifyTVATextBox->Size = System::Drawing::Size(237, 27);
 			   this->stockModifyTVATextBox->TabIndex = 5;
 			   this->stockModifyTVATextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyStockTextBox
 			   // 
-			   this->stockModifyStockTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyStockTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyStockTextBox->Location = System::Drawing::Point(311, 408);
 			   this->stockModifyStockTextBox->Name = L"stockModifyStockTextBox";
-			   this->stockModifyStockTextBox->Size = System::Drawing::Size(237, 30);
+			   this->stockModifyStockTextBox->Size = System::Drawing::Size(237, 27);
 			   this->stockModifyStockTextBox->TabIndex = 4;
 			   this->stockModifyStockTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyCostTextBox
 			   // 
-			   this->stockModifyCostTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyCostTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyCostTextBox->Location = System::Drawing::Point(311, 231);
 			   this->stockModifyCostTextBox->Name = L"stockModifyCostTextBox";
-			   this->stockModifyCostTextBox->Size = System::Drawing::Size(237, 30);
+			   this->stockModifyCostTextBox->Size = System::Drawing::Size(237, 27);
 			   this->stockModifyCostTextBox->TabIndex = 3;
 			   this->stockModifyCostTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyQuantityTextBox
 			   // 
-			   this->stockModifyQuantityTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyQuantityTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyQuantityTextBox->Location = System::Drawing::Point(311, 174);
 			   this->stockModifyQuantityTextBox->Name = L"stockModifyQuantityTextBox";
-			   this->stockModifyQuantityTextBox->Size = System::Drawing::Size(237, 30);
+			   this->stockModifyQuantityTextBox->Size = System::Drawing::Size(237, 27);
 			   this->stockModifyQuantityTextBox->TabIndex = 2;
 			   this->stockModifyQuantityTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyNameTextBox
 			   // 
-			   this->stockModifyNameTextBox->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyNameTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			   this->stockModifyNameTextBox->Location = System::Drawing::Point(311, 114);
 			   this->stockModifyNameTextBox->Name = L"stockModifyNameTextBox";
-			   this->stockModifyNameTextBox->Size = System::Drawing::Size(237, 30);
+			   this->stockModifyNameTextBox->Size = System::Drawing::Size(237, 27);
 			   this->stockModifyNameTextBox->TabIndex = 1;
 			   this->stockModifyNameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
@@ -2163,11 +2165,11 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 			   this->stockModifyModifyButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(230)));
 			   this->stockModifyModifyButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->stockModifyModifyButton->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 10.2F, System::Drawing::FontStyle::Regular,
+			   this->stockModifyModifyButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
 				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->stockModifyModifyButton->Location = System::Drawing::Point(456, 501);
+			   this->stockModifyModifyButton->Location = System::Drawing::Point(456, 504);
 			   this->stockModifyModifyButton->Name = L"stockModifyModifyButton";
-			   this->stockModifyModifyButton->Size = System::Drawing::Size(92, 45);
+			   this->stockModifyModifyButton->Size = System::Drawing::Size(92, 31);
 			   this->stockModifyModifyButton->TabIndex = 0;
 			   this->stockModifyModifyButton->Text = L"Modify";
 			   this->stockModifyModifyButton->UseVisualStyleBackColor = false;
@@ -4011,17 +4013,17 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 		try { marge = float::Parse(this->addStockMargeTextBox->Text); }
 		catch (...) {
 			try { marge = float::Parse(this->addStockMargeTextBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")); }
-			catch (...) { 
-				addStockErrorLabel->Text = "Please Enter a valid Marge Number";	
-				return; 
+			catch (...) {
+				addStockErrorLabel->Text = "Please Enter a valid Marge Number";
+				return;
 			}
 		}
 		try { tva = float::Parse(this->addStockTVATextBox->Text); }
 		catch (...) {
 			try { tva = float::Parse(this->addStockTVATextBox->Text, System::Globalization::CultureInfo::CreateSpecificCulture("en-US")); }
-			catch (...) { 
+			catch (...) {
 				addStockErrorLabel->Text = "Please Enter a valid Taxe Number";
-				return; 
+				return;
 			}
 		}
 		try { stock = int::Parse(this->addStockStockTextBox->Text); }
@@ -4034,7 +4036,7 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 			addStockErrorLabel->Text = "Please Enter a Valid Product restocked Quantity";
 			return;
 		}
-		
+
 		productManager->insert(name, quantity, cost, marge, tva, stock, restock, (addStockEnableCheckBox ? 1 : 0));
 		addStockErrorLabel->Text = "CA marche XD";
 		clearAllTextBox();
@@ -4106,10 +4108,12 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 
 		ProductManager^ updateProduct = gcnew ProductManager();
 		updateProduct->update(connectedProduct);
-		
+
 		stockRefreshList();
 
 		this->stockModifyModifyButton->Enabled = false;
+		hideAllPanel();
+		stockMPanel->Visible = true;
 	}
 	private: System::Void enableStockModifyModifyButton(System::Object^ sender, System::EventArgs^ e) {
 		this->stockModifyModifyButton->Enabled = true;
