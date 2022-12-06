@@ -40,16 +40,11 @@ namespace OPO2SUMproject {
 			}
 		}
 	private: System::Windows::Forms::Panel^ loginPanel;
-
 	private: System::Windows::Forms::Panel^ orderMPanel;
 	private: System::Windows::Forms::Panel^ registerPanel;
 	private: System::Windows::Forms::Panel^ stockMPanel;
-
 	private: System::Windows::Forms::Panel^ addStockPanel;
 	private: System::Windows::Forms::Panel^ loginTextPanel;
-
-
-
 	private: System::Windows::Forms::Panel^ menuButtonPanel;
 	private: System::Windows::Forms::Panel^ menuLogoPanel;
 	private: System::Windows::Forms::Panel^ titleBarPanel;
@@ -62,21 +57,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TextBox^ loginUsernameTextBox;
 	private: System::Windows::Forms::Label^ loginLoginLabel;
 	private: System::Windows::Forms::Button^ loginRegisterButton;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^ loginValidateButton;
 	private: System::Windows::Forms::Button^ registerValidateButton;
 	private: System::Windows::Forms::Button^ registerLoginButton;
