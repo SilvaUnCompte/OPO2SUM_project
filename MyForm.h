@@ -40,16 +40,11 @@ namespace OPO2SUMproject {
 			}
 		}
 	private: System::Windows::Forms::Panel^ loginPanel;
-
 	private: System::Windows::Forms::Panel^ orderMPanel;
 	private: System::Windows::Forms::Panel^ registerPanel;
 	private: System::Windows::Forms::Panel^ stockMPanel;
-
 	private: System::Windows::Forms::Panel^ addStockPanel;
 	private: System::Windows::Forms::Panel^ loginTextPanel;
-
-
-
 	private: System::Windows::Forms::Panel^ menuButtonPanel;
 	private: System::Windows::Forms::Panel^ menuLogoPanel;
 	private: System::Windows::Forms::Panel^ titleBarPanel;
@@ -62,21 +57,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TextBox^ loginUsernameTextBox;
 	private: System::Windows::Forms::Label^ loginLoginLabel;
 	private: System::Windows::Forms::Button^ loginRegisterButton;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^ loginValidateButton;
 	private: System::Windows::Forms::Button^ registerValidateButton;
 	private: System::Windows::Forms::Button^ registerLoginButton;
@@ -410,53 +390,6 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			   this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->hubPanel = (gcnew System::Windows::Forms::Panel());
-			   this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
-			   this->Purchase_Value_button = (gcnew System::Windows::Forms::Button());
-			   this->Commercial_Value_button = (gcnew System::Windows::Forms::Button());
-			   this->buys_down_button = (gcnew System::Windows::Forms::Button());
-			   this->top_buys_button = (gcnew System::Windows::Forms::Button());
-			   this->Amount_per_client_button = (gcnew System::Windows::Forms::Button());
-			   this->Prod_u_restocking_button = (gcnew System::Windows::Forms::Button());
-			   this->turnover_button = (gcnew System::Windows::Forms::Button());
-			   this->Panier_Poyen_Button = (gcnew System::Windows::Forms::Button());
-			   this->stat_label = (gcnew System::Windows::Forms::Label());
-			   this->simulationPanel = (gcnew System::Windows::Forms::Panel());
-			   this->simulationResultLabel = (gcnew System::Windows::Forms::Label());
-			   this->simulationMarkdownLabel = (gcnew System::Windows::Forms::Label());
-			   this->simulationDiscountLabel = (gcnew System::Windows::Forms::Label());
-			   this->simulationMargeLabel = (gcnew System::Windows::Forms::Label());
-			   this->simulationTVALabel = (gcnew System::Windows::Forms::Label());
-			   this->simulationEntryPriceLabel = (gcnew System::Windows::Forms::Label());
-			   this->simulationTitleLabel = (gcnew System::Windows::Forms::Label());
-			   this->simulationMarkdownComboBox = (gcnew System::Windows::Forms::ComboBox());
-			   this->simulationDiscountComboBox = (gcnew System::Windows::Forms::ComboBox());
-			   this->simulationMargeComboBox = (gcnew System::Windows::Forms::ComboBox());
-			   this->simulationTVAComboBox = (gcnew System::Windows::Forms::ComboBox());
-			   this->simulationEntryPriceTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->dataGridViewstat = (gcnew System::Windows::Forms::DataGridView());
-			   this->employeeAddEmployeePanel = (gcnew System::Windows::Forms::Panel());
-			   this->employeeAddEmployeeErrorBoxLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeAddEmployeeHireDateDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
-			   this->employeeAddEmployeeBirthdayDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
-			   this->employeeAddEmployeePasswordTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->employeeAddEmployeeLastnameTextbox = (gcnew System::Windows::Forms::TextBox());
-			   this->employeeAddEmployeeFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->employeeAddEmployeeUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->employeeAddEmployeeCancelButton = (gcnew System::Windows::Forms::Button());
-			   this->employeeAddEmployeeAddButton = (gcnew System::Windows::Forms::Button());
-			   this->employeeAddEmployeeManagerCheckBox = (gcnew System::Windows::Forms::CheckBox());
-			   this->employeeAddEmployeeHireDateLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeAddEmployeeBirthdayLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeAddEmployeePasswordLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeAddEmployeeLastnameLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeAddEmployeeFirstnameLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeAddEmployeeUsernameLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeAddEmployeeLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeListViewPanel = (gcnew System::Windows::Forms::Panel());
-			   this->employeeAddNewEmployeeButton = (gcnew System::Windows::Forms::Button());
-			   this->employeeListView = (gcnew System::Windows::Forms::ListView());
-			   this->clientListViewPanel = (gcnew System::Windows::Forms::Panel());
-			   this->clientListView = (gcnew System::Windows::Forms::ListView());
 			   this->clientModifyPanel = (gcnew System::Windows::Forms::Panel());
 			   this->clientModifyBackButton = (gcnew System::Windows::Forms::Button());
 			   this->clientModifyErrorBoxLabel = (gcnew System::Windows::Forms::Label());
@@ -534,6 +467,53 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			   this->catalogBackButton = (gcnew System::Windows::Forms::Button());
 			   this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
 			   this->catalogCartTitleLabel = (gcnew System::Windows::Forms::Label());
+			   this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
+			   this->Purchase_Value_button = (gcnew System::Windows::Forms::Button());
+			   this->Commercial_Value_button = (gcnew System::Windows::Forms::Button());
+			   this->buys_down_button = (gcnew System::Windows::Forms::Button());
+			   this->top_buys_button = (gcnew System::Windows::Forms::Button());
+			   this->Amount_per_client_button = (gcnew System::Windows::Forms::Button());
+			   this->Prod_u_restocking_button = (gcnew System::Windows::Forms::Button());
+			   this->turnover_button = (gcnew System::Windows::Forms::Button());
+			   this->Panier_Poyen_Button = (gcnew System::Windows::Forms::Button());
+			   this->stat_label = (gcnew System::Windows::Forms::Label());
+			   this->simulationPanel = (gcnew System::Windows::Forms::Panel());
+			   this->simulationResultLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationMarkdownLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationDiscountLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationMargeLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationTVALabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationEntryPriceLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationTitleLabel = (gcnew System::Windows::Forms::Label());
+			   this->simulationMarkdownComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationDiscountComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationMargeComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationTVAComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->simulationEntryPriceTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->dataGridViewstat = (gcnew System::Windows::Forms::DataGridView());
+			   this->employeeAddEmployeePanel = (gcnew System::Windows::Forms::Panel());
+			   this->employeeAddEmployeeErrorBoxLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeHireDateDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			   this->employeeAddEmployeeBirthdayDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			   this->employeeAddEmployeePasswordTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeAddEmployeeLastnameTextbox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeAddEmployeeFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeAddEmployeeUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeAddEmployeeCancelButton = (gcnew System::Windows::Forms::Button());
+			   this->employeeAddEmployeeAddButton = (gcnew System::Windows::Forms::Button());
+			   this->employeeAddEmployeeManagerCheckBox = (gcnew System::Windows::Forms::CheckBox());
+			   this->employeeAddEmployeeHireDateLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeBirthdayLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeePasswordLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeLastnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeFirstnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeUsernameLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeListViewPanel = (gcnew System::Windows::Forms::Panel());
+			   this->employeeAddNewEmployeeButton = (gcnew System::Windows::Forms::Button());
+			   this->employeeListView = (gcnew System::Windows::Forms::ListView());
+			   this->clientListViewPanel = (gcnew System::Windows::Forms::Panel());
+			   this->clientListView = (gcnew System::Windows::Forms::ListView());
 			   this->addStockEnableCheckBox = (gcnew System::Windows::Forms::CheckBox());
 			   this->addStockErrorLabel = (gcnew System::Windows::Forms::Label());
 			   this->loginPanel->SuspendLayout();
@@ -549,12 +529,6 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			   this->accountPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			   this->hubPanel->SuspendLayout();
-			   this->statisticMPanel->SuspendLayout();
-			   this->simulationPanel->SuspendLayout();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
-			   this->employeeAddEmployeePanel->SuspendLayout();
-			   this->employeeListViewPanel->SuspendLayout();
-			   this->clientListViewPanel->SuspendLayout();
 			   this->clientModifyPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->BeginInit();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->BeginInit();
@@ -563,6 +537,12 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			   this->preCatalogPanel->SuspendLayout();
 			   this->catalogOrderPanel->SuspendLayout();
 			   this->catalogCartPanel->SuspendLayout();
+			   this->statisticMPanel->SuspendLayout();
+			   this->simulationPanel->SuspendLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
+			   this->employeeAddEmployeePanel->SuspendLayout();
+			   this->employeeListViewPanel->SuspendLayout();
+			   this->clientListViewPanel->SuspendLayout();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
@@ -1860,6 +1840,7 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			   // 
 			   this->hubPanel->BackColor = System::Drawing::Color::White;
 			   this->hubPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			   this->hubPanel->Controls->Add(this->clientListViewPanel);
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
 			   this->hubPanel->Controls->Add(this->addStockPanel);
@@ -1869,6 +1850,7 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
 			   this->hubPanel->Controls->Add(this->employeeListViewPanel);
 			   this->hubPanel->Controls->Add(this->clientListViewPanel);
+			   this->hubPanel->Controls->Add(this->logoPictureBox);
 			   this->hubPanel->Controls->Add(this->clientModifyPanel);
 			   this->hubPanel->Controls->Add(this->accountPanel);
 			   this->hubPanel->Controls->Add(this->logoPictureBox);
@@ -3210,6 +3192,293 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			   this->addStockErrorLabel->TabIndex = 19;
 			   this->addStockErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
+			   this->simulationTVAComboBox->FormattingEnabled = true;
+			   this->simulationTVAComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"0", L"5.5", L"10", L"20" });
+			   this->simulationTVAComboBox->Location = System::Drawing::Point(293, 227);
+			   this->simulationTVAComboBox->Name = L"simulationTVAComboBox";
+			   this->simulationTVAComboBox->Size = System::Drawing::Size(121, 24);
+			   this->simulationTVAComboBox->TabIndex = 1;
+			   this->simulationTVAComboBox->Text = L"0";
+			   this->simulationTVAComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
+			   // 
+			   // simulationEntryPriceTextBox
+			   // 
+			   this->simulationEntryPriceTextBox->Location = System::Drawing::Point(53, 227);
+			   this->simulationEntryPriceTextBox->Name = L"simulationEntryPriceTextBox";
+			   this->simulationEntryPriceTextBox->Size = System::Drawing::Size(186, 22);
+			   this->simulationEntryPriceTextBox->TabIndex = 0;
+			   this->simulationEntryPriceTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
+			   // 
+			   // dataGridViewstat
+			   // 
+			   dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			   this->dataGridViewstat->ColumnHeadersHeight = 29;
+			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
+			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
+			   this->dataGridViewstat->Name = L"dataGridViewstat";
+			   this->dataGridViewstat->ReadOnly = true;
+			   this->dataGridViewstat->RowHeadersWidth = 51;
+			   this->dataGridViewstat->RowTemplate->Height = 24;
+			   this->dataGridViewstat->Size = System::Drawing::Size(918, 371);
+			   this->dataGridViewstat->TabIndex = 0;
+			   // 
+			   // employeeAddEmployeePanel
+			   // 
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeErrorBoxLabel);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeHireDateDateTimePicker);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeBirthdayDateTimePicker);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeePasswordTextBox);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeLastnameTextbox);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeFirstnameTextBox);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeUsernameTextBox);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeCancelButton);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeAddButton);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeManagerCheckBox);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeHireDateLabel);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeBirthdayLabel);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeePasswordLabel);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeLastnameLabel);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeFirstnameLabel);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeUsernameLabel);
+			   this->employeeAddEmployeePanel->Controls->Add(this->employeeAddEmployeeLabel);
+			   this->employeeAddEmployeePanel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeePanel->Location = System::Drawing::Point(220, 80);
+			   this->employeeAddEmployeePanel->Name = L"employeeAddEmployeePanel";
+			   this->employeeAddEmployeePanel->Size = System::Drawing::Size(968, 607);
+			   this->employeeAddEmployeePanel->TabIndex = 2;
+			   // 
+			   // employeeAddEmployeeErrorBoxLabel
+			   // 
+			   this->employeeAddEmployeeErrorBoxLabel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->employeeAddEmployeeErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
+			   this->employeeAddEmployeeErrorBoxLabel->Location = System::Drawing::Point(357, 468);
+			   this->employeeAddEmployeeErrorBoxLabel->Name = L"employeeAddEmployeeErrorBoxLabel";
+			   this->employeeAddEmployeeErrorBoxLabel->Size = System::Drawing::Size(268, 42);
+			   this->employeeAddEmployeeErrorBoxLabel->TabIndex = 16;
+			   this->employeeAddEmployeeErrorBoxLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			   // 
+			   // employeeAddEmployeeHireDateDateTimePicker
+			   // 
+			   this->employeeAddEmployeeHireDateDateTimePicker->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeHireDateDateTimePicker->Location = System::Drawing::Point(357, 404);
+			   this->employeeAddEmployeeHireDateDateTimePicker->Name = L"employeeAddEmployeeHireDateDateTimePicker";
+			   this->employeeAddEmployeeHireDateDateTimePicker->Size = System::Drawing::Size(268, 22);
+			   this->employeeAddEmployeeHireDateDateTimePicker->TabIndex = 15;
+			   // 
+			   // employeeAddEmployeeBirthdayDateTimePicker
+			   // 
+			   this->employeeAddEmployeeBirthdayDateTimePicker->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeBirthdayDateTimePicker->Location = System::Drawing::Point(357, 342);
+			   this->employeeAddEmployeeBirthdayDateTimePicker->Name = L"employeeAddEmployeeBirthdayDateTimePicker";
+			   this->employeeAddEmployeeBirthdayDateTimePicker->Size = System::Drawing::Size(268, 22);
+			   this->employeeAddEmployeeBirthdayDateTimePicker->TabIndex = 14;
+			   // 
+			   // employeeAddEmployeePasswordTextBox
+			   // 
+			   this->employeeAddEmployeePasswordTextBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			   this->employeeAddEmployeePasswordTextBox->Location = System::Drawing::Point(357, 282);
+			   this->employeeAddEmployeePasswordTextBox->Name = L"employeeAddEmployeePasswordTextBox";
+			   this->employeeAddEmployeePasswordTextBox->Size = System::Drawing::Size(268, 22);
+			   this->employeeAddEmployeePasswordTextBox->TabIndex = 13;
+			   this->employeeAddEmployeePasswordTextBox->UseSystemPasswordChar = true;
+			   // 
+			   // employeeAddEmployeeLastnameTextbox
+			   // 
+			   this->employeeAddEmployeeLastnameTextbox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			   this->employeeAddEmployeeLastnameTextbox->Location = System::Drawing::Point(357, 223);
+			   this->employeeAddEmployeeLastnameTextbox->Name = L"employeeAddEmployeeLastnameTextbox";
+			   this->employeeAddEmployeeLastnameTextbox->Size = System::Drawing::Size(268, 22);
+			   this->employeeAddEmployeeLastnameTextbox->TabIndex = 12;
+			   // 
+			   // employeeAddEmployeeFirstnameTextBox
+			   // 
+			   this->employeeAddEmployeeFirstnameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			   this->employeeAddEmployeeFirstnameTextBox->Location = System::Drawing::Point(357, 162);
+			   this->employeeAddEmployeeFirstnameTextBox->Name = L"employeeAddEmployeeFirstnameTextBox";
+			   this->employeeAddEmployeeFirstnameTextBox->Size = System::Drawing::Size(268, 22);
+			   this->employeeAddEmployeeFirstnameTextBox->TabIndex = 11;
+			   // 
+			   // employeeAddEmployeeUsernameTextBox
+			   // 
+			   this->employeeAddEmployeeUsernameTextBox->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			   this->employeeAddEmployeeUsernameTextBox->Location = System::Drawing::Point(357, 105);
+			   this->employeeAddEmployeeUsernameTextBox->Name = L"employeeAddEmployeeUsernameTextBox";
+			   this->employeeAddEmployeeUsernameTextBox->Size = System::Drawing::Size(268, 22);
+			   this->employeeAddEmployeeUsernameTextBox->TabIndex = 10;
+			   // 
+			   // employeeAddEmployeeCancelButton
+			   // 
+			   this->employeeAddEmployeeCancelButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeCancelButton->Location = System::Drawing::Point(550, 525);
+			   this->employeeAddEmployeeCancelButton->Name = L"employeeAddEmployeeCancelButton";
+			   this->employeeAddEmployeeCancelButton->Size = System::Drawing::Size(75, 34);
+			   this->employeeAddEmployeeCancelButton->TabIndex = 9;
+			   this->employeeAddEmployeeCancelButton->Text = L"Cancel";
+			   this->employeeAddEmployeeCancelButton->UseVisualStyleBackColor = true;
+			   this->employeeAddEmployeeCancelButton->Click += gcnew System::EventHandler(this, &MyForm::employeeAddEmployeeCancelButton_Click);
+			   // 
+			   // employeeAddEmployeeAddButton
+			   // 
+			   this->employeeAddEmployeeAddButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeAddButton->Location = System::Drawing::Point(454, 525);
+			   this->employeeAddEmployeeAddButton->Name = L"employeeAddEmployeeAddButton";
+			   this->employeeAddEmployeeAddButton->Size = System::Drawing::Size(75, 34);
+			   this->employeeAddEmployeeAddButton->TabIndex = 8;
+			   this->employeeAddEmployeeAddButton->Text = L"Add";
+			   this->employeeAddEmployeeAddButton->UseVisualStyleBackColor = true;
+			   this->employeeAddEmployeeAddButton->Click += gcnew System::EventHandler(this, &MyForm::employeeAddEmployeeAddButton_Click);
+			   // 
+			   // employeeAddEmployeeManagerCheckBox
+			   // 
+			   this->employeeAddEmployeeManagerCheckBox->AutoSize = true;
+			   this->employeeAddEmployeeManagerCheckBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeManagerCheckBox->Location = System::Drawing::Point(357, 532);
+			   this->employeeAddEmployeeManagerCheckBox->Name = L"employeeAddEmployeeManagerCheckBox";
+			   this->employeeAddEmployeeManagerCheckBox->Size = System::Drawing::Size(86, 21);
+			   this->employeeAddEmployeeManagerCheckBox->TabIndex = 7;
+			   this->employeeAddEmployeeManagerCheckBox->Text = L"Manager";
+			   this->employeeAddEmployeeManagerCheckBox->UseVisualStyleBackColor = true;
+			   // 
+			   // employeeAddEmployeeHireDateLabel
+			   // 
+			   this->employeeAddEmployeeHireDateLabel->AutoSize = true;
+			   this->employeeAddEmployeeHireDateLabel->Location = System::Drawing::Point(368, 379);
+			   this->employeeAddEmployeeHireDateLabel->Name = L"employeeAddEmployeeHireDateLabel";
+			   this->employeeAddEmployeeHireDateLabel->Size = System::Drawing::Size(68, 17);
+			   this->employeeAddEmployeeHireDateLabel->TabIndex = 6;
+			   this->employeeAddEmployeeHireDateLabel->Text = L"Hire Date";
+			   // 
+			   // employeeAddEmployeeBirthdayLabel
+			   // 
+			   this->employeeAddEmployeeBirthdayLabel->AutoSize = true;
+			   this->employeeAddEmployeeBirthdayLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeBirthdayLabel->Location = System::Drawing::Point(368, 320);
+			   this->employeeAddEmployeeBirthdayLabel->Name = L"employeeAddEmployeeBirthdayLabel";
+			   this->employeeAddEmployeeBirthdayLabel->Size = System::Drawing::Size(60, 17);
+			   this->employeeAddEmployeeBirthdayLabel->TabIndex = 5;
+			   this->employeeAddEmployeeBirthdayLabel->Text = L"Birthday";
+			   // 
+			   // employeeAddEmployeePasswordLabel
+			   // 
+			   this->employeeAddEmployeePasswordLabel->AutoSize = true;
+			   this->employeeAddEmployeePasswordLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeePasswordLabel->Location = System::Drawing::Point(368, 260);
+			   this->employeeAddEmployeePasswordLabel->Name = L"employeeAddEmployeePasswordLabel";
+			   this->employeeAddEmployeePasswordLabel->Size = System::Drawing::Size(69, 17);
+			   this->employeeAddEmployeePasswordLabel->TabIndex = 4;
+			   this->employeeAddEmployeePasswordLabel->Text = L"Password";
+			   // 
+			   // employeeAddEmployeeLastnameLabel
+			   // 
+			   this->employeeAddEmployeeLastnameLabel->AutoSize = true;
+			   this->employeeAddEmployeeLastnameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeLastnameLabel->Location = System::Drawing::Point(368, 197);
+			   this->employeeAddEmployeeLastnameLabel->Name = L"employeeAddEmployeeLastnameLabel";
+			   this->employeeAddEmployeeLastnameLabel->Size = System::Drawing::Size(70, 17);
+			   this->employeeAddEmployeeLastnameLabel->TabIndex = 3;
+			   this->employeeAddEmployeeLastnameLabel->Text = L"Lastname";
+			   // 
+			   // employeeAddEmployeeFirstnameLabel
+			   // 
+			   this->employeeAddEmployeeFirstnameLabel->AutoSize = true;
+			   this->employeeAddEmployeeFirstnameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeFirstnameLabel->Location = System::Drawing::Point(368, 139);
+			   this->employeeAddEmployeeFirstnameLabel->Name = L"employeeAddEmployeeFirstnameLabel";
+			   this->employeeAddEmployeeFirstnameLabel->Size = System::Drawing::Size(70, 17);
+			   this->employeeAddEmployeeFirstnameLabel->TabIndex = 2;
+			   this->employeeAddEmployeeFirstnameLabel->Text = L"Firstname";
+			   // 
+			   // employeeAddEmployeeUsernameLabel
+			   // 
+			   this->employeeAddEmployeeUsernameLabel->AutoSize = true;
+			   this->employeeAddEmployeeUsernameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeUsernameLabel->Location = System::Drawing::Point(368, 84);
+			   this->employeeAddEmployeeUsernameLabel->Name = L"employeeAddEmployeeUsernameLabel";
+			   this->employeeAddEmployeeUsernameLabel->Size = System::Drawing::Size(73, 17);
+			   this->employeeAddEmployeeUsernameLabel->TabIndex = 1;
+			   this->employeeAddEmployeeUsernameLabel->Text = L"Username";
+			   // 
+			   // employeeAddEmployeeLabel
+			   // 
+			   this->employeeAddEmployeeLabel->AutoSize = true;
+			   this->employeeAddEmployeeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeLabel->Location = System::Drawing::Point(350, 6);
+			   this->employeeAddEmployeeLabel->Name = L"employeeAddEmployeeLabel";
+			   this->employeeAddEmployeeLabel->Size = System::Drawing::Size(263, 32);
+			   this->employeeAddEmployeeLabel->TabIndex = 0;
+			   this->employeeAddEmployeeLabel->Text = L"Add New Employee";
+			   // 
+			   // employeeListViewPanel
+			   // 
+			   this->employeeListViewPanel->Controls->Add(this->employeeAddNewEmployeeButton);
+			   this->employeeListViewPanel->Controls->Add(this->employeeListView);
+			   this->employeeListViewPanel->Location = System::Drawing::Point(220, 80);
+			   this->employeeListViewPanel->Name = L"employeeListViewPanel";
+			   this->employeeListViewPanel->Size = System::Drawing::Size(968, 607);
+			   this->employeeListViewPanel->TabIndex = 33;
+			   // 
+			   // employeeAddNewEmployeeButton
+			   // 
+			   this->employeeAddNewEmployeeButton->Location = System::Drawing::Point(778, 528);
+			   this->employeeAddNewEmployeeButton->Name = L"employeeAddNewEmployeeButton";
+			   this->employeeAddNewEmployeeButton->Size = System::Drawing::Size(145, 43);
+			   this->employeeAddNewEmployeeButton->TabIndex = 1;
+			   this->employeeAddNewEmployeeButton->Text = L"Add New Employee";
+			   this->employeeAddNewEmployeeButton->UseVisualStyleBackColor = true;
+			   this->employeeAddNewEmployeeButton->Click += gcnew System::EventHandler(this, &MyForm::employeeAddNewEmployeeButton_Click);
+			   // 
+			   // employeeListView
+			   // 
+			   this->employeeListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeListView->HideSelection = false;
+			   this->employeeListView->Location = System::Drawing::Point(53, 35);
+			   this->employeeListView->Name = L"employeeListView";
+			   this->employeeListView->Size = System::Drawing::Size(870, 441);
+			   this->employeeListView->TabIndex = 0;
+			   this->employeeListView->UseCompatibleStateImageBehavior = false;
+			   this->employeeListView->View = System::Windows::Forms::View::List;
+			   this->employeeListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::employeeListView_DoubleClick);
+			   // 
+			   // clientListViewPanel
+			   // 
+			   this->clientListViewPanel->Controls->Add(this->clientListView);
+			   this->clientListViewPanel->Location = System::Drawing::Point(220, 80);
+			   this->clientListViewPanel->Name = L"clientListViewPanel";
+			   this->clientListViewPanel->Size = System::Drawing::Size(968, 607);
+			   this->clientListViewPanel->TabIndex = 32;
+			   // 
+			   // clientListView
+			   // 
+			   this->clientListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
+			   this->clientListView->HideSelection = false;
+			   this->clientListView->Location = System::Drawing::Point(42, 35);
+			   this->clientListView->Name = L"clientListView";
+			   this->clientListView->Size = System::Drawing::Size(897, 539);
+			   this->clientListView->TabIndex = 0;
+			   this->clientListView->UseCompatibleStateImageBehavior = false;
+			   this->clientListView->View = System::Windows::Forms::View::List;
+			   this->clientListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::clientListView_DoubleClick);
+			   // 
 			   // MyForm
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -3247,14 +3516,6 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			   this->accountPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			   this->hubPanel->ResumeLayout(false);
-			   this->statisticMPanel->ResumeLayout(false);
-			   this->simulationPanel->ResumeLayout(false);
-			   this->simulationPanel->PerformLayout();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->EndInit();
-			   this->employeeAddEmployeePanel->ResumeLayout(false);
-			   this->employeeAddEmployeePanel->PerformLayout();
-			   this->employeeListViewPanel->ResumeLayout(false);
-			   this->clientListViewPanel->ResumeLayout(false);
 			   this->clientModifyPanel->ResumeLayout(false);
 			   this->clientModifyPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->EndInit();
@@ -3268,6 +3529,14 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			   this->catalogOrderPanel->PerformLayout();
 			   this->catalogCartPanel->ResumeLayout(false);
 			   this->catalogCartPanel->PerformLayout();
+			   this->statisticMPanel->ResumeLayout(false);
+			   this->simulationPanel->ResumeLayout(false);
+			   this->simulationPanel->PerformLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->EndInit();
+			   this->employeeAddEmployeePanel->ResumeLayout(false);
+			   this->employeeAddEmployeePanel->PerformLayout();
+			   this->employeeListViewPanel->ResumeLayout(false);
+			   this->clientListViewPanel->ResumeLayout(false);
 			   this->ResumeLayout(false);
 
 		   }
@@ -4008,7 +4277,7 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		clientListView->Items->Clear();
 		for (int i = 0; i < clients->Rows->Count; i++) {
 			DataRow^ rowData = clients->Rows[i];
-			clientListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString() + " " + rowData[6]->ToString());
+			clientListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString()->Substring(0,10));
 		}
 	}
 	private: System::Void clientRefreshAddressPicker() {
@@ -4025,8 +4294,6 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 	}
 	private: System::Void clientListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
 		String^ selectedClient = clientListView->SelectedItems[0]->Text;
-
-		this->clientModifyErrorBoxLabel->Text = selectedClient;
 		connectedClient = gcnew Account(int::Parse(selectedClient->Substring(0, selectedClient->IndexOf(" "))));
 
 		this->clientModifyUsernameTextBox->Text = connectedClient->get_account_name();
@@ -4036,6 +4303,7 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 
 		hideAllPanel();
 		clientRefreshAddressPicker();
+		clientModifyApplyModifButton->Enabled = false;
 		clientModifyPanel->Visible = true;
 	}
 	private: System::Void clientModifyApplyModifButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4058,8 +4326,8 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			this->clientModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Green;
 			this->clientModifyApplyModifButton->Enabled = false;
 
-			hideAllPanel();
-			clientListViewPanel->Visible = true;
+			clientRefreshList();
+			clientModifyApplyModifButton->Enabled = false;
 		}
 	}
 	private: System::Void clientModifyDeleteAddressButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4097,13 +4365,13 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		   //EMPLOYEE MANAGER PAGE ----------------------------------------------------------------------------
 	private: void employeeRefreshList() {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ listEmployees = Adata->getRows("SELECT * FROM account WHERE permission_lv_account = 1", "Temp");
+		DataSet^ listEmployees = Adata->getRows("SELECT * FROM account WHERE permission_lv_account = 1 OR permission_lv_account = 2", "Temp");
 		DataTable^ employees = listEmployees->Tables[0];
 
 		employeeListView->Items->Clear();
 		for (int i = 0; i < employees->Rows->Count; i++) {
 			DataRow^ rowData = employees->Rows[i];
-			employeeListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString() + " " + rowData[6]->ToString());
+			employeeListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString()->Substring(0, 10) );
 		}
 	}
 	private: System::Void employeeRefreshAddressPicker() {
@@ -4139,6 +4407,7 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		hideAllPanel();
 		employeeRefreshAddressPicker();
 		employeeModifyPanel->Visible = true;
+		employeeModifyApplyModifButton->Enabled = false;
 
 	}
 	private: System::Void employeeModifyApplyModifButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4161,8 +4430,7 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			this->employeeModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Green;
 			this->employeeModifyApplyModifButton->Enabled = false;
 
-			hideAllPanel();
-			employeeListViewPanel->Visible = true;
+			employeeRefreshList();
 		}
 	}
 	private: System::Void employeeModifyDeleteAddressButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4241,10 +4509,6 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		employeeRefreshList();
 		employeeListViewPanel->Visible = true;
 	}
-
-
-
-
 	private: System::Void nameProjectLabel_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
 		titleBarLabel->Text = "HOME";
@@ -4253,8 +4517,6 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(39)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
 			static_cast<System::Int32>(static_cast<System::Byte>(58)));
 	}
-
-
 	private: System::Void menuPersonnellManageButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 		resetHubButton();
 	}
@@ -4279,7 +4541,6 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 			preCatalogListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString() + "  $" + (cost * (1 + float::Parse(drow[5]->ToString()))));
 		}
 	}
-
 	private: System::Void loginReturnPreCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		MyForm_Load(sender, e);
 	}
@@ -4360,6 +4621,5 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		DataRow^ drow = total_cost_datatable->Rows[0];
 		this->simulationEntryPriceTextBox->Text = drow[0]->ToString();
 	}
-	
 };
 }
