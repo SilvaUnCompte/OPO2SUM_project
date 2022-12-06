@@ -409,12 +409,11 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 		   /// </summary>
 		   void InitializeComponent(void)
 		   {
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   this->loginPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginTextPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginReturnPreCatalogButton = (gcnew System::Windows::Forms::Button());
@@ -526,6 +525,56 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->hubPanel = (gcnew System::Windows::Forms::Panel());
+			   this->employeeModifyPanel = (gcnew System::Windows::Forms::Panel());
+			   this->employeeModifyBackButton = (gcnew System::Windows::Forms::Button());
+			   this->employeeModifyHireDateLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyHireDateDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			   this->employeeModifyErrorBoxLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyApplyModifButton = (gcnew System::Windows::Forms::Button());
+			   this->employeeModifyBirthdayDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			   this->barSeparateLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyPostalCodeNumericUpDown = (gcnew System::Windows::Forms::NumericUpDown());
+			   this->employeeModifyAddAddressButton = (gcnew System::Windows::Forms::Button());
+			   this->employeeModifyDeleteAddressButton = (gcnew System::Windows::Forms::Button());
+			   this->employeeModifyAddressPickerComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->employeeModifyMoreInfoTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeModifyCityTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeModifyAddressStreetTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeModifyLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeModifyFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeModifyUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeModifyMoreInfoLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyPostalCodeLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyCityLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyAddressStreetLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyAddressLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyBirthdayLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyLastnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyFirstnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyUsernameLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogPanel = (gcnew System::Windows::Forms::Panel());
+			   this->preCatalogSentenceLabel = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogLoginButton = (gcnew System::Windows::Forms::Button());
+			   this->preCatalogTitleLabel = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogSearchLabel = (gcnew System::Windows::Forms::Label());
+			   this->preCatalogTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->preCatalogListView = (gcnew System::Windows::Forms::ListView());
+			   this->catalogOrderPanel = (gcnew System::Windows::Forms::Panel());
+			   this->catalogCartButton = (gcnew System::Windows::Forms::Button());
+			   this->catalogGlobalListView = (gcnew System::Windows::Forms::ListView());
+			   this->catalogResearchTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->catalogOrderResearchLabel = (gcnew System::Windows::Forms::Label());
+			   this->catalogOrderTitleLabel = (gcnew System::Windows::Forms::Label());
+			   this->catalogCartPanel = (gcnew System::Windows::Forms::Panel());
+			   this->catalogAddressShippingLabel = (gcnew System::Windows::Forms::Label());
+			   this->catalogAddressBillingLabel = (gcnew System::Windows::Forms::Label());
+			   this->catalogAddressShippingListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->catalogAddressBillingListComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->catalogCheckoutButton = (gcnew System::Windows::Forms::Button());
+			   this->catalogBackButton = (gcnew System::Windows::Forms::Button());
+			   this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
+			   this->catalogCartTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->statisticMPanel = (gcnew System::Windows::Forms::Panel());
 			   this->simulationPanel = (gcnew System::Windows::Forms::Panel());
 			   this->simulationResultLabel = (gcnew System::Windows::Forms::Label());
@@ -599,56 +648,6 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->clientModifyFirstnameLabel = (gcnew System::Windows::Forms::Label());
 			   this->clientModifyUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->clientModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyPanel = (gcnew System::Windows::Forms::Panel());
-			   this->employeeModifyBackButton = (gcnew System::Windows::Forms::Button());
-			   this->employeeModifyHireDateLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyHireDateDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
-			   this->employeeModifyErrorBoxLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyApplyModifButton = (gcnew System::Windows::Forms::Button());
-			   this->employeeModifyBirthdayDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
-			   this->barSeparateLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyPostalCodeNumericUpDown = (gcnew System::Windows::Forms::NumericUpDown());
-			   this->employeeModifyAddAddressButton = (gcnew System::Windows::Forms::Button());
-			   this->employeeModifyDeleteAddressButton = (gcnew System::Windows::Forms::Button());
-			   this->employeeModifyAddressPickerComboBox = (gcnew System::Windows::Forms::ComboBox());
-			   this->employeeModifyMoreInfoTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->employeeModifyCityTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->employeeModifyAddressStreetTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->employeeModifyLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->employeeModifyFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->employeeModifyUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->employeeModifyMoreInfoLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyPostalCodeLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyCityLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyAddressStreetLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyAddressLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyBirthdayLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyLastnameLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyFirstnameLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyUsernameLabel = (gcnew System::Windows::Forms::Label());
-			   this->employeeModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
-			   this->preCatalogPanel = (gcnew System::Windows::Forms::Panel());
-			   this->preCatalogSentenceLabel = (gcnew System::Windows::Forms::Label());
-			   this->preCatalogLoginButton = (gcnew System::Windows::Forms::Button());
-			   this->preCatalogTitleLabel = (gcnew System::Windows::Forms::Label());
-			   this->preCatalogSearchLabel = (gcnew System::Windows::Forms::Label());
-			   this->preCatalogTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->preCatalogListView = (gcnew System::Windows::Forms::ListView());
-			   this->catalogOrderPanel = (gcnew System::Windows::Forms::Panel());
-			   this->catalogCartButton = (gcnew System::Windows::Forms::Button());
-			   this->catalogGlobalListView = (gcnew System::Windows::Forms::ListView());
-			   this->catalogResearchTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->catalogOrderResearchLabel = (gcnew System::Windows::Forms::Label());
-			   this->catalogOrderTitleLabel = (gcnew System::Windows::Forms::Label());
-			   this->catalogCartPanel = (gcnew System::Windows::Forms::Panel());
-			   this->catalogAddressShippingLabel = (gcnew System::Windows::Forms::Label());
-			   this->catalogAddressBillingLabel = (gcnew System::Windows::Forms::Label());
-			   this->catalogAddressShippingListComboBox = (gcnew System::Windows::Forms::ComboBox());
-			   this->catalogAddressBillingListComboBox = (gcnew System::Windows::Forms::ComboBox());
-			   this->catalogCheckoutButton = (gcnew System::Windows::Forms::Button());
-			   this->catalogBackButton = (gcnew System::Windows::Forms::Button());
-			   this->catalogSelectedListView = (gcnew System::Windows::Forms::ListView());
-			   this->catalogCartTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->logoPictureBox = (gcnew System::Windows::Forms::PictureBox());
 			   this->loginPanel->SuspendLayout();
 			   this->loginTextPanel->SuspendLayout();
@@ -665,6 +664,11 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->accountPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			   this->hubPanel->SuspendLayout();
+			   this->employeeModifyPanel->SuspendLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->BeginInit();
+			   this->preCatalogPanel->SuspendLayout();
+			   this->catalogOrderPanel->SuspendLayout();
+			   this->catalogCartPanel->SuspendLayout();
 			   this->statisticMPanel->SuspendLayout();
 			   this->simulationPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
@@ -673,11 +677,6 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->clientListViewPanel->SuspendLayout();
 			   this->clientModifyPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->BeginInit();
-			   this->employeeModifyPanel->SuspendLayout();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->BeginInit();
-			   this->preCatalogPanel->SuspendLayout();
-			   this->catalogOrderPanel->SuspendLayout();
-			   this->catalogCartPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->BeginInit();
 			   this->SuspendLayout();
 			   // 
@@ -1531,25 +1530,25 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   // 
 			   this->clientMDGV->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
+			   dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			   dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
+			   dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->clientMDGV->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
 			   this->clientMDGV->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			   dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			   dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Window;
+			   dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle2->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle2;
+			   dataGridViewCellStyle6->ForeColor = System::Drawing::Color::Black;
+			   dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			   dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			   dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			   this->clientMDGV->DefaultCellStyle = dataGridViewCellStyle6;
 			   this->clientMDGV->Location = System::Drawing::Point(2, 390);
 			   this->clientMDGV->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->clientMDGV->Name = L"clientMDGV";
@@ -2115,6 +2114,13 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->hubPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
+			   this->hubPanel->Controls->Add(this->statisticMPanel);
+			   this->hubPanel->Controls->Add(this->orderMPanel);
+			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
+			   this->hubPanel->Controls->Add(this->employeeListViewPanel);
+			   this->hubPanel->Controls->Add(this->clientListViewPanel);
+			   this->hubPanel->Controls->Add(this->clientModifyPanel);
+			   this->hubPanel->Controls->Add(this->logoPictureBox);
 			   this->hubPanel->Controls->Add(this->accountPanel);
 			   this->hubPanel->Controls->Add(this->clientMPanel);
 			   this->hubPanel->Controls->Add(this->employeeModifyPanel);
@@ -2123,17 +2129,521 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->hubPanel->Controls->Add(this->catalogCartPanel);
 			   this->hubPanel->Controls->Add(this->addStockPanel);
 			   this->hubPanel->Controls->Add(this->stockMPanel);
-			   this->hubPanel->Controls->Add(this->statisticMPanel);
-			   this->hubPanel->Controls->Add(this->orderMPanel);
-			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
-			   this->hubPanel->Controls->Add(this->employeeListViewPanel);
-			   this->hubPanel->Controls->Add(this->clientListViewPanel);
-			   this->hubPanel->Controls->Add(this->clientModifyPanel);
-			   this->hubPanel->Controls->Add(this->logoPictureBox);
 			   this->hubPanel->Location = System::Drawing::Point(0, 0);
 			   this->hubPanel->Name = L"hubPanel";
 			   this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			   this->hubPanel->TabIndex = 29;
+			   // 
+			   // employeeModifyPanel
+			   // 
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyBackButton);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyHireDateLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyHireDateDateTimePicker);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyErrorBoxLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyApplyModifButton);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyBirthdayDateTimePicker);
+			   this->employeeModifyPanel->Controls->Add(this->barSeparateLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyPostalCodeNumericUpDown);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyAddAddressButton);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyDeleteAddressButton);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyAddressPickerComboBox);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyMoreInfoTextBox);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyCityTextBox);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyAddressStreetTextBox);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyLastnameTextBox);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyFirstnameTextBox);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyUsernameTextBox);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyMoreInfoLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyPostalCodeLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyCityLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyAddressStreetLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyAddressLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyBirthdayLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyLastnameLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyFirstnameLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyUsernameLabel);
+			   this->employeeModifyPanel->Controls->Add(this->employeeModifyInformationsLabel);
+			   this->employeeModifyPanel->Location = System::Drawing::Point(220, 80);
+			   this->employeeModifyPanel->Name = L"employeeModifyPanel";
+			   this->employeeModifyPanel->Size = System::Drawing::Size(968, 607);
+			   this->employeeModifyPanel->TabIndex = 32;
+			   // 
+			   // employeeModifyBackButton
+			   // 
+			   this->employeeModifyBackButton->BackColor = System::Drawing::Color::White;
+			   this->employeeModifyBackButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->employeeModifyBackButton->Location = System::Drawing::Point(927, 9);
+			   this->employeeModifyBackButton->Name = L"employeeModifyBackButton";
+			   this->employeeModifyBackButton->Size = System::Drawing::Size(30, 30);
+			   this->employeeModifyBackButton->TabIndex = 34;
+			   this->employeeModifyBackButton->Text = L"X";
+			   this->employeeModifyBackButton->UseVisualStyleBackColor = false;
+			   this->employeeModifyBackButton->Click += gcnew System::EventHandler(this, &MyForm::employeeModifyBackButton_Click);
+			   // 
+			   // employeeModifyHireDateLabel
+			   // 
+			   this->employeeModifyHireDateLabel->AutoSize = true;
+			   this->employeeModifyHireDateLabel->Location = System::Drawing::Point(422, 166);
+			   this->employeeModifyHireDateLabel->Name = L"employeeModifyHireDateLabel";
+			   this->employeeModifyHireDateLabel->Size = System::Drawing::Size(68, 17);
+			   this->employeeModifyHireDateLabel->TabIndex = 33;
+			   this->employeeModifyHireDateLabel->Text = L"Hire Date";
+			   // 
+			   // employeeModifyHireDateDateTimePicker
+			   // 
+			   this->employeeModifyHireDateDateTimePicker->Location = System::Drawing::Point(416, 187);
+			   this->employeeModifyHireDateDateTimePicker->Name = L"employeeModifyHireDateDateTimePicker";
+			   this->employeeModifyHireDateDateTimePicker->Size = System::Drawing::Size(200, 22);
+			   this->employeeModifyHireDateDateTimePicker->TabIndex = 32;
+			   // 
+			   // employeeModifyErrorBoxLabel
+			   // 
+			   this->employeeModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
+			   this->employeeModifyErrorBoxLabel->Location = System::Drawing::Point(741, 556);
+			   this->employeeModifyErrorBoxLabel->Name = L"employeeModifyErrorBoxLabel";
+			   this->employeeModifyErrorBoxLabel->Size = System::Drawing::Size(177, 38);
+			   this->employeeModifyErrorBoxLabel->TabIndex = 31;
+			   // 
+			   // employeeModifyApplyModifButton
+			   // 
+			   this->employeeModifyApplyModifButton->Location = System::Drawing::Point(741, 524);
+			   this->employeeModifyApplyModifButton->Name = L"employeeModifyApplyModifButton";
+			   this->employeeModifyApplyModifButton->Size = System::Drawing::Size(177, 26);
+			   this->employeeModifyApplyModifButton->TabIndex = 30;
+			   this->employeeModifyApplyModifButton->Text = L"Apply Modifications";
+			   this->employeeModifyApplyModifButton->UseVisualStyleBackColor = true;
+			   // 
+			   // employeeModifyBirthdayDateTimePicker
+			   // 
+			   this->employeeModifyBirthdayDateTimePicker->Location = System::Drawing::Point(90, 187);
+			   this->employeeModifyBirthdayDateTimePicker->Name = L"employeeModifyBirthdayDateTimePicker";
+			   this->employeeModifyBirthdayDateTimePicker->Size = System::Drawing::Size(200, 22);
+			   this->employeeModifyBirthdayDateTimePicker->TabIndex = 29;
+			   // 
+			   // barSeparateLabel
+			   // 
+			   this->barSeparateLabel->AutoSize = true;
+			   this->barSeparateLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   this->barSeparateLabel->Location = System::Drawing::Point(46, 229);
+			   this->barSeparateLabel->Name = L"barSeparateLabel";
+			   this->barSeparateLabel->Size = System::Drawing::Size(872, 38);
+			   this->barSeparateLabel->TabIndex = 28;
+			   this->barSeparateLabel->Text = L"_____________________________________________";
+			   // 
+			   // employeeModifyPostalCodeNumericUpDown
+			   // 
+			   this->employeeModifyPostalCodeNumericUpDown->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) {
+				   1000, 0, 0,
+					   0
+			   });
+			   this->employeeModifyPostalCodeNumericUpDown->Location = System::Drawing::Point(446, 474);
+			   this->employeeModifyPostalCodeNumericUpDown->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) {
+				   100000, 0, 0,
+					   0
+			   });
+			   this->employeeModifyPostalCodeNumericUpDown->Name = L"employeeModifyPostalCodeNumericUpDown";
+			   this->employeeModifyPostalCodeNumericUpDown->Size = System::Drawing::Size(108, 22);
+			   this->employeeModifyPostalCodeNumericUpDown->TabIndex = 27;
+			   // 
+			   // employeeModifyAddAddressButton
+			   // 
+			   this->employeeModifyAddAddressButton->Location = System::Drawing::Point(583, 524);
+			   this->employeeModifyAddAddressButton->Name = L"employeeModifyAddAddressButton";
+			   this->employeeModifyAddAddressButton->Size = System::Drawing::Size(118, 25);
+			   this->employeeModifyAddAddressButton->TabIndex = 23;
+			   this->employeeModifyAddAddressButton->Text = L"Add";
+			   this->employeeModifyAddAddressButton->UseVisualStyleBackColor = true;
+			   // 
+			   // employeeModifyDeleteAddressButton
+			   // 
+			   this->employeeModifyDeleteAddressButton->Location = System::Drawing::Point(583, 373);
+			   this->employeeModifyDeleteAddressButton->Name = L"employeeModifyDeleteAddressButton";
+			   this->employeeModifyDeleteAddressButton->Size = System::Drawing::Size(118, 25);
+			   this->employeeModifyDeleteAddressButton->TabIndex = 22;
+			   this->employeeModifyDeleteAddressButton->Text = L"Delete";
+			   this->employeeModifyDeleteAddressButton->UseVisualStyleBackColor = true;
+			   // 
+			   // employeeModifyAddressPickerComboBox
+			   // 
+			   this->employeeModifyAddressPickerComboBox->BackColor = System::Drawing::SystemColors::Window;
+			   this->employeeModifyAddressPickerComboBox->FormattingEnabled = true;
+			   this->employeeModifyAddressPickerComboBox->Location = System::Drawing::Point(88, 374);
+			   this->employeeModifyAddressPickerComboBox->Name = L"employeeModifyAddressPickerComboBox";
+			   this->employeeModifyAddressPickerComboBox->Size = System::Drawing::Size(466, 24);
+			   this->employeeModifyAddressPickerComboBox->TabIndex = 20;
+			   // 
+			   // employeeModifyMoreInfoTextBox
+			   // 
+			   this->employeeModifyMoreInfoTextBox->Location = System::Drawing::Point(88, 524);
+			   this->employeeModifyMoreInfoTextBox->Name = L"employeeModifyMoreInfoTextBox";
+			   this->employeeModifyMoreInfoTextBox->Size = System::Drawing::Size(466, 22);
+			   this->employeeModifyMoreInfoTextBox->TabIndex = 19;
+			   // 
+			   // employeeModifyCityTextBox
+			   // 
+			   this->employeeModifyCityTextBox->Location = System::Drawing::Point(276, 474);
+			   this->employeeModifyCityTextBox->Name = L"employeeModifyCityTextBox";
+			   this->employeeModifyCityTextBox->Size = System::Drawing::Size(158, 22);
+			   this->employeeModifyCityTextBox->TabIndex = 17;
+			   // 
+			   // employeeModifyAddressStreetTextBox
+			   // 
+			   this->employeeModifyAddressStreetTextBox->Location = System::Drawing::Point(88, 474);
+			   this->employeeModifyAddressStreetTextBox->Name = L"employeeModifyAddressStreetTextBox";
+			   this->employeeModifyAddressStreetTextBox->Size = System::Drawing::Size(176, 22);
+			   this->employeeModifyAddressStreetTextBox->TabIndex = 16;
+			   // 
+			   // employeeModifyLastnameTextBox
+			   // 
+			   this->employeeModifyLastnameTextBox->Location = System::Drawing::Point(461, 114);
+			   this->employeeModifyLastnameTextBox->Name = L"employeeModifyLastnameTextBox";
+			   this->employeeModifyLastnameTextBox->Size = System::Drawing::Size(158, 22);
+			   this->employeeModifyLastnameTextBox->TabIndex = 13;
+			   // 
+			   // employeeModifyFirstnameTextBox
+			   // 
+			   this->employeeModifyFirstnameTextBox->Location = System::Drawing::Point(278, 114);
+			   this->employeeModifyFirstnameTextBox->Name = L"employeeModifyFirstnameTextBox";
+			   this->employeeModifyFirstnameTextBox->Size = System::Drawing::Size(158, 22);
+			   this->employeeModifyFirstnameTextBox->TabIndex = 12;
+			   // 
+			   // employeeModifyUsernameTextBox
+			   // 
+			   this->employeeModifyUsernameTextBox->Location = System::Drawing::Point(90, 114);
+			   this->employeeModifyUsernameTextBox->Name = L"employeeModifyUsernameTextBox";
+			   this->employeeModifyUsernameTextBox->Size = System::Drawing::Size(158, 22);
+			   this->employeeModifyUsernameTextBox->TabIndex = 11;
+			   // 
+			   // employeeModifyMoreInfoLabel
+			   // 
+			   this->employeeModifyMoreInfoLabel->AutoSize = true;
+			   this->employeeModifyMoreInfoLabel->Location = System::Drawing::Point(107, 502);
+			   this->employeeModifyMoreInfoLabel->Name = L"employeeModifyMoreInfoLabel";
+			   this->employeeModifyMoreInfoLabel->Size = System::Drawing::Size(182, 17);
+			   this->employeeModifyMoreInfoLabel->TabIndex = 10;
+			   this->employeeModifyMoreInfoLabel->Text = L"More information (ex : floor)";
+			   // 
+			   // employeeModifyPostalCodeLabel
+			   // 
+			   this->employeeModifyPostalCodeLabel->AutoSize = true;
+			   this->employeeModifyPostalCodeLabel->Location = System::Drawing::Point(456, 451);
+			   this->employeeModifyPostalCodeLabel->Name = L"employeeModifyPostalCodeLabel";
+			   this->employeeModifyPostalCodeLabel->Size = System::Drawing::Size(82, 17);
+			   this->employeeModifyPostalCodeLabel->TabIndex = 9;
+			   this->employeeModifyPostalCodeLabel->Text = L"Postal code";
+			   // 
+			   // employeeModifyCityLabel
+			   // 
+			   this->employeeModifyCityLabel->AutoSize = true;
+			   this->employeeModifyCityLabel->Location = System::Drawing::Point(290, 451);
+			   this->employeeModifyCityLabel->Name = L"employeeModifyCityLabel";
+			   this->employeeModifyCityLabel->Size = System::Drawing::Size(31, 17);
+			   this->employeeModifyCityLabel->TabIndex = 8;
+			   this->employeeModifyCityLabel->Text = L"City";
+			   // 
+			   // employeeModifyAddressStreetLabel
+			   // 
+			   this->employeeModifyAddressStreetLabel->AutoSize = true;
+			   this->employeeModifyAddressStreetLabel->Location = System::Drawing::Point(105, 451);
+			   this->employeeModifyAddressStreetLabel->Name = L"employeeModifyAddressStreetLabel";
+			   this->employeeModifyAddressStreetLabel->Size = System::Drawing::Size(128, 17);
+			   this->employeeModifyAddressStreetLabel->TabIndex = 7;
+			   this->employeeModifyAddressStreetLabel->Text = L"Number and Street";
+			   // 
+			   // employeeModifyAddressLabel
+			   // 
+			   this->employeeModifyAddressLabel->AutoSize = true;
+			   this->employeeModifyAddressLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeModifyAddressLabel->Location = System::Drawing::Point(30, 300);
+			   this->employeeModifyAddressLabel->Name = L"employeeModifyAddressLabel";
+			   this->employeeModifyAddressLabel->Size = System::Drawing::Size(145, 38);
+			   this->employeeModifyAddressLabel->TabIndex = 6;
+			   this->employeeModifyAddressLabel->Text = L"Address";
+			   // 
+			   // employeeModifyBirthdayLabel
+			   // 
+			   this->employeeModifyBirthdayLabel->AutoSize = true;
+			   this->employeeModifyBirthdayLabel->Location = System::Drawing::Point(107, 165);
+			   this->employeeModifyBirthdayLabel->Name = L"employeeModifyBirthdayLabel";
+			   this->employeeModifyBirthdayLabel->Size = System::Drawing::Size(60, 17);
+			   this->employeeModifyBirthdayLabel->TabIndex = 5;
+			   this->employeeModifyBirthdayLabel->Text = L"Birthday";
+			   // 
+			   // employeeModifyLastnameLabel
+			   // 
+			   this->employeeModifyLastnameLabel->AutoSize = true;
+			   this->employeeModifyLastnameLabel->Location = System::Drawing::Point(467, 92);
+			   this->employeeModifyLastnameLabel->Name = L"employeeModifyLastnameLabel";
+			   this->employeeModifyLastnameLabel->Size = System::Drawing::Size(70, 17);
+			   this->employeeModifyLastnameLabel->TabIndex = 3;
+			   this->employeeModifyLastnameLabel->Text = L"Lastname";
+			   // 
+			   // employeeModifyFirstnameLabel
+			   // 
+			   this->employeeModifyFirstnameLabel->AutoSize = true;
+			   this->employeeModifyFirstnameLabel->Location = System::Drawing::Point(292, 92);
+			   this->employeeModifyFirstnameLabel->Name = L"employeeModifyFirstnameLabel";
+			   this->employeeModifyFirstnameLabel->Size = System::Drawing::Size(70, 17);
+			   this->employeeModifyFirstnameLabel->TabIndex = 2;
+			   this->employeeModifyFirstnameLabel->Text = L"Firstname";
+			   // 
+			   // employeeModifyUsernameLabel
+			   // 
+			   this->employeeModifyUsernameLabel->AutoSize = true;
+			   this->employeeModifyUsernameLabel->Location = System::Drawing::Point(107, 92);
+			   this->employeeModifyUsernameLabel->Name = L"employeeModifyUsernameLabel";
+			   this->employeeModifyUsernameLabel->Size = System::Drawing::Size(73, 17);
+			   this->employeeModifyUsernameLabel->TabIndex = 1;
+			   this->employeeModifyUsernameLabel->Text = L"Username";
+			   // 
+			   // employeeModifyInformationsLabel
+			   // 
+			   this->employeeModifyInformationsLabel->AutoSize = true;
+			   this->employeeModifyInformationsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeModifyInformationsLabel->Location = System::Drawing::Point(22, 22);
+			   this->employeeModifyInformationsLabel->Name = L"employeeModifyInformationsLabel";
+			   this->employeeModifyInformationsLabel->Size = System::Drawing::Size(207, 38);
+			   this->employeeModifyInformationsLabel->TabIndex = 0;
+			   this->employeeModifyInformationsLabel->Text = L"Informations";
+			   // 
+			   // preCatalogPanel
+			   // 
+			   this->preCatalogPanel->Controls->Add(this->preCatalogSentenceLabel);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogLoginButton);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogTitleLabel);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogSearchLabel);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogTextBox);
+			   this->preCatalogPanel->Controls->Add(this->preCatalogListView);
+			   this->preCatalogPanel->Location = System::Drawing::Point(220, 80);
+			   this->preCatalogPanel->Name = L"preCatalogPanel";
+			   this->preCatalogPanel->Size = System::Drawing::Size(968, 607);
+			   this->preCatalogPanel->TabIndex = 5;
+			   // 
+			   // preCatalogSentenceLabel
+			   // 
+			   this->preCatalogSentenceLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			   this->preCatalogSentenceLabel->AutoSize = true;
+			   this->preCatalogSentenceLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogSentenceLabel->Location = System::Drawing::Point(664, 556);
+			   this->preCatalogSentenceLabel->Name = L"preCatalogSentenceLabel";
+			   this->preCatalogSentenceLabel->Size = System::Drawing::Size(153, 17);
+			   this->preCatalogSentenceLabel->TabIndex = 5;
+			   this->preCatalogSentenceLabel->Text = L"Envie de commander \?";
+			   // 
+			   // preCatalogLoginButton
+			   // 
+			   this->preCatalogLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			   this->preCatalogLoginButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogLoginButton->Location = System::Drawing::Point(825, 545);
+			   this->preCatalogLoginButton->Name = L"preCatalogLoginButton";
+			   this->preCatalogLoginButton->Size = System::Drawing::Size(117, 38);
+			   this->preCatalogLoginButton->TabIndex = 4;
+			   this->preCatalogLoginButton->Text = L"Login";
+			   this->preCatalogLoginButton->UseVisualStyleBackColor = true;
+			   this->preCatalogLoginButton->Click += gcnew System::EventHandler(this, &MyForm::preCatalogLoginButton_Click);
+			   // 
+			   // preCatalogTitleLabel
+			   // 
+			   this->preCatalogTitleLabel->AutoSize = true;
+			   this->preCatalogTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogTitleLabel->Location = System::Drawing::Point(13, 9);
+			   this->preCatalogTitleLabel->Name = L"preCatalogTitleLabel";
+			   this->preCatalogTitleLabel->Size = System::Drawing::Size(129, 38);
+			   this->preCatalogTitleLabel->TabIndex = 3;
+			   this->preCatalogTitleLabel->Text = L"Catalog";
+			   // 
+			   // preCatalogSearchLabel
+			   // 
+			   this->preCatalogSearchLabel->AutoSize = true;
+			   this->preCatalogSearchLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogSearchLabel->Location = System::Drawing::Point(20, 84);
+			   this->preCatalogSearchLabel->Name = L"preCatalogSearchLabel";
+			   this->preCatalogSearchLabel->Size = System::Drawing::Size(53, 17);
+			   this->preCatalogSearchLabel->TabIndex = 2;
+			   this->preCatalogSearchLabel->Text = L"Search";
+			   // 
+			   // preCatalogTextBox
+			   // 
+			   this->preCatalogTextBox->Location = System::Drawing::Point(20, 110);
+			   this->preCatalogTextBox->Name = L"preCatalogTextBox";
+			   this->preCatalogTextBox->Size = System::Drawing::Size(155, 22);
+			   this->preCatalogTextBox->TabIndex = 1;
+			   this->preCatalogTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::preCatalogTextBox_TextChanged);
+			   // 
+			   // preCatalogListView
+			   // 
+			   this->preCatalogListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->preCatalogListView->HideSelection = false;
+			   this->preCatalogListView->Location = System::Drawing::Point(19, 142);
+			   this->preCatalogListView->Name = L"preCatalogListView";
+			   this->preCatalogListView->Size = System::Drawing::Size(923, 354);
+			   this->preCatalogListView->TabIndex = 0;
+			   this->preCatalogListView->UseCompatibleStateImageBehavior = false;
+			   this->preCatalogListView->View = System::Windows::Forms::View::List;
+			   // 
+			   // catalogOrderPanel
+			   // 
+			   this->catalogOrderPanel->Controls->Add(this->catalogCartButton);
+			   this->catalogOrderPanel->Controls->Add(this->catalogGlobalListView);
+			   this->catalogOrderPanel->Controls->Add(this->catalogResearchTextBox);
+			   this->catalogOrderPanel->Controls->Add(this->catalogOrderResearchLabel);
+			   this->catalogOrderPanel->Controls->Add(this->catalogOrderTitleLabel);
+			   this->catalogOrderPanel->Location = System::Drawing::Point(220, 80);
+			   this->catalogOrderPanel->Name = L"catalogOrderPanel";
+			   this->catalogOrderPanel->Size = System::Drawing::Size(968, 607);
+			   this->catalogOrderPanel->TabIndex = 18;
+			   // 
+			   // catalogCartButton
+			   // 
+			   this->catalogCartButton->Location = System::Drawing::Point(829, 538);
+			   this->catalogCartButton->Name = L"catalogCartButton";
+			   this->catalogCartButton->Size = System::Drawing::Size(102, 35);
+			   this->catalogCartButton->TabIndex = 4;
+			   this->catalogCartButton->Text = L"Cart";
+			   this->catalogCartButton->UseVisualStyleBackColor = true;
+			   this->catalogCartButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCartButton_Click);
+			   // 
+			   // catalogGlobalListView
+			   // 
+			   this->catalogGlobalListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->catalogGlobalListView->HideSelection = false;
+			   this->catalogGlobalListView->Location = System::Drawing::Point(21, 142);
+			   this->catalogGlobalListView->Name = L"catalogGlobalListView";
+			   this->catalogGlobalListView->Size = System::Drawing::Size(921, 377);
+			   this->catalogGlobalListView->TabIndex = 3;
+			   this->catalogGlobalListView->UseCompatibleStateImageBehavior = false;
+			   this->catalogGlobalListView->View = System::Windows::Forms::View::List;
+			   this->catalogGlobalListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::catalogGlobalListView_DoubleClick);
+			   // 
+			   // catalogResearchTextBox
+			   // 
+			   this->catalogResearchTextBox->Location = System::Drawing::Point(48, 104);
+			   this->catalogResearchTextBox->Name = L"catalogResearchTextBox";
+			   this->catalogResearchTextBox->Size = System::Drawing::Size(273, 22);
+			   this->catalogResearchTextBox->TabIndex = 2;
+			   this->catalogResearchTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::catalogResearchTextBox_TextChanged);
+			   // 
+			   // catalogOrderResearchLabel
+			   // 
+			   this->catalogOrderResearchLabel->AutoSize = true;
+			   this->catalogOrderResearchLabel->Location = System::Drawing::Point(73, 82);
+			   this->catalogOrderResearchLabel->Name = L"catalogOrderResearchLabel";
+			   this->catalogOrderResearchLabel->Size = System::Drawing::Size(69, 17);
+			   this->catalogOrderResearchLabel->TabIndex = 1;
+			   this->catalogOrderResearchLabel->Text = L"Research";
+			   // 
+			   // catalogOrderTitleLabel
+			   // 
+			   this->catalogOrderTitleLabel->AutoSize = true;
+			   this->catalogOrderTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->catalogOrderTitleLabel->Location = System::Drawing::Point(6, 6);
+			   this->catalogOrderTitleLabel->Name = L"catalogOrderTitleLabel";
+			   this->catalogOrderTitleLabel->Size = System::Drawing::Size(136, 38);
+			   this->catalogOrderTitleLabel->TabIndex = 0;
+			   this->catalogOrderTitleLabel->Text = L"Catalog";
+			   // 
+			   // catalogCartPanel
+			   // 
+			   this->catalogCartPanel->Controls->Add(this->catalogAddressShippingLabel);
+			   this->catalogCartPanel->Controls->Add(this->catalogAddressBillingLabel);
+			   this->catalogCartPanel->Controls->Add(this->catalogAddressShippingListComboBox);
+			   this->catalogCartPanel->Controls->Add(this->catalogAddressBillingListComboBox);
+			   this->catalogCartPanel->Controls->Add(this->catalogCheckoutButton);
+			   this->catalogCartPanel->Controls->Add(this->catalogBackButton);
+			   this->catalogCartPanel->Controls->Add(this->catalogSelectedListView);
+			   this->catalogCartPanel->Controls->Add(this->catalogCartTitleLabel);
+			   this->catalogCartPanel->Location = System::Drawing::Point(220, 80);
+			   this->catalogCartPanel->Name = L"catalogCartPanel";
+			   this->catalogCartPanel->Size = System::Drawing::Size(968, 607);
+			   this->catalogCartPanel->TabIndex = 19;
+			   // 
+			   // catalogAddressShippingLabel
+			   // 
+			   this->catalogAddressShippingLabel->AutoSize = true;
+			   this->catalogAddressShippingLabel->Location = System::Drawing::Point(659, 172);
+			   this->catalogAddressShippingLabel->Name = L"catalogAddressShippingLabel";
+			   this->catalogAddressShippingLabel->Size = System::Drawing::Size(117, 17);
+			   this->catalogAddressShippingLabel->TabIndex = 7;
+			   this->catalogAddressShippingLabel->Text = L"Address shipping";
+			   // 
+			   // catalogAddressBillingLabel
+			   // 
+			   this->catalogAddressBillingLabel->AutoSize = true;
+			   this->catalogAddressBillingLabel->Location = System::Drawing::Point(659, 83);
+			   this->catalogAddressBillingLabel->Name = L"catalogAddressBillingLabel";
+			   this->catalogAddressBillingLabel->Size = System::Drawing::Size(100, 17);
+			   this->catalogAddressBillingLabel->TabIndex = 6;
+			   this->catalogAddressBillingLabel->Text = L"Address billing";
+			   // 
+			   // catalogAddressShippingListComboBox
+			   // 
+			   this->catalogAddressShippingListComboBox->FormattingEnabled = true;
+			   this->catalogAddressShippingListComboBox->Location = System::Drawing::Point(649, 197);
+			   this->catalogAddressShippingListComboBox->Name = L"catalogAddressShippingListComboBox";
+			   this->catalogAddressShippingListComboBox->Size = System::Drawing::Size(246, 24);
+			   this->catalogAddressShippingListComboBox->TabIndex = 5;
+			   // 
+			   // catalogAddressBillingListComboBox
+			   // 
+			   this->catalogAddressBillingListComboBox->FormattingEnabled = true;
+			   this->catalogAddressBillingListComboBox->Location = System::Drawing::Point(649, 112);
+			   this->catalogAddressBillingListComboBox->Name = L"catalogAddressBillingListComboBox";
+			   this->catalogAddressBillingListComboBox->Size = System::Drawing::Size(246, 24);
+			   this->catalogAddressBillingListComboBox->TabIndex = 4;
+			   // 
+			   // catalogCheckoutButton
+			   // 
+			   this->catalogCheckoutButton->Location = System::Drawing::Point(763, 300);
+			   this->catalogCheckoutButton->Name = L"catalogCheckoutButton";
+			   this->catalogCheckoutButton->Size = System::Drawing::Size(122, 40);
+			   this->catalogCheckoutButton->TabIndex = 3;
+			   this->catalogCheckoutButton->Text = L"Checkout";
+			   this->catalogCheckoutButton->UseVisualStyleBackColor = true;
+			   this->catalogCheckoutButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCheckoutButton_Click);
+			   // 
+			   // catalogBackButton
+			   // 
+			   this->catalogBackButton->Location = System::Drawing::Point(662, 300);
+			   this->catalogBackButton->Name = L"catalogBackButton";
+			   this->catalogBackButton->Size = System::Drawing::Size(85, 40);
+			   this->catalogBackButton->TabIndex = 2;
+			   this->catalogBackButton->Text = L"Back";
+			   this->catalogBackButton->UseVisualStyleBackColor = true;
+			   this->catalogBackButton->Click += gcnew System::EventHandler(this, &MyForm::menuCatalogButton_Click);
+			   // 
+			   // catalogSelectedListView
+			   // 
+			   this->catalogSelectedListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->catalogSelectedListView->HideSelection = false;
+			   this->catalogSelectedListView->Location = System::Drawing::Point(37, 77);
+			   this->catalogSelectedListView->Name = L"catalogSelectedListView";
+			   this->catalogSelectedListView->Size = System::Drawing::Size(571, 496);
+			   this->catalogSelectedListView->TabIndex = 1;
+			   this->catalogSelectedListView->UseCompatibleStateImageBehavior = false;
+			   this->catalogSelectedListView->View = System::Windows::Forms::View::List;
+			   this->catalogSelectedListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::catalogSelectedListView_DoubleClick);
+			   // 
+			   // catalogCartTitleLabel
+			   // 
+			   this->catalogCartTitleLabel->AutoSize = true;
+			   this->catalogCartTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->catalogCartTitleLabel->Location = System::Drawing::Point(7, 12);
+			   this->catalogCartTitleLabel->Name = L"catalogCartTitleLabel";
+			   this->catalogCartTitleLabel->Size = System::Drawing::Size(83, 38);
+			   this->catalogCartTitleLabel->TabIndex = 0;
+			   this->catalogCartTitleLabel->Text = L"Cart";
 			   // 
 			   // statisticMPanel
 			   // 
@@ -2169,7 +2679,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->simulationPanel->Controls->Add(this->simulationEntryPriceTextBox);
 			   this->simulationPanel->Location = System::Drawing::Point(24, 9);
 			   this->simulationPanel->Name = L"simulationPanel";
-			   this->simulationPanel->Size = System::Drawing::Size(918, 432);
+			   this->simulationPanel->Size = System::Drawing::Size(918, 425);
 			   this->simulationPanel->TabIndex = 17;
 			   // 
 			   // simulationResultLabel
@@ -2370,37 +2880,15 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   // 
 			   // dataGridViewstat
 			   // 
-			   dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+			   dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
 			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
-			   this->dataGridViewstat->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCellsExceptHeaders;
-			   dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			   dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
-			   dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			   dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
 			   this->dataGridViewstat->ColumnHeadersHeight = 29;
-			   this->dataGridViewstat->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			   dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle5->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle5;
 			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
 			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->dataGridViewstat->Name = L"dataGridViewstat";
@@ -2915,517 +3403,6 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->clientModifyInformationsLabel->TabIndex = 0;
 			   this->clientModifyInformationsLabel->Text = L"Informations";
 			   // 
-			   // employeeModifyPanel
-			   // 
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyBackButton);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyHireDateLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyHireDateDateTimePicker);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyErrorBoxLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyApplyModifButton);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyBirthdayDateTimePicker);
-			   this->employeeModifyPanel->Controls->Add(this->barSeparateLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyPostalCodeNumericUpDown);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyAddAddressButton);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyDeleteAddressButton);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyAddressPickerComboBox);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyMoreInfoTextBox);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyCityTextBox);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyAddressStreetTextBox);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyLastnameTextBox);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyFirstnameTextBox);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyUsernameTextBox);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyMoreInfoLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyPostalCodeLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyCityLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyAddressStreetLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyAddressLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyBirthdayLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyLastnameLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyFirstnameLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyUsernameLabel);
-			   this->employeeModifyPanel->Controls->Add(this->employeeModifyInformationsLabel);
-			   this->employeeModifyPanel->Location = System::Drawing::Point(220, 80);
-			   this->employeeModifyPanel->Name = L"employeeModifyPanel";
-			   this->employeeModifyPanel->Size = System::Drawing::Size(968, 607);
-			   this->employeeModifyPanel->TabIndex = 32;
-			   // 
-			   // employeeModifyBackButton
-			   // 
-			   this->employeeModifyBackButton->BackColor = System::Drawing::Color::White;
-			   this->employeeModifyBackButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->employeeModifyBackButton->Location = System::Drawing::Point(927, 9);
-			   this->employeeModifyBackButton->Name = L"employeeModifyBackButton";
-			   this->employeeModifyBackButton->Size = System::Drawing::Size(30, 30);
-			   this->employeeModifyBackButton->TabIndex = 34;
-			   this->employeeModifyBackButton->Text = L"X";
-			   this->employeeModifyBackButton->UseVisualStyleBackColor = false;
-			   this->employeeModifyBackButton->Click += gcnew System::EventHandler(this, &MyForm::employeeModifyBackButton_Click);
-			   // 
-			   // employeeModifyHireDateLabel
-			   // 
-			   this->employeeModifyHireDateLabel->AutoSize = true;
-			   this->employeeModifyHireDateLabel->Location = System::Drawing::Point(422, 166);
-			   this->employeeModifyHireDateLabel->Name = L"employeeModifyHireDateLabel";
-			   this->employeeModifyHireDateLabel->Size = System::Drawing::Size(68, 17);
-			   this->employeeModifyHireDateLabel->TabIndex = 33;
-			   this->employeeModifyHireDateLabel->Text = L"Hire Date";
-			   // 
-			   // employeeModifyHireDateDateTimePicker
-			   // 
-			   this->employeeModifyHireDateDateTimePicker->Location = System::Drawing::Point(416, 187);
-			   this->employeeModifyHireDateDateTimePicker->Name = L"employeeModifyHireDateDateTimePicker";
-			   this->employeeModifyHireDateDateTimePicker->Size = System::Drawing::Size(200, 22);
-			   this->employeeModifyHireDateDateTimePicker->TabIndex = 32;
-			   // 
-			   // employeeModifyErrorBoxLabel
-			   // 
-			   this->employeeModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
-			   this->employeeModifyErrorBoxLabel->Location = System::Drawing::Point(741, 556);
-			   this->employeeModifyErrorBoxLabel->Name = L"employeeModifyErrorBoxLabel";
-			   this->employeeModifyErrorBoxLabel->Size = System::Drawing::Size(177, 38);
-			   this->employeeModifyErrorBoxLabel->TabIndex = 31;
-			   // 
-			   // employeeModifyApplyModifButton
-			   // 
-			   this->employeeModifyApplyModifButton->Location = System::Drawing::Point(741, 524);
-			   this->employeeModifyApplyModifButton->Name = L"employeeModifyApplyModifButton";
-			   this->employeeModifyApplyModifButton->Size = System::Drawing::Size(177, 26);
-			   this->employeeModifyApplyModifButton->TabIndex = 30;
-			   this->employeeModifyApplyModifButton->Text = L"Apply Modifications";
-			   this->employeeModifyApplyModifButton->UseVisualStyleBackColor = true;
-			   // 
-			   // employeeModifyBirthdayDateTimePicker
-			   // 
-			   this->employeeModifyBirthdayDateTimePicker->Location = System::Drawing::Point(90, 187);
-			   this->employeeModifyBirthdayDateTimePicker->Name = L"employeeModifyBirthdayDateTimePicker";
-			   this->employeeModifyBirthdayDateTimePicker->Size = System::Drawing::Size(200, 22);
-			   this->employeeModifyBirthdayDateTimePicker->TabIndex = 29;
-			   // 
-			   // barSeparateLabel
-			   // 
-			   this->barSeparateLabel->AutoSize = true;
-			   this->barSeparateLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   this->barSeparateLabel->Location = System::Drawing::Point(46, 229);
-			   this->barSeparateLabel->Name = L"barSeparateLabel";
-			   this->barSeparateLabel->Size = System::Drawing::Size(872, 38);
-			   this->barSeparateLabel->TabIndex = 28;
-			   this->barSeparateLabel->Text = L"_____________________________________________";
-			   // 
-			   // employeeModifyPostalCodeNumericUpDown
-			   // 
-			   this->employeeModifyPostalCodeNumericUpDown->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) {
-				   1000, 0, 0,
-					   0
-			   });
-			   this->employeeModifyPostalCodeNumericUpDown->Location = System::Drawing::Point(446, 474);
-			   this->employeeModifyPostalCodeNumericUpDown->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) {
-				   100000, 0, 0,
-					   0
-			   });
-			   this->employeeModifyPostalCodeNumericUpDown->Name = L"employeeModifyPostalCodeNumericUpDown";
-			   this->employeeModifyPostalCodeNumericUpDown->Size = System::Drawing::Size(108, 22);
-			   this->employeeModifyPostalCodeNumericUpDown->TabIndex = 27;
-			   // 
-			   // employeeModifyAddAddressButton
-			   // 
-			   this->employeeModifyAddAddressButton->Location = System::Drawing::Point(583, 524);
-			   this->employeeModifyAddAddressButton->Name = L"employeeModifyAddAddressButton";
-			   this->employeeModifyAddAddressButton->Size = System::Drawing::Size(118, 25);
-			   this->employeeModifyAddAddressButton->TabIndex = 23;
-			   this->employeeModifyAddAddressButton->Text = L"Add";
-			   this->employeeModifyAddAddressButton->UseVisualStyleBackColor = true;
-			   // 
-			   // employeeModifyDeleteAddressButton
-			   // 
-			   this->employeeModifyDeleteAddressButton->Location = System::Drawing::Point(583, 373);
-			   this->employeeModifyDeleteAddressButton->Name = L"employeeModifyDeleteAddressButton";
-			   this->employeeModifyDeleteAddressButton->Size = System::Drawing::Size(118, 25);
-			   this->employeeModifyDeleteAddressButton->TabIndex = 22;
-			   this->employeeModifyDeleteAddressButton->Text = L"Delete";
-			   this->employeeModifyDeleteAddressButton->UseVisualStyleBackColor = true;
-			   // 
-			   // employeeModifyAddressPickerComboBox
-			   // 
-			   this->employeeModifyAddressPickerComboBox->BackColor = System::Drawing::SystemColors::Window;
-			   this->employeeModifyAddressPickerComboBox->FormattingEnabled = true;
-			   this->employeeModifyAddressPickerComboBox->Location = System::Drawing::Point(88, 374);
-			   this->employeeModifyAddressPickerComboBox->Name = L"employeeModifyAddressPickerComboBox";
-			   this->employeeModifyAddressPickerComboBox->Size = System::Drawing::Size(466, 24);
-			   this->employeeModifyAddressPickerComboBox->TabIndex = 20;
-			   // 
-			   // employeeModifyMoreInfoTextBox
-			   // 
-			   this->employeeModifyMoreInfoTextBox->Location = System::Drawing::Point(88, 524);
-			   this->employeeModifyMoreInfoTextBox->Name = L"employeeModifyMoreInfoTextBox";
-			   this->employeeModifyMoreInfoTextBox->Size = System::Drawing::Size(466, 22);
-			   this->employeeModifyMoreInfoTextBox->TabIndex = 19;
-			   // 
-			   // employeeModifyCityTextBox
-			   // 
-			   this->employeeModifyCityTextBox->Location = System::Drawing::Point(276, 474);
-			   this->employeeModifyCityTextBox->Name = L"employeeModifyCityTextBox";
-			   this->employeeModifyCityTextBox->Size = System::Drawing::Size(158, 22);
-			   this->employeeModifyCityTextBox->TabIndex = 17;
-			   // 
-			   // employeeModifyAddressStreetTextBox
-			   // 
-			   this->employeeModifyAddressStreetTextBox->Location = System::Drawing::Point(88, 474);
-			   this->employeeModifyAddressStreetTextBox->Name = L"employeeModifyAddressStreetTextBox";
-			   this->employeeModifyAddressStreetTextBox->Size = System::Drawing::Size(176, 22);
-			   this->employeeModifyAddressStreetTextBox->TabIndex = 16;
-			   // 
-			   // employeeModifyLastnameTextBox
-			   // 
-			   this->employeeModifyLastnameTextBox->Location = System::Drawing::Point(461, 114);
-			   this->employeeModifyLastnameTextBox->Name = L"employeeModifyLastnameTextBox";
-			   this->employeeModifyLastnameTextBox->Size = System::Drawing::Size(158, 22);
-			   this->employeeModifyLastnameTextBox->TabIndex = 13;
-			   // 
-			   // employeeModifyFirstnameTextBox
-			   // 
-			   this->employeeModifyFirstnameTextBox->Location = System::Drawing::Point(278, 114);
-			   this->employeeModifyFirstnameTextBox->Name = L"employeeModifyFirstnameTextBox";
-			   this->employeeModifyFirstnameTextBox->Size = System::Drawing::Size(158, 22);
-			   this->employeeModifyFirstnameTextBox->TabIndex = 12;
-			   // 
-			   // employeeModifyUsernameTextBox
-			   // 
-			   this->employeeModifyUsernameTextBox->Location = System::Drawing::Point(90, 114);
-			   this->employeeModifyUsernameTextBox->Name = L"employeeModifyUsernameTextBox";
-			   this->employeeModifyUsernameTextBox->Size = System::Drawing::Size(158, 22);
-			   this->employeeModifyUsernameTextBox->TabIndex = 11;
-			   // 
-			   // employeeModifyMoreInfoLabel
-			   // 
-			   this->employeeModifyMoreInfoLabel->AutoSize = true;
-			   this->employeeModifyMoreInfoLabel->Location = System::Drawing::Point(107, 502);
-			   this->employeeModifyMoreInfoLabel->Name = L"employeeModifyMoreInfoLabel";
-			   this->employeeModifyMoreInfoLabel->Size = System::Drawing::Size(182, 17);
-			   this->employeeModifyMoreInfoLabel->TabIndex = 10;
-			   this->employeeModifyMoreInfoLabel->Text = L"More information (ex : floor)";
-			   // 
-			   // employeeModifyPostalCodeLabel
-			   // 
-			   this->employeeModifyPostalCodeLabel->AutoSize = true;
-			   this->employeeModifyPostalCodeLabel->Location = System::Drawing::Point(456, 451);
-			   this->employeeModifyPostalCodeLabel->Name = L"employeeModifyPostalCodeLabel";
-			   this->employeeModifyPostalCodeLabel->Size = System::Drawing::Size(82, 17);
-			   this->employeeModifyPostalCodeLabel->TabIndex = 9;
-			   this->employeeModifyPostalCodeLabel->Text = L"Postal code";
-			   // 
-			   // employeeModifyCityLabel
-			   // 
-			   this->employeeModifyCityLabel->AutoSize = true;
-			   this->employeeModifyCityLabel->Location = System::Drawing::Point(290, 451);
-			   this->employeeModifyCityLabel->Name = L"employeeModifyCityLabel";
-			   this->employeeModifyCityLabel->Size = System::Drawing::Size(31, 17);
-			   this->employeeModifyCityLabel->TabIndex = 8;
-			   this->employeeModifyCityLabel->Text = L"City";
-			   // 
-			   // employeeModifyAddressStreetLabel
-			   // 
-			   this->employeeModifyAddressStreetLabel->AutoSize = true;
-			   this->employeeModifyAddressStreetLabel->Location = System::Drawing::Point(105, 451);
-			   this->employeeModifyAddressStreetLabel->Name = L"employeeModifyAddressStreetLabel";
-			   this->employeeModifyAddressStreetLabel->Size = System::Drawing::Size(128, 17);
-			   this->employeeModifyAddressStreetLabel->TabIndex = 7;
-			   this->employeeModifyAddressStreetLabel->Text = L"Number and Street";
-			   // 
-			   // employeeModifyAddressLabel
-			   // 
-			   this->employeeModifyAddressLabel->AutoSize = true;
-			   this->employeeModifyAddressLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->employeeModifyAddressLabel->Location = System::Drawing::Point(30, 300);
-			   this->employeeModifyAddressLabel->Name = L"employeeModifyAddressLabel";
-			   this->employeeModifyAddressLabel->Size = System::Drawing::Size(145, 38);
-			   this->employeeModifyAddressLabel->TabIndex = 6;
-			   this->employeeModifyAddressLabel->Text = L"Address";
-			   // 
-			   // employeeModifyBirthdayLabel
-			   // 
-			   this->employeeModifyBirthdayLabel->AutoSize = true;
-			   this->employeeModifyBirthdayLabel->Location = System::Drawing::Point(107, 165);
-			   this->employeeModifyBirthdayLabel->Name = L"employeeModifyBirthdayLabel";
-			   this->employeeModifyBirthdayLabel->Size = System::Drawing::Size(60, 17);
-			   this->employeeModifyBirthdayLabel->TabIndex = 5;
-			   this->employeeModifyBirthdayLabel->Text = L"Birthday";
-			   // 
-			   // employeeModifyLastnameLabel
-			   // 
-			   this->employeeModifyLastnameLabel->AutoSize = true;
-			   this->employeeModifyLastnameLabel->Location = System::Drawing::Point(467, 92);
-			   this->employeeModifyLastnameLabel->Name = L"employeeModifyLastnameLabel";
-			   this->employeeModifyLastnameLabel->Size = System::Drawing::Size(70, 17);
-			   this->employeeModifyLastnameLabel->TabIndex = 3;
-			   this->employeeModifyLastnameLabel->Text = L"Lastname";
-			   // 
-			   // employeeModifyFirstnameLabel
-			   // 
-			   this->employeeModifyFirstnameLabel->AutoSize = true;
-			   this->employeeModifyFirstnameLabel->Location = System::Drawing::Point(292, 92);
-			   this->employeeModifyFirstnameLabel->Name = L"employeeModifyFirstnameLabel";
-			   this->employeeModifyFirstnameLabel->Size = System::Drawing::Size(70, 17);
-			   this->employeeModifyFirstnameLabel->TabIndex = 2;
-			   this->employeeModifyFirstnameLabel->Text = L"Firstname";
-			   // 
-			   // employeeModifyUsernameLabel
-			   // 
-			   this->employeeModifyUsernameLabel->AutoSize = true;
-			   this->employeeModifyUsernameLabel->Location = System::Drawing::Point(107, 92);
-			   this->employeeModifyUsernameLabel->Name = L"employeeModifyUsernameLabel";
-			   this->employeeModifyUsernameLabel->Size = System::Drawing::Size(73, 17);
-			   this->employeeModifyUsernameLabel->TabIndex = 1;
-			   this->employeeModifyUsernameLabel->Text = L"Username";
-			   // 
-			   // employeeModifyInformationsLabel
-			   // 
-			   this->employeeModifyInformationsLabel->AutoSize = true;
-			   this->employeeModifyInformationsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->employeeModifyInformationsLabel->Location = System::Drawing::Point(22, 22);
-			   this->employeeModifyInformationsLabel->Name = L"employeeModifyInformationsLabel";
-			   this->employeeModifyInformationsLabel->Size = System::Drawing::Size(207, 38);
-			   this->employeeModifyInformationsLabel->TabIndex = 0;
-			   this->employeeModifyInformationsLabel->Text = L"Informations";
-			   // 
-			   // preCatalogPanel
-			   // 
-			   this->preCatalogPanel->Controls->Add(this->preCatalogSentenceLabel);
-			   this->preCatalogPanel->Controls->Add(this->preCatalogLoginButton);
-			   this->preCatalogPanel->Controls->Add(this->preCatalogTitleLabel);
-			   this->preCatalogPanel->Controls->Add(this->preCatalogSearchLabel);
-			   this->preCatalogPanel->Controls->Add(this->preCatalogTextBox);
-			   this->preCatalogPanel->Controls->Add(this->preCatalogListView);
-			   this->preCatalogPanel->Location = System::Drawing::Point(220, 80);
-			   this->preCatalogPanel->Name = L"preCatalogPanel";
-			   this->preCatalogPanel->Size = System::Drawing::Size(968, 607);
-			   this->preCatalogPanel->TabIndex = 5;
-			   // 
-			   // preCatalogSentenceLabel
-			   // 
-			   this->preCatalogSentenceLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			   this->preCatalogSentenceLabel->AutoSize = true;
-			   this->preCatalogSentenceLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogSentenceLabel->Location = System::Drawing::Point(664, 556);
-			   this->preCatalogSentenceLabel->Name = L"preCatalogSentenceLabel";
-			   this->preCatalogSentenceLabel->Size = System::Drawing::Size(153, 17);
-			   this->preCatalogSentenceLabel->TabIndex = 5;
-			   this->preCatalogSentenceLabel->Text = L"Envie de commander \?";
-			   // 
-			   // preCatalogLoginButton
-			   // 
-			   this->preCatalogLoginButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			   this->preCatalogLoginButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogLoginButton->Location = System::Drawing::Point(825, 545);
-			   this->preCatalogLoginButton->Name = L"preCatalogLoginButton";
-			   this->preCatalogLoginButton->Size = System::Drawing::Size(117, 38);
-			   this->preCatalogLoginButton->TabIndex = 4;
-			   this->preCatalogLoginButton->Text = L"Login";
-			   this->preCatalogLoginButton->UseVisualStyleBackColor = true;
-			   this->preCatalogLoginButton->Click += gcnew System::EventHandler(this, &MyForm::preCatalogLoginButton_Click);
-			   // 
-			   // preCatalogTitleLabel
-			   // 
-			   this->preCatalogTitleLabel->AutoSize = true;
-			   this->preCatalogTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogTitleLabel->Location = System::Drawing::Point(13, 9);
-			   this->preCatalogTitleLabel->Name = L"preCatalogTitleLabel";
-			   this->preCatalogTitleLabel->Size = System::Drawing::Size(129, 38);
-			   this->preCatalogTitleLabel->TabIndex = 3;
-			   this->preCatalogTitleLabel->Text = L"Catalog";
-			   // 
-			   // preCatalogSearchLabel
-			   // 
-			   this->preCatalogSearchLabel->AutoSize = true;
-			   this->preCatalogSearchLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogSearchLabel->Location = System::Drawing::Point(20, 84);
-			   this->preCatalogSearchLabel->Name = L"preCatalogSearchLabel";
-			   this->preCatalogSearchLabel->Size = System::Drawing::Size(53, 17);
-			   this->preCatalogSearchLabel->TabIndex = 2;
-			   this->preCatalogSearchLabel->Text = L"Search";
-			   // 
-			   // preCatalogTextBox
-			   // 
-			   this->preCatalogTextBox->Location = System::Drawing::Point(20, 110);
-			   this->preCatalogTextBox->Name = L"preCatalogTextBox";
-			   this->preCatalogTextBox->Size = System::Drawing::Size(155, 22);
-			   this->preCatalogTextBox->TabIndex = 1;
-			   this->preCatalogTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::preCatalogTextBox_TextChanged);
-			   // 
-			   // preCatalogListView
-			   // 
-			   this->preCatalogListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->preCatalogListView->HideSelection = false;
-			   this->preCatalogListView->Location = System::Drawing::Point(19, 142);
-			   this->preCatalogListView->Name = L"preCatalogListView";
-			   this->preCatalogListView->Size = System::Drawing::Size(923, 354);
-			   this->preCatalogListView->TabIndex = 0;
-			   this->preCatalogListView->UseCompatibleStateImageBehavior = false;
-			   this->preCatalogListView->View = System::Windows::Forms::View::List;
-			   // 
-			   // catalogOrderPanel
-			   // 
-			   this->catalogOrderPanel->Controls->Add(this->catalogCartButton);
-			   this->catalogOrderPanel->Controls->Add(this->catalogGlobalListView);
-			   this->catalogOrderPanel->Controls->Add(this->catalogResearchTextBox);
-			   this->catalogOrderPanel->Controls->Add(this->catalogOrderResearchLabel);
-			   this->catalogOrderPanel->Controls->Add(this->catalogOrderTitleLabel);
-			   this->catalogOrderPanel->Location = System::Drawing::Point(220, 80);
-			   this->catalogOrderPanel->Name = L"catalogOrderPanel";
-			   this->catalogOrderPanel->Size = System::Drawing::Size(968, 607);
-			   this->catalogOrderPanel->TabIndex = 18;
-			   // 
-			   // catalogCartButton
-			   // 
-			   this->catalogCartButton->Location = System::Drawing::Point(829, 538);
-			   this->catalogCartButton->Name = L"catalogCartButton";
-			   this->catalogCartButton->Size = System::Drawing::Size(102, 35);
-			   this->catalogCartButton->TabIndex = 4;
-			   this->catalogCartButton->Text = L"Cart";
-			   this->catalogCartButton->UseVisualStyleBackColor = true;
-			   this->catalogCartButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCartButton_Click);
-			   // 
-			   // catalogGlobalListView
-			   // 
-			   this->catalogGlobalListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->catalogGlobalListView->HideSelection = false;
-			   this->catalogGlobalListView->Location = System::Drawing::Point(21, 142);
-			   this->catalogGlobalListView->Name = L"catalogGlobalListView";
-			   this->catalogGlobalListView->Size = System::Drawing::Size(921, 377);
-			   this->catalogGlobalListView->TabIndex = 3;
-			   this->catalogGlobalListView->UseCompatibleStateImageBehavior = false;
-			   this->catalogGlobalListView->View = System::Windows::Forms::View::List;
-			   this->catalogGlobalListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::catalogGlobalListView_DoubleClick);
-			   // 
-			   // catalogResearchTextBox
-			   // 
-			   this->catalogResearchTextBox->Location = System::Drawing::Point(48, 104);
-			   this->catalogResearchTextBox->Name = L"catalogResearchTextBox";
-			   this->catalogResearchTextBox->Size = System::Drawing::Size(273, 22);
-			   this->catalogResearchTextBox->TabIndex = 2;
-			   this->catalogResearchTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::catalogResearchTextBox_TextChanged);
-			   // 
-			   // catalogOrderResearchLabel
-			   // 
-			   this->catalogOrderResearchLabel->AutoSize = true;
-			   this->catalogOrderResearchLabel->Location = System::Drawing::Point(73, 82);
-			   this->catalogOrderResearchLabel->Name = L"catalogOrderResearchLabel";
-			   this->catalogOrderResearchLabel->Size = System::Drawing::Size(69, 17);
-			   this->catalogOrderResearchLabel->TabIndex = 1;
-			   this->catalogOrderResearchLabel->Text = L"Research";
-			   // 
-			   // catalogOrderTitleLabel
-			   // 
-			   this->catalogOrderTitleLabel->AutoSize = true;
-			   this->catalogOrderTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->catalogOrderTitleLabel->Location = System::Drawing::Point(6, 6);
-			   this->catalogOrderTitleLabel->Name = L"catalogOrderTitleLabel";
-			   this->catalogOrderTitleLabel->Size = System::Drawing::Size(136, 38);
-			   this->catalogOrderTitleLabel->TabIndex = 0;
-			   this->catalogOrderTitleLabel->Text = L"Catalog";
-			   // 
-			   // catalogCartPanel
-			   // 
-			   this->catalogCartPanel->Controls->Add(this->catalogAddressShippingLabel);
-			   this->catalogCartPanel->Controls->Add(this->catalogAddressBillingLabel);
-			   this->catalogCartPanel->Controls->Add(this->catalogAddressShippingListComboBox);
-			   this->catalogCartPanel->Controls->Add(this->catalogAddressBillingListComboBox);
-			   this->catalogCartPanel->Controls->Add(this->catalogCheckoutButton);
-			   this->catalogCartPanel->Controls->Add(this->catalogBackButton);
-			   this->catalogCartPanel->Controls->Add(this->catalogSelectedListView);
-			   this->catalogCartPanel->Controls->Add(this->catalogCartTitleLabel);
-			   this->catalogCartPanel->Location = System::Drawing::Point(220, 80);
-			   this->catalogCartPanel->Name = L"catalogCartPanel";
-			   this->catalogCartPanel->Size = System::Drawing::Size(968, 607);
-			   this->catalogCartPanel->TabIndex = 19;
-			   // 
-			   // catalogAddressShippingLabel
-			   // 
-			   this->catalogAddressShippingLabel->AutoSize = true;
-			   this->catalogAddressShippingLabel->Location = System::Drawing::Point(659, 172);
-			   this->catalogAddressShippingLabel->Name = L"catalogAddressShippingLabel";
-			   this->catalogAddressShippingLabel->Size = System::Drawing::Size(117, 17);
-			   this->catalogAddressShippingLabel->TabIndex = 7;
-			   this->catalogAddressShippingLabel->Text = L"Address shipping";
-			   // 
-			   // catalogAddressBillingLabel
-			   // 
-			   this->catalogAddressBillingLabel->AutoSize = true;
-			   this->catalogAddressBillingLabel->Location = System::Drawing::Point(659, 83);
-			   this->catalogAddressBillingLabel->Name = L"catalogAddressBillingLabel";
-			   this->catalogAddressBillingLabel->Size = System::Drawing::Size(100, 17);
-			   this->catalogAddressBillingLabel->TabIndex = 6;
-			   this->catalogAddressBillingLabel->Text = L"Address billing";
-			   // 
-			   // catalogAddressShippingListComboBox
-			   // 
-			   this->catalogAddressShippingListComboBox->FormattingEnabled = true;
-			   this->catalogAddressShippingListComboBox->Location = System::Drawing::Point(649, 197);
-			   this->catalogAddressShippingListComboBox->Name = L"catalogAddressShippingListComboBox";
-			   this->catalogAddressShippingListComboBox->Size = System::Drawing::Size(246, 24);
-			   this->catalogAddressShippingListComboBox->TabIndex = 5;
-			   // 
-			   // catalogAddressBillingListComboBox
-			   // 
-			   this->catalogAddressBillingListComboBox->FormattingEnabled = true;
-			   this->catalogAddressBillingListComboBox->Location = System::Drawing::Point(649, 112);
-			   this->catalogAddressBillingListComboBox->Name = L"catalogAddressBillingListComboBox";
-			   this->catalogAddressBillingListComboBox->Size = System::Drawing::Size(246, 24);
-			   this->catalogAddressBillingListComboBox->TabIndex = 4;
-			   // 
-			   // catalogCheckoutButton
-			   // 
-			   this->catalogCheckoutButton->Location = System::Drawing::Point(763, 300);
-			   this->catalogCheckoutButton->Name = L"catalogCheckoutButton";
-			   this->catalogCheckoutButton->Size = System::Drawing::Size(122, 40);
-			   this->catalogCheckoutButton->TabIndex = 3;
-			   this->catalogCheckoutButton->Text = L"Checkout";
-			   this->catalogCheckoutButton->UseVisualStyleBackColor = true;
-			   this->catalogCheckoutButton->Click += gcnew System::EventHandler(this, &MyForm::catalogCheckoutButton_Click);
-			   // 
-			   // catalogBackButton
-			   // 
-			   this->catalogBackButton->Location = System::Drawing::Point(662, 300);
-			   this->catalogBackButton->Name = L"catalogBackButton";
-			   this->catalogBackButton->Size = System::Drawing::Size(85, 40);
-			   this->catalogBackButton->TabIndex = 2;
-			   this->catalogBackButton->Text = L"Back";
-			   this->catalogBackButton->UseVisualStyleBackColor = true;
-			   this->catalogBackButton->Click += gcnew System::EventHandler(this, &MyForm::menuCatalogButton_Click);
-			   // 
-			   // catalogSelectedListView
-			   // 
-			   this->catalogSelectedListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->catalogSelectedListView->HideSelection = false;
-			   this->catalogSelectedListView->Location = System::Drawing::Point(37, 77);
-			   this->catalogSelectedListView->Name = L"catalogSelectedListView";
-			   this->catalogSelectedListView->Size = System::Drawing::Size(571, 496);
-			   this->catalogSelectedListView->TabIndex = 1;
-			   this->catalogSelectedListView->UseCompatibleStateImageBehavior = false;
-			   this->catalogSelectedListView->View = System::Windows::Forms::View::List;
-			   this->catalogSelectedListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::catalogSelectedListView_DoubleClick);
-			   // 
-			   // catalogCartTitleLabel
-			   // 
-			   this->catalogCartTitleLabel->AutoSize = true;
-			   this->catalogCartTitleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->catalogCartTitleLabel->Location = System::Drawing::Point(7, 12);
-			   this->catalogCartTitleLabel->Name = L"catalogCartTitleLabel";
-			   this->catalogCartTitleLabel->Size = System::Drawing::Size(83, 38);
-			   this->catalogCartTitleLabel->TabIndex = 0;
-			   this->catalogCartTitleLabel->Text = L"Cart";
-			   // 
 			   // logoPictureBox
 			   // 
 			   this->logoPictureBox->BackColor = System::Drawing::Color::White;
@@ -3477,6 +3454,15 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->accountPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			   this->hubPanel->ResumeLayout(false);
+			   this->employeeModifyPanel->ResumeLayout(false);
+			   this->employeeModifyPanel->PerformLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->EndInit();
+			   this->preCatalogPanel->ResumeLayout(false);
+			   this->preCatalogPanel->PerformLayout();
+			   this->catalogOrderPanel->ResumeLayout(false);
+			   this->catalogOrderPanel->PerformLayout();
+			   this->catalogCartPanel->ResumeLayout(false);
+			   this->catalogCartPanel->PerformLayout();
 			   this->statisticMPanel->ResumeLayout(false);
 			   this->simulationPanel->ResumeLayout(false);
 			   this->simulationPanel->PerformLayout();
@@ -3488,15 +3474,6 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->clientModifyPanel->ResumeLayout(false);
 			   this->clientModifyPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->EndInit();
-			   this->employeeModifyPanel->ResumeLayout(false);
-			   this->employeeModifyPanel->PerformLayout();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->EndInit();
-			   this->preCatalogPanel->ResumeLayout(false);
-			   this->preCatalogPanel->PerformLayout();
-			   this->catalogOrderPanel->ResumeLayout(false);
-			   this->catalogOrderPanel->PerformLayout();
-			   this->catalogCartPanel->ResumeLayout(false);
-			   this->catalogCartPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->EndInit();
 			   this->ResumeLayout(false);
 
