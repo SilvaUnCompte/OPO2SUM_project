@@ -118,10 +118,10 @@ namespace OPO2SUMproject {
 
 
 	private: System::Windows::Forms::Label^ clientModifyUsernameLabel;
-private: System::Windows::Forms::TextBox^ clientModifyBirthdayTextBox;
-private: System::Windows::Forms::TextBox^ clientModifyLastnameTextBox;
-private: System::Windows::Forms::TextBox^ clientModifyFirstnameTextBox;
-private: System::Windows::Forms::TextBox^ clientModifyUsernameTextBox;
+	private: System::Windows::Forms::TextBox^ clientModifyBirthdayTextBox;
+	private: System::Windows::Forms::TextBox^ clientModifyLastnameTextBox;
+	private: System::Windows::Forms::TextBox^ clientModifyFirstnameTextBox;
+	private: System::Windows::Forms::TextBox^ clientModifyUsernameTextBox;
 
 
 
@@ -132,7 +132,7 @@ private: System::Windows::Forms::TextBox^ clientModifyUsernameTextBox;
 
 
 
-private: System::Windows::Forms::NumericUpDown^ clientModifyPostalCodeNumericUpDown;
+	private: System::Windows::Forms::NumericUpDown^ clientModifyPostalCodeNumericUpDown;
 
 
 
@@ -140,7 +140,7 @@ private: System::Windows::Forms::NumericUpDown^ clientModifyPostalCodeNumericUpD
 
 
 	private: System::Windows::Forms::Label^ clientModifyErrorBoxLabel;
-private: System::Windows::Forms::Button^ clientModifyDeleteAddressButton;
+	private: System::Windows::Forms::Button^ clientModifyDeleteAddressButton;
 
 
 
@@ -153,70 +153,63 @@ private: System::Windows::Forms::Button^ clientModifyDeleteAddressButton;
 		Account^ connectedClient;
 		Account^ connectedEmployee;
 		Address^ connectedClientAddress;
-private: System::Windows::Forms::Button^ clientModifyAddAddressButton;
+	private: System::Windows::Forms::Button^ clientModifyAddAddressButton;
+	private: System::Windows::Forms::Button^ employeeAddNewEmployeeButton;
+	private: System::Windows::Forms::Panel^ panel3;
+	private: System::Windows::Forms::Button^ employeeModifyAddAddressButton;
+	private: System::Windows::Forms::Label^ employeeModifyErrorBoxLabel;
+	private: System::Windows::Forms::NumericUpDown^ employeeModifyPostalCodeNumericUpDown;
+	private: System::Windows::Forms::Button^ employeeModifyApplyModifButton;
+	private: System::Windows::Forms::Label^ employeeModifyMoreInfoLabel;
+	private: System::Windows::Forms::Label^ employeeModifyPostalCodeLabel;
+	private: System::Windows::Forms::Label^ employeeModifyCityLabel;
+	private: System::Windows::Forms::Label^ employeeModifyAddressStreetLabel;
+	private: System::Windows::Forms::TextBox^ employeeModifyMoreInfoTextBox;
+	private: System::Windows::Forms::TextBox^ employeeModifyCityTextBox;
+	private: System::Windows::Forms::TextBox^ employeeModifyAddressStreetTextBox;
+	private: System::Windows::Forms::Label^ employeeModifyAddressLabel;
+	private: System::Windows::Forms::Label^ employeeModifyBirthdayLabel;
+	private: System::Windows::Forms::Label^ employeeModifyLastnameLabel;
+	private: System::Windows::Forms::Label^ employeeModifyFirstnameLabel;
+	private: System::Windows::Forms::Label^ employeeModifyUsernameLabel;
+	private: System::Windows::Forms::TextBox^ employeeModifyHireDateTextBox;
+	private: System::Windows::Forms::TextBox^ employeeModifyLastnameTextBox;
+	private: System::Windows::Forms::TextBox^ employeeModifyFirstnameTextBox;
+	private: System::Windows::Forms::TextBox^ employeeModifyUsernameTextBox;
+	private: System::Windows::Forms::Label^ employeeModifyInformationsLabel;
+	private: System::Windows::Forms::Label^ employeeModifyHireDateLabel;
+	private: System::Windows::Forms::Button^ employeeModifyDeleteAddressButton;
+	private: System::Windows::Forms::Label^ employeeModifyAddressPickerLabel;
+	private: System::Windows::Forms::ComboBox^ employeeModifyAddressPickerComboBox;
+	private: System::Windows::Forms::ListView^ employeeListView;
+	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::CheckBox^ checkBox1;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker3;
+	private: System::Windows::Forms::TextBox^ employeeModifyBirthdayTextBox;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeLabel;
+	private: System::Windows::Forms::DateTimePicker^ employeeAddEmployeeHireDateDateTimePicker;
+	private: System::Windows::Forms::DateTimePicker^ employeeAddEmployeeBirthdayDateTimePicker;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeHireDateLabel;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeUsernameLabel;
+	private: System::Windows::Forms::TextBox^ employeeAddEmployeeUsernameTextBox;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeBirthdayLabel;
+	private: System::Windows::Forms::TextBox^ employeeAddEmployeeFirstnameTextBox;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeLastnameLabel;
+	private: System::Windows::Forms::TextBox^ employeeAddEmployeeLastnameTextbox;
+	private: System::Windows::Forms::Label^ employeeAddEmployeeFirstnameLabel;
+	private: System::Windows::Forms::Button^ employeeAddEmployeeAddButton;
 
 
+	private: System::Windows::Forms::CheckBox^ employeeAddEmployeeManagerCheckBox;
 
-private: System::Windows::Forms::Button^ clientAddClientButton;
-private: System::Windows::Forms::Panel^ panel3;
-private: System::Windows::Forms::Button^ employeeModifyAddAddressButton;
+		   AddressManager^ addressManager = gcnew AddressManager();
+		   PersonnelManager^ personnelManager = gcnew PersonnelManager();
+private: System::Windows::Forms::Label^ employeeAddEmployeePasswordLabel;
+private: System::Windows::Forms::TextBox^ employeeAddEmployeePasswordTextBox;
+private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
+private: System::Windows::Forms::Button^ employeeAddEmployeeCancelButton;
+	   AccountManager^ accountManager = gcnew AccountManager();
 
-
-
-
-
-
-private: System::Windows::Forms::Label^ employeeModifyErrorBoxLabel;
-private: System::Windows::Forms::NumericUpDown^ employeeModifyPostalCodeNumericUpDown;
-private: System::Windows::Forms::Button^ employeeModifyApplyModifButton;
-
-
-
-
-private: System::Windows::Forms::Label^ employeeModifyMoreInfoLabel;
-
-private: System::Windows::Forms::Label^ employeeModifyPostalCodeLabel;
-
-private: System::Windows::Forms::Label^ employeeModifyCityLabel;
-
-private: System::Windows::Forms::Label^ employeeModifyAddressStreetLabel;
-private: System::Windows::Forms::TextBox^ employeeModifyMoreInfoTextBox;
-
-
-private: System::Windows::Forms::TextBox^ employeeModifyCityTextBox;
-
-private: System::Windows::Forms::TextBox^ employeeModifyAddressStreetTextBox;
-
-
-private: System::Windows::Forms::Label^ employeeModifyAddressLabel;
-
-private: System::Windows::Forms::Label^ employeeModifyBirthdayLabel;
-
-private: System::Windows::Forms::Label^ employeeModifyLastnameLabel;
-
-private: System::Windows::Forms::Label^ employeeModifyFirstnameLabel;
-
-private: System::Windows::Forms::Label^ employeeModifyUsernameLabel;
-private: System::Windows::Forms::TextBox^ employeeModifyHireDateTextBox;
-
-
-private: System::Windows::Forms::TextBox^ employeeModifyLastnameTextBox;
-
-private: System::Windows::Forms::TextBox^ employeeModifyFirstnameTextBox;
-private: System::Windows::Forms::TextBox^ employeeModifyUsernameTextBox;
-
-
-
-private: System::Windows::Forms::Label^ employeeModifyInformationsLabel;
-private: System::Windows::Forms::Label^ employeeModifyHireDateLabel;
-private: System::Windows::Forms::TextBox^ employeeModifyBirthdayTextBox;
-private: System::Windows::Forms::Button^ employeeModifyDeleteAddressButton;
-private: System::Windows::Forms::Label^ employeeModifyAddressPickerLabel;
-private: System::Windows::Forms::ComboBox^ employeeModifyAddressPickerComboBox;
-private: System::Windows::Forms::ListView^ employeeListView;
-
-
-	   AddressManager^ addressManager = gcnew AddressManager();
 		   /// <summary>
 		   /// Variable nécessaire au concepteur.
 		   /// </summary>
@@ -278,8 +271,10 @@ private: System::Windows::Forms::ListView^ employeeListView;
 			   this->clientModifyFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
 			   this->clientModifyUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
 			   this->clientModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientAddClientButton = (gcnew System::Windows::Forms::Button());
+			   this->employeeAddNewEmployeeButton = (gcnew System::Windows::Forms::Button());
 			   this->panel3 = (gcnew System::Windows::Forms::Panel());
+			   this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			   this->dateTimePicker3 = (gcnew System::Windows::Forms::DateTimePicker());
 			   this->employeeModifyDeleteAddressButton = (gcnew System::Windows::Forms::Button());
 			   this->employeeModifyAddressPickerLabel = (gcnew System::Windows::Forms::Label());
 			   this->employeeModifyHireDateLabel = (gcnew System::Windows::Forms::Label());
@@ -307,12 +302,31 @@ private: System::Windows::Forms::ListView^ employeeListView;
 			   this->employeeModifyUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
 			   this->employeeModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
 			   this->employeeListView = (gcnew System::Windows::Forms::ListView());
+			   this->panel2 = (gcnew System::Windows::Forms::Panel());
+			   this->employeeAddEmployeeCancelButton = (gcnew System::Windows::Forms::Button());
+			   this->employeeAddEmployeeErrorBoxLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeePasswordLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeePasswordTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeAddEmployeeAddButton = (gcnew System::Windows::Forms::Button());
+			   this->employeeAddEmployeeManagerCheckBox = (gcnew System::Windows::Forms::CheckBox());
+			   this->employeeAddEmployeeLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeHireDateDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			   this->employeeAddEmployeeBirthdayDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			   this->employeeAddEmployeeHireDateLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeUsernameLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeAddEmployeeBirthdayLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeAddEmployeeLastnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->employeeAddEmployeeLastnameTextbox = (gcnew System::Windows::Forms::TextBox());
+			   this->employeeAddEmployeeFirstnameLabel = (gcnew System::Windows::Forms::Label());
 			   this->loginPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
 			   this->panel1->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->BeginInit();
 			   this->panel3->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->BeginInit();
+			   this->panel2->SuspendLayout();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
@@ -576,7 +590,7 @@ private: System::Windows::Forms::ListView^ employeeListView;
 			   // clientListView
 			   // 
 			   this->clientListView->HideSelection = false;
-			   this->clientListView->Location = System::Drawing::Point(414, 150);
+			   this->clientListView->Location = System::Drawing::Point(708, 553);
 			   this->clientListView->Name = L"clientListView";
 			   this->clientListView->Size = System::Drawing::Size(359, 333);
 			   this->clientListView->TabIndex = 13;
@@ -610,7 +624,7 @@ private: System::Windows::Forms::ListView^ employeeListView;
 			   this->panel1->Controls->Add(this->clientModifyFirstnameTextBox);
 			   this->panel1->Controls->Add(this->clientModifyUsernameTextBox);
 			   this->panel1->Controls->Add(this->clientModifyInformationsLabel);
-			   this->panel1->Location = System::Drawing::Point(779, 54);
+			   this->panel1->Location = System::Drawing::Point(19, 527);
 			   this->panel1->Name = L"panel1";
 			   this->panel1->Size = System::Drawing::Size(683, 429);
 			   this->panel1->TabIndex = 15;
@@ -826,17 +840,20 @@ private: System::Windows::Forms::ListView^ employeeListView;
 			   this->clientModifyInformationsLabel->TabIndex = 0;
 			   this->clientModifyInformationsLabel->Text = L"Informations";
 			   // 
-			   // clientAddClientButton
+			   // employeeAddNewEmployeeButton
 			   // 
-			   this->clientAddClientButton->Location = System::Drawing::Point(631, 113);
-			   this->clientAddClientButton->Name = L"clientAddClientButton";
-			   this->clientAddClientButton->Size = System::Drawing::Size(126, 23);
-			   this->clientAddClientButton->TabIndex = 16;
-			   this->clientAddClientButton->Text = L"Add Client";
-			   this->clientAddClientButton->UseVisualStyleBackColor = true;
+			   this->employeeAddNewEmployeeButton->Location = System::Drawing::Point(622, 107);
+			   this->employeeAddNewEmployeeButton->Name = L"employeeAddNewEmployeeButton";
+			   this->employeeAddNewEmployeeButton->Size = System::Drawing::Size(126, 23);
+			   this->employeeAddNewEmployeeButton->TabIndex = 16;
+			   this->employeeAddNewEmployeeButton->Text = L"Add Employee";
+			   this->employeeAddNewEmployeeButton->UseVisualStyleBackColor = true;
+			   this->employeeAddNewEmployeeButton->Click += gcnew System::EventHandler(this, &MyForm::employeeAddNewEmployeeButton_Click);
 			   // 
 			   // panel3
 			   // 
+			   this->panel3->Controls->Add(this->checkBox1);
+			   this->panel3->Controls->Add(this->dateTimePicker3);
 			   this->panel3->Controls->Add(this->employeeModifyDeleteAddressButton);
 			   this->panel3->Controls->Add(this->employeeModifyAddressPickerLabel);
 			   this->panel3->Controls->Add(this->employeeModifyHireDateLabel);
@@ -863,10 +880,27 @@ private: System::Windows::Forms::ListView^ employeeListView;
 			   this->panel3->Controls->Add(this->employeeModifyFirstnameTextBox);
 			   this->panel3->Controls->Add(this->employeeModifyUsernameTextBox);
 			   this->panel3->Controls->Add(this->employeeModifyInformationsLabel);
-			   this->panel3->Location = System::Drawing::Point(403, 503);
+			   this->panel3->Location = System::Drawing::Point(754, 31);
 			   this->panel3->Name = L"panel3";
 			   this->panel3->Size = System::Drawing::Size(683, 478);
 			   this->panel3->TabIndex = 28;
+			   // 
+			   // checkBox1
+			   // 
+			   this->checkBox1->AutoSize = true;
+			   this->checkBox1->Location = System::Drawing::Point(513, 170);
+			   this->checkBox1->Name = L"checkBox1";
+			   this->checkBox1->Size = System::Drawing::Size(93, 21);
+			   this->checkBox1->TabIndex = 32;
+			   this->checkBox1->Text = L"Manager";
+			   this->checkBox1->UseVisualStyleBackColor = true;
+			   // 
+			   // dateTimePicker3
+			   // 
+			   this->dateTimePicker3->Location = System::Drawing::Point(279, 198);
+			   this->dateTimePicker3->Name = L"dateTimePicker3";
+			   this->dateTimePicker3->Size = System::Drawing::Size(200, 22);
+			   this->dateTimePicker3->TabIndex = 31;
 			   // 
 			   // employeeModifyDeleteAddressButton
 			   // 
@@ -1094,7 +1128,7 @@ private: System::Windows::Forms::ListView^ employeeListView;
 			   // employeeListView
 			   // 
 			   this->employeeListView->HideSelection = false;
-			   this->employeeListView->Location = System::Drawing::Point(9, 503);
+			   this->employeeListView->Location = System::Drawing::Point(389, 136);
 			   this->employeeListView->Name = L"employeeListView";
 			   this->employeeListView->Size = System::Drawing::Size(359, 333);
 			   this->employeeListView->TabIndex = 29;
@@ -1102,15 +1136,187 @@ private: System::Windows::Forms::ListView^ employeeListView;
 			   this->employeeListView->View = System::Windows::Forms::View::List;
 			   this->employeeListView->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::employeeListView_Click);
 			   // 
+			   // panel2
+			   // 
+			   this->panel2->Controls->Add(this->employeeAddEmployeeCancelButton);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeErrorBoxLabel);
+			   this->panel2->Controls->Add(this->employeeAddEmployeePasswordLabel);
+			   this->panel2->Controls->Add(this->employeeAddEmployeePasswordTextBox);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeAddButton);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeManagerCheckBox);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeLabel);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeHireDateDateTimePicker);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeBirthdayDateTimePicker);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeHireDateLabel);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeUsernameLabel);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeUsernameTextBox);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeBirthdayLabel);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeFirstnameTextBox);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeLastnameLabel);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeLastnameTextbox);
+			   this->panel2->Controls->Add(this->employeeAddEmployeeFirstnameLabel);
+			   this->panel2->Location = System::Drawing::Point(754, 28);
+			   this->panel2->Name = L"panel2";
+			   this->panel2->Size = System::Drawing::Size(696, 478);
+			   this->panel2->TabIndex = 28;
+			   this->panel2->Visible = false;
+			   // 
+			   // employeeAddEmployeeCancelButton
+			   // 
+			   this->employeeAddEmployeeCancelButton->Location = System::Drawing::Point(390, 434);
+			   this->employeeAddEmployeeCancelButton->Name = L"employeeAddEmployeeCancelButton";
+			   this->employeeAddEmployeeCancelButton->RightToLeft = System::Windows::Forms::RightToLeft::Yes;
+			   this->employeeAddEmployeeCancelButton->Size = System::Drawing::Size(85, 23);
+			   this->employeeAddEmployeeCancelButton->TabIndex = 48;
+			   this->employeeAddEmployeeCancelButton->Text = L"CANCEL";
+			   this->employeeAddEmployeeCancelButton->UseVisualStyleBackColor = true;
+			   this->employeeAddEmployeeCancelButton->Click += gcnew System::EventHandler(this, &MyForm::employeeAddEmployeeCancelButton_Click);
+			   // 
+			   // employeeAddEmployeeErrorBoxLabel
+			   // 
+			   this->employeeAddEmployeeErrorBoxLabel->AutoSize = true;
+			   this->employeeAddEmployeeErrorBoxLabel->Location = System::Drawing::Point(234, 397);
+			   this->employeeAddEmployeeErrorBoxLabel->Name = L"employeeAddEmployeeErrorBoxLabel";
+			   this->employeeAddEmployeeErrorBoxLabel->Size = System::Drawing::Size(0, 17);
+			   this->employeeAddEmployeeErrorBoxLabel->TabIndex = 47;
+			   // 
+			   // employeeAddEmployeePasswordLabel
+			   // 
+			   this->employeeAddEmployeePasswordLabel->AutoSize = true;
+			   this->employeeAddEmployeePasswordLabel->Location = System::Drawing::Point(235, 224);
+			   this->employeeAddEmployeePasswordLabel->Name = L"employeeAddEmployeePasswordLabel";
+			   this->employeeAddEmployeePasswordLabel->Size = System::Drawing::Size(77, 17);
+			   this->employeeAddEmployeePasswordLabel->TabIndex = 46;
+			   this->employeeAddEmployeePasswordLabel->Text = L"Password";
+			   // 
+			   // employeeAddEmployeePasswordTextBox
+			   // 
+			   this->employeeAddEmployeePasswordTextBox->Location = System::Drawing::Point(229, 244);
+			   this->employeeAddEmployeePasswordTextBox->Name = L"employeeAddEmployeePasswordTextBox";
+			   this->employeeAddEmployeePasswordTextBox->Size = System::Drawing::Size(201, 22);
+			   this->employeeAddEmployeePasswordTextBox->TabIndex = 45;
+			   // 
+			   // employeeAddEmployeeAddButton
+			   // 
+			   this->employeeAddEmployeeAddButton->Location = System::Drawing::Point(287, 433);
+			   this->employeeAddEmployeeAddButton->Name = L"employeeAddEmployeeAddButton";
+			   this->employeeAddEmployeeAddButton->Size = System::Drawing::Size(75, 23);
+			   this->employeeAddEmployeeAddButton->TabIndex = 44;
+			   this->employeeAddEmployeeAddButton->Text = L"ADD";
+			   this->employeeAddEmployeeAddButton->UseVisualStyleBackColor = true;
+			   this->employeeAddEmployeeAddButton->Click += gcnew System::EventHandler(this, &MyForm::employeeAddEmployeeAddButton_Click);
+			   // 
+			   // employeeAddEmployeeManagerCheckBox
+			   // 
+			   this->employeeAddEmployeeManagerCheckBox->AutoSize = true;
+			   this->employeeAddEmployeeManagerCheckBox->Location = System::Drawing::Point(174, 434);
+			   this->employeeAddEmployeeManagerCheckBox->Name = L"employeeAddEmployeeManagerCheckBox";
+			   this->employeeAddEmployeeManagerCheckBox->Size = System::Drawing::Size(93, 21);
+			   this->employeeAddEmployeeManagerCheckBox->TabIndex = 43;
+			   this->employeeAddEmployeeManagerCheckBox->Text = L"Manager";
+			   this->employeeAddEmployeeManagerCheckBox->UseVisualStyleBackColor = true;
+			   // 
+			   // employeeAddEmployeeLabel
+			   // 
+			   this->employeeAddEmployeeLabel->AutoSize = true;
+			   this->employeeAddEmployeeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 22.2F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->employeeAddEmployeeLabel->Location = System::Drawing::Point(165, 18);
+			   this->employeeAddEmployeeLabel->Name = L"employeeAddEmployeeLabel";
+			   this->employeeAddEmployeeLabel->Size = System::Drawing::Size(329, 50);
+			   this->employeeAddEmployeeLabel->TabIndex = 28;
+			   this->employeeAddEmployeeLabel->Text = L"ADD EMPLOYEE";
+			   // 
+			   // employeeAddEmployeeHireDateDateTimePicker
+			   // 
+			   this->employeeAddEmployeeHireDateDateTimePicker->Location = System::Drawing::Point(229, 356);
+			   this->employeeAddEmployeeHireDateDateTimePicker->Name = L"employeeAddEmployeeHireDateDateTimePicker";
+			   this->employeeAddEmployeeHireDateDateTimePicker->Size = System::Drawing::Size(200, 22);
+			   this->employeeAddEmployeeHireDateDateTimePicker->TabIndex = 42;
+			   // 
+			   // employeeAddEmployeeBirthdayDateTimePicker
+			   // 
+			   this->employeeAddEmployeeBirthdayDateTimePicker->Location = System::Drawing::Point(229, 299);
+			   this->employeeAddEmployeeBirthdayDateTimePicker->Name = L"employeeAddEmployeeBirthdayDateTimePicker";
+			   this->employeeAddEmployeeBirthdayDateTimePicker->Size = System::Drawing::Size(200, 22);
+			   this->employeeAddEmployeeBirthdayDateTimePicker->TabIndex = 41;
+			   // 
+			   // employeeAddEmployeeHireDateLabel
+			   // 
+			   this->employeeAddEmployeeHireDateLabel->AutoSize = true;
+			   this->employeeAddEmployeeHireDateLabel->Location = System::Drawing::Point(235, 334);
+			   this->employeeAddEmployeeHireDateLabel->Name = L"employeeAddEmployeeHireDateLabel";
+			   this->employeeAddEmployeeHireDateLabel->Size = System::Drawing::Size(77, 17);
+			   this->employeeAddEmployeeHireDateLabel->TabIndex = 40;
+			   this->employeeAddEmployeeHireDateLabel->Text = L"Hire Date";
+			   // 
+			   // employeeAddEmployeeUsernameLabel
+			   // 
+			   this->employeeAddEmployeeUsernameLabel->AutoSize = true;
+			   this->employeeAddEmployeeUsernameLabel->Location = System::Drawing::Point(235, 68);
+			   this->employeeAddEmployeeUsernameLabel->Name = L"employeeAddEmployeeUsernameLabel";
+			   this->employeeAddEmployeeUsernameLabel->Size = System::Drawing::Size(81, 17);
+			   this->employeeAddEmployeeUsernameLabel->TabIndex = 35;
+			   this->employeeAddEmployeeUsernameLabel->Text = L"Username";
+			   // 
+			   // employeeAddEmployeeUsernameTextBox
+			   // 
+			   this->employeeAddEmployeeUsernameTextBox->Location = System::Drawing::Point(229, 88);
+			   this->employeeAddEmployeeUsernameTextBox->Name = L"employeeAddEmployeeUsernameTextBox";
+			   this->employeeAddEmployeeUsernameTextBox->Size = System::Drawing::Size(200, 22);
+			   this->employeeAddEmployeeUsernameTextBox->TabIndex = 31;
+			   // 
+			   // employeeAddEmployeeBirthdayLabel
+			   // 
+			   this->employeeAddEmployeeBirthdayLabel->AutoSize = true;
+			   this->employeeAddEmployeeBirthdayLabel->Location = System::Drawing::Point(235, 279);
+			   this->employeeAddEmployeeBirthdayLabel->Name = L"employeeAddEmployeeBirthdayLabel";
+			   this->employeeAddEmployeeBirthdayLabel->Size = System::Drawing::Size(68, 17);
+			   this->employeeAddEmployeeBirthdayLabel->TabIndex = 38;
+			   this->employeeAddEmployeeBirthdayLabel->Text = L"Birthday";
+			   // 
+			   // employeeAddEmployeeFirstnameTextBox
+			   // 
+			   this->employeeAddEmployeeFirstnameTextBox->Location = System::Drawing::Point(229, 138);
+			   this->employeeAddEmployeeFirstnameTextBox->Name = L"employeeAddEmployeeFirstnameTextBox";
+			   this->employeeAddEmployeeFirstnameTextBox->Size = System::Drawing::Size(200, 22);
+			   this->employeeAddEmployeeFirstnameTextBox->TabIndex = 32;
+			   // 
+			   // employeeAddEmployeeLastnameLabel
+			   // 
+			   this->employeeAddEmployeeLastnameLabel->AutoSize = true;
+			   this->employeeAddEmployeeLastnameLabel->Location = System::Drawing::Point(235, 171);
+			   this->employeeAddEmployeeLastnameLabel->Name = L"employeeAddEmployeeLastnameLabel";
+			   this->employeeAddEmployeeLastnameLabel->Size = System::Drawing::Size(80, 17);
+			   this->employeeAddEmployeeLastnameLabel->TabIndex = 37;
+			   this->employeeAddEmployeeLastnameLabel->Text = L"LastName";
+			   // 
+			   // employeeAddEmployeeLastnameTextbox
+			   // 
+			   this->employeeAddEmployeeLastnameTextbox->Location = System::Drawing::Point(229, 191);
+			   this->employeeAddEmployeeLastnameTextbox->Name = L"employeeAddEmployeeLastnameTextbox";
+			   this->employeeAddEmployeeLastnameTextbox->Size = System::Drawing::Size(201, 22);
+			   this->employeeAddEmployeeLastnameTextbox->TabIndex = 33;
+			   // 
+			   // employeeAddEmployeeFirstnameLabel
+			   // 
+			   this->employeeAddEmployeeFirstnameLabel->AutoSize = true;
+			   this->employeeAddEmployeeFirstnameLabel->Location = System::Drawing::Point(234, 117);
+			   this->employeeAddEmployeeFirstnameLabel->Name = L"employeeAddEmployeeFirstnameLabel";
+			   this->employeeAddEmployeeFirstnameLabel->Size = System::Drawing::Size(79, 17);
+			   this->employeeAddEmployeeFirstnameLabel->TabIndex = 36;
+			   this->employeeAddEmployeeFirstnameLabel->Text = L"Firstname";
+			   // 
 			   // MyForm
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(9, 16);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			   this->BackColor = System::Drawing::SystemColors::ButtonFace;
-			   this->ClientSize = System::Drawing::Size(1924, 1055);
+			   this->ClientSize = System::Drawing::Size(1540, 845);
+			   this->Controls->Add(this->panel2);
 			   this->Controls->Add(this->employeeListView);
 			   this->Controls->Add(this->panel3);
-			   this->Controls->Add(this->clientAddClientButton);
+			   this->Controls->Add(this->employeeAddNewEmployeeButton);
 			   this->Controls->Add(this->panel1);
 			   this->Controls->Add(this->clientListView);
 			   this->Controls->Add(this->registerPanel);
@@ -1132,6 +1338,8 @@ private: System::Windows::Forms::ListView^ employeeListView;
 			   this->panel3->ResumeLayout(false);
 			   this->panel3->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->EndInit();
+			   this->panel2->ResumeLayout(false);
+			   this->panel2->PerformLayout();
 			   this->ResumeLayout(false);
 
 		   }
@@ -1201,7 +1409,6 @@ private: System::Windows::Forms::ListView^ employeeListView;
 		}
 		DataTableReaderTest->Close();
 	}
-
 	private: System::Void loginValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
 
@@ -1232,8 +1439,8 @@ private: System::Windows::Forms::ListView^ employeeListView;
 		}
 		DataTableReaderTest->Close();
 	}
-	
-	//CLIENT MANAGER PAGE ----------------------------------------------------------------
+
+		   //CLIENT MANAGER PAGE -----------------------------------------------------------------------------
 	private: void clientRefreshList() {
 		AccessData^ Adata = gcnew AccessData;
 		DataSet^ listClients = Adata->getRows("SELECT * FROM account WHERE permission_lv_account = 0", "Temp");
@@ -1257,7 +1464,6 @@ private: System::Windows::Forms::ListView^ employeeListView;
 	private: System::Void enableclientModifyApplyModifButton(System::Object^ sender, System::EventArgs^ e) {
 		this->clientModifyApplyModifButton->Enabled = true;
 	}
-
 	private: System::Void clientListView_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ selectedClient = clientListView->SelectedItems[0]->Text;
 
@@ -1272,7 +1478,6 @@ private: System::Windows::Forms::ListView^ employeeListView;
 		clientRefreshList();
 		refreshAddressPicker();
 	}
-
 	private: System::Void clientModifyApplyModifButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
 
@@ -1320,8 +1525,8 @@ private: System::Windows::Forms::ListView^ employeeListView;
 		}
 
 	};
-	
-	//EMPLOYEE MANAGER PAGE ---------------------------------------------------------------
+
+		   //EMPLOYEE MANAGER PAGE ----------------------------------------------------------------------------
 	private: void employeeRefreshList() {
 		AccessData^ Adata = gcnew AccessData;
 		DataSet^ listEmployees = Adata->getRows("SELECT * FROM account WHERE permission_lv_account = 1", "Temp");
@@ -1345,7 +1550,6 @@ private: System::Windows::Forms::ListView^ employeeListView;
 	private: System::Void enableEmployeeModifyButton(System::Object^ sender, System::EventArgs^ e) {
 		this->employeeModifyApplyModifButton->Enabled = true;
 	}
-
 	private: System::Void employeeListView_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ selectedEmployee = employeeListView->SelectedItems[0]->Text;
 		connectedEmployee = gcnew Account(int::Parse(selectedEmployee->Substring(0, selectedEmployee->IndexOf(" "))));
@@ -1369,7 +1573,6 @@ private: System::Windows::Forms::ListView^ employeeListView;
 		employeeRefreshList();
 		employeeRefreshAddressPicker();
 	}
-
 	private: System::Void employeeModifyApplyModifButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
 
@@ -1415,7 +1618,48 @@ private: System::Windows::Forms::ListView^ employeeListView;
 
 			employeeRefreshAddressPicker();
 		}
-
 	};
+
+		   //ADD EMPLOYEE ---------------------------------------------------------------------------------------
+	private: System::Void employeeAddNewEmployeeButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		panel2->Visible = true;
+	}
+	private: System::Void employeeAddEmployeeAddButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (this->employeeAddEmployeeFirstnameTextBox->Text == "" || this->employeeAddEmployeeLastnameTextbox->Text == "" || this->employeeAddEmployeePasswordTextBox->Text == "" || this->employeeAddEmployeeUsernameTextBox->Text == "") {
+			this->employeeAddEmployeeErrorBoxLabel->Text = "Please fill in all the Fields";
+			this->employeeAddEmployeeErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
+		}
+		else {
+			accountManager->insert(employeeAddEmployeeUsernameTextBox->Text, employeeAddEmployeePasswordTextBox->Text, employeeAddEmployeeFirstnameTextBox->Text, employeeAddEmployeeLastnameTextbox->Text, employeeAddEmployeeBirthdayDateTimePicker->Value.ToString()->Substring(0, 10), employeeAddEmployeeManagerCheckBox->Checked ? 2 : 1);
+			AccessData^ Adata = gcnew AccessData;
+			System::Data::DataSet^ lastAccount = Adata->getRows("SELECT TOP (1) id_account FROM account ORDER BY id_account DESC", "Temp");
+			System::Data::DataTableReader^ DataTableReaderTest = lastAccount->CreateDataReader();
+			DataTableReaderTest->Read();
+			int id_account = DataTableReaderTest->GetInt32(0);
+			DataTableReaderTest->Close();
+
+			personnelManager->insert(employeeAddEmployeeHireDateDateTimePicker->Value.ToString()->Substring(0, 10), employeeAddEmployeeManagerCheckBox->Checked ? 2 : 1, id_account);
+			
+			this->employeeAddEmployeeUsernameTextBox->Text = "";
+			this->employeeAddEmployeeFirstnameTextBox->Text = "";
+			this->employeeAddEmployeeLastnameTextbox->Text = "";
+			this->employeeAddEmployeePasswordTextBox->Text = "";
+			this->employeeAddEmployeeManagerCheckBox->Checked = false;
+			this->employeeAddEmployeeErrorBoxLabel->Text = "";
+
+			panel2->Visible = false;
+		}
+	}
+	private: System::Void employeeAddEmployeeCancelButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->employeeAddEmployeeUsernameTextBox->Text = "";
+		this->employeeAddEmployeeFirstnameTextBox->Text = "";
+		this->employeeAddEmployeeLastnameTextbox->Text = "";
+		this->employeeAddEmployeePasswordTextBox->Text = "";
+		this->employeeAddEmployeeManagerCheckBox->Checked = false;
+		this->employeeAddEmployeeErrorBoxLabel->Text = "";
+
+		panel2->Visible = false;
+	}
 };
-}
+};
+
