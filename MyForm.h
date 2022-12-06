@@ -1806,7 +1806,7 @@ private: System::Windows::Forms::Button^ disconnectButton;
 			   this->disconnectButton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->disconnectButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->disconnectButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F));
-			   this->disconnectButton->Location = System::Drawing::Point(915, 19);
+			   this->disconnectButton->Location = System::Drawing::Point(915, 12);
 			   this->disconnectButton->Name = L"disconnectButton";
 			   this->disconnectButton->Size = System::Drawing::Size(40, 40);
 			   this->disconnectButton->TabIndex = 1;
@@ -4444,7 +4444,8 @@ private: System::Windows::Forms::Button^ disconnectButton;
 		}
 
 		this->simulationResultLabel->ForeColor = Color::Black;
-		this->simulationResultLabel->Text = ((((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown)) * (1 + tva)).ToString();
+		this->simulationResultLabel->Text = "Stock price: " + ((((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown)) * (1 + tva)).ToString() +
+			"\nGlobal Marge: " + (((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown) - total_cost).ToString();
 	}
 
 	private: System::Void afficherPage_Click(System::Object^ sender, System::EventArgs^ e) {
