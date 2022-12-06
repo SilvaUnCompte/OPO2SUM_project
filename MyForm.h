@@ -194,6 +194,12 @@ namespace OPO2SUMproject {
 		ProductManager^ productManager = gcnew ProductManager();
 		OrderManager^ orderManager = gcnew OrderManager();
 		BillManager^ billManager = gcnew BillManager();
+
+
+		Account^ connectedClient;
+		Account^ connectedEmployee;
+		Address^ connectedClientAddress;
+		PersonnelManager^ personnelManager = gcnew PersonnelManager();
 	private: System::Windows::Forms::ListView^ orderGlobalListView;
 	private: System::Windows::Forms::TextBox^ orderFilterTextBox;
 	private: System::Windows::Forms::Panel^ preCatalogPanel;
@@ -4109,12 +4115,226 @@ namespace OPO2SUMproject {
 		MessageBox::Show(messageInBox);
 	}
 
+		   //CLIENT MANAGER PAGE -----------------------------------------------------------------------------
+	private: void clientRefreshList() {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ listClients = Adata->getRows("SELECT * FROM account WHERE permission_lv_account = 0", "Temp");
+		DataTable^ clients = listClients->Tables[0];
 
-		   // Client Manager -------------------------------------------------
+		clientListView->Items->Clear();
+		for (int i = 0; i < clients->Rows->Count; i++) {
+			DataRow^ rowData = clients->Rows[i];
+			clientListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString());
+		}
+	}
+	private: System::Void refreshAddressPicker() {
+		AccessData^ Adata = gcnew AccessData;
+		System::Data::DataSet^ listAddress = Adata->getRows("SELECT * FROM address WHERE id_account = " + connectedClient->get_id() + ";", "Temp");
+		this->clientModifyAddressPickerComboBox->DataSource = listAddress->Tables[0];
+		this->clientModifyAddressPickerComboBox->ValueMember = "id_address";
+		this->clientModifyAddressPickerComboBox->DisplayMember = "street";
+		this->clientModifyDeleteAddressButton->Enabled = (clientModifyAddressPickerComboBox->Items->Count > 0);
 
-		   // Personnel Manager -------------------------------------------------
+	}
+	private: System::Void enableclientModifyApplyModifButton(System::Object^ sender, System::EventArgs^ e) {
+		this->clientModifyApplyModifButton->Enabled = true;
+	}
+	private: System::Void clientListView_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ selectedClient = clientListView->SelectedItems[0]->Text;
 
-				  //(pense à remettre ton login dans le AccessData pour avoir ta bdd)
+		this->clientModifyErrorBoxLabel->Text = selectedClient;
+		connectedClient = gcnew Account(int::Parse(selectedClient->Substring(0, selectedClient->IndexOf(" "))));
+
+		this->clientModifyUsernameTextBox->Text = connectedClient->get_account_name();
+		this->clientModifyFirstnameTextBox->Text = connectedClient->get_firstname_account();
+		this->clientModifyLastnameTextBox->Text = connectedClient->get_lastname_account();
+		this->clientModifyBirthdayDateTimePicker->Text = connectedClient->get_birthday_account()->Substring(0, 10);
+
+		clientRefreshList();
+		refreshAddressPicker();
+	}
+	private: System::Void clientModifyApplyModifButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+
+		if (this->clientModifyFirstnameTextBox->Text == "" || this->clientModifyLastnameTextBox->Text == "") {
+			this->clientModifyErrorBoxLabel->Text = "Firstname and Lastname cannot be empty.";
+		}
+		else if (this->clientModifyFirstnameTextBox->Text == "" || this->clientModifyLastnameTextBox->Text == "") {
+			this->clientModifyErrorBoxLabel->Text = "Firstname and Lastname cannot be empty.";
+		}
+		else {
+			connectedClient->set_firstname_account(clientModifyFirstnameTextBox->Text);
+			connectedClient->set_lastname_account(clientModifyLastnameTextBox->Text);
+
+			/*if (this->accountPasswordTextBox->Text->Length >= 8) {
+				connectedAccount->set_password_account(accountPasswordTextBox->Text->GetHashCode().ToString());
+			}*/
+
+			AccountManager^ updateAccount = gcnew AccountManager();
+			updateAccount->update(connectedClient);
+
+			this->clientModifyErrorBoxLabel->Text = "Account updated.";
+			this->clientModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Green;
+			this->clientModifyApplyModifButton->Enabled = false;
+		}
+	}
+	private: System::Void clientModifyDeleteAddressButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		addressManager->deleteElement(int::Parse(this->clientModifyAddressPickerComboBox->SelectedValue->ToString()));
+		refreshAddressPicker();
+	}
+	private: System::Void clientModifyAddAddressButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (this->clientModifyAddressStreetTextBox->Text == "" || this->clientModifyPostalCodeNumericUpDown->Text == "" || this->clientModifyCityTextBox->Text == "") {
+			this->clientModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
+			this->clientModifyErrorBoxLabel->Text = "First three fields are required.";
+		}
+		else {
+			addressManager->insert(clientModifyAddressStreetTextBox->Text, clientModifyPostalCodeNumericUpDown->Text, clientModifyCityTextBox->Text, clientModifyMoreInfoTextBox->Text, connectedClient->get_id());
+			clientModifyAddressStreetTextBox->Text = "";
+			clientModifyPostalCodeNumericUpDown->Text = "";
+			clientModifyCityTextBox->Text = "";
+			clientModifyMoreInfoTextBox->Text = "";
+			this->clientModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Green;
+			this->clientModifyErrorBoxLabel->Text = "Address added.";
+
+			refreshAddressPicker();
+		}
+
+	};
+
+		   //EMPLOYEE MANAGER PAGE ----------------------------------------------------------------------------
+	private: void employeeRefreshList() {
+		AccessData^ Adata = gcnew AccessData;
+		DataSet^ listEmployees = Adata->getRows("SELECT * FROM account WHERE permission_lv_account = 1", "Temp");
+		DataTable^ employees = listEmployees->Tables[0];
+
+		employeeListView->Items->Clear();
+		for (int i = 0; i < employees->Rows->Count; i++) {
+			DataRow^ rowData = employees->Rows[i];
+			employeeListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString());
+		}
+	}
+	private: System::Void employeeRefreshAddressPicker() {
+		AccessData^ Adata = gcnew AccessData;
+		System::Data::DataSet^ listAddress = Adata->getRows("SELECT * FROM address WHERE id_account = " + connectedEmployee->get_id() + ";", "Temp");
+		this->employeeModifyAddressPickerComboBox->DataSource = listAddress->Tables[0];
+		this->employeeModifyAddressPickerComboBox->ValueMember = "id_address";
+		this->employeeModifyAddressPickerComboBox->DisplayMember = "street";
+		this->employeeModifyDeleteAddressButton->Enabled = (employeeModifyAddressPickerComboBox->Items->Count > 0);
+
+	}
+	private: System::Void enableEmployeeModifyButton(System::Object^ sender, System::EventArgs^ e) {
+		this->employeeModifyApplyModifButton->Enabled = true;
+	}
+	private: System::Void employeeListView_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ selectedEmployee = employeeListView->SelectedItems[0]->Text;
+		connectedEmployee = gcnew Account(int::Parse(selectedEmployee->Substring(0, selectedEmployee->IndexOf(" "))));
+		AccessData^ Adata = gcnew AccessData;
+		System::Data::DataSet^ ID = Adata->getRows("SELECT id_personnel FROM personnel WHERE id_account = " + connectedEmployee->get_id() + ";", "Temp");
+		System::Data::DataTableReader^ DataTableReader = ID->CreateDataReader();
+		DataTableReader->Read();
+
+		Personnel^ hireDate = gcnew Personnel(DataTableReader->GetInt32(0));
+
+		DataTableReader->Close();
+
+		this->employeeModifyErrorBoxLabel->Text = selectedEmployee;
+
+		this->employeeModifyUsernameTextBox->Text = connectedEmployee->get_account_name();
+		this->employeeModifyFirstnameTextBox->Text = connectedEmployee->get_firstname_account();
+		this->employeeModifyLastnameTextBox->Text = connectedEmployee->get_lastname_account();
+		this->employeeModifyBirthdayDateTimePicker->Text = connectedEmployee->get_birthday_account()->Substring(0, 10);
+		this->employeeModifyHireDateDateTimePicker->Text = hireDate->get_hire_date()->Substring(0, 10);
+
+		employeeRefreshList();
+		employeeRefreshAddressPicker();
+	}
+	private: System::Void employeeModifyApplyModifButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+
+		if (this->employeeModifyFirstnameTextBox->Text == "" || this->employeeModifyLastnameTextBox->Text == "") {
+			this->employeeModifyErrorBoxLabel->Text = "Firstname and Lastname cannot be empty.";
+		}
+		else if (this->employeeModifyFirstnameTextBox->Text == "" || this->employeeModifyLastnameTextBox->Text == "") {
+			this->employeeModifyErrorBoxLabel->Text = "Firstname and Lastname cannot be empty.";
+		}
+		else {
+			connectedEmployee->set_firstname_account(employeeModifyFirstnameTextBox->Text);
+			connectedEmployee->set_lastname_account(employeeModifyLastnameTextBox->Text);
+
+			/*if (this->accountPasswordTextBox->Text->Length >= 8) {
+				connectedAccount->set_password_account(accountPasswordTextBox->Text->GetHashCode().ToString());
+			}*/
+
+			AccountManager^ updateAccount = gcnew AccountManager();
+			updateAccount->update(connectedEmployee);
+
+			this->employeeModifyErrorBoxLabel->Text = "Account updated.";
+			this->employeeModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Green;
+			this->employeeModifyApplyModifButton->Enabled = false;
+		}
+	}
+	private: System::Void employeeModifyDeleteAddressButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		addressManager->deleteElement(int::Parse(this->employeeModifyAddressPickerComboBox->SelectedValue->ToString()));
+		employeeRefreshAddressPicker();
+	}
+	private: System::Void employeeModifyAddAddressButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (this->employeeModifyAddressStreetTextBox->Text == "" || this->employeeModifyPostalCodeNumericUpDown->Text == "" || this->employeeModifyCityTextBox->Text == "") {
+			this->employeeModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
+			this->employeeModifyErrorBoxLabel->Text = "First three fields are required.";
+		}
+		else {
+			addressManager->insert(employeeModifyAddressStreetTextBox->Text, employeeModifyPostalCodeNumericUpDown->Text, employeeModifyCityTextBox->Text, employeeModifyMoreInfoTextBox->Text, connectedEmployee->get_id());
+			employeeModifyAddressStreetTextBox->Text = "";
+			employeeModifyPostalCodeNumericUpDown->Text = "";
+			employeeModifyCityTextBox->Text = "";
+			employeeModifyMoreInfoTextBox->Text = "";
+			this->employeeModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Green;
+			this->employeeModifyErrorBoxLabel->Text = "Address added.";
+
+			employeeRefreshAddressPicker();
+		}
+	};
+
+		   //ADD EMPLOYEE ---------------------------------------------------------------------------------------
+	private: System::Void employeeAddNewEmployeeButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		//panel2->Visible = true;
+	}
+	private: System::Void employeeAddEmployeeAddButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (this->employeeAddEmployeeFirstnameTextBox->Text == "" || this->employeeAddEmployeeLastnameTextbox->Text == "" || this->employeeAddEmployeePasswordTextBox->Text == "" || this->employeeAddEmployeeUsernameTextBox->Text == "") {
+			this->employeeAddEmployeeErrorBoxLabel->Text = "Please fill in all the Fields";
+			this->employeeAddEmployeeErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
+		}
+		else {
+			accountManager->insert(employeeAddEmployeeUsernameTextBox->Text, employeeAddEmployeePasswordTextBox->Text, employeeAddEmployeeFirstnameTextBox->Text, employeeAddEmployeeLastnameTextbox->Text, employeeAddEmployeeBirthdayDateTimePicker->Value.ToString()->Substring(0, 10), employeeAddEmployeeManagerCheckBox->Checked ? 2 : 1);
+			AccessData^ Adata = gcnew AccessData;
+			System::Data::DataSet^ lastAccount = Adata->getRows("SELECT TOP (1) id_account FROM account ORDER BY id_account DESC", "Temp");
+			System::Data::DataTableReader^ DataTableReaderTest = lastAccount->CreateDataReader();
+			DataTableReaderTest->Read();
+			int id_account = DataTableReaderTest->GetInt32(0);
+			DataTableReaderTest->Close();
+
+			personnelManager->insert(employeeAddEmployeeHireDateDateTimePicker->Value.ToString()->Substring(0, 10), employeeAddEmployeeManagerCheckBox->Checked ? 2 : 1, id_account);
+
+			this->employeeAddEmployeeUsernameTextBox->Text = "";
+			this->employeeAddEmployeeFirstnameTextBox->Text = "";
+			this->employeeAddEmployeeLastnameTextbox->Text = "";
+			this->employeeAddEmployeePasswordTextBox->Text = "";
+			this->employeeAddEmployeeManagerCheckBox->Checked = false;
+			this->employeeAddEmployeeErrorBoxLabel->Text = "";
+
+			//panel2->Visible = false;
+		}
+	}
+	private: System::Void employeeAddEmployeeCancelButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->employeeAddEmployeeUsernameTextBox->Text = "";
+		this->employeeAddEmployeeFirstnameTextBox->Text = "";
+		this->employeeAddEmployeeLastnameTextbox->Text = "";
+		this->employeeAddEmployeePasswordTextBox->Text = "";
+		this->employeeAddEmployeeManagerCheckBox->Checked = false;
+		this->employeeAddEmployeeErrorBoxLabel->Text = "";
+
+		//panel2->Visible = false;
+	}
 
 
 
@@ -4170,7 +4390,7 @@ namespace OPO2SUMproject {
 		employeeAddEmployeePanel->Visible = true;
 	}
 
-	// Gestion simultation ---------------------------------------
+		   // Gestion simultation ---------------------------------------
 
 	private: System::Void simulationEntryPriceTextBox_Invalide() {
 		this->simulationResultLabel->Text = "Invalide entry";
