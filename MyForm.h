@@ -84,16 +84,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TextBox^ registerPasswordTextBox;
 	private: System::Windows::Forms::TextBox^ registerUsernameTextBox;
 	private: System::Windows::Forms::Label^ registerUsernameLabel;
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^ addStockValidateButton;
 	private: System::Windows::Forms::TextBox^ addStockQuantityTextBox;
 	private: System::Windows::Forms::TextBox^ addStockNameTextBox;
@@ -101,7 +91,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ addStockNameLabel;
 	private: System::Windows::Forms::Label^ addStockTitleLabel;
 	private: System::Windows::Forms::Button^ addStockExitButton;
-
 	private: System::Windows::Forms::Label^ stockMLabel;
 	private: System::Windows::Forms::Label^ informationStockNameLabel;
 	private: System::Windows::Forms::Label^ addStockStockLabel;
@@ -160,7 +149,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ accountErrorAddAddressLabel;
 	private: System::Windows::Forms::NumericUpDown^ accountAddressPostalNumericUpDown;
 	private: System::Windows::Forms::Label^ accountSeparatorLabel;
-
 	private: System::Windows::Forms::Button^ stockMAddButton;
 	private: System::Windows::Forms::Button^ catalogCartButton;
 	private: System::Windows::Forms::ListView^ catalogGlobalListView;
@@ -175,7 +163,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Button^ catalogCheckoutButton;
 	private: System::Windows::Forms::Button^ catalogBackButton;
 	private: System::Windows::Forms::ListView^ catalogSelectedListView;
-
 	private: System::Windows::Forms::Button^ Purchase_Value_button;
 	private: System::Windows::Forms::Button^ Commercial_Value_button;
 	private: System::Windows::Forms::Button^ buys_down_button;
@@ -185,26 +172,22 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Button^ turnover_button;
 	private: System::Windows::Forms::Button^ Panier_Poyen_Button;
 	private: System::Windows::Forms::Label^ stat_label;
-
-
 	private:
 		Account^ connectedAccount;
+		AccountManager^ accountManager = gcnew AccountManager();
 		AddressManager^ addressManager = gcnew AddressManager();
+		PersonnelManager^ personnelManager = gcnew PersonnelManager();
 		ContainManager^ containManager = gcnew ContainManager();
 		ProductManager^ productManager = gcnew ProductManager();
 		OrderManager^ orderManager = gcnew OrderManager();
 		BillManager^ billManager = gcnew BillManager();
-
-
 		Account^ connectedClient;
 		Account^ connectedEmployee;
 		Address^ connectedClientAddress;
-		PersonnelManager^ personnelManager = gcnew PersonnelManager();
 	private: System::Windows::Forms::ListView^ orderGlobalListView;
 	private: System::Windows::Forms::TextBox^ orderFilterTextBox;
 	private: System::Windows::Forms::Panel^ preCatalogPanel;
 	private: System::Windows::Forms::Label^ preCatalogSentenceLabel;
-
 	private: System::Windows::Forms::Button^ preCatalogLoginButton;
 	private: System::Windows::Forms::Label^ preCatalogTitleLabel;
 	private: System::Windows::Forms::Label^ preCatalogSearchLabel;
@@ -214,7 +197,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ registerCreateYourAccountLabel;
 	private: System::Windows::Forms::Label^ registerBlueBarLabel;
 	private: System::Windows::Forms::Label^ registerBlueBarLabel4;
-
 	private: System::Windows::Forms::Label^ registerBlueBarLabel2;
 	private: System::Windows::Forms::Label^ registerBlueBarLabel3;
 	private: System::Windows::Forms::Button^ loginReturnPreCatalogButton;
@@ -226,112 +208,57 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Panel^ clientModifyPanel;
 	private: System::Windows::Forms::Label^ clientModifyBarLabel;
 	private: System::Windows::Forms::NumericUpDown^ clientModifyPostalCodeNumericUpDown;
-
-
-
-
-
 	private: System::Windows::Forms::Button^ clientModifyAddAddressButton;
-
 	private: System::Windows::Forms::Button^ clientModifyDeleteAddressButton;
-
 	private: System::Windows::Forms::ComboBox^ clientModifyAddressPickerComboBox;
 	private: System::Windows::Forms::TextBox^ clientModifyMoreInfoTextBox;
-
-
-
 	private: System::Windows::Forms::TextBox^ clientModifyCityTextBox;
-
 	private: System::Windows::Forms::TextBox^ clientModifyAddressStreetTextBox;
-
-
-
 	private: System::Windows::Forms::TextBox^ clientModifyLastnameTextBox;
-
 	private: System::Windows::Forms::TextBox^ clientModifyFirstnameTextBox;
-
 	private: System::Windows::Forms::TextBox^ clientModifyUsernameTextBox;
 	private: System::Windows::Forms::Label^ clientModifyMoreInfoLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyPostalCodeLabel;
-
-
-
-
-
 	private: System::Windows::Forms::Label^ clientModifyCityLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyAddressStreetLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyAddressLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyBirthdayLabel;
-
-
 	private: System::Windows::Forms::Label^ clientModifyLastnameLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyFirstnameLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyUsernameLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyInformationsLabel;
 	private: System::Windows::Forms::DateTimePicker^ clientModifyBirthdayDateTimePicker;
 	private: System::Windows::Forms::Button^ clientModifyApplyModifButton;
 	private: System::Windows::Forms::Label^ clientModifyErrorBoxLabel;
-
 	private: System::Windows::Forms::Panel^ employeeListViewPanel;
 	private: System::Windows::Forms::Panel^ clientListViewPanel;
 	private: System::Windows::Forms::Button^ employeeAddNewEmployeeButton;
 	private: System::Windows::Forms::ListView^ employeeListView;
 	private: System::Windows::Forms::Panel^ employeeModifyPanel;
 	private: System::Windows::Forms::Label^ employeeModifyErrorBoxLabel;
-
 	private: System::Windows::Forms::Button^ employeeModifyApplyModifButton;
-
 	private: System::Windows::Forms::DateTimePicker^ employeeModifyBirthdayDateTimePicker;
 	private: System::Windows::Forms::Label^ barSeparateLabel;
-
-
 	private: System::Windows::Forms::NumericUpDown^ employeeModifyPostalCodeNumericUpDown;
 	private: System::Windows::Forms::Button^ employeeModifyAddAddressButton;
-
-
 	private: System::Windows::Forms::Button^ employeeModifyDeleteAddressButton;
-
 	private: System::Windows::Forms::ComboBox^ employeeModifyAddressPickerComboBox;
 	private: System::Windows::Forms::TextBox^ employeeModifyMoreInfoTextBox;
-
-
 	private: System::Windows::Forms::TextBox^ employeeModifyCityTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeModifyAddressStreetTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeModifyLastnameTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeModifyFirstnameTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeModifyUsernameTextBox;
 	private: System::Windows::Forms::Label^ employeeModifyMoreInfoLabel;
-
-
 	private: System::Windows::Forms::Label^ employeeModifyPostalCodeLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyCityLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyAddressStreetLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyAddressLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyBirthdayLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyLastnameLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyFirstnameLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyUsernameLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyInformationsLabel;
-
 	private: System::Windows::Forms::ListView^ clientListView;
 	private: System::Windows::Forms::Label^ employeeModifyHireDateLabel;
 	private: System::Windows::Forms::DateTimePicker^ employeeModifyHireDateDateTimePicker;
@@ -339,65 +266,37 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Button^ clientModifyBackButton;
 	private: System::Windows::Forms::Panel^ employeeAddEmployeePanel;
 	private: System::Windows::Forms::Label^ employeeAddEmployeeLastnameLabel;
-
 	private: System::Windows::Forms::Label^ employeeAddEmployeeFirstnameLabel;
-
 	private: System::Windows::Forms::Label^ employeeAddEmployeeUsernameLabel;
-
 	private: System::Windows::Forms::Label^ employeeAddEmployeeLabel;
 	private: System::Windows::Forms::DateTimePicker^ employeeAddEmployeeHireDateDateTimePicker;
-
 	private: System::Windows::Forms::DateTimePicker^ employeeAddEmployeeBirthdayDateTimePicker;
-
 	private: System::Windows::Forms::TextBox^ employeeAddEmployeePasswordTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeAddEmployeeLastnameTextbox;
-
 	private: System::Windows::Forms::TextBox^ employeeAddEmployeeFirstnameTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeAddEmployeeUsernameTextBox;
 	private: System::Windows::Forms::Button^ employeeAddEmployeeCancelButton;
-
-
 	private: System::Windows::Forms::Button^ employeeAddEmployeeAddButton;
-
 	private: System::Windows::Forms::CheckBox^ employeeAddEmployeeManagerCheckBox;
-
 	private: System::Windows::Forms::Label^ employeeAddEmployeeHireDateLabel;
-
 	private: System::Windows::Forms::Label^ employeeAddEmployeeBirthdayLabel;
 	private: System::Windows::Forms::Label^ employeeAddEmployeePasswordLabel;
 	private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 	private: System::Windows::Forms::Panel^ simulationPanel;
 	private: System::Windows::Forms::Label^ simulationResultLabel;
-
 	private: System::Windows::Forms::Label^ simulationMarkdownLabel;
 	private: System::Windows::Forms::Label^ simulationDiscountLabel;
 	private: System::Windows::Forms::Label^ simulationMargeLabel;
 	private: System::Windows::Forms::Label^ simulationTVALabel;
 	private: System::Windows::Forms::Label^ simulationEntryPriceLabel;
 	private: System::Windows::Forms::Label^ simulationTitleLabel;
-
 	private: System::Windows::Forms::ComboBox^ simulationMarkdownComboBox;
-
 	private: System::Windows::Forms::ComboBox^ simulationDiscountComboBox;
 	private: System::Windows::Forms::ComboBox^ simulationMargeComboBox;
 	private: System::Windows::Forms::ComboBox^ simulationTVAComboBox;
 	private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
-
-
-
-
-
-
-
-
-
-
-
-
-		   AccountManager^ accountManager = gcnew AccountManager();
-
+	private: System::Windows::Forms::Button^ disconnectButton;
+	private: System::Windows::Forms::PictureBox^ logoPictureBox;
 
 #pragma region Windows Form Designer generated code
 		   /// <summary>
@@ -409,6 +308,9 @@ namespace OPO2SUMproject {
 			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   this->loginPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginTextPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginReturnPreCatalogButton = (gcnew System::Windows::Forms::Button());
@@ -478,6 +380,7 @@ namespace OPO2SUMproject {
 			   this->menuLogoPanel = (gcnew System::Windows::Forms::Panel());
 			   this->nameProjectLabel = (gcnew System::Windows::Forms::Label());
 			   this->titleBarPanel = (gcnew System::Windows::Forms::Panel());
+			   this->disconnectButton = (gcnew System::Windows::Forms::Button());
 			   this->titleBarLabel = (gcnew System::Windows::Forms::Label());
 			   this->accountPanel = (gcnew System::Windows::Forms::Panel());
 			   this->accountSeparatorLabel = (gcnew System::Windows::Forms::Label());
@@ -614,7 +517,7 @@ namespace OPO2SUMproject {
 			   this->clientModifyPostalCodeNumericUpDown = (gcnew System::Windows::Forms::NumericUpDown());
 			   this->clientModifyAddAddressButton = (gcnew System::Windows::Forms::Button());
 			   this->clientModifyDeleteAddressButton = (gcnew System::Windows::Forms::Button());
-			   this->clientModifyAddressPickerComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->clientModifyAddressPickerComboBox = (gcnew System::Windows::Forms::ComboBox());//
 			   this->clientModifyMoreInfoTextBox = (gcnew System::Windows::Forms::TextBox());
 			   this->clientModifyCityTextBox = (gcnew System::Windows::Forms::TextBox());
 			   this->clientModifyAddressStreetTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -631,6 +534,7 @@ namespace OPO2SUMproject {
 			   this->clientModifyFirstnameLabel = (gcnew System::Windows::Forms::Label());
 			   this->clientModifyUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->clientModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
+			   this->logoPictureBox = (gcnew System::Windows::Forms::PictureBox());
 			   this->loginPanel->SuspendLayout();
 			   this->loginTextPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
@@ -657,6 +561,7 @@ namespace OPO2SUMproject {
 			   this->clientListViewPanel->SuspendLayout();
 			   this->clientModifyPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->BeginInit();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->BeginInit();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
@@ -697,6 +602,8 @@ namespace OPO2SUMproject {
 			   // 
 			   // loginReturnPreCatalogButton
 			   // 
+			   this->loginReturnPreCatalogButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(230)));
 			   this->loginReturnPreCatalogButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->loginReturnPreCatalogButton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)));
@@ -705,7 +612,7 @@ namespace OPO2SUMproject {
 			   this->loginReturnPreCatalogButton->Size = System::Drawing::Size(30, 30);
 			   this->loginReturnPreCatalogButton->TabIndex = 24;
 			   this->loginReturnPreCatalogButton->Text = L"X";
-			   this->loginReturnPreCatalogButton->UseVisualStyleBackColor = true;
+			   this->loginReturnPreCatalogButton->UseVisualStyleBackColor = false;
 			   this->loginReturnPreCatalogButton->Click += gcnew System::EventHandler(this, &MyForm::loginReturnPreCatalogButton_Click);
 			   // 
 			   // loginYouWantRegisterLabel
@@ -749,7 +656,7 @@ namespace OPO2SUMproject {
 			   this->loginRegisterButton->Margin = System::Windows::Forms::Padding(0);
 			   this->loginRegisterButton->Name = L"loginRegisterButton";
 			   this->loginRegisterButton->Size = System::Drawing::Size(78, 28);
-			   this->loginRegisterButton->TabIndex = 5;
+			   this->loginRegisterButton->TabIndex = 4;
 			   this->loginRegisterButton->Text = L"Register";
 			   this->loginRegisterButton->UseVisualStyleBackColor = false;
 			   this->loginRegisterButton->Click += gcnew System::EventHandler(this, &MyForm::loginRegisterButton_Click);
@@ -798,7 +705,7 @@ namespace OPO2SUMproject {
 			   this->loginValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->loginValidateButton->Name = L"loginValidateButton";
 			   this->loginValidateButton->Size = System::Drawing::Size(298, 45);
-			   this->loginValidateButton->TabIndex = 11;
+			   this->loginValidateButton->TabIndex = 3;
 			   this->loginValidateButton->Text = L"Login";
 			   this->loginValidateButton->UseVisualStyleBackColor = false;
 			   this->loginValidateButton->Click += gcnew System::EventHandler(this, &MyForm::loginValidateButton_Click);
@@ -926,7 +833,7 @@ namespace OPO2SUMproject {
 			   this->registerUsernameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerUsernameTextBox->Name = L"registerUsernameTextBox";
 			   this->registerUsernameTextBox->Size = System::Drawing::Size(133, 20);
-			   this->registerUsernameTextBox->TabIndex = 2;
+			   this->registerUsernameTextBox->TabIndex = 1;
 			   // 
 			   // registerLoginButton
 			   // 
@@ -940,7 +847,7 @@ namespace OPO2SUMproject {
 			   this->registerLoginButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerLoginButton->Name = L"registerLoginButton";
 			   this->registerLoginButton->Size = System::Drawing::Size(30, 30);
-			   this->registerLoginButton->TabIndex = 5;
+			   this->registerLoginButton->TabIndex = 90;
 			   this->registerLoginButton->Text = L"X";
 			   this->registerLoginButton->UseVisualStyleBackColor = false;
 			   this->registerLoginButton->Click += gcnew System::EventHandler(this, &MyForm::registerLoginButton_Click);
@@ -964,7 +871,7 @@ namespace OPO2SUMproject {
 			   this->registerDateTimePicker->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerDateTimePicker->Name = L"registerDateTimePicker";
 			   this->registerDateTimePicker->Size = System::Drawing::Size(229, 22);
-			   this->registerDateTimePicker->TabIndex = 9;
+			   this->registerDateTimePicker->TabIndex = 5;
 			   // 
 			   // registerValidateButton
 			   // 
@@ -978,7 +885,7 @@ namespace OPO2SUMproject {
 			   this->registerValidateButton->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerValidateButton->Name = L"registerValidateButton";
 			   this->registerValidateButton->Size = System::Drawing::Size(278, 41);
-			   this->registerValidateButton->TabIndex = 11;
+			   this->registerValidateButton->TabIndex = 6;
 			   this->registerValidateButton->Text = L"Register";
 			   this->registerValidateButton->UseVisualStyleBackColor = false;
 			   this->registerValidateButton->Click += gcnew System::EventHandler(this, &MyForm::registerValidateButton_Click);
@@ -1049,7 +956,7 @@ namespace OPO2SUMproject {
 			   this->registerLastnameTextBox->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->registerLastnameTextBox->Name = L"registerLastnameTextBox";
 			   this->registerLastnameTextBox->Size = System::Drawing::Size(129, 20);
-			   this->registerLastnameTextBox->TabIndex = 13;
+			   this->registerLastnameTextBox->TabIndex = 3;
 			   // 
 			   // registerLastnameLabel
 			   // 
@@ -1105,7 +1012,7 @@ namespace OPO2SUMproject {
 			   this->registerBlueBarLabel4->Location = System::Drawing::Point(28, 281);
 			   this->registerBlueBarLabel4->Name = L"registerBlueBarLabel4";
 			   this->registerBlueBarLabel4->Size = System::Drawing::Size(209, 20);
-			   this->registerBlueBarLabel4->TabIndex = 20;
+			   this->registerBlueBarLabel4->TabIndex = 4;
 			   this->registerBlueBarLabel4->Text = L"____________________";
 			   // 
 			   // registerUsernameLabel
@@ -1147,7 +1054,7 @@ namespace OPO2SUMproject {
 			   this->registerBlueBarLabel2->Location = System::Drawing::Point(28, 152);
 			   this->registerBlueBarLabel2->Name = L"registerBlueBarLabel2";
 			   this->registerBlueBarLabel2->Size = System::Drawing::Size(209, 20);
-			   this->registerBlueBarLabel2->TabIndex = 21;
+			   this->registerBlueBarLabel2->TabIndex = 2;
 			   this->registerBlueBarLabel2->Text = L"____________________";
 			   // 
 			   // registerBlueBarLabel3
@@ -1627,17 +1534,34 @@ namespace OPO2SUMproject {
 			   this->nameProjectLabel->TabIndex = 0;
 			   this->nameProjectLabel->Text = L"OPO2SUM";
 			   this->nameProjectLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			   this->nameProjectLabel->Click += gcnew System::EventHandler(this, &MyForm::nameProjectLabel_Click);
 			   // 
 			   // titleBarPanel
 			   // 
 			   this->titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
 				   static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			   this->titleBarPanel->Controls->Add(this->disconnectButton);
 			   this->titleBarPanel->Controls->Add(this->titleBarLabel);
 			   this->titleBarPanel->Location = System::Drawing::Point(220, 0);
 			   this->titleBarPanel->Name = L"titleBarPanel";
 			   this->titleBarPanel->Size = System::Drawing::Size(968, 80);
 			   this->titleBarPanel->TabIndex = 14;
+			   // 
+			   // disconnectButton
+			   // 
+			   this->disconnectButton->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			   this->disconnectButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)), static_cast<System::Int32>(static_cast<System::Byte>(40)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(40)));
+			   this->disconnectButton->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"disconnectButton.BackgroundImage")));
+			   this->disconnectButton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			   this->disconnectButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->disconnectButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F));
+			   this->disconnectButton->Location = System::Drawing::Point(915, 12);
+			   this->disconnectButton->Name = L"disconnectButton";
+			   this->disconnectButton->Size = System::Drawing::Size(40, 40);
+			   this->disconnectButton->TabIndex = 90;
+			   this->disconnectButton->UseVisualStyleBackColor = false;
+			   this->disconnectButton->Visible = false;
+			   this->disconnectButton->Click += gcnew System::EventHandler(this, &MyForm::disconnectButton_Click);
 			   // 
 			   // titleBarLabel
 			   // 
@@ -1704,7 +1628,7 @@ namespace OPO2SUMproject {
 			   this->accountAddressPostalNumericUpDown->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
 			   this->accountAddressPostalNumericUpDown->Name = L"accountAddressPostalNumericUpDown";
 			   this->accountAddressPostalNumericUpDown->Size = System::Drawing::Size(108, 22);
-			   this->accountAddressPostalNumericUpDown->TabIndex = 27;
+			   this->accountAddressPostalNumericUpDown->TabIndex = 8;
 			   // 
 			   // accountErrorAddAddressLabel
 			   // 
@@ -1750,7 +1674,7 @@ namespace OPO2SUMproject {
 			   this->accountModifyButton->Location = System::Drawing::Point(741, 180);
 			   this->accountModifyButton->Name = L"accountModifyButton";
 			   this->accountModifyButton->Size = System::Drawing::Size(136, 29);
-			   this->accountModifyButton->TabIndex = 21;
+			   this->accountModifyButton->TabIndex = 20;
 			   this->accountModifyButton->Text = L"Modify account";
 			   this->accountModifyButton->UseVisualStyleBackColor = true;
 			   this->accountModifyButton->Click += gcnew System::EventHandler(this, &MyForm::accountModifyButton_Click);
@@ -1769,21 +1693,21 @@ namespace OPO2SUMproject {
 			   this->accountAddressMoreTextBox->Location = System::Drawing::Point(88, 524);
 			   this->accountAddressMoreTextBox->Name = L"accountAddressMoreTextBox";
 			   this->accountAddressMoreTextBox->Size = System::Drawing::Size(466, 22);
-			   this->accountAddressMoreTextBox->TabIndex = 19;
+			   this->accountAddressMoreTextBox->TabIndex = 9;
 			   // 
 			   // accountAddressCityTextBox
 			   // 
 			   this->accountAddressCityTextBox->Location = System::Drawing::Point(276, 474);
 			   this->accountAddressCityTextBox->Name = L"accountAddressCityTextBox";
 			   this->accountAddressCityTextBox->Size = System::Drawing::Size(158, 22);
-			   this->accountAddressCityTextBox->TabIndex = 17;
+			   this->accountAddressCityTextBox->TabIndex = 7;
 			   // 
 			   // accountAddressNbTextBox
 			   // 
 			   this->accountAddressNbTextBox->Location = System::Drawing::Point(88, 474);
 			   this->accountAddressNbTextBox->Name = L"accountAddressNbTextBox";
 			   this->accountAddressNbTextBox->Size = System::Drawing::Size(176, 22);
-			   this->accountAddressNbTextBox->TabIndex = 16;
+			   this->accountAddressNbTextBox->TabIndex = 6;
 			   // 
 			   // accountBirthdayTextBox
 			   // 
@@ -1791,14 +1715,14 @@ namespace OPO2SUMproject {
 			   this->accountBirthdayTextBox->Location = System::Drawing::Point(278, 187);
 			   this->accountBirthdayTextBox->Name = L"accountBirthdayTextBox";
 			   this->accountBirthdayTextBox->Size = System::Drawing::Size(158, 22);
-			   this->accountBirthdayTextBox->TabIndex = 15;
+			   this->accountBirthdayTextBox->TabIndex = 5;
 			   // 
 			   // accountPasswordTextBox
 			   // 
 			   this->accountPasswordTextBox->Location = System::Drawing::Point(90, 187);
 			   this->accountPasswordTextBox->Name = L"accountPasswordTextBox";
 			   this->accountPasswordTextBox->Size = System::Drawing::Size(158, 22);
-			   this->accountPasswordTextBox->TabIndex = 14;
+			   this->accountPasswordTextBox->TabIndex = 4;
 			   this->accountPasswordTextBox->UseSystemPasswordChar = true;
 			   this->accountPasswordTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableAccountModifyButton);
 			   // 
@@ -1807,7 +1731,7 @@ namespace OPO2SUMproject {
 			   this->accountLastnameTextBox->Location = System::Drawing::Point(461, 114);
 			   this->accountLastnameTextBox->Name = L"accountLastnameTextBox";
 			   this->accountLastnameTextBox->Size = System::Drawing::Size(158, 22);
-			   this->accountLastnameTextBox->TabIndex = 13;
+			   this->accountLastnameTextBox->TabIndex = 3;
 			   this->accountLastnameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableAccountModifyButton);
 			   // 
 			   // accountFirstnameTextBox
@@ -1815,7 +1739,7 @@ namespace OPO2SUMproject {
 			   this->accountFirstnameTextBox->Location = System::Drawing::Point(278, 114);
 			   this->accountFirstnameTextBox->Name = L"accountFirstnameTextBox";
 			   this->accountFirstnameTextBox->Size = System::Drawing::Size(158, 22);
-			   this->accountFirstnameTextBox->TabIndex = 12;
+			   this->accountFirstnameTextBox->TabIndex = 2;
 			   this->accountFirstnameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableAccountModifyButton);
 			   // 
 			   // accountUsernameTextBox
@@ -1824,7 +1748,7 @@ namespace OPO2SUMproject {
 			   this->accountUsernameTextBox->Location = System::Drawing::Point(90, 114);
 			   this->accountUsernameTextBox->Name = L"accountUsernameTextBox";
 			   this->accountUsernameTextBox->Size = System::Drawing::Size(158, 22);
-			   this->accountUsernameTextBox->TabIndex = 11;
+			   this->accountUsernameTextBox->TabIndex = 1;
 			   // 
 			   // accountAddressMoreLabel
 			   // 
@@ -1931,10 +1855,13 @@ namespace OPO2SUMproject {
 			   // 
 			   // hubPanel
 			   // 
+			   this->hubPanel->BackColor = System::Drawing::Color::White;
+			   this->hubPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
 			   this->hubPanel->Controls->Add(this->clientListViewPanel);
 			   this->hubPanel->Controls->Add(this->clientModifyPanel);
+			   this->hubPanel->Controls->Add(this->logoPictureBox);
 			   this->hubPanel->Controls->Add(this->accountPanel);
 			   this->hubPanel->Controls->Add(this->employeeModifyPanel);
 			   this->hubPanel->Controls->Add(this->preCatalogPanel);
@@ -2596,7 +2523,7 @@ namespace OPO2SUMproject {
 			   this->simulationPanel->Controls->Add(this->simulationEntryPriceTextBox);
 			   this->simulationPanel->Location = System::Drawing::Point(24, 9);
 			   this->simulationPanel->Name = L"simulationPanel";
-			   this->simulationPanel->Size = System::Drawing::Size(918, 421);
+			   this->simulationPanel->Size = System::Drawing::Size(918, 425);
 			   this->simulationPanel->TabIndex = 17;
 			   // 
 			   // simulationResultLabel
@@ -2671,6 +2598,7 @@ namespace OPO2SUMproject {
 			   this->simulationMarkdownComboBox->Name = L"simulationMarkdownComboBox";
 			   this->simulationMarkdownComboBox->Size = System::Drawing::Size(149, 24);
 			   this->simulationMarkdownComboBox->TabIndex = 4;
+			   this->simulationMarkdownComboBox->Text = L"0";
 			   this->simulationMarkdownComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationDiscountComboBox
@@ -2681,6 +2609,7 @@ namespace OPO2SUMproject {
 			   this->simulationDiscountComboBox->Name = L"simulationDiscountComboBox";
 			   this->simulationDiscountComboBox->Size = System::Drawing::Size(121, 24);
 			   this->simulationDiscountComboBox->TabIndex = 3;
+			   this->simulationDiscountComboBox->Text = L"0";
 			   this->simulationDiscountComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationMargeComboBox
@@ -2691,6 +2620,7 @@ namespace OPO2SUMproject {
 			   this->simulationMargeComboBox->Name = L"simulationMargeComboBox";
 			   this->simulationMargeComboBox->Size = System::Drawing::Size(121, 24);
 			   this->simulationMargeComboBox->TabIndex = 2;
+			   this->simulationMargeComboBox->Text = L"0";
 			   this->simulationMargeComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationTVAComboBox
@@ -2701,6 +2631,7 @@ namespace OPO2SUMproject {
 			   this->simulationTVAComboBox->Name = L"simulationTVAComboBox";
 			   this->simulationTVAComboBox->Size = System::Drawing::Size(121, 24);
 			   this->simulationTVAComboBox->TabIndex = 1;
+			   this->simulationTVAComboBox->Text = L"0";
 			   this->simulationTVAComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationEntryPriceTextBox
@@ -2713,34 +2644,15 @@ namespace OPO2SUMproject {
 			   // 
 			   // dataGridViewstat
 			   // 
-			   dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+			   dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
 			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
-			   this->dataGridViewstat->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCellsExceptHeaders;
-			   dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			   dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
-			   dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
-			   dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
 			   this->dataGridViewstat->ColumnHeadersHeight = 29;
-			   this->dataGridViewstat->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			   dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Window;
-			   dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   dataGridViewCellStyle6->ForeColor = System::Drawing::Color::Black;
-			   dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			   dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			   dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			   this->dataGridViewstat->DefaultCellStyle = dataGridViewCellStyle6;
 			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
 			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
 			   this->dataGridViewstat->Name = L"dataGridViewstat";
@@ -3263,6 +3175,17 @@ namespace OPO2SUMproject {
 			   this->clientModifyInformationsLabel->TabIndex = 0;
 			   this->clientModifyInformationsLabel->Text = L"Informations";
 			   // 
+			   // logoPictureBox
+			   // 
+			   this->logoPictureBox->BackColor = System::Drawing::Color::White;
+			   this->logoPictureBox->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logoPictureBox.Image")));
+			   this->logoPictureBox->Location = System::Drawing::Point(440, 160);
+			   this->logoPictureBox->Name = L"logoPictureBox";
+			   this->logoPictureBox->Size = System::Drawing::Size(528, 447);
+			   this->logoPictureBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			   this->logoPictureBox->TabIndex = 29;
+			   this->logoPictureBox->TabStop = false;
+			   // 
 			   // MyForm
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -3276,6 +3199,7 @@ namespace OPO2SUMproject {
 				   static_cast<System::Byte>(0)));
 			   this->ForeColor = System::Drawing::Color::Black;
 			   this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			   this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			   this->Margin = System::Windows::Forms::Padding(2);
 			   this->Name = L"MyForm";
 			   this->Text = L"Opo2suM";
@@ -3319,6 +3243,15 @@ namespace OPO2SUMproject {
 			   this->clientModifyPanel->ResumeLayout(false);
 			   this->clientModifyPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->EndInit();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->EndInit();
+			   this->employeeModifyPanel->PerformLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->EndInit();
+			   this->preCatalogPanel->ResumeLayout(false);
+			   this->preCatalogPanel->PerformLayout();
+			   this->catalogOrderPanel->ResumeLayout(false);
+			   this->catalogOrderPanel->PerformLayout();
+			   this->catalogCartPanel->ResumeLayout(false);
+			   this->catalogCartPanel->PerformLayout();
 			   this->ResumeLayout(false);
 
 		   }
@@ -3372,6 +3305,64 @@ namespace OPO2SUMproject {
 		clientModifyPanel->Visible = false;
 		employeeAddEmployeePanel->Visible = false;
 	}
+	private: System::Void clearAllTextBox() {
+		loginPasswordTextBox->Text = ""; 
+		loginUsernameTextBox->Text = "";
+		registerUsernameTextBox->Text = "";
+		registerFirstnameTextBox->Text = "";
+		registerLastnameTextBox->Text = "";
+		registerPasswordTextBox->Text = "";
+		addStockRestockingTextBox->Text = "";
+		addStockStockTextBox->Text = "";
+		addStockTVATextBox->Text = "";
+		addStockMargeTextBox->Text = "";
+		addStockCostTextBox->Text ="";
+		addStockQuantityTextBox->Text = "";
+		addStockNameTextBox->Text = "";
+		orderFilterTextBox->Text = "";
+		clientMFNameTextBox->Text = "";
+		clientMLNameTextBox->Text = "";
+		clientMCityTextBox->Text = "";
+		accountAddressPostalNumericUpDown->Value = 0;
+		accountAddressListComboBox->Text = "";
+		accountAddressMoreTextBox->Text = "";
+		accountAddressCityTextBox->Text = "";
+		accountAddressNbTextBox->Text = "";
+		accountBirthdayTextBox->Text = "";
+		accountPasswordTextBox->Text = "";
+		accountLastnameTextBox->Text = "";
+		accountFirstnameTextBox->Text = "";
+		accountUsernameTextBox->Text = "";
+		employeeModifyPostalCodeNumericUpDown->Value = 0;
+		employeeModifyAddressPickerComboBox->Text = "";
+		employeeModifyMoreInfoTextBox->Text = "";
+		employeeModifyCityTextBox->Text = "";
+		employeeModifyAddressStreetTextBox->Text = "";
+		employeeModifyLastnameTextBox->Text = "";
+		employeeModifyFirstnameTextBox->Text = "";
+		employeeModifyUsernameTextBox->Text = "";
+		preCatalogTextBox->Text = "";
+		catalogResearchTextBox->Text = "";
+		catalogAddressShippingListComboBox->Text = "";
+		catalogAddressBillingListComboBox->Text = "";
+		simulationMarkdownComboBox->Text = "";
+		simulationDiscountComboBox->Text = "";
+		simulationMargeComboBox->Text = "";
+		simulationTVAComboBox->Text = "";
+		simulationEntryPriceTextBox->Text = "";
+		employeeAddEmployeePasswordTextBox->Text = "";
+		employeeAddEmployeeLastnameTextbox->Text = "";
+		employeeAddEmployeeFirstnameTextBox->Text = "";
+		employeeAddEmployeeUsernameTextBox->Text = "";
+		clientModifyPostalCodeNumericUpDown->Value = 0;
+		clientModifyAddressPickerComboBox->Text = "";
+		clientModifyMoreInfoTextBox->Text = "";
+		clientModifyCityTextBox->Text = "";
+		clientModifyAddressStreetTextBox->Text = "";
+		clientModifyLastnameTextBox->Text = "";
+		clientModifyFirstnameTextBox->Text = "";
+		clientModifyUsernameTextBox->Text = "";
+	}
 	private: System::Void clearAddStockTextBox() {
 		addStockNameTextBox->Text = "";
 		addStockQuantityTextBox->Text = "";
@@ -3382,6 +3373,8 @@ namespace OPO2SUMproject {
 		addStockRestockingTextBox->Text = "";
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		logoPictureBox->SendToBack();
+		clearAllTextBox();
 		preCatalogTextBox_TextChanged(sender, e);
 		hideAllPanel();
 		preCatalogPanel->Visible = true;
@@ -3521,35 +3514,29 @@ namespace OPO2SUMproject {
 			this->accountModifyButton->Enabled = false;
 			this->loginErrorLabel->Text = "";
 			this->accountErrorLabel->Text = "";
+			this->loginPasswordTextBox->Text = "";
+			this->loginUsernameTextBox->Text = "";
 
 			refreshAddressList();
 			this->accountAddressListComboBox->ValueMember = "id_address";
 			this->accountAddressListComboBox->DisplayMember = "street";
 
 			hideAllPanel();
-			if (connectedAccount->get_permission_lv_account() == 0) {
+			disconnectButton->Visible = true;
+			if (connectedAccount->get_permission_lv_account() >= 0) {
 				menuCatalogButton->Visible = true;
 				menuOrderButton->Visible = true;
 				menuAccountButton->Visible = true;
 			}
-			else if (connectedAccount->get_permission_lv_account() == 1)
+			if (connectedAccount->get_permission_lv_account() >= 1)
 			{
-				menuCatalogButton->Visible = true;
-				menuOrderButton->Visible = true;
 				menuStockButton->Visible = true;
 				menuClientButton->Visible = true;
 				menuStatisticButton->Visible = true;
-				menuAccountButton->Visible = true;
 			}
-			else if (connectedAccount->get_permission_lv_account() == 2)
+			if (connectedAccount->get_permission_lv_account() >= 2)
 			{
-				menuCatalogButton->Visible = true;
-				menuOrderButton->Visible = true;
-				menuStockButton->Visible = true;
-				menuClientButton->Visible = true;
-				menuStatisticButton->Visible = true;
 				menuPersonnellManageButton->Visible = true;
-				menuAccountButton->Visible = true;
 			}
 		}
 		DataTableReaderTest->Close();
@@ -3573,7 +3560,7 @@ namespace OPO2SUMproject {
 
 			AccountManager^ updateAccount = gcnew AccountManager();
 			updateAccount->update(connectedAccount);
-
+			accountPasswordTextBox->Text = "";
 			this->accountErrorLabel->Text = "Account updated.";
 			this->accountErrorLabel->ForeColor = System::Drawing::Color::Green;
 			this->accountModifyButton->Enabled = false;
@@ -3748,6 +3735,7 @@ namespace OPO2SUMproject {
 
 	private: System::Void menuCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
+		catalogResearchTextBox_TextChanged(sender, e);
 		catalogOrderPanel->Visible = true;
 		titleBarLabel->Text = "CATALOG";
 		titleBarPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(150)),
@@ -3919,7 +3907,7 @@ namespace OPO2SUMproject {
 	}
 	private: System::Void Amount_per_client_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ Amount_per_client = Adata->getRows("SELECT a.account_name, SUM(total_bill) AS total_per_client FROM opo2sum.dbo.bill b inner join orderTab o ON o.id_order = b.id_order inner join account a ON o.id_account = a.id_account GROUP BY a.account_name;", "temp");
+		DataSet^ Amount_per_client = Adata->getRows("SELECT a.account_name, SUM(total_bill) AS 'Total per client' FROM opo2sum.dbo.bill b inner join orderTab o ON o.id_order = b.id_order inner join account a ON o.id_account = a.id_account GROUP BY a.account_name;", "temp");
 		stat_label->Text = "Amount per client";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = Amount_per_client; // dataset
@@ -3927,7 +3915,7 @@ namespace OPO2SUMproject {
 	}
 	private: System::Void top_buys_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ top10_buys = Adata->getRows("SELECT Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity DESC;", "temp");
+		DataSet^ top10_buys = Adata->getRows("SELECT TOP(10) Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity DESC;", "temp");
 		stat_label->Text = "Top10 buys";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = top10_buys; // dataset
@@ -3935,7 +3923,7 @@ namespace OPO2SUMproject {
 	}
 	private: System::Void buys_down_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ down10_buys = Adata->getRows("SELECT Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity ASC;", "temp");
+		DataSet^ down10_buys = Adata->getRows("SELECT TOP(10) Product, sum(nb_element) Quantity FROM (SELECT id_product, CONCAT('#', id_product, ' : ', name_product) as Product FROM product) AS p inner join contain c ON c.id_product = p.id_product GROUP BY Product ORDER BY Quantity ASC;", "temp");
 		stat_label->Text = "Bottom10 buys";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = down10_buys; // dataset
@@ -4329,8 +4317,22 @@ namespace OPO2SUMproject {
 		}
 
 		this->simulationResultLabel->ForeColor = Color::Black;
-		this->simulationResultLabel->Text = ((((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown)) * (1 + tva)).ToString();
+		this->simulationResultLabel->Text = "Stock price: " + ((((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown)) * (1 + tva)).ToString() +
+			"\nGlobal Marge: " + (((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown) - total_cost).ToString();
 	}
+	private: System::Void disconnectButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		menuCatalogButton->Visible = false;
+		menuOrderButton->Visible = false;
+		menuStockButton->Visible = false;
+		menuStatisticButton->Visible = false;
+		menuClientButton->Visible = false;
+		menuPersonnellManageButton->Visible = false;
+		menuAccountButton->Visible = false;
+		disconnectButton->Visible = false;
+		nameProjectLabel_Click(sender, e);
+		MyForm_Load(sender, e);
+	}
+	};
 	private: System::Void afficherPage_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
 		DataSet^ total_cost_dataset = Adata->getRows("Select sum(cost_product*stock_product) as pp FROM product", "temp2");
@@ -4338,6 +4340,5 @@ namespace OPO2SUMproject {
 		DataRow^ drow = total_cost_datatable->Rows[0];
 		this->simulationEntryPriceTextBox->Text = drow[0]->ToString();
 	}
-	
-};
+	};
 }
