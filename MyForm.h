@@ -3974,7 +3974,7 @@ namespace OPO2SUMproject {
 		clientListView->Items->Clear();
 		for (int i = 0; i < clients->Rows->Count; i++) {
 			DataRow^ rowData = clients->Rows[i];
-			clientListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString() + " " + rowData[6]->ToString());
+			clientListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString()->Substring(0,10));
 		}
 	}
 	private: System::Void clientRefreshAddressPicker() {
@@ -3991,8 +3991,6 @@ namespace OPO2SUMproject {
 	}
 	private: System::Void clientListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
 		String^ selectedClient = clientListView->SelectedItems[0]->Text;
-
-		this->clientModifyErrorBoxLabel->Text = selectedClient;
 		connectedClient = gcnew Account(int::Parse(selectedClient->Substring(0, selectedClient->IndexOf(" "))));
 
 		this->clientModifyUsernameTextBox->Text = connectedClient->get_account_name();
@@ -4069,7 +4067,7 @@ namespace OPO2SUMproject {
 		employeeListView->Items->Clear();
 		for (int i = 0; i < employees->Rows->Count; i++) {
 			DataRow^ rowData = employees->Rows[i];
-			employeeListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString() + " " + rowData[6]->ToString());
+			employeeListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString()->Substring(0, 10) );
 		}
 	}
 	private: System::Void employeeRefreshAddressPicker() {
@@ -4207,10 +4205,6 @@ namespace OPO2SUMproject {
 		employeeRefreshList();
 		employeeListViewPanel->Visible = true;
 	}
-
-
-
-
 	private: System::Void nameProjectLabel_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
 		titleBarLabel->Text = "HOME";
@@ -4219,8 +4213,6 @@ namespace OPO2SUMproject {
 		menuLogoPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(39)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
 			static_cast<System::Int32>(static_cast<System::Byte>(58)));
 	}
-
-
 	private: System::Void menuPersonnellManageButton_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
 		resetHubButton();
 	}
@@ -4245,7 +4237,6 @@ namespace OPO2SUMproject {
 			preCatalogListView->Items->Add("#" + drow[0]->ToString() + " " + drow[1]->ToString() + "  $" + (cost * (1 + float::Parse(drow[5]->ToString()))));
 		}
 	}
-
 	private: System::Void loginReturnPreCatalogButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		MyForm_Load(sender, e);
 	}
@@ -4326,6 +4317,5 @@ namespace OPO2SUMproject {
 		DataRow^ drow = total_cost_datatable->Rows[0];
 		this->simulationEntryPriceTextBox->Text = drow[0]->ToString();
 	}
-	
 };
 }
