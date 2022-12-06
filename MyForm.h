@@ -980,7 +980,7 @@ namespace OPO2SUMproject {
 			   this->registerDateTimePicker->Name = L"registerDateTimePicker";
 			   this->registerDateTimePicker->Size = System::Drawing::Size(229, 22);
 			   this->registerDateTimePicker->TabIndex = 9;
-			   this->registerDateTimePicker->MaxDate = DateTime::Now;
+			   //this->registerDateTimePicker->MaxDate = DateTime::Now;
 			   // 
 			   // registerValidateButton
 			   // 
@@ -2429,7 +2429,7 @@ namespace OPO2SUMproject {
 			   this->employeeAddEmployeeHireDateDateTimePicker->Name = L"employeeAddEmployeeHireDateDateTimePicker";
 			   this->employeeAddEmployeeHireDateDateTimePicker->Size = System::Drawing::Size(268, 22);
 			   this->employeeAddEmployeeHireDateDateTimePicker->TabIndex = 15;
-			   this->employeeAddEmployeeHireDateDateTimePicker->MaxDate = DateTime::Now;
+			   //this->employeeAddEmployeeHireDateDateTimePicker->MaxDate = DateTime::Now;
 			   // 
 			   // employeeAddEmployeeBirthdayDateTimePicker
 			   // 
@@ -2439,7 +2439,7 @@ namespace OPO2SUMproject {
 			   this->employeeAddEmployeeBirthdayDateTimePicker->Name = L"employeeAddEmployeeBirthdayDateTimePicker";
 			   this->employeeAddEmployeeBirthdayDateTimePicker->Size = System::Drawing::Size(268, 22);
 			   this->employeeAddEmployeeBirthdayDateTimePicker->TabIndex = 14;
-			   this->employeeAddEmployeeBirthdayDateTimePicker->MaxDate = DateTime::Now;
+			   //this->employeeAddEmployeeBirthdayDateTimePicker->MaxDate = DateTime::Now;
 			   // 
 			   // employeeAddEmployeePasswordTextBox
 			   // 
@@ -2692,7 +2692,7 @@ namespace OPO2SUMproject {
 			   this->clientModifyBirthdayDateTimePicker->Name = L"clientModifyBirthdayDateTimePicker";
 			   this->clientModifyBirthdayDateTimePicker->Size = System::Drawing::Size(200, 22);
 			   this->clientModifyBirthdayDateTimePicker->TabIndex = 29;
-			   this->clientModifyBirthdayDateTimePicker->MaxDate = DateTime::Now;
+			   //this->clientModifyBirthdayDateTimePicker->MaxDate = DateTime::Now;
 			   // 
 			   // clientModifyBarLabel
 			   // 
@@ -2944,7 +2944,7 @@ namespace OPO2SUMproject {
 			   this->employeeModifyHireDateDateTimePicker->Name = L"employeeModifyHireDateDateTimePicker";
 			   this->employeeModifyHireDateDateTimePicker->Size = System::Drawing::Size(200, 22);
 			   this->employeeModifyHireDateDateTimePicker->TabIndex = 32;
-			   this->employeeModifyHireDateDateTimePicker->MaxDate = DateTime::Now;
+			   //this->employeeModifyHireDateDateTimePicker->MaxDate = DateTime::Now;
 			   // 
 			   // employeeModifyErrorBoxLabel
 			   // 
@@ -2969,7 +2969,7 @@ namespace OPO2SUMproject {
 			   this->employeeModifyBirthdayDateTimePicker->Name = L"employeeModifyBirthdayDateTimePicker";
 			   this->employeeModifyBirthdayDateTimePicker->Size = System::Drawing::Size(200, 22);
 			   this->employeeModifyBirthdayDateTimePicker->TabIndex = 29;
-			   this->employeeModifyBirthdayDateTimePicker->MaxDate = DateTime::Now;
+			   //this->employeeModifyBirthdayDateTimePicker->MaxDate = DateTime::Now;
 			   // 
 			   // barSeparateLabel
 			   // 
