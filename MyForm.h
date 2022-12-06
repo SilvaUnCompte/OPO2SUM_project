@@ -1809,7 +1809,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->disconnectButton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->disconnectButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			   this->disconnectButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F));
-			   this->disconnectButton->Location = System::Drawing::Point(915, 19);
+			   this->disconnectButton->Location = System::Drawing::Point(915, 12);
 			   this->disconnectButton->Name = L"disconnectButton";
 			   this->disconnectButton->Size = System::Drawing::Size(40, 40);
 			   this->disconnectButton->TabIndex = 1;
@@ -2113,6 +2113,12 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->hubPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
+			   this->hubPanel->Controls->Add(this->statisticMPanel);
+			   this->hubPanel->Controls->Add(this->orderMPanel);
+			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
+			   this->hubPanel->Controls->Add(this->employeeListViewPanel);
+			   this->hubPanel->Controls->Add(this->clientListViewPanel);
+			   this->hubPanel->Controls->Add(this->clientModifyPanel);
 			   this->hubPanel->Controls->Add(this->accountPanel);
 			   this->hubPanel->Controls->Add(this->clientMPanel);
 			   this->hubPanel->Controls->Add(this->employeeModifyPanel);
@@ -2764,6 +2770,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->simulationMarkdownComboBox->Name = L"simulationMarkdownComboBox";
 			   this->simulationMarkdownComboBox->Size = System::Drawing::Size(149, 24);
 			   this->simulationMarkdownComboBox->TabIndex = 4;
+			   this->simulationMarkdownComboBox->Text = L"0";
 			   this->simulationMarkdownComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationDiscountComboBox
@@ -2774,6 +2781,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->simulationDiscountComboBox->Name = L"simulationDiscountComboBox";
 			   this->simulationDiscountComboBox->Size = System::Drawing::Size(121, 24);
 			   this->simulationDiscountComboBox->TabIndex = 3;
+			   this->simulationDiscountComboBox->Text = L"0";
 			   this->simulationDiscountComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationMargeComboBox
@@ -2784,6 +2792,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->simulationMargeComboBox->Name = L"simulationMargeComboBox";
 			   this->simulationMargeComboBox->Size = System::Drawing::Size(121, 24);
 			   this->simulationMargeComboBox->TabIndex = 2;
+			   this->simulationMargeComboBox->Text = L"0";
 			   this->simulationMargeComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationTVAComboBox
@@ -2794,6 +2803,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 			   this->simulationTVAComboBox->Name = L"simulationTVAComboBox";
 			   this->simulationTVAComboBox->Size = System::Drawing::Size(121, 24);
 			   this->simulationTVAComboBox->TabIndex = 1;
+			   this->simulationTVAComboBox->Text = L"0";
 			   this->simulationTVAComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::simulationEntryPriceTextBox_TextChanged);
 			   // 
 			   // simulationEntryPriceTextBox
@@ -4464,7 +4474,8 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 		}
 
 		this->simulationResultLabel->ForeColor = Color::Black;
-		this->simulationResultLabel->Text = ((((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown)) * (1 + tva)).ToString();
+		this->simulationResultLabel->Text = "Stock price: " + ((((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown)) * (1 + tva)).ToString() +
+			"\nGlobal Marge: " + (((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown) - total_cost).ToString();
 	}
 
 	private: System::Void afficherPage_Click(System::Object^ sender, System::EventArgs^ e) {
