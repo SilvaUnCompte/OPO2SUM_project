@@ -72,11 +72,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TextBox^ clientMFNameTextBox;
 	private: System::Windows::Forms::Button^ clientMModifyButton;
 	private: System::Windows::Forms::Button^ clientMDeleteButton;
-
-
-
-
-
 	private: System::Windows::Forms::Button^ loginValidateButton;
 	private: System::Windows::Forms::Button^ registerValidateButton;
 	private: System::Windows::Forms::Button^ registerLoginButton;
@@ -84,16 +79,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::TextBox^ registerPasswordTextBox;
 	private: System::Windows::Forms::TextBox^ registerUsernameTextBox;
 	private: System::Windows::Forms::Label^ registerUsernameLabel;
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^ addStockValidateButton;
 	private: System::Windows::Forms::TextBox^ addStockQuantityTextBox;
 	private: System::Windows::Forms::TextBox^ addStockNameTextBox;
@@ -101,7 +86,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ addStockNameLabel;
 	private: System::Windows::Forms::Label^ addStockTitleLabel;
 	private: System::Windows::Forms::Button^ addStockExitButton;
-
 	private: System::Windows::Forms::Label^ stockMLabel;
 	private: System::Windows::Forms::Label^ informationStockNameLabel;
 	private: System::Windows::Forms::Label^ addStockStockLabel;
@@ -160,7 +144,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ accountErrorAddAddressLabel;
 	private: System::Windows::Forms::NumericUpDown^ accountAddressPostalNumericUpDown;
 	private: System::Windows::Forms::Label^ accountSeparatorLabel;
-
 	private: System::Windows::Forms::Button^ stockMAddButton;
 	private: System::Windows::Forms::Button^ catalogCartButton;
 	private: System::Windows::Forms::ListView^ catalogGlobalListView;
@@ -175,7 +158,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Button^ catalogCheckoutButton;
 	private: System::Windows::Forms::Button^ catalogBackButton;
 	private: System::Windows::Forms::ListView^ catalogSelectedListView;
-
 	private: System::Windows::Forms::Button^ Purchase_Value_button;
 	private: System::Windows::Forms::Button^ Commercial_Value_button;
 	private: System::Windows::Forms::Button^ buys_down_button;
@@ -185,26 +167,22 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Button^ turnover_button;
 	private: System::Windows::Forms::Button^ Panier_Poyen_Button;
 	private: System::Windows::Forms::Label^ stat_label;
-
-
 	private:
 		Account^ connectedAccount;
+		AccountManager^ accountManager = gcnew AccountManager();
 		AddressManager^ addressManager = gcnew AddressManager();
+		PersonnelManager^ personnelManager = gcnew PersonnelManager();
 		ContainManager^ containManager = gcnew ContainManager();
 		ProductManager^ productManager = gcnew ProductManager();
 		OrderManager^ orderManager = gcnew OrderManager();
 		BillManager^ billManager = gcnew BillManager();
-
-
 		Account^ connectedClient;
 		Account^ connectedEmployee;
 		Address^ connectedClientAddress;
-		PersonnelManager^ personnelManager = gcnew PersonnelManager();
 	private: System::Windows::Forms::ListView^ orderGlobalListView;
 	private: System::Windows::Forms::TextBox^ orderFilterTextBox;
 	private: System::Windows::Forms::Panel^ preCatalogPanel;
 	private: System::Windows::Forms::Label^ preCatalogSentenceLabel;
-
 	private: System::Windows::Forms::Button^ preCatalogLoginButton;
 	private: System::Windows::Forms::Label^ preCatalogTitleLabel;
 	private: System::Windows::Forms::Label^ preCatalogSearchLabel;
@@ -214,7 +192,6 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Label^ registerCreateYourAccountLabel;
 	private: System::Windows::Forms::Label^ registerBlueBarLabel;
 	private: System::Windows::Forms::Label^ registerBlueBarLabel4;
-
 	private: System::Windows::Forms::Label^ registerBlueBarLabel2;
 	private: System::Windows::Forms::Label^ registerBlueBarLabel3;
 	private: System::Windows::Forms::Button^ loginReturnPreCatalogButton;
@@ -226,112 +203,57 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Panel^ clientModifyPanel;
 	private: System::Windows::Forms::Label^ clientModifyBarLabel;
 	private: System::Windows::Forms::NumericUpDown^ clientModifyPostalCodeNumericUpDown;
-
-
-
-
-
 	private: System::Windows::Forms::Button^ clientModifyAddAddressButton;
-
 	private: System::Windows::Forms::Button^ clientModifyDeleteAddressButton;
-
 	private: System::Windows::Forms::ComboBox^ clientModifyAddressPickerComboBox;
 	private: System::Windows::Forms::TextBox^ clientModifyMoreInfoTextBox;
-
-
-
 	private: System::Windows::Forms::TextBox^ clientModifyCityTextBox;
-
 	private: System::Windows::Forms::TextBox^ clientModifyAddressStreetTextBox;
-
-
-
 	private: System::Windows::Forms::TextBox^ clientModifyLastnameTextBox;
-
 	private: System::Windows::Forms::TextBox^ clientModifyFirstnameTextBox;
-
 	private: System::Windows::Forms::TextBox^ clientModifyUsernameTextBox;
 	private: System::Windows::Forms::Label^ clientModifyMoreInfoLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyPostalCodeLabel;
-
-
-
-
-
 	private: System::Windows::Forms::Label^ clientModifyCityLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyAddressStreetLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyAddressLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyBirthdayLabel;
-
-
 	private: System::Windows::Forms::Label^ clientModifyLastnameLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyFirstnameLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyUsernameLabel;
-
 	private: System::Windows::Forms::Label^ clientModifyInformationsLabel;
 	private: System::Windows::Forms::DateTimePicker^ clientModifyBirthdayDateTimePicker;
 	private: System::Windows::Forms::Button^ clientModifyApplyModifButton;
 	private: System::Windows::Forms::Label^ clientModifyErrorBoxLabel;
-
 	private: System::Windows::Forms::Panel^ employeeListViewPanel;
 	private: System::Windows::Forms::Panel^ clientListViewPanel;
 	private: System::Windows::Forms::Button^ employeeAddNewEmployeeButton;
 	private: System::Windows::Forms::ListView^ employeeListView;
 	private: System::Windows::Forms::Panel^ employeeModifyPanel;
 	private: System::Windows::Forms::Label^ employeeModifyErrorBoxLabel;
-
 	private: System::Windows::Forms::Button^ employeeModifyApplyModifButton;
-
 	private: System::Windows::Forms::DateTimePicker^ employeeModifyBirthdayDateTimePicker;
 	private: System::Windows::Forms::Label^ barSeparateLabel;
-
-
 	private: System::Windows::Forms::NumericUpDown^ employeeModifyPostalCodeNumericUpDown;
 	private: System::Windows::Forms::Button^ employeeModifyAddAddressButton;
-
-
 	private: System::Windows::Forms::Button^ employeeModifyDeleteAddressButton;
-
 	private: System::Windows::Forms::ComboBox^ employeeModifyAddressPickerComboBox;
 	private: System::Windows::Forms::TextBox^ employeeModifyMoreInfoTextBox;
-
-
 	private: System::Windows::Forms::TextBox^ employeeModifyCityTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeModifyAddressStreetTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeModifyLastnameTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeModifyFirstnameTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeModifyUsernameTextBox;
 	private: System::Windows::Forms::Label^ employeeModifyMoreInfoLabel;
-
-
 	private: System::Windows::Forms::Label^ employeeModifyPostalCodeLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyCityLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyAddressStreetLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyAddressLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyBirthdayLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyLastnameLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyFirstnameLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyUsernameLabel;
-
 	private: System::Windows::Forms::Label^ employeeModifyInformationsLabel;
-
 	private: System::Windows::Forms::ListView^ clientListView;
 	private: System::Windows::Forms::Label^ employeeModifyHireDateLabel;
 	private: System::Windows::Forms::DateTimePicker^ employeeModifyHireDateDateTimePicker;
@@ -339,68 +261,37 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::Button^ clientModifyBackButton;
 	private: System::Windows::Forms::Panel^ employeeAddEmployeePanel;
 	private: System::Windows::Forms::Label^ employeeAddEmployeeLastnameLabel;
-
 	private: System::Windows::Forms::Label^ employeeAddEmployeeFirstnameLabel;
-
 	private: System::Windows::Forms::Label^ employeeAddEmployeeUsernameLabel;
-
 	private: System::Windows::Forms::Label^ employeeAddEmployeeLabel;
 	private: System::Windows::Forms::DateTimePicker^ employeeAddEmployeeHireDateDateTimePicker;
-
 	private: System::Windows::Forms::DateTimePicker^ employeeAddEmployeeBirthdayDateTimePicker;
-
 	private: System::Windows::Forms::TextBox^ employeeAddEmployeePasswordTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeAddEmployeeLastnameTextbox;
-
 	private: System::Windows::Forms::TextBox^ employeeAddEmployeeFirstnameTextBox;
-
 	private: System::Windows::Forms::TextBox^ employeeAddEmployeeUsernameTextBox;
 	private: System::Windows::Forms::Button^ employeeAddEmployeeCancelButton;
-
-
 	private: System::Windows::Forms::Button^ employeeAddEmployeeAddButton;
-
 	private: System::Windows::Forms::CheckBox^ employeeAddEmployeeManagerCheckBox;
-
 	private: System::Windows::Forms::Label^ employeeAddEmployeeHireDateLabel;
-
 	private: System::Windows::Forms::Label^ employeeAddEmployeeBirthdayLabel;
 	private: System::Windows::Forms::Label^ employeeAddEmployeePasswordLabel;
 	private: System::Windows::Forms::Label^ employeeAddEmployeeErrorBoxLabel;
 	private: System::Windows::Forms::Panel^ simulationPanel;
 	private: System::Windows::Forms::Label^ simulationResultLabel;
-
 	private: System::Windows::Forms::Label^ simulationMarkdownLabel;
 	private: System::Windows::Forms::Label^ simulationDiscountLabel;
 	private: System::Windows::Forms::Label^ simulationMargeLabel;
 	private: System::Windows::Forms::Label^ simulationTVALabel;
 	private: System::Windows::Forms::Label^ simulationEntryPriceLabel;
 	private: System::Windows::Forms::Label^ simulationTitleLabel;
-
 	private: System::Windows::Forms::ComboBox^ simulationMarkdownComboBox;
-
 	private: System::Windows::Forms::ComboBox^ simulationDiscountComboBox;
 	private: System::Windows::Forms::ComboBox^ simulationMargeComboBox;
 	private: System::Windows::Forms::ComboBox^ simulationTVAComboBox;
 	private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
-private: System::Windows::Forms::Button^ disconnectButton;
-private: System::Windows::Forms::PictureBox^ logoPictureBox;
-
-
-
-
-
-
-
-
-
-
-
-
-
-		   AccountManager^ accountManager = gcnew AccountManager();
-
+	private: System::Windows::Forms::Button^ disconnectButton;
+	private: System::Windows::Forms::PictureBox^ logoPictureBox;
 
 #pragma region Windows Form Designer generated code
 		   /// <summary>
@@ -4318,7 +4209,7 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 	};
 
 		   //ADD EMPLOYEE ---------------------------------------------------------------------------------------
-	
+
 	private: System::Void employeeAddEmployeeAddButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (this->employeeAddEmployeeFirstnameTextBox->Text == "" || this->employeeAddEmployeeLastnameTextbox->Text == "" || this->employeeAddEmployeePasswordTextBox->Text == "" || this->employeeAddEmployeeUsernameTextBox->Text == "") {
 			this->employeeAddEmployeeErrorBoxLabel->Text = "Please fill in all the Fields";
@@ -4473,5 +4364,5 @@ private: System::Windows::Forms::PictureBox^ logoPictureBox;
 		nameProjectLabel_Click(sender, e);
 		MyForm_Load(sender, e);
 	}
-};
+	};
 }
