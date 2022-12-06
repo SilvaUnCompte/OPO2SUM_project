@@ -388,6 +388,9 @@ namespace OPO2SUMproject {
 			   this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->hubPanel = (gcnew System::Windows::Forms::Panel());
+			   this->clientListViewPanel = (gcnew System::Windows::Forms::Panel());
+			   this->clientListView = (gcnew System::Windows::Forms::ListView());
+			   this->logoPictureBox = (gcnew System::Windows::Forms::PictureBox());
 			   this->clientModifyPanel = (gcnew System::Windows::Forms::Panel());
 			   this->clientModifyBackButton = (gcnew System::Windows::Forms::Button());
 			   this->clientModifyErrorBoxLabel = (gcnew System::Windows::Forms::Label());
@@ -414,7 +417,6 @@ namespace OPO2SUMproject {
 			   this->clientModifyFirstnameLabel = (gcnew System::Windows::Forms::Label());
 			   this->clientModifyUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->clientModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
-			   this->logoPictureBox = (gcnew System::Windows::Forms::PictureBox());
 			   this->employeeModifyPanel = (gcnew System::Windows::Forms::Panel());
 			   this->employeeModifyBackButton = (gcnew System::Windows::Forms::Button());
 			   this->employeeModifyHireDateLabel = (gcnew System::Windows::Forms::Label());
@@ -510,8 +512,6 @@ namespace OPO2SUMproject {
 			   this->employeeListViewPanel = (gcnew System::Windows::Forms::Panel());
 			   this->employeeAddNewEmployeeButton = (gcnew System::Windows::Forms::Button());
 			   this->employeeListView = (gcnew System::Windows::Forms::ListView());
-			   this->clientListViewPanel = (gcnew System::Windows::Forms::Panel());
-			   this->clientListView = (gcnew System::Windows::Forms::ListView());
 			   this->loginPanel->SuspendLayout();
 			   this->loginTextPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
@@ -525,9 +525,10 @@ namespace OPO2SUMproject {
 			   this->accountPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			   this->hubPanel->SuspendLayout();
+			   this->clientListViewPanel->SuspendLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->BeginInit();
 			   this->clientModifyPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->BeginInit();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->BeginInit();
 			   this->employeeModifyPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->BeginInit();
 			   this->preCatalogPanel->SuspendLayout();
@@ -538,7 +539,6 @@ namespace OPO2SUMproject {
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
 			   this->employeeAddEmployeePanel->SuspendLayout();
 			   this->employeeListViewPanel->SuspendLayout();
-			   this->clientListViewPanel->SuspendLayout();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
@@ -1834,10 +1834,13 @@ namespace OPO2SUMproject {
 			   // 
 			   this->hubPanel->BackColor = System::Drawing::Color::White;
 			   this->hubPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			   this->hubPanel->Controls->Add(this->clientListViewPanel);
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
-			   this->hubPanel->Controls->Add(this->logoPictureBox);
+			   this->hubPanel->Controls->Add(this->statisticMPanel);
+			   this->hubPanel->Controls->Add(this->orderMPanel);
+			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
+			   this->hubPanel->Controls->Add(this->employeeListViewPanel);
+			   this->hubPanel->Controls->Add(this->clientListViewPanel);
 			   this->hubPanel->Controls->Add(this->clientModifyPanel);
 			   this->hubPanel->Controls->Add(this->accountPanel);
 			   this->hubPanel->Controls->Add(this->employeeModifyPanel);
@@ -1846,14 +1849,43 @@ namespace OPO2SUMproject {
 			   this->hubPanel->Controls->Add(this->catalogCartPanel);
 			   this->hubPanel->Controls->Add(this->addStockPanel);
 			   this->hubPanel->Controls->Add(this->stockMPanel);
-			   this->hubPanel->Controls->Add(this->statisticMPanel);
-			   this->hubPanel->Controls->Add(this->orderMPanel);
-			   this->hubPanel->Controls->Add(this->employeeAddEmployeePanel);
-			   this->hubPanel->Controls->Add(this->employeeListViewPanel);
+			   this->hubPanel->Controls->Add(this->logoPictureBox);
 			   this->hubPanel->Location = System::Drawing::Point(0, 0);
 			   this->hubPanel->Name = L"hubPanel";
 			   this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			   this->hubPanel->TabIndex = 29;
+			   // 
+			   // clientListViewPanel
+			   // 
+			   this->clientListViewPanel->Controls->Add(this->clientListView);
+			   this->clientListViewPanel->Location = System::Drawing::Point(220, 80);
+			   this->clientListViewPanel->Name = L"clientListViewPanel";
+			   this->clientListViewPanel->Size = System::Drawing::Size(968, 607);
+			   this->clientListViewPanel->TabIndex = 32;
+			   // 
+			   // clientListView
+			   // 
+			   this->clientListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   this->clientListView->HideSelection = false;
+			   this->clientListView->Location = System::Drawing::Point(42, 35);
+			   this->clientListView->Name = L"clientListView";
+			   this->clientListView->Size = System::Drawing::Size(897, 539);
+			   this->clientListView->TabIndex = 0;
+			   this->clientListView->UseCompatibleStateImageBehavior = false;
+			   this->clientListView->View = System::Windows::Forms::View::List;
+			   this->clientListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::clientListView_DoubleClick);
+			   // 
+			   // logoPictureBox
+			   // 
+			   this->logoPictureBox->BackColor = System::Drawing::Color::White;
+			   this->logoPictureBox->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logoPictureBox.Image")));
+			   this->logoPictureBox->Location = System::Drawing::Point(440, 160);
+			   this->logoPictureBox->Name = L"logoPictureBox";
+			   this->logoPictureBox->Size = System::Drawing::Size(528, 447);
+			   this->logoPictureBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			   this->logoPictureBox->TabIndex = 29;
+			   this->logoPictureBox->TabStop = false;
 			   // 
 			   // clientModifyPanel
 			   // 
@@ -2118,17 +2150,6 @@ namespace OPO2SUMproject {
 			   this->clientModifyInformationsLabel->Size = System::Drawing::Size(207, 38);
 			   this->clientModifyInformationsLabel->TabIndex = 0;
 			   this->clientModifyInformationsLabel->Text = L"Informations";
-			   // 
-			   // logoPictureBox
-			   // 
-			   this->logoPictureBox->BackColor = System::Drawing::Color::White;
-			   this->logoPictureBox->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logoPictureBox.Image")));
-			   this->logoPictureBox->Location = System::Drawing::Point(440, 160);
-			   this->logoPictureBox->Name = L"logoPictureBox";
-			   this->logoPictureBox->Size = System::Drawing::Size(528, 447);
-			   this->logoPictureBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			   this->logoPictureBox->TabIndex = 29;
-			   this->logoPictureBox->TabStop = false;
 			   // 
 			   // employeeModifyPanel
 			   // 
@@ -2661,9 +2682,9 @@ namespace OPO2SUMproject {
 			   this->statisticMPanel->Controls->Add(this->Prod_u_restocking_button);
 			   this->statisticMPanel->Controls->Add(this->turnover_button);
 			   this->statisticMPanel->Controls->Add(this->Panier_Poyen_Button);
-			   this->statisticMPanel->Controls->Add(this->stat_label);
 			   this->statisticMPanel->Controls->Add(this->simulationPanel);
 			   this->statisticMPanel->Controls->Add(this->dataGridViewstat);
+			   this->statisticMPanel->Controls->Add(this->stat_label);
 			   this->statisticMPanel->Location = System::Drawing::Point(220, 80);
 			   this->statisticMPanel->Name = L"statisticMPanel";
 			   this->statisticMPanel->Size = System::Drawing::Size(968, 607);
@@ -3144,26 +3165,6 @@ namespace OPO2SUMproject {
 			   this->employeeListView->View = System::Windows::Forms::View::List;
 			   this->employeeListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::employeeListView_DoubleClick);
 			   // 
-			   // clientListViewPanel
-			   // 
-			   this->clientListViewPanel->Controls->Add(this->clientListView);
-			   this->clientListViewPanel->Location = System::Drawing::Point(220, 80);
-			   this->clientListViewPanel->Name = L"clientListViewPanel";
-			   this->clientListViewPanel->Size = System::Drawing::Size(968, 607);
-			   this->clientListViewPanel->TabIndex = 32;
-			   // 
-			   // clientListView
-			   // 
-			   this->clientListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
-			   this->clientListView->HideSelection = false;
-			   this->clientListView->Location = System::Drawing::Point(42, 35);
-			   this->clientListView->Name = L"clientListView";
-			   this->clientListView->Size = System::Drawing::Size(897, 539);
-			   this->clientListView->TabIndex = 0;
-			   this->clientListView->UseCompatibleStateImageBehavior = false;
-			   this->clientListView->View = System::Windows::Forms::View::List;
-			   this->clientListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::clientListView_DoubleClick);
-			   // 
 			   // MyForm
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -3201,10 +3202,11 @@ namespace OPO2SUMproject {
 			   this->accountPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			   this->hubPanel->ResumeLayout(false);
+			   this->clientListViewPanel->ResumeLayout(false);
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->EndInit();
 			   this->clientModifyPanel->ResumeLayout(false);
 			   this->clientModifyPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->EndInit();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->EndInit();
 			   this->employeeModifyPanel->ResumeLayout(false);
 			   this->employeeModifyPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->EndInit();
@@ -3221,7 +3223,6 @@ namespace OPO2SUMproject {
 			   this->employeeAddEmployeePanel->ResumeLayout(false);
 			   this->employeeAddEmployeePanel->PerformLayout();
 			   this->employeeListViewPanel->ResumeLayout(false);
-			   this->clientListViewPanel->ResumeLayout(false);
 			   this->ResumeLayout(false);
 
 		   }
@@ -3312,11 +3313,11 @@ namespace OPO2SUMproject {
 		catalogResearchTextBox->Text = "";
 		catalogAddressShippingListComboBox->Text = "";
 		catalogAddressBillingListComboBox->Text = "";
-		simulationMarkdownComboBox->Text = "";
-		simulationDiscountComboBox->Text = "";
-		simulationMargeComboBox->Text = "";
-		simulationTVAComboBox->Text = "";
-		simulationEntryPriceTextBox->Text = "";
+		simulationMarkdownComboBox->Text = "0";
+		simulationDiscountComboBox->Text = "0";
+		simulationMargeComboBox->Text = "0";
+		simulationTVAComboBox->Text = "0";
+		simulationEntryPriceTextBox->Text = "0";
 		employeeAddEmployeePasswordTextBox->Text = "";
 		employeeAddEmployeeLastnameTextbox->Text = "";
 		employeeAddEmployeeFirstnameTextBox->Text = "";
@@ -3694,9 +3695,7 @@ namespace OPO2SUMproject {
 
 		employeeListViewPanel->Visible = true;
 		employeeRefreshList();
-
 	}
-
 
 		   // Catalog --------------------------------------------------------------------
 
@@ -3855,14 +3854,16 @@ namespace OPO2SUMproject {
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = panier; // dataset
 		dataGridViewstat->DataMember = "Temp";
+		this->simulationPanel->Visible = false;
 	}
 	private: System::Void turnover_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ turnover = Adata->getRows("select sum(c.nb_element * p.marge_product) AS Tunrover, YEAR(issue_date) AS Year, MONTH(issue_date) AS Month from orderTab o inner join contain c ON o.id_order = c.id_order inner join product p ON c.id_product = p.id_product group by YEAR(issue_date), MONTH(issue_date)", "temp");
+		DataSet^ turnover = Adata->getRows("select sum(c.nb_element * p.marge_product) AS Tunrover, YEAR(issue_date) AS Year, MONTH(issue_date) AS Month from orderTab o inner join contain c ON o.id_order = c.id_order inner join product p ON c.id_product = p.id_product group by YEAR(issue_date), MONTH(issue_date) order by Year;", "temp");
 		stat_label->Text = "Turnover per month";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = turnover; // dataset
 		dataGridViewstat->DataMember = "Temp";
+		this->simulationPanel->Visible = false;
 	}
 	private: System::Void Prod_u_restocking_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
@@ -3871,14 +3872,16 @@ namespace OPO2SUMproject {
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = restocking; // dataset
 		dataGridViewstat->DataMember = "Temp";
+		this->simulationPanel->Visible = false;
 	}
 	private: System::Void Amount_per_client_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ Amount_per_client = Adata->getRows("SELECT a.account_name, SUM(total_bill) AS 'Total per client' FROM opo2sum.dbo.bill b inner join orderTab o ON o.id_order = b.id_order inner join account a ON o.id_account = a.id_account GROUP BY a.account_name;", "temp");
+		DataSet^ Amount_per_client = Adata->getRows("SELECT a.account_name, SUM(total_bill) AS 'Total per client' FROM opo2sum.dbo.bill b inner join orderTab o ON o.id_order = b.id_order inner join account a ON o.id_account = a.id_account GROUP BY a.account_name order by 'Total per client' desc;", "temp");
 		stat_label->Text = "Amount per client";
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = Amount_per_client; // dataset
 		dataGridViewstat->DataMember = "Temp";
+		this->simulationPanel->Visible = false;
 	}
 	private: System::Void top_buys_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
@@ -3887,6 +3890,7 @@ namespace OPO2SUMproject {
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = top10_buys; // dataset
 		dataGridViewstat->DataMember = "Temp";
+		this->simulationPanel->Visible = false;
 	}
 	private: System::Void buys_down_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
@@ -3895,6 +3899,7 @@ namespace OPO2SUMproject {
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = down10_buys; // dataset
 		dataGridViewstat->DataMember = "Temp";
+		this->simulationPanel->Visible = false;
 	}
 	private: System::Void Commercial_Value_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
@@ -3903,17 +3908,18 @@ namespace OPO2SUMproject {
 		//dataGridViewstat->AutoGenerateColumns = true;
 		dataGridViewstat->DataSource = Commercial_Value_of_Stock; // dataset
 		dataGridViewstat->DataMember = "Temp";
+		this->simulationPanel->Visible = false;
 	}
 	private: System::Void Purchase_Value_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ total_cost_dataset = Adata->getRows("Select sum(cost_product*stock_product) as pp FROM product", "temp2");
+		DataSet^ total_cost_dataset = Adata->getRows("Select sum(cost_product*stock_product) as pp FROM product", "temp");
 		DataTable^ total_cost_datatable = total_cost_dataset->Tables[0];
 		DataRow^ drow = total_cost_datatable->Rows[0];
 		this->simulationEntryPriceTextBox->Text = drow[0]->ToString();
 		this->simulationPanel->Visible = !this->simulationPanel->Visible;
 	}
 
-		   // Ohhrder page --------------------------------------------------------
+		   // Order page --------------------------------------------------------
 
 	private: System::Void orderFilterTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		orderGlobalListView->Items->Clear();
@@ -4008,7 +4014,7 @@ namespace OPO2SUMproject {
 		}
 	}
 	private: System::Void clientModifyDeleteAddressButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (this->clientModifyAddressPickerComboBox->SelectedValue == NULL) {
+		if (this->clientModifyAddressPickerComboBox->SelectedValue == nullptr) {
 			clientModifyErrorBoxLabel->Text = "Please Select an Address to Delete";
 			clientModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
 		}
@@ -4145,8 +4151,17 @@ namespace OPO2SUMproject {
 		   //ADD EMPLOYEE ---------------------------------------------------------------------------------------
 
 	private: System::Void employeeAddEmployeeAddButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		AccessData^ Adata = gcnew AccessData;
+
+		System::Data::DataSet^ alreadyExist = Adata->getRows("IF EXISTS (SELECT id_account FROM account WHERE account_name = '" + this->registerUsernameTextBox->Text + "') BEGIN SELECT 1 END ELSE BEGIN SELECT 0 END;", "Temp");
+		System::Data::DataTableReader^ DataTableReaderUsername = alreadyExist->CreateDataReader();
+		DataTableReaderUsername->Read();
+
 		if (this->employeeAddEmployeeFirstnameTextBox->Text == "" || this->employeeAddEmployeeLastnameTextbox->Text == "" || this->employeeAddEmployeePasswordTextBox->Text == "" || this->employeeAddEmployeeUsernameTextBox->Text == "") {
 			this->employeeAddEmployeeErrorBoxLabel->Text = "Please fill in all the Fields";
+		}
+		else if (DataTableReaderUsername->GetInt32(0)) {
+			this->employeeAddEmployeeErrorBoxLabel->Text = "This username is already used.";
 		}
 		else if (this->employeeAddEmployeePasswordTextBox->Text->Length < 8) {
 			this->employeeAddEmployeeErrorBoxLabel->Text = "Password must be at least 8 characters long";
@@ -4173,6 +4188,7 @@ namespace OPO2SUMproject {
 			employeeRefreshList();
 			employeeListViewPanel->Visible = true;
 		}
+		DataTableReaderUsername->Close();
 	}
 	private: System::Void employeeAddEmployeeCancelButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->employeeAddEmployeeUsernameTextBox->Text = "";
