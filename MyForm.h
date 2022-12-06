@@ -4296,9 +4296,7 @@ namespace OPO2SUMproject {
 	};
 
 		   //ADD EMPLOYEE ---------------------------------------------------------------------------------------
-	private: System::Void employeeAddNewEmployeeButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		//panel2->Visible = true;
-	}
+	
 	private: System::Void employeeAddEmployeeAddButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (this->employeeAddEmployeeFirstnameTextBox->Text == "" || this->employeeAddEmployeeLastnameTextbox->Text == "" || this->employeeAddEmployeePasswordTextBox->Text == "" || this->employeeAddEmployeeUsernameTextBox->Text == "") {
 			this->employeeAddEmployeeErrorBoxLabel->Text = "Please fill in all the Fields";
