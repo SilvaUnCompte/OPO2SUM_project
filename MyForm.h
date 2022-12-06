@@ -307,6 +307,7 @@ private: System::Windows::Forms::TextBox^ stockModifyNameTextBox;
 private: System::Windows::Forms::Button^ stockModifyModifyButton;
 private: System::Windows::Forms::Label^ stockModifyTitleLabel;
 private: System::Windows::Forms::Label^ stockModifyErrorLabel;
+private: System::Windows::Forms::Button^ stockModifyExitButton;
 	private: System::Windows::Forms::PictureBox^ logoPictureBox;
 
 #pragma region Windows Form Designer generated code
@@ -317,8 +318,8 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 		   void InitializeComponent(void)
 		   {
 			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   this->loginPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginTextPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginReturnPreCatalogButton = (gcnew System::Windows::Forms::Button());
@@ -422,6 +423,8 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->hubPanel = (gcnew System::Windows::Forms::Panel());
 			   this->stockModifyPanel = (gcnew System::Windows::Forms::Panel());
+			   this->stockModifyExitButton = (gcnew System::Windows::Forms::Button());
+			   this->stockModifyErrorLabel = (gcnew System::Windows::Forms::Label());
 			   this->stockModifyTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->stockModifyRestockLabel = (gcnew System::Windows::Forms::Label());
 			   this->stockModifyStockLabel = (gcnew System::Windows::Forms::Label());
@@ -563,7 +566,6 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->clientModifyUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->clientModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
 			   this->logoPictureBox = (gcnew System::Windows::Forms::PictureBox());
-			   this->stockModifyErrorLabel = (gcnew System::Windows::Forms::Label());
 			   this->loginPanel->SuspendLayout();
 			   this->loginTextPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
@@ -1935,6 +1937,7 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   // 
 			   // stockModifyPanel
 			   // 
+			   this->stockModifyPanel->Controls->Add(this->stockModifyExitButton);
 			   this->stockModifyPanel->Controls->Add(this->stockModifyErrorLabel);
 			   this->stockModifyPanel->Controls->Add(this->stockModifyTitleLabel);
 			   this->stockModifyPanel->Controls->Add(this->stockModifyRestockLabel);
@@ -1957,6 +1960,32 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->stockModifyPanel->Name = L"stockModifyPanel";
 			   this->stockModifyPanel->Size = System::Drawing::Size(968, 607);
 			   this->stockModifyPanel->TabIndex = 18;
+			   // 
+			   // stockModifyExitButton
+			   // 
+			   this->stockModifyExitButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)),
+				   static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(230)));
+			   this->stockModifyExitButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->stockModifyExitButton->Location = System::Drawing::Point(925, 12);
+			   this->stockModifyExitButton->Name = L"stockModifyExitButton";
+			   this->stockModifyExitButton->Size = System::Drawing::Size(30, 30);
+			   this->stockModifyExitButton->TabIndex = 18;
+			   this->stockModifyExitButton->Text = L"X";
+			   this->stockModifyExitButton->UseVisualStyleBackColor = false;
+			   this->stockModifyExitButton->Click += gcnew System::EventHandler(this, &MyForm::stockModifyExitButton_Click);
+			   // 
+			   // stockModifyErrorLabel
+			   // 
+			   this->stockModifyErrorLabel->BackColor = System::Drawing::Color::Transparent;
+			   this->stockModifyErrorLabel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			   this->stockModifyErrorLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->stockModifyErrorLabel->ForeColor = System::Drawing::Color::Red;
+			   this->stockModifyErrorLabel->Location = System::Drawing::Point(308, 556);
+			   this->stockModifyErrorLabel->Name = L"stockModifyErrorLabel";
+			   this->stockModifyErrorLabel->Size = System::Drawing::Size(240, 38);
+			   this->stockModifyErrorLabel->TabIndex = 17;
+			   this->stockModifyErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			   // 
 			   // stockModifyTitleLabel
 			   // 
@@ -2054,6 +2083,7 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->stockModifyRestockTextBox->Name = L"stockModifyRestockTextBox";
 			   this->stockModifyRestockTextBox->Size = System::Drawing::Size(237, 30);
 			   this->stockModifyRestockTextBox->TabIndex = 8;
+			   this->stockModifyRestockTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyEnableCheckBox
 			   // 
@@ -2066,6 +2096,7 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->stockModifyEnableCheckBox->TabIndex = 7;
 			   this->stockModifyEnableCheckBox->Text = L"Enable";
 			   this->stockModifyEnableCheckBox->UseVisualStyleBackColor = true;
+			   this->stockModifyEnableCheckBox->CheckedChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyMargeTextBox
 			   // 
@@ -2075,6 +2106,7 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->stockModifyMargeTextBox->Name = L"stockModifyMargeTextBox";
 			   this->stockModifyMargeTextBox->Size = System::Drawing::Size(237, 30);
 			   this->stockModifyMargeTextBox->TabIndex = 6;
+			   this->stockModifyMargeTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyTVATextBox
 			   // 
@@ -2084,6 +2116,7 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->stockModifyTVATextBox->Name = L"stockModifyTVATextBox";
 			   this->stockModifyTVATextBox->Size = System::Drawing::Size(237, 30);
 			   this->stockModifyTVATextBox->TabIndex = 5;
+			   this->stockModifyTVATextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyStockTextBox
 			   // 
@@ -2093,6 +2126,7 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->stockModifyStockTextBox->Name = L"stockModifyStockTextBox";
 			   this->stockModifyStockTextBox->Size = System::Drawing::Size(237, 30);
 			   this->stockModifyStockTextBox->TabIndex = 4;
+			   this->stockModifyStockTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyCostTextBox
 			   // 
@@ -2102,6 +2136,7 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->stockModifyCostTextBox->Name = L"stockModifyCostTextBox";
 			   this->stockModifyCostTextBox->Size = System::Drawing::Size(237, 30);
 			   this->stockModifyCostTextBox->TabIndex = 3;
+			   this->stockModifyCostTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyQuantityTextBox
 			   // 
@@ -2111,6 +2146,7 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->stockModifyQuantityTextBox->Name = L"stockModifyQuantityTextBox";
 			   this->stockModifyQuantityTextBox->Size = System::Drawing::Size(237, 30);
 			   this->stockModifyQuantityTextBox->TabIndex = 2;
+			   this->stockModifyQuantityTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyNameTextBox
 			   // 
@@ -2120,6 +2156,7 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->stockModifyNameTextBox->Name = L"stockModifyNameTextBox";
 			   this->stockModifyNameTextBox->Size = System::Drawing::Size(237, 30);
 			   this->stockModifyNameTextBox->TabIndex = 1;
+			   this->stockModifyNameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableStockModifyModifyButton);
 			   // 
 			   // stockModifyModifyButton
 			   // 
@@ -2905,14 +2942,14 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   // 
 			   // dataGridViewstat
 			   // 
-			   dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			   dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
-			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			   this->dataGridViewstat->ColumnHeadersHeight = 29;
 			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
 			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
@@ -3449,18 +3486,6 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 			   this->logoPictureBox->TabIndex = 29;
 			   this->logoPictureBox->TabStop = false;
 			   // 
-			   // stockModifyErrorLabel
-			   // 
-			   this->stockModifyErrorLabel->BackColor = System::Drawing::Color::Transparent;
-			   this->stockModifyErrorLabel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			   this->stockModifyErrorLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 7.8F, System::Drawing::FontStyle::Regular,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->stockModifyErrorLabel->Location = System::Drawing::Point(308, 556);
-			   this->stockModifyErrorLabel->Name = L"stockModifyErrorLabel";
-			   this->stockModifyErrorLabel->Size = System::Drawing::Size(240, 38);
-			   this->stockModifyErrorLabel->TabIndex = 17;
-			   this->stockModifyErrorLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			   // 
 			   // MyForm
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -3954,7 +3979,7 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 		this->stockModifyEnableCheckBox->Checked = connectedProduct->get_enable_product();
 
 		hideAllPanel();
-		//stockModifyModifyButton->Enabled = false;
+		stockModifyModifyButton->Enabled = false;
 		stockModifyPanel->Visible = true;
 	}
 	private: System::Void addStockValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4084,6 +4109,10 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 		
 		stockRefreshList();
 
+		this->stockModifyModifyButton->Enabled = false;
+	}
+	private: System::Void enableStockModifyModifyButton(System::Object^ sender, System::EventArgs^ e) {
+		this->stockModifyModifyButton->Enabled = true;
 	}
 
 		   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -4778,5 +4807,10 @@ private: System::Windows::Forms::Label^ stockModifyErrorLabel;
 		DataRow^ drow = total_cost_datatable->Rows[0];
 		this->simulationEntryPriceTextBox->Text = drow[0]->ToString();
 	}
+private: System::Void stockModifyExitButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	hideAllPanel();
+	stockMPanel->Visible = true;
+	stockRefreshList();
+}
 };
 }
