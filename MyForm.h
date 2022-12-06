@@ -305,12 +305,9 @@ namespace OPO2SUMproject {
 		   /// </summary>
 		   void InitializeComponent(void)
 		   {
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			   System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			   this->loginPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginTextPanel = (gcnew System::Windows::Forms::Panel());
 			   this->loginReturnPreCatalogButton = (gcnew System::Windows::Forms::Button());
@@ -411,6 +408,35 @@ namespace OPO2SUMproject {
 			   this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->hubPanel = (gcnew System::Windows::Forms::Panel());
+			   this->clientListViewPanel = (gcnew System::Windows::Forms::Panel());
+			   this->clientListView = (gcnew System::Windows::Forms::ListView());
+			   this->clientModifyPanel = (gcnew System::Windows::Forms::Panel());
+			   this->clientModifyBackButton = (gcnew System::Windows::Forms::Button());
+			   this->clientModifyErrorBoxLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyApplyModifButton = (gcnew System::Windows::Forms::Button());
+			   this->clientModifyBirthdayDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			   this->clientModifyBarLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyPostalCodeNumericUpDown = (gcnew System::Windows::Forms::NumericUpDown());
+			   this->clientModifyAddAddressButton = (gcnew System::Windows::Forms::Button());
+			   this->clientModifyDeleteAddressButton = (gcnew System::Windows::Forms::Button());
+			   this->clientModifyAddressPickerComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->clientModifyMoreInfoTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyCityTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyAddressStreetTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
+			   this->clientModifyMoreInfoLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyPostalCodeLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyCityLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyAddressStreetLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyAddressLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyBirthdayLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyLastnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyFirstnameLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyUsernameLabel = (gcnew System::Windows::Forms::Label());
+			   this->clientModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
+			   this->logoPictureBox = (gcnew System::Windows::Forms::PictureBox());
 			   this->employeeModifyPanel = (gcnew System::Windows::Forms::Panel());
 			   this->employeeModifyBackButton = (gcnew System::Windows::Forms::Button());
 			   this->employeeModifyHireDateLabel = (gcnew System::Windows::Forms::Label());
@@ -506,35 +532,6 @@ namespace OPO2SUMproject {
 			   this->employeeListViewPanel = (gcnew System::Windows::Forms::Panel());
 			   this->employeeAddNewEmployeeButton = (gcnew System::Windows::Forms::Button());
 			   this->employeeListView = (gcnew System::Windows::Forms::ListView());
-			   this->clientListViewPanel = (gcnew System::Windows::Forms::Panel());
-			   this->clientListView = (gcnew System::Windows::Forms::ListView());
-			   this->clientModifyPanel = (gcnew System::Windows::Forms::Panel());
-			   this->clientModifyBackButton = (gcnew System::Windows::Forms::Button());
-			   this->clientModifyErrorBoxLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyApplyModifButton = (gcnew System::Windows::Forms::Button());
-			   this->clientModifyBirthdayDateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
-			   this->clientModifyBarLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyPostalCodeNumericUpDown = (gcnew System::Windows::Forms::NumericUpDown());
-			   this->clientModifyAddAddressButton = (gcnew System::Windows::Forms::Button());
-			   this->clientModifyDeleteAddressButton = (gcnew System::Windows::Forms::Button());
-			   this->clientModifyAddressPickerComboBox = (gcnew System::Windows::Forms::ComboBox());//
-			   this->clientModifyMoreInfoTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->clientModifyCityTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->clientModifyAddressStreetTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->clientModifyLastnameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->clientModifyFirstnameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->clientModifyUsernameTextBox = (gcnew System::Windows::Forms::TextBox());
-			   this->clientModifyMoreInfoLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyPostalCodeLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyCityLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyAddressStreetLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyAddressLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyBirthdayLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyLastnameLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyFirstnameLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyUsernameLabel = (gcnew System::Windows::Forms::Label());
-			   this->clientModifyInformationsLabel = (gcnew System::Windows::Forms::Label());
-			   this->logoPictureBox = (gcnew System::Windows::Forms::PictureBox());
 			   this->loginPanel->SuspendLayout();
 			   this->loginTextPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
@@ -548,6 +545,10 @@ namespace OPO2SUMproject {
 			   this->accountPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			   this->hubPanel->SuspendLayout();
+			   this->clientListViewPanel->SuspendLayout();
+			   this->clientModifyPanel->SuspendLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->BeginInit();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->BeginInit();
 			   this->employeeModifyPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->BeginInit();
 			   this->preCatalogPanel->SuspendLayout();
@@ -558,10 +559,6 @@ namespace OPO2SUMproject {
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
 			   this->employeeAddEmployeePanel->SuspendLayout();
 			   this->employeeListViewPanel->SuspendLayout();
-			   this->clientListViewPanel->SuspendLayout();
-			   this->clientModifyPanel->SuspendLayout();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->BeginInit();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->BeginInit();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
@@ -1878,6 +1875,302 @@ namespace OPO2SUMproject {
 			   this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			   this->hubPanel->TabIndex = 29;
 			   // 
+			   // clientListViewPanel
+			   // 
+			   this->clientListViewPanel->Controls->Add(this->clientListView);
+			   this->clientListViewPanel->Location = System::Drawing::Point(220, 80);
+			   this->clientListViewPanel->Name = L"clientListViewPanel";
+			   this->clientListViewPanel->Size = System::Drawing::Size(968, 607);
+			   this->clientListViewPanel->TabIndex = 32;
+			   // 
+			   // clientListView
+			   // 
+			   this->clientListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   this->clientListView->HideSelection = false;
+			   this->clientListView->Location = System::Drawing::Point(22, 21);
+			   this->clientListView->Name = L"clientListView";
+			   this->clientListView->Size = System::Drawing::Size(920, 573);
+			   this->clientListView->TabIndex = 0;
+			   this->clientListView->UseCompatibleStateImageBehavior = false;
+			   this->clientListView->View = System::Windows::Forms::View::List;
+			   this->clientListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::clientListView_DoubleClick);
+			   // 
+			   // clientModifyPanel
+			   // 
+			   this->clientModifyPanel->Controls->Add(this->clientModifyBackButton);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyErrorBoxLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyApplyModifButton);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyBirthdayDateTimePicker);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyBarLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyPostalCodeNumericUpDown);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyAddAddressButton);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyDeleteAddressButton);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressPickerComboBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyMoreInfoTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyCityTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressStreetTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyLastnameTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyFirstnameTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyUsernameTextBox);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyMoreInfoLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyPostalCodeLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyCityLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressStreetLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyBirthdayLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyLastnameLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyFirstnameLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyUsernameLabel);
+			   this->clientModifyPanel->Controls->Add(this->clientModifyInformationsLabel);
+			   this->clientModifyPanel->Location = System::Drawing::Point(220, 80);
+			   this->clientModifyPanel->Name = L"clientModifyPanel";
+			   this->clientModifyPanel->Size = System::Drawing::Size(968, 607);
+			   this->clientModifyPanel->TabIndex = 29;
+			   // 
+			   // clientModifyBackButton
+			   // 
+			   this->clientModifyBackButton->Location = System::Drawing::Point(927, 10);
+			   this->clientModifyBackButton->Name = L"clientModifyBackButton";
+			   this->clientModifyBackButton->Size = System::Drawing::Size(30, 30);
+			   this->clientModifyBackButton->TabIndex = 32;
+			   this->clientModifyBackButton->Text = L"X";
+			   this->clientModifyBackButton->UseVisualStyleBackColor = true;
+			   this->clientModifyBackButton->Click += gcnew System::EventHandler(this, &MyForm::clientModifyBackButton_Click);
+			   // 
+			   // clientModifyErrorBoxLabel
+			   // 
+			   this->clientModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
+			   this->clientModifyErrorBoxLabel->Location = System::Drawing::Point(741, 556);
+			   this->clientModifyErrorBoxLabel->Name = L"clientModifyErrorBoxLabel";
+			   this->clientModifyErrorBoxLabel->Size = System::Drawing::Size(177, 38);
+			   this->clientModifyErrorBoxLabel->TabIndex = 31;
+			   // 
+			   // clientModifyApplyModifButton
+			   // 
+			   this->clientModifyApplyModifButton->Enabled = false;
+			   this->clientModifyApplyModifButton->Location = System::Drawing::Point(667, 208);
+			   this->clientModifyApplyModifButton->Name = L"clientModifyApplyModifButton";
+			   this->clientModifyApplyModifButton->Size = System::Drawing::Size(177, 26);
+			   this->clientModifyApplyModifButton->TabIndex = 30;
+			   this->clientModifyApplyModifButton->Text = L"Apply Modifications";
+			   this->clientModifyApplyModifButton->UseVisualStyleBackColor = true;
+			   this->clientModifyApplyModifButton->Click += gcnew System::EventHandler(this, &MyForm::clientModifyApplyModifButton_Click);
+			   // 
+			   // clientModifyBirthdayDateTimePicker
+			   // 
+			   this->clientModifyBirthdayDateTimePicker->Location = System::Drawing::Point(90, 187);
+			   this->clientModifyBirthdayDateTimePicker->Name = L"clientModifyBirthdayDateTimePicker";
+			   this->clientModifyBirthdayDateTimePicker->Size = System::Drawing::Size(200, 22);
+			   this->clientModifyBirthdayDateTimePicker->TabIndex = 29;
+			   this->clientModifyBirthdayDateTimePicker->ValueChanged += gcnew System::EventHandler(this, &MyForm::enableClientModifyApplyModifButton);
+			   // 
+			   // clientModifyBarLabel
+			   // 
+			   this->clientModifyBarLabel->AutoSize = true;
+			   this->clientModifyBarLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->clientModifyBarLabel->Location = System::Drawing::Point(46, 229);
+			   this->clientModifyBarLabel->Name = L"clientModifyBarLabel";
+			   this->clientModifyBarLabel->Size = System::Drawing::Size(872, 38);
+			   this->clientModifyBarLabel->TabIndex = 28;
+			   this->clientModifyBarLabel->Text = L"_____________________________________________";
+			   // 
+			   // clientModifyPostalCodeNumericUpDown
+			   // 
+			   this->clientModifyPostalCodeNumericUpDown->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) {
+				   1000, 0, 0,
+					   0
+			   });
+			   this->clientModifyPostalCodeNumericUpDown->Location = System::Drawing::Point(446, 474);
+			   this->clientModifyPostalCodeNumericUpDown->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) {
+				   100000, 0, 0,
+					   0
+			   });
+			   this->clientModifyPostalCodeNumericUpDown->Name = L"clientModifyPostalCodeNumericUpDown";
+			   this->clientModifyPostalCodeNumericUpDown->Size = System::Drawing::Size(108, 22);
+			   this->clientModifyPostalCodeNumericUpDown->TabIndex = 27;
+			   // 
+			   // clientModifyAddAddressButton
+			   // 
+			   this->clientModifyAddAddressButton->Location = System::Drawing::Point(583, 524);
+			   this->clientModifyAddAddressButton->Name = L"clientModifyAddAddressButton";
+			   this->clientModifyAddAddressButton->Size = System::Drawing::Size(118, 25);
+			   this->clientModifyAddAddressButton->TabIndex = 23;
+			   this->clientModifyAddAddressButton->Text = L"Add";
+			   this->clientModifyAddAddressButton->UseVisualStyleBackColor = true;
+			   this->clientModifyAddAddressButton->Click += gcnew System::EventHandler(this, &MyForm::clientModifyAddAddressButton_Click);
+			   // 
+			   // clientModifyDeleteAddressButton
+			   // 
+			   this->clientModifyDeleteAddressButton->Location = System::Drawing::Point(583, 373);
+			   this->clientModifyDeleteAddressButton->Name = L"clientModifyDeleteAddressButton";
+			   this->clientModifyDeleteAddressButton->Size = System::Drawing::Size(118, 25);
+			   this->clientModifyDeleteAddressButton->TabIndex = 22;
+			   this->clientModifyDeleteAddressButton->Text = L"Delete";
+			   this->clientModifyDeleteAddressButton->UseVisualStyleBackColor = true;
+			   this->clientModifyDeleteAddressButton->Click += gcnew System::EventHandler(this, &MyForm::clientModifyDeleteAddressButton_Click);
+			   // 
+			   // clientModifyAddressPickerComboBox
+			   // 
+			   this->clientModifyAddressPickerComboBox->BackColor = System::Drawing::SystemColors::Window;
+			   this->clientModifyAddressPickerComboBox->FormattingEnabled = true;
+			   this->clientModifyAddressPickerComboBox->Location = System::Drawing::Point(88, 374);
+			   this->clientModifyAddressPickerComboBox->Name = L"clientModifyAddressPickerComboBox";
+			   this->clientModifyAddressPickerComboBox->Size = System::Drawing::Size(466, 24);
+			   this->clientModifyAddressPickerComboBox->TabIndex = 20;
+			   // 
+			   // clientModifyMoreInfoTextBox
+			   // 
+			   this->clientModifyMoreInfoTextBox->Location = System::Drawing::Point(88, 524);
+			   this->clientModifyMoreInfoTextBox->Name = L"clientModifyMoreInfoTextBox";
+			   this->clientModifyMoreInfoTextBox->Size = System::Drawing::Size(466, 22);
+			   this->clientModifyMoreInfoTextBox->TabIndex = 19;
+			   // 
+			   // clientModifyCityTextBox
+			   // 
+			   this->clientModifyCityTextBox->Location = System::Drawing::Point(276, 474);
+			   this->clientModifyCityTextBox->Name = L"clientModifyCityTextBox";
+			   this->clientModifyCityTextBox->Size = System::Drawing::Size(158, 22);
+			   this->clientModifyCityTextBox->TabIndex = 17;
+			   // 
+			   // clientModifyAddressStreetTextBox
+			   // 
+			   this->clientModifyAddressStreetTextBox->Location = System::Drawing::Point(88, 474);
+			   this->clientModifyAddressStreetTextBox->Name = L"clientModifyAddressStreetTextBox";
+			   this->clientModifyAddressStreetTextBox->Size = System::Drawing::Size(176, 22);
+			   this->clientModifyAddressStreetTextBox->TabIndex = 16;
+			   // 
+			   // clientModifyLastnameTextBox
+			   // 
+			   this->clientModifyLastnameTextBox->Location = System::Drawing::Point(461, 114);
+			   this->clientModifyLastnameTextBox->Name = L"clientModifyLastnameTextBox";
+			   this->clientModifyLastnameTextBox->Size = System::Drawing::Size(158, 22);
+			   this->clientModifyLastnameTextBox->TabIndex = 13;
+			   this->clientModifyLastnameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableClientModifyApplyModifButton);
+			   // 
+			   // clientModifyFirstnameTextBox
+			   // 
+			   this->clientModifyFirstnameTextBox->Location = System::Drawing::Point(278, 114);
+			   this->clientModifyFirstnameTextBox->Name = L"clientModifyFirstnameTextBox";
+			   this->clientModifyFirstnameTextBox->Size = System::Drawing::Size(158, 22);
+			   this->clientModifyFirstnameTextBox->TabIndex = 12;
+			   this->clientModifyFirstnameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableClientModifyApplyModifButton);
+			   // 
+			   // clientModifyUsernameTextBox
+			   // 
+			   this->clientModifyUsernameTextBox->Enabled = false;
+			   this->clientModifyUsernameTextBox->Location = System::Drawing::Point(90, 114);
+			   this->clientModifyUsernameTextBox->Name = L"clientModifyUsernameTextBox";
+			   this->clientModifyUsernameTextBox->Size = System::Drawing::Size(158, 22);
+			   this->clientModifyUsernameTextBox->TabIndex = 11;
+			   this->clientModifyUsernameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableClientModifyApplyModifButton);
+			   // 
+			   // clientModifyMoreInfoLabel
+			   // 
+			   this->clientModifyMoreInfoLabel->AutoSize = true;
+			   this->clientModifyMoreInfoLabel->Location = System::Drawing::Point(107, 502);
+			   this->clientModifyMoreInfoLabel->Name = L"clientModifyMoreInfoLabel";
+			   this->clientModifyMoreInfoLabel->Size = System::Drawing::Size(182, 17);
+			   this->clientModifyMoreInfoLabel->TabIndex = 10;
+			   this->clientModifyMoreInfoLabel->Text = L"More information (ex : floor)";
+			   // 
+			   // clientModifyPostalCodeLabel
+			   // 
+			   this->clientModifyPostalCodeLabel->AutoSize = true;
+			   this->clientModifyPostalCodeLabel->Location = System::Drawing::Point(456, 451);
+			   this->clientModifyPostalCodeLabel->Name = L"clientModifyPostalCodeLabel";
+			   this->clientModifyPostalCodeLabel->Size = System::Drawing::Size(82, 17);
+			   this->clientModifyPostalCodeLabel->TabIndex = 9;
+			   this->clientModifyPostalCodeLabel->Text = L"Postal code";
+			   // 
+			   // clientModifyCityLabel
+			   // 
+			   this->clientModifyCityLabel->AutoSize = true;
+			   this->clientModifyCityLabel->Location = System::Drawing::Point(290, 451);
+			   this->clientModifyCityLabel->Name = L"clientModifyCityLabel";
+			   this->clientModifyCityLabel->Size = System::Drawing::Size(31, 17);
+			   this->clientModifyCityLabel->TabIndex = 8;
+			   this->clientModifyCityLabel->Text = L"City";
+			   // 
+			   // clientModifyAddressStreetLabel
+			   // 
+			   this->clientModifyAddressStreetLabel->AutoSize = true;
+			   this->clientModifyAddressStreetLabel->Location = System::Drawing::Point(105, 451);
+			   this->clientModifyAddressStreetLabel->Name = L"clientModifyAddressStreetLabel";
+			   this->clientModifyAddressStreetLabel->Size = System::Drawing::Size(128, 17);
+			   this->clientModifyAddressStreetLabel->TabIndex = 7;
+			   this->clientModifyAddressStreetLabel->Text = L"Number and Street";
+			   // 
+			   // clientModifyAddressLabel
+			   // 
+			   this->clientModifyAddressLabel->AutoSize = true;
+			   this->clientModifyAddressLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->clientModifyAddressLabel->Location = System::Drawing::Point(30, 300);
+			   this->clientModifyAddressLabel->Name = L"clientModifyAddressLabel";
+			   this->clientModifyAddressLabel->Size = System::Drawing::Size(145, 38);
+			   this->clientModifyAddressLabel->TabIndex = 6;
+			   this->clientModifyAddressLabel->Text = L"Address";
+			   // 
+			   // clientModifyBirthdayLabel
+			   // 
+			   this->clientModifyBirthdayLabel->AutoSize = true;
+			   this->clientModifyBirthdayLabel->Location = System::Drawing::Point(107, 165);
+			   this->clientModifyBirthdayLabel->Name = L"clientModifyBirthdayLabel";
+			   this->clientModifyBirthdayLabel->Size = System::Drawing::Size(60, 17);
+			   this->clientModifyBirthdayLabel->TabIndex = 5;
+			   this->clientModifyBirthdayLabel->Text = L"Birthday";
+			   // 
+			   // clientModifyLastnameLabel
+			   // 
+			   this->clientModifyLastnameLabel->AutoSize = true;
+			   this->clientModifyLastnameLabel->Location = System::Drawing::Point(467, 92);
+			   this->clientModifyLastnameLabel->Name = L"clientModifyLastnameLabel";
+			   this->clientModifyLastnameLabel->Size = System::Drawing::Size(70, 17);
+			   this->clientModifyLastnameLabel->TabIndex = 3;
+			   this->clientModifyLastnameLabel->Text = L"Lastname";
+			   // 
+			   // clientModifyFirstnameLabel
+			   // 
+			   this->clientModifyFirstnameLabel->AutoSize = true;
+			   this->clientModifyFirstnameLabel->Location = System::Drawing::Point(292, 92);
+			   this->clientModifyFirstnameLabel->Name = L"clientModifyFirstnameLabel";
+			   this->clientModifyFirstnameLabel->Size = System::Drawing::Size(70, 17);
+			   this->clientModifyFirstnameLabel->TabIndex = 2;
+			   this->clientModifyFirstnameLabel->Text = L"Firstname";
+			   // 
+			   // clientModifyUsernameLabel
+			   // 
+			   this->clientModifyUsernameLabel->AutoSize = true;
+			   this->clientModifyUsernameLabel->Location = System::Drawing::Point(107, 92);
+			   this->clientModifyUsernameLabel->Name = L"clientModifyUsernameLabel";
+			   this->clientModifyUsernameLabel->Size = System::Drawing::Size(73, 17);
+			   this->clientModifyUsernameLabel->TabIndex = 1;
+			   this->clientModifyUsernameLabel->Text = L"Username";
+			   // 
+			   // clientModifyInformationsLabel
+			   // 
+			   this->clientModifyInformationsLabel->AutoSize = true;
+			   this->clientModifyInformationsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
+				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			   this->clientModifyInformationsLabel->Location = System::Drawing::Point(22, 22);
+			   this->clientModifyInformationsLabel->Name = L"clientModifyInformationsLabel";
+			   this->clientModifyInformationsLabel->Size = System::Drawing::Size(207, 38);
+			   this->clientModifyInformationsLabel->TabIndex = 0;
+			   this->clientModifyInformationsLabel->Text = L"Informations";
+			   // 
+			   // logoPictureBox
+			   // 
+			   this->logoPictureBox->BackColor = System::Drawing::Color::White;
+			   this->logoPictureBox->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logoPictureBox.Image")));
+			   this->logoPictureBox->Location = System::Drawing::Point(440, 160);
+			   this->logoPictureBox->Name = L"logoPictureBox";
+			   this->logoPictureBox->Size = System::Drawing::Size(528, 447);
+			   this->logoPictureBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			   this->logoPictureBox->TabIndex = 29;
+			   this->logoPictureBox->TabStop = false;
+			   // 
 			   // employeeModifyPanel
 			   // 
 			   this->employeeModifyPanel->Controls->Add(this->employeeModifyBackButton);
@@ -2644,14 +2937,14 @@ namespace OPO2SUMproject {
 			   // 
 			   // dataGridViewstat
 			   // 
-			   dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			   dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			   dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			   dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			   this->dataGridViewstat->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			   this->dataGridViewstat->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->dataGridViewstat->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::DisplayedCells;
-			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			   this->dataGridViewstat->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			   this->dataGridViewstat->ColumnHeadersHeight = 29;
 			   this->dataGridViewstat->Location = System::Drawing::Point(24, 56);
 			   this->dataGridViewstat->Margin = System::Windows::Forms::Padding(2, 3, 2, 3);
@@ -2891,301 +3184,6 @@ namespace OPO2SUMproject {
 			   this->employeeListView->View = System::Windows::Forms::View::List;
 			   this->employeeListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::employeeListView_DoubleClick);
 			   // 
-			   // clientListViewPanel
-			   // 
-			   this->clientListViewPanel->Controls->Add(this->clientListView);
-			   this->clientListViewPanel->Location = System::Drawing::Point(220, 80);
-			   this->clientListViewPanel->Name = L"clientListViewPanel";
-			   this->clientListViewPanel->Size = System::Drawing::Size(968, 607);
-			   this->clientListViewPanel->TabIndex = 32;
-			   // 
-			   // clientListView
-			   // 
-			   this->clientListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   this->clientListView->HideSelection = false;
-			   this->clientListView->Location = System::Drawing::Point(22, 21);
-			   this->clientListView->Name = L"clientListView";
-			   this->clientListView->Size = System::Drawing::Size(920, 573);
-			   this->clientListView->TabIndex = 0;
-			   this->clientListView->UseCompatibleStateImageBehavior = false;
-			   this->clientListView->View = System::Windows::Forms::View::List;
-			   // 
-			   // clientModifyPanel
-			   // 
-			   this->clientModifyPanel->Controls->Add(this->clientModifyBackButton);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyErrorBoxLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyApplyModifButton);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyBirthdayDateTimePicker);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyBarLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyPostalCodeNumericUpDown);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyAddAddressButton);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyDeleteAddressButton);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressPickerComboBox);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyMoreInfoTextBox);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyCityTextBox);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressStreetTextBox);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyLastnameTextBox);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyFirstnameTextBox);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyUsernameTextBox);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyMoreInfoLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyPostalCodeLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyCityLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressStreetLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyAddressLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyBirthdayLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyLastnameLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyFirstnameLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyUsernameLabel);
-			   this->clientModifyPanel->Controls->Add(this->clientModifyInformationsLabel);
-			   this->clientModifyPanel->Location = System::Drawing::Point(220, 80);
-			   this->clientModifyPanel->Name = L"clientModifyPanel";
-			   this->clientModifyPanel->Size = System::Drawing::Size(968, 607);
-			   this->clientModifyPanel->TabIndex = 29;
-			   // 
-			   // clientModifyBackButton
-			   // 
-			   this->clientModifyBackButton->Location = System::Drawing::Point(927, 10);
-			   this->clientModifyBackButton->Name = L"clientModifyBackButton";
-			   this->clientModifyBackButton->Size = System::Drawing::Size(30, 30);
-			   this->clientModifyBackButton->TabIndex = 32;
-			   this->clientModifyBackButton->Text = L"X";
-			   this->clientModifyBackButton->UseVisualStyleBackColor = true;
-			   this->clientModifyBackButton->Click += gcnew System::EventHandler(this, &MyForm::clientModifyBackButton_Click);
-			   // 
-			   // clientModifyErrorBoxLabel
-			   // 
-			   this->clientModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Red;
-			   this->clientModifyErrorBoxLabel->Location = System::Drawing::Point(741, 556);
-			   this->clientModifyErrorBoxLabel->Name = L"clientModifyErrorBoxLabel";
-			   this->clientModifyErrorBoxLabel->Size = System::Drawing::Size(177, 38);
-			   this->clientModifyErrorBoxLabel->TabIndex = 31;
-			   // 
-			   // clientModifyApplyModifButton
-			   // 
-			   this->clientModifyApplyModifButton->Enabled = false;
-			   this->clientModifyApplyModifButton->Location = System::Drawing::Point(667, 208);
-			   this->clientModifyApplyModifButton->Name = L"clientModifyApplyModifButton";
-			   this->clientModifyApplyModifButton->Size = System::Drawing::Size(177, 26);
-			   this->clientModifyApplyModifButton->TabIndex = 30;
-			   this->clientModifyApplyModifButton->Text = L"Apply Modifications";
-			   this->clientModifyApplyModifButton->UseVisualStyleBackColor = true;
-			   this->clientModifyApplyModifButton->Click += gcnew System::EventHandler(this, &MyForm::clientModifyApplyModifButton_Click);
-			   // 
-			   // clientModifyBirthdayDateTimePicker
-			   // 
-			   this->clientModifyBirthdayDateTimePicker->Location = System::Drawing::Point(90, 187);
-			   this->clientModifyBirthdayDateTimePicker->Name = L"clientModifyBirthdayDateTimePicker";
-			   this->clientModifyBirthdayDateTimePicker->Size = System::Drawing::Size(200, 22);
-			   this->clientModifyBirthdayDateTimePicker->TabIndex = 29;
-			   this->clientModifyBirthdayDateTimePicker->ValueChanged += gcnew System::EventHandler(this, &MyForm::enableClientModifyApplyModifButton);
-			   // 
-			   // clientModifyBarLabel
-			   // 
-			   this->clientModifyBarLabel->AutoSize = true;
-			   this->clientModifyBarLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->clientModifyBarLabel->Location = System::Drawing::Point(46, 229);
-			   this->clientModifyBarLabel->Name = L"clientModifyBarLabel";
-			   this->clientModifyBarLabel->Size = System::Drawing::Size(872, 38);
-			   this->clientModifyBarLabel->TabIndex = 28;
-			   this->clientModifyBarLabel->Text = L"_____________________________________________";
-			   // 
-			   // clientModifyPostalCodeNumericUpDown
-			   // 
-			   this->clientModifyPostalCodeNumericUpDown->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) {
-				   1000, 0, 0,
-					   0
-			   });
-			   this->clientModifyPostalCodeNumericUpDown->Location = System::Drawing::Point(446, 474);
-			   this->clientModifyPostalCodeNumericUpDown->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) {
-				   100000, 0, 0,
-					   0
-			   });
-			   this->clientModifyPostalCodeNumericUpDown->Name = L"clientModifyPostalCodeNumericUpDown";
-			   this->clientModifyPostalCodeNumericUpDown->Size = System::Drawing::Size(108, 22);
-			   this->clientModifyPostalCodeNumericUpDown->TabIndex = 27;
-			   // 
-			   // clientModifyAddAddressButton
-			   // 
-			   this->clientModifyAddAddressButton->Location = System::Drawing::Point(583, 524);
-			   this->clientModifyAddAddressButton->Name = L"clientModifyAddAddressButton";
-			   this->clientModifyAddAddressButton->Size = System::Drawing::Size(118, 25);
-			   this->clientModifyAddAddressButton->TabIndex = 23;
-			   this->clientModifyAddAddressButton->Text = L"Add";
-			   this->clientModifyAddAddressButton->UseVisualStyleBackColor = true;
-			   this->clientModifyAddAddressButton->Click += gcnew System::EventHandler(this, &MyForm::clientModifyAddAddressButton_Click);
-			   // 
-			   // clientModifyDeleteAddressButton
-			   // 
-			   this->clientModifyDeleteAddressButton->Location = System::Drawing::Point(583, 373);
-			   this->clientModifyDeleteAddressButton->Name = L"clientModifyDeleteAddressButton";
-			   this->clientModifyDeleteAddressButton->Size = System::Drawing::Size(118, 25);
-			   this->clientModifyDeleteAddressButton->TabIndex = 22;
-			   this->clientModifyDeleteAddressButton->Text = L"Delete";
-			   this->clientModifyDeleteAddressButton->UseVisualStyleBackColor = true;
-			   this->clientModifyDeleteAddressButton->Click += gcnew System::EventHandler(this, &MyForm::clientModifyDeleteAddressButton_Click);
-			   // 
-			   // clientModifyAddressPickerComboBox
-			   // 
-			   this->clientModifyAddressPickerComboBox->BackColor = System::Drawing::SystemColors::Window;
-			   this->clientModifyAddressPickerComboBox->FormattingEnabled = true;
-			   this->clientModifyAddressPickerComboBox->Location = System::Drawing::Point(88, 374);
-			   this->clientModifyAddressPickerComboBox->Name = L"clientModifyAddressPickerComboBox";
-			   this->clientModifyAddressPickerComboBox->Size = System::Drawing::Size(466, 24);
-			   this->clientModifyAddressPickerComboBox->TabIndex = 20;
-			   // 
-			   // clientModifyMoreInfoTextBox
-			   // 
-			   this->clientModifyMoreInfoTextBox->Location = System::Drawing::Point(88, 524);
-			   this->clientModifyMoreInfoTextBox->Name = L"clientModifyMoreInfoTextBox";
-			   this->clientModifyMoreInfoTextBox->Size = System::Drawing::Size(466, 22);
-			   this->clientModifyMoreInfoTextBox->TabIndex = 19;
-			   // 
-			   // clientModifyCityTextBox
-			   // 
-			   this->clientModifyCityTextBox->Location = System::Drawing::Point(276, 474);
-			   this->clientModifyCityTextBox->Name = L"clientModifyCityTextBox";
-			   this->clientModifyCityTextBox->Size = System::Drawing::Size(158, 22);
-			   this->clientModifyCityTextBox->TabIndex = 17;
-			   // 
-			   // clientModifyAddressStreetTextBox
-			   // 
-			   this->clientModifyAddressStreetTextBox->Location = System::Drawing::Point(88, 474);
-			   this->clientModifyAddressStreetTextBox->Name = L"clientModifyAddressStreetTextBox";
-			   this->clientModifyAddressStreetTextBox->Size = System::Drawing::Size(176, 22);
-			   this->clientModifyAddressStreetTextBox->TabIndex = 16;
-			   // 
-			   // clientModifyLastnameTextBox
-			   // 
-			   this->clientModifyLastnameTextBox->Location = System::Drawing::Point(461, 114);
-			   this->clientModifyLastnameTextBox->Name = L"clientModifyLastnameTextBox";
-			   this->clientModifyLastnameTextBox->Size = System::Drawing::Size(158, 22);
-			   this->clientModifyLastnameTextBox->TabIndex = 13;
-			   this->clientModifyLastnameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableClientModifyApplyModifButton);
-			   // 
-			   // clientModifyFirstnameTextBox
-			   // 
-			   this->clientModifyFirstnameTextBox->Location = System::Drawing::Point(278, 114);
-			   this->clientModifyFirstnameTextBox->Name = L"clientModifyFirstnameTextBox";
-			   this->clientModifyFirstnameTextBox->Size = System::Drawing::Size(158, 22);
-			   this->clientModifyFirstnameTextBox->TabIndex = 12;
-			   this->clientModifyFirstnameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableClientModifyApplyModifButton);
-			   // 
-			   // clientModifyUsernameTextBox
-			   // 
-			   this->clientModifyUsernameTextBox->Enabled = false;
-			   this->clientModifyUsernameTextBox->Location = System::Drawing::Point(90, 114);
-			   this->clientModifyUsernameTextBox->Name = L"clientModifyUsernameTextBox";
-			   this->clientModifyUsernameTextBox->Size = System::Drawing::Size(158, 22);
-			   this->clientModifyUsernameTextBox->TabIndex = 11;
-			   this->clientModifyUsernameTextBox->TextChanged += gcnew System::EventHandler(this, &MyForm::enableClientModifyApplyModifButton);
-			   // 
-			   // clientModifyMoreInfoLabel
-			   // 
-			   this->clientModifyMoreInfoLabel->AutoSize = true;
-			   this->clientModifyMoreInfoLabel->Location = System::Drawing::Point(107, 502);
-			   this->clientModifyMoreInfoLabel->Name = L"clientModifyMoreInfoLabel";
-			   this->clientModifyMoreInfoLabel->Size = System::Drawing::Size(182, 17);
-			   this->clientModifyMoreInfoLabel->TabIndex = 10;
-			   this->clientModifyMoreInfoLabel->Text = L"More information (ex : floor)";
-			   // 
-			   // clientModifyPostalCodeLabel
-			   // 
-			   this->clientModifyPostalCodeLabel->AutoSize = true;
-			   this->clientModifyPostalCodeLabel->Location = System::Drawing::Point(456, 451);
-			   this->clientModifyPostalCodeLabel->Name = L"clientModifyPostalCodeLabel";
-			   this->clientModifyPostalCodeLabel->Size = System::Drawing::Size(82, 17);
-			   this->clientModifyPostalCodeLabel->TabIndex = 9;
-			   this->clientModifyPostalCodeLabel->Text = L"Postal code";
-			   // 
-			   // clientModifyCityLabel
-			   // 
-			   this->clientModifyCityLabel->AutoSize = true;
-			   this->clientModifyCityLabel->Location = System::Drawing::Point(290, 451);
-			   this->clientModifyCityLabel->Name = L"clientModifyCityLabel";
-			   this->clientModifyCityLabel->Size = System::Drawing::Size(31, 17);
-			   this->clientModifyCityLabel->TabIndex = 8;
-			   this->clientModifyCityLabel->Text = L"City";
-			   // 
-			   // clientModifyAddressStreetLabel
-			   // 
-			   this->clientModifyAddressStreetLabel->AutoSize = true;
-			   this->clientModifyAddressStreetLabel->Location = System::Drawing::Point(105, 451);
-			   this->clientModifyAddressStreetLabel->Name = L"clientModifyAddressStreetLabel";
-			   this->clientModifyAddressStreetLabel->Size = System::Drawing::Size(128, 17);
-			   this->clientModifyAddressStreetLabel->TabIndex = 7;
-			   this->clientModifyAddressStreetLabel->Text = L"Number and Street";
-			   // 
-			   // clientModifyAddressLabel
-			   // 
-			   this->clientModifyAddressLabel->AutoSize = true;
-			   this->clientModifyAddressLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->clientModifyAddressLabel->Location = System::Drawing::Point(30, 300);
-			   this->clientModifyAddressLabel->Name = L"clientModifyAddressLabel";
-			   this->clientModifyAddressLabel->Size = System::Drawing::Size(145, 38);
-			   this->clientModifyAddressLabel->TabIndex = 6;
-			   this->clientModifyAddressLabel->Text = L"Address";
-			   // 
-			   // clientModifyBirthdayLabel
-			   // 
-			   this->clientModifyBirthdayLabel->AutoSize = true;
-			   this->clientModifyBirthdayLabel->Location = System::Drawing::Point(107, 165);
-			   this->clientModifyBirthdayLabel->Name = L"clientModifyBirthdayLabel";
-			   this->clientModifyBirthdayLabel->Size = System::Drawing::Size(60, 17);
-			   this->clientModifyBirthdayLabel->TabIndex = 5;
-			   this->clientModifyBirthdayLabel->Text = L"Birthday";
-			   // 
-			   // clientModifyLastnameLabel
-			   // 
-			   this->clientModifyLastnameLabel->AutoSize = true;
-			   this->clientModifyLastnameLabel->Location = System::Drawing::Point(467, 92);
-			   this->clientModifyLastnameLabel->Name = L"clientModifyLastnameLabel";
-			   this->clientModifyLastnameLabel->Size = System::Drawing::Size(70, 17);
-			   this->clientModifyLastnameLabel->TabIndex = 3;
-			   this->clientModifyLastnameLabel->Text = L"Lastname";
-			   // 
-			   // clientModifyFirstnameLabel
-			   // 
-			   this->clientModifyFirstnameLabel->AutoSize = true;
-			   this->clientModifyFirstnameLabel->Location = System::Drawing::Point(292, 92);
-			   this->clientModifyFirstnameLabel->Name = L"clientModifyFirstnameLabel";
-			   this->clientModifyFirstnameLabel->Size = System::Drawing::Size(70, 17);
-			   this->clientModifyFirstnameLabel->TabIndex = 2;
-			   this->clientModifyFirstnameLabel->Text = L"Firstname";
-			   // 
-			   // clientModifyUsernameLabel
-			   // 
-			   this->clientModifyUsernameLabel->AutoSize = true;
-			   this->clientModifyUsernameLabel->Location = System::Drawing::Point(107, 92);
-			   this->clientModifyUsernameLabel->Name = L"clientModifyUsernameLabel";
-			   this->clientModifyUsernameLabel->Size = System::Drawing::Size(73, 17);
-			   this->clientModifyUsernameLabel->TabIndex = 1;
-			   this->clientModifyUsernameLabel->Text = L"Username";
-			   // 
-			   // clientModifyInformationsLabel
-			   // 
-			   this->clientModifyInformationsLabel->AutoSize = true;
-			   this->clientModifyInformationsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold,
-				   System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			   this->clientModifyInformationsLabel->Location = System::Drawing::Point(22, 22);
-			   this->clientModifyInformationsLabel->Name = L"clientModifyInformationsLabel";
-			   this->clientModifyInformationsLabel->Size = System::Drawing::Size(207, 38);
-			   this->clientModifyInformationsLabel->TabIndex = 0;
-			   this->clientModifyInformationsLabel->Text = L"Informations";
-			   // 
-			   // logoPictureBox
-			   // 
-			   this->logoPictureBox->BackColor = System::Drawing::Color::White;
-			   this->logoPictureBox->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logoPictureBox.Image")));
-			   this->logoPictureBox->Location = System::Drawing::Point(440, 160);
-			   this->logoPictureBox->Name = L"logoPictureBox";
-			   this->logoPictureBox->Size = System::Drawing::Size(528, 447);
-			   this->logoPictureBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			   this->logoPictureBox->TabIndex = 29;
-			   this->logoPictureBox->TabStop = false;
-			   // 
 			   // MyForm
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -3223,6 +3221,11 @@ namespace OPO2SUMproject {
 			   this->accountPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			   this->hubPanel->ResumeLayout(false);
+			   this->clientListViewPanel->ResumeLayout(false);
+			   this->clientModifyPanel->ResumeLayout(false);
+			   this->clientModifyPanel->PerformLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->EndInit();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->EndInit();
 			   this->employeeModifyPanel->ResumeLayout(false);
 			   this->employeeModifyPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->EndInit();
@@ -3239,19 +3242,6 @@ namespace OPO2SUMproject {
 			   this->employeeAddEmployeePanel->ResumeLayout(false);
 			   this->employeeAddEmployeePanel->PerformLayout();
 			   this->employeeListViewPanel->ResumeLayout(false);
-			   this->clientListViewPanel->ResumeLayout(false);
-			   this->clientModifyPanel->ResumeLayout(false);
-			   this->clientModifyPanel->PerformLayout();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->EndInit();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->EndInit();
-			   this->employeeModifyPanel->PerformLayout();
-			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->employeeModifyPostalCodeNumericUpDown))->EndInit();
-			   this->preCatalogPanel->ResumeLayout(false);
-			   this->preCatalogPanel->PerformLayout();
-			   this->catalogOrderPanel->ResumeLayout(false);
-			   this->catalogOrderPanel->PerformLayout();
-			   this->catalogCartPanel->ResumeLayout(false);
-			   this->catalogCartPanel->PerformLayout();
 			   this->ResumeLayout(false);
 
 		   }
@@ -3320,9 +3310,6 @@ namespace OPO2SUMproject {
 		addStockQuantityTextBox->Text = "";
 		addStockNameTextBox->Text = "";
 		orderFilterTextBox->Text = "";
-		clientMFNameTextBox->Text = "";
-		clientMLNameTextBox->Text = "";
-		clientMCityTextBox->Text = "";
 		accountAddressPostalNumericUpDown->Value = 0;
 		accountAddressListComboBox->Text = "";
 		accountAddressMoreTextBox->Text = "";
@@ -4002,7 +3989,7 @@ namespace OPO2SUMproject {
 	private: System::Void enableClientModifyApplyModifButton(System::Object^ sender, System::EventArgs^ e) {
 		this->clientModifyApplyModifButton->Enabled = true;
 	}
-	private: System::Void clientListView_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void clientListView_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
 		String^ selectedClient = clientListView->SelectedItems[0]->Text;
 
 		this->clientModifyErrorBoxLabel->Text = selectedClient;
@@ -4015,7 +4002,7 @@ namespace OPO2SUMproject {
 
 		hideAllPanel();
 		clientRefreshAddressPicker();
-		clientListViewPanel->Visible = true;
+		clientModifyPanel->Visible = true;
 	}
 	private: System::Void clientModifyApplyModifButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
@@ -4332,7 +4319,6 @@ namespace OPO2SUMproject {
 		nameProjectLabel_Click(sender, e);
 		MyForm_Load(sender, e);
 	}
-	};
 	private: System::Void afficherPage_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
 		DataSet^ total_cost_dataset = Adata->getRows("Select sum(cost_product*stock_product) as pp FROM product", "temp2");
@@ -4340,5 +4326,6 @@ namespace OPO2SUMproject {
 		DataRow^ drow = total_cost_datatable->Rows[0];
 		this->simulationEntryPriceTextBox->Text = drow[0]->ToString();
 	}
-	};
+	
+};
 }
