@@ -522,7 +522,7 @@ namespace OPO2SUMproject {
 			   this->clientModifyPostalCodeNumericUpDown = (gcnew System::Windows::Forms::NumericUpDown());
 			   this->clientModifyAddAddressButton = (gcnew System::Windows::Forms::Button());
 			   this->clientModifyDeleteAddressButton = (gcnew System::Windows::Forms::Button());
-			   this->clientModifyAddressPickerComboBox = (gcnew System::Windows::Forms::ComboBox());
+			   this->clientModifyAddressPickerComboBox = (gcnew System::Windows::Forms::ComboBox());//
 			   this->clientModifyMoreInfoTextBox = (gcnew System::Windows::Forms::TextBox());
 			   this->clientModifyCityTextBox = (gcnew System::Windows::Forms::TextBox());
 			   this->clientModifyAddressStreetTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -3421,6 +3421,64 @@ namespace OPO2SUMproject {
 		clientModifyPanel->Visible = false;
 		employeeAddEmployeePanel->Visible = false;
 	}
+	private: System::Void clearAllTextBox() {
+		loginPasswordTextBox->Text = ""; 
+		loginUsernameTextBox->Text = "";
+		registerUsernameTextBox->Text = "";
+		registerFirstnameTextBox->Text = "";
+		registerLastnameTextBox->Text = "";
+		registerPasswordTextBox->Text = "";
+		addStockRestockingTextBox->Text = "";
+		addStockStockTextBox->Text = "";
+		addStockTVATextBox->Text = "";
+		addStockMargeTextBox->Text = "";
+		addStockCostTextBox->Text ="";
+		addStockQuantityTextBox->Text = "";
+		addStockNameTextBox->Text = "";
+		orderFilterTextBox->Text = "";
+		clientMFNameTextBox->Text = "";
+		clientMLNameTextBox->Text = "";
+		clientMCityTextBox->Text = "";
+		accountAddressPostalNumericUpDown->Value = 0;
+		accountAddressListComboBox->Text = "";
+		accountAddressMoreTextBox->Text = "";
+		accountAddressCityTextBox->Text = "";
+		accountAddressNbTextBox->Text = "";
+		accountBirthdayTextBox->Text = "";
+		accountPasswordTextBox->Text = "";
+		accountLastnameTextBox->Text = "";
+		accountFirstnameTextBox->Text = "";
+		accountUsernameTextBox->Text = "";
+		employeeModifyPostalCodeNumericUpDown->Value = 0;
+		employeeModifyAddressPickerComboBox->Text = "";
+		employeeModifyMoreInfoTextBox->Text = "";
+		employeeModifyCityTextBox->Text = "";
+		employeeModifyAddressStreetTextBox->Text = "";
+		employeeModifyLastnameTextBox->Text = "";
+		employeeModifyFirstnameTextBox->Text = "";
+		employeeModifyUsernameTextBox->Text = "";
+		preCatalogTextBox->Text = "";
+		catalogResearchTextBox->Text = "";
+		catalogAddressShippingListComboBox->Text = "";
+		catalogAddressBillingListComboBox->Text = "";
+		simulationMarkdownComboBox->Text = "";
+		simulationDiscountComboBox->Text = "";
+		simulationMargeComboBox->Text = "";
+		simulationTVAComboBox->Text = "";
+		simulationEntryPriceTextBox->Text = "";
+		employeeAddEmployeePasswordTextBox->Text = "";
+		employeeAddEmployeeLastnameTextbox->Text = "";
+		employeeAddEmployeeFirstnameTextBox->Text = "";
+		employeeAddEmployeeUsernameTextBox->Text = "";
+		clientModifyPostalCodeNumericUpDown->Value = 0;
+		clientModifyAddressPickerComboBox->Text = "";
+		clientModifyMoreInfoTextBox->Text = "";
+		clientModifyCityTextBox->Text = "";
+		clientModifyAddressStreetTextBox->Text = "";
+		clientModifyLastnameTextBox->Text = "";
+		clientModifyFirstnameTextBox->Text = "";
+		clientModifyUsernameTextBox->Text = "";
+	}
 	private: System::Void clearAddStockTextBox() {
 		addStockNameTextBox->Text = "";
 		addStockQuantityTextBox->Text = "";
@@ -3432,6 +3490,7 @@ namespace OPO2SUMproject {
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 		logoPictureBox->SendToBack();
+		clearAllTextBox();
 		preCatalogTextBox_TextChanged(sender, e);
 		hideAllPanel();
 		preCatalogPanel->Visible = true;
