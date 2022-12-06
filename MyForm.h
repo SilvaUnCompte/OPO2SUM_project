@@ -4212,6 +4212,7 @@ namespace OPO2SUMproject {
 		this->simulationResultLabel->ForeColor = Color::Black;
 		this->simulationResultLabel->Text = ((((total_cost * (1 + marge)) * (1 - discount)) * (1 - markdown)) * (1 + tva)).ToString();
 	}
+
 	private: System::Void afficherPage_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
 		DataSet^ total_cost_dataset = Adata->getRows("Select sum(cost_product*stock_product) as pp FROM product", "temp2");
