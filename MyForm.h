@@ -408,8 +408,6 @@ namespace OPO2SUMproject {
 			   this->accountUsernameLabel = (gcnew System::Windows::Forms::Label());
 			   this->accountTitleLabel = (gcnew System::Windows::Forms::Label());
 			   this->hubPanel = (gcnew System::Windows::Forms::Panel());
-			   this->clientListViewPanel = (gcnew System::Windows::Forms::Panel());
-			   this->clientListView = (gcnew System::Windows::Forms::ListView());
 			   this->clientModifyPanel = (gcnew System::Windows::Forms::Panel());
 			   this->clientModifyBackButton = (gcnew System::Windows::Forms::Button());
 			   this->clientModifyErrorBoxLabel = (gcnew System::Windows::Forms::Label());
@@ -532,6 +530,8 @@ namespace OPO2SUMproject {
 			   this->employeeListViewPanel = (gcnew System::Windows::Forms::Panel());
 			   this->employeeAddNewEmployeeButton = (gcnew System::Windows::Forms::Button());
 			   this->employeeListView = (gcnew System::Windows::Forms::ListView());
+			   this->clientListViewPanel = (gcnew System::Windows::Forms::Panel());
+			   this->clientListView = (gcnew System::Windows::Forms::ListView());
 			   this->loginPanel->SuspendLayout();
 			   this->loginTextPanel->SuspendLayout();
 			   this->registerPanel->SuspendLayout();
@@ -545,7 +545,6 @@ namespace OPO2SUMproject {
 			   this->accountPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->BeginInit();
 			   this->hubPanel->SuspendLayout();
-			   this->clientListViewPanel->SuspendLayout();
 			   this->clientModifyPanel->SuspendLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->BeginInit();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->BeginInit();
@@ -559,6 +558,7 @@ namespace OPO2SUMproject {
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewstat))->BeginInit();
 			   this->employeeAddEmployeePanel->SuspendLayout();
 			   this->employeeListViewPanel->SuspendLayout();
+			   this->clientListViewPanel->SuspendLayout();
 			   this->SuspendLayout();
 			   // 
 			   // loginPanel
@@ -1854,11 +1854,11 @@ namespace OPO2SUMproject {
 			   // 
 			   this->hubPanel->BackColor = System::Drawing::Color::White;
 			   this->hubPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			   this->hubPanel->Controls->Add(this->clientListViewPanel);
 			   this->hubPanel->Controls->Add(this->menuButtonPanel);
 			   this->hubPanel->Controls->Add(this->titleBarPanel);
-			   this->hubPanel->Controls->Add(this->clientListViewPanel);
-			   this->hubPanel->Controls->Add(this->clientModifyPanel);
 			   this->hubPanel->Controls->Add(this->logoPictureBox);
+			   this->hubPanel->Controls->Add(this->clientModifyPanel);
 			   this->hubPanel->Controls->Add(this->accountPanel);
 			   this->hubPanel->Controls->Add(this->employeeModifyPanel);
 			   this->hubPanel->Controls->Add(this->preCatalogPanel);
@@ -1874,27 +1874,6 @@ namespace OPO2SUMproject {
 			   this->hubPanel->Name = L"hubPanel";
 			   this->hubPanel->Size = System::Drawing::Size(1188, 687);
 			   this->hubPanel->TabIndex = 29;
-			   // 
-			   // clientListViewPanel
-			   // 
-			   this->clientListViewPanel->Controls->Add(this->clientListView);
-			   this->clientListViewPanel->Location = System::Drawing::Point(220, 80);
-			   this->clientListViewPanel->Name = L"clientListViewPanel";
-			   this->clientListViewPanel->Size = System::Drawing::Size(968, 607);
-			   this->clientListViewPanel->TabIndex = 32;
-			   // 
-			   // clientListView
-			   // 
-			   this->clientListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				   static_cast<System::Byte>(0)));
-			   this->clientListView->HideSelection = false;
-			   this->clientListView->Location = System::Drawing::Point(22, 21);
-			   this->clientListView->Name = L"clientListView";
-			   this->clientListView->Size = System::Drawing::Size(920, 573);
-			   this->clientListView->TabIndex = 0;
-			   this->clientListView->UseCompatibleStateImageBehavior = false;
-			   this->clientListView->View = System::Windows::Forms::View::List;
-			   this->clientListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::clientListView_DoubleClick);
 			   // 
 			   // clientModifyPanel
 			   // 
@@ -3016,6 +2995,7 @@ namespace OPO2SUMproject {
 			   this->employeeAddEmployeePasswordTextBox->Name = L"employeeAddEmployeePasswordTextBox";
 			   this->employeeAddEmployeePasswordTextBox->Size = System::Drawing::Size(268, 22);
 			   this->employeeAddEmployeePasswordTextBox->TabIndex = 13;
+			   this->employeeAddEmployeePasswordTextBox->UseSystemPasswordChar = true;
 			   // 
 			   // employeeAddEmployeeLastnameTextbox
 			   // 
@@ -3184,6 +3164,26 @@ namespace OPO2SUMproject {
 			   this->employeeListView->View = System::Windows::Forms::View::List;
 			   this->employeeListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::employeeListView_DoubleClick);
 			   // 
+			   // clientListViewPanel
+			   // 
+			   this->clientListViewPanel->Controls->Add(this->clientListView);
+			   this->clientListViewPanel->Location = System::Drawing::Point(220, 80);
+			   this->clientListViewPanel->Name = L"clientListViewPanel";
+			   this->clientListViewPanel->Size = System::Drawing::Size(968, 607);
+			   this->clientListViewPanel->TabIndex = 32;
+			   // 
+			   // clientListView
+			   // 
+			   this->clientListView->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8));
+			   this->clientListView->HideSelection = false;
+			   this->clientListView->Location = System::Drawing::Point(42, 35);
+			   this->clientListView->Name = L"clientListView";
+			   this->clientListView->Size = System::Drawing::Size(897, 539);
+			   this->clientListView->TabIndex = 0;
+			   this->clientListView->UseCompatibleStateImageBehavior = false;
+			   this->clientListView->View = System::Windows::Forms::View::List;
+			   this->clientListView->DoubleClick += gcnew System::EventHandler(this, &MyForm::clientListView_DoubleClick);
+			   // 
 			   // MyForm
 			   // 
 			   this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -3221,7 +3221,6 @@ namespace OPO2SUMproject {
 			   this->accountPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->accountAddressPostalNumericUpDown))->EndInit();
 			   this->hubPanel->ResumeLayout(false);
-			   this->clientListViewPanel->ResumeLayout(false);
 			   this->clientModifyPanel->ResumeLayout(false);
 			   this->clientModifyPanel->PerformLayout();
 			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->clientModifyPostalCodeNumericUpDown))->EndInit();
@@ -3242,6 +3241,7 @@ namespace OPO2SUMproject {
 			   this->employeeAddEmployeePanel->ResumeLayout(false);
 			   this->employeeAddEmployeePanel->PerformLayout();
 			   this->employeeListViewPanel->ResumeLayout(false);
+			   this->clientListViewPanel->ResumeLayout(false);
 			   this->ResumeLayout(false);
 
 		   }
@@ -4000,6 +4000,7 @@ namespace OPO2SUMproject {
 
 		hideAllPanel();
 		clientRefreshAddressPicker();
+		clientModifyApplyModifButton->Enabled = false;
 		clientModifyPanel->Visible = true;
 	}
 	private: System::Void clientModifyApplyModifButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4022,8 +4023,8 @@ namespace OPO2SUMproject {
 			this->clientModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Green;
 			this->clientModifyApplyModifButton->Enabled = false;
 
-			hideAllPanel();
-			clientListViewPanel->Visible = true;
+			clientRefreshList();
+			clientModifyApplyModifButton->Enabled = false;
 		}
 	}
 	private: System::Void clientModifyDeleteAddressButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4061,7 +4062,7 @@ namespace OPO2SUMproject {
 		   //EMPLOYEE MANAGER PAGE ----------------------------------------------------------------------------
 	private: void employeeRefreshList() {
 		AccessData^ Adata = gcnew AccessData;
-		DataSet^ listEmployees = Adata->getRows("SELECT * FROM account WHERE permission_lv_account = 1", "Temp");
+		DataSet^ listEmployees = Adata->getRows("SELECT * FROM account WHERE permission_lv_account = 1 OR permission_lv_account = 2", "Temp");
 		DataTable^ employees = listEmployees->Tables[0];
 
 		employeeListView->Items->Clear();
@@ -4103,6 +4104,7 @@ namespace OPO2SUMproject {
 		hideAllPanel();
 		employeeRefreshAddressPicker();
 		employeeModifyPanel->Visible = true;
+		employeeModifyApplyModifButton->Enabled = false;
 
 	}
 	private: System::Void employeeModifyApplyModifButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4125,8 +4127,7 @@ namespace OPO2SUMproject {
 			this->employeeModifyErrorBoxLabel->ForeColor = System::Drawing::Color::Green;
 			this->employeeModifyApplyModifButton->Enabled = false;
 
-			hideAllPanel();
-			employeeListViewPanel->Visible = true;
+			employeeRefreshList();
 		}
 	}
 	private: System::Void employeeModifyDeleteAddressButton_Click(System::Object^ sender, System::EventArgs^ e) {
