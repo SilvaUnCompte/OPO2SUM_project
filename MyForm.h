@@ -276,8 +276,8 @@ namespace OPO2SUMproject {
 	private: System::Windows::Forms::ComboBox^ simulationTVAComboBox;
 	private: System::Windows::Forms::TextBox^ simulationEntryPriceTextBox;
 	private: System::Windows::Forms::Button^ disconnectButton;
-private: System::Windows::Forms::CheckBox^ addStockEnableCheckBox;
-private: System::Windows::Forms::Label^ addStockErrorLabel;
+	private: System::Windows::Forms::CheckBox^ addStockEnableCheckBox;
+	private: System::Windows::Forms::Label^ addStockErrorLabel;
 	private: System::Windows::Forms::PictureBox^ logoPictureBox;
 
 #pragma region Windows Form Designer generated code
@@ -3570,7 +3570,15 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		employeeAddEmployeePanel->Visible = false;
 	}
 	private: System::Void clearAllTextBox() {
-		loginPasswordTextBox->Text = ""; 
+		registerErrorLabel->Text = "";
+		loginErrorLabel->Text = "";
+		accountErrorLabel->Text = "";
+		addStockErrorLabel->Text = "";
+		accountErrorAddAddressLabel->Text = "";
+		clientModifyErrorBoxLabel->Text = "";
+		employeeModifyErrorBoxLabel->Text = "";
+		employeeAddEmployeeErrorBoxLabel->Text = "";
+		loginPasswordTextBox->Text = "";
 		loginUsernameTextBox->Text = "";
 		registerUsernameTextBox->Text = "";
 		registerFirstnameTextBox->Text = "";
@@ -3580,7 +3588,7 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		addStockStockTextBox->Text = "";
 		addStockTVATextBox->Text = "";
 		addStockMargeTextBox->Text = "";
-		addStockCostTextBox->Text ="";
+		addStockCostTextBox->Text = "";
 		addStockQuantityTextBox->Text = "";
 		addStockNameTextBox->Text = "";
 		orderFilterTextBox->Text = "";
@@ -3912,9 +3920,9 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 	private: System::Void loginPasswordModButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		loginPasswordTextBox->UseSystemPasswordChar = !loginPasswordTextBox->UseSystemPasswordChar;
 	}
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////  STOCK/////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		   /////////////////////////////////////  STOCK/////////////////////////////////////////////////////////////////////////////////////////
+		   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	private: System::Void addStockValidateButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		AccessData^ Adata = gcnew AccessData;
@@ -3922,7 +3930,7 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		addStockErrorLabel->Text = "CA marche XD";
 		clearAllTextBox();
 	}
-	
+
 		   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		   //////////////////////////////////////// BOUTON COULEUR //////////////////////////////////////////////////////
 		   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -4261,7 +4269,7 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		clientListView->Items->Clear();
 		for (int i = 0; i < clients->Rows->Count; i++) {
 			DataRow^ rowData = clients->Rows[i];
-			clientListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString()->Substring(0,10));
+			clientListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString()->Substring(0, 10));
 		}
 	}
 	private: System::Void clientRefreshAddressPicker() {
@@ -4355,7 +4363,7 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		employeeListView->Items->Clear();
 		for (int i = 0; i < employees->Rows->Count; i++) {
 			DataRow^ rowData = employees->Rows[i];
-			employeeListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString()->Substring(0, 10) );
+			employeeListView->Items->Add(rowData[0]->ToString() + " " + rowData[1]->ToString() + " " + rowData[3]->ToString() + " " + rowData[4]->ToString() + " " + rowData[5]->ToString()->Substring(0, 10));
 		}
 	}
 	private: System::Void employeeRefreshAddressPicker() {
@@ -4615,5 +4623,5 @@ private: System::Windows::Forms::Label^ addStockErrorLabel;
 		DataRow^ drow = total_cost_datatable->Rows[0];
 		this->simulationEntryPriceTextBox->Text = drow[0]->ToString();
 	}
-};
+	};
 }
