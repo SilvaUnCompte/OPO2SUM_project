@@ -3701,6 +3701,14 @@ private: System::Windows::Forms::Button^ stockModifyExitButton;
 	}
 	private: System::Void addStockExitButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		hideAllPanel();
+		this->stockModifyNameTextBox->Text = "";
+		this->stockModifyQuantityTextBox->Text = "";
+		this->stockModifyCostTextBox->Text = "";
+		this->stockModifyMargeTextBox->Text = "";
+		this->stockModifyTVATextBox->Text = "";
+		this->stockModifyStockTextBox->Text = "";
+		this->stockModifyRestockTextBox->Text = "";
+		this->stockModifyEnableCheckBox->Checked = true;
 		stockMPanel->Visible = true;
 		clearAddStockTextBox();
 	}
